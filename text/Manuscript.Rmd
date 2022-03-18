@@ -1,23 +1,35 @@
 ---
-title: "New paper markdown file"
-author: "Gaspar Jekely"
+title: "Nitric-oxide-feedback to ciliary photoreceptor cells orchestrates UV avoidance in zooplankton"
+author: "Kei Jokura, Nobuo Ueda, Martin Gühmann, Gáspár Jékely"
+date: "*Living Systems Institute, University of Exeter, Stocker road, Exeter, EX4 4QD, UK*"
 output:
-  pdf_document: default
-  html_document: default
+  pdf_document: 
+      latex_engine: xelatex
+      template: style.tex
+  html_document: 
+    theme: lumen
 geometry: left=0.8in,right=0.8in,top=0.8in,bottom=0.5in
+mainfont: Arial
+documentclass: article
+classoption:
+  - onecolumn
+linestretch: 1.2
+fontsize: 10pt
 bibliography: references.bib
 csl: elife.csl
+
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## Abstract
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+Nitric oxide is... 
+Here we show...
 
-**text in bold** *italic*
+
 
 ## Introduction
 
@@ -31,11 +43,13 @@ Including Figures
 
 You can add your figures into the rendered document (to define the path, go up one dir from /text and go into /figures):
 
-![Figure 1](../figures/Figure1.png)
+![Figure 1. Legend goes here](../figures/Figure1.png){width=80%}
+
+## Materials and Methods
 
 ## Acknowledgements
 
-We would like to thank Liz Williams for being awesome. This work was funded by the Wellcome Trust grant number:...
+This work was funded by the Wellcome Trust (214337/Z/18/Z).
 
 ## References {.unnumbered}
 
