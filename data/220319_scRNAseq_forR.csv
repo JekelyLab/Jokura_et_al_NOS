@@ -1,0 +1,112 @@
+,Gene,cluster,count,% Expressing
+0,VAChT,cPRC,0.461374599,0.169086913
+1,GABA receptor,cPRC,0,0
+2,DOPO_MOUSE Dopamine beta-hydroxylase,cPRC,1.851150608,43.87034061
+3,RYa,cPRC,0,0
+4,NIT-GC2,cPRC,3.979187836,35.73468598
+5,NPYR_DROME Neuropeptide Y receptor,cPRC,1.89497916,4.303497499
+6,NPYR_DROME Neuropeptide Y receptor,cPRC,1.89497916,4.303497499
+7,NPYR_DROME Neuropeptide Y receptor,cPRC,1.89497916,4.303497499
+8,NPYR_DROME Neuropeptide Y receptor,cPRC,1.89497916,4.303497499
+9,RGWa,cPRC,0,0
+10,ACH91_ONCMY Neuronal acetylcholine receptor subunit alpha-9-I,cPRC,1.473521233,2.839196791
+11,Glycine receptor,cPRC,0,0
+12,Dopaminereceptor,cPRC,0,0
+13,Dopaminereceptor,cPRC,0,0
+14,Dopaminereceptor,cPRC,0,0
+15,Dopaminereceptor,cPRC,0,0
+16,GCYB1_BOVIN Guanylate cyclase soluble subunit beta-1,cPRC,0,0
+17,RYa,cPRC,0,0
+18,MLD/pedal-peptide-2,cPRC,3.980302896,29.0507894
+19,GABR1_RAT Gamma-aminobutyric acid type B receptor subunit 1,cPRC,0,0
+20,OPN3_HUMAN Opsin-3,cPRC,1.881509157,66.05580764
+21,NIT-GC1,cPRC,3.593253936,31.14750346
+22,GLRA2_MOUSE Glycine receptor subunit alpha-2,cPRC,0,0
+23,CNGAalpha,cPRC,2.516258413,23.80960936
+24,DCE1_PIG Glutamate decarboxylase 1,cPRC,1.456297998,95.09063148
+25,RGWa receptor,cPRC,2.115267444,26.24775248
+26,RGWa receptor,cPRC,2.115267444,26.24775248
+27,RGWa receptor,cPRC,2.115267444,26.24775248
+28,RGWa receptor,cPRC,2.115267444,26.24775248
+29,NOS,cPRC,0,0
+30,NOS,cPRC,0,0
+31,ACHB3_RAT Neuronal acetylcholine receptor subunit beta-3,cPRC,3.011186747,59.70025733
+32,ACH1_DROME Acetylcholine receptor subunit alpha-like 1,cPRC,0.234097644,0.060469455
+33,"GRIK2_MOUSE Glutamate receptor, ionotropic kainate 2",cPRC,2.342030158,32.59630386
+34,SC6A9_BOVIN Sodium- and chloride-dependent glycine transporter 1,cPRC,0.647682328,0.845581202
+35,VGLU1_XENLA Vesicular glutamate transporter 1,cPRC,0,0
+36,5HT1R_DROME 5-hydroxytryptamine receptor 1,cPRC,0,0
+37,VAChT,INNOS,0,0
+38,GABA receptor,INNOS,0,0
+39,DOPO_MOUSE Dopamine beta-hydroxylase,INNOS,0,0
+40,RYa,INNOS,3.783437983,35.78484733
+41,NIT-GC2,INNOS,0,0
+42,NPYR_DROME Neuropeptide Y receptor,INNOS,0,0
+43,NPYR_DROME Neuropeptide Y receptor,INNOS,0,0
+44,NPYR_DROME Neuropeptide Y receptor,INNOS,0,0
+45,NPYR_DROME Neuropeptide Y receptor,INNOS,0,0
+46,RGWa,INNOS,0,0
+47,ACH91_ONCMY Neuronal acetylcholine receptor subunit alpha-9-I,INNOS,0,0
+48,Glycine receptor,INNOS,0,0
+49,Dopaminereceptor,INNOS,2.525735043,19.43812967
+50,Dopaminereceptor,INNOS,2.525735043,19.43812967
+51,Dopaminereceptor,INNOS,2.525735043,19.43812967
+52,Dopaminereceptor,INNOS,2.525735043,19.43812967
+53,GCYB1_BOVIN Guanylate cyclase soluble subunit beta-1,INNOS,0,0
+54,RYa,INNOS,3.285369106,57.14126625
+55,MLD/pedal-peptide-2,INNOS,0,0
+56,GABR1_RAT Gamma-aminobutyric acid type B receptor subunit 1,INNOS,1.960504886,100
+57,OPN3_HUMAN Opsin-3,INNOS,0,0
+58,NIT-GC1,INNOS,0.210116023,0.004945844
+59,GLRA2_MOUSE Glycine receptor subunit alpha-2,INNOS,1.970416053,99.45738599
+60,CNGAalpha,INNOS,0,0
+61,DCE1_PIG Glutamate decarboxylase 1,INNOS,0,0
+62,RGWa receptor,INNOS,2.561800023,73.75224752
+63,RGWa receptor,INNOS,2.561800023,73.75224752
+64,RGWa receptor,INNOS,2.561800023,73.75224752
+65,RGWa receptor,INNOS,2.561800023,73.75224752
+66,NOS,INNOS,1.889599365,39.17441047
+67,NOS,INNOS,1.546094096,59.28881033
+68,ACHB3_RAT Neuronal acetylcholine receptor subunit beta-3,INNOS,0,0
+69,ACH1_DROME Acetylcholine receptor subunit alpha-like 1,INNOS,2.832269717,57.44598324
+70,"GRIK2_MOUSE Glutamate receptor, ionotropic kainate 2",INNOS,0,0
+71,SC6A9_BOVIN Sodium- and chloride-dependent glycine transporter 1,INNOS,0.119477709,0.077771532
+72,VGLU1_XENLA Vesicular glutamate transporter 1,INNOS,0,0
+73,5HT1R_DROME 5-hydroxytryptamine receptor 1,INNOS,0,0
+74,VAChT,INRGWa,0.090370731,0.020660056
+75,GABA receptor,INRGWa,2.581260689,51.49018994
+76,DOPO_MOUSE Dopamine beta-hydroxylase,INRGWa,0,0
+77,RYa,INRGWa,3.559952382,21.38776662
+78,NIT-GC2,INRGWa,0.292622995,0.003605519
+79,NPYR_DROME Neuropeptide Y receptor,INRGWa,1.481290533,1.625995241
+80,NPYR_DROME Neuropeptide Y receptor,INRGWa,1.481290533,1.625995241
+81,NPYR_DROME Neuropeptide Y receptor,INRGWa,1.481290533,1.625995241
+82,NPYR_DROME Neuropeptide Y receptor,INRGWa,1.481290533,1.625995241
+83,RGWa,INRGWa,3.898583808,97.76677865
+84,ACH91_ONCMY Neuronal acetylcholine receptor subunit alpha-9-I,INRGWa,2.497693438,30.96226738
+85,Glycine receptor,INRGWa,2.787081256,46.85794141
+86,Dopaminereceptor,INRGWa,2.680453435,27.78188902
+87,Dopaminereceptor,INRGWa,2.680453435,27.78188902
+88,Dopaminereceptor,INRGWa,2.680453435,27.78188902
+89,Dopaminereceptor,INRGWa,2.680453435,27.78188902
+90,GCYB1_BOVIN Guanylate cyclase soluble subunit beta-1,INRGWa,2.244670805,31.37448058
+91,RYa,INRGWa,0,0
+92,MLD/pedal-peptide-2,INRGWa,1.66414616,0.137256251
+93,GABR1_RAT Gamma-aminobutyric acid type B receptor subunit 1,INRGWa,0,0
+94,OPN3_HUMAN Opsin-3,INRGWa,0,0
+95,NIT-GC1,INRGWa,0,0
+96,GLRA2_MOUSE Glycine receptor subunit alpha-2,INRGWa,0,0
+97,CNGAalpha,INRGWa,0.204690331,0.043801531
+98,DCE1_PIG Glutamate decarboxylase 1,INRGWa,0,0
+99,RGWa receptor,INRGWa,0,0
+100,RGWa receptor,INRGWa,0,0
+101,RGWa receptor,INRGWa,0,0
+102,RGWa receptor,INRGWa,0,0
+103,NOS,INRGWa,0,0
+104,NOS,INRGWa,0,0
+105,ACHB3_RAT Neuronal acetylcholine receptor subunit beta-3,INRGWa,0,0
+106,ACH1_DROME Acetylcholine receptor subunit alpha-like 1,INRGWa,0,0
+107,"GRIK2_MOUSE Glutamate receptor, ionotropic kainate 2",INRGWa,0,0
+108,SC6A9_BOVIN Sodium- and chloride-dependent glycine transporter 1,INRGWa,1.725009147,12.79267145
+109,VGLU1_XENLA Vesicular glutamate transporter 1,INRGWa,2.462112027,98.00995743
+110,5HT1R_DROME 5-hydroxytryptamine receptor 1,INRGWa,2.252213845,100
