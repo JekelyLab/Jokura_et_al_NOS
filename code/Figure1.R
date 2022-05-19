@@ -10,6 +10,9 @@ library(patchwork)
 
 # Load and process the data -----------------------------------------------
 #read some pre-processed data text/csv file from the /data directory
+
+#try to organise code by figure, you can change this template
+
 syn_df <- read.csv2("data/head_celltypes_syn_matrix.csv", row.names=1)
 
 syn_df
