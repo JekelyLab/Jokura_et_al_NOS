@@ -14,9 +14,9 @@ library(readr)
 library(patchwork)
 
 
-WTvsNOS23_cPRC_INRGWa <- read_csv("C:/Users/klamd/Downloads/211209_WTvsNOS23_cPRC_INRGWa.csv")
+WTvsNOS23_cPRC_INRGWa <- read_csv("data/211209_WTvsNOS23_cPRC_INRGWa.csv")
 
-#抽出
+#in English
 WT_cPRC <- WTvsNOS23_cPRC_INRGWa %>% select(frame, starts_with("WT_cPRC"))
 
 #変換
