@@ -14,7 +14,7 @@ library(readr)
 library(patchwork)
 
 
-WTvsNOS11_cPRC_INNOS <- read_csv("C:/Users/klamd/Downloads/211129_WTvsNOS11_cPRC_INNOS.csv")
+WTvsNOS11_cPRC_INNOS <- read_csv("data/211129_WTvsNOS11_cPRC_INNOS.csv")
 
 WT_cPRC <- WTvsNOS11_cPRC_INNOS %>% select(frame, starts_with("WT_cPRC"))
 NOS11_cPRC <- WTvsNOS11_cPRC_INNOS %>% select(frame, starts_with("NOS11_cPRC"))
@@ -34,7 +34,7 @@ NOS11_cPRC_tidy <- NOS11_cPRC %>%
   ) %>%
   separate(col = c("phenotype"), into = c("phenotype", "sample"), sep = "\\...")
 
-#すべてのデータを確認してみる  
+#please only English comments :)
 ggplot(NOS11_cPRC_tidy, aes(x=frame, y=intensity)) + 
   geom_point(size = 1)+
   geom_line(aes(color=sample), size = 0.8, alpha = 0.5) 
