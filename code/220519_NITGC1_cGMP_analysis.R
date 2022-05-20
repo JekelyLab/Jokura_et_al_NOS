@@ -23,16 +23,16 @@ NITGC1_analysis <- read_csv("data/220519_GcG-T2A-NITGC1_norm.csv")
 
 
 
-#抽出:expressionとsolutionからデータを抽出する
+#Selecting data from expression and solution
 GcG_NIT1_cGMP <- subset(NITGC1_analysis, subset = expression == "GcG-NIT1" 
                         & solution == "cGMP")
 
-#すべてのデータを確認してみる  
+#Check all data  
 ggplot(GcG_NIT1_cGMP, aes(x=time, y=intensity)) + 
   geom_point(size = 1)+
   geom_line(aes(color=cell), size = 0.8, alpha = 0.5) 
 
-#tapply関数は第1引数に処理対象データ、第2引数に分類データ、第3引数に処理したい関数
+#tapply
 GcG_NIT1_cGMP_mean <- data.frame(time = GcG_NIT1_cGMP$time, 
                                 number = tapply(GcG_NIT1_cGMP$intensity, GcG_NIT1_cGMP$time, length), 
                                 mean = tapply(GcG_NIT1_cGMP$intensity, GcG_NIT1_cGMP$time, mean))
@@ -66,16 +66,16 @@ ggplot(GcG_NIT1_cGMP_mean) +
 
 
 
-#抽出:expressionとsolutionからデータを抽出する
+#Selecting data from expression and solution
 GcG_SNAP <- subset(NITGC1_analysis, subset = expression == "GcG" 
                         & solution == "SNAP")
 
-#すべてのデータを確認してみる  
+#Check all data  
 ggplot(GcG_SNAP, aes(x=time, y=intensity)) + 
   geom_point(size = 1)+
   geom_line(aes(color=cell), size = 0.8, alpha = 0.5) 
 
-#tapply関数は第1引数に処理対象データ、第2引数に分類データ、第3引数に処理したい関数
+#tapply
 GcG_SNAP_mean <- data.frame(time = GcG_SNAP$time, 
                                  number = tapply(GcG_SNAP$intensity, GcG_SNAP$time, length), 
                                  mean = tapply(GcG_SNAP$intensity, GcG_SNAP$time, mean))
@@ -148,16 +148,16 @@ ggsave(file = "GcG_SNAP.png", plot = GcG_SNAP_PNG, dpi = 300, path = "pictures")
 
 
 
-#抽出:expressionとsolutionからデータを抽出する
+#Selecting data from expression and solution
 GcG_NIT1_SNAP <- subset(NITGC1_analysis, subset = expression == "GcG-NIT1" 
                         & solution == "SNAP")
 
-#すべてのデータを確認してみる  
+#Check all data  
 ggplot(GcG_NIT1_SNAP, aes(x=time, y=intensity)) + 
   geom_point(size = 1)+
   geom_line(aes(color=cell), size = 0.8, alpha = 0.5) 
 
-#tapply関数は第1引数に処理対象データ、第2引数に分類データ、第3引数に処理したい関数
+#tapply
 GcG_NIT1_SNAP_mean <- data.frame(time = GcG_NIT1_SNAP$time, 
                                  number = tapply(GcG_NIT1_SNAP$intensity, GcG_NIT1_SNAP$time, length), 
                                  mean = tapply(GcG_NIT1_SNAP$intensity, GcG_NIT1_SNAP$time, mean))
@@ -239,16 +239,16 @@ ggsave(file = "GcG_NIT1_SNAP.png", plot = GcG_NIT1_SNAP_PNG, dpi = 300, path = "
 
 
 
-#抽出:expressionとsolutionからデータを抽出する
+#Selecting data from expression and solution
 GcG_NIT1_DMSO <- subset(NITGC1_analysis, subset = expression == "GcG-NIT1" 
                    & solution == "DMSO")
 
-#すべてのデータを確認してみる  
+#Check all data  
 ggplot(GcG_NIT1_DMSO, aes(x=time, y=intensity)) + 
   geom_point(size = 1)+
   geom_line(aes(color=cell), size = 0.8, alpha = 0.5) 
 
-#tapply関数は第1引数に処理対象データ、第2引数に分類データ、第3引数に処理したい関数
+#tapply
 GcG_NIT1_DMSO_mean <- data.frame(time = GcG_NIT1_DMSO$time, 
                             number = tapply(GcG_NIT1_DMSO$intensity, GcG_NIT1_DMSO$time, length), 
                             mean = tapply(GcG_NIT1_DMSO$intensity, GcG_NIT1_DMSO$time, mean))

@@ -14,7 +14,7 @@ library(readr)
 library(patchwork)
 
 
-WTvsNOS11_cPRC_INNOS <- read_csv("data/211129_WTvsNOS11_cPRC_INNOS(2).csv")
+WTvsNOS11_cPRC_INNOS <- read_csv("data/211129_WTvsNOS11_cPRC_INNOS (2).csv")
 
 WT_cPRC <- WTvsNOS11_cPRC_INNOS %>% select(frame, starts_with("WT_cPRC"))
 NOS11_cPRC <- WTvsNOS11_cPRC_INNOS %>% select(frame, starts_with("NOS11_cPRC"))
@@ -95,7 +95,9 @@ p1 <- ggplot(WT_cPRC_tidy_mean) +
   annotate("text", x=37, y=1.65, label="0.2 ΔF/F0")+
   ylim(0.3,2.8)+
   theme_void()
-p1
+
+ggsave("WTvsNOS11_WTcPRC.png", plot = p1, path = "pictures", dpi = 400, bg = "white")
+
 
 p2 <- ggplot(NOS11_cPRC_tidy_mean) +
   aes(x = frame, y = mean) +
@@ -106,7 +108,7 @@ p2 <- ggplot(NOS11_cPRC_tidy_mean) +
   ylim(0.3,2.8)+
   theme_void()
 
-p1 / p2
+ggsave("WTvsNOS11_NOS11cPRC.png", plot = p2, path = "pictures", dpi = 400, bg = "white")
 
 
 
@@ -164,7 +166,7 @@ p3 <- ggplot(WT_INNOS_tidy_mean) +
   ylim(0.5,3.2)+
   theme_void()
 
-
+ggsave("WTvsNOS11_WTINNOS.png", plot = p3, path = "pictures", dpi = 400, bg = "white")
 
 
 
@@ -214,9 +216,7 @@ p4 <- ggplot(NOS11_INNOS_tidy_mean) +
   ylim(0.5,3.2)+
   theme_void()
 
-
-(p1 + p2) / (p3 + p4) +
-  plot_annotation(tag_levels = "A")
+ggsave("WTvsNOS11_NOS11INNOS.png", plot = p4, path = "pictures", dpi = 400, bg = "white")
 
 
 

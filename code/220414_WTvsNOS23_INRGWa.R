@@ -14,7 +14,7 @@ library(readr)
 library(patchwork)
 
 
-WTvsNOS23_cPRC_INRGWa <- read_csv("data/211209_WTvsNOS23_cPRC_INRGWa(2).csv")
+WTvsNOS23_cPRC_INRGWa <- read_csv("data/211209_WTvsNOS23_cPRC_INRGWa (2).csv")
 
 #Selection
 WT_cPRC <- WTvsNOS23_cPRC_INRGWa %>% select(frame, starts_with("WT_cPRC"))
@@ -183,7 +183,7 @@ p2 <- ggplot(NOS23_cPRC_tidy_mean) +
   annotate("rect", xmin=51, xmax=90, ymin=-Inf, ymax=Inf, alpha=0.05, fill="purple") +
   ylim(0.4,1.7)+
   theme_void()
-p1 / p2
+p2
 
 p3 <- ggplot(WT_INRGWa_tidy_mean) +
   aes(x = frame, y = mean) +
@@ -208,8 +208,26 @@ p4 <- ggplot(NOS23_INRGWa_tidy_mean) +
   ylim(0.7,1.7)+
   theme_void()
 
-(p1 + p2) / (p3 + p4) +
-  plot_annotation(tag_levels = "A")
+p4
+
+#Save
+ggsave("WTvsNOS23_WTcPRC.png", plot = p1, path = "pictures", dpi = 400, bg = "white")
+ggsave("WTvsNOS23_NOS23cPRC.png", plot = p2, path = "pictures", dpi = 400, bg = "white")
+ggsave("WTvsNOS23_WTINRGWa.png", plot = p3, path = "pictures", dpi = 400, bg = "white")
+ggsave("WTvsNOS23_NOS23INRGWa.png", plot = p4, path = "pictures", dpi = 400, bg = "white")
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
