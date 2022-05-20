@@ -14,7 +14,7 @@ library(readr)
 library(patchwork)
 
 
-WTvsNOS11_cPRC_INNOS <- read_csv("C:/Users/klamd/Downloads/211129_WTvsNOS11_cPRC_INNOS.csv")
+WTvsNOS11_cPRC_INNOS <- read_csv("data/211129_WTvsNOS11_cPRC_INNOS(2).csv")
 
 WT_cPRC <- WTvsNOS11_cPRC_INNOS %>% select(frame, starts_with("WT_cPRC"))
 NOS11_cPRC <- WTvsNOS11_cPRC_INNOS %>% select(frame, starts_with("NOS11_cPRC"))
