@@ -16,10 +16,10 @@ library(patchwork)
 
 WTvsNOS23_cPRC_INRGWa <- read_csv("data/211209_WTvsNOS23_cPRC_INRGWa(2).csv")
 
-#抽出
+#Selection
 WT_cPRC <- WTvsNOS23_cPRC_INRGWa %>% select(frame, starts_with("WT_cPRC"))
 
-#変換
+#Transformation
 WT_cPRC_tidy <- WT_cPRC %>% 
   pivot_longer(cols = -c("frame"),
                names_to = "phenotype",
@@ -28,12 +28,12 @@ WT_cPRC_tidy <- WT_cPRC %>%
   separate(col = c("phenotype"), into = c("phenotype", "sample"), sep = "\\...")
 
 
-#すべてのデータを確認してみる  
+#Check all data  
 ggplot(WT_cPRC_tidy, aes(x=frame, y=intensity)) + 
   geom_point(size = 1)+
   geom_line(aes(color=sample), size = 0.8, alpha = 0.5) 
 
-#tapply関数は第1引数に処理対象データ、第2引数に分類データ、第3引数に処理したい関数
+#The tapply function has the data to be processed as the first argument, the classification data as the second argument and the function to be processed as the third argument.
 WT_cPRC_tidy_mean <- data.frame(frame = WT_cPRC$frame, 
                                 number = tapply(WT_cPRC_tidy$intensity, WT_cPRC_tidy$frame, length), 
                                 mean = tapply(WT_cPRC_tidy$intensity, WT_cPRC_tidy$frame, mean))
@@ -49,10 +49,10 @@ WT_cPRC_tidy_mean$CI_lower <-
 WT_cPRC_tidy_mean$CI_upper <- 
   WT_cPRC_tidy_mean$mean - qt((1-0.95)/2, df=WT_cPRC_tidy_mean$n-1) * WT_cPRC_tidy_mean$se
 
-#抽出
+#Selection
 NOS23_cPRC <- WTvsNOS23_cPRC_INRGWa %>% select(frame, starts_with("NOS23_cPRC"))
 
-#変換
+#Transformation
 NOS23_cPRC_tidy <- NOS23_cPRC %>% 
   pivot_longer(cols = -c("frame"),
                names_to = "phenotype",
@@ -61,12 +61,12 @@ NOS23_cPRC_tidy <- NOS23_cPRC %>%
   separate(col = c("phenotype"), into = c("phenotype", "sample"), sep = "\\...")
 
 
-#すべてのデータを確認してみる  
+#Check all data  
 ggplot(NOS23_cPRC_tidy, aes(x=frame, y=intensity)) + 
   geom_point(size = 1)+
   geom_line(aes(color=sample), size = 0.8, alpha = 0.5) 
 
-#tapply関数は第1引数に処理対象データ、第2引数に分類データ、第3引数に処理したい関数
+#The tapply function has the data to be processed as the first argument, the classification data as the second argument and the function to be processed as the third argument.
 NOS23_cPRC_tidy_mean <- data.frame(frame = NOS23_cPRC$frame, 
                                 number = tapply(NOS23_cPRC_tidy$intensity, NOS23_cPRC_tidy$frame, length), 
                                 mean = tapply(NOS23_cPRC_tidy$intensity, NOS23_cPRC_tidy$frame, mean))
@@ -87,10 +87,10 @@ NOS23_cPRC_tidy_mean$CI_upper <-
 
 
 
-#抽出
+#Selection
 WT_INRGWa <- WTvsNOS23_cPRC_INRGWa %>% select(frame, starts_with("WT_INRGWa"))
 
-#変換
+#Transformation
 WT_INRGWa_tidy <- WT_INRGWa %>% 
   pivot_longer(cols = -c("frame"),
                names_to = "phenotype",
@@ -99,12 +99,12 @@ WT_INRGWa_tidy <- WT_INRGWa %>%
   separate(col = c("phenotype"), into = c("phenotype", "sample"), sep = "\\...")
 
 
-#すべてのデータを確認してみる  
+#Check all data  
 ggplot(WT_INRGWa_tidy, aes(x=frame, y=intensity)) + 
   geom_point(size = 1)+
   geom_line(aes(color=sample), size = 0.8, alpha = 0.5) 
 
-#tapply関数は第1引数に処理対象データ、第2引数に分類データ、第3引数に処理したい関数
+#The tapply function has the data to be processed as the first argument, the classification data as the second argument and the function to be processed as the third argument.
 WT_INRGWa_tidy_mean <- data.frame(frame = WT_INRGWa$frame, 
                                    number = tapply(WT_INRGWa_tidy$intensity, WT_INRGWa_tidy$frame, length), 
                                    mean = tapply(WT_INRGWa_tidy$intensity, WT_INRGWa_tidy$frame, mean))
@@ -122,10 +122,10 @@ WT_INRGWa_tidy_mean$CI_upper <-
 
 
 
-#抽出
+#Selection
 NOS23_INRGWa <- WTvsNOS23_cPRC_INRGWa %>% select(frame, starts_with("NOS23_INRGWa"))
 
-#変換
+#Transformation
 NOS23_INRGWa_tidy <- NOS23_INRGWa %>% 
   pivot_longer(cols = -c("frame"),
                names_to = "phenotype",
@@ -134,12 +134,12 @@ NOS23_INRGWa_tidy <- NOS23_INRGWa %>%
   separate(col = c("phenotype"), into = c("phenotype", "sample"), sep = "\\...")
 
 
-#すべてのデータを確認してみる  
+#Check all data  
 ggplot(NOS23_INRGWa_tidy, aes(x=frame, y=intensity)) + 
   geom_point(size = 1)+
   geom_line(aes(color=sample), size = 0.8, alpha = 0.5) 
 
-#tapply関数は第1引数に処理対象データ、第2引数に分類データ、第3引数に処理したい関数
+#The tapply function has the data to be processed as the first argument, the classification data as the second argument and the function to be processed as the third argument.
 NOS23_INRGWa_tidy_mean <- data.frame(frame = NOS23_INRGWa$frame, 
                                   number = tapply(NOS23_INRGWa_tidy$intensity, NOS23_INRGWa_tidy$frame, length), 
                                   mean = tapply(NOS23_INRGWa_tidy$intensity, NOS23_INRGWa_tidy$frame, mean))
@@ -160,7 +160,7 @@ NOS23_INRGWa_tidy_mean$CI_upper <-
 
 
 
-#グラフ
+#graph
 p1 <- ggplot(WT_cPRC_tidy_mean) +
   aes(x = frame, y = mean) +
   geom_line(data = WT_cPRC_tidy, aes(x=frame, y=intensity, group=sample), color="grey") +

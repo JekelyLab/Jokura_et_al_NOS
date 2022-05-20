@@ -34,14 +34,14 @@ NOS11_cPRC_tidy <- NOS11_cPRC %>%
   ) %>%
   separate(col = c("phenotype"), into = c("phenotype", "sample"), sep = "\\...")
 
-#すべてのデータを確認してみる  
+#Check all data   
 ggplot(NOS11_cPRC_tidy, aes(x=frame, y=intensity)) + 
   geom_point(size = 1)+
   geom_line(aes(color=sample), size = 0.8, alpha = 0.5) 
 
 
 
-#tapply関数は第1引数に処理対象データ、第2引数に分類データ、第3引数に処理したい関数
+#tapply
 WT_cPRC_tidy_mean <- data.frame(frame = WT_cPRC$frame, 
                                 number = tapply(WT_cPRC_tidy$intensity, WT_cPRC_tidy$frame, length), 
                                 mean = tapply(WT_cPRC_tidy$intensity, WT_cPRC_tidy$frame, mean))
@@ -62,7 +62,7 @@ WT_cPRC_tidy_mean$CI_upper <-
 
 
 
-#tapply関数は第1引数に処理対象データ、第2引数に分類データ、第3引数に処理したい関数
+#tapply
 NOS11_cPRC_tidy_mean <- data.frame(frame = NOS11_cPRC$frame, 
                                 number = tapply(NOS11_cPRC_tidy$intensity, NOS11_cPRC_tidy$frame, length), 
                                 mean = tapply(NOS11_cPRC_tidy$intensity, NOS11_cPRC_tidy$frame, mean))
@@ -82,7 +82,7 @@ NOS11_cPRC_tidy_mean$CI_upper <-
 head(NOS11_cPRC_tidy_mean)
 
 
-#グラフ
+#graph
 p1 <- ggplot(WT_cPRC_tidy_mean) +
   aes(x = frame, y = mean) +
   geom_line(data = WT_cPRC_tidy, aes(x=frame, y=intensity, group=sample), color="grey") +
@@ -123,14 +123,14 @@ WT_INNOS_tidy <- WT_INNOS %>%
   ) %>%
   separate(col = c("phenotype"), into = c("phenotype", "sample"), sep = "\\...")
 
-#すべてのデータを確認してみる  
+#Check all data   
 ggplot(WT_INNOS_tidy, aes(x=frame, y=intensity)) + 
   geom_point(size = 1)+
   geom_line(aes(color=sample), size = 0.8, alpha = 0.5) 
 
 
 
-#tapply関数は第1引数に処理対象データ、第2引数に分類データ、第3引数に処理したい関数
+#tapply
 WT_INNOS_tidy_mean <- data.frame(frame = WT_INNOS$frame, 
                                    number = tapply(WT_INNOS_tidy$intensity, WT_INNOS_tidy$frame, length), 
                                    mean = tapply(WT_INNOS_tidy$intensity, WT_INNOS_tidy$frame, mean))
@@ -150,7 +150,7 @@ WT_INNOS_tidy_mean$CI_upper <-
 head(WT_INNOS_tidy_mean)
 
 
-#グラフ
+#graph
 p3 <- ggplot(WT_INNOS_tidy_mean) +
   aes(x = frame, y = mean) +
   geom_line(data = WT_INNOS_tidy, aes(x=frame, y=intensity, group=sample), color="grey") +
@@ -177,14 +177,14 @@ NOS11_INNOS_tidy <- NOS11_INNOS %>%
   ) %>%
   separate(col = c("phenotype"), into = c("phenotype", "sample"), sep = "\\...")
 
-#すべてのデータを確認してみる  
+#Check all data   
 ggplot(NOS11_INNOS_tidy, aes(x=frame, y=intensity)) + 
   geom_point(size = 1)+
   geom_line(aes(color=sample), size = 0.8, alpha = 0.5) 
 
 
 
-#tapply関数は第1引数に処理対象データ、第2引数に分類データ、第3引数に処理したい関数
+#tapply
 NOS11_INNOS_tidy_mean <- data.frame(frame = NOS11_INNOS$frame, 
                                  number = tapply(NOS11_INNOS_tidy$intensity, NOS11_INNOS_tidy$frame, length), 
                                  mean = tapply(NOS11_INNOS_tidy$intensity, NOS11_INNOS_tidy$frame, mean))
@@ -204,7 +204,7 @@ NOS11_INNOS_tidy_mean$CI_upper <-
 head(NOS11_INNOS_tidy_mean)
 
 
-#グラフ
+#graph
 p4 <- ggplot(NOS11_INNOS_tidy_mean) +
   aes(x = frame, y = mean) +
   geom_line(data = NOS11_INNOS_tidy, aes(x=frame, y=intensity, group=sample), color="grey") +

@@ -13,9 +13,15 @@ library(esquisse)
 library(ggraptR)
 library(readr)
 
-DAFFMDA <- read_csv("D:/NOS project/DAF-FM imaging/220212_RGECO_DAF-FM_Bleaching/220213_DAF-FM.csv")
+DAFFM <- read_csv("data/220213_DAF-FM_long.csv")
 
 #20220214_DAF-FM DA was injected and changes in nitric oxide during UV irradiation were observed.
+
+ggplot(DAFFM) +
+  aes(x = frame, y = intencity, colour = stimuli) +
+  geom_line(size = 0.5) +
+  scale_color_hue(direction = 1) +
+  theme_minimal()
 
 
 ggplot(DAFFMDA) +
