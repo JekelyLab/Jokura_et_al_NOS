@@ -14,7 +14,7 @@ library(readr)
 library(patchwork)
 
 
-WTvsNOS11_cPRC_INNOS <- read_csv("C:/Users/klamd/Downloads/211129_WTvsNOS11_cPRC_INNOS.csv")
+WTvsNOS11_cPRC_INNOS <- read_csv("data/211129_WTvsNOS11_cPRC_INNOS (2).csv")
 
 WT_cPRC <- WTvsNOS11_cPRC_INNOS %>% select(frame, starts_with("WT_cPRC"))
 NOS11_cPRC <- WTvsNOS11_cPRC_INNOS %>% select(frame, starts_with("NOS11_cPRC"))
@@ -34,14 +34,14 @@ NOS11_cPRC_tidy <- NOS11_cPRC %>%
   ) %>%
   separate(col = c("phenotype"), into = c("phenotype", "sample"), sep = "\\...")
 
-#すべてのデータを確認してみる  
+#Check all data   
 ggplot(NOS11_cPRC_tidy, aes(x=frame, y=intensity)) + 
   geom_point(size = 1)+
   geom_line(aes(color=sample), size = 0.8, alpha = 0.5) 
 
 
 
-#tapply関数は第1引数に処理対象データ、第2引数に分類データ、第3引数に処理したい関数
+#tapply
 WT_cPRC_tidy_mean <- data.frame(frame = WT_cPRC$frame, 
                                 number = tapply(WT_cPRC_tidy$intensity, WT_cPRC_tidy$frame, length), 
                                 mean = tapply(WT_cPRC_tidy$intensity, WT_cPRC_tidy$frame, mean))
@@ -62,7 +62,7 @@ WT_cPRC_tidy_mean$CI_upper <-
 
 
 
-#tapply関数は第1引数に処理対象データ、第2引数に分類データ、第3引数に処理したい関数
+#tapply
 NOS11_cPRC_tidy_mean <- data.frame(frame = NOS11_cPRC$frame, 
                                 number = tapply(NOS11_cPRC_tidy$intensity, NOS11_cPRC_tidy$frame, length), 
                                 mean = tapply(NOS11_cPRC_tidy$intensity, NOS11_cPRC_tidy$frame, mean))
@@ -82,7 +82,7 @@ NOS11_cPRC_tidy_mean$CI_upper <-
 head(NOS11_cPRC_tidy_mean)
 
 
-#グラフ
+#graph
 p1 <- ggplot(WT_cPRC_tidy_mean) +
   aes(x = frame, y = mean) +
   geom_line(data = WT_cPRC_tidy, aes(x=frame, y=intensity, group=sample), color="grey") +
@@ -95,7 +95,9 @@ p1 <- ggplot(WT_cPRC_tidy_mean) +
   annotate("text", x=37, y=1.65, label="0.2 ΔF/F0")+
   ylim(0.3,2.8)+
   theme_void()
-p1
+
+ggsave("WTvsNOS11_WTcPRC.png", plot = p1, path = "pictures", dpi = 400, bg = "white")
+
 
 p2 <- ggplot(NOS11_cPRC_tidy_mean) +
   aes(x = frame, y = mean) +
@@ -106,7 +108,7 @@ p2 <- ggplot(NOS11_cPRC_tidy_mean) +
   ylim(0.3,2.8)+
   theme_void()
 
-p1 / p2
+ggsave("WTvsNOS11_NOS11cPRC.png", plot = p2, path = "pictures", dpi = 400, bg = "white")
 
 
 
@@ -123,14 +125,14 @@ WT_INNOS_tidy <- WT_INNOS %>%
   ) %>%
   separate(col = c("phenotype"), into = c("phenotype", "sample"), sep = "\\...")
 
-#すべてのデータを確認してみる  
+#Check all data   
 ggplot(WT_INNOS_tidy, aes(x=frame, y=intensity)) + 
   geom_point(size = 1)+
   geom_line(aes(color=sample), size = 0.8, alpha = 0.5) 
 
 
 
-#tapply関数は第1引数に処理対象データ、第2引数に分類データ、第3引数に処理したい関数
+#tapply
 WT_INNOS_tidy_mean <- data.frame(frame = WT_INNOS$frame, 
                                    number = tapply(WT_INNOS_tidy$intensity, WT_INNOS_tidy$frame, length), 
                                    mean = tapply(WT_INNOS_tidy$intensity, WT_INNOS_tidy$frame, mean))
@@ -150,7 +152,7 @@ WT_INNOS_tidy_mean$CI_upper <-
 head(WT_INNOS_tidy_mean)
 
 
-#グラフ
+#graph
 p3 <- ggplot(WT_INNOS_tidy_mean) +
   aes(x = frame, y = mean) +
   geom_line(data = WT_INNOS_tidy, aes(x=frame, y=intensity, group=sample), color="grey") +
@@ -164,7 +166,7 @@ p3 <- ggplot(WT_INNOS_tidy_mean) +
   ylim(0.5,3.2)+
   theme_void()
 
-
+ggsave("WTvsNOS11_WTINNOS.png", plot = p3, path = "pictures", dpi = 400, bg = "white")
 
 
 
@@ -177,14 +179,14 @@ NOS11_INNOS_tidy <- NOS11_INNOS %>%
   ) %>%
   separate(col = c("phenotype"), into = c("phenotype", "sample"), sep = "\\...")
 
-#すべてのデータを確認してみる  
+#Check all data   
 ggplot(NOS11_INNOS_tidy, aes(x=frame, y=intensity)) + 
   geom_point(size = 1)+
   geom_line(aes(color=sample), size = 0.8, alpha = 0.5) 
 
 
 
-#tapply関数は第1引数に処理対象データ、第2引数に分類データ、第3引数に処理したい関数
+#tapply
 NOS11_INNOS_tidy_mean <- data.frame(frame = NOS11_INNOS$frame, 
                                  number = tapply(NOS11_INNOS_tidy$intensity, NOS11_INNOS_tidy$frame, length), 
                                  mean = tapply(NOS11_INNOS_tidy$intensity, NOS11_INNOS_tidy$frame, mean))
@@ -204,7 +206,7 @@ NOS11_INNOS_tidy_mean$CI_upper <-
 head(NOS11_INNOS_tidy_mean)
 
 
-#グラフ
+#graph
 p4 <- ggplot(NOS11_INNOS_tidy_mean) +
   aes(x = frame, y = mean) +
   geom_line(data = NOS11_INNOS_tidy, aes(x=frame, y=intensity, group=sample), color="grey") +
@@ -214,9 +216,7 @@ p4 <- ggplot(NOS11_INNOS_tidy_mean) +
   ylim(0.5,3.2)+
   theme_void()
 
-
-(p1 + p2) / (p3 + p4) +
-  plot_annotation(tag_levels = "A")
+ggsave("WTvsNOS11_NOS11INNOS.png", plot = p4, path = "pictures", dpi = 400, bg = "white")
 
 
 
