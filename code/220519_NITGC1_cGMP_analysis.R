@@ -113,7 +113,7 @@ GcG_SNAP_PNG <- ggplot(GcG_SNAP_mean) +
         axis.text.y = element_text(size = 14),
         axis.text.x = element_text(size = 14))
 
-ggsave(file = "GcG_SNAP.png", plot = GcG_SNAP_PNG, dpi = 300, path = "pictures")
+#ggsave(file = "GcG_SNAP.png", plot = GcG_SNAP_PNG, dpi = 300, path = "pictures")
 
 #
 
@@ -195,7 +195,7 @@ GcG_NIT1_SNAP_PNG <- ggplot(GcG_NIT1_SNAP_mean) +
         axis.text.y = element_text(size = 14),
         axis.text.x = element_text(size = 14))
 
-ggsave(file = "GcG_NIT1_SNAP.png", plot = GcG_NIT1_SNAP_PNG, dpi = 300, path = "pictures")
+#ggsave(file = "GcG_NIT1_SNAP.png", plot = GcG_NIT1_SNAP_PNG, dpi = 300, path = "pictures")
 #
 
 #GcG_NIT1_SNAP_g <- ggplot(GcG_NIT1_SNAP_mean) +
@@ -286,7 +286,7 @@ GcG_NIT1_DMSO_PNG <- ggplot(GcG_NIT1_DMSO_mean) +
         axis.text.y = element_text(size = 14),
         axis.text.x = element_text(size = 14))
 
-ggsave(file = "GcG_NIT1_DMSO.png", plot = GcG_NIT1_DMSO_PNG, dpi = 300, path = "pictures")
+#ggsave(file = "GcG_NIT1_DMSO.png", plot = GcG_NIT1_DMSO_PNG, dpi = 300, path = "pictures")
 
 #
 
@@ -360,7 +360,7 @@ NITGC1_analysis_PNG <- ggplot(NITGC1_analysis_mean) +
     axis.text.x = element_text(size = 14)
   )
 
-ggsave(file = "NITGC1_analysis.png", plot = NITGC1_analysis_PNG, dpi = 300, path = "pictures")
+#ggsave(file = "NITGC1_analysis.png", plot = NITGC1_analysis_PNG, dpi = 300, path = "pictures")
 
 
 #NITGC1_analysis_eps <- ggplot(NITGC1_analysis_mean) +
@@ -399,6 +399,10 @@ summary(SG_res2)
 TukeyHSD(aov(mean ~ condition,d=NITGC1_analysis_mean))
 
 
+
+#cGMP_assay_PNG <- GcG_NIT1_SNAP_PNG|GcG_NIT1_DMSO_PNG|GcG_SNAP_PNG
+#cGMP_assay_PNG
+#ggsave(file = "cGMP_assay_3cond.png", plot = cGMP_assay_PNG, dpi = 300, path = "pictures")
 
 
 
