@@ -164,13 +164,13 @@ NOS23_INRGWa_tidy_mean$CI_upper <-
 p1 <- ggplot(WT_cPRC_tidy_mean) +
   aes(x = frame, y = mean) +
   geom_line(data = WT_cPRC_tidy, aes(x=frame, y=intensity, group=sample), color="grey") +
-  geom_line(size = 1.1) +
-  geom_ribbon(aes(ymin=CI_lower, ymax=CI_upper) ,fill="black", alpha=0.2)+
+  geom_line(size = 1.1, color = "darkmagenta") +
+  geom_ribbon(aes(ymin=CI_lower, ymax=CI_upper) ,fill="magenta", alpha=0.2)+
   annotate("rect", xmin=51, xmax=90, ymin=-Inf, ymax=Inf, alpha=0.05, fill="purple") +
-  annotate("segment", x=20, xend=40, y=1.5, yend=1.5, size=1)+
-  annotate("segment", x=20, xend=20, y=1.5, yend=1.65, size=1)+
-  annotate("text", x=30, y=1.45, label="10 sec")+
-  annotate("text", x=37, y=1.58, label="0.2 ΔF/F0")+
+  annotate("segment", x=25, xend=45, y=1.425, yend=1.425, size=1)+
+  annotate("segment", x=25, xend=25, y=1.425, yend=1.575, size=1)+
+  annotate("text", x=35, y=1.4, label="10 sec")+
+  annotate("text", x=36, y=1.5, label="0.2 ΔF/F0")+
   ylim(0.4,1.7)+
   theme_void()
 p1
@@ -178,8 +178,8 @@ p1
 p2 <- ggplot(NOS23_cPRC_tidy_mean) +
   aes(x = frame, y = mean) +
   geom_line(data = NOS23_cPRC_tidy, aes(x=frame, y=intensity, group=sample), color="grey") +
-  geom_line(size = 1.1) +
-  geom_ribbon(aes(ymin=CI_lower, ymax=CI_upper) ,fill="green", alpha=0.2)+
+  geom_line(size = 1.1, color = "darkmagenta") +
+  geom_ribbon(aes(ymin=CI_lower, ymax=CI_upper) ,fill="magenta", alpha=0.2)+
   annotate("rect", xmin=51, xmax=90, ymin=-Inf, ymax=Inf, alpha=0.05, fill="purple") +
   ylim(0.4,1.7)+
   theme_void()
@@ -188,13 +188,13 @@ p2
 p3 <- ggplot(WT_INRGWa_tidy_mean) +
   aes(x = frame, y = mean) +
   geom_line(data = WT_INRGWa_tidy, aes(x=frame, y=intensity, group=sample), color="grey") +
-  geom_line(size = 1.1) +
-  geom_ribbon(aes(ymin=CI_lower, ymax=CI_upper) ,fill="black", alpha=0.2)+
+  geom_line(size = 1.1, color = "green4") +
+  geom_ribbon(aes(ymin=CI_lower, ymax=CI_upper) ,fill="green3", alpha=0.25)+
   annotate("rect", xmin=51, xmax=90, ymin=-Inf, ymax=Inf, alpha=0.05, fill="purple") +
-  annotate("segment", x=20, xend=40, y=1.5, yend=1.5, size=1)+
-  annotate("segment", x=20, xend=20, y=1.5, yend=1.65, size=1)+
-  annotate("text", x=30, y=1.46, label="10 sec")+
-  annotate("text", x=37, y=1.58, label="0.2 ΔF/F0")+
+  annotate("segment", x=25, xend=45, y=1.325, yend=1.325, size=1)+
+  annotate("segment", x=25, xend=25, y=1.325, yend=1.475, size=1)+
+  annotate("text", x=35, y=1.3, label="10 sec")+
+  annotate("text", x=36, y=1.4, label="0.2 ΔF/F0")+
   ylim(0.7,1.7)+
   theme_void()
 p3
@@ -202,8 +202,8 @@ p3
 p4 <- ggplot(NOS23_INRGWa_tidy_mean) +
   aes(x = frame, y = mean) +
   geom_line(data = NOS23_INRGWa_tidy, aes(x=frame, y=intensity, group=sample), color="grey") +
-  geom_line(size = 1.1) +
-  geom_ribbon(aes(ymin=CI_lower, ymax=CI_upper) ,fill="green", alpha=0.2)+
+  geom_line(size = 1.1, color = "green4") +
+  geom_ribbon(aes(ymin=CI_lower, ymax=CI_upper) ,fill="green3", alpha=0.25)+
   annotate("rect", xmin=51, xmax=90, ymin=-Inf, ymax=Inf, alpha=0.05, fill="purple") +
   ylim(0.7,1.7)+
   theme_void()
