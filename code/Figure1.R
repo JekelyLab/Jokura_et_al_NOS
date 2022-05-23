@@ -107,9 +107,9 @@ Fig1 <- plot_grid(panelA,panelB,
     theme(plot.margin = unit(c(1, 1, 1, 1), units = "pt"))
 
 #save
-ggsave("figures/Figure1.pdf", limitsize = FALSE, 
+ggsave("figures/test.pdf", limitsize = FALSE, 
          units = c("px"), Fig1, width = 1800, height = 850)
-ggsave("figures/Figure1.png", limitsize = FALSE, 
+ggsave("figures/test.png", limitsize = FALSE, 
          units = c("px"), Fig1, width = 1800, height = 850, bg='white')
 
 
