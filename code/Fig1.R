@@ -25,8 +25,6 @@ plot3d(cPRC, soma=T, lwd=3, alpha=0.5, col="#D55E00")
 plot3d(INNOS, soma=T, lwd=4, alpha=1, col=Okabe_Ito[5])
 plot3d(INRGW, soma=T, lwd=2, alpha=0.7, col="#56B4E9")
 plot3d(Ser_h1, soma=T, lwd=4, alpha=0.5, col='grey80')
-#for reference, plot neuropil
-plot3d(connectome_neuron, soma=F, lwd=1, alpha=0.1, col='grey80')
 #add text labels
 texts3d(56000,32000,5000, "cPRC", cex=3)
 texts3d(43000,39000,5000, "Ser-h1", cex=3)
@@ -36,6 +34,8 @@ texts3d(50000,53000,5000, "INRGW", cex=3,col="#56B4E9")
 par3d(zoom=0.32)
 #adjust clipping
 clipplanes3d(0, -1, 0.16, 110000)
+#for reference, plot neuropil
+plot3d(connectome_neuron, soma=F, lwd=1, alpha=0.08, col='black')
 #make snapshot
 rgl.snapshot("pictures/INNOS_Catmaid.png")
 close3d()
@@ -48,26 +48,23 @@ plot3d(cPRC, soma=T, lwd=3, alpha=0.5, col="#D55E00")
 plot3d(INNOS, soma=T, lwd=4, alpha=1, col=Okabe_Ito[5])
 plot3d(INRGW, soma=T, lwd=2, alpha=0.7, col="#56B4E9")
 plot3d(Ser_h1, soma=T, lwd=4, alpha=0.5, col='grey80')
-#for reference, plot neuropil and body outline
-plot3d(connectome_neuron, soma=F, lwd=1, alpha=0.1, col='grey80')
-plot3d(outline, WithConnectors = F, WithNodes = F, soma=F, lwd=2,
-       rev = FALSE, fixup = F, add=T, forceClipregion = F, alpha=0.02,
-       col="#E2E2E2") 
 #adjust zoom
 par3d(zoom=0.46)
 #add text label
 texts3d(75000,48000,8000, "apical organ", cex=3)
-#rotate to dorsal view (ventral+extra rotation matrix)
-nview3d("ventral", extramat=rotationMatrix(0.2, 1, 0.1, 0.5)
-        %*%rotationMatrix(pi, 0, 0.1,0.4))
 #change window size
 par3d(windowRect = c(0, 0, 800, 800))
 #adjust zoom
 par3d(zoom=0.62)
+#for reference, plot neuropil and body outline
+plot3d(connectome_neuron, soma=F, lwd=1, alpha=0.07, col='black')
+plot3d(outline, WithConnectors = F, WithNodes = F, soma=F, lwd=2,
+       rev = FALSE, fixup = F, add=T, forceClipregion = F, alpha=0.02,
+       col="#E2E2E2") 
 #make snapshot
-rgl.snapshot("pictures/INNOS_Catmaid_dorsal.png")
+rgl.snapshot("pictures/INNOS_Catmaid_ventr.png")
 close3d()
-SS}
+}
 
 # get connectivity from CATMAID and plot network --------------------------
 {
@@ -184,46 +181,94 @@ webshot2::webshot(url="pictures/visNetwork_INNOS.html",
 
 }
 
+
+# crop images and change color space --------------------------------------
+{
+img <- image_read("pictures/NOS-promotor_3d_acTub_XXum.png")
+print(img)
+
+tub <- image_channel(img, channel = "G")
+tub <- image_normalize(image_contrast(tub, sharpen=1))
+print(tub)
+
+HCR <- image_channel(img, channel = "R")
+HCR <- image_normalize(image_contrast(HCR, sharpen=1))
+print(HCR)
+
+newimg <- image_combine(c(HCR,tub,tub), colorspace = "CMYK", channel = "default")
+newimg <- image_crop(newimg,geometry = "370x370+170+150")
+print(newimg)
+image_write(newimg, path = "pictures/NOS-promotor_3d_acTub_XXum_crop.png", format = "png")
+
+}
+
+{
+img <- image_read("pictures/HCR-IHC_51_AP_NOS_actub_55.92um.png")
+print(img)
+
+tub <- image_channel(img, channel = "G")
+tub <- image_normalize(image_contrast(tub, sharpen=1))
+print(tub)
+
+HCR <- image_channel(img, channel = "R")
+HCR <- image_normalize(image_contrast(HCR, sharpen=1))
+print(HCR)
+
+newimg <- image_combine(c(HCR,tub,tub), colorspace = "CMYK", channel = "default")
+print(newimg)
+newimg
+image_crop(newimg,geometry = "400x400+150+150")
+image_write(newimg, path = "pictures/HCR-IHC_51_AP_NOS_actub_55.92um_color.png", format = "png")
+}
 # assemble figure ---------------------------------------------------------
 
 #read png convert to image panel
 panel_SEM <- ggdraw() + 
-  draw_image(readPNG("pictures/Platynereis_SEM_3d_280um.png")) +
-  draw_line(x = c(0.1, 0.2785), y = c(0.07, 0.07), color = "white", size = 0.5) +
-  draw_label(expression(paste("50 ", mu, "m")), x = 0.2, y = 0.1, fontfamily = "sans", fontface = "plain",
-             color = "white", size = 10, angle = 0, lineheight = 0.9, alpha = 1) 
-panel_SEM  
+  draw_image(readPNG("pictures/Platynereis_SEM_3d_inv_280um.png")) +
+  draw_line(x = c(0.1, 0.2785), y = c(0.07, 0.07), color = "black", size = 0.5) +
+  draw_label(expression(paste("50 ", mu, "m")), x = 0.2, y = 0.1, size = 10) +
+  draw_label("dorsal view", x = 0.2, y = 0.99, size = 10)
 
 panel_NOS2d <- ggdraw() + draw_image(readPNG("pictures/NOS-promotor_2d_acTub_XXum.png"))
-panel_NOS3d <- ggdraw() + draw_image(readPNG("pictures/NOS-promotor_3d_acTub_XXum.png"))
-panel_INNOS_ant <- ggdraw() + draw_image(readPNG("pictures/INNOS_Catmaid.png"))
-panel_INNOS_dors <- ggdraw() + draw_image(readPNG("pictures/INNOS_Catmaid_dorsal.png"))
-panel_NOS_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR-IHC_51_AP_NOS_actub_55.92um.png"))
+panel_NOS3d <- ggdraw() + draw_image(readPNG("pictures/NOS-promotor_3d_acTub_XXum_crop.png")) +
+  draw_label("NOS->TdTomato", x = 0.35, y = 0.99, size = 10) +
+  draw_label("INNOS", x = 0.58, y = 0.75, color='#56B4E9', size = 12, fontface='bold') +
+  draw_label("cPRC", x = 0.3, y = 0.85, color='red',size = 12,fontface='bold')
+panel_INNOS_ant <- ggdraw() + draw_image(readPNG("pictures/INNOS_Catmaid.png")) +
+  draw_label("anterior view", x = 0.3, y = 0.99, size = 10)
+panel_INNOS_ventr <- ggdraw() + draw_image(readPNG("pictures/INNOS_Catmaid_ventr.png")) +
+  draw_label("ventral view", x = 0.25, y = 0.99, size = 10)
+panel_NOS_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR-IHC_51_AP_NOS_actub_55.92um_color.png")) +
+  draw_label("HCR in situ", x = 0.3, y = 0.99, size = 10) +
+  draw_label("INNOS", x = 0.55, y = 0.67, color='#56B4E9', size = 12, fontface='bold') +
+  draw_label("cPRC", x = 0.3, y = 0.85, color='red',size = 12, fontface='bold')  +
+  draw_line(x = c(0.05, 0.407), y = c(0.07, 0.07), color = "black", size = 0.5) +
+  draw_label(expression(paste("20 ", mu, "m")), x = 0.23, y = 0.1, size = 10)
 panel_NOS_RY_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR_52_AP_NOS_RYa_101.29um.png"))
-panel_Network <- ggdraw() + draw_image(readPNG("pictures/visNetwork_INNOS.png"))
+panel_Network <- ggdraw() + draw_image(readPNG("pictures/visNetwork_INNOS.png")) +
+  draw_label("synaptic connectome", x = 0.4, y = 0.99, size = 10)
   
 
 #combine panels into Figure and save final figure as pdf and png
 #panels of different sizes
 layout <- "
-ABCD
-EF##
+A#B#C
+#####
+D#E#F
 "
 
-Fig1 <- panel_SEM + panel_INNOS_dors + panel_INNOS_ant + panel_Network +
-        panel_NOS_HCR + panel_NOS_RY_HCR +
-  patchwork::plot_layout(design = layout, heights = c(1, 1)) + #we can change the heights of the rows in our layout (widths also can be defined)
+Fig1 <- panel_SEM + panel_INNOS_ventr + panel_INNOS_ant +
+  panel_NOS_HCR + panel_NOS3d + panel_Network +
+  patchwork::plot_layout(design = layout, heights = c(1,0.02,1), widths = c(1,0.02,1,0.02,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = "A") &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, 
       face='plain', color='black')) #or 'bold', 'italic'
 
-Fig1
+ggsave("figures/Fig1.png", limitsize = FALSE, 
+       units = c("px"), Fig1, width = 2350, height = 1700, bg='white')  
 
 ggsave("figures/Fig1.pdf", limitsize = FALSE, 
-       units = c("px"), Fig1, width = 3200, height = 1800)  
-
-ggsave("figures/Fig1.png", limitsize = FALSE, 
-       units = c("px"), Fig1, width = 3200, height = 1800, bg='white')  
+       units = c("px"), Fig1, width = 2350, height = 1700)  
 
 
 
