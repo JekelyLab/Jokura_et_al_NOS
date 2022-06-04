@@ -15,42 +15,59 @@ INRGW = nlapply(read.neurons.catmaid("^celltype6$", pid=11),
                function(x) smooth_neuron(x, sigma=2000))
 Ser_h1 = nlapply(read.neurons.catmaid("^celltype8$", pid=11),
                 function(x) smooth_neuron(x, sigma=6000))
+connectome_neuron = nlapply(read.neurons.catmaid("^connectome_neuron$", pid=11),
+                 function(x) smooth_neuron(x, sigma=6000))
+
 {
 plot_background()
-plot3d(cPRC, soma=T, lwd=2, alpha=1, col="#D55E00")
-plot3d(INNOS, soma=T, lwd=2, alpha=1, col=Okabe_Ito[5])
-plot3d(INRGW, soma=T, lwd=2, alpha=1, col="#56B4E9")
-plot3d(Ser_h1, soma=T, lwd=4, alpha=1, col='grey80')
+#plot neurons
+plot3d(cPRC, soma=T, lwd=3, alpha=0.5, col="#D55E00")
+plot3d(INNOS, soma=T, lwd=4, alpha=1, col=Okabe_Ito[5])
+plot3d(INRGW, soma=T, lwd=2, alpha=0.7, col="#56B4E9")
+plot3d(Ser_h1, soma=T, lwd=4, alpha=0.5, col='grey80')
+#for reference, plot neuropil
+plot3d(connectome_neuron, soma=F, lwd=1, alpha=0.1, col='grey80')
+#add text labels
 texts3d(56000,32000,5000, "cPRC", cex=3)
 texts3d(43000,39000,5000, "Ser-h1", cex=3)
 texts3d(75000,32000,5000, "INNOS", cex=3,col=Okabe_Ito[5])
 texts3d(50000,53000,5000, "INRGW", cex=3,col="#56B4E9")
+#adjust zoom
 par3d(zoom=0.32)
+#adjust clipping
 clipplanes3d(0, -1, 0.16, 110000)
-}
-
+#make snapshot
 rgl.snapshot("pictures/INNOS_Catmaid.png")
 close3d()
-
-{
-  plot_background_ventral()
-  plot3d(cPRC, soma=T, lwd=2, alpha=1, col="#D55E00")
-  plot3d(INNOS, soma=T, lwd=2, alpha=1, col=Okabe_Ito[5])
-  plot3d(INRGW, soma=T, lwd=2, alpha=1, col="#56B4E9")
-  plot3d(Ser_h1, soma=T, lwd=4, alpha=1, col='grey80')
-  par3d(zoom=0.46)
-  plot3d(outline, WithConnectors = F, WithNodes = F, soma=F, lwd=2,
-         rev = FALSE, fixup = F, add=T, forceClipregion = F, alpha=0.02,
-         col="#E2E2E2") 
-  texts3d(75000,48000,8000, "apical organ", cex=3)
-  nview3d("ventral", extramat=rotationMatrix(0.2, 1, 0.1, 0.5)
-          %*%rotationMatrix(pi, 0, 0.1,0.4))
-  par3d(windowRect = c(0, 0, 800, 800))
-  par3d(zoom=0.62)
 }
 
+{
+plot_background_ventral()
+#plot neurons
+plot3d(cPRC, soma=T, lwd=3, alpha=0.5, col="#D55E00")
+plot3d(INNOS, soma=T, lwd=4, alpha=1, col=Okabe_Ito[5])
+plot3d(INRGW, soma=T, lwd=2, alpha=0.7, col="#56B4E9")
+plot3d(Ser_h1, soma=T, lwd=4, alpha=0.5, col='grey80')
+#for reference, plot neuropil and body outline
+plot3d(connectome_neuron, soma=F, lwd=1, alpha=0.1, col='grey80')
+plot3d(outline, WithConnectors = F, WithNodes = F, soma=F, lwd=2,
+       rev = FALSE, fixup = F, add=T, forceClipregion = F, alpha=0.02,
+       col="#E2E2E2") 
+#adjust zoom
+par3d(zoom=0.46)
+#add text label
+texts3d(75000,48000,8000, "apical organ", cex=3)
+#rotate to dorsal view (ventral+extra rotation matrix)
+nview3d("ventral", extramat=rotationMatrix(0.2, 1, 0.1, 0.5)
+        %*%rotationMatrix(pi, 0, 0.1,0.4))
+#change window size
+par3d(windowRect = c(0, 0, 800, 800))
+#adjust zoom
+par3d(zoom=0.62)
+#make snapshot
 rgl.snapshot("pictures/INNOS_Catmaid_dorsal.png")
 close3d()
+SS}
 
 # get connectivity from CATMAID and plot network --------------------------
 {
@@ -206,7 +223,7 @@ ggsave("figures/Fig1.pdf", limitsize = FALSE,
        units = c("px"), Fig1, width = 3200, height = 1800)  
 
 ggsave("figures/Fig1.png", limitsize = FALSE, 
-       units = c("px"), Fig1, width = 3200, height = 2000, bg='white')  
+       units = c("px"), Fig1, width = 3200, height = 1800, bg='white')  
 
 
 
