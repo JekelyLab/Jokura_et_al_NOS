@@ -22,13 +22,13 @@ connectome_neuron = nlapply(read.neurons.catmaid("^connectome_neuron$", pid=11),
 plot_background()
 #plot neurons
 plot3d(cPRC, soma=T, lwd=3, alpha=0.5, col="#D55E00")
-plot3d(INNOS, soma=T, lwd=4, alpha=1, col=Okabe_Ito[5])
+plot3d(INNOS, soma=T, lwd=4, alpha=1, col=Okabe_Ito[7])
 plot3d(INRGW, soma=T, lwd=2, alpha=0.7, col="#56B4E9")
 plot3d(Ser_h1, soma=T, lwd=4, alpha=0.5, col='grey80')
 #add text labels
 texts3d(56000,32000,5000, "cPRC", cex=3)
 texts3d(43000,39000,5000, "Ser-h1", cex=3)
-texts3d(75000,32000,5000, "INNOS", cex=3,col=Okabe_Ito[5])
+texts3d(75000,32000,5000, "INNOS", cex=3,col=Okabe_Ito[7])
 texts3d(50000,53000,5000, "INRGW", cex=3,col="#56B4E9")
 #adjust zoom
 par3d(zoom=0.32)
@@ -45,7 +45,7 @@ close3d()
 plot_background_ventral()
 #plot neurons
 plot3d(cPRC, soma=T, lwd=3, alpha=0.5, col="#D55E00")
-plot3d(INNOS, soma=T, lwd=4, alpha=1, col=Okabe_Ito[5])
+plot3d(INNOS, soma=T, lwd=4, alpha=1, col=Okabe_Ito[7])
 plot3d(INRGW, soma=T, lwd=2, alpha=0.7, col="#56B4E9")
 plot3d(Ser_h1, soma=T, lwd=4, alpha=0.5, col='grey80')
 #adjust zoom
@@ -74,7 +74,7 @@ N_cell_groups <- length(cell_groups)
 
 cell_group_attr <- data.frame(
   cell_group_names  = c('cPRC', 'INNOS', 'INRGW', 'Ser_h1'),
-  type = c('SN', 'IN', 'IN', 'MN'),
+  type = c('SN', 'INNOS', 'INRGW', 'MN'),
   level = c('1',  '2', '2', '3')
 )
 
@@ -123,7 +123,8 @@ Conn_graph <- graph_from_adjacency_matrix(
 )
 
 #calculate node weighted degree
-degree=degree(Conn_graph, v = V(Conn_graph), mode = c("all"), loops = TRUE, normalized = FALSE)
+degree=degree(Conn_graph, v = V(Conn_graph), mode = c("all"), 
+              loops = TRUE, normalized = FALSE)
 
 
 # use visNetwork to plot the network --------------------------------------
@@ -161,8 +162,10 @@ Conn_graph.visn$nodes$level <- cell_group_attr$level
     visInteraction(dragNodes = TRUE, dragView = TRUE,
                    zoomView = TRUE, hover=TRUE,
                    multiselect=TRUE) %>%
-    visGroups(groupname = "IN", shape = "square", 
+    visGroups(groupname = "INRGW", shape = "square", 
               opacity=1, color="#56B4E9") %>%
+    visGroups(groupname = "INNOS", shape = "square", 
+              opacity=1, color=Okabe_Ito[7]) %>%
     visGroups(groupname = "SN", shape = "circle", 
               opacity=1, color="#D55E00") %>%
     visGroups(groupname = "MN", shape = "circle", 
@@ -182,44 +185,15 @@ webshot2::webshot(url="pictures/visNetwork_INNOS.html",
 }
 
 
-# crop images and change color space --------------------------------------
+# crop images --------------------------------------
 {
 img <- image_read("pictures/NOS-promotor_3d_acTub_XXum.png")
 print(img)
-
-tub <- image_channel(img, channel = "G")
-tub <- image_normalize(image_contrast(tub, sharpen=1))
-print(tub)
-
-HCR <- image_channel(img, channel = "R")
-HCR <- image_normalize(image_contrast(HCR, sharpen=1))
-print(HCR)
-
-newimg <- image_combine(c(HCR,tub,tub), colorspace = "CMYK", channel = "default")
-newimg <- image_crop(newimg,geometry = "370x370+170+150")
+newimg <- image_crop(img,geometry = "370x370+170+150")
 print(newimg)
 image_write(newimg, path = "pictures/NOS-promotor_3d_acTub_XXum_crop.png", format = "png")
-
 }
 
-{
-img <- image_read("pictures/HCR-IHC_51_AP_NOS_actub_55.92um.png")
-print(img)
-
-tub <- image_channel(img, channel = "G")
-tub <- image_normalize(image_contrast(tub, sharpen=1))
-print(tub)
-
-HCR <- image_channel(img, channel = "R")
-HCR <- image_normalize(image_contrast(HCR, sharpen=1))
-print(HCR)
-
-newimg <- image_combine(c(HCR,tub,tub), colorspace = "CMYK", channel = "default")
-print(newimg)
-newimg
-image_crop(newimg,geometry = "400x400+150+150")
-image_write(newimg, path = "pictures/HCR-IHC_51_AP_NOS_actub_55.92um_color.png", format = "png")
-}
 # assemble figure ---------------------------------------------------------
 
 #read png convert to image panel
@@ -231,17 +205,20 @@ panel_SEM <- ggdraw() +
 
 panel_NOS2d <- ggdraw() + draw_image(readPNG("pictures/NOS-promotor_2d_acTub_XXum.png"))
 panel_NOS3d <- ggdraw() + draw_image(readPNG("pictures/NOS-promotor_3d_acTub_XXum_crop.png")) +
-  draw_label("NOS->TdTomato", x = 0.35, y = 0.99, size = 10) +
-  draw_label("INNOS", x = 0.58, y = 0.75, color='#56B4E9', size = 12, fontface='bold') +
-  draw_label("cPRC", x = 0.3, y = 0.85, color='red',size = 12,fontface='bold')
+  draw_label("NOSp::palmy-3xH-TdTomato", x = 0.45, y = 0.99, size = 10) +
+  draw_label("INNOS", x = 0.55, y = 0.75, color='#CC79A7', size = 12, fontface='bold') +
+  draw_label("cPRC", x = 0.3, y = 0.85, color='white',size = 12,fontface='bold') +
+  draw_label("*", x = 0.55, y = 0.32, color='white',size = 18,fontface='bold')
 panel_INNOS_ant <- ggdraw() + draw_image(readPNG("pictures/INNOS_Catmaid.png")) +
-  draw_label("anterior view", x = 0.3, y = 0.99, size = 10)
+  draw_label("anterior view", x = 0.3, y = 0.99, size = 10)  +
+  draw_label("*", x = 0.51, y = 0.205, color='black',size = 18,fontface='bold')
+panel_INNOS_ant
 panel_INNOS_ventr <- ggdraw() + draw_image(readPNG("pictures/INNOS_Catmaid_ventr.png")) +
   draw_label("ventral view", x = 0.25, y = 0.99, size = 10)
 panel_NOS_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR-IHC_51_AP_NOS_actub_55.92um.png")) +
   draw_label("HCR in situ", x = 0.3, y = 0.99, size = 10) +
-  draw_label("INNOS", x = 0.55, y = 0.67, color='#56B4E9', size = 12, fontface='bold') +
-  draw_label("cPRC", x = 0.3, y = 0.85, color='red',size = 12, fontface='bold')  +
+  draw_label("INNOS", x = 0.55, y = 0.67, color='#CC79A7', size = 12, fontface='bold') +
+  draw_label("cPRC", x = 0.3, y = 0.85, color='white',size = 12, fontface='bold')  +
   draw_line(x = c(0.05, 0.407), y = c(0.07, 0.07), color = "black", size = 0.5) +
   draw_label(expression(paste("20 ", mu, "m")), x = 0.23, y = 0.1, size = 10)
 panel_NOS_RY_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR_52_AP_NOS_RYa_101.29um.png"))
