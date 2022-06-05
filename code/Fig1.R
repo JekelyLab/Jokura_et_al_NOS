@@ -238,7 +238,7 @@ panel_INNOS_ant <- ggdraw() + draw_image(readPNG("pictures/INNOS_Catmaid.png")) 
   draw_label("anterior view", x = 0.3, y = 0.99, size = 10)
 panel_INNOS_ventr <- ggdraw() + draw_image(readPNG("pictures/INNOS_Catmaid_ventr.png")) +
   draw_label("ventral view", x = 0.25, y = 0.99, size = 10)
-panel_NOS_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR-IHC_51_AP_NOS_actub_55.92um_color.png")) +
+panel_NOS_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR-IHC_51_AP_NOS_actub_55.92um.png")) +
   draw_label("HCR in situ", x = 0.3, y = 0.99, size = 10) +
   draw_label("INNOS", x = 0.55, y = 0.67, color='#56B4E9', size = 12, fontface='bold') +
   draw_label("cPRC", x = 0.3, y = 0.85, color='red',size = 12, fontface='bold')  +
@@ -247,7 +247,6 @@ panel_NOS_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR-IHC_51_AP_NOS_actub
 panel_NOS_RY_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR_52_AP_NOS_RYa_101.29um.png"))
 panel_Network <- ggdraw() + draw_image(readPNG("pictures/visNetwork_INNOS.png")) +
   draw_label("synaptic connectome", x = 0.4, y = 0.99, size = 10)
-  
 
 #combine panels into Figure and save final figure as pdf and png
 #panels of different sizes
