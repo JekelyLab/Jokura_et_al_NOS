@@ -233,8 +233,8 @@ A#B#C
 D#E#F
 "
 
-Fig1 <- panel_SEM + panel_INNOS_ventr + panel_INNOS_ant +
-  panel_NOS_HCR + panel_NOS3d + panel_Network +
+Fig1 <- panel_SEM + 
+  panel_NOS_HCR + panel_NOS3d + panel_INNOS_ventr + panel_INNOS_ant + panel_Network +
   patchwork::plot_layout(design = layout, heights = c(1,0.02,1), widths = c(1,0.02,1,0.02,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = "A") &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, 

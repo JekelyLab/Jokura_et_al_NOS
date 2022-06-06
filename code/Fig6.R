@@ -32,22 +32,22 @@ NIT2_MO_tb%>%
 
 # plot NITGC1_analysis ----------------------------------------------------
 NITGC1_analysis %>%
-  count(solution)
+  count(expression)
 
 NITGC1_analysis %>%
-  filter(solution == "SNAP") %>%
+  filter(solution == "SNAP" & expression == "GcG-NIT1") %>%
 #cell names are not unique and the same across expression, fix by adding new column  
   mutate(cell_expression = paste(cell, expression, sep = "")) %>%
   ggplot(aes(x = time, y = intensity, color = expression)) +
-  geom_line(aes(group = cell_expression), size = 0.4, alpha = 0.2) +
+  geom_line(aes(group = cell_expression), size = 0.4, alpha = 0.2, 
+            show.legend = FALSE) +
   geom_smooth(level = 0.99, size = 1, span = 0.2, 
-              method = "loess") +
-  theme_void()  +
+              method = "loess", show.legend = FALSE) +
+  theme_minimal()  +
   theme(legend.title = element_blank(), legend.text.align=0,
         legend.text = element_text(size=10)) +
   #Specify colours and legend labels
-  scale_color_manual(values=c(Okabe_Ito[6], Okabe_Ito[2]),
-                     labels = c('GcG','GcG + NIT-GC1')) +
+  scale_color_manual(values=c(Okabe_Ito[2])) +
   scale_y_continuous(breaks=seq(1,1.15,length=4),limits = c(0.95, 1.15))+
   scale_x_continuous(breaks=seq(0,10,length=6),limits = c(0, 10))+
   annotate("segment", x=2, xend=10, y=1.135, yend=1.135, size=2, color = "gray")+
@@ -57,7 +57,32 @@ NITGC1_analysis %>%
 # save plot ---------------------------------------------------------------
 
 ggsave("pictures/GcG-NIT-GC1-SNAP.png", limitsize = FALSE, 
-       units = c("px"), width = 1600, height = 600, bg='white')  
+       units = c("px"), width = 800, height = 600, bg='white')  
+
+# plot NITGC1_analysis ----------------------------------------------------
+NITGC1_analysis %>%
+  count(expression)
+
+NITGC1_analysis %>%
+  filter(solution == "SNAP" & expression == "GcG") %>%
+  #cell names are not unique and the same across expression, fix by adding new column  
+  mutate(cell_expression = paste(cell, expression, sep = "")) %>%
+  ggplot(aes(x = time, y = intensity)) +
+  geom_line(aes(group = cell_expression), size = 0.4, alpha = 0.2, 
+            show.legend = FALSE, color = 'grey50') +
+  geom_smooth(level = 0.99, size = 1, span = 0.2, 
+              method = "loess", show.legend = FALSE, color = 'grey50') +
+  theme_minimal() +
+  scale_y_continuous(breaks=seq(1,1.15,length=4),limits = c(0.95, 1.15)) +
+  scale_x_continuous(breaks=seq(0,10,length=6),limits = c(0, 10))+
+  annotate("segment", x=2, xend=10, y=1.135, yend=1.135, size=2, color = "gray")+
+  annotate("text", x=2.5, y=1.15, size=4, label="SNAP")+
+  annotate("segment", x=0, xend=10, y=1, yend=1, size=0.5, linetype="dashed")
+
+# save plot ---------------------------------------------------------------
+
+ggsave("pictures/GcG-SNAP.png", limitsize = FALSE, 
+       units = c("px"), width = 800, height = 600, bg='white')  
 
 # plot NITGC1_analysis ----------------------------------------------------
 
@@ -66,10 +91,11 @@ NITGC1_analysis %>%
   #cell names are not unique and the same across expression, fix by adding new column  
   mutate(cell_expression = paste(cell, expression, sep = "")) %>%
   ggplot(aes(x = time, y = intensity, color = expression)) +
-  geom_line(aes(group = cell_expression), size = 0.4, alpha = 0.2) +
+  geom_line(aes(group = cell_expression), size = 0.4, alpha = 0.2, 
+            show.legend = FALSE) +
   geom_smooth(level = 0.99, size = 1, span = 0.2, 
-              method = "loess") +
-  theme_void()  +
+              method = "loess", show.legend = FALSE) +
+  theme_minimal()  +
   theme(legend.title = element_blank(), legend.text.align=0,
         legend.text = element_text(size=10)) +
   #Specify colours and legend labels
@@ -84,7 +110,7 @@ NITGC1_analysis %>%
 # save plot ---------------------------------------------------------------
 
 ggsave("pictures/GcG-NIT-GC1-DMSO.png", limitsize = FALSE, 
-       units = c("px"), width = 1600, height = 600, bg='white')  
+       units = c("px"), width = 800, height = 600, bg='white')  
 
 # plot NIT1 morphant data with geom_smooth ----------------------------------------------
 
@@ -172,28 +198,35 @@ panel_IHC_NIT2 <- ggdraw() + draw_image(readPNG("pictures/IHC_55_AP_NITGC2_actub
   draw_label("anti-NIT-GC2", x = 0.22, y = 0.08, color='#CC79A7', size = 12, fontface='bold') +
   draw_label("acTub", x = 0.85, y = 0.08, color='green', size = 12, fontface='bold')
 
-panel_GcG_NIT_DMSO <- ggdraw() + draw_image(readPNG("pictures/GcG-NIT-GC1-DMSO.png"))
-panel_GcG_NIT_SNAP <- ggdraw() + draw_image(readPNG("pictures/GcG-NIT-GC1-SNAP.png"))
+panel_GcG_scheme <- ggdraw() + draw_image(readPNG("pictures/NITGC1_cGMPassay.png"))
+panel_GcG_NIT_DMSO <- ggdraw() + draw_image(readPNG("pictures/GcG-NIT-GC1-DMSO.png")) +
+  draw_label("GcG + NIT-GC1", x = 0.35, y = 0.9, size = 11)
+panel_GcG_NIT_SNAP <- ggdraw() + draw_image(readPNG("pictures/GcG-NIT-GC1-SNAP.png")) +
+  draw_label("GcG + NIT-GC1", x = 0.35, y = 0.9, size = 11)
+panel_GcG_SNAP <- ggdraw() + draw_image(readPNG("pictures/GcG-SNAP.png"))  +
+  draw_label("GcG", x = 0.25, y = 0.9, size = 11)
 
 #combine panels into Figure and save final figure as pdf and png
 #panels of different sizes
 layout <- "
 A#B#C#D
+#######
 EEE#FFF
-GGG#HHH
+#######
+GHHIIJJ
 "
 
 Fig3 <- panel_HCR_NIT1 + panel_HCR_NIT1_cOps + panel_IHC_NIT1 + panel_IHC_NIT2 + 
   panel_cPRC_NIT1_MO + panel_cPRC_NIT2_MO +
-  panel_GcG_NIT_SNAP + panel_GcG_NIT_DMSO +
-  patchwork::plot_layout(design = layout, heights = c(0.8,0.6,0.6),
+  panel_GcG_scheme + panel_GcG_NIT_SNAP + panel_GcG_SNAP + panel_GcG_NIT_DMSO +
+  patchwork::plot_layout(design = layout, heights = c(0.8, 0.02, 0.6, 0.02, 0.8),
                          widths = c(1,0.02,1,0.02,1,0.02,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = "A") &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, 
                                          face='plain')) #or 'bold', 'italic'
 
 ggsave("figures/Fig6.png", limitsize = FALSE, 
-       units = c("px"), Fig3, width = 3200, height = 2170, bg='white')  
+       units = c("px"), Fig3, width = 3200, height = 2400, bg='white')  
 
 ggsave("figures/Fig6.pdf", limitsize = FALSE, 
        units = c("px"), Fig3, width = 2350, height = 1700)  
