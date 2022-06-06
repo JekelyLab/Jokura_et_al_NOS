@@ -8,7 +8,7 @@ source("code/Packages_to_load.R")
 
 NIT1_MO <- read_csv("data/220214_non-MOvsNIT1-MO1and2.csv")
 NIT2_MO <- read_csv("data/220522_NIT2-MO1and2.csv")
-
+NITGC1_analysis <- read_csv("data/220519_GcG-T2A-NITGC1_norm.csv")
 
 # tidying the data -----------------------------------------------------------
 
@@ -29,6 +29,40 @@ NIT1_MO_tb%>%
   count(morphant)
 NIT2_MO_tb%>%
   count(morphant)
+
+# plot NITGC1_analysis ----------------------------------------------------
+
+NITGC1_analysis
+NITGC1_analysis %>%
+  count(solution)
+NITGC1_analysis %>%
+  count(cell)
+NITGC1_analysis
+
+NITGC1_analysis %>%
+  filter(solution == "SNAP") %>%
+  ggplot(aes(x = time, y = intensity, color = expression)) +
+  geom_line(aes(group = cell), size = 0.2, alpha = 0.2) +
+  geom_smooth(level = 0.99, size = 1, span = 0.2, 
+              method = "loess") +
+  theme_minimal()  +
+  theme(legend.title = element_blank(), legend.text.align=0,
+        legend.text = element_text(size=12)) +
+  #Specify colours and legend labels
+  scale_color_manual(values=c(Okabe_Ito[6], Okabe_Ito[2]),
+                     labels = c('GcG','GcG + NIT-GC1')) +
+  scale_y_continuous(breaks=seq(1,1.15,length=4),limits = c(0.95, 1.15))+
+  scale_x_continuous(breaks=seq(0,10,length=6),limits = c(0, 10))+
+  annotate("segment", x=2, xend=10, y=1.14, yend=1.14, size=2.5, color = "gray")+
+  annotate("text", x=2.5, y=1.15, size=5, label="SNAP")+
+  annotate("segment", x=0, xend=10, y=1, yend=1, size=0.5, linetype="dashed")
+  
+
+
+# save plot ---------------------------------------------------------------
+
+ggsave("pictures/NIT1_MO_cPRC.png", limitsize = FALSE, 
+       units = c("px"), width = 1600, height = 800, bg='white')  
 
 # plot NIT1 morphant data with geom_smooth ----------------------------------------------
 
@@ -95,29 +129,43 @@ ggsave("pictures/NIT2_MO_cPRC.png", limitsize = FALSE,
 panel_cPRC_NIT1_MO <- ggdraw() + draw_image(readPNG("pictures/NIT1_MO_cPRC.png"))
 panel_cPRC_NIT2_MO <- ggdraw() + draw_image(readPNG("pictures/NIT2_MO_cPRC.png"))
 
+panel_HCR_NIT1 <- ggdraw() + draw_image(readPNG("pictures/HCR-IHC_51_AP_NITGC1_actub_52.24um.png")) +
+  draw_label("HCR in situ", x = 0.3, y = 0.99, size = 10) +
+  draw_label("NIT-GC1", x = 0.2, y = 0.1, color='#CC79A7', size = 12, fontface='bold')
+
+panel_HCR_NIT1_cOps <- ggdraw() + draw_image(readPNG("pictures/HCR_RT28_AP_NITGC1_c-opsin1_112.55um.png")) +
+  draw_label("HCR in situ", x = 0.3, y = 0.99, size = 10) +
+  draw_label("NIT-GC1", x = 0.2, y = 0.1, color='#CC79A7', size = 12, fontface='bold')
+
+panel_IHC_NIT1 <- ggdraw() + draw_image(readPNG("pictures/IHC_55_AP_NITGC1_actub_58.47um.png")) +
+  draw_label("IHC", x = 0.2, y = 0.99, size = 10) +
+  draw_label("cPRC", x = 0.2, y = 0.89, color='white',size = 12, fontface='bold') +
+  draw_label("anti-NIT-GC1", x = 0.3, y = 0.1, color='#CC79A7', size = 12, fontface='bold')
+panel_IHC_NIT2 <- ggdraw() + draw_image(readPNG("pictures/IHC_55_AP_NITGC2_actub_60.77um.png")) +
+  draw_label("IHC", x = 0.2, y = 0.99, size = 10) +
+  draw_label("cPRC", x = 0.22, y = 0.8, color='white',size = 12, fontface='bold') +
+  draw_label("anti-NIT-GC2", x = 0.3, y = 0.1, color='#CC79A7', size = 12, fontface='bold')
 
 #combine panels into Figure and save final figure as pdf and png
 #panels of different sizes
 layout <- "
-A#B
-C#D
+A#B#C#D
+EEE#FFF
 "
 
-Fig1 <- panel_cPRC_NIT1_MO + panel_cPRC_NIT2_MO +
+Fig3 <- panel_HCR_NIT1 + panel_HCR_NIT1_cOps + panel_IHC_NIT1 + panel_IHC_NIT2 + 
+  panel_cPRC_NIT1_MO + panel_cPRC_NIT2_MO +
   patchwork::plot_layout(design = layout, 
-      widths = c(1,0.02,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
+                         widths = c(1,0.02,1,0.02,1,0.02,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = "A") &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, 
-          face='plain')) #or 'bold', 'italic'
+                                         face='plain')) #or 'bold', 'italic'
 
 ggsave("figures/Fig6.png", limitsize = FALSE, 
-       units = c("px"), Fig1, width = 2400, height = 2400, bg='white')  
+       units = c("px"), Fig3, width = 2400, height = 1330, bg='white')  
 
 ggsave("figures/Fig6.pdf", limitsize = FALSE, 
-       units = c("px"), Fig1, width = 2350, height = 1700)  
-
-
-
+       units = c("px"), Fig3, width = 2350, height = 1700)  
 
 
 

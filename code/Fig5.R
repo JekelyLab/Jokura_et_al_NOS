@@ -57,14 +57,14 @@ DAFFM %>%
   annotate("text", x=29, y=1.15, label="10 sec", size=3)+
   annotate("text", x=23, y=1.35, label="0.2 ΔF/F0", size=3)+
   annotate("text", x=70, y=1.4, label="405 nm", size=4)+
-  annotate("text", x=160, y=1.4, label="neuropil DAFFM", size=5)+
+  annotate("text", x=160, y=1.4, label="neuropil DAF-FM", size=5)+
   ylim(0.6,1.4)+
   theme_void()  +
   theme(legend.title = element_blank(), legend.text.align=0,
         legend.text = element_text(size=12)) +
   #Specify colours and legend labels
   scale_color_manual(values=c(Okabe_Ito[6], Okabe_Ito[2]),
-                     labels = c(expression('cPRC stim.'), "control" ))
+                     labels = c(expression('cPRC stim.'), "ctr stim." ))
 
 # save plot ---------------------------------------------------------------
 
@@ -204,9 +204,8 @@ C#D
 E##
 "
 
-Fig1 <- panel_DAFFM + panel_cPRC_NOS11 + panel_cPRC_NOS23 + 
+Fig5 <- panel_DAFFM + panel_cPRC_NOS11 + panel_cPRC_NOS23 + 
   panel_INNOS + panel_INRGW +
-  panel_cPRC_NIT1_MO + panel_cPRC_NIT2_MO +
   patchwork::plot_layout(design = layout, 
       widths = c(1,0.02,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = "A") &  #we can change this to 'a' for small caps or 'i' or '1'
@@ -214,10 +213,10 @@ Fig1 <- panel_DAFFM + panel_cPRC_NOS11 + panel_cPRC_NOS23 +
           face='plain')) #or 'bold', 'italic'
 
 ggsave("figures/Fig5.png", limitsize = FALSE, 
-       units = c("px"), Fig1, width = 2400, height = 2400, bg='white')  
+       units = c("px"), Fig5, width = 2400, height = 2400, bg='white')  
 
 ggsave("figures/Fig5.pdf", limitsize = FALSE, 
-       units = c("px"), Fig1, width = 2350, height = 1700)  
+       units = c("px"), Fig5, width = 2350, height = 1700)  
 
 
 
