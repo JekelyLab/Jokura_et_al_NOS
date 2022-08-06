@@ -13,7 +13,7 @@ library(magick)
 
 #read png convert to image panel
 
-panelA <- ggdraw() + draw_image(readPNG("pictures/closure period.png"))
+panelA <- ggdraw() + draw_image(readPNG("pictures/2dpf_ciliary closure_phamacological.png"))
 panelB <- ggdraw() + draw_image(readPNG("pictures/NOS-Architecture.png"))
 panelC <- ggdraw() + draw_image(readPNG("pictures/2dpf_wt_vs_NOS_mutants_for_discussion_1.png"))
 panelD <- ggdraw() + draw_image(readPNG("pictures/3dpf_wt_vs_NOS_mutants_for_discussion.png"))

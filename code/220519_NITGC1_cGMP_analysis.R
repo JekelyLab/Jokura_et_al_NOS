@@ -315,8 +315,66 @@ GcG_NIT1_DMSO_PNG <- ggplot(GcG_NIT1_DMSO_mean) +
 
 
 #
+mutNIT1_SNAP <- read_csv("D:/NOS project/20220802_cGMP assay/R/normal_vs_deletion_mutNIT1_SNAP.csv")
   
+mutNIT1_SNAP_df <- mutNIT1_SNAP %>% 
+    pivot_longer(cols = c("cell1", "cell2", "cell3", "cell4", "cell5", "cell6", "cell7", "cell8", 
+                          "cell9", "cell10", "cell11", "cell12", "cell13", "cell14", "cell15", "cell16", "cell17", "cell18"), 
+                 names_to = "cell", 
+                 values_to = "intensity")
+  
+mutNIT1_SNAP_mean <- data.frame(mean = tapply(mutNIT1_SNAP_df$intensity, mutNIT1_SNAP_df$time, mean))
+  
+  
+#tapply
+mutNIT1_SNAP_mean <- data.frame(time = tapply(mutNIT1_SNAP_df$time, mutNIT1_SNAP_df$time, mean),
+                                  number = tapply(mutNIT1_SNAP_df$intensity, mutNIT1_SNAP_df$time, length),
+                                  mean = tapply(mutNIT1_SNAP_df$intensity, mutNIT1_SNAP_df$time, mean))
+  
+#sd
+mutNIT1_SNAP_mean$sd <- tapply(mutNIT1_SNAP_df$intensity, mutNIT1_SNAP_df$time, sd)
+#se
+mutNIT1_SNAP_mean$se <- mutNIT1_SNAP_mean$sd/sqrt(mutNIT1_SNAP_mean$n-1)
+  
+  
+#95% confidence interval
+mutNIT1_SNAP_mean$CI_lower <- 
+    mutNIT1_SNAP_mean$mean + qt((1-0.95)/2, df=mutNIT1_SNAP_mean$n-1) * mutNIT1_SNAP_mean$se
+mutNIT1_SNAP_mean$CI_upper <- 
+    mutNIT1_SNAP_mean$mean - qt((1-0.95)/2, df=mutNIT1_SNAP_mean$n-1) * mutNIT1_SNAP_mean$se  
  
+
+#graph
+mutNIT1_SNAP_PNG <- ggplot(mutNIT1_SNAP_mean) +
+  aes(x = time, y = mean) +
+  geom_line(data = mutNIT1_SNAP_df, aes(x=time, y=intensity, group=cell), 
+            color="grey") +
+  geom_line(size = 1.1, color = "black") +
+  geom_ribbon(aes(ymin=CI_lower, ymax=CI_upper) ,fill="black", alpha=0.2)+
+  ylab("Normalized intensity (ΔF/F0)")+
+  xlab("Time (min)")+
+  labs(title="Green cGull + mutant NIT-GC1")+
+  scale_y_continuous(breaks=seq(1,1.15,length=4),limits = c(0.95, 1.15))+
+  scale_x_continuous(breaks=seq(0,10,length=6),limits = c(0, 10))+
+  annotate("segment", x=2, xend=10, y=1.14, yend=1.14, size=2.5, color = "gray")+
+  annotate("text", x=2.5, y=1.15, size=5, label="SNAP")+
+  annotate("segment", x=0, xend=10, y=1, yend=1, size=0.5, alpha=0.4, linetype="dashed")+
+  theme_classic()+
+  theme(plot.title = element_text(face = "bold", size = 18),
+        axis.title.y = element_text(size = 14L,face = "bold"),
+        axis.title.x = element_text(size = 14L,face = "bold"),
+        axis.text.y = element_text(size = 14),
+        axis.text.x = element_text(size = 14))
+
+mutNIT1_SNAP_PNG
+
+ggsave(file = "mutNIT1_SNAP.png", plot = mutNIT1_SNAP_PNG, width = 2103,
+       height = 1681,
+       units = c("px"),dpi = 300, path = "pictures")
+
+
+
+
 
 
 
