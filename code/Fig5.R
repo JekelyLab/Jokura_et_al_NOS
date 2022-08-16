@@ -10,6 +10,9 @@ DAFFM <- read_csv("data/220213_DAF-FM_long.csv")
 WTvsNOS23 <- read_csv("data/211121_WTvsNOS23_cPRC.csv")
 WTvsNOS11_cPRC_INNOS <- read_csv("data/211129_WTvsNOS11_cPRC_INNOS (2).csv")
 WTvsNOS23_cPRC_INRGWa <- read_csv("data/211209_WTvsNOS23_cPRC_INRGWa (2).csv")
+NIT2MO_INNOS <- read_csv("data/220812_NIT2MO_INNOS.csv")
+NIT2MO_INRGW <- read_csv("data/220812_NIT2MO_INRGW.csv")
+
 
 # tidying the data -----------------------------------------------------------
 
@@ -31,6 +34,20 @@ WTvsNOS23_cPRC_INRGWa_tb <- WTvsNOS23_cPRC_INRGWa %>%
                names_to = "genotype",
                values_to = "intensity") %>%
   separate(col = c("genotype"), into = c("genotype", "sample"), sep = "\\...")
+
+#NIT2MO
+NIT2MO_INNOS_tb <- NIT2MO_INNOS %>% 
+  pivot_longer(cols = -c("frame"),
+               names_to = "MO",
+               values_to = "intensity") %>%
+  separate(col = c("MO"), into = c("MO", "sample"), sep = "\\...")
+NIT2MO_INRGW_tb <- NIT2MO_INRGW %>% 
+  pivot_longer(cols = -c("frame"),
+               names_to = "MO",
+               values_to = "intensity") %>%
+  separate(col = c("MO"), into = c("MO", "sample"), sep = "\\...")
+
+
 
 #check factors
 WTvsNOS11_cPRC_INNOS_tb %>%
@@ -188,6 +205,66 @@ WTvsNOS11_cPRC_INNOS_tb %>%
 ggsave("pictures/WTvsNOS11_INNOS.png", limitsize = FALSE, 
        units = c("px"), width = 1600, height = 800, bg='white')  
 
+# plot NIT2MO INNOS data with geom_smooth ----------------------------------------------
+
+NIT2MO_INNOS_tb %>%
+  filter(MO == "NIT2MO1_NOS" | MO == "NIT2MO2_NOS") %>%
+  ggplot(aes(x=frame,y=intensity,color=MO)) +
+  geom_smooth(level = 0.99, size = 1, span = 0.02, 
+              method = "loess") +
+  geom_line(aes(group = sample), size=0.2, alpha=0.2) +
+  annotate("rect", xmin=51, xmax=90, ymin=-Inf, ymax=Inf, 
+           alpha=0.1, fill="blue") +
+  annotate("segment", x=20, xend=40, y=1.6, yend=1.6, size=1)+
+  annotate("segment", x=20, xend=20, y=1.6, yend=1.7, size=1)+
+  annotate("text", x=29, y=1.45, label="10 sec", size=3)+
+  annotate("text", x=23, y=1.85, label="0.2 ΔF/F0", size=3)+
+  annotate("text", x=70, y=1.85, label="405 nm", size=4)+
+  annotate("text", x=160, y=1.85, label="INNOS", size=5)+
+  ylim(0.5,3.12)+
+  theme_void()  +
+  theme(legend.title = element_blank(), legend.text.align=0,
+        legend.text = element_text(size=12)) +
+  #Specify colours and legend labels
+  scale_color_manual(values=c(Okabe_Ito[6], Okabe_Ito[2]),
+                     labels = c(expression('NIT-GC2 MO1'), 
+                                "NIT-GC2 MO2"))
+# save plot ---------------------------------------------------------------
+
+ggsave("pictures/NIT2MO_INNOS.png", limitsize = FALSE, 
+       units = c("px"), width = 1600, height = 800, bg='white')  
+
+
+# plot NIT2MO INRGW data with geom_smooth ----------------------------------------------
+
+NIT2MO_INRGW_tb %>%
+  filter(MO == "NIT2MO1_RGW" | MO == "NIT2MO2_RGW") %>%
+  ggplot(aes(x=frame,y=intensity,color=MO)) +
+  geom_smooth(level = 0.99, size = 1, span = 0.02, 
+              method = "loess") +
+  geom_line(aes(group = sample), size=0.2, alpha=0.2) +
+  annotate("rect", xmin=51, xmax=90, ymin=-Inf, ymax=Inf, 
+           alpha=0.1, fill="blue") +
+  annotate("segment", x=20, xend=40, y=1.6, yend=1.6, size=1)+
+  annotate("segment", x=20, xend=20, y=1.6, yend=1.7, size=1)+
+  annotate("text", x=29, y=1.45, label="10 sec", size=3)+
+  annotate("text", x=23, y=1.85, label="0.2 ΔF/F0", size=3)+
+  annotate("text", x=70, y=3, label="405 nm", size=4)+
+  annotate("text", x=160, y=1.85, label="INRGW", size=5)+
+  ylim(0.5,3.5)+
+  theme_void()  +
+  theme(legend.title = element_blank(), legend.text.align=0,
+        legend.text = element_text(size=12)) +
+  #Specify colours and legend labels
+  scale_color_manual(values=c(Okabe_Ito[6], Okabe_Ito[2]),
+                     labels = c(expression('NIT-GC2 MO1'), 
+                                "NIT-GC2 MO2"))
+
+# save plot ---------------------------------------------------------------
+
+ggsave("pictures/NIT2MO_INRGW.png", limitsize = FALSE, 
+       units = c("px"), width = 1600, height = 800, bg='white')  
+
 # assemble figure ---------------------------------------------------------
 
 panel_DAFFM  <- ggdraw() + draw_image(readPNG("pictures/DAFFM.png"))
@@ -195,22 +272,26 @@ panel_cPRC_NOS11 <- ggdraw() + draw_image(readPNG("pictures/WTvsNOS11_cPRC.png")
 panel_cPRC_NOS23 <- ggdraw() + draw_image(readPNG("pictures/WTvsNOS23_cPRC.png"))
 panel_INRGW <- ggdraw() + draw_image(readPNG("pictures/WTvsNOS23_INRGW.png"))
 panel_INNOS <- ggdraw() + draw_image(readPNG("pictures/WTvsNOS11_INNOS.png"))
+panel_NIT2MO_INRGW <- ggdraw() + draw_image(readPNG("pictures/NIT2MO_INRGW.png"))
+panel_NIT2MO_INNOS <- ggdraw() + draw_image(readPNG("pictures/NIT2MO_INNOS.png"))
 
 #combine panels into Figure and save final figure as pdf and png
 #panels of different sizes
 layout <- "
-A#B
-C#D
-E##
+A#BC
+D##E
+F##G
 "
 
 Fig5 <- panel_DAFFM + panel_cPRC_NOS11 + panel_cPRC_NOS23 + 
-  panel_INNOS + panel_INRGW +
+  panel_INNOS + panel_INRGW + panel_NIT2MO_INNOS + panel_NIT2MO_INRGW +
   patchwork::plot_layout(design = layout, 
       widths = c(1,0.02,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = "A") &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, 
           face='plain')) #or 'bold', 'italic'
+
+Fig5
 
 ggsave("figures/Fig5.png", limitsize = FALSE, 
        units = c("px"), Fig5, width = 2400, height = 2400, bg='white')  
