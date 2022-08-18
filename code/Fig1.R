@@ -17,6 +17,10 @@ Ser_h1 = nlapply(read.neurons.catmaid("^celltype8$", pid=11),
                 function(x) smooth_neuron(x, sigma=6000))
 connectome_neuron = nlapply(read.neurons.catmaid("^connectome_neuron$", pid=11),
                  function(x) smooth_neuron(x, sigma=6000))
+MC = nlapply(read.neurons.catmaid("^celltype9$", pid=11),
+               function(x) smooth_neuron(x, sigma=6000))
+prototroch = nlapply(read.neurons.catmaid("^celltype_non_neuronal3$", pid=11),
+             function(x) smooth_neuron(x, sigma=6000))
 
 {
 plot_background()
@@ -24,12 +28,14 @@ plot_background()
 plot3d(cPRC, soma=T, lwd=3, alpha=0.5, col="#D55E00")
 plot3d(INNOS, soma=T, lwd=4, alpha=1, col=Okabe_Ito[7])
 plot3d(INRGW, soma=T, lwd=2, alpha=0.7, col="#56B4E9")
-plot3d(Ser_h1, soma=T, lwd=4, alpha=0.5, col='grey80')
+plot3d(Ser_h1, soma=T, lwd=4, alpha=0.7, col='grey80')
+plot3d(MC, soma=T, lwd=3, alpha=1, col='grey50')
 #add text labels
-texts3d(56000,32000,5000, "cPRC", cex=3)
-texts3d(43000,39000,5000, "Ser-h1", cex=3)
+texts3d(56000,32000,5000, "cPRC", cex=3, col="#D55E00")
+texts3d(44000,39000,5000, "Ser-h1", cex=3)
 texts3d(75000,32000,5000, "INNOS", cex=3,col=Okabe_Ito[7])
 texts3d(50000,53000,5000, "INRGW", cex=3,col="#56B4E9")
+texts3d(74500,47000,5000, "MC", cex=3)
 #adjust zoom
 par3d(zoom=0.32)
 #adjust clipping
@@ -43,11 +49,16 @@ close3d()
 
 {
 plot_background_ventral()
+play3d(spin3d( axis = c(10, 0, 0), rpm = 2), duration = 2)  
+
 #plot neurons
 plot3d(cPRC, soma=T, lwd=3, alpha=0.5, col="#D55E00")
 plot3d(INNOS, soma=T, lwd=4, alpha=1, col=Okabe_Ito[7])
 plot3d(INRGW, soma=T, lwd=2, alpha=0.7, col="#56B4E9")
 plot3d(Ser_h1, soma=T, lwd=4, alpha=0.5, col='grey80')
+plot3d(MC, soma=T, lwd=3, alpha=1, col='grey50')
+plot3d(prototroch, soma=T, lwd=1, alpha=0.2, col='grey80')
+
 #adjust zoom
 par3d(zoom=0.46)
 #add text label
@@ -69,20 +80,20 @@ close3d()
 # get connectivity from CATMAID and plot network --------------------------
 {
 
-cell_groups <- list(cPRC, INNOS, INRGW, Ser_h1)
+cell_groups <- list(cPRC, INNOS, INRGW, Ser_h1, MC, prototroch)
 N_cell_groups <- length(cell_groups)
 
 cell_group_attr <- data.frame(
-  cell_group_names  = c('cPRC', 'INNOS', 'INRGW', 'Ser_h1'),
-  type = c('SN', 'INNOS', 'INRGW', 'MN'),
-  level = c('1',  '2', '2', '3')
+  cell_group_names  = c('cPRC', 'INNOS', 'INRGW', 'Ser_h1', 'MC', 'prototroch'),
+  type = c('SN', 'INNOS', 'INRGW', 'MN', 'MN', 'effector'),
+  level = c('1',  '2', '2', '3', '3', '4')
 )
 
 #iterate through cell group neuron lists and get connectivity for all against all
 {
-  #define empty synapse list with the right dimensions
-  synapse_list <- vector("list", N_cell_groups*N_cell_groups)
-  for (i in 1:N_cell_groups) {
+#define empty synapse list with the right dimensions
+synapse_list <- vector("list", N_cell_groups*N_cell_groups)
+for (i in 1:N_cell_groups) {
     for (j in 1:N_cell_groups){
       #get connectors between two cell groups
       presyn_skids <- attr(cell_groups[i][[1]],"df")$skid
@@ -111,7 +122,7 @@ synapse_matrix
 # graph conversion --------------------------------------------------------
 
 #edge weight filtering on the matrix to remove weak edges
-synapse_matrix[synapse_matrix < 5] <- 0
+synapse_matrix[synapse_matrix < 0] <- 0
 max(synapse_matrix)
 
 #with the make_graph function of igraph we turn it into a graph (input is the list of edge pairs)
@@ -123,8 +134,8 @@ Conn_graph <- graph_from_adjacency_matrix(
 )
 
 #calculate node weighted degree
-degree=degree(Conn_graph, v = V(Conn_graph), mode = c("all"), 
-              loops = TRUE, normalized = FALSE)
+weighted_degree=strength(Conn_graph, v = V(Conn_graph), mode = c("all"), 
+              loops = TRUE)
 
 
 # use visNetwork to plot the network --------------------------------------
@@ -132,20 +143,21 @@ degree=degree(Conn_graph, v = V(Conn_graph), mode = c("all"),
 ## convert to VisNetwork-list
 Conn_graph.visn <- toVisNetworkData(Conn_graph)
 ## copy column "weight" to new column "value" in list "edges"
-Conn_graph.visn$edges$value <- Conn_graph.visn$edges$weight
-Conn_graph.visn$nodes$value = degree
+Conn_graph.visn$edges$value <- sqrt(Conn_graph.visn$edges$weight)
+#Conn_graph.visn$nodes$value = weighted_degree
 Conn_graph.visn$nodes$group <- cell_group_attr$type
-
+Conn_graph.visn$nodes$value <- c()
 #hierarchical layout
 #level	: Number. Default to undefined. When using the hierarchical layout, the level determines where the node is going to be positioned.
 Conn_graph.visn$nodes$level <- cell_group_attr$level
 #hierarchical layout
 {
-  visNet <- visNetwork(Conn_graph.visn$nodes,Conn_graph.visn$edges) %>% 
-    visHierarchicalLayout(levelSeparation=200, 
-                          direction='UD',
-                          sortMethod='hubsize',
-                          shakeTowards='roots') %>%
+visNet <- visNetwork(Conn_graph.visn$nodes,
+                     Conn_graph.visn$edges) %>% 
+    visHierarchicalLayout(levelSeparation=240, 
+                          direction='LR',
+                          nodeSpacing = 1) %>%
+    visPhysics(hierarchicalRepulsion = list(nodeDistance = 200)) %>%
     visEdges(smooth = list(type = 'curvedCW', roundness=0),
              scaling=list(min=4, max=12),
              color = list(inherit=TRUE, opacity=0.8),
@@ -156,22 +168,27 @@ Conn_graph.visn$nodes$level <- cell_group_attr$level
              opacity=0.9,
              shape='dot', 
              font=list(color='black', size=44),
-             scaling = list(label=list(enabled=TRUE, min=40, max=44)),
+             scaling = list(label=list(enabled=TRUE, min=50, max=65)),
              level= Conn_graph.visn$nodes$level) %>%
-    visOptions(highlightNearest = list(enabled=TRUE, degree=1, algorithm='hierarchical',labelOnly=FALSE)) %>%
+    visOptions(width = 1000, height = 800,
+               highlightNearest = list(enabled=TRUE, degree=1, 
+                                       algorithm='hierarchical',
+                                       labelOnly=FALSE)) %>%
     visInteraction(dragNodes = TRUE, dragView = TRUE,
                    zoomView = TRUE, hover=TRUE,
                    multiselect=TRUE) %>%
-    visGroups(groupname = "INRGW", shape = "square", 
+    visGroups(groupname = "INRGW", shape = "box", 
               opacity=1, color="#56B4E9") %>%
-    visGroups(groupname = "INNOS", shape = "square", 
+    visGroups(groupname = "INNOS", shape = "box", 
               opacity=1, color=Okabe_Ito[7]) %>%
     visGroups(groupname = "SN", shape = "circle", 
               opacity=1, color="#D55E00") %>%
     visGroups(groupname = "MN", shape = "circle", 
               opacity=1, color="#cccccc")  %>%
+    visGroups(groupname = "effector", shape = "square", 
+              opacity=1, color="#cccccc")  %>%
     addFontAwesome()
-  visNet
+visNet
 }
 
 
@@ -180,7 +197,7 @@ Conn_graph.visn$nodes$level <- cell_group_attr$level
 saveNetwork(visNet, "pictures/visNetwork_INNOS.html")
 webshot2::webshot(url="pictures/visNetwork_INNOS.html",
                   file="pictures/visNetwork_INNOS.png",
-                  cliprect = c(260,40,500, 500), zoom=5)
+                  cliprect = c(120, 150, 900, 560), zoom=1)
 
 }
 
@@ -195,10 +212,10 @@ image_write(newimg, path = "pictures/NOS-promotor_3d_acTub_XXum_crop.png", forma
 }
 
 # assemble figure ---------------------------------------------------------
-
+SEM <- readPNG("pictures/Platynereis_SEM_3d_inv_280um-1.png")
 #read png convert to image panel
 panel_SEM <- ggdraw() + 
-  draw_image(readPNG("pictures/Platynereis_SEM_3d_inv_280um.png")) +
+  draw_image(SEM) +
   draw_line(x = c(0.1, 0.2785), y = c(0.07, 0.07), color = "black", size = 0.5) +
   draw_label(expression(paste("50 ", mu, "m")), x = 0.2, y = 0.1, size = 10) +
   draw_label("dorsal view", x = 0.2, y = 0.99, size = 10)
