@@ -13,6 +13,9 @@ WTvsNOS23_cPRC_INRGWa <- read_csv("data/211209_WTvsNOS23_cPRC_INRGWa (2).csv")
 NIT2MO_INNOS <- read_csv("data/220812_NIT2MO_INNOS.csv")
 NIT2MO_INRGW <- read_csv("data/220812_NIT2MO_INRGW.csv")
 
+WTvsNOS11_Ser <- read_csv("data/220819_WTvsNOS11_Ser-h1.csv")
+WTvsNOS11_MC <- read_csv("data/220819_WTvsNOS11_MC.csv")
+
 
 # tidying the data -----------------------------------------------------------
 
@@ -34,6 +37,29 @@ WTvsNOS23_cPRC_INRGWa_tb <- WTvsNOS23_cPRC_INRGWa %>%
                names_to = "genotype",
                values_to = "intensity") %>%
   separate(col = c("genotype"), into = c("genotype", "sample"), sep = "\\...")
+
+
+
+
+
+#WTvsNOS11 Ser-h1 & MC
+
+WTvsNOS11_Ser_tb <- WTvsNOS11_Ser %>% 
+  pivot_longer(cols = -c("frame"),
+               names_to = "genotype",
+               values_to = "intensity") %>%
+  separate(col = c("genotype"), into = c("genotype", "sample"), sep = "\\...")
+
+WTvsNOS11_MC_tb <- WTvsNOS11_MC %>% 
+  pivot_longer(cols = -c("frame"),
+               names_to = "genotype",
+               values_to = "intensity") %>%
+  separate(col = c("genotype"), into = c("genotype", "sample"), sep = "\\...")
+
+
+
+
+
 
 #NIT2MO
 NIT2MO_INNOS_tb <- NIT2MO_INNOS %>% 
@@ -204,6 +230,72 @@ WTvsNOS11_cPRC_INNOS_tb %>%
 
 ggsave("pictures/WTvsNOS11_INNOS.png", limitsize = FALSE, 
        units = c("px"), width = 1600, height = 800, bg='white')  
+
+
+
+
+
+# plot NOS11 Ser-h1 data with geom_smooth ----------------------------------------------
+
+WTvsNOS11_Ser_tb %>%
+  filter(genotype == "WT_Ser-h1" | genotype == "NOS11_Ser-h1") %>%
+  ggplot(aes(x=frame,y=intensity,color=genotype)) +
+  geom_smooth(level = 0.99, size = 1, span = 0.02, 
+              method = "loess") +
+  geom_line(aes(group = sample), size=0.2, alpha=0.2) +
+  annotate("rect", xmin=51, xmax=90, ymin=-Inf, ymax=Inf, 
+           alpha=0.1, fill="blue") +
+  annotate("segment", x=20, xend=40, y=1.6, yend=1.6, size=1)+
+  annotate("segment", x=20, xend=20, y=1.6, yend=1.7, size=1)+
+  annotate("text", x=29, y=1.45, label="10 sec", size=3)+
+  annotate("text", x=23, y=1.85, label="0.2 ΔF/F0", size=3)+
+  annotate("text", x=70, y=3.12, label="405 nm", size=4)+
+  annotate("text", x=160, y=3.12, label="Ser-h1", size=5)+
+  ylim(0.5,3.5)+
+  theme_void()  +
+  theme(legend.title = element_blank(), legend.text.align=0,
+        legend.text = element_text(size=12)) +
+  #Specify colours and legend labels
+  scale_color_manual(values=c(Okabe_Ito[6], Okabe_Ito[2]),
+                     labels = c(expression('NOS'^'Δ11/Δ11'), 
+                                "wt"))
+# save plot ---------------------------------------------------------------
+
+ggsave("pictures/WTvsNOS11_Ser-h1.png", limitsize = FALSE, 
+       units = c("px"), width = 1600, height = 800, bg='white')  
+
+# plot NOS11 MC data with geom_smooth ----------------------------------------------
+
+WTvsNOS11_MC_tb %>%
+  filter(genotype == "WT_MC" | genotype == "NOS11_MC") %>%
+  ggplot(aes(x=frame,y=intensity,color=genotype)) +
+  geom_smooth(level = 0.99, size = 1, span = 0.02, 
+              method = "loess") +
+  geom_line(aes(group = sample), size=0.2, alpha=0.2) +
+  annotate("rect", xmin=51, xmax=90, ymin=-Inf, ymax=Inf, 
+           alpha=0.1, fill="blue") +
+  annotate("segment", x=20, xend=40, y=1.6, yend=1.6, size=1)+
+  annotate("segment", x=20, xend=20, y=1.6, yend=1.7, size=1)+
+  annotate("text", x=29, y=1.45, label="10 sec", size=3)+
+  annotate("text", x=23, y=1.85, label="0.2 ΔF/F0", size=3)+
+  annotate("text", x=70, y=3.12, label="405 nm", size=4)+
+  annotate("text", x=160, y=3.12, label="MC", size=5)+
+  ylim(0.5,3.5)+
+  theme_void()  +
+  theme(legend.title = element_blank(), legend.text.align=0,
+        legend.text = element_text(size=12)) +
+  #Specify colours and legend labels
+  scale_color_manual(values=c(Okabe_Ito[6], Okabe_Ito[2]),
+                     labels = c(expression('NOS'^'Δ11/Δ11'), 
+                                "wt"))
+# save plot ---------------------------------------------------------------
+
+ggsave("pictures/WTvsNOS11_MC.png", limitsize = FALSE, 
+       units = c("px"), width = 1600, height = 800, bg='white')  
+
+
+
+
 
 # plot NIT2MO INNOS data with geom_smooth ----------------------------------------------
 
