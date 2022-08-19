@@ -364,19 +364,23 @@ panel_cPRC_NOS11 <- ggdraw() + draw_image(readPNG("pictures/WTvsNOS11_cPRC.png")
 panel_cPRC_NOS23 <- ggdraw() + draw_image(readPNG("pictures/WTvsNOS23_cPRC.png"))
 panel_INRGW <- ggdraw() + draw_image(readPNG("pictures/WTvsNOS23_INRGW.png"))
 panel_INNOS <- ggdraw() + draw_image(readPNG("pictures/WTvsNOS11_INNOS.png"))
+
+panel_Ser <- ggdraw() + draw_image(readPNG("pictures/WTvsNOS11_Ser-h1.png"))
+panel_MC <- ggdraw() + draw_image(readPNG("pictures/WTvsNOS11_MC.png"))
+
 panel_NIT2MO_INRGW <- ggdraw() + draw_image(readPNG("pictures/NIT2MO_INRGW.png"))
 panel_NIT2MO_INNOS <- ggdraw() + draw_image(readPNG("pictures/NIT2MO_INNOS.png"))
 
 #combine panels into Figure and save final figure as pdf and png
 #panels of different sizes
 layout <- "
-A#BC
-D##E
-F##G
+A#B#C
+D#E#F
+G#H#I
 "
 
 Fig4 <- panel_DAFFM + panel_cPRC_NOS11 + panel_cPRC_NOS23 + 
-  panel_INNOS + panel_INRGW + panel_NIT2MO_INNOS + panel_NIT2MO_INRGW +
+  panel_INNOS + panel_INRGW + panel_NIT2MO_INNOS + panel_NIT2MO_INRGW + panel_Ser + panel_MC
   patchwork::plot_layout(design = layout, 
       widths = c(1,0.02,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = "A") &  #we can change this to 'a' for small caps or 'i' or '1'
