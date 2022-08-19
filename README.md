@@ -1,2 +1,2 @@
-# new_paper_template
-Template repo to write new papers
+# Jokura et al
+Repo for data code and text of the Jokura et al paper on NOS in Platynereis larvae
