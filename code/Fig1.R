@@ -218,65 +218,68 @@ panel_SEM <- ggdraw() +
   draw_image(SEM) +
   draw_line(x = c(0.1, 0.2785), y = c(0.07, 0.07), color = "black", size = 0.5) +
   draw_label(expression(paste("50 ", mu, "m")), x = 0.2, y = 0.1, size = 10) +
-  draw_label("dorsal view", x = 0.2, y = 0.99, size = 10)
+  draw_label("dosal view", x = 0.3, y = 0.99, size = 10)
 
 panel_NOS2d <- ggdraw() + draw_image(readPNG("pictures/NOS-promotor_2d_acTub_XXum.png"))
+
 panel_NOS3d <- ggdraw() + draw_image(readPNG("pictures/NOS-promotor_3d_acTub_XXum_crop.png")) +
-  draw_label("NOSp::palmy-3xH-TdTomato", x = 0.45, y = 0.99, size = 10) +
+  draw_label("NOSp::palmi-tdTomato", x = 0.45, y = 0.99, size = 10) +
   draw_label("INNOS", x = 0.55, y = 0.75, color='#CC79A7', size = 12, fontface='bold') +
   draw_label("cPRC", x = 0.3, y = 0.85, color='white',size = 12,fontface='bold') +
-  draw_label("*", x = 0.55, y = 0.32, color='white',size = 18,fontface='bold')
+  draw_label("*", x = 0.55, y = 0.32, color='white',size = 18,fontface='bold') +
+  draw_line(x = c(0.05, 0.407), y = c(0.1, 0.1), color = "white", size = 0.5) +
+  draw_label(expression(paste("20 ", mu, "m")), x = 0.23, y = 0.13, color = "white", size = 10)
+
 panel_INNOS_ant <- ggdraw() + draw_image(readPNG("pictures/INNOS_Catmaid.png")) +
-  draw_label("anterior view", x = 0.3, y = 0.99, size = 10)  +
+  draw_label("anterior view", x = 0.35, y = 0.99, size = 10)  +
   draw_label("*", x = 0.51, y = 0.205, color='black',size = 18,fontface='bold')
 panel_INNOS_ant
+
 panel_INNOS_ventr <- ggdraw() + draw_image(readPNG("pictures/INNOS_Catmaid_ventr.png")) +
-  draw_label("ventral view", x = 0.25, y = 0.99, size = 10)
+  draw_label("ventral view", x = 0.3, y = 0.99, size = 10)
 
 panel_NOS2d_ant_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR-IHC_51_AP_NOS_actub_55.92um.png")) +
   draw_label("HCR in situ", x = 0.3, y = 0.99, size = 10) +
   draw_label("INNOS", x = 0.55, y = 0.67, color='#CC79A7', size = 12, fontface='bold') +
   draw_label("cPRC", x = 0.3, y = 0.85, color='white',size = 12, fontface='bold')  +
-  draw_line(x = c(0.05, 0.407), y = c(0.07, 0.07), color = "black", size = 0.5) +
-  draw_label(expression(paste("20 ", mu, "m")), x = 0.23, y = 0.1, size = 10)
+  draw_line(x = c(0.05, 0.407), y = c(0.1, 0.1), color = "white", size = 0.5) +
+  draw_label(expression(paste("20 ", mu, "m")), x = 0.23, y = 0.13, color = "white", size = 10)
 
 panel_NOS3d_ant_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR-IHC_72_AP_NOS_actub_118.08um.png")) +
   draw_label("HCR in situ", x = 0.3, y = 0.99, size = 10) +
   draw_label("INNOS", x = 0.55, y = 0.67, color='#CC79A7', size = 12, fontface='bold') +
   draw_label("cPRC", x = 0.3, y = 0.85, color='white',size = 12, fontface='bold')  +
-  draw_line(x = c(0.05, 0.407), y = c(0.07, 0.07), color = "black", size = 0.5) +
-  draw_label(expression(paste("20 ", mu, "m")), x = 0.23, y = 0.1, size = 10)
+  draw_line(x = c(0.05, 0.407), y = c(0.1, 0.1), color = "white", size = 0.5) +
+  draw_label(expression(paste("20 ", mu, "m")), x = 0.23, y = 0.13, color = "white", size = 10)
 
 panel_NOS3d_ventr_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR-IHC_72_DV_NOS_actub_112.55um.png")) +
   draw_label("HCR in situ", x = 0.3, y = 0.99, size = 10) +
   draw_label("INNOS", x = 0.55, y = 0.67, color='#CC79A7', size = 12, fontface='bold') +
   draw_label("cPRC", x = 0.3, y = 0.85, color='white',size = 12, fontface='bold')  +
-  draw_line(x = c(0.05, 0.407), y = c(0.07, 0.07), color = "black", size = 0.5) +
-  draw_label(expression(paste("20 ", mu, "m")), x = 0.23, y = 0.1, size = 10)
+  draw_line(x = c(0.05, 0.407), y = c(0.1, 0.1), color = "white", size = 0.5) +
+  draw_label(expression(paste("20 ", mu, "m")), x = 0.23, y = 0.13, color = "white", size = 10)
 
 panel_NOS_RY_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR_52_AP_NOS_RYa_101.29um.png"))
+
 panel_Network <- ggdraw() + draw_image(readPNG("pictures/visNetwork_INNOS.png")) +
-  draw_label("synaptic connectome", x = 0.4, y = 0.99, size = 10)
+  draw_label("synaptic connectome", x = 0.45, y = 0.99, size = 10)
 
 #combine panels into Figure and save final figure as pdf and png
 #panels of different sizes
 layout <- "
-A#B#C##D
-########
-E#F#G##H
+ABCD
+EFGH
 "
 
-Fig1 <- panel_SEM + 
-  panel_NOS2d_ant_HCR + panel_NOS3d_ant_HCR + panel_NOS3d_ventr_HCR + panel_NOS3d + panel_INNOS_ventr + panel_INNOS_ant + panel_Network +
-  patchwork::plot_layout(design = layout, heights = c(1,0.02,1), widths = c(1,0.02,1,0.02,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
-  patchwork::plot_annotation(tag_levels = "A") &  #we can change this to 'a' for small caps or 'i' or '1'
+Fig1 <- panel_SEM + panel_NOS3d_ventr_HCR + panel_NOS2d_ant_HCR + panel_NOS3d_ant_HCR +  
+  panel_NOS3d + panel_INNOS_ventr + panel_INNOS_ant + panel_Network +
+  patchwork::plot_layout(design = layout, heights = c(1,1), widths = c(1,1,1,1,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
+  patchwork::plot_annotation(tag_levels = "A") +  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, 
       face='plain', color='black')) #or 'bold', 'italic'
 
-Fig1
-
 ggsave("figures/Fig1.png", limitsize = FALSE, 
-       units = c("px"), Fig1, width = 2350, height = 1700, bg='white')  
+       units = c("px"), Fig1, width = 2400, height = 1450, bg='white')  
 
 ggsave("figures/Fig1.pdf", limitsize = FALSE, 
        units = c("px"), Fig1, width = 2350, height = 1700)  

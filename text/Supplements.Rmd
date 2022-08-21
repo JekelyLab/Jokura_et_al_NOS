@@ -1,3 +1,41 @@
+---
+title: Figure supplements
+author: "Kei Jokura, Nobuo Ueda, Martin Gühmann, Luis Alfonso Yañez-Guerra, Gáspár Jékely"
+date: '*Living Systems Institute, University of Exeter, Stocker road, Exeter, EX4
+  4QD, UK*'
+output:
+  pdf_document:
+    latex_engine: lualatex
+    template: default
+  html_document:
+    theme: lumen
+  word_document: default
+geometry: left=0.8in,right=0.8in,top=0.8in,bottom=0.5in
+mainfont: Arial
+monofont: Times New Roman
+documentclass: article
+classoption: onecolumn
+linestretch: 1.2
+fontsize: 10pt
+bibliography: references.bib
+csl: elife.csl
+---
 
-![**Figure 1—figure supplement 1. (A) Phylogenetic tree of NOS by maximum likelihood (ML). Tree robustness was tested with 1000 replicates of ultrafast bootstrap. Species names are as follows: Ap (Aiptasia pallida), Bb (Branchiostoma belcheri), Cv (Crassostrea virnigica), Dm (Drosophila melanogaster), Dp (Daphnia pulex), Hh (Hoilungia hongkongensis), Lg (Lottia gigantea), Pc (Priapulus caudatus), Pd (Platynereis dumerilii), Sk (Saccoglossus kowalevskii), Sp (Strongylocentrotus purpuratus), Ta (Trichoplax adhaerens), Tc (Tribolium castaneum).](../figures/Fig1_sup1.png){width="100%"}
-![**Figure 3—figure supplement 1. (A) Phylogenetic tree of guanylate cyclase by maximum likelihood (ML). Guanylate cyclase-coupled receptor and soluble guanylate cyclase as outgroups. Guanylate cyclases with NIT domains are found in most animal phyla except Porifera, Ctenophora, Urochordata and Chordata. Tree robustness was tested with 1000 replicates of ultrafast bootstrap. Species names are as follows: Ap (Aiptasia pallida), Bb (Branchiostoma belcheri), Cv (Crassostrea virnigica), Dm (Drosophila melanogaster), Dp (Daphnia pulex), Hh (Hoilungia hongkongensis), Lg (Lottia gigantea), Pc (Priapulus caudatus), Pd (Platynereis dumerilii), Sk (Saccoglossus kowalevskii), Sp (Strongylocentrotus purpuratus), Ta (Trichoplax adhaerens), Tc (Tribolium castaneum).](../figures/Fig3_sup1.png){width="100%"}
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+![**Figure 1---figure supplement 1.** (A) Phylogenetic tree of NOS by maximum likelihood (ML). Tree robustness was tested with 1000 replicates of ultrafast bootstrap. Species names are as follows: Ap (Aiptasia pallida), Bb (Branchiostoma belcheri), Cv (Crassostrea virnigica), Dm (Drosophila melanogaster), Dp (Daphnia pulex), Hh (Hoilungia hongkongensis), Lg (Lottia gigantea), Pc (Priapulus caudatus), Pd (Platynereis dumerilii), Sk (Saccoglossus kowalevskii), Sp (Strongylocentrotus purpuratus), Ta (Trichoplax adhaerens), Tc (Tribolium castaneum).](../figures/Fig1_sup1.png){width="100%"}
+
+![**Figure 1---figure supplement 2.** (A) Immunostaining with NOS antibodies.(B) Co-expression analysis image with the RYamide proneuropeptide gene (RYa-pNP: green), which is highly expressed in INNOS. White arrowheads indicate co-expressed INNOS. Black arrowheads indicate larval eyes. White dashed lines indicate the outer frame of the larva.](../figures/Fig1_sup2.png){width="100%"}
+
+![\*\*Figure 3---figure supplement 1.\*\* (A) Phylogenetic tree of guanylate cyclase by maximum likelihood (ML). Guanylate cyclase-coupled receptor and soluble guanylate cyclase as outgroups. Guanylate cyclases with NIT domains are found in most animal phyla except Porifera, Ctenophora, Urochordata and Chordata. Tree robustness was tested with 1000 replicates of ultrafast bootstrap. Species names are as follows: Ap (Aiptasia pallida), Bb (Branchiostoma belcheri), Cv (Crassostrea virnigica), Dm (Drosophila melanogaster), Dp (Daphnia pulex), Hh (Hoilungia hongkongensis), Lg (Lottia gigantea), Pc (Priapulus caudatus), Pd (Platynereis dumerilii), Sk (Saccoglossus kowalevskii), Sp (Strongylocentrotus purpuratus), Ta (Trichoplax adhaerens), Tc (Tribolium castaneum).](../figures/Fig3_sup1.png){width="100%"}
+
+![**Figure 3---figure supplement 2.** (A) Co-expression analysis image of the MLD-pedal2 amide proneuropeptide gene (MLD-pNP: green). Black arrowheads indicate cells different from cPRC. (B) Co-localisation analysis using NIT-GC1 and NOS antibodies.](../figures/Fig3_sup2.png){width="100%"}
+
+![**Figure 3---figure supplement 3.** (A) Comparison of amino acid sequences of regions of possible NO binding in NIT-GC1 and NIT-GC2. (B) 3D stuructures of NIT-GC1 and NIT-GC2 (C)](../figures/Fig3_sup3.png){width="100%"}
+
+![**Figure 3---figure supplement 4.** (A and B) Left: The domain structure of NIT-GC1. Grey squares indicate the transmembrane domain. Right shows a schematic of the NIT-GC1 assay; COS7 cells were used to express NIT-GC1 and the cGMP indicator Green cGull, and the NO donor SNAP and DMSO as control. Green cGull shows cGMP-dependent green fluorescence.](../figures/Fig3_sup4.png){width="100%"}
+
+![**Figure 4---figure supplement 1.** (A) Schematic diagram of the immunostaining procedure after calcium imaging. (B) The position of the cPRC (purple dashed line) in calcium imaging with GCaMP6s. Cells around the cPRC are numbered according to the position of the nuclei. (C) Immunostaining image using RGWamide (RGWa) and serotonin (Ser) antibodies (red) and DAPI (light blue) in the same region as (B). INRGW (green dashed line) and Ser-h1 (black arrowheads) identified from the numbered nuclear positions are shown. .](../figures/Fig4_sup1.png){width="100%"}

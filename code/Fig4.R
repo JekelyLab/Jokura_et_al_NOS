@@ -1,4 +1,4 @@
-#Code to assemble Fig5 of the Jokura et al Platynereis NOS paper
+#Code to assemble Fig4 of the Jokura et al Platynereis NOS paper
 #2022 June - Kei Jokura, Gaspar Jekely
 
 # source packages ---------------------------------------------------------
@@ -374,22 +374,22 @@ panel_NIT2MO_INNOS <- ggdraw() + draw_image(readPNG("pictures/NIT2MO_INNOS.png")
 #combine panels into Figure and save final figure as pdf and png
 #panels of different sizes
 layout <- "
-A#B#C
-D#E#F
-G#H#I
+ABC
+DEF
+GHI
 "
 
 Fig4 <- panel_DAFFM + panel_cPRC_NOS11 + panel_cPRC_NOS23 + 
   panel_INNOS + panel_INRGW + panel_NIT2MO_INNOS + panel_NIT2MO_INRGW + panel_Ser + panel_MC +
-  patchwork::plot_layout(design = layout, widths = c(2.5, 0.5)) + #we can change the heights of the rows in our layout (widths also can be defined)
-  patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
+  patchwork::plot_layout(design = layout) + #we can change the heights of the rows in our layout (widths also can be defined)
+  patchwork::plot_annotation(tag_levels = 'A') +  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, 
           face='plain')) #or 'bold', 'italic'
 
 Fig4
 
 ggsave("figures/Fig4.png", limitsize = FALSE, 
-       units = c("px"), Fig4, width = 2400, height = 2400, bg='white')  
+       units = c("px"), Fig4, width = 2400, height = 1400, bg='white')  
 
 ggsave("figures/Fig4.pdf", limitsize = FALSE, 
        units = c("px"), Fig4, width = 2350, height = 1700)  
