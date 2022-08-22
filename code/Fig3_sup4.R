@@ -21,7 +21,7 @@ layout <- "
 ABC
 "
 
-Fig3_sup4 <- panel_A + plot_spacer()+ panel_B + 
+Fig3_sup4 <- panel_A + plot_spacer() + panel_B + 
   patchwork::plot_layout(design = layout, widths = c(1, 0.05, 1)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = "A") +
   ggplot2::theme(plot.tag = element_text(size = 12, face='plain', color='black')) #or 'bold', 'italic'
