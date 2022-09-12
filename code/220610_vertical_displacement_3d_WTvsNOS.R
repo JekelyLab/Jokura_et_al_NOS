@@ -25,8 +25,6 @@ WTvsNOS_3d <- bind_rows(WT_3d_tidy_phenotype, NOS_3d_tidy_phenotype) %>%
   mutate(phenotype = factor(phenotype, levels = c("WT", "NOS")))
 
 WTvsNOS_3d %>%
-  filter(!(condition %in% c("dark_30", "dark_60", "dark_90", "dark_120", "dark_150", "dark_180", 
-                            "dark_210", "dark_240", "dark_270", "dark_300", "sideUV_30", "sideUV_60", "sideUV_90", "sideUV_120")))%>%
   ggplot() +
   aes(x = reorder(condition, time), y = displacement, fill = phenotype) +
   geom_boxplot() +
@@ -34,6 +32,9 @@ WTvsNOS_3d %>%
   theme(axis.text.x = element_text(angle = 45, hjust = 1))+
   labs(x = "30 sec bins", y = "Vertical displacement (mm/s)")+
   scale_y_continuous(limits = c(-1, 1))
+
+ggsave("pictures/vertical_displacement_3dpf_WTvsNOSmix.png", limitsize = FALSE, 
+       units = c("px"), width = 3000, height = 2000, bg='white')
 
 
 

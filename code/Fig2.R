@@ -9,8 +9,8 @@ source("code/Packages_to_load.R")
 #read png convert to image panel
 
 panel_Architecture <- ggdraw() + draw_image(readPNG("pictures/NOS-Architecture.png"))
-panel_2dpf <- ggdraw() + draw_image(readPNG("pictures/2dpf_wt_vs_NOS_mutants_for_discussion_1.png"))
-panel_3dpf <- ggdraw() + draw_image(readPNG("pictures/3dpf_wt_vs_NOS_mutants_for_discussion.png"))
+panel_2dpf <- ggdraw() + draw_image(readPNG("pictures/vertical_displacement_2dpf_WTvsNOSmix.png"))
+panel_3dpf <- ggdraw() + draw_image(readPNG("pictures/vertical_displacement_3dpf_WTvsNOSmix.png"))
 
 #combine panels into Figure and save final figure as pdf and png
 #panels of different sizes
