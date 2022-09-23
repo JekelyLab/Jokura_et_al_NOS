@@ -1,46 +1,40 @@
 R version 4.2.1 (2022-06-23 ucrt)
 Platform: x86_64-w64-mingw32/x64 (64-bit)
-Running under: Windows 10 x64 (build 22000)
+Running under: Windows 10 x64 (build 22621)
 
 Matrix products: default
 
 locale:
-[1] LC_COLLATE=Japanese_Japan.utf8  LC_CTYPE=Japanese_Japan.utf8    LC_MONETARY=Japanese_Japan.utf8
-[4] LC_NUMERIC=C                    LC_TIME=Japanese_Japan.utf8    
+[1] LC_COLLATE=Japanese_Japan.utf8  LC_CTYPE=Japanese_Japan.utf8   
+[3] LC_MONETARY=Japanese_Japan.utf8 LC_NUMERIC=C                   
+[5] LC_TIME=Japanese_Japan.utf8    
 
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
- [1] ggraptR_1.3            shiny_1.7.2            pacman_0.5.1           esquisse_1.1.1         ggplotgui_1.0.0       
- [6] plotly_4.10.0          scales_1.2.0           tidygraph_1.2.1        rgexf_0.16.2           patchwork_1.1.1       
-[11] webshot2_0.1.0         visNetwork_2.1.0       networkD3_0.4          igraph_1.3.4           RColorBrewer_1.1-3    
-[16] leiden_0.4.2           forcats_0.5.1          stringr_1.4.0          dplyr_1.0.9            purrr_0.3.4           
-[21] readr_2.1.2            tidyr_1.2.0            tibble_3.1.8           ggplot2_3.3.6          tidyverse_1.3.2       
-[26] png_0.1-7              cowplot_1.1.1          magick_2.7.3           natverse_0.2.4         neuprintr_1.3         
-[31] elmr_0.6               nat.nblast_1.6.6       nat.flybrains_1.8.0    nat.templatebrains_1.0 catmaid_0.10.1        
-[36] nat_1.10.4             rgl_0.109.6            httr_1.4.3            
+ [1] scales_1.2.0       tidygraph_1.2.1    rgexf_0.16.2       patchwork_1.1.1   
+ [5] webshot2_0.1.0     visNetwork_2.1.0   networkD3_0.4      igraph_1.3.4      
+ [9] RColorBrewer_1.1-3 leiden_0.4.2       forcats_0.5.1      stringr_1.4.0     
+[13] dplyr_1.0.9        purrr_0.3.4        readr_2.1.2        tidyr_1.2.0       
+[17] tibble_3.1.8       ggplot2_3.3.6      tidyverse_1.3.2    png_0.1-7         
+[21] cowplot_1.1.1      magick_2.7.3      
 
 loaded via a namespace (and not attached):
-  [1] readxl_1.4.0        backports_1.4.1     spam_2.9-0          systemfonts_1.0.4   servr_0.24         
-  [6] plyr_1.8.7          lazyeval_0.2.2      websocket_1.4.1     digest_0.6.29       htmltools_0.5.3    
- [11] fansi_1.0.3         magrittr_2.0.3      checkmate_2.1.0     memoise_2.0.1       googlesheets4_1.0.0
- [16] tzdb_0.3.0          openxlsx_4.2.5      modelr_0.1.8        vroom_1.5.7         prettyunits_1.1.1  
- [21] colorspace_2.0-3    rvest_1.0.2         rappdirs_0.3.3      textshaping_0.3.6   haven_2.5.0        
- [26] xfun_0.31           crayon_1.5.1        jsonlite_1.8.0      glue_1.6.2          gtable_0.3.0       
- [31] gargle_1.2.0        phosphoricons_0.1.2 DBI_1.1.3           Rcpp_1.0.9          viridisLite_0.4.0  
- [36] xtable_1.8-4        progress_1.2.2      reticulate_1.25     bit_4.0.4           foreign_0.8-82     
- [41] dotCall64_1.0-1     htmlwidgets_1.5.4   nabor_0.5.0         ellipsis_0.3.2      pkgconfig_2.0.3    
- [46] XML_3.99-0.10       farver_2.1.1        sass_0.4.2          dbplyr_2.2.1        chromote_0.1.0     
- [51] utf8_1.2.2          here_1.0.1          tidyselect_1.1.2    labeling_0.4.2      rlang_1.0.4        
- [56] later_1.3.0         munsell_0.5.0       cellranger_1.1.0    tools_4.2.1         cachem_1.0.6       
- [61] cli_3.3.0           generics_0.1.3      broom_1.0.0         evaluate_0.15       fastmap_1.1.0      
- [66] yaml_2.3.5          ragg_1.2.2          bit64_4.0.5         processx_3.7.0      knitr_1.39         
- [71] fs_1.5.2            filehash_2.4-3      zip_2.2.0           dendroextras_0.2.3  nat.utils_0.5.1    
- [76] mime_0.12           drvid_0.3.0         xml2_1.3.3          compiler_4.2.1      rstudioapi_0.13    
- [81] datamods_1.3.3      curl_4.3.2          reprex_2.0.1        bslib_0.4.0         stringi_1.7.8      
- [86] ps_1.7.1            lattice_0.20-45     Matrix_1.4-1        vctrs_0.4.1         pillar_1.8.0       
- [91] lifecycle_1.0.1     jquerylib_0.1.4     data.table_1.14.2   httpuv_1.6.5        R6_2.5.1           
- [96] promises_1.2.0.1    rio_0.5.29          codetools_0.2-18    assertthat_0.2.1    rprojroot_2.0.3    
-[101] shinyWidgets_0.7.1  withr_2.5.0         parallel_4.2.1      hms_1.1.1           grid_4.2.1         
-[106] rmarkdown_2.14      googledrive_2.0.0   lubridate_1.8.0     base64enc_0.1-3    
+ [1] httr_1.4.3          jsonlite_1.8.0      here_1.0.1          modelr_0.1.8       
+ [5] assertthat_0.2.1    googlesheets4_1.0.0 cellranger_1.1.0    pillar_1.8.0       
+ [9] backports_1.4.1     lattice_0.20-45     glue_1.6.2          reticulate_1.25    
+[13] digest_0.6.29       promises_1.2.0.1    rvest_1.0.2         colorspace_2.0-3   
+[17] httpuv_1.6.5        websocket_1.4.1     htmltools_0.5.3     Matrix_1.4-1       
+[21] XML_3.99-0.10       pkgconfig_2.0.3     broom_1.0.0         servr_0.24         
+[25] haven_2.5.0         processx_3.7.0      later_1.3.0         tzdb_0.3.0         
+[29] googledrive_2.0.0   generics_0.1.3      ellipsis_0.3.2      withr_2.5.0        
+[33] cli_3.3.0           magrittr_2.0.3      crayon_1.5.1        readxl_1.4.0       
+[37] ps_1.7.1            fs_1.5.2            fansi_1.0.3         xml2_1.3.3         
+[41] tools_4.2.1         hms_1.1.1           gargle_1.2.0        lifecycle_1.0.1    
+[45] munsell_0.5.0       reprex_2.0.1        compiler_4.2.1      chromote_0.1.0     
+[49] rlang_1.0.4         grid_4.2.1          rstudioapi_0.13     rappdirs_0.3.3     
+[53] htmlwidgets_1.5.4   gtable_0.3.0        DBI_1.1.3           R6_2.5.1           
+[57] lubridate_1.8.0     fastmap_1.1.0       utf8_1.2.2          rprojroot_2.0.3    
+[61] stringi_1.7.8       Rcpp_1.0.9          vctrs_0.4.1         xfun_0.31          
+[65] dbplyr_2.2.1        tidyselect_1.1.2   
