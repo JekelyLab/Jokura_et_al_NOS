@@ -93,7 +93,7 @@ ggsave("pictures/vertical_displacement_3dpf_WTvsNOSmix.png", limitsize = FALSE,
 # plot Tracking (WT)---------------------------------------------------------
 
 #Tracking graph UV(purple)
-ggplot(df_WT) +
+plot_3dpf_WT_Tracking <-ggplot(df_WT) +
   aes(x = nor_X, y = nor_V, colour = condition) +
   geom_point(shape = "circle", size = 0.5) +
   scale_color_manual(values = c(dark = "gray60",UV = "#6E0EFF")) +
@@ -103,15 +103,11 @@ ggplot(df_WT) +
   xlim(-120,120)+
   ylim(-300, 150)
 
-# save plot ---------------------------------------------------------------
-
-ggsave("pictures/Tracking_3dpf_WT.png", limitsize = FALSE, 
-       units = c("px"), width = 1000, height = 1800, bg='white')
-
 
 # plot Tracking (NOS)---------------------------------------------------------
 
-df_NOS %>%
+#Tracking graph UV(purple)
+plot_3dpf_NOS_Tracking <- df_NOS %>%
   filter(nor_V >= -225L & nor_V <= 160L) %>%
   ggplot() +
   aes(x = nor_X, y = nor_V, colour = condition) +
@@ -123,10 +119,23 @@ df_NOS %>%
   xlim(-120,120)+
   ylim(-300, 150)
 
+
+#Align the two tracking graphs---------------------------------------------
+
+layout <- "
+AB
+"
+
+Tracking <- plot_3dpf_WT_Tracking + plot_3dpf_NOS_Tracking + 
+  patchwork::plot_layout(design = layout) + #we can change the heights of the rows in our layout (widths also can be defined)
+  ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'bold', 'italic'
+
+Tracking
+
 # save plot ---------------------------------------------------------------
 
-ggsave("pictures/Tracking_3dpf_NOS.png", limitsize = FALSE, 
-       units = c("px"), width = 1000, height = 1800, bg='white')
+ggsave("pictures/Tracking_3dpf.png", limitsize = FALSE, 
+       units = c("px"), width = 2400, height = 2000, bg='white')
 
 
 #calculating each distances-----------------------------------------------------------------------
@@ -250,33 +259,21 @@ tracking_V_mean <- rbind(WT_V_mean, NOS_V_mean)
 
 # plot the tracking mean vertical position in WT-----------------------------------------------------
 
-ggplot(WT_V_mean) +
+ggplot() +
   aes(x = Frame, y = V_mean)+
-  annotate("rect", xmin=301, xmax=750, ymin=-Inf, ymax=Inf,alpha=0.05, fill="blue") +
-  geom_point(data = df_WT, aes(x=Frame, y=nor_V, group="Track ID"), color="magenta", size =0.4, alpha=0.05) + 
-  geom_ribbon(aes(ymin=CI_lower, ymax=CI_upper) ,fill="gray", alpha=0.5)+
-  geom_line(size = 1.5, color = "darkmagenta") +
+  annotate("rect", xmin=301, xmax=750, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
+  geom_point(data = df_WT, aes(x=Frame, y=nor_V, group="Track ID"), color="orangered", size =0.4, alpha=0.05) + 
+  geom_point(data = df_NOS, aes(x=Frame, y=nor_V, group="Track ID"), color="lightseagreen", size =0.4, alpha=0.05) +
+  geom_ribbon(data = WT_V_mean, aes(ymin=CI_lower, ymax=CI_upper) ,fill="gray", alpha=0.5)+
+  geom_ribbon(data = NOS_V_mean, aes(ymin=CI_lower, ymax=CI_upper) ,fill="gray", alpha=0.5)+
+  geom_line(data = NOS_V_mean, aes(x = Frame, y = V_mean), size = 1.25, color = "lightseagreen") +
+  geom_line(data = WT_V_mean, aes(x = Frame, y = V_mean), size = 1.25, color = "orangered") +
   theme_classic()+
   ylim(-300, 150)
 
 # save plot ---------------------------------------------------------------
 
-ggsave("pictures/tracking_mean_vertical_position_WT.png", limitsize = FALSE, 
-       units = c("px"), width = 3000, height = 2000, bg='white')
-
-# plot the tracking mean vertical position in NOS-----------------------------------------------------
-ggplot(NOS_V_mean) +
-  aes(x = Frame, y = V_mean) +
-  annotate("rect", xmin=301, xmax=750, ymin=-Inf, ymax=Inf,alpha=0.05, fill="blue") +
-  geom_point(data = df_NOS, aes(x=Frame, y=nor_V, group="Track ID"), color="dodgerblue", size =0.4, alpha=0.05) +
-  geom_ribbon(aes(ymin=CI_lower, ymax=CI_upper) ,fill="gray", alpha=0.5)+
-  geom_line(size = 1.5, color = "dodgerblue3") +
-  theme_classic()+
-  ylim(-300, 150)
-
-# save plot ---------------------------------------------------------------
-
-ggsave("pictures/tracking_mean_vertical_position_NOS.png", limitsize = FALSE, 
+ggsave("pictures/tracking_mean_vertical_position.png", limitsize = FALSE, 
        units = c("px"), width = 3000, height = 2000, bg='white')
 
 
@@ -288,21 +285,19 @@ ggsave("pictures/tracking_mean_vertical_position_NOS.png", limitsize = FALSE,
 panel_Architecture <- ggdraw() + draw_image(readPNG("pictures/NOS-Architecture.png"))
 panel_2dpf <- ggdraw() + draw_image(readPNG("pictures/vertical_displacement_2dpf_WTvsNOSmix.png"))
 panel_3dpf <- ggdraw() + draw_image(readPNG("pictures/vertical_displacement_3dpf_WTvsNOSmix.png"))
-panel_3dpf_WT_Tracking <- ggdraw() + draw_image(readPNG("pictures/Tracking_3dpf_WT.png"))
-panel_3dpf_NOS_Tracking <- ggdraw() + draw_image(readPNG("pictures/Tracking_3dpf_NOS.png"))
-panel_3dpf_WT_Tracking_position <- ggdraw() + draw_image(readPNG("pictures/tracking_mean_vertical_position_WT.png"))
-panel_3dpf_NOS_Tracking_position <- ggdraw() + draw_image(readPNG("pictures/tracking_mean_vertical_position_NOS.png"))
+panel_3dpf_Tracking <- ggdraw() + draw_image(readPNG("pictures/Tracking_3dpf.png"))
+panel_3dpf_Tracking_position <- ggdraw() + draw_image(readPNG("pictures/tracking_mean_vertical_position.png"))
 panel_3dpf_Tracking_distance <- ggdraw() + draw_image(readPNG("pictures/tracking_mean_distance.png"))
 
 #combine panels into Figure and save final figure as pdf and png
 #panels of different sizes
 layout <- "
 ABC
-DEFGH
+DEF
 "
 
-Fig2 <- panel_Architecture + panel_2dpf + panel_3dpf + panel_3dpf_WT_Tracking + panel_3dpf_NOS_Tracking +
-  panel_3dpf_WT_Tracking_position + panel_3dpf_NOS_Tracking_position + panel_3dpf_Tracking_distance + 
+Fig2 <- panel_Architecture + panel_2dpf + panel_3dpf + panel_3dpf_Tracking +
+  panel_3dpf_Tracking_position + panel_3dpf_Tracking_distance + 
   patchwork::plot_layout(design = layout) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = 'A') +  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'bold', 'italic'
@@ -310,10 +305,10 @@ Fig2 <- panel_Architecture + panel_2dpf + panel_3dpf + panel_3dpf_WT_Tracking + 
 Fig2
 
 ggsave("figures/Fig2.png", limitsize = FALSE, 
-       units = c("px"), Fig2, width = 2400, height = 600, bg='white')  
+       units = c("px"), Fig2, width = 2400, height = 1200, bg='white')  
 
 ggsave("figures/Fig2.pdf", limitsize = FALSE, 
-       units = c("px"), Fig2, width = 2350, height = 1700)  
+       units = c("px"), Fig2, width = 2400, height = 1200)  
 
 
 
