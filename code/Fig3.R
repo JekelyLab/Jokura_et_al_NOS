@@ -214,7 +214,8 @@ panel_HCR_NIT1 <- ggdraw() + draw_image(readPNG("pictures/HCR-IHC_51_AP_NITGC1_a
 
 panel_HCR_NIT1_cOps <- ggdraw() + draw_image(readPNG("pictures/HCR_RT28_AP_NITGC1_c-opsin1_112.55um.png")) +
   draw_label("HCR in situ", x = 0.3, y = 0.99, size = 11) +
-  draw_label("NIT-GC1", x = 0.15, y = 0.08, color='#CC79A7', size = 12, fontface='bold')
+  draw_label("NIT-GC1", x = 0.15, y = 0.08, color='#CC79A7', size = 12, fontface='bold')+
+  draw_label("c-opsin1", x = 0.85, y = 0.08, color='green', size = 12, fontface='bold')
 
 panel_IHC_NIT1 <- ggdraw() + draw_image(readPNG("pictures/IHC_55_AP_NITGC1_actub_58.47um.png")) +
   draw_label("IHC", x = 0.2, y = 0.99, size = 11) +
@@ -227,8 +228,6 @@ panel_IHC_NIT2 <- ggdraw() + draw_image(readPNG("pictures/IHC_55_AP_NITGC2_actub
   draw_label("cPRC", x = 0.22, y = 0.8, color='white',size = 12, fontface='bold') +
   draw_label("anti-NIT-GC2", x = 0.22, y = 0.08, color='#CC79A7', size = 12, fontface='bold') +
   draw_label("acTub", x = 0.85, y = 0.08, color='green', size = 12, fontface='bold')
-
-panel_GcG_scheme <- ggdraw() + draw_image(readPNG("pictures/NITGC1_cGMPassay_2.png"))
 
 panel_GcG_NIT_DMSO <- ggdraw() + draw_image(readPNG("pictures/GcG-NIT-GC1-DMSO.png")) +
   draw_label("GcG + NIT-GC1", x = 0.35, y = 0.9, size = 11)
@@ -244,25 +243,25 @@ panel_GcG_mutNIT_SNAP <- ggdraw() + draw_image(readPNG("pictures/GcG-mutNIT-GC1-
 layout <- "
 A#B#C#D
 #######
-EEE#FFF
+E#F#G#H
 #######
-H#I#J#K
+III#JJJ
 "
 
 Fig3 <- panel_HCR_NIT1 + panel_HCR_NIT1_cOps + panel_IHC_NIT1 + panel_IHC_NIT2 + 
-  panel_cPRC_NIT1_MO + panel_cPRC_NIT2_MO +
   panel_GcG_NIT_SNAP + panel_GcG_SNAP + panel_GcG_NIT_DMSO + panel_GcG_mutNIT_SNAP +
-  patchwork::plot_layout(design = layout, heights = c(0.8, 0.02, 0.6, 0.02, 0.8),
+  panel_cPRC_NIT1_MO + panel_cPRC_NIT2_MO +
+  patchwork::plot_layout(design = layout, heights = c(0.8, 0.02, 0.8, 0.02, 0.6),
                          widths = c(1,0.02,1,0.02,1,0.02,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
-  patchwork::plot_annotation(tag_levels = "A") &  #we can change this to 'a' for small caps or 'i' or '1'
-  ggplot2::theme(plot.tag = element_text(size = 12,face='plain')) #or 'bold', 'italic'
+  patchwork::plot_annotation(tag_levels = 'A') +  #we can change this to 'a' for small caps or 'i' or '1'
+  ggplot2::theme(plot.tag = element_text(size = 12,face='bold')) #or 'bold', 'plain', 'italic'
 
-Fig3
 
-ggsave("figures/Fig6.png", limitsize = FALSE, 
-       units = c("px"), Fig3, width = 3200, height = 2400, bg='white')  
 
-ggsave("figures/Fig6.pdf", limitsize = FALSE, 
+ggsave("figures/Fig3.png", limitsize = FALSE, units = c("px"), 
+       Fig3, width = 3200, height = 2400, bg='white')  
+
+ggsave("figures/Fig3.pdf", limitsize = FALSE, 
        units = c("px"), Fig3, width = 2350, height = 1700)  
 
 

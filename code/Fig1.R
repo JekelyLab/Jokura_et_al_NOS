@@ -245,14 +245,14 @@ panel_NOS2d_ant_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR-IHC_51_AP_NOS
   draw_line(x = c(0.05, 0.407), y = c(0.1, 0.1), color = "white", size = 0.5) +
   draw_label(expression(paste("20 ", mu, "m")), x = 0.23, y = 0.13, color = "white", size = 10)
 
-panel_NOS3d_ant_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR-IHC_72_AP_NOS_actub_118.08um.png")) +
+panel_NOS3d_ant_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR_72_AP_NOS_92.02um.png")) +
   draw_label("HCR in situ", x = 0.3, y = 0.99, size = 10) +
   draw_label("INNOS", x = 0.55, y = 0.67, color='#CC79A7', size = 12, fontface='bold') +
   draw_label("cPRC", x = 0.3, y = 0.85, color='white',size = 12, fontface='bold')  +
   draw_line(x = c(0.05, 0.407), y = c(0.1, 0.1), color = "white", size = 0.5) +
   draw_label(expression(paste("20 ", mu, "m")), x = 0.23, y = 0.13, color = "white", size = 10)
 
-panel_NOS3d_ventr_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR-IHC_72_DV_NOS_actub_112.55um.png")) +
+panel_NOS3d_ventr_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR_72_DV_NOS_71.46um.png")) +
   draw_label("HCR in situ", x = 0.3, y = 0.99, size = 10) +
   draw_label("INNOS", x = 0.55, y = 0.67, color='#CC79A7', size = 12, fontface='bold') +
   draw_label("cPRC", x = 0.3, y = 0.85, color='white',size = 12, fontface='bold')  +
@@ -271,7 +271,7 @@ ABCD
 EFGH
 "
 
-Fig1 <- panel_SEM + panel_NOS3d_ventr_HCR + panel_NOS2d_ant_HCR + panel_NOS3d_ant_HCR +  
+Fig1 <- panel_SEM + panel_NOS3d_ventr_HCR + panel_NOS3d_ant_HCR + panel_NOS2d_ant_HCR +  
   panel_NOS3d + panel_INNOS_ventr + panel_INNOS_ant + panel_Network +
   patchwork::plot_layout(design = layout, heights = c(1,1), widths = c(1,1,1,1,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = "A") +  #we can change this to 'a' for small caps or 'i' or '1'

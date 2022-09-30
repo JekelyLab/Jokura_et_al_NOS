@@ -32,7 +32,7 @@ df_NOS <- sapply(files, read_csv, simplify = FALSE)%>%
 
 
 
-# tidying the data -----------------------------------------------------------------------
+# tidying Martin data (30 sec bins, vertical displacement)------------------------------------------------
 WT_2d_tidy <- gather(WT_2d, key="WT", value="displacement", -time, -condition)
 WT_2d_tidy_phenotype <- gather(WT_2d_tidy, key="phenotype", value="batch", -time, -condition, -displacement)
 
@@ -54,17 +54,31 @@ WTvsNOS_3d <- bind_rows(WT_3d_tidy_phenotype, NOS_3d_tidy_phenotype) %>%
   mutate(phenotype = factor(phenotype, levels = c("WT", "NOS")))
 
 
-
 # plot Martin data (2d larvae, 30 sec bins, vertical displacement)-------------------------------
 
 WTvsNOS_2d %>%
   ggplot() +
+  annotate("rect", xmin="sideUV_30", xmax="sideUV_120", ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
+  annotate("rect", xmin="top488_30", xmax="top488_120", ymin=-Inf, ymax=Inf,alpha=0.1, fill="deepskyblue") +
+  annotate("rect", xmin="top395_30", xmax="top395_120", ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
   aes(x = reorder(condition, time), y = displacement, fill = phenotype) +
   geom_boxplot() +
   theme_minimal()+
   theme(axis.text.x = element_text(angle = 45, hjust = 1))+
   labs(x = "30 sec bins", y = "Vertical displacement (mm/s)")+
-  scale_y_continuous(limits = c(-1, 1.2))
+  scale_y_continuous(limits = c(-1, 1.2)) +
+  scale_x_discrete(limit=c("dark_30", "dark_60", "dark_90", "dark_120", 
+                             "dark_150", "dark_180", "dark_210", "dark_240", 
+                             "sideUV_30", "sideUV_60", "sideUV_90", "sideUV_120", 
+                             "dark1_30", "dark1_60", "dark1_90", "dark1_120", 
+                             "top488_30", "top488_60", "top488_90", "top488_120", 
+                             "dark2_30", "dark2_60", "dark2_90", "dark2_120", 
+                             "top395_30", "top395_60", "top395_90", "top395_120", 
+                             "dark3_30", "dark3_60", "dark3_90", "dark3_120", 
+                             "dark3_150", "dark3_180"))
+
+
+
 
 # save plot ---------------------------------------------------------------
 
@@ -76,12 +90,24 @@ ggsave("pictures/vertical_displacement_2dpf_WTvsNOSmix.png", limitsize = FALSE,
 
 WTvsNOS_3d %>%
   ggplot() +
+  annotate("rect", xmin="sideUV_30", xmax="sideUV_120", ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
+  annotate("rect", xmin="top488_30", xmax="top488_120", ymin=-Inf, ymax=Inf,alpha=0.1, fill="deepskyblue") +
+  annotate("rect", xmin="top395_30", xmax="top395_120", ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
   aes(x = reorder(condition, time), y = displacement, fill = phenotype) +
   geom_boxplot() +
   theme_minimal()+
   theme(axis.text.x = element_text(angle = 45, hjust = 1))+
   labs(x = "30 sec bins", y = "Vertical displacement (mm/s)")+
-  scale_y_continuous(limits = c(-1, 1))
+  scale_y_continuous(limits = c(-1, 1)) +
+  scale_x_discrete(limit=c("dark_30", "dark_60", "dark_90", "dark_120", 
+                           "dark_150", "dark_180", "dark_210", "dark_240", 
+                           "sideUV_30", "sideUV_60", "sideUV_90", "sideUV_120", 
+                           "dark1_30", "dark1_60", "dark1_90", "dark1_120", 
+                           "top488_30", "top488_60", "top488_90", "top488_120", 
+                           "dark2_30", "dark2_60", "dark2_90", "dark2_120", 
+                           "top395_30", "top395_60", "top395_90", "top395_120", 
+                           "dark3_30", "dark3_60", "dark3_90", "dark3_120", 
+                           "dark3_150", "dark3_180"))
 
 # save plot ---------------------------------------------------------------
 
@@ -300,9 +326,8 @@ Fig2 <- panel_Architecture + panel_2dpf + panel_3dpf + panel_3dpf_Tracking +
   panel_3dpf_Tracking_position + panel_3dpf_Tracking_distance + 
   patchwork::plot_layout(design = layout) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = 'A') +  #we can change this to 'a' for small caps or 'i' or '1'
-  ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'bold', 'italic'
+  ggplot2::theme(plot.tag = element_text(size = 12, face='bold')) #or 'plain', 'italic'
 
-Fig2
 
 ggsave("figures/Fig2.png", limitsize = FALSE, 
        units = c("px"), Fig2, width = 2400, height = 1200, bg='white')  
