@@ -433,13 +433,17 @@ panel_correlation1 <- ggdraw() + draw_image(readPNG("pictures/n54hpf_WT_e-1_ROI6
   draw_label("cPRC", x = 0.4, y = 0.6, size = 9) +
   draw_label("IN-NOS", x = 0.35, y = 0.35, size = 9) +
   draw_label("IN-RGWa", x = 0.7, y = 0.28, size = 9) +
-  draw_label("Ser-h1", x = 0.8, y = 0.5, size = 9)
+  draw_label("Ser-h1", x = 0.8, y = 0.5, size = 9)+
+  draw_line(x = c(0.05, 0.407), y = c(0.1, 0.1), color = "black", size = 0.5) +
+  draw_label(expression(paste("20 ", mu, "m")), x = 0.23, y = 0.13, color = "black", size = 10)
 
 panel_correlation2 <- ggdraw() + draw_image(readPNG("pictures/n54hpf_WT_e-1_ROI60_PD1.54_power2-8_pin216.9_frame_101-141_401-441_co1-2_crop.png")) +
   draw_label("cPRC", x = 0.4, y = 0.6, size = 9) +
   draw_label("IN-NOS", x = 0.35, y = 0.35, size = 9) +
   draw_label("IN-RGWa", x = 0.7, y = 0.28, size = 9) +
-  draw_label("Ser-h1", x = 0.8, y = 0.5, size = 9)
+  draw_label("Ser-h1", x = 0.8, y = 0.5, size = 9)+
+  draw_line(x = c(0.05, 0.407), y = c(0.1, 0.1), color = "black", size = 0.5) +
+  draw_label(expression(paste("20 ", mu, "m")), x = 0.23, y = 0.13, color = "black", size = 10)
 
 #combine panels into Figure and save final figure as pdf and png
 #panels of different sizes

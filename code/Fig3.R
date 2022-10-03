@@ -210,24 +210,32 @@ panel_cPRC_NIT2_MO <- ggdraw() + draw_image(readPNG("pictures/NIT2_MO_cPRC.png")
 panel_HCR_NIT1 <- ggdraw() + draw_image(readPNG("pictures/HCR-IHC_51_AP_NITGC1_actub_52.24um.png")) +
   draw_label("HCR in situ", x = 0.3, y = 0.99, size = 11) +
   draw_label("NIT-GC1", x = 0.15, y = 0.08, color='#CC79A7', size = 12, fontface='bold') +
-  draw_label("acTub", x = 0.85, y = 0.08, color='green', size = 12, fontface='bold')
+  draw_label("acTub", x = 0.85, y = 0.08, color='green', size = 12, fontface='bold') +
+  draw_line(x = c(0.05, 0.407), y = c(0.1, 0.1), color = "white", size = 0.5) +
+  draw_label(expression(paste("20 ", mu, "m")), x = 0.23, y = 0.13, color = "white", size = 10)
 
 panel_HCR_NIT1_cOps <- ggdraw() + draw_image(readPNG("pictures/HCR_RT28_AP_NITGC1_c-opsin1_112.55um.png")) +
   draw_label("HCR in situ", x = 0.3, y = 0.99, size = 11) +
   draw_label("NIT-GC1", x = 0.15, y = 0.08, color='#CC79A7', size = 12, fontface='bold')+
-  draw_label("c-opsin1", x = 0.85, y = 0.08, color='green', size = 12, fontface='bold')
+  draw_label("c-opsin1", x = 0.85, y = 0.08, color='green', size = 12, fontface='bold') +
+  draw_line(x = c(0.05, 0.407), y = c(0.1, 0.1), color = "white", size = 0.5) +
+  draw_label(expression(paste("20 ", mu, "m")), x = 0.23, y = 0.13, color = "white", size = 10)
 
 panel_IHC_NIT1 <- ggdraw() + draw_image(readPNG("pictures/IHC_55_AP_NITGC1_actub_58.47um.png")) +
   draw_label("IHC", x = 0.2, y = 0.99, size = 11) +
   draw_label("cPRC", x = 0.2, y = 0.89, color='white',size = 12, fontface='bold') +
   draw_label("anti-NIT-GC1", x = 0.22, y = 0.08, color='#CC79A7', size = 12, fontface='bold') +
-  draw_label("acTub", x = 0.85, y = 0.08, color='green', size = 12, fontface='bold')
+  draw_label("acTub", x = 0.85, y = 0.08, color='green', size = 12, fontface='bold') +
+  draw_line(x = c(0.05, 0.407), y = c(0.1, 0.1), color = "white", size = 0.5) +
+  draw_label(expression(paste("20 ", mu, "m")), x = 0.23, y = 0.13, color = "white", size = 10)
 
 panel_IHC_NIT2 <- ggdraw() + draw_image(readPNG("pictures/IHC_55_AP_NITGC2_actub_60.77um.png")) +
   draw_label("IHC", x = 0.2, y = 0.99, size = 11) +
   draw_label("cPRC", x = 0.22, y = 0.8, color='white',size = 12, fontface='bold') +
   draw_label("anti-NIT-GC2", x = 0.22, y = 0.08, color='#CC79A7', size = 12, fontface='bold') +
-  draw_label("acTub", x = 0.85, y = 0.08, color='green', size = 12, fontface='bold')
+  draw_label("acTub", x = 0.85, y = 0.08, color='green', size = 12, fontface='bold') +
+  draw_line(x = c(0.05, 0.407), y = c(0.1, 0.1), color = "white", size = 0.5) +
+  draw_label(expression(paste("20 ", mu, "m")), x = 0.23, y = 0.13, color = "white", size = 10)
 
 panel_GcG_NIT_DMSO <- ggdraw() + draw_image(readPNG("pictures/GcG-NIT-GC1-DMSO.png")) +
   draw_label("GcG + NIT-GC1", x = 0.35, y = 0.9, size = 11)
