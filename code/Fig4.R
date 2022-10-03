@@ -430,26 +430,28 @@ panel_NIT2MO_INRGW <- ggdraw() + draw_image(readPNG("pictures/NIT2MO_INRGW.png")
 panel_NIT2MO_INNOS <- ggdraw() + draw_image(readPNG("pictures/NIT2MO_INNOS.png"))
 
 panel_correlation1 <- ggdraw() + draw_image(readPNG("pictures/n54hpf_WT_e-1_ROI60_PD1.54_power2-8_pin216.9_frame_101-141_401-441_co1-1_crop.png")) +
-  draw_label("cPRC", x = 0.4, y = 0.6, size = 11) +
-  draw_label("IN-NOS", x = 0.35, y = 0.35, size = 11) +
-  draw_label("IN-RGWa", x = 0.7, y = 0.28, size = 11)
+  draw_label("cPRC", x = 0.4, y = 0.6, size = 9) +
+  draw_label("IN-NOS", x = 0.35, y = 0.35, size = 9) +
+  draw_label("IN-RGWa", x = 0.7, y = 0.28, size = 9) +
+  draw_label("Ser-h1", x = 0.8, y = 0.5, size = 9)
 
 panel_correlation2 <- ggdraw() + draw_image(readPNG("pictures/n54hpf_WT_e-1_ROI60_PD1.54_power2-8_pin216.9_frame_101-141_401-441_co1-2_crop.png")) +
-  draw_label("cPRC", x = 0.4, y = 0.6, size = 11) +
-  draw_label("IN-NOS", x = 0.35, y = 0.35, size = 11) +
-  draw_label("IN-RGWa", x = 0.7, y = 0.28, size = 11)
+  draw_label("cPRC", x = 0.4, y = 0.6, size = 9) +
+  draw_label("IN-NOS", x = 0.35, y = 0.35, size = 9) +
+  draw_label("IN-RGWa", x = 0.7, y = 0.28, size = 9) +
+  draw_label("Ser-h1", x = 0.8, y = 0.5, size = 9)
 
 #combine panels into Figure and save final figure as pdf and png
 #panels of different sizes
 layout <- "
-ABC#
-DEF#
-GHIJ
+ABC
+DEF
+GHI
 "
 
 Fig4 <- panel_DAFFM + panel_cPRC_NOS11 + panel_cPRC_NOS23 + 
   panel_correlation2 + panel_INNOS + panel_NIT2MO_INNOS + 
-  panel_correlation1 + panel_INRGW  + panel_Ser + panel_MC + 
+  panel_correlation1 + panel_INRGW  + panel_Ser +
   patchwork::plot_layout(design = layout) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = 'A') +  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, 
