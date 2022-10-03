@@ -243,15 +243,15 @@ panel_GcG_mutNIT_SNAP <- ggdraw() + draw_image(readPNG("pictures/GcG-mutNIT-GC1-
 layout <- "
 A#B#C#D
 #######
-E#F#G#H
+EEE#FFF
 #######
-III#JJJ
+G#H#I#J
 "
 
-Fig3 <- panel_HCR_NIT1 + panel_HCR_NIT1_cOps + panel_IHC_NIT1 + panel_IHC_NIT2 + 
-  panel_GcG_NIT_SNAP + panel_GcG_SNAP + panel_GcG_NIT_DMSO + panel_GcG_mutNIT_SNAP +
+Fig3 <- panel_HCR_NIT1 + panel_HCR_NIT1_cOps + panel_IHC_NIT1 + panel_IHC_NIT2 +
   panel_cPRC_NIT1_MO + panel_cPRC_NIT2_MO +
-  patchwork::plot_layout(design = layout, heights = c(0.8, 0.02, 0.8, 0.02, 0.6),
+  panel_GcG_NIT_SNAP + panel_GcG_SNAP + panel_GcG_NIT_DMSO + panel_GcG_mutNIT_SNAP +
+  patchwork::plot_layout(design = layout, heights = c(0.9, 0.02, 0.7, 0.02, 0.85),
                          widths = c(1,0.02,1,0.02,1,0.02,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = 'A') +  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12,face='bold')) #or 'bold', 'plain', 'italic'

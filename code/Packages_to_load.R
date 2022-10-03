@@ -35,5 +35,8 @@ Okabe_Ito <- c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00",
 pie(rep(1,8), col=Okabe_Ito, Okabe_Ito, main='Okabe Ito')
 blues <- brewer.pal(9, 'Blues')
 bluepurple <- brewer.pal(9, 'BuPu')
-oranges <- brewer.pal(9, 'YlOrRd')
+yelloworangered <- brewer.pal(9, 'YlOrRd')
+set2 <- brewer.pal(8, 'Set2')
+paired <- brewer.pal(12, 'Paired')
+dark2 <- brewer.pal(8, 'Dark2')
 
