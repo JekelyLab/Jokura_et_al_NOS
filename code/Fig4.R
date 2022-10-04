@@ -86,7 +86,11 @@ WTvsNOS23_cPRC_INRGWa_tb%>%
 DAFFM %>%
   count(stimuli)
 DAFFM
+
+
+max(DAFFM$intensity)
 min(DAFFM$intensity)
+
 
 DAFFM %>%
   ggplot(aes(x=frame,y=intensity,color = stimuli)) +
@@ -96,10 +100,10 @@ DAFFM %>%
   annotate("segment", x=20, xend=40, y=1.2, yend=1.2, size=1)+
   annotate("segment", x=20, xend=20, y=1.2, yend=1.3, size=1)+
   annotate("text", x=29, y=1.15, label="10 sec", size=3)+
-  annotate("text", x=23, y=1.35, label="0.2 ΔF/F0", size=3)+
-  annotate("text", x=70, y=1.4, label="405 nm", size=4)+
-  annotate("text", x=160, y=1.4, label="neuropil DAF-FM", size=5)+
-  ylim(0.6,1.4)+
+  annotate("text", x=23, y=1.31, label="0.2 ΔF/F0", size=3)+
+  annotate("text", x=70, y=1.32, label="405 nm", size=4)+
+  annotate("text", x=160, y=1.32, label="neuropil DAF-FM", size=5)+
+  ylim(0.68,1.32)+
   theme_void()  +
   theme(legend.title = element_blank(), legend.text.align=0,
         legend.text = element_text(size=12)) +
@@ -164,7 +168,7 @@ WTvsNOS23_cPRC_INRGWa_tb %>%
   annotate("text", x=29, y=1.25, label="10 sec", size=3)+
   annotate("text", x=23, y=1.45, label="0.2 ΔF/F0", size=3)+
   annotate("text", x=70, y=1.7, label="405 nm", size=4)+
-  annotate("text", x=160, y=1.7, label="INRGW", size=5)+
+  annotate("text", x=160, y=1.7, label="IN-RGWa", size=5)+
   ylim(0.75,1.7)+
   theme_void()  +
   theme(legend.title = element_blank(), legend.text.align=0,
@@ -234,7 +238,7 @@ WTvsNOS11_cPRC_INNOS_tb %>%
   annotate("text", x=29, y=1.45, label="10 sec", size=3)+
   annotate("text", x=23, y=1.85, label="0.2 ΔF/F0", size=3)+
   annotate("text", x=70, y=3.12, label="405 nm", size=4)+
-  annotate("text", x=160, y=3.12, label="INNOS", size=5)+
+  annotate("text", x=160, y=3.12, label="IN-NOS", size=5)+
   ylim(0.5,3.12)+
   theme_void()  +
   theme(legend.title = element_blank(), legend.text.align=0,
@@ -349,7 +353,7 @@ NIT2MO_INNOS_tb %>%
   annotate("text", x=29, y=1.45, label="10 sec", size=3)+
   annotate("text", x=23, y=1.85, label="0.2 ΔF/F0", size=3)+
   annotate("text", x=70, y=3.12, label="405 nm", size=4)+
-  annotate("text", x=160, y=3.12, label="INNOS", size=5)+
+  annotate("text", x=160, y=3.12, label="IN-NOS", size=5)+
   ylim(0.5,3.12)+
   theme_void()  +
   theme(legend.title = element_blank(), legend.text.align=0,
@@ -385,7 +389,7 @@ NIT2MO_INRGW_tb %>%
   annotate("text", x=29, y=1.25, label="10 sec", size=3)+
   annotate("text", x=23, y=1.45, label="0.2 ΔF/F0", size=3)+
   annotate("text", x=70, y=3.3, label="405 nm", size=4)+
-  annotate("text", x=160, y=3.3, label="INRGW", size=5)+
+  annotate("text", x=160, y=3.3, label="IN-RGWa", size=5)+
   ylim(0.5,3.3)+
   theme_void()  +
   theme(legend.title = element_blank(), legend.text.align=0,

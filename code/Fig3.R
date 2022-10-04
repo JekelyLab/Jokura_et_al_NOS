@@ -30,7 +30,7 @@ NIT1_MO_tb%>%
 NIT2_MO_tb%>%
   count(morphant)
 
-# plot NITGC1_analysis ----------------------------------------------------
+# plot NITGC1_analysis cGMP analysis in cell culture-------------------------------------------------
 NITGC1_analysis %>%
   count(expression)
 
@@ -59,7 +59,7 @@ NITGC1_analysis %>%
 ggsave("pictures/GcG-NIT-GC1-SNAP.png", limitsize = FALSE, 
        units = c("px"), width = 800, height = 600, bg='white')  
 
-# plot NITGC1_analysis ----------------------------------------------------
+# plot NITGC1_analysis cGMP analysis in cell culture ----------------------------------------------------
 NITGC1_analysis %>%
   count(expression)
 
@@ -84,7 +84,7 @@ NITGC1_analysis %>%
 ggsave("pictures/GcG-SNAP.png", limitsize = FALSE, 
        units = c("px"), width = 800, height = 600, bg='white')  
 
-# plot NITGC1_analysis ----------------------------------------------------
+# plot NITGC1_analysis cGMP analysis in cell culture ----------------------------------------------------
 
 NITGC1_analysis %>%
   filter(solution == "DMSO") %>%
@@ -114,7 +114,7 @@ ggsave("pictures/GcG-NIT-GC1-DMSO.png", limitsize = FALSE,
 
 
 
-# plot NITGC1_analysis----------------------------------------------------------
+# plot NITGC1_analysis cGMP analysis in cell culture----------------------------------------------------------
 
 NITGC1_analysis %>%
   filter(expression == "GcG-mutNIT1") %>%
@@ -142,15 +142,18 @@ NITGC1_analysis %>%
 ggsave("pictures/GcG-mutNIT-GC1-SNAP.png", limitsize = FALSE, 
        units = c("px"), width = 800, height = 600, bg='white')  
 
-# plot NIT1 morphant data with geom_smooth ----------------------------------------------
+# plot NIT1 morphant calcium imaging data with geom_smooth ----------------------------------------------
+
+NIT1_MO_tb$morphant <- factor(NIT1_MO_tb$morphant, 
+                                levels=c("non-MO", "NIT1-MO1", "NIT1-MO2"))
 
 NIT1_MO_tb %>%
   ggplot(aes(x = frame, y = intensity, color = morphant)) +
-  geom_smooth(level = 0.99, size = 1, span = 0.02, 
-              method = "loess") +
-  geom_line(aes(group = sample), size=0.2, alpha=0.2) +
   annotate("rect", xmin=51, xmax=90, ymin=-Inf, ymax=Inf, 
            alpha=0.1, fill="blue") +
+  geom_line(aes(group = sample), size=0.2, alpha=0.2) +
+  geom_smooth(aes(fill = morphant), level = 0.99, size = 1, span = 0.03, 
+              method = "loess") +
   annotate("segment", x=20, xend=40, y=1.6, yend=1.6, size=1)+
   annotate("segment", x=20, xend=20, y=1.6, yend=1.7, size=1)+
   annotate("text", x=29, y=1.45, label="10 sec", size=3)+
@@ -161,11 +164,10 @@ NIT1_MO_tb %>%
   theme_void()  +
   theme(legend.title = element_blank(), legend.text.align=0,
         legend.text = element_text(size=10)) +
-  #Specify colours and legend labels
-  scale_color_manual(values=c(Okabe_Ito[1], Okabe_Ito[7],
-                              Okabe_Ito[2]),
-                     labels = c('NIT-GC1 MO1','NIT-GC1 MO2', 
-                                'control'))
+  scale_color_manual(values=c(Okabe_Ito[2], Okabe_Ito[6], Okabe_Ito[7]),
+                     labels = c('control', 'NIT-GC1 MO1','NIT-GC1 MO2')) +
+  scale_fill_manual(values=c(Okabe_Ito[2], Okabe_Ito[6], Okabe_Ito[7]),
+                    labels = c('control', 'NIT-GC1 MO1','NIT-GC1 MO2'))
 
 # save plot ---------------------------------------------------------------
 
@@ -176,11 +178,11 @@ ggsave("pictures/NIT1_MO_cPRC.png", limitsize = FALSE,
 
 NIT2_MO_tb %>%
   ggplot(aes(x = frame, y = intensity, color = morphant)) +
-  geom_smooth(level = 0.99, size = 1, span = 0.02, 
-              method = "loess") +
-  geom_line(aes(group = sample), size=0.2, alpha=0.2) +
   annotate("rect", xmin=51, xmax=90, ymin=-Inf, ymax=Inf, 
            alpha=0.1, fill="blue") +
+  geom_line(aes(group = sample), size=0.2, alpha=0.2) +
+  geom_smooth(aes(fill = morphant), level = 0.99, size = 1, span = 0.03, 
+              method = "loess") +
   annotate("segment", x=20, xend=40, y=1.6, yend=1.6, size=1)+
   annotate("segment", x=20, xend=20, y=1.6, yend=1.7, size=1)+
   annotate("text", x=29, y=1.45, label="10 sec", size=3)+
@@ -191,8 +193,9 @@ NIT2_MO_tb %>%
   theme_void()  +
   theme(legend.title = element_blank(), legend.text.align=0,
         legend.text = element_text(size=10)) +
-  #Specify colours and legend labels
   scale_color_manual(values=c(Okabe_Ito[1], Okabe_Ito[7]),
+                     labels = c('NIT-GC2 MO1','NIT-GC2 MO2')) +
+  scale_fill_manual(values=c(Okabe_Ito[1], Okabe_Ito[7]),
                      labels = c('NIT-GC2 MO1','NIT-GC2 MO2'))
 
 # save plot ---------------------------------------------------------------
