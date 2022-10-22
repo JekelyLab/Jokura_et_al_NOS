@@ -11,18 +11,18 @@ library(ggplot2)
 library(esquisse)
 library(readr)
 
-df_WT_test <- read_csv("~/Martin behaviour/Tracking/WT/WT_0701_08_01.csv")
-df_NOS_test <- read_csv("~/Martin behaviour/Tracking/NOS/NOS_0623_00_01.csv")
+df_WT_test <- read_csv("~/Martin behaviour/topUV_Tracking_3d/WT/WT_0701_08_01.csv")
+df_NOS_test <- read_csv("~/Martin behaviour/topUV_Tracking_3d/NOS/NOS_0623_00_01.csv")
 
 
 #Import WT tracking data
-files <- list.files(path = "C:/Users/klamd/Documents/Martin behaviour/Tracking/WT", 
+files <- list.files(path = "C:/Users/klamd/Documents/Martin behaviour/topUV_Tracking_3d/WT", 
                     pattern = "*.csv", full.names = TRUE)
 df_WT <- sapply(files, read_csv, simplify = FALSE)%>% 
   bind_rows()
 
 #Import NOS tracking data
-files <- list.files(path = "C:/Users/klamd/Documents/Martin behaviour/Tracking/NOS", 
+files <- list.files(path = "C:/Users/klamd/Documents/Martin behaviour/topUV_Tracking_3d/NOS", 
                     pattern = "*.csv", full.names = TRUE)
 df_NOS <- sapply(files, read_csv, simplify = FALSE)%>% 
   bind_rows()

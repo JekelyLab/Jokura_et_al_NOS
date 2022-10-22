@@ -6,11 +6,23 @@ source("code/Packages_to_load.R")
 
 # read data----------------------------------------------------------------
 WT_2d <- read_csv("data/2017-08-29_YDisplacement_2d_NNxNN_UV-Side-480nm-395nm-Good.csv")
-NOS_2d <- read_csv("data/2017-08-29_YDisplacement_2d_nnxnn_UV-Side-480nm-395nm-Good (1).csv")
+NOS11x11_2d <- read_csv("data/2017-08-29_YDisplacement_2d_nn11xnn11_UV-Side-480nm-395nm-Good.csv")
+NOS23x23_2d <- read_csv("data/2017-08-29_YDisplacement_2d_nn23xnn23_UV-Side-480nm-395nm-Good.csv")
+NOS11x23_2d <- read_csv("data/2017-08-29_YDisplacement_2d_nn11xnn23_UV-Side-480nm-395nm-Good.csv")
 
 WT_3d <- read_csv("data/2017-08-29_YDisplacement_3d_NNxNN_UV-Side-480nm-395nm-Good.csv")
-NOS_3d <- read_csv("data/2017-08-29_YDisplacement_3d_nnxnn_UV-Side-480nm-395nm-Good (1).csv")
+NOS11x11_3d <- read_csv("data/2017-08-29_YDisplacement_3d_nn11xnn11_UV-Side-480nm-395nm-Good.csv")
+NOS23x23_3d <- read_csv("data/2017-08-29_YDisplacement_3d_nn23xnn23_UV-Side-480nm-395nm-Good.csv")
+NOS11x23_3d <- read_csv("data/2017-08-29_YDisplacement_3d_nn11xnn23_UV-Side-480nm-395nm-Good.csv")
 
+L_NAME_00mM_3d <- read_csv("data/2017-08-29_YDisplacement_3d_0mM_L-NAME_UV-Side-480nm-395nm-Good.csv")
+L_NAME_01mM_3d <- read_csv("data/2017-08-29_YDisplacement_3d_0.1mM_L-NAME_UV-Side-480nm-395nm-Good.csv")
+L_NAME_1mM_3d <- read_csv("data/2017-08-29_YDisplacement_3d_1mM_L-NAME_UV-Side-480nm-395nm-Good.csv")
+
+#Import trajectory data focusing on sideUV, 10s before and 30 s after
+
+df_2d_nor <- read_csv("C:/Users/klamd/Documents/R/Jokura_et_al_NOS/data/221011_sUV_tracking/sUV_tracking_2d.csv")
+df_3d_nor <- read_csv("C:/Users/klamd/Documents/R/Jokura_et_al_NOS/data/221011_sUV_tracking/sUV_tracking_3d.csv")
 
 
 #Used for frame and genotype column data
@@ -18,288 +30,510 @@ df_WT_test <- read_csv("data/220923_Tracking raw data/WT_0701_08_01.csv")
 df_NOS_test <- read_csv("data/220923_Tracking raw data/NOS_0623_00_01.csv")
 
 
-#Import WT tracking data
-files <- list.files(path = "data/220923_Tracking raw data/WT", 
-                    pattern = "*.csv", full.names = TRUE)
-df_WT <- sapply(files, read_csv, simplify = FALSE)%>% 
-  bind_rows()
-
-#Import NOS tracking data
-files <- list.files(path = "data/220923_Tracking raw data/NOS", 
-                    pattern = "*.csv", full.names = TRUE)
-df_NOS <- sapply(files, read_csv, simplify = FALSE)%>% 
-  bind_rows()
-
-
 
 # tidying Martin data (30 sec bins, vertical displacement)------------------------------------------------
 WT_2d_tidy <- gather(WT_2d, key="WT", value="displacement", -time, -condition)
 WT_2d_tidy_phenotype <- gather(WT_2d_tidy, key="phenotype", value="batch", -time, -condition, -displacement)
 
-NOS_2d_tidy <- gather(NOS_2d, key="NOS", value="displacement", -time, -condition)
-NOS_2d_tidy_phenotype <- gather(NOS_2d_tidy, key="phenotype", value="batch", -time, -condition, -displacement)
+NOS11x11_2d_tidy <- gather(NOS11x11_2d, key="NOS11x11", value="displacement", -time, -condition)
+NOS11x11_2d_tidy_phenotype <- gather(NOS11x11_2d_tidy, key="phenotype", value="batch", -time, -condition, -displacement)
+NOS23x23_2d_tidy <- gather(NOS23x23_2d, key="NOS23x23", value="displacement", -time, -condition)
+NOS23x23_2d_tidy_phenotype <- gather(NOS23x23_2d_tidy, key="phenotype", value="batch", -time, -condition, -displacement)
+NOS11x23_2d_tidy <- gather(NOS11x23_2d, key="NOS11x23", value="displacement", -time, -condition)
+NOS11x23_2d_tidy_phenotype <- gather(NOS11x23_2d_tidy, key="phenotype", value="batch", -time, -condition, -displacement)
 
 WT_3d_tidy <- gather(WT_3d, key="WT", value="displacement", -time, -condition)
 WT_3d_tidy_phenotype <- gather(WT_3d_tidy, key="phenotype", value="batch", -time, -condition, -displacement)
 
-NOS_3d_tidy <- gather(NOS_3d, key="NOS", value="displacement", -time, -condition)
-NOS_3d_tidy_phenotype <- gather(NOS_3d_tidy, key="phenotype", value="batch", -time, -condition, -displacement)
+NOS11x11_3d_tidy <- gather(NOS11x11_3d, key="NOS11x11", value="displacement", -time, -condition)
+NOS11x11_3d_tidy_phenotype <- gather(NOS11x11_3d_tidy, key="phenotype", value="batch", -time, -condition, -displacement)
+NOS23x23_3d_tidy <- gather(NOS23x23_3d, key="NOS23x23", value="displacement", -time, -condition)
+NOS23x23_3d_tidy_phenotype <- gather(NOS23x23_3d_tidy, key="phenotype", value="batch", -time, -condition, -displacement)
+NOS11x23_3d_tidy <- gather(NOS11x23_3d, key="NOS11x23", value="displacement", -time, -condition)
+NOS11x23_3d_tidy_phenotype <- gather(NOS11x23_3d_tidy, key="phenotype", value="batch", -time, -condition, -displacement)
+
+L_NAME_00mM_3d_tidy <- gather(L_NAME_00mM_3d, key="0 mM", value="displacement", -time, -condition)
+L_NAME_00mM_3d_conc <- gather(L_NAME_00mM_3d_tidy, key="L-NAME", value="batch", -time, -condition, -displacement)
+L_NAME_01mM_3d_tidy <- gather(L_NAME_01mM_3d, key="0.1 mM", value="displacement", -time, -condition)
+L_NAME_01mM_3d_conc <- gather(L_NAME_01mM_3d_tidy, key="L-NAME", value="batch", -time, -condition, -displacement)
+L_NAME_1mM_3d_tidy <- gather(L_NAME_1mM_3d, key="1.0 mM", value="displacement", -time, -condition)
+L_NAME_1mM_3d_conc <- gather(L_NAME_1mM_3d_tidy, key="L-NAME", value="batch", -time, -condition, -displacement)
 
 
 #bind
-WTvsNOS_2d <- bind_rows(WT_2d_tidy_phenotype, NOS_2d_tidy_phenotype) %>%
-  mutate(phenotype = factor(phenotype, levels = c("WT", "NOS")))
+WTvsNOS_2d <- bind_rows(WT_2d_tidy_phenotype, NOS11x11_2d_tidy_phenotype, NOS23x23_2d_tidy_phenotype, NOS11x23_2d_tidy_phenotype) %>%
+  mutate(phenotype = factor(phenotype, levels = c("WT", "NOS11x11", "NOS23x23", "NOS11x23")))
 
-WTvsNOS_3d <- bind_rows(WT_3d_tidy_phenotype, NOS_3d_tidy_phenotype) %>%
-  mutate(phenotype = factor(phenotype, levels = c("WT", "NOS")))
+WTvsNOS_3d <- bind_rows(WT_3d_tidy_phenotype, NOS11x11_3d_tidy_phenotype, NOS23x23_3d_tidy_phenotype, NOS11x23_3d_tidy_phenotype) %>%
+  mutate(phenotype = factor(phenotype, levels = c("WT", "NOS11x11", "NOS23x23", "NOS11x23")))
 
+L_NAME_3d <- bind_rows(L_NAME_00mM_3d_conc, L_NAME_01mM_3d_conc, L_NAME_1mM_3d_conc)
+L_NAME_3d$`L-NAME` <- factor(L_NAME_3d$`L-NAME`, levels = c("0 mM", "0.1 mM", "1.0 mM"))
 
 # plot Martin data (2d larvae, 30 sec bins, vertical displacement)-------------------------------
 
-WTvsNOS_2d %>%
-  ggplot() +
-  annotate("rect", xmin="sideUV_30", xmax="sideUV_120", ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
-  annotate("rect", xmin="top488_30", xmax="top488_120", ymin=-Inf, ymax=Inf,alpha=0.1, fill="deepskyblue") +
-  annotate("rect", xmin="top395_30", xmax="top395_120", ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
-  aes(x = reorder(condition, time), y = displacement, fill = phenotype) +
-  geom_boxplot() +
-  theme_minimal()+
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))+
-  labs(x = "30 sec bins", y = "Vertical displacement (mm/s)")+
-  scale_y_continuous(limits = c(-1, 1.2)) +
-  scale_x_discrete(limit=c("dark_30", "dark_60", "dark_90", "dark_120", 
-                             "dark_150", "dark_180", "dark_210", "dark_240", 
-                             "sideUV_30", "sideUV_60", "sideUV_90", "sideUV_120", 
-                             "dark1_30", "dark1_60", "dark1_90", "dark1_120", 
-                             "top488_30", "top488_60", "top488_90", "top488_120", 
-                             "dark2_30", "dark2_60", "dark2_90", "dark2_120", 
-                             "top395_30", "top395_60", "top395_90", "top395_120", 
-                             "dark3_30", "dark3_60", "dark3_90", "dark3_120", 
-                             "dark3_150", "dark3_180"))
+#WTvsNOS_2d %>% 
+#  filter(!(condition %in% c("dark_30", "dark_60", "dark_90", "dark_120"))) %>%
+#  ggplot() +
+#  annotate("rect", xmin=4.5, xmax=8.5, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
+#  annotate("text", x=6.5, y=-0.75, label="side 395nm", color="purple", size = 7, fontface="plain") +
+#  annotate("rect", xmin=12.5, xmax=16.5, ymin=-Inf, ymax=Inf,alpha=0.1, fill="deepskyblue") +
+#  annotate("text", x=14.5, y=-0.75, label="top 480nm", color="deepskyblue3", size = 7, fontface="plain") +
+#  annotate("rect", xmin=20.5, xmax=24.5, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
+#  annotate("text", x=22.5, y=-0.75, label="top 395nm", color="purple", size = 7, fontface="plain") +
+#  aes(x = reorder(condition, time), y = displacement, fill = phenotype) +
+#  geom_boxplot(size = 0.25, outlier.size = 0.5, outlier.alpha = 0.5) +
+#  scale_fill_manual(
+#   values = c(WT = "#FF009E", 
+#               NOS11x11 = "#0042FF",
+#               NOS23x23 = "#0094FF",
+#               NOS11x23 = "#00CBFF"),
+#    labels = c("WT", 
+#               expression('NOS'^'Δ11/Δ11'), 
+#               expression('NOS'^'Δ23/Δ23'), 
+#               expression('NOS'^'Δ11/Δ23'))) +
+#  theme_minimal()+
+#  theme(text = element_text(size = 18),
+#        legend.title = element_blank(), 
+#        legend.text.align=0,
+#        legend.text = element_text(size=14)) +
+#  labs(fill = NULL, x = "30 sec bins", y = "Vertical displacement (mm/s)")+
+#  scale_y_continuous(limits = c(-0.75, 0.75)) +
+#  scale_x_discrete(labels=c("30", "60", "90","120", 
+#                            "30", "60", "90","120",
+#                            "30", "60", "90","120",
+#                            "30", "60", "90","120",
+#                            "30", "60", "90","120",
+#                            "30", "60", "90","120",
+#                            "30", "60", "90","120","150","180"))
 
+WTvsNOS_2d %>% 
+  filter(!(condition %in% c("dark_30", "dark_60", "dark_90", "dark_120"))) %>%
+  filter(phenotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
+  ggplot() +
+  annotate("rect", xmin=4.5, xmax=8.5, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
+  annotate("text", x=6.5, y=-0.6, label="side 395nm", color="purple", size = 7, fontface="plain") +
+  annotate("rect", xmin=12.5, xmax=16.5, ymin=-Inf, ymax=Inf,alpha=0.1, fill="deepskyblue") +
+  annotate("text", x=14.5, y=-0.6, label="top 480nm", color="deepskyblue3", size = 7, fontface="plain") +
+  annotate("rect", xmin=20.5, xmax=24.5, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
+  annotate("text", x=22.5, y=-0.6, label="top 395nm", color="purple", size = 7, fontface="plain") +
+  aes(x = reorder(condition, time), y = displacement, fill = phenotype) +
+  geom_boxplot(size = 0.25, outlier.size = 0.5, outlier.alpha = 0.5) +
+  scale_fill_manual(
+    values = c(WT = "#FF49FC", 
+               NOS11x11 = "#0094FF",
+               NOS23x23 = "#00CBFF"),
+    labels = c("WT", 
+               expression('NOS'^'Δ11/Δ11'),
+               expression('NOS'^'Δ23/Δ23'))) +
+  theme_minimal()+
+  theme(text = element_text(size = 18),
+        legend.title = element_blank(), 
+        legend.text.align=0,
+        legend.text = element_text(size=14)) +
+  labs(fill = NULL, x = "30 sec bins", y = "Vertical displacement (mm/s)")+
+  scale_y_continuous(limits = c(-0.6, 0.65)) +
+  scale_x_discrete(labels=c("30", "60", "90","120", 
+                            "30", "60", "90","120",
+                            "30", "60", "90","120",
+                            "30", "60", "90","120",
+                            "30", "60", "90","120",
+                            "30", "60", "90","120",
+                            "30", "60", "90","120","150","180"))
 
 
 
 # save plot ---------------------------------------------------------------
 
 ggsave("pictures/vertical_displacement_2dpf_WTvsNOSmix.png", limitsize = FALSE, 
-       units = c("px"), width = 3000, height = 2000, bg='white')
+       units = c("px"), width = 4000, height = 2500, bg='white')
 
 
 # plot Martin data (3d larvae, 30 sec bins, vertical displacement)-------------------------------
 
+#WTvsNOS_3d %>% 
+#  filter(!(condition %in% c("dark_30", "dark_60", "dark_90", "dark_120"))) %>%
+#  ggplot() +
+#  annotate("rect", xmin=4.5, xmax=8.5, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
+#  annotate("text", x=6.5, y=-0.81, label="side 395nm", color="purple", size = 7, fontface="plain") +
+#  annotate("rect", xmin=12.5, xmax=16.5, ymin=-Inf, ymax=Inf,alpha=0.1, fill="deepskyblue") +
+#  annotate("text", x=14.5, y=-0.81, label="top 480nm", color="deepskyblue3", size = 7, fontface="plain") +
+#  annotate("rect", xmin=20.5, xmax=24.5, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
+#  annotate("text", x=22.5, y=-0.81, label="top 395nm", color="purple", size = 7, fontface="plain") +
+#  aes(x = reorder(condition, time), y = displacement, fill = phenotype) +
+#  geom_boxplot(size = 0.25, outlier.size = 0.5, outlier.alpha = 0.5) +
+#  scale_fill_manual(
+#   values = c(WT = "#FF009E", 
+#               NOS11x11 = "#0042FF",
+#               NOS23x23 = "#0094FF",
+#               NOS11x23 = "#00CBFF"),
+#    labels = c("WT", 
+#               expression('NOS'^'Δ11/Δ11'), 
+#               expression('NOS'^'Δ23/Δ23'), 
+#               expression('NOS'^'Δ11/Δ23'))) +
+#  theme_minimal()+
+#  theme(text = element_text(size = 18),
+#        legend.title = element_blank(), 
+#        legend.text.align=0,
+#        legend.text = element_text(size=14)) +
+#  labs(fill = NULL, x = "30 sec bins", y = "Vertical displacement (mm/s)")+
+#  scale_y_continuous(limits = c(-0.81, 0.5)) +
+#  scale_x_discrete(labels=c("30", "60", "90","120", 
+#                            "30", "60", "90","120",
+#                            "30", "60", "90","120",
+#                            "30", "60", "90","120",
+#                            "30", "60", "90","120",
+#                            "30", "60", "90","120",
+#                            "30", "60", "90","120","150","180"))
+
+
 WTvsNOS_3d %>%
+  filter(!(condition %in% c("dark_30", "dark_60", "dark_90", "dark_120"))) %>%
+  filter(phenotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
   ggplot() +
-  annotate("rect", xmin="sideUV_30", xmax="sideUV_120", ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
-  annotate("rect", xmin="top488_30", xmax="top488_120", ymin=-Inf, ymax=Inf,alpha=0.1, fill="deepskyblue") +
-  annotate("rect", xmin="top395_30", xmax="top395_120", ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
+  annotate("rect", xmin=4.5, xmax=8.5, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
+  annotate("text", x=6.5, y=-0.81, label="side 395nm", color="purple", size = 7, fontface="plain") +
+  annotate("rect", xmin=12.5, xmax=16.5, ymin=-Inf, ymax=Inf,alpha=0.1, fill="deepskyblue") +
+  annotate("text", x=14.5, y=-0.81, label="top 480nm", color="deepskyblue3", size = 7, fontface="plain") +
+  annotate("rect", xmin=20.5, xmax=24.5, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
+  annotate("text", x=22.5, y=-0.81, label="top 395nm", color="purple", size = 7, fontface="plain") +
   aes(x = reorder(condition, time), y = displacement, fill = phenotype) +
-  geom_boxplot() +
+  geom_boxplot(size = 0.25, outlier.size = 0.5, outlier.alpha = 0.5) +
+  scale_fill_manual(
+    values = c(WT = "#FF49FC", 
+               NOS11x11 = "#0094FF",
+               NOS23x23 = "#00CBFF"),
+    labels = c("WT", 
+               expression('NOS'^'Δ11/Δ11'), 
+               expression('NOS'^'Δ23/Δ23'))) +
   theme_minimal()+
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))+
-  labs(x = "30 sec bins", y = "Vertical displacement (mm/s)")+
-  scale_y_continuous(limits = c(-1, 1)) +
-  scale_x_discrete(limit=c("dark_30", "dark_60", "dark_90", "dark_120", 
-                           "dark_150", "dark_180", "dark_210", "dark_240", 
-                           "sideUV_30", "sideUV_60", "sideUV_90", "sideUV_120", 
-                           "dark1_30", "dark1_60", "dark1_90", "dark1_120", 
-                           "top488_30", "top488_60", "top488_90", "top488_120", 
-                           "dark2_30", "dark2_60", "dark2_90", "dark2_120", 
-                           "top395_30", "top395_60", "top395_90", "top395_120", 
-                           "dark3_30", "dark3_60", "dark3_90", "dark3_120", 
-                           "dark3_150", "dark3_180"))
+  theme(text = element_text(size = 18),
+        legend.title = element_blank(), 
+        legend.text.align=0,
+        legend.text = element_text(size=14)) +
+  labs(fill = NULL, x = "30 sec bins", y = "Vertical displacement (mm/s)")+
+  scale_y_continuous(limits = c(-0.81, 0.5)) +
+  scale_x_discrete(labels=c("30", "60", "90","120", 
+                           "30", "60", "90","120",
+                           "30", "60", "90","120",
+                           "30", "60", "90","120",
+                           "30", "60", "90","120",
+                           "30", "60", "90","120",
+                           "30", "60", "90","120","150","180"))
 
 # save plot ---------------------------------------------------------------
 
 ggsave("pictures/vertical_displacement_3dpf_WTvsNOSmix.png", limitsize = FALSE, 
-       units = c("px"), width = 3000, height = 2000, bg='white')
+       units = c("px"), width = 4000, height = 2500, bg='white')
 
 
 
-# plot Tracking (WT)---------------------------------------------------------
 
-#Tracking graph UV(purple)
-plot_3dpf_WT_Tracking <-ggplot(df_WT) +
-  aes(x = nor_X, y = nor_V, colour = condition) +
-  geom_point(shape = "circle", size = 0.5) +
-  scale_color_manual(values = c(dark = "gray60",UV = "#6E0EFF")) +
-  theme_classic() +
-  theme(legend.position = "none") +
-  coord_fixed()+
-  xlim(-120,120)+
-  ylim(-300, 150)
-
-
-# plot Tracking (NOS)---------------------------------------------------------
-
-#Tracking graph UV(purple)
-plot_3dpf_NOS_Tracking <- df_NOS %>%
-  filter(nor_V >= -225L & nor_V <= 160L) %>%
+# plot Martin data (L-NAME 3d larvae, 30 sec bins, vertical displacement)-------------------------------
+L_NAME_3d %>%
+  filter(!(condition %in% c("dark_30", "dark_60", "dark_90", "dark_120", "dark_150"))) %>%
   ggplot() +
-  aes(x = nor_X, y = nor_V, colour = condition) +
-  geom_point(shape = "circle", size = 0.5) +
-  scale_color_manual(values = c(dark = "gray60",UV = "#6E0EFF")) +
-  theme_classic() +
-  theme(legend.position = "none") +
-  coord_fixed()+
-  xlim(-120,120)+
-  ylim(-300, 150)
-
-
-#Align the two tracking graphs---------------------------------------------
-
-layout <- "
-AB
-"
-
-Tracking <- plot_3dpf_WT_Tracking + plot_3dpf_NOS_Tracking + 
-  patchwork::plot_layout(design = layout) + #we can change the heights of the rows in our layout (widths also can be defined)
-  ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'bold', 'italic'
-
-Tracking
+  annotate("rect", xmin=3.5, xmax=7.5, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
+  annotate("text", x=5.5, y=-0.75, label="side 395nm", color="purple", size = 7, fontface="plain") +
+  annotate("rect", xmin=11.5, xmax=15.5, ymin=-Inf, ymax=Inf,alpha=0.1, fill="deepskyblue") +
+  annotate("text", x=13.5, y=-0.75, label="top 480nm", color="deepskyblue3", size = 7, fontface="plain") +
+  annotate("rect", xmin=19.5, xmax=23.5, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
+  annotate("text", x=21.5, y=-0.75, label="top 395nm", color="purple", size = 7, fontface="plain") +
+  aes(x = reorder(condition, time), y = displacement, fill = `L-NAME`) +
+  geom_boxplot(size = 0.25, outlier.size = 0.5, outlier.alpha = 0.5) +
+  scale_fill_manual(
+    values = c("0 mM" = "#C0C0C0", 
+               "0.1 mM" = "#FF68FD",
+               "1.0 mM" = "#FF009E")) +
+  theme_minimal()+
+  theme(text = element_text(size = 18))+
+  labs(x = "30 sec bins", y = "Vertical displacement (mm/s)")+
+  scale_y_continuous(limits = c(-0.75, 0.75)) +
+  scale_x_discrete(labels=c("30", "60", "90", 
+                            "30", "60", "90","120",
+                            "30", "60", "90","120",
+                            "30", "60", "90","120",
+                            "30", "60", "90","120",
+                            "30", "60", "90","120",
+                            "30", "60", "90","120","150","180"))
 
 # save plot ---------------------------------------------------------------
 
-ggsave("pictures/Tracking_3dpf.png", limitsize = FALSE, 
-       units = c("px"), width = 2400, height = 2000, bg='white')
+ggsave("pictures/vertical_displacement_3dpf_L_NAME.png", limitsize = FALSE, 
+       units = c("px"), width = 4000, height = 2500, bg='white')
 
 
-#calculating each distances-----------------------------------------------------------------------
 
-dis_WT <- data.frame()
-for (j in 1:15000){
-  b <- sqrt((df_WT[j+1,"X"] - df_WT[j,"X"])^2 + (df_WT[j+1,"Y"] - df_WT[j,"Y"])^2)
-  dis_WT <- rbind(dis_WT, b)
-}
-colnames(dis_WT) <- c("distance")
-df_WT <- cbind(df_WT, dis_WT)
+# plot 2d Tracking ---------------------------------------------------------------------
 
+df_2d_nor$Genotype = factor(df_2d_nor$Genotype, levels=c("WT", "NOS11x11", "NOS23x23", "NOS11x23"))
 
-dis_NOS <- data.frame()
-for (i in 1:23250){
-  d <- sqrt((df_NOS[i+1,"X"] - df_NOS[i,"X"])^2 + (df_NOS[i+1,"Y"] - df_NOS[i,"Y"])^2)
-  dis_NOS <- rbind(dis_NOS, d)
-}
-colnames(dis_NOS) <- c("distance")
-df_NOS <- cbind(df_NOS, dis_NOS)
+ggplot(df_2d_nor) +
+  aes(x = x_axis, y = y_axis, colour = sec) +
+  geom_point(size = 0.1) +
+  scale_color_viridis_c(option = "plasma", direction = -1) +
+  labs(x = "x (mm)", y = "y (mm)", color = "time (sec)") +
+  theme_minimal() +
+  coord_fixed() +
+  theme(text = element_text(size = 18), 
+        legend.text.align=0,
+        legend.text = element_text(size=14)) +
+  facet_grid(vars(), vars(Genotype))
 
-#calculate mean travel distance (speed)
-WT_mean <- data.frame(Frame = df_WT_test$Frame,
-                      genotype = df_WT_test$genotype,
-                      condition = df_WT_test$condition,
-                      number = tapply(df_WT$distance, df_WT$Frame, length), 
-                      mean = tapply(df_WT$distance, df_WT$Frame, mean))
+# save plot ---------------------------------------------------------------
+
+ggsave("pictures/vertical_tracking_sideUV_2d.png", limitsize = FALSE, 
+       units = c("px"), width = 3600, height = 2000, bg='white')
 
 
-NOS_mean <- data.frame(Frame = df_NOS_test$Frame,
-                       genotype = df_NOS_test$genotype,
-                       condition = df_NOS_test$condition,
-                       number = tapply(df_NOS$distance, df_NOS$Frame, length), 
-                       mean = tapply(df_NOS$distance, df_NOS$Frame, mean))
+# plot 3d Tracking ---------------------------------------------------------------------
 
-#sd
-WT_mean$sd <- tapply(df_WT$distance, df_WT$Frame, sd)
-#se
-WT_mean$se <- WT_mean$sd/sqrt(WT_mean$n-1)
-#95% confidence interval
-WT_mean$CI_lower <- 
-  WT_mean$mean + qt((1-0.95)/2, df=WT_mean$n-1) * WT_mean$se
-WT_mean$CI_upper <- 
-  WT_mean$mean - qt((1-0.95)/2, df=WT_mean$n-1) * WT_mean$se
+df_3d_nor$Genotype = factor(df_3d_nor$Genotype, levels=c("WT", "NOS11x11", "NOS23x23", "NOS11x23"))
 
-#sd
-NOS_mean$sd <- tapply(df_NOS$distance, df_NOS$Frame, sd)
-#se
-NOS_mean$se <- NOS_mean$sd/sqrt(NOS_mean$n-1)
-#95% confidence interval
-NOS_mean$CI_lower <- 
-  NOS_mean$mean + qt((1-0.95)/2, df=NOS_mean$n-1) * NOS_mean$se
-NOS_mean$CI_upper <- 
-  NOS_mean$mean - qt((1-0.95)/2, df=NOS_mean$n-1) * NOS_mean$se
-
-tracking_mean <- rbind(WT_mean, NOS_mean)
-
-# plot the tracking mean distance (speed) data-----------------------------------------------------
-ggplot(tracking_mean) +
-  annotate("rect", xmin=301, xmax=750, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
-  aes(x = Frame, y = mean, colour = genotype) +
-  geom_point(shape = "circle", size = 1.15, alpha=0.5) +
-  geom_smooth(size = 1.15, span = 0.3) +
-  scale_color_hue(direction = -1)+
-  theme_classic() +
-  theme(legend.position = "none") +
-  ylim(0.2, 0.5)
+ggplot(df_3d_nor) +
+  aes(x = x_axis, y = y_axis, colour = sec) +
+  geom_point(size = 0.1) +
+  scale_color_viridis_c(option = "plasma", direction = -1) +
+  labs(x = "x (mm)", y = "y (mm)", color = "time (sec)") +
+  theme_minimal() +
+  coord_fixed() +
+  theme(text = element_text(size = 18), 
+        legend.text.align=0,
+        legend.text = element_text(size=14)) +
+  facet_grid(vars(), vars(Genotype))
 
 
 # save plot ---------------------------------------------------------------
 
-ggsave("pictures/tracking_mean_distance.png", limitsize = FALSE, 
+ggsave("pictures/vertical_tracking_sideUV_3d.png", limitsize = FALSE, 
+       units = c("px"), width = 3600, height = 2000, bg='white')
+
+# plot the 2d tracking mean vertical position--------------------------------------
+
+#df_2d_nor %>%
+#  filter(sec > 0 & sec <= 40) %>%
+#  ggplot() +
+#  annotate("rect", xmin=10, xmax=40, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
+#  annotate("text", x=14, y=5.5, label="side 395nm", color="purple", size = 6, fontface="plain") +
+#  aes(x = sec, y = y_axis, color = Genotype) +
+#  geom_smooth(method = "loess", formula = y ~ x, level = 0.99, size = 1, span = 0.8) +
+#  theme_minimal() +
+#  labs(x = "time (sec)", y = "vertical position (mm)") +
+#  theme(text = element_text(size = 16),
+#        legend.title = element_blank(), 
+#        legend.text.align=0,
+#        legend.text = element_text(size=12)) +
+#  scale_x_continuous(limits = c(0, 40)) +
+#  scale_color_manual(values = c(WT = "#FF009E", 
+#                                NOS11x11 = "#0042FF",
+#                                NOS23x23 = "#0094FF",
+#                                NOS11x23 = "#00CBFF"),
+#                     labels = c("WT", 
+#                                expression('NOS'^'Δ11/Δ11'),
+#                                expression('NOS'^'Δ23/Δ23'),
+#                                expression('NOS'^'Δ11/Δ23')))
+
+df_2d_nor %>%
+  filter(sec > 0 & sec <= 40) %>%
+  filter(Genotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
+  ggplot() +
+  annotate("rect", xmin=10, xmax=40, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
+  annotate("text", x=14, y=5.5, label="side 395nm", color="purple", size = 6, fontface="plain") +
+  aes(x = sec, y = y_axis, color = Genotype) +
+  geom_smooth(method = "loess", formula = y ~ x, level = 0.99, size = 1, span = 0.8) +
+  theme_minimal() +
+  labs(x = "time (sec)", y = "vertical position (mm)") +
+  theme(text = element_text(size = 16),
+        legend.title = element_blank(), 
+        legend.text.align=0,
+        legend.text = element_text(size=12)) +
+  scale_x_continuous(limits = c(0, 40)) +
+  scale_color_manual(
+    values = c(WT = "#FF49FC", 
+               NOS11x11 = "#0094FF",
+               NOS23x23 = "#00CBFF"),
+    labels = c("WT", 
+               expression('NOS'^'Δ11/Δ11'), 
+               expression('NOS'^'Δ23/Δ23')))
+
+# save plot ---------------------------------------------------------------
+ggsave("pictures/vertical_tracking_position_sideUV_2d.png", limitsize = FALSE, 
        units = c("px"), width = 3000, height = 2000, bg='white')
 
 
+# plot the 3d tracking mean vertical position--------------------------------------
 
+#df_3d_nor %>%
+#  filter(sec > 0 & sec <= 40) %>%
+#  ggplot() +
+#  annotate("rect", xmin=10, xmax=40, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
+#  annotate("text", x=14, y=2, label="side 395nm", color="purple", size = 6, fontface="plain") +
+#  aes(x = sec, y = y_axis, color = Genotype) +
+#  geom_smooth(method = "loess", formula = y ~ x, level = 0.99, size = 1, span = 0.8) +
+#  theme_minimal() +
+#  labs(x = "time (sec)", y = "vertical position (mm)") +
+#  theme(text = element_text(size = 16),
+#        legend.title = element_blank(), 
+#        legend.text.align=0,
+#        legend.text = element_text(size=12)) +
+#  scale_x_continuous(limits = c(0, 40)) +
+#  scale_color_manual(values = c(WT = "#FF009E", 
+#                                NOS11x11 = "#0042FF",
+#                                NOS23x23 = "#0094FF",
+#                                NOS11x23 = "#00CBFF"),
+#                     labels = c("WT", 
+#                                expression('NOS'^'Δ11/Δ11'),
+#                                expression('NOS'^'Δ23/Δ23'),
+#                                expression('NOS'^'Δ11/Δ23')))
 
+df_3d_nor %>%
+  filter(sec > 0 & sec <= 40) %>%
+  filter(Genotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
+  ggplot() +
+  annotate("rect", xmin=10, xmax=40, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
+  annotate("text", x=14, y=2, label="side 395nm", color="purple", size = 6, fontface="plain") +
+  aes(x = sec, y = y_axis, color = Genotype) +
+  geom_smooth(method = "loess", formula = y ~ x, level = 0.99, size = 1, span = 0.8) +
+  theme_minimal() +
+  labs(x = "time (sec)", y = "vertical position (mm)") +
+  theme(text = element_text(size = 16),
+        legend.title = element_blank(), 
+        legend.text.align=0,
+        legend.text = element_text(size=12)) +
+  scale_x_continuous(limits = c(0, 40)) +
+  scale_color_manual(
+    values = c(WT = "#FF49FC", 
+               NOS11x11 = "#0094FF",
+               NOS23x23 = "#00CBFF"),
+    labels = c("WT", 
+               expression('NOS'^'Δ11/Δ11'), 
+               expression('NOS'^'Δ23/Δ23')))
 
-#calculate mean vertical position-----------------------------------------------
-WT_V_mean <- data.frame(Frame = df_WT_test$Frame,
-                        genotype = df_WT_test$genotype,
-                        condition = df_WT_test$condition,
-                        number = tapply(df_WT$nor_V, df_WT$Frame, length), 
-                        V_mean = tapply(df_WT$nor_V, df_WT$Frame, mean))
-
-
-NOS_V_mean <- data.frame(Frame = df_NOS_test$Frame,
-                         genotype = df_NOS_test$genotype,
-                         condition = df_NOS_test$condition,
-                         number = tapply(df_NOS$nor_V, df_NOS$Frame, length), 
-                         V_mean = tapply(df_NOS$nor_V, df_NOS$Frame, mean))
-
-#sd
-WT_V_mean$sd <- tapply(df_WT$nor_V, df_WT$Frame, sd)
-#se
-WT_V_mean$se <- WT_V_mean$sd/sqrt(WT_V_mean$n-1)
-
-#95% confidence interval
-WT_V_mean$CI_lower <- 
-  WT_V_mean$V_mean + qt((1-0.95)/2, df=WT_V_mean$n-1) * WT_V_mean$se
-WT_V_mean$CI_upper <- 
-  WT_V_mean$V_mean - qt((1-0.95)/2, df=WT_V_mean$n-1) * WT_V_mean$se
-
-
-#sd
-NOS_V_mean$sd <- tapply(df_NOS$nor_V, df_NOS$Frame, sd)
-#se
-NOS_V_mean$se <- NOS_V_mean$sd/sqrt(NOS_V_mean$n-1)
-
-
-#95% confidence interval
-NOS_V_mean$CI_lower <- 
-  NOS_V_mean$V_mean + qt((1-0.95)/2, df=NOS_V_mean$n-1) * NOS_V_mean$se
-NOS_V_mean$CI_upper <- 
-  NOS_V_mean$V_mean - qt((1-0.95)/2, df=NOS_V_mean$n-1) * NOS_V_mean$se
-
-
-tracking_V_mean <- rbind(WT_V_mean, NOS_V_mean)
-
-
-
-# plot the tracking mean vertical position in WT-----------------------------------------------------
-
-ggplot() +
-  aes(x = Frame, y = V_mean)+
-  annotate("rect", xmin=301, xmax=750, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
-  geom_point(data = df_WT, aes(x=Frame, y=nor_V, group="Track ID"), color="orangered", size =0.4, alpha=0.05) + 
-  geom_point(data = df_NOS, aes(x=Frame, y=nor_V, group="Track ID"), color="lightseagreen", size =0.4, alpha=0.05) +
-  geom_ribbon(data = WT_V_mean, aes(ymin=CI_lower, ymax=CI_upper) ,fill="gray", alpha=0.5)+
-  geom_ribbon(data = NOS_V_mean, aes(ymin=CI_lower, ymax=CI_upper) ,fill="gray", alpha=0.5)+
-  geom_line(data = NOS_V_mean, aes(x = Frame, y = V_mean), size = 1.25, color = "lightseagreen") +
-  geom_line(data = WT_V_mean, aes(x = Frame, y = V_mean), size = 1.25, color = "orangered") +
-  theme_classic()+
-  ylim(-300, 150)
 
 # save plot ---------------------------------------------------------------
+ggsave("pictures/vertical_tracking_position_sideUV_3d.png", limitsize = FALSE, 
+       units = c("px"), width = 3000, height = 2000, bg='white')
 
-ggsave("pictures/tracking_mean_vertical_position.png", limitsize = FALSE, 
+
+# plot the 2d tracking mean distance (speed) data-----------------------------------------------------
+
+
+#df_2d_nor %>%
+#  filter(sec > 0 & sec <= 40) %>%
+#  ggplot() +
+#  annotate("rect", xmin=10, xmax=40, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
+#  aes(x = sec, y = speed, color = Genotype) +
+#  geom_smooth(aes(group = `Track ID`), method = "loess", 
+#              formula = y ~ x, level = 0.1, size = 0.01, span = 0.5) +
+#  geom_smooth(aes(fill = Genotype), method = "loess", 
+#              formula = y ~ x, level = 0.99, size = 1, span = 0.9) +
+#  theme_minimal() +
+#  theme(legend.title = element_blank(), legend.text.align=0,
+#        legend.text = element_text(size=12)) +
+#  scale_color_manual(values = c(WT = "#FF009E", 
+#                                NOS11x11 = "#0042FF",
+#                                NOS23x23 = "#0094FF",
+#                                NOS11x23 = "#00CBFF"),
+#                     labels = c("WT", 
+#                                expression('NOS'^'Δ11/Δ11'),
+#                                expression('NOS'^'Δ23/Δ23'),
+#                                expression('NOS'^'Δ11/Δ23'))) +
+#  scale_fill_manual(values = c(WT = "#FF009E", 
+#                                NOS11x11 = "#0042FF",
+#                                NOS23x23 = "#0094FF",
+#                                NOS11x23 = "#00CBFF"),
+#                     labels = c("WT", 
+#                                expression('NOS'^'Δ11/Δ11'),
+#                                expression('NOS'^'Δ23/Δ23'),
+#                                expression('NOS'^'Δ11/Δ23')))
+
+
+
+
+df_2d_nor %>%
+  filter(sec > 0 & sec <= 40) %>%
+  filter(Genotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
+  ggplot() +
+  annotate("rect", xmin=10, xmax=40, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
+  annotate("text", x=14, y=1.35, label="side 395nm", color="purple", size = 6, fontface="plain") +
+  aes(x = sec, y = speed, color = Genotype) +
+  geom_smooth(method = "loess", 
+              formula = y ~ x, level = 0.99, size = 1, span = 0.8) +
+  theme_minimal() +
+  labs(x = "time (sec)", y = "speed (mm/sec)") +
+  theme(text = element_text(size = 16),
+        legend.title = element_blank(), 
+        legend.text.align=0,
+        legend.text = element_text(size=12)) +
+  scale_x_continuous(limits = c(0, 40)) +
+  scale_color_manual(
+    values = c(WT = "#FF49FC", 
+               NOS11x11 = "#0094FF",
+               NOS23x23 = "#00CBFF"),
+    labels = c("WT", 
+               expression('NOS'^'Δ11/Δ11'), 
+               expression('NOS'^'Δ23/Δ23')))
+
+
+
+# save plot ---------------------------------------------------------------
+ggsave("pictures/vertical_tracking_distanse_sideUV_2d.png", limitsize = FALSE, 
+       units = c("px"), width = 3000, height = 2000, bg='white')
+
+
+# plot the 3d tracking mean distance (speed) data-----------------------------------------------------
+
+#df_3d_nor %>%
+#  filter(sec > 0 & sec <= 40) %>%
+#  ggplot() +
+#  annotate("rect", xmin=10, xmax=40, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
+#  annotate("text", x=14, y=4.9, label="side 395nm", color="purple", size = 6, fontface="plain") +
+#  aes(x = sec, y = speed, color = Genotype) +
+#  geom_smooth(method = "loess", 
+#              formula = y ~ x, level = 0.99, size = 1, span = 0.8) +
+#  theme_minimal() +
+#  labs(x = "time (sec)", y = "speed (mm/sec)") +
+#  theme(text = element_text(size = 16),
+#        legend.title = element_blank(), 
+#        legend.text.align=0,
+#        legend.text = element_text(size=12)) +
+#  scale_x_continuous(limits = c(0, 40)) +
+#  scale_color_manual(values = c(WT = "#FF009E", 
+#                                NOS11x11 = "#0042FF",
+#                                NOS23x23 = "#0094FF",
+#                                NOS11x23 = "#00CBFF"),
+#                     labels = c("WT", 
+#                                expression('NOS'^'Δ11/Δ11'),
+#                                expression('NOS'^'Δ23/Δ23'),
+#                                expression('NOS'^'Δ11/Δ23')))
+
+df_3d_nor %>%
+  filter(sec > 0 & sec <= 40) %>%
+  filter(Genotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
+  ggplot() +
+  annotate("rect", xmin=10, xmax=40, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
+  annotate("text", x=14, y=4.9, label="side 395nm", color="purple", size = 6, fontface="plain") +
+  aes(x = sec, y = speed, color = Genotype) +
+  geom_smooth(method = "loess", 
+              formula = y ~ x, level = 0.99, size = 1, span = 0.8) +
+  theme_minimal() +
+  labs(x = "time (sec)", y = "speed (mm/sec)") +
+  theme(text = element_text(size = 16),
+        legend.title = element_blank(), 
+        legend.text.align=0,
+        legend.text = element_text(size=12)) +
+  scale_x_continuous(limits = c(0, 40)) +
+  scale_color_manual(
+    values = c(WT = "#FF49FC", 
+               NOS11x11 = "#0094FF",
+               NOS23x23 = "#00CBFF"),
+    labels = c("WT", 
+               expression('NOS'^'Δ11/Δ11'), 
+               expression('NOS'^'Δ23/Δ23')))
+
+
+# save plot ---------------------------------------------------------------
+ggsave("pictures/vertical_tracking_distanse_sideUV_3d.png", limitsize = FALSE, 
        units = c("px"), width = 3000, height = 2000, bg='white')
 
 
@@ -309,28 +543,41 @@ ggsave("pictures/tracking_mean_vertical_position.png", limitsize = FALSE,
 #read png convert to image panel
 
 panel_Architecture <- ggdraw() + draw_image(readPNG("pictures/NOS-Architecture.png"))
-panel_2dpf <- ggdraw() + draw_image(readPNG("pictures/vertical_displacement_2dpf_WTvsNOSmix.png"))
-panel_3dpf <- ggdraw() + draw_image(readPNG("pictures/vertical_displacement_3dpf_WTvsNOSmix.png"))
-panel_3dpf_Tracking <- ggdraw() + draw_image(readPNG("pictures/Tracking_3dpf.png"))
-panel_3dpf_Tracking_position <- ggdraw() + draw_image(readPNG("pictures/tracking_mean_vertical_position.png"))
-panel_3dpf_Tracking_distance <- ggdraw() + draw_image(readPNG("pictures/tracking_mean_distance.png"))
+panel_2d_vd <- ggdraw() + draw_image(readPNG("pictures/vertical_displacement_2dpf_WTvsNOSmix.png"))
+panel_3d_vd <- ggdraw() + draw_image(readPNG("pictures/vertical_displacement_3dpf_WTvsNOSmix.png"))
+panel_3d_L_NAME_vd <- ggdraw() + draw_image(readPNG("pictures/vertical_displacement_3dpf_L_NAME.png"))
+
+panel_2dpf_Tracking <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_sideUV_2d.png"))
+panel_2dpf_TP <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_position_sideUV_2d.png"))
+panel_2dpf_TD <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_distanse_sideUV_2d.png"))
+
+panel_3dpf_Tracking <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_sideUV_3d.png"))
+panel_3dpf_TP <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_position_sideUV_3d.png"))
+panel_3dpf_TD <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_distanse_sideUV_3d.png"))
 
 #combine panels into Figure and save final figure as pdf and png
 #panels of different sizes
 layout <- "
-ABC
-DEF
+AAAAABBB
+########
+CCCCDDDD
+########
+EEEEFFFF
+########
+GGHHIIJJ
 "
 
-Fig2 <- panel_Architecture + panel_2dpf + panel_3dpf + panel_3dpf_Tracking +
-  panel_3dpf_Tracking_position + panel_3dpf_Tracking_distance + 
-  patchwork::plot_layout(design = layout) + #we can change the heights of the rows in our layout (widths also can be defined)
+Fig2 <- panel_3d_L_NAME_vd + panel_Architecture + 
+  panel_2d_vd + panel_3d_vd + 
+  panel_2dpf_Tracking + panel_3dpf_Tracking + 
+  panel_2dpf_TP + panel_3dpf_TP + panel_2dpf_TD + panel_3dpf_TD + 
+  patchwork::plot_layout(design = layout, heights = c(0.9, 0.02, 1, 0.02, 0.6, 0.02, 0.6),) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = 'A') +  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, face='bold')) #or 'plain', 'italic'
 
 
 ggsave("figures/Fig2.png", limitsize = FALSE, 
-       units = c("px"), Fig2, width = 2400, height = 1200, bg='white')  
+       units = c("px"), Fig2, width = 3000, height = 3200, bg='white')  
 
 ggsave("figures/Fig2.pdf", limitsize = FALSE, 
        units = c("px"), Fig2, width = 2400, height = 1200)  

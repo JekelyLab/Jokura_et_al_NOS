@@ -1,4 +1,4 @@
-#Code to assemble Fig6 of the Jokura et al Platynereis NOS paper
+#Code to assemble Fig3 of the Jokura et al Platynereis NOS paper
 #2022 June - Kei Jokura, Gaspar Jekely
 
 # source packages ---------------------------------------------------------
@@ -6,274 +6,181 @@ source("code/Packages_to_load.R")
 
 # read data ---------------------------------------------------------------
 
-NIT1_MO <- read_csv("data/220214_non-MOvsNIT1-MO1and2.csv")
-NIT2_MO <- read_csv("data/220522_NIT2-MO1and2.csv")
-NITGC1_analysis <- read_csv("data/220519_GcG-T2A-NITGC1_norm.csv")
+DAFFM <- read_csv("data/220213_DAF-FM_long.csv")
+
+WTvsNOS23 <- read_csv("data/211121_WTvsNOS23_cPRC.csv")
+WTvsNOS11_cPRC_INNOS <- read_csv("data/211129_WTvsNOS11_cPRC_INNOS (2).csv")
 
 # tidying the data -----------------------------------------------------------
 
-NIT1_MO_tb <- NIT1_MO %>% 
+WT_cPRC_tidy <- WTvsNOS23 %>% 
   pivot_longer(cols = -c("frame"),
-               names_to = "morphant",
+               names_to = "genotype",
                values_to = "intensity") %>%
-  separate(col = c("morphant"), into = c("morphant", "sample"), sep = "\\...")
+  separate(col = c("genotype"), 
+           into = c("genotype", "sample"), sep = "\\...")
 
-NIT2_MO_tb <- NIT2_MO %>% 
+WTvsNOS11_cPRC_INNOS_tb <- WTvsNOS11_cPRC_INNOS %>% 
   pivot_longer(cols = -c("frame"),
-               names_to = "morphant",
+               names_to = "genotype",
                values_to = "intensity") %>%
-  separate(col = c("morphant"), into = c("morphant", "sample"), sep = "\\...")
+  separate(col = c("genotype"), into = c("genotype", "sample"), sep = "\\...")
 
-#check factors
-NIT1_MO_tb%>%
-  count(morphant)
-NIT2_MO_tb%>%
-  count(morphant)
 
-# plot NITGC1_analysis cGMP analysis in cell culture-------------------------------------------------
-NITGC1_analysis %>%
-  count(expression)
 
-NITGC1_analysis %>%
-  filter(solution == "SNAP" & expression == "GcG-NIT1") %>%
-#cell names are not unique and the same across expression, fix by adding new column  
-  mutate(cell_expression = paste(cell, expression, sep = "")) %>%
-  ggplot(aes(x = time, y = intensity, color = expression)) +
-  geom_line(aes(group = cell_expression), size = 0.4, alpha = 0.2, 
-            show.legend = FALSE) +
-  geom_smooth(level = 0.99, size = 1, span = 0.2, 
-              method = "loess", show.legend = FALSE) +
-  theme_minimal()  +
+# plot DAFFM neuropil data with geom_smooth ----------------------------------------------
+DAFFM %>%
+  count(stimuli)
+DAFFM
+
+
+max(DAFFM$intensity)
+min(DAFFM$intensity)
+
+
+DAFFM %>%
+  ggplot(aes(x=frame,y=intensity,color = stimuli)) +
+  annotate("rect", xmin=51, xmax=90, ymin=-Inf, ymax=Inf, alpha=0.1, fill="blue") +
+  geom_line(aes(group = sample), size=0.2, alpha=0.2) +
+  geom_smooth(aes(fill = stimuli), level = 0.95, size = 1, span = 0.05, method = "loess") +
+  annotate("segment", x=20, xend=40, y=1.2, yend=1.2, size=1)+
+  annotate("segment", x=20, xend=20, y=1.2, yend=1.3, size=1)+
+  annotate("text", x=29, y=1.15, label="10 sec", size=3)+
+  annotate("text", x=23, y=1.31, label="0.2 ΔF/F0", size=3)+
+  annotate("text", x=70, y=1.32, label="405 nm", size=4)+
+  annotate("text", x=160, y=1.32, label="neuropil DAF-FM", size=5)+
+  ylim(0.68,1.32)+
+  theme_void()  +
   theme(legend.title = element_blank(), legend.text.align=0,
-        legend.text = element_text(size=10)) +
-  #Specify colours and legend labels
-  scale_color_manual(values=c(Okabe_Ito[2])) +
-  scale_y_continuous(breaks=seq(1,1.15,length=4),limits = c(0.95, 1.15))+
-  scale_x_continuous(breaks=seq(0,10,length=6),limits = c(0, 10))+
-  annotate("segment", x=2, xend=10, y=1.135, yend=1.135, size=2, color = "gray")+
-  annotate("text", x=2.5, y=1.15, size=4, label="SNAP")+
-  annotate("segment", x=0, xend=10, y=1, yend=1, size=0.5, linetype="dashed")
-  
-# save plot ---------------------------------------------------------------
-
-ggsave("pictures/GcG-NIT-GC1-SNAP.png", limitsize = FALSE, 
-       units = c("px"), width = 800, height = 600, bg='white')  
-
-# plot NITGC1_analysis cGMP analysis in cell culture ----------------------------------------------------
-NITGC1_analysis %>%
-  count(expression)
-
-NITGC1_analysis %>%
-  filter(solution == "SNAP" & expression == "GcG") %>%
-  #cell names are not unique and the same across expression, fix by adding new column  
-  mutate(cell_expression = paste(cell, expression, sep = "")) %>%
-  ggplot(aes(x = time, y = intensity)) +
-  geom_line(aes(group = cell_expression), size = 0.4, alpha = 0.2, 
-            show.legend = FALSE, color = 'grey50') +
-  geom_smooth(level = 0.99, size = 1, span = 0.2, 
-              method = "loess", show.legend = FALSE, color = 'grey50') +
-  theme_minimal() +
-  scale_y_continuous(breaks=seq(1,1.15,length=4),limits = c(0.95, 1.15)) +
-  scale_x_continuous(breaks=seq(0,10,length=6),limits = c(0, 10))+
-  annotate("segment", x=2, xend=10, y=1.135, yend=1.135, size=2, color = "gray")+
-  annotate("text", x=2.5, y=1.15, size=4, label="SNAP")+
-  annotate("segment", x=0, xend=10, y=1, yend=1, size=0.5, linetype="dashed")
+        legend.text = element_text(size=12)) +
+  scale_fill_manual(values=c(Okabe_Ito[3], dark2[8]),
+                    labels = c("cPRC stim.", "ctr stim."))+
+  scale_color_manual(values=c(Okabe_Ito[3], dark2[8]),
+                     labels = c("cPRC stim.", "ctr stim."))
 
 # save plot ---------------------------------------------------------------
 
-ggsave("pictures/GcG-SNAP.png", limitsize = FALSE, 
-       units = c("px"), width = 800, height = 600, bg='white')  
-
-# plot NITGC1_analysis cGMP analysis in cell culture ----------------------------------------------------
-
-NITGC1_analysis %>%
-  filter(solution == "DMSO") %>%
-  #cell names are not unique and the same across expression, fix by adding new column  
-  mutate(cell_expression = paste(cell, expression, sep = "")) %>%
-  ggplot(aes(x = time, y = intensity, color = expression)) +
-  geom_line(aes(group = cell_expression), size = 0.4, alpha = 0.2, 
-            show.legend = FALSE) +
-  geom_smooth(level = 0.99, size = 1, span = 0.2, 
-              method = "loess", show.legend = FALSE) +
-  theme_minimal()  +
-  theme(legend.title = element_blank(), legend.text.align=0,
-        legend.text = element_text(size=10)) +
-  #Specify colours and legend labels
-  scale_color_manual(values=c('grey50'),
-                     labels = c('GcG + NIT-GC1')) +
-  scale_y_continuous(breaks=seq(1,1.15,length=4),limits = c(0.95, 1.15))+
-  scale_x_continuous(breaks=seq(0,10,length=6),limits = c(0, 10))+
-  annotate("segment", x=2, xend=10, y=1.135, yend=1.135, size=2.5, color = "gray")+
-  annotate("text", x=2.5, y=1.15, size=4, label="DMSO")+
-  annotate("segment", x=0, xend=10, y=1, yend=1, size=0.5, linetype="dashed")
-
-# save plot ---------------------------------------------------------------
-
-ggsave("pictures/GcG-NIT-GC1-DMSO.png", limitsize = FALSE, 
-       units = c("px"), width = 800, height = 600, bg='white')  
+ggsave("pictures/DAFFM.png", limitsize = FALSE, 
+       units = c("px"), width = 1600, height = 800, bg='white')  
 
 
+# plot NOS23 cPRC data with geom_smooth ----------------------------------------------
 
-# plot NITGC1_analysis cGMP analysis in cell culture----------------------------------------------------------
+WT_cPRC_tidy$genotype <- factor(WT_cPRC_tidy$genotype, 
+                                levels=c("WT_cPRC", "NOS23_cPRC"))
 
-NITGC1_analysis %>%
-  filter(expression == "GcG-mutNIT1") %>%
-  #cell names are not unique and the same across expression, fix by adding new column  
-  mutate(cell_expression = paste(cell, expression, sep = "")) %>%
-  ggplot(aes(x = time, y = intensity, color = expression)) +
-  geom_line(aes(group = cell_expression), size = 0.4, alpha = 0.2, 
-            show.legend = FALSE) +
-  geom_smooth(level = 0.99, size = 1, span = 0.2, 
-              method = "loess", show.legend = FALSE) +
-  theme_minimal()  +
-  theme(legend.title = element_blank(), legend.text.align=0,
-        legend.text = element_text(size=10)) +
-  #Specify colours and legend labels
-  scale_color_manual(values=c('grey50'),
-                     labels = c('GcG + mutNIT-GC1')) +
-  scale_y_continuous(breaks=seq(1,1.15,length=4),limits = c(0.95, 1.15))+
-  scale_x_continuous(breaks=seq(0,10,length=6),limits = c(0, 10))+
-  annotate("segment", x=2, xend=10, y=1.135, yend=1.135, size=2.5, color = "gray")+
-  annotate("text", x=2.5, y=1.15, size=4, label="SNAP")+
-  annotate("segment", x=0, xend=10, y=1, yend=1, size=0.5, linetype="dashed")
-
-# save plot ---------------------------------------------------------------
-
-ggsave("pictures/GcG-mutNIT-GC1-SNAP.png", limitsize = FALSE, 
-       units = c("px"), width = 800, height = 600, bg='white')  
-
-# plot NIT1 morphant calcium imaging data with geom_smooth ----------------------------------------------
-
-NIT1_MO_tb$morphant <- factor(NIT1_MO_tb$morphant, 
-                                levels=c("non-MO", "NIT1-MO1", "NIT1-MO2"))
-
-NIT1_MO_tb %>%
-  ggplot(aes(x = frame, y = intensity, color = morphant)) +
+WT_cPRC_tidy %>%
+  ggplot(aes(x=frame,y=intensity,color=genotype)) +
   annotate("rect", xmin=51, xmax=90, ymin=-Inf, ymax=Inf, 
            alpha=0.1, fill="blue") +
   geom_line(aes(group = sample), size=0.2, alpha=0.2) +
-  geom_smooth(aes(fill = morphant), level = 0.99, size = 1, span = 0.03, 
+  geom_smooth(aes(fill = genotype), level = 0.99, size = 1, span = 0.03, 
               method = "loess") +
-  annotate("segment", x=20, xend=40, y=1.6, yend=1.6, size=1)+
-  annotate("segment", x=20, xend=20, y=1.6, yend=1.7, size=1)+
-  annotate("text", x=29, y=1.45, label="10 sec", size=3)+
-  annotate("text", x=23, y=1.85, label="0.2 ΔF/F0", size=3)+
-  annotate("text", x=70, y=2.3, label="405 nm", size=4)+
-  annotate("text", x=160, y=2.3, label="cPRC", size=4)+
-  ylim(0.1,2.3)+
+  annotate("segment", x=20, xend=40, y=1.3, yend=1.3, size=1)+
+  annotate("segment", x=20, xend=20, y=1.3, yend=1.4, size=1)+
+  annotate("text", x=29, y=1.25, label="10 sec", size=3)+
+  annotate("text", x=23, y=1.45, label="0.2 ΔF/F0", size=3)+
+  annotate("text", x=70, y=1.7, label="405 nm", size=4)+
+  annotate("text", x=160, y=1.7, label="cPRC", size=5)+
+  ylim(0.2,1.7)+
   theme_void()  +
   theme(legend.title = element_blank(), legend.text.align=0,
-        legend.text = element_text(size=10)) +
-  scale_color_manual(values=c(Okabe_Ito[2], Okabe_Ito[6], Okabe_Ito[7]),
-                     labels = c('control', 'NIT-GC1 MO1','NIT-GC1 MO2')) +
-  scale_fill_manual(values=c(Okabe_Ito[2], Okabe_Ito[6], Okabe_Ito[7]),
-                    labels = c('control', 'NIT-GC1 MO1','NIT-GC1 MO2'))
+        legend.text = element_text(size=12)) +
+  scale_color_manual(values=c(Okabe_Ito[6], paired[7]),
+                     labels = c("wt", expression('NOS'^'Δ23/Δ23'))) +
+  scale_fill_manual(values=c(Okabe_Ito[6], paired[7]),
+                    labels = c("wt", expression('NOS'^'Δ23/Δ23')))
+
 
 # save plot ---------------------------------------------------------------
 
-ggsave("pictures/NIT1_MO_cPRC.png", limitsize = FALSE, 
-       units = c("px"), width = 1600, height = 600, bg='white')  
+ggsave("pictures/WTvsNOS23_cPRC.png", limitsize = FALSE, 
+       units = c("px"), width = 1600, height = 800, bg='white')  
 
-# plot NIT morphant data with geom_smooth ----------------------------------------------
 
-NIT2_MO_tb %>%
-  ggplot(aes(x = frame, y = intensity, color = morphant)) +
-  annotate("rect", xmin=51, xmax=90, ymin=-Inf, ymax=Inf, 
+# plot NOS11 cPRC data (vs INNOS) with geom_smooth ----------------------------------------------
+
+WTvsNOS11_cPRC_INNOS_tb$genotype <- factor(WTvsNOS11_cPRC_INNOS_tb$genotype, 
+                                           levels=c("WT_cPRC", "WT_INNOS", "NOS11_cPRC", "NOS11_INNOS"))
+
+WTvsNOS11_cPRC_INNOS_tb %>%
+  filter(genotype == "WT_cPRC" | genotype == "NOS11_cPRC") %>%
+  ggplot(aes(x=frame,y=intensity,color=genotype)) +
+  annotate("rect", xmin=51, xmax=93, ymin=-Inf, ymax=Inf, 
            alpha=0.1, fill="blue") +
   geom_line(aes(group = sample), size=0.2, alpha=0.2) +
-  geom_smooth(aes(fill = morphant), level = 0.99, size = 1, span = 0.03, 
+  geom_smooth(aes(fill = genotype), level = 0.99, size = 1, span = 0.03, 
               method = "loess") +
-  annotate("segment", x=20, xend=40, y=1.6, yend=1.6, size=1)+
-  annotate("segment", x=20, xend=20, y=1.6, yend=1.7, size=1)+
-  annotate("text", x=29, y=1.45, label="10 sec", size=3)+
-  annotate("text", x=23, y=1.85, label="0.2 ΔF/F0", size=3)+
-  annotate("text", x=70, y=2.3, label="405 nm", size=4)+
-  annotate("text", x=160, y=2.3, label="cPRC", size=4)+
-  ylim(0.4,2.3)+
+  annotate("segment", x=20, xend=40, y=1.8, yend=1.8, size=1)+
+  annotate("segment", x=20, xend=20, y=1.8, yend=1.9, size=1)+
+  annotate("text", x=29, y=1.65, label="10 sec", size=3)+
+  annotate("text", x=23, y=2.05, label="0.2 ΔF/F0", size=3)+
+  annotate("text", x=70, y=2.6, label="405 nm", size=4)+
+  annotate("text", x=160, y=2.6, label="cPRC", size=5)+
+  ylim(0.4,2.6)+
   theme_void()  +
   theme(legend.title = element_blank(), legend.text.align=0,
-        legend.text = element_text(size=10)) +
-  scale_color_manual(values=c(Okabe_Ito[1], Okabe_Ito[7]),
-                     labels = c('NIT-GC2 MO1','NIT-GC2 MO2')) +
-  scale_fill_manual(values=c(Okabe_Ito[1], Okabe_Ito[7]),
-                     labels = c('NIT-GC2 MO1','NIT-GC2 MO2'))
+        legend.text = element_text(size=12)) +
+  #Specify colours and legend labels
+  scale_color_manual(values=c(Okabe_Ito[6], paired[7]),
+                     labels = c("wt", expression('NOS'^'Δ11/Δ11'))) +
+  scale_fill_manual(values=c(Okabe_Ito[6], paired[7]),
+                    labels = c("wt", expression('NOS'^'Δ11/Δ11')))
+
 
 # save plot ---------------------------------------------------------------
 
-ggsave("pictures/NIT2_MO_cPRC.png", limitsize = FALSE, 
-       units = c("px"), width = 1600, height = 600, bg='white')  
-
+ggsave("pictures/WTvsNOS11_cPRC.png", limitsize = FALSE, 
+       units = c("px"), width = 1600, height = 800, bg='white')  
 
 
 # assemble figure ---------------------------------------------------------
+arrow_fluo <- data.frame(x1 = 0.95, x2 = 0.95, y1 = 0.75, y2 = 0.85)
 
-panel_cPRC_NIT1_MO <- ggdraw() + draw_image(readPNG("pictures/NIT1_MO_cPRC.png"))
-panel_cPRC_NIT2_MO <- ggdraw() + draw_image(readPNG("pictures/NIT2_MO_cPRC.png"))
+panel_DAF <- ggdraw() + draw_image(readPNG("pictures/55hpf_DAF-FM_134.95um.png")) +
+  draw_label("DAF-FM", x = 0.15, y = 0.88, color="green", size = 11, fontface="plain") +
+  draw_line(x = c(0.04, 0.42), y = c(0.09, 0.09), color = "white", size = 0.5) +
+  draw_label(expression(paste("50 ", mu, "m")), x = 0.23, y = 0.12, color = "white", size = 8) +
+  draw_label("D", x = 0.95, y = 0.88, size = 6, color = "white") +
+  draw_label("V", x = 0.95, y = 0.72, size = 6, color = "white") +
+  geom_segment(aes(x = x1, y = y1, xend = x2, yend = y2), data = arrow_fluo, color = "white", 
+               arrow = arrow(ends = "both", type = "closed", length = unit(0.1,"cm")),
+               lineend = "butt",
+               linejoin = "mitre",
+               arrow.fill = "white", size = 0.2)
 
-panel_HCR_NIT1 <- ggdraw() + draw_image(readPNG("pictures/HCR-IHC_51_AP_NITGC1_actub_52.24um.png")) +
-  draw_label("HCR in situ", x = 0.3, y = 0.99, size = 11) +
-  draw_label("NIT-GC1", x = 0.15, y = 0.08, color='#CC79A7', size = 12, fontface='bold') +
-  draw_label("acTub", x = 0.85, y = 0.08, color='green', size = 12, fontface='bold') +
-  draw_line(x = c(0.05, 0.407), y = c(0.1, 0.1), color = "white", size = 0.5) +
-  draw_label(expression(paste("20 ", mu, "m")), x = 0.23, y = 0.13, color = "white", size = 10)
+panel_DAFFM_intensity  <- ggdraw() + draw_image(readPNG("pictures/55hpf_DAF-FM_intensity.png")) +
+  draw_label("before", x = 0.17, y = 0.9, color='white',size = 9, fontface='plain') +
+  draw_label("405 nm", x = 0.2, y = 0.45, color='white',size = 9, fontface='plain') +
+  draw_line(x = c(0.05, 0.42), y = c(0.08, 0.08), color = "white", size = 0.5) +
+  draw_label(expression(paste("10 ", mu, "m")), x = 0.23, y = 0.11, color = "white", size = 8)
 
-panel_HCR_NIT1_cOps <- ggdraw() + draw_image(readPNG("pictures/HCR_RT28_AP_NITGC1_c-opsin1_112.55um.png")) +
-  draw_label("HCR in situ", x = 0.3, y = 0.99, size = 11) +
-  draw_label("NIT-GC1", x = 0.15, y = 0.08, color='#CC79A7', size = 12, fontface='bold')+
-  draw_label("c-opsin1", x = 0.85, y = 0.08, color='green', size = 12, fontface='bold') +
-  draw_line(x = c(0.05, 0.407), y = c(0.1, 0.1), color = "white", size = 0.5) +
-  draw_label(expression(paste("20 ", mu, "m")), x = 0.23, y = 0.13, color = "white", size = 10)
+panel_DAFFM  <- ggdraw() + draw_image(readPNG("pictures/DAFFM.png"))
 
-panel_IHC_NIT1 <- ggdraw() + draw_image(readPNG("pictures/IHC_55_AP_NITGC1_actub_58.47um.png")) +
-  draw_label("IHC", x = 0.2, y = 0.99, size = 11) +
-  draw_label("cPRC", x = 0.2, y = 0.89, color='white',size = 12, fontface='bold') +
-  draw_label("anti-NIT-GC1", x = 0.22, y = 0.08, color='#CC79A7', size = 12, fontface='bold') +
-  draw_label("acTub", x = 0.85, y = 0.08, color='green', size = 12, fontface='bold') +
-  draw_line(x = c(0.05, 0.407), y = c(0.1, 0.1), color = "white", size = 0.5) +
-  draw_label(expression(paste("20 ", mu, "m")), x = 0.23, y = 0.13, color = "white", size = 10)
+panel_cPRC_NOS11 <- ggdraw() + draw_image(readPNG("pictures/WTvsNOS11_cPRC.png"))
+panel_cPRC_NOS23 <- ggdraw() + draw_image(readPNG("pictures/WTvsNOS23_cPRC.png"))
 
-panel_IHC_NIT2 <- ggdraw() + draw_image(readPNG("pictures/IHC_55_AP_NITGC2_actub_60.77um.png")) +
-  draw_label("IHC", x = 0.2, y = 0.99, size = 11) +
-  draw_label("cPRC", x = 0.22, y = 0.8, color='white',size = 12, fontface='bold') +
-  draw_label("anti-NIT-GC2", x = 0.22, y = 0.08, color='#CC79A7', size = 12, fontface='bold') +
-  draw_label("acTub", x = 0.85, y = 0.08, color='green', size = 12, fontface='bold') +
-  draw_line(x = c(0.05, 0.407), y = c(0.1, 0.1), color = "white", size = 0.5) +
-  draw_label(expression(paste("20 ", mu, "m")), x = 0.23, y = 0.13, color = "white", size = 10)
-
-panel_GcG_NIT_DMSO <- ggdraw() + draw_image(readPNG("pictures/GcG-NIT-GC1-DMSO.png")) +
-  draw_label("GcG + NIT-GC1", x = 0.35, y = 0.9, size = 11)
-panel_GcG_NIT_SNAP <- ggdraw() + draw_image(readPNG("pictures/GcG-NIT-GC1-SNAP.png")) +
-  draw_label("GcG + NIT-GC1", x = 0.35, y = 0.9, size = 11)
-panel_GcG_SNAP <- ggdraw() + draw_image(readPNG("pictures/GcG-SNAP.png"))  +
-  draw_label("GcG", x = 0.25, y = 0.9, size = 11)
-panel_GcG_mutNIT_SNAP <- ggdraw() + draw_image(readPNG("pictures/GcG-mutNIT-GC1-SNAP.png"))  +
-  draw_label("GcG + mutNIT1-GC1", x = 0.35, y = 0.9, size = 11)
 
 #combine panels into Figure and save final figure as pdf and png
 #panels of different sizes
 layout <- "
-A#B#C#D
-#######
-EEE#FFF
-#######
-G#H#I#J
+AA#B#CCC
+########
+FFFFGGGG
 "
 
-Fig3 <- panel_HCR_NIT1 + panel_HCR_NIT1_cOps + panel_IHC_NIT1 + panel_IHC_NIT2 +
-  panel_cPRC_NIT1_MO + panel_cPRC_NIT2_MO +
-  panel_GcG_NIT_SNAP + panel_GcG_SNAP + panel_GcG_NIT_DMSO + panel_GcG_mutNIT_SNAP +
-  patchwork::plot_layout(design = layout, heights = c(0.9, 0.02, 0.7, 0.02, 0.85),
-                         widths = c(1,0.02,1,0.02,1,0.02,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
+Fig3 <- panel_DAF + panel_DAFFM_intensity + panel_DAFFM + 
+  panel_cPRC_NOS11 + panel_cPRC_NOS23 + 
+  patchwork::plot_layout(design = layout, 
+                         heights = c(1, 0.02, 0.7),
+                         widths = c(1,0.78,0.05,1,0.05,1,0.78,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = 'A') +  #we can change this to 'a' for small caps or 'i' or '1'
-  ggplot2::theme(plot.tag = element_text(size = 12,face='bold')) #or 'bold', 'plain', 'italic'
+  ggplot2::theme(plot.tag = element_text(size = 12, 
+                                         face='bold')) #or 'bold', 'italic'
 
-
-
-ggsave("figures/Fig3.png", limitsize = FALSE, units = c("px"), 
-       Fig3, width = 3200, height = 2400, bg='white')  
+ggsave("figures/Fig3.png", limitsize = FALSE, 
+       units = c("px"), Fig3, width = 2400, height = 1500, bg='white')  
 
 ggsave("figures/Fig3.pdf", limitsize = FALSE, 
        units = c("px"), Fig3, width = 2350, height = 1700)  
-
-
 

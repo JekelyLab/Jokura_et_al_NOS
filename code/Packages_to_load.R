@@ -19,6 +19,7 @@ Sys.setenv('R_MAX_VSIZE'=800000000)
   library(rgexf)
   library(tidygraph)
   library(scales)
+  library(esquisse)
 }
 
 
