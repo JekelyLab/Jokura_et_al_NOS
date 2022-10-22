@@ -1,6 +1,6 @@
 ---
 title: Figure supplements
-author: "Kei Jokura, Nobuo Ueda, Martin Gühmann, Luis Alfonso Yañez-Guerra, Gáspár Jékely"
+author: "Kei Jokura, Nobuo Ueda, Martin Gühmann, Luis Alfonso Yañez-Guerra, Kyle C. A. Wedgwood, Piotr Słowiński, Gáspár Jékely"
 date: '*Living Systems Institute, University of Exeter, Stocker road, Exeter, EX4
   4QD, UK*'
 output:
