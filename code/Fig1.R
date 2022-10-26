@@ -8,7 +8,7 @@ source("code/Packages_Catmaid_connection.R")
 # load and plot neurons ---------------------------------------------------
 
 cPRC = nlapply(read.neurons.catmaid("^celltype5$", pid=11),
-                    function(x) smooth_neuron(x, sigma=2000))
+                    function(x) smooth_neuron(x, sigma=20))
 INNOS = nlapply(read.neurons.catmaid("^celltype7$", pid=11),
                function(x) smooth_neuron(x, sigma=2000))
 INRGW = nlapply(read.neurons.catmaid("^celltype6$", pid=11),
@@ -24,24 +24,27 @@ prototroch = nlapply(read.neurons.catmaid("^celltype_non_neuronal3$", pid=11),
 
 {
 plot_background()
+clear3d()
 #plot neurons
-plot3d(cPRC, soma=T, lwd=2, alpha=0.4, col="#D55E00")
-plot3d(INNOS, soma=T, lwd=2, alpha=1, col=Okabe_Ito[7])
-plot3d(INRGW, soma=T, lwd=2, alpha=0.4, col="#56B4E9")
-plot3d(Ser_h1, soma=T, lwd=2, alpha=0.4, col='grey40')
-plot3d(MC, soma=T, lwd=2, alpha=0.4, col='grey80')
+plot3d(cPRC, soma = T, lwd=2, alpha = 0.4, col = "#D55E00")
+plot3d(INNOS, soma = T, lwd=2, alpha = 1, col = Okabe_Ito[7])
+plot3d(INRGW, soma = T, lwd=2, alpha = 0.4, col = "#56B4E9")
+plot3d(Ser_h1, soma = T, lwd=2, alpha = 0.4, col = 'grey40')
+plot3d(MC, soma = T, lwd = 2, alpha = 0.4, col = 'grey80')
 #add text labels
-#texts3d(56000,32000,5000, "cPRC", cex=3, col="#D55E00")
-#texts3d(44000,39000,5000, "Ser-h1", cex=3)
-#texts3d(75000,32000,5000, "INNOS", cex=3,col=Okabe_Ito[7])
-#texts3d(50000,53000,5000, "INRGW", cex=3,col="#56B4E9")
-#texts3d(74500,47000,5000, "MC", cex=3)
+texts3d(54500,40000,5000, "cPRC", cex = 3, col = "#D55E00")
+texts3d(42000,39000,5000, "Ser-h1", cex = 3, col = "grey40")
+texts3d(71500,39500,5000, "INNOS", cex = 3, col = Okabe_Ito[7])
+texts3d(58000,51000,5000, "INRGW", cex = 3, col = "#56B4E9")
+texts3d(74800,47600,5000, "MC", cex = 3, color = "grey40")
 #adjust zoom
-par3d(zoom=0.28)
-#adjust clipping
-clipplanes3d(0, -4, 0.5, 110000)
+par3d(zoom=0.25)
 #for reference, plot neuropil
-plot3d(connectome_neuron, soma=F, lwd=1, alpha=0.03, col='black')
+plot3d(connectome_neuron, soma = FALSE, lwd = 1, 
+       alpha = 0.06, col = 'black')
+#adjust clipping
+clipplanes3d(-1, 0, 0, 125000)
+clipplanes3d(0, -1, 0, 145000)
 #make snapshot
 rgl.snapshot("pictures/INNOS_Catmaid.png")
 close3d()
@@ -215,14 +218,14 @@ image_write(newimg, path = "pictures/NOS-promotor_3d_acTub_XXum_crop.png", forma
 # assemble figure ---------------------------------------------------------
 SEM <- readPNG("pictures/Platynereis_SEM_3d_inv_280um-1.png")
 #read png convert to image panel
-arrow <- data.frame(x1 = 0.9, x2 = 0.9, y1 = 0.8, y2 = 0.9)
+arrow <- data.frame(x1 = 0.95, x2 = 0.95, y1 = 0.8, y2 = 0.9)
 panel_SEM <- ggdraw() + 
   draw_image(SEM) +
   draw_line(x = c(0.1, 0.2785), y = c(0.07, 0.07), color = "black", size = 0.5) +
   draw_label(expression(paste("50 ", mu, "m")), x = 0.19, y = 0.11, size = 9) +
   draw_label("dosal view", x = 0.3, y = 0.99, size = 10) +
-  draw_label("A", x = 0.9, y = 0.93, size = 6) +
-  draw_label("P", x = 0.9, y = 0.77, size = 6) +
+  draw_label("A", x = 0.95, y = 0.93, size = 6) +
+  draw_label("P", x = 0.95, y = 0.77, size = 6) +
   geom_segment(aes(x = x1, y = y1, xend = x2, yend = y2), data = arrow, 
                arrow = arrow(ends = "both", type = "closed", length = unit(0.1,"cm")),
                lineend = "butt",
@@ -233,16 +236,16 @@ panel_INNOS_ventr <- ggdraw() + draw_image(readPNG("pictures/INNOS_Catmaid_ventr
   draw_label("ventral view", x = 0.3, y = 0.99, size = 10) +
   draw_label("apical organ", x = 0.72, y = 0.92, color="black", size = 6, fontface='plain')
 
-panel_INNOS_ant <- ggdraw() + draw_image(readPNG("pictures/INNOS_Catmaid_2.png")) +
+panel_INNOS_ant <- ggdraw() + draw_image(readPNG("pictures/INNOS_Catmaid.png")) +
   draw_label("anterior view", x = 0.35, y = 0.99, size = 10) +
-  draw_label("cPRC", x = 0.26, y = 0.77, color='#D55E00', size = 6, fontface='plain') +
-  draw_label("INNOS", x = 0.55, y = 0.75, color=Okabe_Ito[7], size = 6, fontface='plain') +
-  draw_label("INRGW", x = 0.3, y = 0.62, color='#56B4E9', size = 6, fontface='plain') +
-  draw_label("Ser-h1", x = 0.1, y = 0.8, color='grey40', size = 6, fontface='plain') +
-  draw_label("MC", x = 0.6, y = 0.65, color='grey60', size = 6, fontface='plain') +
-  draw_label("*", x = 0.545, y = 0.33, color='black',size = 18,fontface='plain') +
-  draw_label("D", x = 0.9, y = 0.93, size = 6) +
-  draw_label("V", x = 0.9, y = 0.78, size = 6) +
+#  draw_label("cPRC", x = 0.26, y = 0.77, color='#D55E00', size = 6, fontface='plain') +
+#  draw_label("INNOS", x = 0.55, y = 0.75, color=Okabe_Ito[7], size = 6, fontface='plain') +
+#  draw_label("INRGW", x = 0.3, y = 0.62, color='#56B4E9', size = 6, fontface='plain') +
+#  draw_label("Ser-h1", x = 0.1, y = 0.8, color='grey40', size = 6, fontface='plain') +
+#  draw_label("MC", x = 0.6, y = 0.65, color='grey60', size = 6, fontface='plain') +
+  draw_label("*", x = 0.585, y = 0.29, color='black',size = 18,fontface='plain') +
+  draw_label("D", x = 0.95, y = 0.93, size = 6) +
+  draw_label("V", x = 0.95, y = 0.78, size = 6) +
   geom_segment(aes(x = x1, y = y1, xend = x2, yend = y2), data = arrow, 
                arrow = arrow(ends = "both", type = "closed", length = unit(0.1,"cm")),
                lineend = "butt",
@@ -255,11 +258,11 @@ panel_Network <- ggdraw() + draw_image(readPNG("pictures/visNetwork_INNOS_2.png"
 
 arrow_fluo <- data.frame(x1 = 0.95, x2 = 0.95, y1 = 0.75, y2 = 0.85)
 panel_NOS3d_ventr_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR_72_DV_NOS_90um.png")) +
-  draw_label("in situ HCR", x = 0.3, y = 0.96, size = 10) +
-  draw_label("NOS", x = 0.12, y = 0.87, color="magenta", size = 11, fontface="italic") +
-  draw_label("DAPI", x = 0.32, y = 0.87, color="cyan", size = 11, fontface="plain") +
-  draw_line(x = c(0.04, 0.26), y = c(0.11, 0.11), color = "white", size = 0.5) +
-  draw_label(expression(paste("20 ", mu, "m")), x = 0.15, y = 0.14, color = "white", size = 8) +
+  draw_label("in situ HCR", x = 0.3, y = 0.99, size = 10) +
+  draw_label("NOS", x = 0.12, y = 0.9, color="magenta", size = 11, fontface="italic") +
+  draw_label("DAPI", x = 0.32, y = 0.9, color="cyan", size = 11, fontface="plain") +
+  draw_line(x = c(0.04, 0.26), y = c(0.08, 0.08), color = "white", size = 0.5) +
+  draw_label(expression(paste("20 ", mu, "m")), x = 0.15, y = 0.11, color = "white", size = 8) +
   draw_label("A", x = 0.95, y = 0.88, size = 6, color = "white") +
   draw_label("P", x = 0.95, y = 0.72, size = 6, color = "white") +
   geom_segment(aes(x = x1, y = y1, xend = x2, yend = y2), data = arrow_fluo, color = "white", 
@@ -276,10 +279,10 @@ panel_NOS3d_ventr_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR_72_DV_NOS_9
 
 
 panel_NOS3d_ant_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR_72_AP_NOS_92.02um.png")) +
-  draw_label("in situ HCR", x = 0.3, y = 0.96, size = 10) +
-  draw_label("NOS", x = 0.12, y = 0.87, color="magenta", size = 11, fontface="italic") +
-  draw_label("DAPI", x = 0.32, y = 0.87, color="cyan", size = 11, fontface="plain") +
-  draw_line(x = c(0.04, 0.221), y = c(0.11, 0.11), color = "white", size = 0.5) +
+  draw_label("in situ HCR", x = 0.3, y = 0.99, size = 10) +
+  draw_label("NOS", x = 0.12, y = 0.9, color="magenta", size = 11, fontface="italic") +
+  draw_label("DAPI", x = 0.32, y = 0.9, color="cyan", size = 11, fontface="plain") +
+  draw_line(x = c(0.04, 0.221), y = c(0.08, 0.08), color = "white", size = 0.5) +
   draw_label("D", x = 0.95, y = 0.88, size = 6, color = "white") +
   draw_image(readPNG("pictures/HCR_48_DV_NOS_15.68um_insert.png"), 
              scale = 0.35, x = 1, hjust = 1, halign = 1, valign = 0.12) +
@@ -300,24 +303,24 @@ panel_NOS3d_ant_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR_72_AP_NOS_92.
 
 
 panel_NOS2d_ant_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR-IHC_51_AP_NOS_actub_55.92um.png")) +
-  draw_label("in situ HCR", x = 0.3, y = 0.96, size = 10) +
-  draw_label("NOS", x = 0.12, y = 0.87, color="magenta", size = 11, fontface="italic") +
-  draw_label("acTub", x = 0.33, y = 0.87, color="green", size = 11, fontface="plain") +
-  draw_line(x = c(0.04, 0.4), y = c(0.11, 0.11), color = "white", size = 0.5) +
-  draw_label("cPRC", x = 0.55, y = 0.78, size = 6, color = "white") +
-  draw_line(x = c(0.3, 0.45), y = c(0.73, 0.77), color = "white", size = 0.2) +
-  draw_line(x = c(0.77, 0.66), y = c(0.75, 0.77), color = "white", size = 0.2)
+  draw_label("in situ HCR", x = 0.3, y = 0.99, size = 10) +
+  draw_label("NOS", x = 0.12, y = 0.9, color="magenta", size = 11, fontface="italic") +
+  draw_label("acTub", x = 0.36, y = 0.9, color="green", size = 11, fontface="plain") +
+  draw_line(x = c(0.04, 0.4), y = c(0.08, 0.08), color = "white", size = 0.5) +
+  draw_label("cPRC", x = 0.55, y = 0.8, size = 7, color = "white") +
+  draw_line(x = c(0.28, 0.47), y = c(0.76, 0.8), color = "white", size = 0.3) +
+  draw_line(x = c(0.74, 0.63), y = c(0.78, 0.8), color = "white", size = 0.3)
 
 
 panel_NOS3d <- ggdraw() + draw_image(readPNG("pictures/NOS-promotor_3d_acTub_XXum_crop.png")) +
-  draw_label("IHC", x = 0.15, y = 0.96, size = 10) +
+  draw_label("transgene + IHC", x = 0.38, y = 0.99, size = 10) +
   draw_label("*", x = 0.55, y = 0.32, color='white',size = 18,fontface="plain") +
-  draw_label("NOSp::palmi-3xHA", x = 0.32, y = 0.87, color="magenta", size = 10, fontface="plain") +
-  draw_label("acTub", x = 0.75, y = 0.87, color="green", size = 10, fontface="plain") +
-  draw_line(x = c(0.04, 0.4), y = c(0.11, 0.11), color = "white", size = 0.5) +
-  draw_label("cPRC", x = 0.55, y = 0.78, size = 6, color = "white") +
-  draw_line(x = c(0.3, 0.45), y = c(0.73, 0.77), color = "white", size = 0.2) +
-  draw_line(x = c(0.77, 0.66), y = c(0.75, 0.77), color = "white", size = 0.2)
+  draw_label("NOSp::palmi-3xHA", x = 0.34, y = 0.9, color="magenta", size = 10, fontface="plain") +
+  draw_label("acTub", x = 0.8, y = 0.9, color="green", size = 10, fontface="plain") +
+  draw_line(x = c(0.04, 0.4), y = c(0.08, 0.08), color = "white", size = 0.5) +
+  draw_label("cPRC", x = 0.55, y = 0.82, size = 7, color = "white") +
+  draw_line(x = c(0.33, 0.47), y = c(0.79, 0.82), color = "white", size = 0.3) +
+  draw_line(x = c(0.79, 0.63), y = c(0.79, 0.82), color = "white", size = 0.3)
 
 
 #combine panels into Figure and save final figure as pdf and png
@@ -333,15 +336,16 @@ Fig1 <- panel_SEM + panel_INNOS_ventr + panel_INNOS_ant + panel_Network +
   patchwork::plot_layout(design = layout, 
                          heights = c(1,0.02,1), 
                          widths = c(1,0.02,1,0.02,1,0.02,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
-  patchwork::plot_annotation(tag_levels = "A") +  #we can change this to 'a' for small caps or 'i' or '1'
+  patchwork::plot_annotation(tag_levels = "A") &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, 
-      face='bold', color='black')) #or 'bold', 'italic'
+      face='plain', color='black')) #or 'bold', 'italic'
+
+ggsave("figures/Fig1.pdf", limitsize = FALSE, 
+       units = c("px"), Fig1, width = 2400, height = 1350)  
 
 ggsave("figures/Fig1.png", limitsize = FALSE, 
        units = c("px"), Fig1, width = 2400, height = 1450, bg='white')  
 
-ggsave("figures/Fig1.pdf", limitsize = FALSE, 
-       units = c("px"), Fig1, width = 2350, height = 1700)  
 
 
 
