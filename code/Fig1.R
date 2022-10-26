@@ -344,7 +344,7 @@ ggsave("figures/Fig1.pdf", limitsize = FALSE,
        units = c("px"), Fig1, width = 2400, height = 1350)  
 
 ggsave("figures/Fig1.png", limitsize = FALSE, 
-       units = c("px"), Fig1, width = 2400, height = 1450, bg='white')  
+       units = c("px"), Fig1, width = 2400, height = 1350, bg='white')  
 
 
 
