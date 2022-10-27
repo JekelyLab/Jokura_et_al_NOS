@@ -21,8 +21,8 @@ L_NAME_1mM_3d <- read_csv("data/2017-08-29_YDisplacement_3d_1mM_L-NAME_UV-Side-4
 
 #Import trajectory data focusing on sideUV, 10s before and 30 s after
 
-df_2d_nor <- read_csv("C:/Users/klamd/Documents/R/Jokura_et_al_NOS/data/221011_sUV_tracking/sUV_tracking_2d.csv")
-df_3d_nor <- read_csv("C:/Users/klamd/Documents/R/Jokura_et_al_NOS/data/221011_sUV_tracking/sUV_tracking_3d.csv")
+df_2d_nor <- read_csv("data/221011_sUV_tracking/sUV_tracking_2d.csv")
+df_3d_nor <- read_csv("data/221011_sUV_tracking/sUV_tracking_3d.csv")
 
 
 #Used for frame and genotype column data
