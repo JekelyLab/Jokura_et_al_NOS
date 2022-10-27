@@ -95,20 +95,20 @@ WTvsNOS_2d %>%
   annotate("rect", xmin=0.5, xmax=3.5, ymin=-Inf, ymax=Inf,alpha=0.4, fill="black") +
   annotate("text", x=2, y=-0.75, label="dark", color="black", size = 6, fontface="plain") +
   annotate("rect", xmin=3.5, xmax=7.5, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
-  annotate("text", x=5.5, y=-0.75, label="side 395nm", color="purple", size = 6, fontface="plain") +
+  annotate("text", x=5.5, y=-0.5, label="side 395nm", color="purple", size = 6, fontface="plain") +
   annotate("text", x=5.5, y=0.65, label="UV avoidance", color="black", size = 5, fontface="plain") +
   annotate("rect", xmin=7.5, xmax=11.5, ymin=-Inf, ymax=Inf,alpha=0.4, fill="black") +
   annotate("text", x=9.5, y=-0.75, label="dark", color="black", size = 6, fontface="plain") +
   annotate("rect", xmin=11.5, xmax=15.5, ymin=-Inf, ymax=Inf,alpha=0.1, fill="deepskyblue") +
-  annotate("text", x=13.5, y=-0.75, label="top 480nm", color="deepskyblue3", size = 6, fontface="plain") +
+  annotate("text", x=13.5, y=-0.5, label="top 480nm", color="deepskyblue3", size = 6, fontface="plain") +
   annotate("text", x=13.5, y=0.65, label="phototaxis", color="black", size = 5, fontface="plain") +
   annotate("rect", xmin=15.5, xmax=19.5, ymin=-Inf, ymax=Inf,alpha=0.4, fill="black") +
   annotate("text", x=17.5, y=-0.75, label="dark", color="black", size = 6, fontface="plain") +
   annotate("rect", xmin=19.5, xmax=23.5, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
-  annotate("text", x=21.5, y=-0.75, label="top 395nm", color="purple", size = 6, fontface="plain") +
+  annotate("text", x=21.5, y=-0.5, label="top 395nm", color="purple", size = 6, fontface="plain") +
   annotate("text", x=21.5, y=0.65, label="UV avoidance", color="black", size = 5, fontface="plain") +
   aes(x = reorder(condition, time), y = displacement, fill = genotype) +
-  geom_boxplot(size = 0.25, outlier.size = 0.5, outlier.alpha = 0.5) +
+  geom_boxplot(size = 0.25, outlier.shape = NA) +
   scale_fill_manual(
     values = c(WT = "grey90", 
                NOS11x11 = Okabe_Ito[2],
@@ -245,8 +245,11 @@ df_2d_nor %>%
   theme_minimal() +
   coord_fixed() +
   theme_plot +
-  theme(axis.text.x = element_text(size = 12, angle = 0)) +
-  facet_grid(vars(), vars(Genotype))
+  theme(text = element_text(size = 10)) +
+  scale_x_continuous(breaks = c(-10, 0, 10)) +
+  facet_grid(vars(), vars(Genotype), 
+             labeller = as_labeller(c(WT = 'WT', NOS11x11 = 'NOSΔ11/Δ11',
+                                      NOS23x23 = 'NOSΔ23/Δ23')))
 
 # save plot ---------------------------------------------------------------
 
@@ -428,10 +431,31 @@ Fig2 <-  panel_Architecture + panel_3dpf_Tracking +
 ggsave("figures/Fig2.pdf", limitsize = FALSE, 
        units = c("px"), Fig2, width = 2400, height = 1200)  
 
-}
 ggsave("figures/Fig2.png", limitsize = FALSE, 
-       units = c("px"), Fig2, width = 2400, height = 1900, bg='white')  
+       units = c("px"), Fig2, width = 2400, height = 1200, bg='white')  
 
+layout2 <- "
+ABC
+DDD
+"
+
+Fig2_suppl1 <-  panel_2dpf_Tracking + 
+  panel_2dpf_TP  + panel_2dpf_TD + 
+  panel_2d_vd + 
+  patchwork::plot_layout(design = layout2, heights = c(0.55, 1),) + #we can change the heights of the rows in our layout (widths also can be defined)
+  patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
+  ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
+
+
+ggsave("figures/Fig2_suppl1.pdf", limitsize = FALSE, 
+       units = c("px"), Fig2_suppl1, width = 2400, height = 1200)  
+
+ggsave("figures/Fig2_suppl1.png", limitsize = FALSE, 
+       units = c("px"), Fig2_suppl1, width = 2400, height = 1200, bg='white')  
+
+
+
+}
 
 
 
