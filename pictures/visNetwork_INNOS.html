@@ -1470,18 +1470,13 @@ function resetOneNode(node, options, network){
 }
 
 // Global function to reset all node
-function resetAllNodes(nodes, update, options, network, all){
-  
-  if(all === false){
-      var nodesToReset = nodes.get({
-      filter: function (item) {
-        return item.isHardToRead === true;
-      },
-      returnType :'Array'
-    });
-  } else {
-      var nodesToReset = nodes.get({returnType :'Array'});
-  }
+function resetAllNodes(nodes, update, options, network){
+  var nodesToReset = nodes.get({
+    filter: function (item) {
+      return item.isHardToRead === true;
+    },
+    returnType :'Array'
+  });
   
   var have_cluster_nodes = false;
   var nodes_in_clusters;
@@ -2840,7 +2835,7 @@ if (HTMLWidgets.shinyMode){
 
             //reset nodes
             resetAllEdges(el.edges, el.highlightColor, el.byselectionColor, el.chart);
-            resetAllNodes(el.nodes, true, el.options, el.chart, false);
+            resetAllNodes(el.nodes, true, el.options, el.chart);
             
             if (main_el.selectActive === true){
               main_el.selectActive = false;
@@ -2925,7 +2920,7 @@ if (HTMLWidgets.shinyMode){
           // reset some parameters / date before
           if (main_el.selectActive === true | main_el.highlightActive === true) {
             //reset nodes
-            resetAllNodes(el.nodes, true, el.options, el.chart, false);
+            resetAllNodes(el.nodes, true, el.options, el.chart);
             
             if (main_el.selectActive === true){
               main_el.selectActive = false;
@@ -4238,7 +4233,7 @@ HTMLWidgets.widget({
       }
       else if (el_id.selectActive === true) {
         //reset nodes
-        resetAllNodes(nodes, update, options, instance.network, false)
+        resetAllNodes(nodes, update, options, instance.network)
         el_id.selectActive = false
       }
     } 
@@ -4652,7 +4647,7 @@ HTMLWidgets.widget({
             resetList("nodeSelect", el.id, 'selected');
           }
           //reset nodes
-          resetAllNodes(nodes, update, options, instance.network, false)
+          resetAllNodes(nodes, update, options, instance.network)
           el_id.highlightActive = false;
           is_clicked = false;
           
@@ -4985,15 +4980,13 @@ HTMLWidgets.widget({
     if(x.clusteringGroup || x.clusteringColor || x.clusteringOutliers || x.clusteringHubsize || x.clusteringConnection){
       // if we click on a node, we want to open it up!
       instance.network.on("doubleClick", function (params){
+        
         if (params.nodes.length === 1) {
           if (instance.network.isCluster(params.nodes[0]) === true) {
             is_clicked = false;
             instance.network.openCluster(params.nodes[0], {releaseFunction : function(clusterPosition, containedNodesPositions) {
               return containedNodesPositions;
             }});
-            // must be better...
-            resetAllEdges(edges, el_id.highlightColor, el_id.byselectionColor, instance.network);
-            resetAllNodes(nodes, true, options, instance.network, true);
           } else {
             if(x.clusteringGroup){
               var array_group = nodes.get({
@@ -5313,11 +5306,11 @@ HTMLWidgets.widget({
 </head>
 <body style="background-color: white;">
 <div id="htmlwidget_container">
-<div id="htmlwidget-9898027e4c10cc820d43" class="visNetwork html-widget" style="width:960px;height:500px;">
+<div id="htmlwidget-f958f793e4188e435f38" class="visNetwork html-widget" style="width:960px;height:500px;">
 
 </div>
 </div>
-<script type="application/json" data-for="htmlwidget-9898027e4c10cc820d43">{"x":{"nodes":{"id":["cPRC","INNOS","INRGW","Ser_h1","MC","prototroch"],"label":["cPRC","INNOS","INRGW","Ser_h1","MC","prototroch"],"group":["SN","INNOS","INRGW","MN","MN","effector"],"level":["1","2","2","3","3","4"]},"edges":{"from":["cPRC","cPRC","INNOS","INNOS","INRGW","INRGW","Ser_h1","Ser_h1","Ser_h1","Ser_h1","MC","MC"],"to":["INNOS","INRGW","INNOS","INRGW","INRGW","Ser_h1","INRGW","Ser_h1","MC","prototroch","Ser_h1","prototroch"],"weight":[41,64,5,91,17,77,1,14,42,24,2,340],"value":[6.40312423743285,8,2.23606797749979,9.53939201416946,4.12310562561766,8.77496438739212,1,3.74165738677394,6.48074069840786,4.89897948556636,1.4142135623731,18.4390889145858]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"nodes":{"shape":"dot","level":["1","2","2","3","3","4"],"borderWidth":0.3,"color":{"background":null,"border":"black"},"opacity":0.9,"font":{"color":"black","size":44},"scaling":{"label":{"enabled":true,"min":50,"max":65}}},"manipulation":{"enabled":false},"layout":{"hierarchical":{"enabled":true,"levelSeparation":240,"nodeSpacing":1,"direction":"LR"}},"physics":{"hierarchicalRepulsion":{"nodeDistance":200}},"edges":{"arrows":{"to":{"enabled":true,"scaleFactor":1.2,"type":"arrow"}},"color":{"inherit":true,"opacity":0.8},"smooth":{"type":"curvedCW","roundness":0},"scaling":{"min":4,"max":12}},"height":800,"width":1000,"interaction":{"dragNodes":true,"dragView":true,"hover":true,"multiselect":true,"zoomView":true,"zoomSpeed":1},"groups":{"INRGW":{"shape":"box","opacity":1,"color":"#56B4E9"},"INNOS":{"shape":"box","opacity":1,"color":"#CC79A7"},"SN":{"shape":"circle","opacity":1,"color":"#D55E00"},"MN":{"shape":"circle","opacity":1,"color":"#cccccc"},"useDefaultGroups":true,"effector":{"shape":"square","opacity":1,"color":"#cccccc"}}},"groups":["SN","INNOS","INRGW","MN","effector"],"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":{"from":1,"to":1},"algorithm":"hierarchical","hideColor":"rgba(200,200,200,0.5)","labelOnly":false},"collapse":{"enabled":false,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);","iconsRedraw":true},"evals":[],"jsHooks":[]}</script>
-<script type="application/htmlwidget-sizing" data-for="htmlwidget-9898027e4c10cc820d43">{"viewer":{"width":450,"height":350,"padding":15,"fill":true},"browser":{"width":960,"height":500,"padding":40,"fill":false}}</script>
+<script type="application/json" data-for="htmlwidget-f958f793e4188e435f38">{"x":{"nodes":{"id":["cPRC","INNOS","INRGW","Ser_h1","MC","prototroch"],"label":["cPRC","INNOS","INRGW","Ser_h1","MC","prototroch"],"group":["SN","INNOS","INRGW","MN","MN","effector"],"level":["1","2","2","3","3","4"]},"edges":{"from":["cPRC","cPRC","INNOS","INNOS","INRGW","INRGW","Ser_h1","Ser_h1","Ser_h1","Ser_h1","MC","MC"],"to":["INNOS","INRGW","INNOS","INRGW","INRGW","Ser_h1","INRGW","Ser_h1","MC","prototroch","Ser_h1","prototroch"],"weight":[41,64,5,91,17,77,1,14,42,24,2,340],"value":[6.40312423743285,8,2.23606797749979,9.53939201416946,4.12310562561766,8.77496438739212,1,3.74165738677394,6.48074069840786,4.89897948556636,1.4142135623731,18.4390889145858]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"nodes":{"shape":"dot","level":["1","2","2","3","3","4"],"borderWidth":0.3,"color":{"background":null,"border":"black"},"opacity":0.9,"font":{"color":"black","size":44},"scaling":{"label":{"enabled":true,"min":50,"max":65}}},"manipulation":{"enabled":false},"layout":{"hierarchical":{"enabled":true,"levelSeparation":240,"nodeSpacing":1,"direction":"LR"}},"physics":{"hierarchicalRepulsion":{"nodeDistance":200}},"edges":{"arrows":{"to":{"enabled":true,"scaleFactor":1.2,"type":"arrow"}},"color":{"inherit":true,"opacity":0.8},"smooth":{"type":"curvedCW","roundness":0},"scaling":{"min":4,"max":12}},"height":800,"width":1000,"interaction":{"dragNodes":true,"dragView":true,"hover":true,"multiselect":true,"zoomView":true,"zoomSpeed":1},"groups":{"INRGW":{"shape":"box","opacity":1,"color":"#56B4E9"},"INNOS":{"shape":"box","opacity":1,"color":"#CC79A7"},"SN":{"shape":"circle","opacity":1,"color":"#D55E00"},"MN":{"shape":"circle","opacity":1,"color":"#cccccc"},"useDefaultGroups":true,"effector":{"shape":"square","opacity":1,"color":"#cccccc"}}},"groups":["SN","INNOS","INRGW","MN","effector"],"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":{"from":1,"to":1},"algorithm":"hierarchical","hideColor":"rgba(200,200,200,0.5)","labelOnly":false},"collapse":{"enabled":false,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);","iconsRedraw":true},"evals":[],"jsHooks":[]}</script>
+<script type="application/htmlwidget-sizing" data-for="htmlwidget-f958f793e4188e435f38">{"viewer":{"width":450,"height":350,"padding":15,"fill":true},"browser":{"width":960,"height":500,"padding":40,"fill":false}}</script>
 </body>
 </html>
