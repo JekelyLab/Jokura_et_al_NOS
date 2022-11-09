@@ -45,8 +45,8 @@ DAFFM %>%
   geom_smooth(aes(fill = stimuli), level = 0.95, size = 1, span = 0.05, method = "loess") +
   annotate("segment", x=20, xend=40, y=1.2, yend=1.2, size=1)+
   annotate("segment", x=20, xend=20, y=1.2, yend=1.3, size=1)+
-  annotate("text", x=29, y=1.15, label="10 sec", size=3)+
-  annotate("text", x=23, y=1.31, label="0.2 ΔF/F0", size=3)+
+  annotate("text", x=29, y=1.18, label="10 sec", size=3)+
+  annotate("text", x=23, y=1.315, label="0.2 ΔF/F0", size=3)+
   annotate("text", x=70, y=1.32, label="405 nm", size=4)+
   annotate("text", x=160, y=1.32, label="neuropil DAF-FM", size=5)+
   ylim(0.68,1.32)+
@@ -113,8 +113,8 @@ WTvsNOS11_cPRC_INNOS_tb %>%
               method = "loess") +
   annotate("segment", x=20, xend=40, y=1.8, yend=1.8, size=1)+
   annotate("segment", x=20, xend=20, y=1.8, yend=1.9, size=1)+
-  annotate("text", x=29, y=1.65, label="10 sec", size=3)+
-  annotate("text", x=23, y=2.05, label="0.2 ΔF/F0", size=3)+
+  annotate("text", x=29, y=1.7, label="10 sec", size=3)+
+  annotate("text", x=23, y=1.96, label="0.2 ΔF/F0", size=3)+
   annotate("text", x=70, y=2.6, label="405 nm", size=4)+
   annotate("text", x=160, y=2.6, label="cPRC", size=5)+
   ylim(0.4,2.6)+
@@ -138,7 +138,7 @@ ggsave("pictures/WTvsNOS11_cPRC.png", limitsize = FALSE,
 arrow_fluo <- data.frame(x1 = 0.95, x2 = 0.95, y1 = 0.75, y2 = 0.85)
 
 panel_DAF <- ggdraw() + draw_image(readPNG("pictures/55hpf_DAF-FM_134.95um.png")) +
-  draw_label("DAF-FM", x = 0.15, y = 0.88, color="green", size = 11, fontface="plain") +
+  draw_label("DAF-FM", x = 0.15, y = 0.88, color="#009E73", size = 11, fontface="plain") +
   draw_line(x = c(0.04, 0.42), y = c(0.09, 0.09), color = "white", size = 0.5) +
   draw_label(expression(paste("50 ", mu, "m")), x = 0.23, y = 0.12, color = "white", size = 8) +
   draw_label("D", x = 0.95, y = 0.88, size = 6, color = "white") +
