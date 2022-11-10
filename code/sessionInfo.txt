@@ -15,7 +15,8 @@ locale:
 [11] LC_MEASUREMENT=en_GB.UTF-8 LC_IDENTIFICATION=C       
 
 attached base packages:
-[1] stats     graphics  grDevices utils     datasets  methods   base     
+[1] stats     graphics  grDevices utils     datasets  methods  
+[7] base     
 
 other attached packages:
  [1] esquisse_1.1.1     scales_1.2.1       tidygraph_1.2.1   
