@@ -5,7 +5,7 @@ To cite RStudio in publications use:
   RStudio Team (2022). RStudio: Integrated Development Environment for R. RStudio, PBC, Boston, MA URL
   http://www.rstudio.com/.
 
- LaTeX ユーザのための BibTeX エントリーは 
+A BibTeX entry for LaTeX users is
 
   @Manual{,
     title = {RStudio: Integrated Development Environment for R},

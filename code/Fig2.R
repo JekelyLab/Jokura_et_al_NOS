@@ -26,9 +26,12 @@ L_NAME_1mM_3d <- read_csv("data/2017-08-29_YDisplacement_3d_1mM_L-NAME_UV-Side-4
 df_2d_nor <- read_csv("data/221011_sUV_tracking/sUV_tracking_2d.csv")
 df_3d_nor <- read_csv("data/221011_sUV_tracking/sUV_tracking_3d.csv")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> f22b2acbdd5db84777b52ffb0f6b95d342809394
+=======
+>>>>>>> 001e4710af8a68a639e53a1c55fd32ede273b967
 
 #Used for frame and genotype column data
 df_WT_test <- read_csv("data/220923_Tracking raw data/WT_0701_08_01.csv")
