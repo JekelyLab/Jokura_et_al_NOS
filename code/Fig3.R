@@ -174,13 +174,14 @@ Fig3 <- panel_DAF + panel_DAFFM_intensity + panel_DAFFM +
   patchwork::plot_layout(design = layout, 
                          heights = c(1, 0.02, 0.7),
                          widths = c(1,0.78,0.05,1,0.05,1,0.78,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
-  patchwork::plot_annotation(tag_levels = 'A') +  #we can change this to 'a' for small caps or 'i' or '1'
+  patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, 
-                                         face='bold')) #or 'bold', 'italic'
-
-ggsave("figures/Fig3.png", limitsize = FALSE, 
-       units = c("px"), Fig3, width = 2400, height = 1500, bg='white')  
+                                         face='plain')) #or 'bold', 'italic'
 
 ggsave("figures/Fig3.pdf", limitsize = FALSE, 
-       units = c("px"), Fig3, width = 2350, height = 1700)  
+       units = c("px"), Fig3, width = 2000, height = 1220)  
+
+ggsave("figures/Fig3.png", limitsize = FALSE, 
+       units = c("px"), Fig3, width = 2000, height = 1220, bg='white')  
+
 
