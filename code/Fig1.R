@@ -257,6 +257,7 @@ panel_Network <- ggdraw() + draw_image(readPNG("pictures/visNetwork_INNOS_2.png"
 
 
 arrow_fluo <- data.frame(x1 = 0.95, x2 = 0.95, y1 = 0.75, y2 = 0.85)
+
 panel_NOS3d_ventr_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR_72_DV_NOS_90um.png")) +
   draw_label("in situ HCR", x = 0.3, y = 0.99, size = 10) +
   draw_label("NOS", x = 0.12, y = 0.9, color="magenta", size = 11, fontface="italic") +
@@ -278,11 +279,11 @@ panel_NOS3d_ventr_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR_72_DV_NOS_9
   draw_line(x = c(0.77, 0.65), y = c(0.43, 0.35), color = "white", size = 0.2)
 
 
-panel_NOS3d_ant_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR_72_AP_NOS_92.02um.png")) +
+panel_NOS3d_ant_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR_72_AP_NOS_89.25um.png")) +
   draw_label("in situ HCR", x = 0.3, y = 0.99, size = 10) +
   draw_label("NOS", x = 0.12, y = 0.9, color="magenta", size = 11, fontface="italic") +
   draw_label("DAPI", x = 0.32, y = 0.9, color="cyan", size = 11, fontface="plain") +
-  draw_line(x = c(0.04, 0.221), y = c(0.08, 0.08), color = "white", size = 0.5) +
+  draw_line(x = c(0.04, 0.264), y = c(0.08, 0.08), color = "white", size = 0.5) +
   draw_label("D", x = 0.95, y = 0.88, size = 6, color = "white") +
   draw_image(readPNG("pictures/HCR_48_DV_NOS_15.68um_insert.png"), 
              scale = 0.35, x = 1, hjust = 1, halign = 1, valign = 0.12) +
@@ -315,37 +316,60 @@ panel_NOS2d_ant_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR-IHC_51_AP_NOS
 panel_NOS3d <- ggdraw() + draw_image(readPNG("pictures/NOS-promotor_3d_acTub_XXum_crop.png")) +
   draw_label("transgene + IHC", x = 0.38, y = 0.99, size = 10) +
   draw_label("*", x = 0.55, y = 0.32, color='white',size = 18,fontface="plain") +
+  draw_image(readPNG("pictures/INNOS_vl.png"), 
+             scale = 0.35, x = 1, hjust = 1, halign = 1, valign = 0.075) +
+  #draw_label("INNOS_vl", x = 0.9, y = 0.3, size = 5, color = "black") +
   draw_label("NOSp::palmi-3xHA", x = 0.34, y = 0.9, color="magenta", size = 10, fontface="plain") +
   draw_label("acTub", x = 0.8, y = 0.9, color="green", size = 10, fontface="plain") +
   draw_line(x = c(0.04, 0.4), y = c(0.08, 0.08), color = "white", size = 0.5) +
   draw_label("cPRC", x = 0.55, y = 0.82, size = 7, color = "white") +
   draw_line(x = c(0.33, 0.47), y = c(0.79, 0.82), color = "white", size = 0.3) +
-  draw_line(x = c(0.79, 0.63), y = c(0.79, 0.82), color = "white", size = 0.3)
+  draw_line(x = c(0.79, 0.63), y = c(0.79, 0.82), color = "white", size = 0.3) +
+  draw_label("INNOS_vl", x = 0.85, y = 0.65, size = 7, color = "white")
 
 
 #combine panels into Figure and save final figure as pdf and png
 #panels of different sizes
+#layout <- "
+#A#B#C#D
+########
+#E#F#G#H
+#"
+
+#Fig1 <- panel_SEM + panel_INNOS_ventr + panel_INNOS_ant + panel_Network +  
+#  panel_NOS3d_ventr_HCR + panel_NOS3d_ant_HCR + panel_NOS2d_ant_HCR + panel_NOS3d + 
+#  patchwork::plot_layout(design = layout, 
+#                         heights = c(1,0.02,1), 
+#                         widths = c(1,0.02,1,0.02,1,0.02,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
+#  patchwork::plot_annotation(tag_levels = "A") &  #we can change this to 'a' for small caps or 'i' or '1'
+#  ggplot2::theme(plot.tag = element_text(size = 12, 
+#      face='plain', color='black')) #or 'bold', 'italic'
+
+
+#ggsave("figures/Fig1.png", limitsize = FALSE, 
+#       units = c("px"), Fig1, width = 2400, height = 1350, bg='white') 
+
 layout <- "
-A#B#C#D
-#######
-E#F#G#H
+A#B#C
+#####
+D#E#F
 "
 
-Fig1 <- panel_SEM + panel_INNOS_ventr + panel_INNOS_ant + panel_Network +  
-  panel_NOS3d_ventr_HCR + panel_NOS3d_ant_HCR + panel_NOS2d_ant_HCR + panel_NOS3d + 
+Fig1 <- panel_SEM + panel_INNOS_ventr + panel_INNOS_ant +   
+  panel_NOS2d_ant_HCR + panel_NOS3d + panel_Network +
   patchwork::plot_layout(design = layout, 
                          heights = c(1,0.02,1), 
-                         widths = c(1,0.02,1,0.02,1,0.02,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
+                         widths = c(1,0.02,1,0.02,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = "A") &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, 
       face='plain', color='black')) #or 'bold', 'italic'
-
-ggsave("figures/Fig1.pdf", limitsize = FALSE, 
-       units = c("px"), Fig1, width = 2400, height = 1350)  
+ 
 
 ggsave("figures/Fig1.png", limitsize = FALSE, 
-       units = c("px"), Fig1, width = 2400, height = 1350, bg='white')  
+       units = c("px"), Fig1, width = 1800, height = 1350, bg='white')  
 
 
+ggsave("figures/Fig1.pdf", limitsize = FALSE, 
+       units = c("px"), Fig1, width = 2400, height = 1350) 
 
 

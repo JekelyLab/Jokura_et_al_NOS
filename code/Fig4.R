@@ -6,12 +6,31 @@ source("code/Packages_to_load.R")
 
 # read data ---------------------------------------------------------------
 
+WTvsNOS23 <- read_csv("data/211121_WTvsNOS23_cPRC.csv")
+WTvsNOS11_cPRC_INNOS <- read_csv("data/211129_WTvsNOS11_cPRC_INNOS (2).csv")
+
 NIT1_MO <- read_csv("data/220214_non-MOvsNIT1-MO1and2.csv")
 NIT2_MO <- read_csv("data/220522_NIT2-MO1and2.csv")
 
 NITGC1_analysis <- read_csv("data/220519_GcG-T2A-NITGC1_norm.csv")
 
 # tidying the data -----------------------------------------------------------
+
+
+WT_cPRC_tidy <- WTvsNOS23 %>% 
+  pivot_longer(cols = -c("frame"),
+               names_to = "genotype",
+               values_to = "intensity") %>%
+  separate(col = c("genotype"), 
+           into = c("genotype", "sample"), sep = "\\...")
+
+WTvsNOS11_cPRC_INNOS_tb <- WTvsNOS11_cPRC_INNOS %>% 
+  pivot_longer(cols = -c("frame"),
+               names_to = "genotype",
+               values_to = "intensity") %>%
+  separate(col = c("genotype"), into = c("genotype", "sample"), sep = "\\...")
+
+
 
 NIT1_MO_tb <- NIT1_MO %>% 
   pivot_longer(cols = -c("frame"),
@@ -30,6 +49,86 @@ NIT1_MO_tb%>%
   count(morphant)
 NIT2_MO_tb%>%
   count(morphant)
+
+
+
+
+
+
+# plot NOS23 cPRC data with geom_smooth ----------------------------------------------
+
+WT_cPRC_tidy$genotype <- factor(WT_cPRC_tidy$genotype, 
+                                levels=c("WT_cPRC", "NOS23_cPRC"))
+
+WT_cPRC_tidy %>%
+  ggplot(aes(x=frame,y=intensity,color=genotype)) +
+  annotate("rect", xmin=51, xmax=90, ymin=-Inf, ymax=Inf, 
+           alpha=0.1, fill="blue") +
+  geom_line(aes(group = sample), size=0.2, alpha=0.2) +
+  geom_smooth(aes(fill = genotype), level = 0.99, size = 1, span = 0.03, 
+              method = "loess") +
+  annotate("segment", x=20, xend=40, y=1.3, yend=1.3, size=1)+
+  annotate("segment", x=20, xend=20, y=1.3, yend=1.4, size=1)+
+  annotate("text", x=29, y=1.25, label="10 sec", size=3)+
+  annotate("text", x=23, y=1.45, label="0.2 ΔF/F0", size=3)+
+  annotate("text", x=70, y=1.7, label="405 nm", size=4)+
+  annotate("text", x=160, y=1.7, label="cPRC", size=5)+
+  ylim(0.2,1.7)+
+  theme_void()  +
+  theme(legend.title = element_blank(), legend.text.align=0,
+        legend.text = element_text(size=12)) +
+  scale_color_manual(values=c(Okabe_Ito[6], paired[7]),
+                     labels = c("wt", expression('NOS'^'Δ23/Δ23'))) +
+  scale_fill_manual(values=c(Okabe_Ito[6], paired[7]),
+                    labels = c("wt", expression('NOS'^'Δ23/Δ23')))
+
+
+# save plot ---------------------------------------------------------------
+
+ggsave("pictures/WTvsNOS23_cPRC.png", limitsize = FALSE, 
+       units = c("px"), width = 1600, height = 800, bg='white')  
+
+
+# plot NOS11 cPRC data (vs INNOS) with geom_smooth ----------------------------------------------
+
+WTvsNOS11_cPRC_INNOS_tb$genotype <- factor(WTvsNOS11_cPRC_INNOS_tb$genotype, 
+                                           levels=c("WT_cPRC", "WT_INNOS", "NOS11_cPRC", "NOS11_INNOS"))
+
+WTvsNOS11_cPRC_INNOS_tb %>%
+  filter(genotype == "WT_cPRC" | genotype == "NOS11_cPRC") %>%
+  ggplot(aes(x=frame,y=intensity,color=genotype)) +
+  annotate("rect", xmin=51, xmax=93, ymin=-Inf, ymax=Inf, 
+           alpha=0.1, fill="blue") +
+  geom_line(aes(group = sample), size=0.2, alpha=0.2) +
+  geom_smooth(aes(fill = genotype), level = 0.99, size = 1, span = 0.03, 
+              method = "loess") +
+  annotate("segment", x=20, xend=40, y=1.8, yend=1.8, size=1)+
+  annotate("segment", x=20, xend=20, y=1.8, yend=1.9, size=1)+
+  annotate("text", x=29, y=1.7, label="10 sec", size=3)+
+  annotate("text", x=23, y=1.96, label="0.2 ΔF/F0", size=3)+
+  annotate("text", x=70, y=2.6, label="405 nm", size=4)+
+  annotate("text", x=160, y=2.6, label="cPRC", size=5)+
+  ylim(0.4,2.6)+
+  theme_void()  +
+  theme(legend.title = element_blank(), legend.text.align=0,
+        legend.text = element_text(size=12)) +
+  #Specify colours and legend labels
+  scale_color_manual(values=c(Okabe_Ito[6], paired[7]),
+                     labels = c("wt", expression('NOS'^'Δ11/Δ11'))) +
+  scale_fill_manual(values=c(Okabe_Ito[6], paired[7]),
+                    labels = c("wt", expression('NOS'^'Δ11/Δ11')))
+
+
+# save plot ---------------------------------------------------------------
+
+ggsave("pictures/WTvsNOS11_cPRC.png", limitsize = FALSE, 
+       units = c("px"), width = 1600, height = 800, bg='white')  
+
+
+
+
+
+
 
 
 
@@ -337,6 +436,11 @@ ggsave("pictures/GcG-mutNIT-GC1-SNAP.png", limitsize = FALSE,
 
 
 # assemble figure ---------------------------------------------------------
+
+panel_cPRC_NOS11 <- ggdraw() + draw_image(readPNG("pictures/WTvsNOS11_cPRC.png"))
+panel_cPRC_NOS23 <- ggdraw() + draw_image(readPNG("pictures/WTvsNOS23_cPRC.png"))
+
+
 arrow_fluo <- data.frame(x1 = 0.95, x2 = 0.95, y1 = 0.75, y2 = 0.85)
 
 panel_HCR_NIT1 <- ggdraw() + draw_image(readPNG("pictures/HCR-IHC_51_AP_NITGC1_actub_52.24um.png")) +
@@ -391,30 +495,34 @@ panel_GcG_mutNIT_SNAP <- ggdraw() + draw_image(readPNG("pictures/GcG-mutNIT-GC1-
 #combine panels into Figure and save final figure as pdf and png
 #panels of different sizes
 layout <- "
-AA#BB#CC#DD
+AAAAA#BBBBB
 ###########
-EEEFFFFGGGG
+CC#DD#EE#FF
 ###########
-HHHJJJJKKKK
-IIILLLLMMMM
+GGGGG#HHHHH
+###########
+IIIKKKKLLLL
+JJJMMMMNNNN
 "
 
-Fig4 <- panel_HCR_NIT1 + panel_HCR_NIT2 + panel_IHC_NIT1 + panel_IHC_NIT2 +
-  panel_cPRC_MO_cont + panel_cPRC_NIT1_MO12 + panel_cPRC_NIT2_MO12 +
+Fig4 <- 
+  panel_cPRC_NOS11 + panel_cPRC_NOS23 +
+  panel_HCR_NIT1 + panel_HCR_NIT2 + panel_IHC_NIT1 + panel_IHC_NIT2 +
+  panel_cPRC_NIT1_MO12 + panel_cPRC_NIT2_MO12 +
   panel_NITGC1_domain + panel_NITGC1_assay_schematic + 
   panel_GcG_NIT_SNAP + panel_GcG_SNAP + panel_GcG_NIT_DMSO + panel_GcG_mutNIT_SNAP +
   patchwork::plot_layout(design = layout, 
-                         heights = c(1, 0.02, 0.8, 0.02, 0.75, 0.75),
+                         heights = c(1, 0.02, 1, 0.02, 1, 0.02, 0.75, 0.75),
                          widths = c(1, 1, 0.02, 1, 1, 0.02, 1, 1, 0.02, 1, 1)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = 'A') +  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12,face='bold')) #or 'bold', 'plain', 'italic'
 
 ggsave("figures/Fig4.png", limitsize = FALSE, units = c("px"), 
-       Fig4, width = 2800, height = 2700, bg='white')  
+       Fig4, width = 2800, height = 3600, bg='white')  
 
 
 ggsave("figures/Fig4.pdf", limitsize = FALSE, 
-       units = c("px"), Fig4, width = 2400, height = 2000)  
+       units = c("px"), Fig4, width = 2800, height = 3600)  
 
 
 

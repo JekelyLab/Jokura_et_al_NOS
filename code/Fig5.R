@@ -360,30 +360,32 @@ panel_MC <- ggdraw() + draw_image(readPNG("pictures/WTvsNOS11_MC.png"))
 
 layout <- "
 AAAAAABBBCCCFFFFFF
+AAAAAA######FFFFFF
 AAAAAADDDEEEFFFFFF
 ##################
-GGGGGGHHHHHHIIIIII
-JJJJJJKKKKKKLLLLLL"
+GGGGGGIIIIIIKKKKKK
+HHHHHHJJJJJJLLLLLL"
 
 Fig5 <- panel_method + 
   panel_Ca_NOS + panel_IHC_NOS +
   panel_Ca_RGW + panel_IHC_RGW + 
   panel_correlation +
-  panel_cPRC + panel_INNOS + panel_INRGW + 
-  panel_Ser + panel_NIT2MO_INNOS + panel_NIT2MO_INRGW  +  
+  panel_INNOS + panel_NIT2MO_INNOS + 
+  panel_INRGW + panel_NIT2MO_INRGW +
+  panel_Ser + panel_MC +
   patchwork::plot_layout(design = layout, 
-                         heights = c(0.5, 0.5, 0.02, 1, 1)) + #we can change the heights of the rows in our layout (widths also can be defined)
+                         heights = c(0.4, 0.02, 0.4, 0.05, 0.8, 0.8)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, 
-          face='plain')) #or 'bold', 'italic'
-
-ggsave("figures/Fig5.pdf", limitsize = FALSE, 
-       units = c("px"), Fig5, width = 3200, height = 2300)  
+          face='bold')) #or 'bold', 'italic'
+ 
 
 ggsave("figures/Fig5.png", limitsize = FALSE, 
-       units = c("px"), Fig5, width = 3200, height = 2300, bg='white')  
+       units = c("px"), Fig5, width = 3200, height = 2500, bg='white')  
 
 
+ggsave("figures/Fig5.pdf", limitsize = FALSE, 
+       units = c("px"), Fig5, width = 3200, height = 2500) 
 
 
 
