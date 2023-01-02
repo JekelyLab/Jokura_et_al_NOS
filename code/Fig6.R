@@ -9,7 +9,7 @@ source("code/Packages_to_load.R")
 
 #read png convert to image panel
 
-panel_scRNA_dotplot <- ggdraw() + draw_image(readPNG("pictures/scRNAseq_forR_4.png"))
+panel_scRNA_dotplot <- ggdraw() + draw_image(readPNG("pictures/scRNAseq_forR_5.png"))
 panel_model <- ggdraw() + draw_image(readPNG("pictures/model.png"))
 
 #combine panels into Figure and save final figure as pdf and png
@@ -28,4 +28,4 @@ ggsave("figures/Fig6.png", limitsize = FALSE,
        units = c("px"), Fig6, width = 2400, height = 1000, bg='white')  
 
 ggsave("figures/Fig6.pdf", limitsize = FALSE, 
-       units = c("px"), Fig6, width = 2350, height = 1700)  
+       units = c("px"), Fig6, width = 2400, height = 1000)  

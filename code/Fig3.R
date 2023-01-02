@@ -464,7 +464,7 @@ ABD
 CCE
 "
 
-Fig3_suppl1 <-  
+Fig3_sup1 <-  
   panel_2dpf_Tracking + panel_2dpf_TP + panel_2d_vd + 
   panel_2dpf_TD + panel_3dpf_TD +
   patchwork::plot_layout(design = layout2, heights = c(1, 1),
@@ -472,8 +472,8 @@ Fig3_suppl1 <-
   patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
 
-ggsave("figures/Fig3_suppl1.png", limitsize = FALSE, 
-       units = c("px"), Fig3_suppl1, width = 2400, height = 1200, bg='white')  
+ggsave("figures/Fig3_sup1.png", limitsize = FALSE, 
+       units = c("px"), Fig3_sup1, width = 2400, height = 1200, bg='white')  
 
-ggsave("figures/Fig3_suppl1.pdf", limitsize = FALSE, 
-       units = c("px"), Fig3_suppl1, width = 2400, height = 1200)  
+ggsave("figures/Fig3_sup1.pdf", limitsize = FALSE, 
+       units = c("px"), Fig3_sup1, width = 2400, height = 1200)  
