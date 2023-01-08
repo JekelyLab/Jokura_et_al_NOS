@@ -121,7 +121,7 @@ WTvsNOS_2d %>%
   theme_plot +
   labs(fill = "genotype", x = "30 sec bins", y = "Vertical displacement (mm/s)")+
   scale_y_continuous(limits = c(-0.6, 0.65)) +
-  scale_x_discrete(labels=c("30", "60", "90","120", 
+  scale_x_discrete(labels=c("30", "60", "90", 
                             "30", "60", "90","120",
                             "30", "60", "90","120",
                             "30", "60", "90","120",
@@ -172,8 +172,8 @@ WTvsNOS_3d %>%
   theme_plot +
   labs(fill = "genotype", x = "30 sec bins", y = "Vertical displacement (mm/s)")+
   scale_y_continuous(limits = c(-0.81, 0.5)) +
-  scale_x_discrete(labels=c("30", "60", "90","120", 
-                           "30", "60", "90","120",
+  scale_x_discrete(labels=c("30", "60", "90", 
+                           "30", "60", "90",
                            "30", "60", "90","120",
                            "30", "60", "90","120",
                            "30", "60", "90","120",
