@@ -321,8 +321,8 @@ panel_IHC_NOS <- ggdraw() + draw_image(readPNG("pictures/n51hpf_WT_e-1_IHC_point
   draw_label("RYa", x = 0.15, y = 0.92, hjust = 0, color='red',size = 10, fontface='bold') +
   draw_label("DAPI", x = 0.15, y = 0.82, hjust = 0, color='cyan', size = 10, fontface='bold') +
 #  draw_line(x = c(0.05, 0.45), y = c(0.1, 0.1), color = "white", size = 0.5) +
-  draw_label("IN-NOS", x = 0.45, y = 0.35, color='white', size = 10, fontface='plain') +
-  draw_line(x = c(0.32, 0.45), y = c(0.5, 0.4), color = "white", size = 0.4)
+  draw_label("IN-NOS", x = 0.3, y = 0.3, color='white', size = 10, fontface='plain') +
+  draw_line(x = c(0.34, 0.3), y = c(0.54, 0.35), color = "white", size = 0.4)
 
 panel_Ca_RGW <- ggdraw() + draw_image(readPNG("pictures/n54hpf_WT_e-1_GCaMP6s.png")) +
   draw_label("GCaMP6s", x = 0.15, y = 0.92, hjust = 0, color='white', size = 10, fontface='bold') +
@@ -334,10 +334,10 @@ panel_IHC_RGW <- ggdraw() + draw_image(readPNG("pictures/n54hpf_WT_e-1_RGWa.png"
   draw_label("RGWa, 5-HT", x = 0.15, y = 0.92, hjust = 0, color='red',size = 10, fontface='bold') +
   draw_label("DAPI", x = 0.15, y = 0.82, hjust = 0, color='cyan', size = 10, fontface='bold') +
 #  draw_line(x = c(0.05, 0.45), y = c(0.1, 0.1), color = "white", size = 0.5) +
-  draw_label("IN-RGWa", x = 0.2, y = 0.45, color='white', size = 10, fontface='plain') +
-  draw_line(x = c(0.2, 0.44), y = c(0.4, 0.3), color = "white", size = 0.4) +
-  draw_label("Ser-h1", x = 0.86, y = 0.55, color='white', size = 10, fontface='plain') +
-  draw_line(x = c(0.85, 0.87), y = c(0.75, 0.59), color = "white", size = 0.4)
+  draw_label("IN-RGWa", x = 0.3, y = 0.4, color='white', size = 10, fontface='plain') +
+  draw_line(x = c(0.47, 0.3), y = c(0.25, 0.35), color = "white", size = 0.4) +
+  draw_label("Ser-h1", x = 0.75, y = 0.45, color='white', size = 10, fontface='plain') +
+  draw_line(x = c(0.765, 0.75), y = c(0.81, 0.49), color = "white", size = 0.4)
 
 panel_correlation <- ggdraw() + 
   draw_image(readPNG("pictures/n54hpf_WT_e-1_ROI60_PD1.54_power2-8_pin216.9_frame_101-141_401-441_correlation.png")) +
