@@ -21,8 +21,8 @@ AB
 Fig6 <- panel_scRNA_dotplot + panel_model +
   patchwork::plot_layout(design = layout, 
                          widths = c(1, 1)) + #we can change the heights of the rows in our layout (widths also can be defined)
-  patchwork::plot_annotation(tag_levels = 'A') +  #we can change this to 'a' for small caps or 'i' or '1'
-  ggplot2::theme(plot.tag = element_text(size = 12, face='bold')) #or 'bold', 'italic'
+  patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
+  ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
 
 ggsave("figures/Fig6.png", limitsize = FALSE, 
        units = c("px"), Fig6, width = 1800, height = 1000, bg='white')  
