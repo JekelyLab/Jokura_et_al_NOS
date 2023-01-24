@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.1.11)  11 JAN 2023 12:00
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.1.11)  24 JAN 2023 17:07
  restricted system commands enabled.
 **Manuscript.tex
 (./Manuscript.tex
@@ -1047,70 +1047,66 @@ LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
 (Font)              scaled to size 12.0pt on input line 105.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
 (Font)              scaled to size 10.0pt on input line 111.
+LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
+(Font)              scaled to size 10.0pt on input line 155.
 [1
 
 {c:/Users/klamd/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 174.
 <../figures/Fig1.png, id=16, 433.62pt x 325.215pt>
 File: ../figures/Fig1.png Graphic file (type png)
 <use ../figures/Fig1.png>
-Package luatex.def Info: ../figures/Fig1.png  used on input line 201.
+Package luatex.def Info: ../figures/Fig1.png  used on input line 204.
 (luatex.def)             Requested size: 498.6856pt x 374.01419pt.
 <../figures/Fig2.png, id=17, 505.89pt x 192.72pt>
 File: ../figures/Fig2.png Graphic file (type png)
 <use ../figures/Fig2.png>
-Package luatex.def Info: ../figures/Fig2.png  used on input line 272.
+Package luatex.def Info: ../figures/Fig2.png  used on input line 241.
 (luatex.def)             Requested size: 498.67125pt x 189.96999pt.
 [2] [3<../figures/Fig1.png>]
-<../figures/Fig3.png, id=29, 578.16pt x 289.08pt>
+<../figures/Fig3.png, id=29, 578.16pt x 313.17pt>
 File: ../figures/Fig3.png Graphic file (type png)
 <use ../figures/Fig3.png>
-Package luatex.def Info: ../figures/Fig3.png  used on input line 312.
-(luatex.def)             Requested size: 498.66353pt x 249.33176pt.
-[4<../figures/Fig2.png>] [5<../figures/Fig3.png>] [6]
-<../figures/Fig4.png, id=44, 674.52pt x 867.24pt>
+Package luatex.def Info: ../figures/Fig3.png  used on input line 302.
+(luatex.def)             Requested size: 498.66353pt x 270.1094pt.
+[4<../figures/Fig2.png>] [5<../figures/Fig3.png>]
+<../figures/Fig4.png, id=40, 674.52pt x 867.24pt>
 File: ../figures/Fig4.png Graphic file (type png)
 <use ../figures/Fig4.png>
-Package luatex.def Info: ../figures/Fig4.png  used on input line 445.
+Package luatex.def Info: ../figures/Fig4.png  used on input line 421.
 (luatex.def)             Requested size: 498.67383pt x 641.15208pt.
 
-LaTeX Warning: Float too large for page by 120.2378pt on input line 468.
+LaTeX Warning: Float too large for page by 120.2378pt on input line 445.
 
-<../figures/Fig5.png, id=45, 770.88pt x 602.25pt>
+[6] [7<../figures/Fig4.png>]
+<../figures/Fig5.png, id=50, 903.375pt x 481.8pt>
 File: ../figures/Fig5.png Graphic file (type png)
 <use ../figures/Fig5.png>
-Package luatex.def Info: ../figures/Fig5.png  used on input line 492.
-(luatex.def)             Requested size: 498.65472pt x 389.57399pt.
-[7] [8<../figures/Fig4.png>] [9<../figures/Fig5.png>]
-<../figures/Fig6.png, id=62, 433.62pt x 240.9pt>
+Package luatex.def Info: ../figures/Fig5.png  used on input line 502.
+(luatex.def)             Requested size: 498.67732pt x 265.96123pt.
+[8] [9<../figures/Fig5.png>] [10]
+<../figures/Fig6.png, id=66, 433.62pt x 240.9pt>
 File: ../figures/Fig6.png Graphic file (type png)
 <use ../figures/Fig6.png>
-Package luatex.def Info: ../figures/Fig6.png  used on input line 651.
+Package luatex.def Info: ../figures/Fig6.png  used on input line 662.
 (luatex.def)             Requested size: 498.6856pt x 277.04753pt.
-
-Underfull \hbox (badness 1418) in paragraph at lines 666--693
-\TU/Arial(0)/m/n/10 The sgRNA was as-sem-bled from two an-nealed oligonu-cleotides (5’-TAGGGCAATACTGGCTCCACTC-3’,
- []
-
-[10] [11<../figures/Fig6.png>] [12] [13] [14
+[11<../figures/Fig6.png>] [12] [13] [14
 Missing character: There is no  (U+F0B4) in font Arial:mode=node;script=latn;language=dflt;+tlig;!
-] [15] [16] (./Manuscript.aux))
+] [15] [16] [17] (./Manuscript.aux))
 
 Here is how much of LuaTeX's memory you used:
- 20042 strings out of 478384
+ 20043 strings out of 478384
  125086,1977958 words of node,token memory allocated
  557 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 9 attribute, 61 glue_spec, 9 attribute_list, 1 write, 1 user_defined, 2 pdf_action nodes
-   avail lists: 1:5,2:495,3:183,4:96,5:226,6:62,7:14993,8:88,9:216,10:33,11:1197
+   avail lists: 1:3,2:492,3:182,4:78,5:272,6:60,7:13861,8:85,9:216,10:27,11:1200
  39363 multiletter control sequences out of 65536+600000
- 102 fonts using 32058163 bytes
- 86i,6n,122p,1711b,380s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102 fonts using 32057783 bytes
+ 86i,6n,122p,1821b,380s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Windows/Fonts/arialbd.ttf><c:/Windows/Fonts/ARIALNI.TTF><c:/Windows/Fonts/arial.ttf>
-Output written on Manuscript.pdf (16 pages, 11611377 bytes).
+Output written on Manuscript.pdf (17 pages, 11588618 bytes).
 
-PDF statistics: 253 PDF objects out of 1000 (max. 8388607)
- 217 compressed objects within 3 object streams
- 85 named destinations out of 1000 (max. 131072)
+PDF statistics: 258 PDF objects out of 1000 (max. 8388607)
+ 221 compressed objects within 3 object streams
+ 86 named destinations out of 1000 (max. 131072)
  57 words of extra memory for PDF output out of 10000 (max. 100000000)
 
