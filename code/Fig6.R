@@ -11,21 +11,24 @@ source("code/Packages_to_load.R")
 
 panel_scRNA_dotplot <- ggdraw() + draw_image(readPNG("pictures/scRNAseq_forR_5.png"))
 panel_model <- ggdraw() + draw_image(readPNG("pictures/model_2.png"))
+panel_fitting <- ggdraw() + draw_image(readPNG("pictures/best_fit_1.png"))
+panel_block_diagram <- ggdraw() + draw_image(readPNG("pictures/draft_block_diagram.png"))
 
 #combine panels into Figure and save final figure as pdf and png
 #panels of different sizes
 layout <- "
 AB
+CD
 "
 
-Fig6 <- panel_scRNA_dotplot + panel_model +
+Fig6 <- panel_block_diagram + panel_fitting + panel_scRNA_dotplot + panel_model +
   patchwork::plot_layout(design = layout, 
                          widths = c(1, 1)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
 
 ggsave("figures/Fig6.png", limitsize = FALSE, 
-       units = c("px"), Fig6, width = 1800, height = 1000, bg='white')  
+       units = c("px"), Fig6, width = 1800, height = 1800, bg='white')  
 
 ggsave("figures/Fig6.pdf", limitsize = FALSE, 
        units = c("px"), Fig6, width = 1800, height = 1000)  
