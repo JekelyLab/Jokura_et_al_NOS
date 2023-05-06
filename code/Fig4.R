@@ -486,11 +486,11 @@ Fig4 <-
   patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
 
-ggsave("figures/Fig4.png", limitsize = FALSE, units = c("px"), 
+ggsave("Manuscript/figures/Fig4.png", limitsize = FALSE, units = c("px"), 
        Fig4, width = 2800, height = 3600, bg='white')  
 
 
-ggsave("figures/Fig4.pdf", limitsize = FALSE, 
+ggsave("Manuscript/figures/Fig4.pdf", limitsize = FALSE, 
        units = c("px"), Fig4, width = 2800, height = 3600)  
 
 

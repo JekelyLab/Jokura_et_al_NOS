@@ -383,11 +383,11 @@ Fig5 <- panel_Ca_IHC_RY + panel_Ca_IHC_RGW + panel_correlation +
   ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
 
 
-ggsave("figures/Fig5.png", limitsize = FALSE, 
+ggsave("Manuscript/figures/Fig5.png", limitsize = FALSE, 
        units = c("px"), Fig5, width = 3750, height = 2000, bg='white')  
 
 
-ggsave("figures/Fig5.pdf", limitsize = FALSE, 
+ggsave("Manuscript/figures/Fig5.pdf", limitsize = FALSE, 
        units = c("px"), Fig5, width = 3750, height = 2000) 
 
 
@@ -414,7 +414,7 @@ ggsave("figures/Fig5.pdf", limitsize = FALSE,
 #  ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
 
 
-#ggsave("figures/Fig5.png", limitsize = FALSE, 
+#ggsave("Manuscript/figures/Fig5.png", limitsize = FALSE, 
 #       units = c("px"), Fig5, width = 3200, height = 2500, bg='white')  
 
 

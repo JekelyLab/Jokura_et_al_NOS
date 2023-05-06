@@ -70,8 +70,8 @@ Fig1_sup2 <- panel_NOS3d_ventr_HCR + panel_NOS3d_ant_HCR +
   ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
 
 
-ggsave("figures/Fig1_sup2.png", limitsize = FALSE, 
+ggsave("Manuscript/figures/Fig1_sup2.png", limitsize = FALSE, 
        units = c("px"), Fig1_sup2, width = 1200, height = 688, bg='white') 
 
-ggsave("figures/Fig1_sup2.pdf", limitsize = FALSE, 
+ggsave("Manuscript/figures/Fig1_sup2.pdf", limitsize = FALSE, 
        units = c("px"), Fig1_sup2, width = 1200, height = 688)  

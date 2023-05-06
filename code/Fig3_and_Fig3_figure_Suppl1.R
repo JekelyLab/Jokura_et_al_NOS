@@ -482,10 +482,10 @@ panel_3dpf_TD <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_dista
 #  ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
 
 
-#ggsave("figures/Fig3v2.pdf", limitsize = FALSE, 
+#ggsave("Manuscript/figures/Fig3v2.pdf", limitsize = FALSE, 
 #       units = c("px"), Fig3v2, width = 2400, height = 1200)  
 
-#ggsave("figures/Fig3v2.png", limitsize = FALSE, 
+#ggsave("Manuscript/figures/Fig3v2.png", limitsize = FALSE, 
 #       units = c("px"), Fig3v2, width = 2400, height = 1200, bg='white')  
 
 
@@ -502,10 +502,10 @@ Fig3 <-  panel_Architecture + panel_3dpf_Tracking + panel_3dpf_TP +
   ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
 
 
-ggsave("figures/Fig3.png", limitsize = FALSE, 
+ggsave("Manuscript/figures/Fig3.png", limitsize = FALSE, 
        units = c("px"), Fig3, width = 2400, height = 1300, bg='white')  
 
-ggsave("figures/Fig3.pdf", limitsize = FALSE, 
+ggsave("Manuscript/figures/Fig3.pdf", limitsize = FALSE, 
        units = c("px"), Fig3, width = 2400, height = 1300)  
 
 
@@ -527,8 +527,8 @@ Fig3_sup1 <-
   patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
 
-ggsave("figures/Fig3_sup1.png", limitsize = FALSE, 
+ggsave("Manuscript/figures/Fig3_sup1.png", limitsize = FALSE, 
        units = c("px"), Fig3_sup1, width = 2400, height = 1200, bg='white')  
 
-ggsave("figures/Fig3_sup1.pdf", limitsize = FALSE, 
+ggsave("Manuscript/figures/Fig3_sup1.pdf", limitsize = FALSE, 
        units = c("px"), Fig3_sup1, width = 2400, height = 1200)  

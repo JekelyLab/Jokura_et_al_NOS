@@ -90,8 +90,8 @@ Fig4_sup2 <- panel_NIT1_MLD + panel_72_AP_NIT2 + panel_72_DV_NIT2 +
   patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
 
-ggsave("figures/Fig4_sup2.png", limitsize = FALSE, 
+ggsave("Manuscript/figures/Fig4_sup2.png", limitsize = FALSE, 
        units = c("px"), Fig4_sup2, width = 2400, height = 1900, bg='white') 
 
-ggsave("figures/Fig4_sup2.pdf", limitsize = FALSE, 
+ggsave("Manuscript/figures/Fig4_sup2.pdf", limitsize = FALSE, 
        units = c("px"), Fig4_sup2, width = 2350, height = 1700)  
