@@ -128,6 +128,13 @@ WTvsNOS_2d %>%
                             "30", "60", "90","120",
                             "30", "60", "90","120"))
 
+#save to source data
+WTvsNOS_2d %>% 
+  filter(!(condition %in% c(
+    "dark_30", "dark_60", "dark_90", "dark_120", "dark_150",
+    "dark3_30", "dark3_60", "dark3_90", "dark3_120", "dark3_150", "dark3_180"))) %>%
+  filter(genotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
+  write_csv("source_data/Figure3_figure_suppl1_source_data1.csv")
 
 
 # save plot ---------------------------------------------------------------
