@@ -3,7 +3,7 @@ title: Nitric-oxide-feedback to ciliary photoreceptor cells orchestrates UV avoi
   in zooplankton
 author: 
   - name: "Kei Jokura<sup>1,`*`</sup>, Nobuo Ueda<sup>2</sup>, Martin Gühmann<sup>3</sup>, Luis Alfonso Yañez-Guerra<sup>1</sup>, Piotr Słowiński<sup>1</sup>, Kyle C. A. Wedgewood<sup>1</sup> and Gáspár Jékely<sup>1,4,`*`</sup>"
-    affiliation: "<sup>1</sup>Living Systems Institute, University of Exeter, Stocker road, Exeter, EX4 <br> <sup>2</sup>Okinawa Institute of Science and Technology, Okinawa, Japan<br> <sup>3</sup>School of Biological Sciences, University of Bristol, Bristol, United Kingdom <br> <sup>4</sup>Centre for Organismal Studies (COS), University of Heidelberg, 69120 Heidelberg, Germany  <br> <sup>*</sup>Correspondence`:` kei.jokura @ exeter.ac.uk, gaspar.jekely @ cos.uni-heidelberg.de"
+    affiliation: "<sup>1</sup>Living Systems Institute, University of Exeter, Stocker road, Exeter, EX4 4QD, United Kingdom <sup>2</sup>Okinawa Institute of Science and Technology, Okinawa, Japan, <sup>3</sup>School of Biological Sciences, University of Bristol, Bristol, United Kingdom, <sup>4</sup>Centre for Organismal Studies (COS), University of Heidelberg, 69120 Heidelberg, Germany  <br> <sup>*</sup>Correspondence`:` kei.jokura @ exeter.ac.uk, gaspar.jekely @ cos.uni-heidelberg.de"
 output:
   html_document:
     theme: lumen
@@ -181,3 +181,41 @@ This work was funded by the Wellcome Trust (214337/Z/18/Z).
 
 ::: {#refs}
 :::
+
+
+## Figure supplements
+
+
+```{r echo=FALSE,fig.cap="**Figure 1 -- figure supplement 1** "}
+knitr::include_graphics(path = "figures/Fig1_sup1.png")
+
+```
+
+```{r echo=FALSE,fig.cap="**Figure 1 -- figure supplement 2** "}
+knitr::include_graphics(path = "figures/Fig1_sup2.png")
+
+```
+
+```{r echo=FALSE,fig.cap="**Figure 3 -- figure supplement 1** "}
+knitr::include_graphics(path = "figures/Fig3_sup1.png")
+
+```
+
+```{r echo=FALSE,fig.cap="**Figure 4 -- figure supplement 1** "}
+knitr::include_graphics(path = "figures/Fig4_sup1.png")
+
+```
+
+```{r echo=FALSE,fig.cap="**Figure 4 -- figure supplement 2** "}
+knitr::include_graphics(path = "figures/Fig4_sup2.png")
+
+```
+
+```{r echo=FALSE,fig.cap="**Figure 5 -- figure supplement 1** "}
+knitr::include_graphics(path = "figures/Fig5_sup1.png")
+
+```
+
+
+
+
