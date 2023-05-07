@@ -36,4 +36,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ![**Figure 4---figure supplement 2.** **(A)** Co-expression analysis image of the NIT-GC1 (magenta) and MLD-pedal2 amide proneuropeptide gene (MLD: green). Anterior view of the larva at two-day-old. **(B, C)** Expression analysis of the NIT-GC2 gene (magenta) using in situ HCR. Anterior (B) and posterior (C) views of the larva at three-day-old. **(D)** Co-localisation analysis using NIT-GC1 (magenta) and NOS (green) antibodies. Anterior view of the larva at two-day-old. **(E, F)** Localisation analysis using NIT-GC1 and NIT-GC2 antibodies for NIT-GC1 (E) and NIT-GC2 (F) morphant. Green shows co-staining with acetylated α-tubulin antibody (acTub). Anterior view of the larva at two-day-old.](../figures/Fig4_sup2.png){width="100%"}
 
-![**Figure 5---figure supplement 1.** Schematic diagram of the immunostaining procedure after calcium imaging.](../figures/Fig5_sup1.png){width="100%"}
+![Figure 5---figure supplement 1. Schematic diagram of the immunostaining procedure after calcium imaging.](../figures/Fig5_sup1.png){width="100%"} ![Figure 6---figure supplement 1.](../figures/Figure6_sup1.png){width="100%"}
+
+![**Figure 6---figure supplement 2.**](../figures/Figure6_sup2.png){width="100%"}
+
+![**Figure 6---figure supplement 3.**](../figures/Figure6_sup3.png){width="100%"}

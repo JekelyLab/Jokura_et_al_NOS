@@ -393,7 +393,7 @@ NITGC1_analysis %>%
   scale_color_manual(values=c('grey50')) +
   scale_y_continuous(breaks=seq(1.0, 1.2, length=3),limits = c(0.947, 1.2))+
   scale_x_continuous(breaks=seq(0, 10, length=6),limits = c(0, 10))+
-  labs(title = "Green cGull + ΔNIT-GC1", 
+  labs(title = "Green cGull + 'NIT-GC1'^'ΔNIT'", 
        x = "time (min)", 
        y = "normalized intensity") +
   annotate("segment", x=2, xend=10, y=1.165, yend=1.165, size=2, color = "dark gray")+
@@ -462,26 +462,25 @@ panel_GcG_mutNIT_SNAP <- ggdraw() + draw_image(readPNG("pictures/GcG-mutNIT-GC1-
 #combine panels into Figure and save final figure as pdf and png
 #panels of different sizes
 layout <- "
-AA#BB#CC#DD
+AAAAA#BBBBB
 ###########
-EEEEE#FFFFF
+CC#DD#EE#FF
 ###########
-GGGGG#HHHHH
+GGGIIIIJJJJ
+HHHKKKKLLLL
 ###########
-IIIKKKKLLLL
-JJJMMMMNNNN
+MMMMM#NNNNN
 "
 
 
-
 Fig4 <- 
-  panel_HCR_NIT1 + panel_HCR_NIT2 + panel_IHC_NIT1 + panel_IHC_NIT2 +
   panel_cPRC_NOS11 + panel_cPRC_NOS23 +
-  panel_cPRC_NIT1_MO12 + panel_cPRC_NIT2_MO12 +
+  panel_HCR_NIT1 + panel_HCR_NIT2 + panel_IHC_NIT1 + panel_IHC_NIT2 +
   panel_NITGC1_domain + panel_NITGC1_assay_schematic + 
   panel_GcG_NIT_SNAP + panel_GcG_SNAP + panel_GcG_NIT_DMSO + panel_GcG_mutNIT_SNAP +
+  panel_cPRC_NIT1_MO12 + panel_cPRC_NIT2_MO12 +
   patchwork::plot_layout(design = layout, 
-                         heights = c(1, 0.02, 1, 0.02, 1, 0.02, 0.75, 0.75),
+                         heights = c(1, 0.02, 1, 0.02, 0.75, 0.75, 0.02, 1),
                          widths = c(1, 1, 0.02, 1, 1, 0.02, 1, 1, 0.02, 1, 1)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
