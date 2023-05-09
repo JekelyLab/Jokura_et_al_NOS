@@ -31,7 +31,8 @@ panel_NOS3d_ventr_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR_72_DV_NOS_9
   draw_line(x = c(0.77, 0.66), y = c(0.65, 0.67), color = "white", size = 0.1) +
   draw_label("adult eyes", x = 0.55, y = 0.34, size = 5, color = "white") +
   draw_line(x = c(0.26, 0.44), y = c(0.43, 0.35), color = "white", size = 0.1) +
-  draw_line(x = c(0.77, 0.65), y = c(0.43, 0.35), color = "white", size = 0.1)
+  draw_line(x = c(0.77, 0.65), y = c(0.43, 0.35), color = "white", size = 0.1) +
+  draw_label("INNOS", x = 0.53, y = 0.45, color="white", size = 5, fontface="bold")
 
 
 panel_NOS3d_ant_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR_72_AP_NOS_89.25um.png")) +
@@ -53,7 +54,8 @@ panel_NOS3d_ant_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR_72_AP_NOS_89.
   draw_line(x = c(0.59, 0.77), y = c(0.7, 0.67), color = "white", size = 0.1) +
   draw_label("eyespot", x = 0.25, y = 0.37, size = 5, color = "white") +
   draw_label("INNOS_dl", x = 0.73, y = 0.36, size = 4, color = "white") +
-  draw_label("INNOS_vl", x = 0.92, y = 0.09, size = 4, color = "white")
+  draw_label("INNOS_vl", x = 0.92, y = 0.09, size = 4, color = "white") +
+  draw_label("INNOS", x = 0.51, y = 0.52, color="white", size = 5, fontface="bold")
 
 
 
@@ -70,8 +72,8 @@ Fig1_sup2 <- panel_NOS3d_ventr_HCR + panel_NOS3d_ant_HCR +
   ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
 
 
-ggsave("Manuscript/figures/Fig1_sup2.png", limitsize = FALSE, 
+ggsave("figures/Fig1_sup2.png", limitsize = FALSE, 
        units = c("px"), Fig1_sup2, width = 1200, height = 688, bg='white') 
 
-ggsave("Manuscript/figures/Fig1_sup2.pdf", limitsize = FALSE, 
+ggsave("figures/Fig1_sup2.pdf", limitsize = FALSE, 
        units = c("px"), Fig1_sup2, width = 1200, height = 688)  

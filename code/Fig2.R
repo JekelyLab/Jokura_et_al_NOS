@@ -82,9 +82,9 @@ Fig2v2 <- panel_DAF + panel_DAFFM_intensity + panel_DAFFM +
   ggplot2::theme(plot.tag = element_text(size = 12, 
                                          face='plain')) #or 'bold', 'italic'
 
-ggsave("Manuscript/figures/Fig2.png", limitsize = FALSE, 
+ggsave("figures/Fig2.png", limitsize = FALSE, 
        units = c("px"), Fig2v2, width = 2100, height = 800, bg='white')
 
-ggsave("Manuscript/figures/Fig2.pdf", limitsize = FALSE, 
+ggsave("figures/Fig2.pdf", limitsize = FALSE, 
        units = c("px"), Fig2v2, width = 2100, height = 800)  
   

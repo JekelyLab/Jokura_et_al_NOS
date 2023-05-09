@@ -18,8 +18,8 @@ Fig5_sup1 <- panel_method +
   patchwork::plot_layout(design = layout) #we can change the heights of the rows in our layout (widths also can be defined)
 
 
-ggsave("Manuscript/figures/Fig5_sup1.png", limitsize = FALSE, 
+ggsave("figures/Fig5_sup1.png", limitsize = FALSE, 
        units = c("px"), Fig5_sup1, width = 1857, height = 970, bg='white')  
 
-ggsave("Manuscript/figures/Fig5_sup1.pdf", limitsize = FALSE, 
+ggsave("figures/Fig5_sup1.pdf", limitsize = FALSE, 
        units = c("px"), Fig5_sup1, width = 1857, height = 970)  

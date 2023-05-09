@@ -64,6 +64,42 @@ WTvsNOS11_cPRC_INNOS_tb %>%
 WTvsNOS23_cPRC_INRGWa_tb%>%
   count(genotype)
 
+# plot NOS23 cPRC (vs INRGW) data with geom_smooth ----------------------------------------------
+
+WTvsNOS23_cPRC_INRGWa_tb$genotype <- factor(WTvsNOS23_cPRC_INRGWa_tb$genotype, 
+                                            levels=c("WT_cPRC", "WT_INRGWa", "NOS23_cPRC", "NOS23_INRGWa"))
+
+WTvsNOS23_cPRC_INRGWa_tb %>%
+  filter(genotype == "NOS23_cPRC" | genotype == "WT_cPRC") %>%
+  ggplot() +
+  annotate("rect", xmin=51, xmax=93, ymin=-Inf, ymax=Inf, 
+           alpha=0.1, fill="blue") +
+  aes(x=frame,y=intensity,color=genotype) +
+  geom_line(aes(group = sample), size=0.2, alpha=0.2) +
+  geom_smooth(aes(fill = genotype), level = 0.99, size = 1, span = 0.03, 
+              method = "loess") +
+  annotate("segment", x=15, xend=35, y=1.3, yend=1.3, size=1)+
+  annotate("segment", x=15, xend=15, y=1.3, yend=1.5, size=1)+
+  annotate("text", x=24, y=1.25, label="10 sec", size=3)+
+  annotate("text", x=31, y=1.4, label="0.4 ΔF/F0", size=3)+
+  annotate("text", x=72, y=1.7, label="405 nm", color="purple", size=4)+
+  annotate("text", x=160, y=1.7, label="cPRC", size=5)+
+  ylim(0.4,1.7)+
+  theme_void()  +
+  theme(legend.title = element_blank(), legend.text.align=0,
+        legend.text = element_text(size=12)) +
+  #Specify colours and legend labels
+  scale_color_manual(values=c(Okabe_Ito[6], paired[7]),
+                     labels = c("WT", expression('NOS'^'Δ23/Δ23'))) +
+  scale_fill_manual(values=c(Okabe_Ito[6], paired[7]),
+                    labels = c("WT", expression('NOS'^'Δ23/Δ23')))
+
+# save plot ---------------------------------------------------------------
+
+ggsave("pictures/WTvsNOS23_vsINRGW_cPRC.png", limitsize = FALSE, 
+       units = c("px"), width = 1500, height = 800, bg='white')
+
+
 # plot NOS11 INNOS data with geom_smooth ----------------------------------------------
 
 WTvsNOS11_cPRC_INNOS_tb$genotype <- factor(WTvsNOS11_cPRC_INNOS_tb$genotype, 
@@ -75,22 +111,22 @@ WTvsNOS11_cPRC_INNOS_tb %>%
   annotate("rect", xmin=51, xmax=93, ymin=-Inf, ymax=Inf, 
            alpha=0.1, fill="blue") +
   aes(x=frame,y=intensity,color=genotype) +
-  geom_line(aes(group = sample), size=0.3, alpha=0.3) +
+  geom_line(aes(group = sample), size=0.2, alpha=0.2) +
   geom_smooth(aes(fill = genotype), level = 0.99, size = 1, span = 0.03, 
               method = "loess") +
   annotate("segment", x=15, xend=35, y=2.0, yend=2.0, size=1)+
   annotate("segment", x=15, xend=15, y=2.0, yend=2.25, size=1)+
   annotate("text", x=24, y=1.91, label="10 sec", size=3)+
-  annotate("text", x=32, y=2.13, label="0.5 ΔF/F0", size=3)+
+  annotate("text", x=31, y=2.13, label="0.5 ΔF/F0", size=3)+
   annotate("text", x=72, y=3.12, label="405 nm", color="purple", size=4)+
   annotate("text", x=160, y=3.12, label="INNOS", size=5)+
   ylim(0.5,3.12)+
   theme_void()  +
   theme(legend.title = element_blank(), legend.text.align=0,
         legend.text = element_text(size=12)) +
-  scale_color_manual(values=c(Okabe_Ito[1], Okabe_Ito[5]),
+  scale_color_manual(values=c(paired[10], set2[4]),
                      labels = c("WT", expression('NOS'^'Δ11/Δ11'))) +
-  scale_fill_manual(values=c(Okabe_Ito[1], Okabe_Ito[5]),
+  scale_fill_manual(values=c(paired[10], set2[4]),
                     labels = c("WT", expression('NOS'^'Δ11/Δ11')))
 
 # save plot ---------------------------------------------------------------
@@ -110,13 +146,13 @@ WTvsNOS23_cPRC_INRGWa_tb %>%
   annotate("rect", xmin=51, xmax=93, ymin=-Inf, ymax=Inf, 
            alpha=0.1, fill="blue") +
   aes(x=frame,y=intensity,color=genotype) +
-  geom_line(aes(group = sample), size=0.3, alpha=0.3) +
+  geom_line(aes(group = sample), size=0.2, alpha=0.2) +
   geom_smooth(aes(fill = genotype), level = 0.99, size = 1, span = 0.03, 
               method = "loess") +
   annotate("segment", x=15, xend=35, y=1.4, yend=1.4, size=1)+
   annotate("segment", x=15, xend=15, y=1.4, yend=1.5, size=1)+
   annotate("text", x=24, y=1.36, label="10 sec", size=3)+
-  annotate("text", x=32, y=1.45, label="0.2 ΔF/F0", size=3)+
+  annotate("text", x=31, y=1.45, label="0.2 ΔF/F0", size=3)+
   annotate("text", x=72, y=1.7, label="405 nm", color="purple", size=4)+
   annotate("text", x=160, y=1.7, label="INRGW", size=5)+
   ylim(0.75,1.7)+
@@ -124,9 +160,9 @@ WTvsNOS23_cPRC_INRGWa_tb %>%
   theme(legend.title = element_blank(), legend.text.align=0,
         legend.text = element_text(size=12)) +
   #Specify colours and legend labels
-  scale_color_manual(values=c(Okabe_Ito[1], Okabe_Ito[5]),
+  scale_color_manual(values=c(blues[8], Okabe_Ito[2]),
                      labels = c("WT", expression('NOS'^'Δ23/Δ23'))) +
-  scale_fill_manual(values=c(Okabe_Ito[1], Okabe_Ito[5]),
+  scale_fill_manual(values=c(blues[8], Okabe_Ito[2]),
                     labels = c("WT", expression('NOS'^'Δ23/Δ23')))
 
 # save plot ---------------------------------------------------------------
@@ -145,22 +181,22 @@ NIT2MO_INNOS_tb %>%
   annotate("rect", xmin=51, xmax=93, ymin=-Inf, ymax=Inf, 
            alpha=0.1, fill="blue") +
   aes(x=frame,y=intensity,color=MO) +
-  geom_line(aes(group = sample), size=0.3, alpha=0.3) +
+  geom_line(aes(group = sample), size=0.2, alpha=0.2) +
   geom_smooth(aes(fill = MO), level = 0.99, size = 1, span = 0.02, 
               method = "loess") +
   annotate("segment", x=15, xend=35, y=1.6, yend=1.6, size=1)+
   annotate("segment", x=15, xend=15, y=1.6, yend=1.85, size=1)+
   annotate("text", x=24, y=1.52, label="10 sec", size=3)+
-  annotate("text", x=32, y=1.73, label="0.5 ΔF/F0", size=3)+
+  annotate("text", x=31, y=1.73, label="0.5 ΔF/F0", size=3)+
   annotate("text", x=72, y=3.12, label="405 nm", color="purple", size=4)+
   annotate("text", x=160, y=3.12, label="INNOS", size=5)+
   ylim(0.5,3.12)+
   theme_void()  +
   theme(legend.title = element_blank(), legend.text.align=0,
         legend.text = element_text(size=12)) +
-  scale_color_manual(values=c(Okabe_Ito[2], Okabe_Ito[6]),
+  scale_color_manual(values=c(dark2[4], set2[4]),
                      labels = c("NIT2 MO1", "NIT2 MO2")) +
-  scale_fill_manual(values=c(Okabe_Ito[2], Okabe_Ito[6]),
+  scale_fill_manual(values=c(dark2[4], set2[4]),
                     labels = c("NIT2 MO1", "NIT2 MO2"))
 
 # save plot ---------------------------------------------------------------
@@ -179,22 +215,22 @@ NIT2MO_INRGW_tb %>%
   annotate("rect", xmin=51, xmax=93, ymin=-Inf, ymax=Inf, 
            alpha=0.1, fill="blue") +
   aes(x=frame,y=intensity,color=MO) +
-  geom_line(aes(group = sample), size=0.3, alpha=0.3) +
+  geom_line(aes(group = sample), size=0.2, alpha=0.2) +
   geom_smooth(aes(fill = MO), level = 0.99, size = 1, span = 0.03, 
               method = "loess") +
   annotate("segment", x=15, xend=35, y=2.0, yend=2.0, size=1)+
   annotate("segment", x=15, xend=15, y=2.0, yend=2.25, size=1)+
   annotate("text", x=24, y=1.9, label="10 sec", size=3)+
-  annotate("text", x=32, y=2.13, label="0.5 ΔF/F0", size=3)+
+  annotate("text", x=31, y=2.13, label="0.5 ΔF/F0", size=3)+
   annotate("text", x=72, y=3.3, label="405 nm", color="purple", size=4)+
   annotate("text", x=160, y=3.3, label="INRGW", size=5)+
   ylim(0.5,3.3)+
   theme_void()  +
   theme(legend.title = element_blank(), legend.text.align=0,
         legend.text = element_text(size=12)) +
-  scale_color_manual(values=c(Okabe_Ito[2], Okabe_Ito[6]),
+  scale_color_manual(values=c(blues[8], Okabe_Ito[2]),
                      labels = c("NIT2 MO1", "NIT2 MO2")) +
-  scale_fill_manual(values=c(Okabe_Ito[2], Okabe_Ito[6]),
+  scale_fill_manual(values=c(blues[8], Okabe_Ito[2]),
                     labels = c("NIT2 MO1", "NIT2 MO2"))
 
 # save plot ---------------------------------------------------------------
@@ -214,23 +250,23 @@ WTvsNOS11_Ser_tb %>%
   ggplot() +
   annotate("rect", xmin=51, xmax=93, ymin=-Inf, ymax=Inf, 
            alpha=0.1, fill="blue") +
-  geom_line(aes(group = sample), size=0.3, alpha=0.3) +
+  geom_line(aes(group = sample), size=0.2, alpha=0.3) +
   aes(x=frame,y=intensity,color=genotype) +
   geom_smooth(aes(fill = genotype), level = 0.99, size = 1, span = 0.03, 
               method = "loess") +
   annotate("segment", x=15, xend=35, y=2.0, yend=2.0, size=1)+
   annotate("segment", x=15, xend=15, y=2.0, yend=2.25, size=1)+
   annotate("text", x=24, y=1.92, label="10 sec", size=3)+
-  annotate("text", x=32, y=2.13, label="0.5 ΔF/F0", size=3)+
+  annotate("text", x=31, y=2.13, label="0.5 ΔF/F0", size=3)+
   annotate("text", x=72, y=3, label="405 nm", color="purple", size=4)+
   annotate("text", x=160, y=3, label="Ser-h1", size=5)+
   ylim(0.5,3)+
   theme_void()  +
   theme(legend.title = element_blank(), legend.text.align=0,
         legend.text = element_text(size=12)) +
-  scale_color_manual(values=c(Okabe_Ito[1], Okabe_Ito[5]),
+  scale_color_manual(values=c(paired[6], paired[5]),
                      labels = c("WT", expression('NOS'^'Δ11/Δ11'))) +
-  scale_fill_manual(values=c(Okabe_Ito[1], Okabe_Ito[5]),
+  scale_fill_manual(values=c(paired[6], paired[5]),
                     labels = c("WT", expression('NOS'^'Δ11/Δ11')))
 
 # save plot ---------------------------------------------------------------
@@ -251,22 +287,22 @@ WTvsNOS11_MC_tb %>%
   annotate("rect", xmin=51, xmax=93, ymin=-Inf, ymax=Inf, 
            alpha=0.1, fill="blue") +
   aes(x=frame,y=intensity,color=genotype) +
-  geom_line(aes(group = sample), size=0.3, alpha=0.3) +
+  geom_line(aes(group = sample), size=0.2, alpha=0.2) +
   geom_smooth(aes(fill = genotype), level = 0.99, size = 1, span = 0.04, 
               method = "loess") +
   annotate("segment", x=15, xend=35, y=3.6, yend=3.6, size=1)+
   annotate("segment", x=15, xend=15, y=3.6, yend=4.1, size=1)+
   annotate("text", x=24, y=3.4, label="10 sec", size=3)+
-  annotate("text", x=32, y=3.85, label="1.0 ΔF/F0", size=3)+
+  annotate("text", x=31, y=3.85, label="1.0 ΔF/F0", size=3)+
   annotate("text", x=72, y=5, label="405 nm", color="purple", size=4)+
   annotate("text", x=160, y=5, label="MC", size=5)+
   ylim(0.2,5)+
   theme_void()  +
   theme(legend.title = element_blank(), legend.text.align=0,
         legend.text = element_text(size=12)) +
-  scale_color_manual(values=c(Okabe_Ito[1], Okabe_Ito[5]),
+  scale_color_manual(values=c(paired[12], dark2[6]),
                      labels = c("WT", expression('NOS'^'Δ11/Δ11'))) +
-  scale_fill_manual(values=c(Okabe_Ito[1], Okabe_Ito[5]),
+  scale_fill_manual(values=c(paired[12], dark2[6]),
                     labels = c("WT", expression('NOS'^'Δ11/Δ11')))
 
 # save plot ---------------------------------------------------------------
@@ -316,6 +352,8 @@ panel_Ca_IHC_RGW <- ggdraw() + draw_image(readPNG("pictures/n54hpf_WT_e_calcium_
 panel_correlation <- ggdraw() + 
   draw_image(readPNG("pictures/n54hpf_WT_e-1_ROI60_PD1.54_power2-8_pin216.9_frame_101-141_401-441_correlation.png"))
 
+panel_cPRC <- ggdraw() + draw_image(readPNG("pictures/WTvsNOS23_vsINRGW_cPRC.png"))
+
 panel_INNOS <- ggdraw() + draw_image(readPNG("pictures/WTvsNOS11_INNOS.png"))
 panel_INRGW <- ggdraw() + draw_image(readPNG("pictures/WTvsNOS23_INRGW.png"))
 
@@ -345,12 +383,40 @@ Fig5 <- panel_Ca_IHC_RY + panel_Ca_IHC_RGW + panel_correlation +
   ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
 
 
-ggsave("Manuscript/figures/Fig5.png", limitsize = FALSE, 
+ggsave("figures/Fig5.png", limitsize = FALSE, 
        units = c("px"), Fig5, width = 3750, height = 2000, bg='white')  
 
 
-ggsave("Manuscript/figures/Fig5.pdf", limitsize = FALSE, 
+ggsave("figures/Fig5.pdf", limitsize = FALSE, 
        units = c("px"), Fig5, width = 3750, height = 2000) 
+
+
+
+#layout <- "
+#AAAAAABBBCCCFFFFFF
+#AAAAAA######FFFFFF
+#AAAAAADDDEEEFFFFFF
+###################
+#GGGGGGIIIIIIKKKKKK
+#HHHHHHJJJJJJLLLLLL"
+
+
+#Fig5 <- panel_method + 
+#  panel_Ca_NOS + panel_IHC_NOS +
+#  panel_Ca_RGW + panel_IHC_RGW + 
+#  panel_correlation +
+#  panel_INNOS + panel_NIT2MO_INNOS + 
+#  panel_INRGW + panel_NIT2MO_INRGW +
+#  panel_Ser + panel_MC +
+#  patchwork::plot_layout(design = layout, 
+#                         heights = c(0.4, 0.02, 0.4, 0.05, 0.8, 0.8)) + #we can change the heights of the rows in our layout (widths also can be defined)
+#  patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
+#  ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
+
+
+#ggsave("figures/Fig5.png", limitsize = FALSE, 
+#       units = c("px"), Fig5, width = 3200, height = 2500, bg='white')  
+
 
 
 

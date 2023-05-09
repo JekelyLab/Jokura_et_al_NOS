@@ -316,8 +316,8 @@ panel_NOS2d_ant_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR-IHC_51_AP_NOS
 panel_NOS3d <- ggdraw() + draw_image(readPNG("pictures/NOS-promotor_3d_acTub_XXum_crop.png")) +
   draw_label("transgene + IHC", x = 0.38, y = 0.99, size = 10) +
   draw_label("*", x = 0.55, y = 0.32, color='white',size = 18,fontface="plain") +
-  draw_image(readPNG("pictures/INNOS_vl.png"), 
-             scale = 0.35, x = 1, hjust = 1, halign = 1, valign = 0.075) +
+  #draw_image(readPNG("pictures/INNOS_vl.png"), 
+  #           scale = 0.35, x = 1, hjust = 1, halign = 1, valign = 0.075) +
   #draw_label("INNOS_vl", x = 0.9, y = 0.3, size = 5, color = "black") +
   draw_label("NOSp::palmi-3xHA", x = 0.34, y = 0.9, color="magenta", size = 10, fontface="plain") +
   draw_label("acTub", x = 0.8, y = 0.9, color="green", size = 10, fontface="plain") +
@@ -346,7 +346,7 @@ panel_NOS3d <- ggdraw() + draw_image(readPNG("pictures/NOS-promotor_3d_acTub_XXu
 #      face='plain', color='black')) #or 'bold', 'italic'
 
 
-#ggsave("Manuscript/figures/Fig1.png", limitsize = FALSE, 
+#ggsave("figures/Fig1.png", limitsize = FALSE, 
 #       units = c("px"), Fig1, width = 2400, height = 1350, bg='white') 
 
 layout <- "
@@ -365,11 +365,11 @@ Fig1 <- panel_SEM + panel_INNOS_ventr + panel_INNOS_ant +
       face='plain', color='black')) #or 'bold', 'italic'
  
 
-ggsave("Manuscript/figures/Fig1.png", limitsize = FALSE, 
+ggsave("figures/Fig1.png", limitsize = FALSE, 
        units = c("px"), Fig1, width = 1800, height = 1350, bg='white')  
 
 
-ggsave("Manuscript/figures/Fig1.pdf", limitsize = FALSE, 
+ggsave("figures/Fig1.pdf", limitsize = FALSE, 
        units = c("px"), Fig1, width = 1800, height = 1350) 
 
 
