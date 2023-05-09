@@ -223,7 +223,7 @@ panel_SEM <- ggdraw() +
   draw_image(SEM) +
   draw_line(x = c(0.1, 0.2785), y = c(0.07, 0.07), color = "black", size = 0.5) +
   draw_label(expression(paste("50 ", mu, "m")), x = 0.19, y = 0.11, size = 9) +
-  draw_label("dosal view", x = 0.3, y = 0.99, size = 10) +
+  draw_label("dorsal view", x = 0.3, y = 0.99, size = 10) +
   draw_label("A", x = 0.95, y = 0.93, size = 6) +
   draw_label("P", x = 0.95, y = 0.77, size = 6) +
   geom_segment(aes(x = x1, y = y1, xend = x2, yend = y2), data = arrow, 
