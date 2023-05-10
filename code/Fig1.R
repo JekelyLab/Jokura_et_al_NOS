@@ -346,7 +346,7 @@ panel_NOS3d <- ggdraw() + draw_image(readPNG("pictures/NOS-promotor_3d_acTub_XXu
 #      face='plain', color='black')) #or 'bold', 'italic'
 
 
-#ggsave("figures/Fig1.png", limitsize = FALSE, 
+#ggsave("Manuscript/figures/Fig1.png", limitsize = FALSE, 
 #       units = c("px"), Fig1, width = 2400, height = 1350, bg='white') 
 
 layout <- "
@@ -365,11 +365,11 @@ Fig1 <- panel_SEM + panel_INNOS_ventr + panel_INNOS_ant +
       face='plain', color='black')) #or 'bold', 'italic'
  
 
-ggsave("figures/Fig1.png", limitsize = FALSE, 
+ggsave("Manuscript/figures/Fig1.png", limitsize = FALSE, 
        units = c("px"), Fig1, width = 1800, height = 1350, bg='white')  
 
 
-ggsave("figures/Fig1.pdf", limitsize = FALSE, 
+ggsave("Manuscript/figures/Fig1.pdf", limitsize = FALSE, 
        units = c("px"), Fig1, width = 1800, height = 1350) 
 
 

@@ -1,17 +1,29 @@
-R version 4.2.1 (2022-06-23 ucrt)
-Platform: x86_64-w64-mingw32/x64 (64-bit)
-Running under: Windows 10 x64 (build 22621)
+R version 4.2.3 (2023-03-15)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 20.04.6 LTS
 
 Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.9.0
+LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.9.0
 
 locale:
+<<<<<<< HEAD
 [1] LC_COLLATE=Japanese_Japan.utf8  LC_CTYPE=Japanese_Japan.utf8    LC_MONETARY=Japanese_Japan.utf8
 [4] LC_NUMERIC=C                    LC_TIME=Japanese_Japan.utf8    
+=======
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_GB.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_GB.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_GB.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_GB.UTF-8 LC_IDENTIFICATION=C       
+>>>>>>> aca2b70175ce8fc82878146d4b6e4da25e84fdf8
 
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
+<<<<<<< HEAD
  [1] esquisse_1.1.2         scales_1.2.1           tidygraph_1.2.2        rgexf_0.16.2          
  [5] patchwork_1.1.2        webshot2_0.1.0         visNetwork_2.1.2       networkD3_0.4         
  [9] igraph_1.3.5           RColorBrewer_1.1-3     leiden_0.4.3           forcats_0.5.2         
@@ -44,3 +56,45 @@ loaded via a namespace (and not attached):
  [91] nabor_0.5.0         grid_4.2.1          readxl_1.4.1        data.table_1.14.2   reprex_2.0.2       
  [96] digest_0.6.29       xtable_1.8-4        httpuv_1.6.6        textshaping_0.3.6   munsell_0.5.0      
 [101] bslib_0.4.0         phosphoricons_0.1.2
+=======
+ [1] esquisse_1.1.2     scales_1.2.1       tidygraph_1.2.3   
+ [4] rgexf_0.16.2       patchwork_1.1.2    webshot2_0.1.0    
+ [7] visNetwork_2.1.2   networkD3_0.4      igraph_1.3.5      
+[10] RColorBrewer_1.1-3 leiden_0.4.3       lubridate_1.9.2   
+[13] forcats_1.0.0      stringr_1.5.0      dplyr_1.1.1       
+[16] purrr_1.0.1        readr_2.1.4        tidyr_1.3.0       
+[19] tibble_3.2.1       ggplot2_3.4.2      tidyverse_2.0.0   
+[22] png_0.1-8          cowplot_1.1.1      magick_2.7.4      
+
+loaded via a namespace (and not attached):
+ [1] websocket_1.4.1     colorspace_2.1-0    ellipsis_0.3.2     
+ [4] rio_0.5.29          rsconnect_0.8.29    rprojroot_2.0.3    
+ [7] rstudioapi_0.14     farver_2.1.1        bit64_4.0.5        
+[10] chromote_0.1.1      fansi_1.0.4         splines_4.2.3      
+[13] cachem_1.0.7        knitr_1.42          jsonlite_1.8.4     
+[16] servr_0.26          shiny_1.7.4         compiler_4.2.3     
+[19] httr_1.4.5          Matrix_1.5-3        fastmap_1.1.1      
+[22] cli_3.6.1           later_1.3.0         htmltools_0.5.5    
+[25] tools_4.2.3         gtable_0.3.3        glue_1.6.2         
+[28] rappdirs_0.3.3      Rcpp_1.0.10         cellranger_1.1.0   
+[31] jquerylib_0.1.4     vctrs_0.6.2         writexl_1.4.2      
+[34] nlme_3.1-162        xfun_0.39           ps_1.7.5           
+[37] openxlsx_4.2.5.2    timechange_0.2.0    mime_0.12          
+[40] lifecycle_1.0.3     XML_3.99-0.14       vroom_1.6.1        
+[43] ragg_1.2.5          hms_1.1.3           promises_1.2.0.1   
+[46] parallel_4.2.3      yaml_2.3.7          curl_5.0.0         
+[49] reticulate_1.28     datamods_1.4.0      sass_0.4.5         
+[52] stringi_1.7.12      zip_2.3.0           systemfonts_1.0.4  
+[55] rlang_1.1.0         pkgconfig_2.0.3     evaluate_0.20      
+[58] lattice_0.20-45     htmlwidgets_1.6.2   labeling_0.4.2     
+[61] bit_4.0.4           processx_3.8.1      tidyselect_1.2.0   
+[64] here_1.0.1          magrittr_2.0.3      R6_2.5.1           
+[67] generics_0.1.3      pillar_1.9.0        haven_2.5.2        
+[70] foreign_0.8-82      withr_2.5.0         mgcv_1.8-42        
+[73] reactable_0.4.4     crayon_1.5.2        shinyWidgets_0.7.6 
+[76] utf8_1.2.3          shinybusy_0.3.1     tzdb_0.3.0         
+[79] rmarkdown_2.21      grid_4.2.3          readxl_1.4.2       
+[82] data.table_1.14.8   digest_0.6.31       xtable_1.8-4       
+[85] httpuv_1.6.9        textshaping_0.3.6   munsell_0.5.0      
+[88] bslib_0.4.2         phosphoricons_0.1.2
+>>>>>>> aca2b70175ce8fc82878146d4b6e4da25e84fdf8

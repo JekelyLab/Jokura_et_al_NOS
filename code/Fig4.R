@@ -50,11 +50,6 @@ NIT1_MO_tb%>%
 NIT2_MO_tb%>%
   count(morphant)
 
-
-
-
-
-
 # plot NOS23 cPRC data with geom_smooth ----------------------------------------------
 
 WT_cPRC_tidy$genotype <- factor(WT_cPRC_tidy$genotype, 
@@ -65,13 +60,13 @@ WT_cPRC_tidy %>%
   annotate("rect", xmin=51, xmax=93, ymin=-Inf, ymax=Inf, 
            alpha=0.1, fill="blue") +
   aes(x=frame,y=intensity,color=genotype) +
-  geom_line(aes(group = sample), size=0.2, alpha=0.2) +
+  geom_line(aes(group = sample), size=0.3, alpha=0.3) +
   geom_smooth(aes(fill = genotype), level = 0.99, size = 1, span = 0.03, 
               method = "loess", formula = y ~ x) +
   annotate("segment", x=20, xend=40, y=1.4, yend=1.4, size=1)+
   annotate("segment", x=20, xend=20, y=1.4, yend=1.65, size=1)+
   annotate("text", x=29, y=1.35, label="10 sec", size=3)+
-  annotate("text", x=35, y=1.53, label="0.5 ΔF/F0", size=3)+
+  annotate("text", x=36, y=1.53, label="0.5 ΔF/F0", size=3)+
   annotate("text", x=72, y=1.7, label="405 nm", color="purple", size=4)+
   annotate("text", x=160, y=1.7, label="cPRC", size=5)+
   ylim(0.2,1.7)+
@@ -79,9 +74,9 @@ WT_cPRC_tidy %>%
   theme(legend.title = element_blank(), 
         legend.text.align = 0,
         legend.text = element_text(size=12)) +
-  scale_color_manual(values=c(Okabe_Ito[6], set2[4]),
+  scale_color_manual(values=c(Okabe_Ito[1], Okabe_Ito[5]),
                      labels = c("WT", expression('NOS'^'Δ23/Δ23'))) +
-  scale_fill_manual(values=c(Okabe_Ito[6], set2[4]),
+  scale_fill_manual(values=c(Okabe_Ito[1], Okabe_Ito[5]),
                     labels = c("WT", expression('NOS'^'Δ23/Δ23')))
 
 # save plot ---------------------------------------------------------------
@@ -101,13 +96,13 @@ WTvsNOS11_cPRC_INNOS_tb %>%
   annotate("rect", xmin=51, xmax=93, ymin=-Inf, ymax=Inf, 
            alpha=0.1, fill="blue") +
   aes(x = frame, y = intensity, color = genotype)+
-  geom_line(aes(group = sample), size=0.2, alpha=0.2) +
+  geom_line(aes(group = sample), size=0.3, alpha=0.3) +
   geom_smooth(aes(fill = genotype), level = 0.99, size = 1, span = 0.03, 
               method = "loess", formula = y ~ x) +
   annotate("segment", x=15, xend=35, y=1.8, yend=1.8, size=1)+
   annotate("segment", x=15, xend=15, y=1.8, yend=2.05, size=1)+
   annotate("text", x=24, y=1.7, label="10 sec", size=3)+
-  annotate("text", x=30, y=1.94, label="0.5 ΔF/F0", size=3)+
+  annotate("text", x=32, y=1.94, label="0.5 ΔF/F0", size=3)+
   annotate("text", x=72, y=2.6, label="405 nm", color="purple", size=4)+
   annotate("text", x=160, y=2.6, label="cPRC", size=5)+
   ylim(0.4,2.6) +
@@ -118,9 +113,9 @@ WTvsNOS11_cPRC_INNOS_tb %>%
         #legend.title = element_text(size = 12)
         legend.text = element_text(size=12)) +
   #Specify colours and legend labels
-  scale_color_manual(values=c(Okabe_Ito[6], Okabe_Ito[7]),
+  scale_color_manual(values=c(Okabe_Ito[1], Okabe_Ito[5]),
                      labels = c("WT", expression('NOS'^'Δ11/Δ11'))) +
-  scale_fill_manual(values=c(Okabe_Ito[6], Okabe_Ito[7]),
+  scale_fill_manual(values=c(Okabe_Ito[1], Okabe_Ito[5]),
                     labels = c("WT", expression('NOS'^'Δ11/Δ11')))
 
 
@@ -128,70 +123,6 @@ WTvsNOS11_cPRC_INNOS_tb %>%
 
 ggsave("pictures/WTvsNOS11_cPRC.png", limitsize = FALSE, 
        units = c("px"), width = 1600, height = 800, bg='white')  
-
-
-# plot Control + NIT1 morphant calcium imaging data with geom_smooth ----------------------------------------------
-
-NIT1_MO_tb$morphant <- factor(NIT1_MO_tb$morphant, 
-                                levels=c("non-MO", "NIT1-MO1", "NIT1-MO2"))
-
-NIT1_MO_tb %>%
-  ggplot(aes(x = frame, y = intensity, color = morphant)) +
-  annotate("rect", xmin=51, xmax=90, ymin=-Inf, ymax=Inf, 
-           alpha=0.1, fill="blue") +
-  geom_line(aes(group = sample), size=0.2, alpha=0.2) +
-  geom_smooth(aes(fill = morphant), level = 0.99, size = 1, span = 0.03, 
-              method = "loess") +
-  annotate("segment", x=20, xend=40, y=1.6, yend=1.6, size=1)+
-  annotate("segment", x=20, xend=20, y=1.6, yend=1.7, size=1)+
-  annotate("text", x=29, y=1.45, label="10 sec", size=3)+
-  annotate("text", x=23, y=1.85, label="0.2 ΔF/F0", size=3)+
-  annotate("text", x=70, y=2.3, label="405 nm", size=4)+
-  annotate("text", x=160, y=2.3, label="cPRC", size=4)+
-  ylim(0.1,2.3)+
-  theme_void() +
-  theme(legend.title = element_blank(), legend.text.align=0,
-        legend.text = element_text(size=10)) +
-  scale_color_manual(values=c(Okabe_Ito[2], Okabe_Ito[6], Okabe_Ito[7]),
-                     labels = c('control', 'NIT-GC1 MO1','NIT-GC1 MO2')) +
-  scale_fill_manual(values=c(Okabe_Ito[2], Okabe_Ito[6], Okabe_Ito[7]),
-                    labels = c('control', 'NIT-GC1 MO1','NIT-GC1 MO2'))
-
-# save plot ---------------------------------------------------------------
-
-ggsave("pictures/NIT1_MO_cPRC.png", limitsize = FALSE, 
-       units = c("px"), width = 1600, height = 600, bg='white')  
-
-
-# plot Control against MO calcium imaging data with geom_smooth ----------------------------------------------
-
-NIT1_MO_tb %>%
-  filter(morphant == "non-MO") %>%
-  ggplot(aes(x = frame, y = intensity, color = morphant)) +
-  annotate("rect", xmin=51, xmax=90, ymin=-Inf, ymax=Inf, 
-           alpha=0.1, fill="blue") +
-  geom_line(aes(group = sample), size=0.2, alpha=0.2) +
-  geom_smooth(aes(fill = morphant), level = 0.99, size = 0.75, span = 0.03, 
-              method = "loess") +
-  annotate("segment", x=20, xend=40, y=1.6, yend=1.6, size=1)+
-  annotate("segment", x=20, xend=20, y=1.6, yend=1.7, size=1)+
-  annotate("text", x=29, y=1.45, label="10 sec", size=3)+
-  annotate("text", x=23, y=1.85, label="0.2 ΔF/F0", size=3)+
-  annotate("text", x=70, y=2.3, label="405 nm", size=4)+
-  annotate("text", x=160, y=2.3, label="cPRC", size=4)+
-  ylim(0.4,2.3)+
-  theme_void() +
-  theme(legend.position = "none") +
-  scale_color_manual(values=c(Okabe_Ito[2]),
-                     labels = c('control')) +
-  scale_fill_manual(values=c(Okabe_Ito[2]),
-                    labels = c('control'))
-
-# save plot ---------------------------------------------------------------
-
-ggsave("pictures/NIT1_MO_cont_cPRC.png", limitsize = FALSE, 
-       units = c("px"), width = 1070, height = 1000, bg='white')  
-
 
 
 # plot NIT1 morphant calcium imaging data with geom_smooth ----------------------------------------------
@@ -205,13 +136,13 @@ NIT1_MO_tb %>%
   annotate("rect", xmin=51, xmax=93, ymin=-Inf, ymax=Inf, 
            alpha=0.1, fill="blue") +
   aes(x = frame, y = intensity, color = morphant) +
-  geom_line(aes(group = sample), size=0.2, alpha=0.2) +
+  geom_line(aes(group = sample), size=0.3, alpha=0.3) +
   geom_smooth(aes(fill = morphant), level = 0.99, size = 0.75, span = 0.03, 
               method = "loess", formula = y ~ x) +
   annotate("segment", x=20, xend=40, y=1.3, yend=1.3, size=1)+
   annotate("segment", x=20, xend=20, y=1.3, yend=1.5, size=1)+
   annotate("text", x=29, y=1.25, label="10 sec", size=3)+
-  annotate("text", x=35, y=1.4, label="0.2 ΔF/F0", size=3)+
+  annotate("text", x=36, y=1.4, label="0.2 ΔF/F0", size=3)+
   annotate("text", x=72, y=1.6, label="405 nm", color="purple", size=4)+
   annotate("text", x=160, y=1.6, label="cPRC", size=5)+
   ylim(0.2,1.6)+
@@ -219,17 +150,18 @@ NIT1_MO_tb %>%
   theme(legend.title = element_blank(), 
         legend.text.align = 0,
         legend.text = element_text(size=12)) +
-  scale_color_manual(values=c(yelloworangered[6], yelloworangered[5]),
+  scale_color_manual(values=c(Okabe_Ito[3], Okabe_Ito[7]),
                      labels = c('NIT1 MO1','NIT1 MO2')) +
-  scale_fill_manual(values=c(yelloworangered[6], yelloworangered[5]),
+  scale_fill_manual(values=c(Okabe_Ito[3], Okabe_Ito[7]),
                     labels = c('NIT1 MO1','NIT1 MO2'))
 
+pie(rep(1,8),col=Okabe_Ito, Okabe_Ito)
+Okabe_Ito
+pie(rep(1,12), col=paired, paired, main='Paired')
 # save plot ---------------------------------------------------------------
 
 ggsave("pictures/NIT1_MO1_2_cPRC.png", limitsize = FALSE, 
        units = c("px"), width = 1600, height = 800, bg='white')  
-
-
 
 
 # plot NIT2 morphant data with geom_smooth ----------------------------------------------
@@ -239,13 +171,13 @@ NIT2_MO_tb %>%
   annotate("rect", xmin=51, xmax=93, ymin=-Inf, ymax=Inf, 
            alpha=0.1, fill="blue") +
   aes(x = frame, y = intensity, color = morphant) +
-  geom_line(aes(group = sample), size=0.2, alpha=0.2) +
+  geom_line(aes(group = sample), size=0.3, alpha=0.3) +
   geom_smooth(aes(fill = morphant), level = 0.99, size = 1, span = 0.03, 
               method = "loess", formula = y ~ x) +
   annotate("segment", x=20, xend=40, y=1.6, yend=1.6, size=1)+
   annotate("segment", x=20, xend=20, y=1.6, yend=1.85, size=1)+
   annotate("text", x=29, y=1.52, label="10 sec", size=3)+
-  annotate("text", x=35, y=1.73, label="0.5 ΔF/F0", size=3)+
+  annotate("text", x=36, y=1.73, label="0.5 ΔF/F0", size=3)+
   annotate("text", x=72, y=2.3, label="405 nm", color="purple", size=4)+
   annotate("text", x=160, y=2.3, label="cPRC", size=5)+
   ylim(0.4,2.3)+
@@ -253,9 +185,9 @@ NIT2_MO_tb %>%
   theme(legend.title = element_blank(), 
         legend.text.align = 0,
         legend.text = element_text(size=12)) +
-  scale_color_manual(values=c(Okabe_Ito[1], yelloworangered[4]),
+  scale_color_manual(values=c(Okabe_Ito[2], Okabe_Ito[6]),
                      labels = c('NIT2 MO1','NIT2 MO2')) +
-  scale_fill_manual(values=c(Okabe_Ito[1], yelloworangered[4]),
+  scale_fill_manual(values=c(Okabe_Ito[2], Okabe_Ito[6]),
                      labels = c('NIT2 MO1','NIT2 MO2'))
 
 # save plot ---------------------------------------------------------------
@@ -271,7 +203,7 @@ NITGC1_analysis %>%
   #cell names are not unique and the same across expression, fix by adding new column  
   mutate(cell_expression = paste(cell, expression, sep = "")) %>%
   ggplot(aes(x = time, y = intensity, color = expression)) +
-  geom_line(aes(group = cell_expression), size = 0.35, alpha = 0.3, 
+  geom_line(aes(group = cell_expression), size = 0.4, alpha = 0.3, 
             show.legend = FALSE) +
   geom_smooth(level = 0.99, size = 0.7, span = 0.15, 
               method = "loess", 
@@ -307,7 +239,7 @@ NITGC1_analysis %>%
   #cell names are not unique and the same across expression, fix by adding new column  
   mutate(cell_expression = paste(cell, expression, sep = "")) %>%
   ggplot(aes(x = time, y = intensity, color = expression)) +
-  geom_line(aes(group = cell_expression), size = 0.35, alpha = 0.3, 
+  geom_line(aes(group = cell_expression), size = 0.4, alpha = 0.3, 
             show.legend = FALSE) +
   geom_smooth(level = 0.99, size = 0.7, span = 0.15, 
               method = "loess", 
@@ -343,7 +275,7 @@ NITGC1_analysis %>%
   #cell names are not unique and the same across expression, fix by adding new column  
   mutate(cell_expression = paste(cell, expression, sep = "")) %>%
   ggplot(aes(x = time, y = intensity, color = expression)) +
-  geom_line(aes(group = cell_expression), size = 0.35, alpha = 0.3, 
+  geom_line(aes(group = cell_expression), size = 0.4, alpha = 0.3, 
             show.legend = FALSE) +
   geom_smooth(level = 0.99, size = 0.7, span = 0.15, 
               method = "loess", 
@@ -378,7 +310,7 @@ NITGC1_analysis %>%
   #cell names are not unique and the same across expression, fix by adding new column  
   mutate(cell_expression = paste(cell, expression, sep = "")) %>%
   ggplot(aes(x = time, y = intensity, color = expression)) +
-  geom_line(aes(group = cell_expression), size = 0.35, alpha = 0.3, 
+  geom_line(aes(group = cell_expression), size = 0.4, alpha = 0.3, 
             show.legend = FALSE) +
   geom_smooth(level = 0.99, size = 0.7, span = 0.15, 
               method = "loess", 
@@ -403,7 +335,6 @@ NITGC1_analysis %>%
 
 ggsave("pictures/GcG-mutNIT-GC1-SNAP.png", limitsize = FALSE, 
        units = c("px"), width = 950, height = 640, bg='white')  
-
 
 
 # assemble figure ---------------------------------------------------------
@@ -466,13 +397,21 @@ AAAAA#BBBBB
 ###########
 CC#DD#EE#FF
 ###########
+<<<<<<< HEAD
 GGGIIIIJJJJ
 HHHKKKKLLLL
+=======
+GGGIIIIKKKK
+HHHJJJJLLLL
+>>>>>>> aca2b70175ce8fc82878146d4b6e4da25e84fdf8
 ###########
 MMMMM#NNNNN
 "
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aca2b70175ce8fc82878146d4b6e4da25e84fdf8
 Fig4 <- 
   panel_cPRC_NOS11 + panel_cPRC_NOS23 +
   panel_HCR_NIT1 + panel_HCR_NIT2 + panel_IHC_NIT1 + panel_IHC_NIT2 +
@@ -485,11 +424,10 @@ Fig4 <-
   patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
 
-ggsave("figures/Fig4.png", limitsize = FALSE, units = c("px"), 
+ggsave("Manuscript/figures/Fig4.png", limitsize = FALSE, units = c("px"), 
        Fig4, width = 2800, height = 3600, bg='white')  
 
-
-ggsave("figures/Fig4.pdf", limitsize = FALSE, 
+ggsave("Manuscript/figures/Fig4.pdf", limitsize = FALSE, 
        units = c("px"), Fig4, width = 2800, height = 3600)  
 
 
