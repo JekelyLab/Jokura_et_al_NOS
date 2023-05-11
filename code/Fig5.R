@@ -93,6 +93,13 @@ WTvsNOS11_cPRC_INNOS_tb %>%
   scale_fill_manual(values=c(Okabe_Ito[1], Okabe_Ito[5]),
                     labels = c("WT", expression('NOS'^'Δ11/Δ11')))
 
+# save to source data-------------------------------------------------------
+
+WTvsNOS11_cPRC_INNOS_tb %>%
+  filter(genotype == "WT_INNOS" | genotype == "NOS11_INNOS") %>%
+  write_csv("source_data/Figure5_source_data1.csv")
+
+
 # save plot ---------------------------------------------------------------
 
 ggsave("pictures/WTvsNOS11_INNOS.png", limitsize = FALSE, 
@@ -129,6 +136,12 @@ WTvsNOS23_cPRC_INRGWa_tb %>%
   scale_fill_manual(values=c(Okabe_Ito[1], Okabe_Ito[5]),
                     labels = c("WT", expression('NOS'^'Δ23/Δ23')))
 
+# save to source data-------------------------------------------------------
+
+WTvsNOS23_cPRC_INRGWa_tb %>%
+  filter(genotype == "NOS23_INRGWa" | genotype == "WT_INRGWa") %>%
+  write_csv("source_data/Figure5_source_data2.csv")
+
 # save plot ---------------------------------------------------------------
 
 ggsave("pictures/WTvsNOS23_INRGW.png", limitsize = FALSE, 
@@ -163,6 +176,12 @@ NIT2MO_INNOS_tb %>%
   scale_fill_manual(values=c(Okabe_Ito[2], Okabe_Ito[6]),
                     labels = c("NIT2 MO1", "NIT2 MO2"))
 
+# save to source data-------------------------------------------------------
+
+NIT2MO_INNOS_tb %>%
+  filter(MO == "NIT2MO1_NOS" | MO == "NIT2MO2_NOS") %>%
+  write_csv("source_data/Figure5_source_data3.csv")
+
 # save plot ---------------------------------------------------------------
 
 ggsave("pictures/NIT2MO_INNOS.png", limitsize = FALSE, 
@@ -196,6 +215,12 @@ NIT2MO_INRGW_tb %>%
                      labels = c("NIT2 MO1", "NIT2 MO2")) +
   scale_fill_manual(values=c(Okabe_Ito[2], Okabe_Ito[6]),
                     labels = c("NIT2 MO1", "NIT2 MO2"))
+
+# save to source data-------------------------------------------------------
+
+NIT2MO_INRGW_tb %>%
+  filter(MO == "NIT2MO1_RGW" | MO == "NIT2MO2_RGW") %>%
+  write_csv("source_data/Figure5_source_data4.csv")
 
 # save plot ---------------------------------------------------------------
 
@@ -233,6 +258,11 @@ WTvsNOS11_Ser_tb %>%
   scale_fill_manual(values=c(Okabe_Ito[1], Okabe_Ito[5]),
                     labels = c("WT", expression('NOS'^'Δ11/Δ11')))
 
+# save to source data-------------------------------------------------------
+
+WTvsNOS11_Ser_tb %>%
+  write_csv("source_data/Figure5_source_data5.csv")
+
 # save plot ---------------------------------------------------------------
 
 ggsave("pictures/WTvsNOS11_Ser-h1.png", limitsize = FALSE, 
@@ -268,6 +298,11 @@ WTvsNOS11_MC_tb %>%
                      labels = c("WT", expression('NOS'^'Δ11/Δ11'))) +
   scale_fill_manual(values=c(Okabe_Ito[1], Okabe_Ito[5]),
                     labels = c("WT", expression('NOS'^'Δ11/Δ11')))
+
+# save to source data-------------------------------------------------------
+
+WTvsNOS11_MC_tb %>%
+  write_csv("source_data/Figure5_source_data6.csv")
 
 # save plot ---------------------------------------------------------------
 

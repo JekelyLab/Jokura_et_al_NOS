@@ -39,6 +39,11 @@ DAFFM %>%
   scale_color_manual(values=c(Okabe_Ito[3], dark2[8]),
                      labels = c("cPRC stim.", "ctr stim."))
 
+# save to source data-------------------------------------------------------
+
+DAFFM %>%
+  write_csv("source_data/Figure2_source_data1.csv")
+
 # save plot ---------------------------------------------------------------
 
 ggsave("pictures/DAFFM.png", limitsize = FALSE, 

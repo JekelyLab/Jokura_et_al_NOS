@@ -132,13 +132,14 @@ WTvsNOS_2d %>%
                             "30", "60", "90","120",
                             "30", "60", "90","120"))
 
-#save to source data
+# save to source data-------------------------------------------------------
+
 WTvsNOS_2d %>% 
   filter(!(condition %in% c(
     "dark_30", "dark_60", "dark_90", "dark_120", "dark_150",
     "dark3_30", "dark3_60", "dark3_90", "dark3_120", "dark3_150", "dark3_180"))) %>%
   filter(genotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
-  write_csv("source_data/Figure3_figure_suppl1_source_data1.csv")
+  write_csv("source_data/Figure3_supplement1_source_data2.csv")
 
 
 # save plot ---------------------------------------------------------------
@@ -189,6 +190,16 @@ WTvsNOS_3d %>%
                            "30", "60", "90","120",
                            "30", "60", "90","120"))
 
+# save to source data-------------------------------------------------------
+
+WTvsNOS_3d %>%
+  filter(!(condition %in% c(
+    "dark_30", "dark_60", "dark_90", "dark_120", "dark_150",
+    "dark3_30", "dark3_60", "dark3_90", "dark3_120", "dark3_150", "dark3_180"))) %>%
+  filter(genotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
+  write_csv("source_data/Figure3_source_data4.csv")
+
+
 # save plot ---------------------------------------------------------------
 
 ggsave("pictures/vertical_displacement_3dpf_WTvsNOSmix.png", limitsize = FALSE, 
@@ -234,6 +245,15 @@ L_NAME_3d %>%
                             "30", "60", "90","120")
                    )
 
+# save to source data-------------------------------------------------------
+
+L_NAME_3d %>%
+  filter(!(condition %in% c(
+    "dark_30", "dark_60", "dark_90", "dark_120", "dark_150",
+    "dark3_30", "dark3_60", "dark3_90", "dark3_120", "dark3_150", "dark3_180"))) %>%
+  write_csv("source_data/Figure3_source_data5.csv")
+
+
 # save plot ---------------------------------------------------------------
 
 ggsave("pictures/vertical_displacement_3dpf_L_NAME.png", limitsize = FALSE, 
@@ -270,6 +290,13 @@ df_2d_nor %>%
                                       NOS23x23 = 'NOSΔ23/Δ23')))
 
 
+# save to source data-------------------------------------------------------
+
+df_2d_nor %>%
+  write_csv("source_data/Figure3_supplement1_source_data1.csv")
+
+
+
 # save plot ---------------------------------------------------------------
 
 ggsave("pictures/vertical_tracking_sideUV_2d.png", limitsize = FALSE, 
@@ -302,6 +329,12 @@ df_3d_nor %>%
              vars(Genotype), 
              labeller = as_labeller(c(WT = 'WT', NOS11x11 = 'NOSΔ11/Δ11',
                                       NOS23x23 = 'NOSΔ23/Δ23')))
+
+# save to source data-------------------------------------------------------
+
+df_3d_nor %>%
+  write_csv("source_data/Figure3_source_data1.csv")
+
 
 
 # save plot ---------------------------------------------------------------
@@ -340,6 +373,15 @@ df_2d_nor %>%
                expression('NOS'^'Δ11/Δ11'), 
                expression('NOS'^'Δ23/Δ23')))
 
+
+# save to source data-------------------------------------------------------
+
+df_2d_nor %>%
+  filter(sec > 0 & sec <= 40) %>%
+  filter(Genotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
+  write_csv("source_data/Figure3_supplement1_source_data3.csv")
+
+
 # save plot ---------------------------------------------------------------
 ggsave("pictures/vertical_tracking_position_sideUV_2d.png", limitsize = FALSE, 
        units = c("px"), width = 1600, height = 1000, bg='white')
@@ -375,6 +417,14 @@ df_3d_nor %>%
                expression('NOS'^'Δ11/Δ11'), 
                expression('NOS'^'Δ23/Δ23')))
 
+# save to source data-------------------------------------------------------
+
+df_3d_nor %>%
+  filter(sec > 0 & sec <= 40) %>%
+  filter(Genotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
+  write_csv("source_data/Figure3_source_data2.csv")
+
+
 # save plot ---------------------------------------------------------------
 ggsave("pictures/vertical_tracking_position_sideUV_3d.png", limitsize = FALSE, 
        units = c("px"), width = 1600, height = 1000, bg='white')
@@ -405,6 +455,12 @@ df_L_NAME_tracking %>%
                "0.1 mM" = Okabe_Ito[1],
                "1 mM" = Okabe_Ito[6]),
     labels = c("0 mM", "0.1 mM", "1.0 mM"))
+
+
+# save to source data-------------------------------------------------------
+
+df_L_NAME_tracking %>%
+  write_csv("source_data/Figure3_source_data3.csv")
 
 
 
@@ -445,6 +501,14 @@ df_2d_nor %>%
                expression('NOS'^'Δ11/Δ11'), 
                expression('NOS'^'Δ23/Δ23')))
 
+# save to source data-------------------------------------------------------
+
+df_2d_nor %>%
+  filter(sec > 0 & sec <= 40) %>%
+  filter(Genotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
+  write_csv("source_data/Figure3_supplement1_source_data4.csv")
+
+
 # save plot -------------------------------------------------------------------------------------------
 ggsave("pictures/vertical_tracking_distanse_sideUV_2d.png", limitsize = FALSE, 
        units = c("px"), width = 1600, height = 1000, bg='white')
@@ -480,6 +544,14 @@ df_3d_nor %>%
                expression('NOS'^'Δ11/Δ11'), 
                expression('NOS'^'Δ23/Δ23')))
 
+# save to source data-------------------------------------------------------
+
+df_3d_nor %>%
+  filter(sec > 0 & sec <= 40) %>%
+  filter(Genotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
+  write_csv("source_data/Figure3_supplement1_source_data5.csv")
+
+
 # save plot ---------------------------------------------------------------
 ggsave("pictures/vertical_tracking_distanse_sideUV_3d.png", limitsize = FALSE, 
        units = c("px"), width = 1600, height = 1000, bg='white')
@@ -510,6 +582,12 @@ df_L_NAME_tracking %>%
                "0.1 mM" = Okabe_Ito[1],
                "1 mM" = Okabe_Ito[6]),
     labels = c("0 mM", "0.1 mM", "1.0 mM"))
+
+# save to source data-------------------------------------------------------
+
+df_L_NAME_tracking %>%
+  write_csv("source_data/Figure3_supplement1_source_data6.csv")
+
 
 # save plot ---------------------------------------------------------------
 ggsave("pictures/vertical_tracking_distanse_sideUV_L_NAME.png", limitsize = FALSE, 

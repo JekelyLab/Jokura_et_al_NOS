@@ -79,6 +79,12 @@ WT_cPRC_tidy %>%
   scale_fill_manual(values=c(Okabe_Ito[1], Okabe_Ito[5]),
                     labels = c("WT", expression('NOS'^'Δ23/Δ23')))
 
+# save to source data-------------------------------------------------------
+
+WT_cPRC_tidy %>%
+  write_csv("source_data/Figure4_source_data2.csv")
+
+
 # save plot ---------------------------------------------------------------
 
 ggsave("pictures/WTvsNOS23_cPRC.png", limitsize = FALSE, 
@@ -117,6 +123,12 @@ WTvsNOS11_cPRC_INNOS_tb %>%
                      labels = c("WT", expression('NOS'^'Δ11/Δ11'))) +
   scale_fill_manual(values=c(Okabe_Ito[1], Okabe_Ito[5]),
                     labels = c("WT", expression('NOS'^'Δ11/Δ11')))
+
+# save to source data-------------------------------------------------------
+
+WTvsNOS11_cPRC_INNOS_tb %>%
+  filter(genotype == "WT_cPRC" | genotype == "NOS11_cPRC") %>%
+  write_csv("source_data/Figure4_source_data1.csv")
 
 
 # save plot ---------------------------------------------------------------
@@ -158,6 +170,13 @@ NIT1_MO_tb %>%
 pie(rep(1,8),col=Okabe_Ito, Okabe_Ito)
 Okabe_Ito
 pie(rep(1,12), col=paired, paired, main='Paired')
+
+# save to source data-------------------------------------------------------
+
+NIT1_MO_tb %>%
+  filter(morphant == "NIT1-MO1" | morphant == "NIT1-MO2") %>%
+  write_csv("source_data/Figure4_source_data7.csv")
+
 # save plot ---------------------------------------------------------------
 
 ggsave("pictures/NIT1_MO1_2_cPRC.png", limitsize = FALSE, 
@@ -189,6 +208,11 @@ NIT2_MO_tb %>%
                      labels = c('NIT2 MO1','NIT2 MO2')) +
   scale_fill_manual(values=c(Okabe_Ito[2], Okabe_Ito[6]),
                      labels = c('NIT2 MO1','NIT2 MO2'))
+
+# save to source data-------------------------------------------------------
+
+NIT2_MO_tb %>%
+  write_csv("source_data/Figure4_source_data8.csv")
 
 # save plot ---------------------------------------------------------------
 
@@ -224,6 +248,11 @@ NITGC1_analysis %>%
   annotate("segment", x=2, xend=10, y=1.165, yend=1.165, size=2, color = "dark gray")+
   annotate("text", x=2, y=1.185, size=3, hjust = 0, label="SNAP")
 
+# save to source data-------------------------------------------------------
+
+NITGC1_analysis %>%
+  filter(solution == "SNAP" & expression == "GcG-NIT1") %>%
+  write_csv("source_data/Figure4_source_data3.csv")
 
 # save plot ---------------------------------------------------------------
 
@@ -259,6 +288,12 @@ NITGC1_analysis %>%
        y = "normalized intensity") +
   annotate("segment", x=2, xend=10, y=1.165, yend=1.165, size=2, color = "dark gray")+
   annotate("text", x=2, y=1.185, size=3, hjust = 0, label="SNAP")
+
+# save to source data-------------------------------------------------------
+
+NITGC1_analysis %>%
+  filter(solution == "SNAP" & expression == "GcG") %>%
+  write_csv("source_data/Figure4_source_data4.csv")
 
 
 # save plot ---------------------------------------------------------------
@@ -296,6 +331,12 @@ NITGC1_analysis %>%
   annotate("segment", x=2, xend=10, y=1.165, yend=1.165, size=2, color = "dark gray")+
   annotate("text", x=2, y=1.185, size=3, hjust = 0, label="DMSO")
 
+# save to source data-------------------------------------------------------
+
+NITGC1_analysis %>%
+  filter(solution == "DMSO") %>%
+  write_csv("source_data/Figure4_source_data5.csv")
+
 # save plot ---------------------------------------------------------------
 
 ggsave("pictures/GcG-NIT-GC1-DMSO.png", limitsize = FALSE, 
@@ -325,11 +366,18 @@ NITGC1_analysis %>%
   scale_color_manual(values=c('grey50')) +
   scale_y_continuous(breaks=seq(1.0, 1.2, length=3),limits = c(0.947, 1.2))+
   scale_x_continuous(breaks=seq(0, 10, length=6),limits = c(0, 10))+
-  labs(title = "Green cGull + 'NIT-GC1'^'ΔNIT'", 
+  labs(title = c(expression('Green cGull + NIT-GC1'^'ΔNIT')), 
        x = "time (min)", 
        y = "normalized intensity") +
   annotate("segment", x=2, xend=10, y=1.165, yend=1.165, size=2, color = "dark gray")+
   annotate("text", x=2, y=1.185, size=3, hjust = 0, label = "SNAP")
+
+
+# save to source data-------------------------------------------------------
+
+NITGC1_analysis %>%
+  filter(expression == "GcG-mutNIT1") %>%
+  write_csv("source_data/Figure4_source_data6.csv")
 
 # save plot ---------------------------------------------------------------
 
@@ -397,21 +445,13 @@ AAAAA#BBBBB
 ###########
 CC#DD#EE#FF
 ###########
-<<<<<<< HEAD
 GGGIIIIJJJJ
 HHHKKKKLLLL
-=======
-GGGIIIIKKKK
-HHHJJJJLLLL
->>>>>>> aca2b70175ce8fc82878146d4b6e4da25e84fdf8
 ###########
 MMMMM#NNNNN
 "
 
-<<<<<<< HEAD
 
-=======
->>>>>>> aca2b70175ce8fc82878146d4b6e4da25e84fdf8
 Fig4 <- 
   panel_cPRC_NOS11 + panel_cPRC_NOS23 +
   panel_HCR_NIT1 + panel_HCR_NIT2 + panel_IHC_NIT1 + panel_IHC_NIT2 +
