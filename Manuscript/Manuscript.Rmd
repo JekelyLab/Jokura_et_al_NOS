@@ -282,6 +282,15 @@ The downward swimming behaviour of Platynereis larvae is the first step in the o
 These suggest that downward swimming due to NO activation of INRGWs may trigger the onset of settlement behaviour and metamorphosis [@Conzelmann2013][@Williams2015].
 These suggest that NO feedback signalling may act as a trigger for downward swimming via activation of INRGWs, which induces the initiation of settlement behaviour and metamorphosis.
 
+##Key resources table
+
+```         
+library(readxl)
+NOSpaper_keyresourcetale <- read_excel("source_data/key_resource_tale.xlsx")
+
+{r echo=FALSE,fig.cap="**Key resources table** "}
+```
+
 ## Materials and Methods
 
 **CRISPR-Cas9 Design and Microinjection**
@@ -445,6 +454,11 @@ knitr::include_graphics(path = "figures/Fig1_sup2.png")
 
 ```
 
+```{r echo=FALSE,fig.cap="**Figure 1 -- figure supplement 3** "}
+knitr::include_graphics(path = "figures/Fig1_sup3.png")
+
+```
+
 ```{r echo=FALSE,fig.cap="**Figure 3 -- figure supplement 1** "}
 knitr::include_graphics(path = "figures/Fig3_sup1.png")
 
@@ -457,6 +471,11 @@ knitr::include_graphics(path = "figures/Fig4_sup1.png")
 
 ```{r echo=FALSE,fig.cap="**Figure 4 -- figure supplement 2** "}
 knitr::include_graphics(path = "figures/Fig4_sup2.png")
+
+```
+
+```{r echo=FALSE,fig.cap="**Figure 4 -- figure supplement 3** "}
+knitr::include_graphics(path = "figures/Fig4_sup3.png")
 
 ```
 
