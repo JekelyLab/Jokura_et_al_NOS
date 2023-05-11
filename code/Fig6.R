@@ -18,18 +18,20 @@ panel_block_diagram <- ggdraw() + draw_image(readPNG("pictures/fitting_data_bloc
 #combine panels into Figure and save final figure as pdf and png
 #panels of different sizes
 layout <- "
-AB
-CD
+A#B
+###
+C#D
 "
 
 Fig6 <- panel_scRNA_dotplot + panel_model + panel_block_diagram + panel_fitting + 
   patchwork::plot_layout(design = layout, 
-                         widths = c(1, 1)) + #we can change the heights of the rows in our layout (widths also can be defined)
+                         heights = c(1, 0.05, 1),
+                         widths = c(1,0.02, 1)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
 
 ggsave("Manuscript/figures/Fig6.png", limitsize = FALSE, 
-       units = c("px"), Fig6, width = 1800, height = 1800, bg='white')  
+       units = c("px"), Fig6, width = 1800, height = 2200, bg='white')  
 
 ggsave("Manuscript/figures/Fig6.pdf", limitsize = FALSE, 
-       units = c("px"), Fig6, width = 1800, height = 1800)  
+       units = c("px"), Fig6, width = 1800, height = 2200)  

@@ -402,8 +402,11 @@ df_L_NAME_tracking %>%
   scale_x_continuous(limits = c(0, 40)) +
   scale_color_manual(
     values = c("0 mM" = "grey90", 
-               "0.1 mM" = Okabe_Ito[2],
-               "1 mM" = Okabe_Ito[5]))
+               "0.1 mM" = Okabe_Ito[1],
+               "1 mM" = Okabe_Ito[6]),
+    labels = c("0 mM", "0.1 mM", "1.0 mM"))
+
+
 
 # save plot ---------------------------------------------------------------
 ggsave("pictures/vertical_tracking_position_sideUV_L_NAME.png", limitsize = FALSE, 
@@ -504,8 +507,9 @@ df_L_NAME_tracking %>%
   scale_x_continuous(limits = c(0, 40)) +
   scale_color_manual(
     values = c("0 mM" = "grey90", 
-               "0.1 mM" = Okabe_Ito[2],
-               "1 mM" = Okabe_Ito[5]))
+               "0.1 mM" = Okabe_Ito[1],
+               "1 mM" = Okabe_Ito[6]),
+    labels = c("0 mM", "0.1 mM", "1.0 mM"))
 
 # save plot ---------------------------------------------------------------
 ggsave("pictures/vertical_tracking_distanse_sideUV_L_NAME.png", limitsize = FALSE, 

@@ -308,6 +308,7 @@ panel_NOS2d_ant_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR-IHC_51_AP_NOS
   draw_label("NOS", x = 0.12, y = 0.9, color="magenta", size = 11, fontface="italic") +
   draw_label("acTub", x = 0.36, y = 0.9, color="green", size = 11, fontface="plain") +
   draw_line(x = c(0.04, 0.4), y = c(0.08, 0.08), color = "white", size = 0.5) +
+  draw_label(expression(paste("20 ", mu, "m")), x = 0.22, y = 0.11, color = "white", size = 8) +
   draw_label("cPRC", x = 0.55, y = 0.8, size = 7, color = "white") +
   draw_line(x = c(0.28, 0.47), y = c(0.76, 0.8), color = "white", size = 0.3) +
   draw_line(x = c(0.74, 0.63), y = c(0.78, 0.8), color = "white", size = 0.3)
