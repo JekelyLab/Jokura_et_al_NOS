@@ -30,6 +30,10 @@ df_3d_nor <- read_csv("data/221011_sUV_tracking/sUV_tracking_3d.csv")
 #Used for frame and genotype column data
 df_WT_test <- read_csv("data/220923_Tracking raw data/WT_0701_08_01.csv")
 df_NOS_test <- read_csv("data/220923_Tracking raw data/NOS_0623_00_01.csv")
+
+#read L-NAME 3days tracking csv file
+df_L_NAME_tracking <- read_csv("data/230511_df_L_NAME.csv")
+
 }
 
 # tidying Martin data (30 sec bins, vertical displacement)------------------------------------------------
@@ -377,6 +381,37 @@ ggsave("pictures/vertical_tracking_position_sideUV_3d.png", limitsize = FALSE,
 
 
 
+# plot the L-NAME 3d tracking mean vertical position-----------------------------------------------------
+
+df_L_NAME_tracking %>%
+  ggplot() +
+  annotate("rect", xmin=10, xmax=40, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
+  annotate("text", x=17, y=65, label="side 395nm", color="purple", size = 5, fontface="plain") +
+  annotate("rect", xmin=0, xmax=10, ymin=-Inf, ymax=Inf,alpha=0.1, fill="black") +
+  annotate("text", x=2.5, y=65, label="dark", color="black", size = 5, fontface="plain") +
+  aes(x = `sec`, y = `Ymm`, color = `L-NAME`) +
+  geom_smooth(method = "loess", formula = y ~ x, method.args= list(degree = 1), 
+              level = 0.99, size = 1, span = 0.8) +
+  theme_minimal() +
+  labs(x = "time (sec)", y = "vertical position (mm)") +
+  theme(axis.title = element_text(size=13),
+        axis.text.x = element_text(size = 11, angle = 0),
+        axis.text.y = element_text(size = 11),
+        legend.title = element_text(size = 12),
+        legend.text = element_text(size = 10)) +
+  scale_x_continuous(limits = c(0, 40)) +
+  scale_color_manual(
+    values = c("0 mM" = "grey90", 
+               "0.1 mM" = Okabe_Ito[2],
+               "1 mM" = Okabe_Ito[5]))
+
+# save plot ---------------------------------------------------------------
+ggsave("pictures/vertical_tracking_position_sideUV_L_NAME.png", limitsize = FALSE, 
+       units = c("px"), width = 1600, height = 1000, bg='white')
+
+
+
+
 # plot the 2d tracking mean distance (speed) data-----------------------------------------------------
 
 df_2d_nor %>%
@@ -448,6 +483,37 @@ ggsave("pictures/vertical_tracking_distanse_sideUV_3d.png", limitsize = FALSE,
 
 
 
+# plot the L-NAME 3d tracking mean distance (speed) data-----------------------------------------------------
+
+df_L_NAME_tracking %>%
+  ggplot() +
+  annotate("rect", xmin=10, xmax=40, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
+  annotate("text", x=17, y=2.75, label="side 395nm", color="purple", size = 5, fontface="plain") +
+  annotate("rect", xmin=0, xmax=10, ymin=-Inf, ymax=Inf,alpha=0.1, fill="black") +
+  annotate("text", x=2.5, y=2.75, label="dark", color="black", size = 5, fontface="plain") +
+  aes(x = `sec`, y = `mm/sec`, color = `L-NAME`) +
+  geom_smooth(method = "loess", formula = y ~ x, method.args= list(degree = 1), 
+              level = 0.99, size = 1, span = 0.8) +
+  theme_minimal() +
+  labs(x = "time (sec)", y = "speed (mm/sec)") +
+  theme(axis.title = element_text(size=13),
+        axis.text.x = element_text(size = 11, angle = 0),
+        axis.text.y = element_text(size = 11),
+        legend.title = element_text(size = 12),
+        legend.text = element_text(size = 10)) +
+  scale_x_continuous(limits = c(0, 40)) +
+  scale_color_manual(
+    values = c("0 mM" = "grey90", 
+               "0.1 mM" = Okabe_Ito[2],
+               "1 mM" = Okabe_Ito[5]))
+
+# save plot ---------------------------------------------------------------
+ggsave("pictures/vertical_tracking_distanse_sideUV_L_NAME.png", limitsize = FALSE, 
+       units = c("px"), width = 1600, height = 1000, bg='white')
+
+
+
+
 # assemble figure ---------------------------------------------------------
 
 #read png convert to image panel
@@ -466,6 +532,10 @@ panel_2dpf_TD <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_dista
 panel_3dpf_Tracking <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_sideUV_3d.png"))
 panel_3dpf_TP <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_position_sideUV_3d.png"))
 panel_3dpf_TD <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_distanse_sideUV_3d.png"))
+
+panel_L_NAME_TP <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_position_sideUV_L_NAME.png"))
+panel_L_NAME_TD <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_distanse_sideUV_L_NAME.png"))
+
 
 #combine panels into Figure and save final figure as pdf and png
 #panels of different sizes
@@ -495,7 +565,7 @@ AABBCC
 DDDEEE
 "
 
-Fig3 <-  panel_Architecture + panel_3dpf_Tracking + panel_3dpf_TP + 
+Fig3 <-  panel_3dpf_Tracking + panel_3dpf_TP + panel_L_NAME_TP +
   panel_3d_vd + panel_3d_L_NAME_vd +
   patchwork::plot_layout(design = layout, heights = c(0.8, 0.05, 1)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
@@ -514,21 +584,22 @@ ggsave("Manuscript/figures/Fig3.pdf", limitsize = FALSE,
 
 
 layout2 <- "
-AAAEEE
-######
-BBCCDD
+AAAABBBBGGGG
+############
+CCCDDDEEEFFF
 "
 
 Fig3_sup1 <-  
+  panel_Architecture + 
   panel_2dpf_Tracking +   
-  panel_2dpf_TP + panel_2dpf_TD + panel_3dpf_TD +
+  panel_2dpf_TP + panel_2dpf_TD + panel_3dpf_TD + panel_L_NAME_TD +
   panel_2d_vd + 
   patchwork::plot_layout(design = layout2, heights = c(1, 0.05, 0.7)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
 
 ggsave("Manuscript/figures/Fig3_sup1.png", limitsize = FALSE, 
-       units = c("px"), Fig3_sup1, width = 2400, height = 1200, bg='white')  
+       units = c("px"), Fig3_sup1, width = 3200, height = 1200, bg='white')  
 
 ggsave("Manuscript/figures/Fig3_sup1.pdf", limitsize = FALSE, 
-       units = c("px"), Fig3_sup1, width = 2400, height = 1200)  
+       units = c("px"), Fig3_sup1, width = 3200, height = 1200)  
