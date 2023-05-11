@@ -5,11 +5,11 @@ author:
   - name: "Kei Jokura<sup>1,`*`</sup>, Nobuo Ueda<sup>2</sup>, Martin Gühmann<sup>3</sup>, Luis Alfonso Yañez-Guerra<sup>1</sup>, Piotr Słowiński<sup>1</sup>, Kyle C. A. Wedgewood<sup>1</sup> and Gáspár Jékely<sup>1,4,`*`</sup>"
     affiliation: "<sup>1</sup>Living Systems Institute, University of Exeter, Stocker road, Exeter, EX4 4QD, United Kingdom <sup>2</sup>Okinawa Institute of Science and Technology, Okinawa, Japan, <sup>3</sup>School of Biological Sciences, University of Bristol, Bristol, United Kingdom, <sup>4</sup>Centre for Organismal Studies (COS), University of Heidelberg, 69120 Heidelberg, Germany  <br> <sup>*</sup>Correspondence`:` kei.jokura @ exeter.ac.uk, gaspar.jekely @ cos.uni-heidelberg.de"
 output:
+  html_document:
+    theme: lumen
   pdf_document:
     latex_engine: lualatex
     template: default
-  html_document:
-    theme: lumen
   word_document: default
 geometry: left=0.8in,right=0.8in,top=0.8in,bottom=0.5in
 mainfont: Arial
@@ -282,13 +282,13 @@ The downward swimming behaviour of Platynereis larvae is the first step in the o
 These suggest that downward swimming due to NO activation of INRGWs may trigger the onset of settlement behaviour and metamorphosis [@Conzelmann2013][@Williams2015].
 These suggest that NO feedback signalling may act as a trigger for downward swimming via activation of INRGWs, which induces the initiation of settlement behaviour and metamorphosis.
 
-##Key resources table
+## Key resources table
 
-```         
+```{r echo=FALSE}
 library(readxl)
-NOSpaper_keyresourcetale <- read_excel("source_data/key_resource_tale.xlsx")
-
-{r echo=FALSE,fig.cap="**Key resources table** "}
+key_resource_tale <- read_excel("key_resource_tale/key_resource_tale.xlsx")
+df_key_resource_tale <- as.data.frame(key_resource_tale)
+knitr::kable(df_key_resource_tale, format = "html", booktabs = TRUE)
 ```
 
 ## Materials and Methods
