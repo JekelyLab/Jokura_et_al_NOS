@@ -19,7 +19,11 @@ panel_NOS <- ggdraw() + draw_image(readPNG("pictures/HCR_52_AP_NOS_RYa_101.29um_
                arrow = arrow(ends = "both", type = "closed", length = unit(0.1,"cm")),
                lineend = "butt",
                linejoin = "mitre",
-               arrow.fill = "white", size = 0.2)
+               arrow.fill = "white", size = 0.2) +
+  draw_label("eyespots", x = 0.55, y = 0.34, size = 6, color = "white") +
+  draw_line(x = c(0.16, 0.44), y = c(0.51, 0.35), color = "white", size = 0.1) +
+  draw_line(x = c(0.92, 0.65), y = c(0.48, 0.35), color = "white", size = 0.1) +
+  draw_label("INNOS", x = 0.55, y = 0.7, color="white", size = 7, fontface="bold")
 
 panel_RYa <- ggdraw() + draw_image(readPNG("pictures/HCR_52_AP_NOS_RYa_101.29um_RYa.png"))+
   draw_label("RYa", x = 0.12, y = 0.9, color="green", size = 10, fontface="italic")
@@ -39,13 +43,13 @@ panel_method <- ggdraw() + draw_image(readPNG("pictures/Diagram of agarose embed
 #combine panels into Figure and save final figure as pdf and png
 #panels of different sizes
 layout <- "
-A#B#C
+AAAAA
 #####
-DDDDD
+B#C#D
 "
 
-Fig5_sup1 <- panel_NOS + panel_RYa + panel_merge + 
-  panel_method +  
+Fig5_sup1 <- panel_method + 
+  panel_NOS + panel_RYa + panel_merge + 
   patchwork::plot_layout(design = layout, 
                          widths = c(1, 0.02, 1, 0.02, 1), 
                          heights = c(1, 0.02, 1)) + #we can change the heights of the rows in our layout (widths also can be defined)
@@ -56,4 +60,4 @@ ggsave("Manuscript/figures/Fig5_sup1.png", limitsize = FALSE,
        units = c("px"), Fig5_sup1, width = 2000, height = 1475, bg='white')  
 
 ggsave("Manuscript/figures/Fig5_sup1.pdf", limitsize = FALSE, 
-       units = c("px"), Fig5_sup1, width = 1857, height = 970)  
+       units = c("px"), Fig5_sup1, width = 2000, height = 1475)  
