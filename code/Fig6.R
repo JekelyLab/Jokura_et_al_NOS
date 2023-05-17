@@ -26,7 +26,7 @@ C#D
 Fig6 <- panel_scRNA_dotplot + panel_model + panel_block_diagram + panel_fitting + 
   patchwork::plot_layout(design = layout, 
                          heights = c(1, 0.05, 1),
-                         widths = c(1,0.02, 1)) + #we can change the heights of the rows in our layout (widths also can be defined)
+                         widths = c(1,0.05, 1)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
 
