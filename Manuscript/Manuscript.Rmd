@@ -222,9 +222,19 @@ knitr::include_graphics(path = "figures/Fig5.png")
 
 **Mathematical modelling of cPRC-circuit dynamics**
 
-[to be added]
+We analysed the neurotransmitter-related genes expressed in the respective cells identified from the single-cell transcriptome data of Achim et al. to understand the neurotransmission mechanisms in cPRC, INNOS and INRGWa [@Achim2015; @williams2017].
+Interestingly, in cPRC, whereas cholinergic neurons has previously been implicated in neurotransmission [@Randel2014a], we found transporters and synthetic enzymes involved in glutaminergic, glycinergic, GABAergic and adrenergic innervation, respectively **(Figure 6A)**.
+Gene expression has been observed by Randel et al. in these genes, suggesting that they may be expressed in cPRC [@Randel2014a].
+Their receptors were also found for each of the expressed genes within INNOS and INRGWa **(Figure 6A)**.
+Based on these expression patterns and results, a model of transduction across the cPRC pathway focusing on Ca2+, cGMP and NO dynamics is proposed **(Figure 6B)**.
+The c-opsin1, which is UV-sensitive, activates G proteins (Gi/Go) and decreases cGMP CNGAα, which is already known to be strongly expressed in cPRC as one of the targets highly dependent on cGMP changes, may regulate the influx of ions into the cell [@Arendt2004; @tsukamoto2017; @Veedin2021].
+The Gβγ released by Gi/o activation also induces K+ efflux (hyperpolarisation) via GIRK channels and closes the voltage-gated Ca2+ channels, thereby reducing intracellular calcium levels[@tsukamoto2023].
+It is also thought that increased calcium levels in INNOS signalled from cPRC may activate NOS and generate nitric oxide; INNOS has glycinergic and glutamatergic potential and may act as an inhibitory signal regulator for INRGWa.
+INRGWa, and may function as an inhibitory signal modulator for INRGWa.
 
-```{r echo=FALSE,fig.cap="**Figure 6. Signalling mechanisms and mathematical modelling between cPRC, INNOS and INRGWa.** **(A)** Dot plot of genes (columns) expressed in three types of cells (rows) in the cPRC circuit using single cell RNA-Seq. The size of the dots is expressed in proportion to the percentage of cells expressing that gene relative to all cells. The colours represent the normal logarithm of the number of transcripts in the cells expressing the gene. **(B)** Schematic diagram of the signalling pathway of the cPRC circuit, focusing on the NO feedback. **(C)** **(D)**"}
+We used this model and calcium imaging data to develop a mathematical model.
+
+```{r echo=FALSE,fig.cap="**Figure 6. Signalling mechanisms and mathematical modelling between cPRC, INNOS and INRGWa.** **(A)** Dot plot of genes (columns) expressed in three types of cells (rows) in the cPRC circuit using single cell RNA-Seq. The size of the dots is expressed in proportion to the percentage of cells expressing that gene relative to all cells. The colours represent the normal logarithm of the number of transcripts in the cells expressing the gene. **(B)** Schematic diagram of the signalling pathway of the cPRC circuit, focusing on the NO feedback. **(C)** Diagram for **(D)**"}
 
 knitr::include_graphics(path = "figures/Fig6.png")
 
@@ -246,6 +256,8 @@ NO-mediated feedback signalling thus likely occurs in the neurosecretory plexus 
 We showed that NIT-GC1 can produce cGMP in a NO-dependent manner.
 In cPRCs, increased cGMP levels could open CNGAα, a cyclic nucleotide-gated channels specifically expressed in cPRC [@Tosches2014], leading to cPRC delayed depolarisation, even after UV off.
 
+**Functional diversity of NIT-GCs**
+
 NO is a free radical with a half-life of 5 msec in vivo and a signalling range limited to a few tens of nanometers.
 In neuronal signalling, NOS and sGC have been found to localise at close proximity at synapses [@burette2002][@garthwaite2015a].
 We identified 12 sGCs in *Platynereis*, but none of these is expressed in the cPRC.
@@ -262,7 +274,21 @@ Overall, the diversification and spatially different localisation patterns of NI
 Our data revealed key roles for two *Platynereis* NIT-GCs in phototraonsduction and NO-mediated neuromodulation suggesting that these molecules contribute to the diversity of neuronal signalling.
 Sponges and ctenophores, where NO signalling is present, lack NIT-GCs.
 In placozoans as many as 12 have been found, and cnidarians also contain a large diversity.
-NIT-GCs have been lost from chordates [check].
+
+**Nitric oxide feedback modulation of UV-avoidance behaviour**
+
+Why does a seemingly roundabout feedback pathway exist?
+The gaseous second messenger nitric oxide (NO) is known to activate a post- to presynaptic retrograde signalling cascade involving cyclic guanosine monophosphate (cGMP) production.
+It has been reported that NO produced in one of the mammalian retinal cells modulates cGMP-mediated neurotransmission by activating the presynaptic nerve sGC (a general target of NO) through retrograde signalling [@Vielma2014; @Wei2012].
+Retrograde signalling of NO is also known to be one of the molecules that regulate memory formation.
+In Drosophila, NOS of PPL1-γ1pedc shortens memory retention while promoting fast memory updating in response to new experiences, indicating that NO regulates forgetting [@Aso2019].
+Because NO has a short half-life and may be a suitable second messenger for encoding working memories whose duration must be limited.
+R-neuron inputs to the ellipsoid in Drosophila also represent visual object orientation for tens of seconds after the disappearance of an object, suggesting that they are involved in short-term visual memory dependent on nitric oxide signalling [@Kuntz2017].
+In this study, our mathematical modelling results focused on the time of UV stimulation and showed that the late activity comes more delayed during short UV and sooner during long UV.
+This suggests that animals may have a UV length-dependent short-term memory system that regulates cPRC activation, and that there may be mechanisms by which UV stimulation is enhanced and maintained such that NO feedback maintains neural activation even with slight UV.
+It is possible that these mechanisms may have been early signalling pathways controlling stimulus changes across space and time in animals' short-term memory.
+In planarian UV avoidance behaviour, different time and length scales of neuropeptide and small molecule transmission were reported to generate incoherent patterns of neural activity that competitively control behaviour and memory [@bray2023].
+Short-term memory is essential for locating less exposed areas to minimise UV-induced damage in animals.
 
 cPRCs expressing UV-absorbing c-opsin1 have high resting calcium levels and show hyperpolarising and subsequent depolarising responses to UV light (405 nm) [@Veraszto2018].
 In the present study, we have shown that the cells that strongly synapse with cPRCs are interneurons that specifically express NOS (INNOS).
@@ -274,8 +300,17 @@ These suggest that UV stimulation of cPRCs causes the production of NO via a dep
 In the mammalian retina, NO is an essential signalling molecule and one of the most well-studied [@Cudeiro1999].
 It has been reported that NO produced in one of the retinal cells modulates cGMP-mediated neurotransmission by activating presynaptic neural sGCs (general target of NO) through retrograde signalling [@Vielma2014][@Wei2012].
 
-Another type of interneuron that strongly synapses with the cPRC is the INRGWa, which synapses directly onto the ciliomotor neuron and is therefore considered to be a very important neuron in the control of larval behaviour [@Veraszto2018][@williams2017].
-The present results suggest that the depolarising response of the cPRC due to NO feedback induces INRGW activation.
+**The mystery of why IN-RGW activation causes downward swimming**
+
+One type of interneuron that strongly synapses with the cPRC is INRGWa, which synapses directly onto ciliary motoneurons and is therefore considered to be a very important neuron in larval behavioural control [@williams2017; @Veraszto2018].
+Our results suggest that the depolarising response of the cPRC by NO feedback induces INRGW activation.
+Our experiments have shown that exposure of larvae to RGWamide results in simultaneous downward swimming and that activation of INRGW is sufficient to trigger UV-avoidance behaviour (unpublished data).
+However, whole-cell tracking by connectome has not revealed any equilibrium organ that recognises the direction of gravity, and it remains to be investigated how activation of INRGWs causes animals to recognise 'down', e.g. in RGWamide-deficient larvae.
+It is known that complex integrative networks of neurons are involved in UV avoidance behaviour in planaria [@Shettigar2021] and Drosophila [@Imambocus2022].
+It has been reported that the sensory neurons required for UV avoidance behaviour in Drosophila converge and arrest neuromodulatory hub neurons, and that compartmentalised circuit organisation and neuropeptide release from the regulatory hubs act as central circuit elements controlling escape responses.
+RGW interneurons have been suggested to be important for relaying peptidergic signals due to the distinct anatomy and connectivity of projection neurons in peptidergic networks and their high authority values, and central with many neuronal inputs and outputs network components may function as regulatory hubs that gate the activation of specific networks [@williams2017].
+The finding of sGCs in INRGWs from the present single-cell analysis also suggests that they may be regulated by NO.
+The specific demarcation of sensory input and output through the use of neurotransmitters, neuropeptides and even gaseous NO may further increase the efficiency of network computation in hub neurons and may lead to a more complex mechanism of 'down' recognition.
 
 In addition, in many marine invertebrates, NO has been reported to be involved in many aspects of settlement behaviour and metamorphosis induction [@leise2001; @bishop2003; @bishop2007; @pechenik2007; @castellano2014; @ueda2013; @ueda2014; @ueda2016; @yang2018; @zhu2020; @song2021].
 The downward swimming behaviour of Platynereis larvae is the first step in the onset of settlement behaviour and metamorphosis.
