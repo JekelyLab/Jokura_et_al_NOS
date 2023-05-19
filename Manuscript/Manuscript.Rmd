@@ -46,11 +46,15 @@ Our results reveal how NO-mediated neuroendocrine signalling gates a synaptic ci
 ## Introduction
 
 Neuronally produced nitric oxide (NO) can act as a diffusible neuromodulator.
-This small free-radical molecule is synthesized by nitric oxide synthase (NOS)...
-
-In the mammalian retina, NO is produced by amacrine cells and activates a *soluble guanylate cyclase (sGC)* in cone bipolar cells.
-The NO-dependent increased in cGMP tunes bipolar cell activity ....
-[refs] [other examples]
+This small free-radical molecule is synthesized by nitric oxide synthase (NOS).
+The most major target of NO signalling in the neuronal circuit is soluble guanylate cyclase (sGC).
+sGC activated by NO produces cGMP, which acts as a second messenger and regulates neuronal activity.
+In the mammalian retina, NO is an essential signalling molecule and one of the most well-studied [@Cudeiro1999].
+NO produced in amacrine cells, one of the retinal cells[@jacoby2018], activates sGCs (general targets of NO) in pyramidal bipolar cells, the presynaptic nerves, via retrograde signalling; NO-dependent increases in cGMP have been reported to regulate neurotransmission [@Vielma2014][@Wei2012].
+It has also been shown that in Drosophila, object features are differentially stored and that visual orientation memory for objects out of view is processed in the central complex of the fly brain, with ring neurons in the oval body involved in memory formation.
+Second messengers in the ellipsoid are required for directional memory and nitric oxide (NO) has been implicated in memory formation.
+cGMP-dependent signalling pathways via sGC cause activation of transcription factors, which are necessary for the ability to build orientation memories[@Kuntz2017].
+NO as a neuromodulator has been reported to be involved in the regulation of vision and memory via the NO-sGC-cGMP pathway in neural circuits, but the role of NO signalling in the regulation of neural circuit dynamics is not well understood to the molecular level mechanisms.
 
 To investigate NO signalling in the modulation of neural circuit dynamics, we studied the larval stages of the marine annelid model *Platynereis dumerilii* [@ozpolat2021].
 We uncovered an essential function for NO in these larvae in UV/violet-light avoidance.
@@ -242,19 +246,17 @@ knitr::include_graphics(path = "figures/Fig6.png")
 
 ## Discussion
 
-The activity of synaptic circuits is richly modulated monoamines, neuropeptides and gaseous molecules.
 Our work revealed an essential role for NO-mediated signalling in driving UV/violet avoidance behaviour.
 NO, produced by postsynaptic interneurons, feeds back to their presynaptic photoreceptor partners leading to their delayed activation.
 This late-phase activation of cPRCs drives circuit output through projection interneurons and ciliomotor neurons.
 In the cPRC circuit, synaptic connectivity alone is not sufficient to drive circuit dynamics and behavioural change.
-
 We identified cPRC-expressed NIT-GC1 as a new type of NO sensor.
 NIT-GC1 is localised to the axonal projections of the cPRCs in the anterior neurosecretory plexus of the brain.
 Here, cPRC axons intermingle and synapse on INNOS neurites that contain NOS.
 NO-mediated feedback signalling thus likely occurs in the neurosecretory plexus where NOS- and NIT-GC1-containing projections are in close proximity and where we could detect NO production following UV stimulation.
-
 We showed that NIT-GC1 can produce cGMP in a NO-dependent manner.
 In cPRCs, increased cGMP levels could open CNGAα, a cyclic nucleotide-gated channels specifically expressed in cPRC [@Tosches2014], leading to cPRC delayed depolarisation, even after UV off.
+Also our mathematical model...
 
 **Functional diversity of NIT-GCs**
 
@@ -278,6 +280,7 @@ In placozoans as many as 12 have been found, and cnidarians also contain a large
 **Nitric oxide feedback modulation of UV-avoidance behaviour**
 
 Why does a seemingly roundabout feedback pathway exist?
+The activity of synaptic circuits is richly modulated monoamines, neuropeptides and gaseous molecules.
 The gaseous second messenger nitric oxide (NO) is known to activate a post- to presynaptic retrograde signalling cascade involving cyclic guanosine monophosphate (cGMP) production.
 It has been reported that NO produced in one of the mammalian retinal cells modulates cGMP-mediated neurotransmission by activating the presynaptic nerve sGC (a general target of NO) through retrograde signalling [@Vielma2014; @Wei2012].
 Retrograde signalling of NO is also known to be one of the molecules that regulate memory formation.
@@ -290,16 +293,6 @@ It is possible that these mechanisms may have been early signalling pathways con
 In planarian UV avoidance behaviour, different time and length scales of neuropeptide and small molecule transmission were reported to generate incoherent patterns of neural activity that competitively control behaviour and memory [@bray2023].
 Short-term memory is essential for locating less exposed areas to minimise UV-induced damage in animals.
 
-cPRCs expressing UV-absorbing c-opsin1 have high resting calcium levels and show hyperpolarising and subsequent depolarising responses to UV light (405 nm) [@Veraszto2018].
-In the present study, we have shown that the cells that strongly synapse with cPRCs are interneurons that specifically express NOS (INNOS).
-
-[@puopolo2001][@zhang2007][@Randel2014a].
-In the mammalian retina, it is known that signals from bipolar photoreceptor cells are transmitted to downstream NOS-expressing amacrine cells (NOAC), where NO is produced [@jacoby2018].
-These suggest that UV stimulation of cPRCs causes the production of NO via a depolarising response of INNOS.
-
-In the mammalian retina, NO is an essential signalling molecule and one of the most well-studied [@Cudeiro1999].
-It has been reported that NO produced in one of the retinal cells modulates cGMP-mediated neurotransmission by activating presynaptic neural sGCs (general target of NO) through retrograde signalling [@Vielma2014][@Wei2012].
-
 **The mystery of why IN-RGW activation causes downward swimming**
 
 One type of interneuron that strongly synapses with the cPRC is INRGWa, which synapses directly onto ciliary motoneurons and is therefore considered to be a very important neuron in larval behavioural control [@williams2017; @Veraszto2018].
@@ -311,11 +304,6 @@ It has been reported that the sensory neurons required for UV avoidance behaviou
 RGW interneurons have been suggested to be important for relaying peptidergic signals due to the distinct anatomy and connectivity of projection neurons in peptidergic networks and their high authority values, and central with many neuronal inputs and outputs network components may function as regulatory hubs that gate the activation of specific networks [@williams2017].
 The finding of sGCs in INRGWs from the present single-cell analysis also suggests that they may be regulated by NO.
 The specific demarcation of sensory input and output through the use of neurotransmitters, neuropeptides and even gaseous NO may further increase the efficiency of network computation in hub neurons and may lead to a more complex mechanism of 'down' recognition.
-
-In addition, in many marine invertebrates, NO has been reported to be involved in many aspects of settlement behaviour and metamorphosis induction [@leise2001; @bishop2003; @bishop2007; @pechenik2007; @castellano2014; @ueda2013; @ueda2014; @ueda2016; @yang2018; @zhu2020; @song2021].
-The downward swimming behaviour of Platynereis larvae is the first step in the onset of settlement behaviour and metamorphosis.
-These suggest that downward swimming due to NO activation of INRGWs may trigger the onset of settlement behaviour and metamorphosis [@Conzelmann2013][@Williams2015].
-These suggest that NO feedback signalling may act as a trigger for downward swimming via activation of INRGWs, which induces the initiation of settlement behaviour and metamorphosis.
 
 ## Key resources table
 
@@ -382,7 +370,7 @@ We aligned the sequences with MAFFT version 7, with the iterative refinement met
 Alignments were trimmed with TrimAl in gappy-out mode [@Capella-Gutiérrez2009].
 To calculate maximum-likelihood trees, we used IQ-tree2 with the LG+G4 model.
 To calculate branch support, we ran 1,000 replicates with the aLRT-SH-like and aBayes methods [@Minh2020].
-The sequences used for the phylogenetic analysis are available in **Supplementary File 2**, the trimmed alignment is available in **Supplementary File 3**.
+The sequences used for the phylogenetic analysis are available in **Supplementary File 1**, the trimmed alignment is available in **Supplementary File 2** and the pre-trimmed data in **Supplementary file 3**.
 
 **NIT-GC Identification and Phylogenetic Analysis**
 
@@ -390,7 +378,6 @@ To identify NIT-GCs, we obtained a "seed" database of Adenylate and Guanylate cy
 From these sequences, we produced a Hidden Markov Model (HMM) and used this to mine the 45 metazoan species, 2 choanoflagellate species and 2 filasterea species investigated.
 HMM models were run in HMMR3 with an e-value of 1e−15.
 We ran CD-Hit [@Fu2012] to eliminate redundant sequences (at a 80% threshold).
-The CLANS analysis is available as **Supplementary File 1**.
 To identify clusters, we used the convex-clustering option with 100 jack-knife replicates.
 The NIT-GCs are extremely well conserved in membrane-bound guanylate cyclases and form an easily recognizable cluster.
 To analyze the phylogeny of NIT-GCs, the cluster containing these GCs together with membrane-bound guanylate cyclases were parsed and used for tree building.
@@ -398,23 +385,22 @@ We aligned the sequences with MAFFT version 7, with the iterative refinement met
 Alignments were trimmed with TrimAl in gappy-out mode [@Capella-Gutiérrez2009].
 To calculate maximum-likelihood trees, we used IQ-tree2 with the LG+G4 model.
 To calculate branch support, we ran 1,000 replicates with the aLRT-SH-like and aBayes methods [@Minh2020].
-The sequences used for the phylogenetic analysis are available in **Supplementary File 2**, the trimmed alignment is available in **Supplementary File 3**.
+The sequences used for the phylogenetic analysis are available in **Supplementary File 1**, the trimmed alignment is available in **Supplementary File 2** and the pre-trimmed data in **Supplementary file 3**.
 
 **Single-cell analysis**
 
 We used Achim et al. for the single-cell data [@Achim2015].
-In fact, in Williams et al., they used 107 cells as neurons by removing duplicates from Achim et al. single-cell data, so we used those cells [@williams2017].
+In Williams et al., they used 107 cells as neurons by removing duplicates from Achim et al. single-cell data, so we used those cells [@williams2017].
 Since the raw data were read count data, we normalized them to TPM using Python.
 After that we converted them to log10.
-From the sum of the expression levels in 107 cells for each gene, I calculated the percentage in each cell.
-We chose the appropriate genes for now.
+From the sum of the expression levels in 107 cells for each gene, We calculated the percentage in each cell.
 For each cell, we identified them with marker genes.
 After created the data in Python, plotted it using R dot plots.
 RPKM calculates the total number of reads per million bp and then divides by the length of each gene, so it is not possible to compare between samples.
 Instead, TPM first divides by the length of the gene and then divides by the total number of reads per million bases, which allows for more accurate comparisons between samples.
 In this case we wanted to compare between samples, so we used TPM.
-In fact, TPM is becoming the mainstream method for many single-cell analyses.
 The total TPM of each gene between the samples was used to calculate the percentage of expressed genes.
+The total TPM values for each gene and the percentage of expressed genes are available in **Supplementary file 1**.
 
 **In situ HCR**
 
@@ -422,8 +408,8 @@ Larvae were fixed and treated with Proteinase K, according to the conventional W
 Specifically, for the HCR protocol, samples were processed in 1.5 ml tubes.
 Probe hybridization buffer, probe wash buffer, amplification buffer, and fluorescent HCR hairpins were purchased from Molecular Instruments (Los Angeles, USA).
 Hairpins associated with the b2 initiator sequence were labeled with Alexa Fluor 647, and the hairpins associated with the b3 initiator sequence were labeled with Alexa Fluor 546.
-To design probes for HCR, we used custom software [@Kuehn2022] to create 20 DNA oligo probe pairs specific to P. dumerilii NOS, NIT-GC1, NIT-GC2, RYa-pNP (GenBank accession: JF811330.1), c-opsin1 (GenBank accession: AY692353.1), CNGAα (GenBank accession: KM199644.1), and MLD/pedal2-pNP (GenBank accession: KF515945.1).
-The NOS, NIT-GC1 and NIT-GC2 probes were designed to be associated with the b2 initiator sequence, while the RYa-pNP, c-opsin1, CNGAα and MLD/pedal2-pNP probes were designed to be associated with the b3 initiator sequence.
+To design probes for HCR, we used custom software [@Kuehn2022] to create 20 DNA oligo probe pairs specific to P. dumerilii NOS, NIT-GC1, NIT-GC2, RYa-pNP (GenBank accession: JF811330.1), and MLD/pedal 2-pNP (GenBank accession: KF515945.1).
+The NOS, NIT-GC1 and NIT-GC2 probes were designed to be associated with the b2 initiator sequence, while the RYa-pNP and MLD/pedal 2-pNP probes were designed to be associated with the b3 initiator sequence.
 For the detection stage, samples were pre-hybridized in 200 µl of probe hybridization buffer for 1 hr at 37°C, and then incubated in 250 µl hybridization buffer containing probe oligos (4 pmol/ml) overnight at 37°C.
 To remove excess probe, samples were washed 4× with 1 ml hybridization wash buffer for 15 min at 37°C, and subsequently 2× in 1 ml 5× SSCT (5× SSC with 0.1% Tween20) for 5 min at room temperature.
 For the amplification stage, samples were pre-incubated with 100 µl of amplification buffer for 30 min, room temperature, and then incubated with 150 µl amplification buffer containing fluorescently labeled hairpins (40nM concentration (2ul of 3uM stock in 150ul amplification buffer, snap-cooled as described; [@Choi2018]) overnight in the dark at 25°C.
@@ -447,7 +433,7 @@ For calcium imaging, 49--55 hpf larvae were used.
 Experiments were performed at room temperature and larvae were immobilised by being embedded in 2.5% agarose filtered artificial seawater between a slide and coverslip spaced with adhesive tape.
 GCaMP6s mRNA (1 mg/ml) was injected into zygotes as described previously [@Randel2014a].
 Larvae were imaged on a Zeiss LSM 880 with Airyscan (with a C-Apochromat 63X/1.2 Corr - water) with a frame rate of 1.88 frame/sec and an image size of 512 x 512 pixels.
-The larvae were stimulated in a region of interest (a circle with ?? pixel diameter) with 405 nm lasers controlled by the Bleaching mode.
+The larvae were stimulated in a region of interest (a circle with 50 pixel diameter) with 405 nm lasers controlled by the Bleaching mode.
 The imaging laser had a similar intensity than the stimulus laser but covered an area that was 10 times larger than the stimulus ROI.
 
 **Cell culture experiment**
@@ -461,8 +447,8 @@ Upon reaching confluency of approximately 85%, we transfected the cells with the
 Transfections were carried out with 150 ng of each plasmid and 0.3 μl of the transfection Lipofectamine 3000 Reagent (invitrogen; Cat. No. L3000001).
 Two days post-transfection, we removed the culture medium and substituted it for fresh DMEM-medium.
 For single-wavelength imaging experiments, cells in 35-mm dishes were washed twice and imaged in modified Ringer's buffer (140 mM NaCl, 3.5 mM KCl, 0.5mM NaH2PO4 , 0.5mM S-3 MgSO4 , 1.5 mM CaCl2 , 10 mM HEPES, 2 mM NaHCO3 and 5 mM glucose).
-Dishes were mounted on a stage heated at 37 °C and imaging was performed using an inverted microscope (LSM880, Zeiss) equipped with an oil-immersion objective lens (UApo/340, 40, NA = xx).
-Images were acquired using a xenon lamp, 460--495 nm excitation filter, 505-nm dichroic mirror and 510-- 550-nm emission filter (????).
+Dishes were mounted on a stage heated at 37 °C and imaging was performed using an inverted microscope (LSM880, Zeiss) equipped with an oil-immersion objective lens (UApo/340, 40, NA = 0.17).
+Images were acquired using a xenon lamp, 460--495 nm excitation filter, 505-nm dichroic mirror and 510-- 550-nm emission filter (Zeiss).
 S-Nitroso-N-acetyl-D, L-penicillamine (SNAP) was purchased from Sigma-Aldrich (St. Louis, MO, USA) .
 The exposure time of the EM-CCD camera was controlled by the ZEN software (Zeiss).
 Images were acquired every 15 s for 10 min and stimulation was initiated 2 min after starting image acquisition.
@@ -489,7 +475,7 @@ knitr::include_graphics(path = "figures/Fig1_sup2.png")
 
 ```
 
-```{r echo=FALSE,fig.cap="**Figure 1 -- figure supplement 3** "}
+```{r echo=FALSE,fig.cap="**Figure 1 -- figure supplement 3** ssTEM reconstruction of the INNOS (A), INRGW (B) and cPRC (C), anterior view. NS plexus; neurosecretory plexus"}
 knitr::include_graphics(path = "figures/Fig1_sup3.png")
 
 ```
