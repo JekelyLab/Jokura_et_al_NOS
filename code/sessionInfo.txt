@@ -21,28 +21,22 @@ other attached packages:
 [21] tidyverse_2.0.0    png_0.1-8          cowplot_1.1.1      magick_2.7.4      
 
 loaded via a namespace (and not attached):
- [1] reactable_0.4.4     shinybusy_0.3.1     rprojroot_2.0.3    
- [4] phosphoricons_0.1.2 tools_4.2.1         bslib_0.4.2        
- [7] utf8_1.2.3          R6_2.5.1            colorspace_2.1-0   
-[10] withr_2.5.0         tidyselect_1.2.0    processx_3.8.1     
-[13] curl_5.0.0          compiler_4.2.1      cli_3.6.1          
-[16] sass_0.4.6          rappdirs_0.3.3      digest_0.6.31      
-[19] foreign_0.8-84      rmarkdown_2.21      rio_0.5.29         
-[22] pkgconfig_2.0.3     htmltools_0.5.5     fastmap_1.1.1      
-[25] htmlwidgets_1.6.2   rlang_1.1.1         readxl_1.4.2       
-[28] rstudioapi_0.14     shiny_1.7.4         jquerylib_0.1.4    
-[31] generics_0.1.3      jsonlite_1.8.4      zip_2.3.0          
-[34] magrittr_2.0.3      Matrix_1.5-4        Rcpp_1.0.10        
-[37] munsell_0.5.0       fansi_1.0.4         reticulate_1.28    
-[40] lifecycle_1.0.3     stringi_1.7.12      yaml_2.3.7         
-[43] grid_4.2.1          datamods_1.4.0      promises_1.2.0.1   
-[46] lattice_0.20-45     haven_2.5.2         chromote_0.1.1     
-[49] hms_1.1.3           knitr_1.42          ps_1.7.5           
-[52] pillar_1.9.0        servr_0.27          XML_3.99-0.14      
-[55] glue_1.6.2          evaluate_0.21       data.table_1.14.8  
-[58] vctrs_0.6.2         tzdb_0.3.0          httpuv_1.6.11      
-[61] cellranger_1.1.0    gtable_0.3.3        cachem_1.0.8       
-[64] xfun_0.39           openxlsx_4.2.5.2    mime_0.12          
-[67] xtable_1.8-4        later_1.3.1         websocket_1.4.1    
-[70] writexl_1.4.2       shinyWidgets_0.7.6  timechange_0.2.0   
+ [1] reactable_0.4.4     shinybusy_0.3.1     rprojroot_2.0.3     phosphoricons_0.1.2
+ [5] tools_4.2.1         bslib_0.4.2         utf8_1.2.3          R6_2.5.1           
+ [9] colorspace_2.1-0    withr_2.5.0         tidyselect_1.2.0    processx_3.8.1     
+[13] curl_5.0.0          compiler_4.2.1      cli_3.6.1           sass_0.4.6         
+[17] rappdirs_0.3.3      digest_0.6.31       foreign_0.8-84      rmarkdown_2.21     
+[21] rio_0.5.29          pkgconfig_2.0.3     htmltools_0.5.5     fastmap_1.1.1      
+[25] htmlwidgets_1.6.2   rlang_1.1.1         readxl_1.4.2        rstudioapi_0.14    
+[29] shiny_1.7.4         jquerylib_0.1.4     generics_0.1.3      jsonlite_1.8.4     
+[33] zip_2.3.0           magrittr_2.0.3      Matrix_1.5-4        Rcpp_1.0.10        
+[37] munsell_0.5.0       fansi_1.0.4         reticulate_1.28     lifecycle_1.0.3    
+[41] stringi_1.7.12      yaml_2.3.7          grid_4.2.1          datamods_1.4.0     
+[45] promises_1.2.0.1    lattice_0.20-45     haven_2.5.2         chromote_0.1.1     
+[49] hms_1.1.3           knitr_1.42          ps_1.7.5            pillar_1.9.0       
+[53] servr_0.27          XML_3.99-0.14       glue_1.6.2          evaluate_0.21      
+[57] data.table_1.14.8   vctrs_0.6.2         tzdb_0.3.0          httpuv_1.6.11      
+[61] cellranger_1.1.0    gtable_0.3.3        cachem_1.0.8        xfun_0.39          
+[65] openxlsx_4.2.5.2    mime_0.12           xtable_1.8-4        later_1.3.1        
+[69] websocket_1.4.1     writexl_1.4.2       shinyWidgets_0.7.6  timechange_0.2.0   
 [73] ellipsis_0.3.2      here_1.0.1         
