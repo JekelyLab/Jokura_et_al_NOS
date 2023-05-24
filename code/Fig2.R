@@ -10,8 +10,18 @@ DAFFM <- read_csv("data/220213_DAF-FM_long.csv")
 
 
 # plot DAFFM neuropil data with geom_smooth ----------------------------------------------
+
+#sample size control
 DAFFM %>%
-  count(stimuli)
+  filter(stimuli=='NC') %>%
+  select(sample) %>%
+  unique()
+
+#sample size cPRC
+DAFFM %>%
+  filter(stimuli=='cPRC') %>%
+  select(sample) %>%
+  unique()
 DAFFM
 
 
