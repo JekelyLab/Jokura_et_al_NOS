@@ -123,7 +123,7 @@ WTvsNOS_2d %>%
                expression('NOS'^'Δ23/Δ23'))) +
   theme_minimal()+
   theme_plot +
-  labs(fill = "genotype", x = "30 sec bins", y = "Vertical displacement (mm/s)")+
+  labs(fill = "genotype", x = "time (sec)", y = "Vertical displacement (mm/s)")+
   scale_y_continuous(limits = c(-0.46, 0.56)) +
   scale_x_discrete(labels=c("30", "60", "90", 
                             "30", "60", "90","120",
@@ -181,7 +181,7 @@ WTvsNOS_3d %>%
                expression('NOS'^'Δ23/Δ23'))) +
   theme_minimal()+
   theme_plot +
-  labs(fill = "genotype", x = "30 sec bins", y = "Vertical displacement (mm/s)")+
+  labs(fill = "genotype", x = "time (sec)", y = "Vertical displacement (mm/s)")+
   scale_y_continuous(limits = c(-0.81, 0.5)) +
   scale_x_discrete(labels=c("30", "60", "90", 
                            "30", "60", "90","120",
@@ -235,7 +235,7 @@ L_NAME_3d %>%
                "1.0 mM" = Okabe_Ito[6])) +
   theme_minimal() +
   theme_plot +
-  labs(x = "30 sec bins", y = "Vertical displacement (mm/s)")+
+  labs(x = "time (sec)", y = "Vertical displacement (mm/s)")+
   scale_y_continuous(limits = c(-0.67, 0.75)) +
   scale_x_discrete(labels=c("30", "60", "90", 
                             "30", "60", "90","120",
