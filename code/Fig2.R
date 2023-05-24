@@ -6,8 +6,16 @@ source("code/Packages_to_load.R")
 
 # read data ---------------------------------------------------------------
 
-DAFFM <- read_csv("data/220213_DAF-FM_long.csv")
+cPRC <- read_csv("data/230524_DAF-FM_cPRC.csv")
+NC <- read_csv("data/230524_DAF-FM_NC.csv")
 
+long_cPRC <- pivot_longer(cPRC, cols = c("larva_1","larva_2","larva_3","larva_4","larva_5","larva_6","larva_7","larva_8","larva_9","larva_10","larva_11"), 
+                          names_to = "sample", values_to = "intensity")
+
+long_NC <- pivot_longer(NC, cols = c("larva_12","larva_13","larva_14","larva_15","larva_16","larva_17","larva_18","larva_19"), 
+                        names_to = "sample", values_to = "intensity")
+
+DAFFM <- rbind(long_cPRC, long_NC)
 
 # plot DAFFM neuropil data with geom_smooth ----------------------------------------------
 DAFFM %>%
@@ -30,7 +38,7 @@ DAFFM %>%
   annotate("text", x=23, y=1.315, label="0.2 ΔF/F0", size=3)+
   annotate("text", x=70, y=1.32, label="405 nm", size=4)+
   annotate("text", x=160, y=1.32, label="neuropil DAF-FM", size=5)+
-  ylim(0.68,1.32)+
+  ylim(0.68,1.335)+
   theme_void()  +
   theme(legend.title = element_blank(), legend.text.align=0,
         legend.text = element_text(size=12)) +
@@ -59,6 +67,8 @@ panel_DAF <- ggdraw() + draw_image(readPNG("pictures/55hpf_DAF-FM_134.95um.png")
   draw_label(expression(paste("50 ", mu, "m")), x = 0.23, y = 0.12, color = "white", size = 8) +
   draw_label("D", x = 0.95, y = 0.88, size = 6, color = "white") +
   draw_label("V", x = 0.95, y = 0.72, size = 6, color = "white") +
+  draw_label("cPRC stim.", x = 0.67, y = 0.43, size = 4, color = "darkorchid1", fontface='bold') +
+  draw_label("ctr stim.", x = 0.75, y = 0.38, size = 4, color = "darkorchid1", fontface='bold') +
   geom_segment(aes(x = x1, y = y1, xend = x2, yend = y2), data = arrow_fluo, color = "white", 
                arrow = arrow(ends = "both", type = "closed", length = unit(0.1,"cm")),
                lineend = "butt",
