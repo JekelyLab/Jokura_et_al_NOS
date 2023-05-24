@@ -18,8 +18,18 @@ long_NC <- pivot_longer(NC, cols = c("larva_12","larva_13","larva_14","larva_15"
 DAFFM <- rbind(long_cPRC, long_NC)
 
 # plot DAFFM neuropil data with geom_smooth ----------------------------------------------
+
+#sample size control
 DAFFM %>%
-  count(stimuli)
+  filter(stimuli=='NC') %>%
+  select(sample) %>%
+  unique()
+
+#sample size cPRC
+DAFFM %>%
+  filter(stimuli=='cPRC') %>%
+  select(sample) %>%
+  unique()
 DAFFM
 
 
