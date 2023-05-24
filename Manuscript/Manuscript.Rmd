@@ -111,21 +111,21 @@ knitr::include_graphics(path = "figures/Fig2.png")
 
 **Nitric oxide signalling mediates UV-avoidance behaviour**
 
-Next, we wanted to directly test whether NO signalling is involved in UV/violet avoidance.
+We next tested whether NO signalling is required for UV/violet avoidance.
 To achieve this, we generated two *Platynereis* *NOS* knockout lines with the CRISPR/Cas9 method.
 We recovered two deletions (NOSΔ11/Δ11 and Δ23/Δ23), both leading to frame-shift and an early stop codon and thus likely representing null alleles **(Figure 3---figure supplement 1A)**.
-We could establish a homozygous line for both mutations indicating that NOS is not an essential gene.
+We could establish a homozygous line for both mutations indicating that NOS is not an essential gene in *Platynereis*.
 To quantify UV avoidance, we recorded the trajectories of freely swimming wild type and mutant larvae in vertical columns, illuminated laterally from two opposite sides with 395 nm UV light **(Figure 3A and Figure 3---figure supplement 1B)**.
 As previously shown, wild-type larvae swim downward following non-directional UV/violet light stimulation [@Veraszto2018].
 In contrast, both two- and three-day-old homozygous *NOS*-mutant larvae showed a strongly diminished UV-avoidance response **(Figure 3A, B and Figure 3---figure supplement 1B,C)**.
 This phenotype is similar to the defective UV-avoidance of *c-opsin1* mutant larvae and reveals a requirement for NOS in UV-avoidance behaviour [@Veraszto2018].
-Wild type but not mutant larvae also showed an increase in swimming speed under UV light that may be due to downward swimming trajectories (swimming with gravity) **(Figure 3B and Figure 3---figure supplement 1C)**.
-We also tested directional phototaxis, by exposing larvae to 480 nm directional and collimated light from the top of the column.
+Wild type but not mutant larvae also showed an increase in swimming speed under UV light that may be due to downward swimming trajectories (swimming in the direction of gravity) **(Figure 3B and Figure 3---figure supplement 1C)**.
+We also tested directional phototaxis, by exposing larvae to 480 nm directional collimated light from the top of the column.
 Three-day-old but not two-day-old *NOS*-mutant larvae also showed reduced phototactic behaviour, suggesting a function for *NOS* in the visual eyes that mediate three-day-old phototaxis [@Randel2014a] **(Figure 3D and Figure 3---figure supplement 1G)**.
-To distinguish between an acute or developmental function of NOS in light responses, we next tested larvae exposed to the NOS inhibitor L-NAME.
+To distinguish between an acute and developmental function of NOS in light responses, we next tested larvae exposed to the NOS inhibitor L-NAME.
 Larvae incubated for 5 min in 0.1 mM or 1 mM L-NAME showed a dose-dependent inhibition of UV avoidance.
-In contrast, phototaxis was not effected **(Figure 3C, E)**.
-Overall, our results indicate an acute requirement for NOS signalling in UV-avoidance and a possible indirect, developmental role in the visual system, reminiscent of the developmental role for NO signalling in the *Drosophila* eye [@Gibbs1998a].
+In contrast, phototaxis was not affected **(Figure 3C, E)**.
+Overall, our results indicate an acute requirement for NOS signalling in UV-avoidance and a possible indirect, developmental role in the visual system, reminiscent of the function of NO signalling in *Drosophila* eye development [@Gibbs1998a].
 
 ```{r echo=FALSE,fig.cap="**Figure 3. Larvae with inhibited NOS have a delayed response to UV-avoidance.**  **(B)** Overlaid trajectories for WT (n=32) and NOS mutant (NOSΔ11/Δ11, n=26 and NOSΔ23/Δ23, n=47) at three-day-old larvae. 0 sec as the starting point. After 10 sec, UV (395 nm) stimulation from the side. **(C)** The temporal changes in the vertical position of the WT and mutant larvae before (dark) and after UV stimulation (side 395 nm) are shown. The starting points of each larval trajectory are set to 0. **(D)** Vertical swimming in wild-type (WT) and mutant (NOSΔ11 and NOSΔ23) larvae at three-day-old stimulated with UV (395 nm) light from side, blue (488 nm) light from top and UV (395 nm) light from top. The data are shown in 30 s bins. **(E)** Vertical swimming in larvae treated with NOS inhibitors, L-NAME at three-day-old stimulated with UV (395 nm) light from side, blue (488 nm) light from top and UV (395 nm) light from top. The data are shown in 30 s bins."}
 
