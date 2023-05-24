@@ -56,7 +56,7 @@ Given that NOS activation is calcium dependent and NOS shows neuron-type-specifi
 NO signalling has been extensively studied in the vertebrate retina where NOS is expressed in amacrine, ganglion as well as other cells [@Cudeiro1999; @Wang2007; @jacoby2018].
 The actions of NO can be diverse and not always involve the canonical sGC-cGMP pathway [@Tooker2013; @Wei2012; @jacoby2018].
 Defective NO signalling in NOS knockouts for example leads to a decreased sensitivity of retinal ganglion cells to light stimulation [@Wang2007].
-However, due to the complex expression of NOS in vertebrates and the diversity of its functions, it has been challenging to link the neurophysiological effects of NO to behaviour change.
+However, due to the complex expression of NOS in vertebrates and the diversity of its functions, it has been challenging to link the neurophysiological effects of NO to signalling mechanisms and behaviour change.
 
 In the whole organism context, NO signalling has often been studied in diverse marine invertebrates, where NO can regulate larval settlement and metamorphosis [@leise2001a; @ueda2016; @Locascio2022; @song2021; @Zhang2012].
 While NOS-expressing neurons potentially responsible for these effects have been reported [@bishop2007; @Locascio2022], it has not been possible to link these NO-dependent effects on behaviour or life-cycle transitions to neuronal activity and function.
@@ -64,14 +64,14 @@ While NOS-expressing neurons potentially responsible for these effects have been
 Due to these difficulties, we still know little at the whole organism level about how NO production relates to stimulus conditions, how it shapes circuit activity at specific neuron types, and how NO-dependent modulation relates to behaviour.
 
 To investigate NO function in neural circuit dynamics and behaviour, here we study larvae of the marine annelid model *Platynereis dumerilii* [@ozpolat2021].
-*Platynereis* has emerged as a systems neuroscience model where behaviour and activity imaging can be combined with genetic manipulations and investigated in the context of a whole-body synaptic connectome and gene expression atlases [@Vergara2021; @Veraszto2017; @veraszto2020; @ozpolat2021].
+*Platynereis* has emerged as a systems neuroscience model where behaviour and activity imaging can be combined with genetic manipulations and a whole-body synaptic connectome and gene expression atlases are available [@Vergara2021; @Veraszto2017; @veraszto2020; @ozpolat2021].
 
 Here we uncovered an essential function for NO signalling in larval UV/violet-light avoidance behaviour.
 In *Platynereis* larvae, UV/violet avoidance is mediated by brain ciliary photoreceptor cells (cPRCs) and is characterised by downward swimming [@Veraszto2018].
 The cPRCs express a ciliary-type opsin, c-opsin1 [@Arendt2004] that forms a UV-absorbing bistable photopigment with an absorption maximum around 384 nm [@tsukamoto2017, @Veraszto2018, @Veedin2021].
 Upon UV/violet exposure, the cPRC show a characteristic biphasic calcium response that is *c-opsin1* dependent.
-UV/violet avoidance behaviour is also *c-opsin1*-dependent and is defective in *c-opsin1* mutants [@Veraszto2018].
-Here we show that *Platynereis* *NOS* is expressed in interneurons of the cPRC circuitry and is required for UV/violet-avoidance.
+UV/violet avoidance is also *c-opsin1*-dependent and is defective in *c-opsin1* mutants [@Veraszto2018].
+Here we show that *Platynereis* *NOS* is expressed in interneurons of the cPRC circuit and is required for UV/violet-avoidance.
 By combining calcium imaging across the fully-mapped cPRC circuit [@Veraszto2018] with genetic perturbations and mathematical modelling, we describe how NO tunes circuit dynamics through non-synaptic retrograde signalling to cPRCs.
 This delayed neuroendocrine feedback integrates UV/violet exposure to induce a short-term memory manifested in altered circuit activity and an aversive behavioural response.
 
@@ -87,23 +87,23 @@ In two- and three-day-old larvae, we detected *NOS* expression in four cells (tw
 The four apical organ cells, but not the eyes, were also labelled with a *NOS* reporter construct driving palmitoylated-tdTomato **(Figure 1E)**.
 This reporter also revealed the axonal projections of these central NOS-expressing neurons.
 The position and morphology of the four *NOS+* cells allowed us to identify the same four cells as four interneurons (INNOS) in our three-day-old whole-body *Platynereis* volume EM data [@williams2017; @veraszto2020] **(Figure 1B,C)**.
-In the synaptic connectome, the INNOS cells are postsynaptic to the UV-sensory cPRCs and presynaptic to the INRGW interneurons, which are also cPRC targets **(Figure 1C,F)**.
-INRGW neurons synapse on the head serotonergic ciliomotor neurons (Ser-h1), which synapse on the prototroch ciliary band and the cholinergic MC ciliomotor neurons **(Figure 1C,F)**.
+In the synaptic connectome, the INNOS cells are postsynaptic to the UV-sensory cPRCs and presynaptic to the INRGW interneurons, which are also cPRC targets **(Figure 1C,F)**. The projections of INNOS cells are segregated into input and output compartments, with cPRCs inputs occurring in the dense neurosecretory plexus. INNOS output synapses form in the more ventral projection region **(Figure 1---figure supplement 3)**.
+INRGW neurons synapse on the head serotonergic ciliomotor neurons (Ser-h1), which synapse on the prototroch ciliary band and the cholinergic MC ciliomotor neurons **(Figure 1C,F)** [@Veraszto2017].
 
-```{r echo=FALSE,fig.cap="**Figure 1. Identification of NOS-expressing interneurons (INNOS) within the cPRC circuit.** **(A)** SEM image of a three-day-old Platynereis larva. **(B, C)** Five types of neurons (cPRC, INNOS, INRGW, Ser-h1 and MC) in the cPRC circuit reconstructed in the whole-body transmission electron microscopy (ssTEM) dataset of a three-day-old larva. Ciliated cells labelled with (B) are shown in grey. The INNOS on the ventral side labelled with (C) are shown in purple. Axons and dendrites appear as lines and cell body positions are represented by spheres. **(D)** Expression analysis of the NOS gene (magenta) using in situ HCR. Anterior view of the larva at two-day-old. Co-stained image using acetylated α-tubulin antibody (acTub: green). **(E)** Immunostaining with anti-HA antibody against HA tagged palmitoylated-tdTomato expressed under the upstream of the start site of NOS (NOSp::palmi-3xHA: magenta). Co-staining with acetylated α-tubulin antibody as marker for cilia of cPRC and axonal scaffold (acTub: green). Views of larvae at three-day-old from the anterior side. **(F)** Wiring diagram of the cPRC circuit. Hexagons and arrows represent cell groups and their synaptic connections, respectively. Numbers inside hexagons indicate the number of cells grouped in each node. Arrow line thickness (synapse weight) is equal to the number of synapses."}
+```{r echo=FALSE,fig.cap="**Figure 1. Identification of NOS-expressing interneurons (INNOS) within the cPRC circuit.** **(A)** Scanning electron microscopy image of a three-day-old *Platynereis* larva. **(B, C)** Volume rendering of the neuron types (cPRC, INNOS, INRGW, Ser-h1 and MC) in the cPRC circuit reconstructed from a whole-body transmission electron microscopy volume of a three-day-old larva. Neurite skeletons are shown with cell-body positions represented by spheres. Projections of all neurons in the body are shown in grey to highlight the neuropils. The outline of the yolk is also indicated in grey. In B, nuclei positions of the prototroch head ciliary band are shown as grey spheres. **(D)** Expression of the *NOS* gene detected by in situ HCR (magenta) in a two-day-old larva (anterior view). Antibody staining for acetylated α-tubulin (acTub: green) highlights cPRC cilia and the neuropil. **(E)** Expression of a *NOS* reporter (NOSp::palmi-3xHA: magenta) labelled with an anti-HA antibody in a two-day-old larva (anterior view). Antibody staining for acetylated α-tubulin (acTub: green) highlights cPRC cilia and the neuropil. **(F)** Synaptic wiring diagram of the cPRC circuit. Hexagons represent cell groups, with the number of cells per group shown in square brackets. Arrows represent the summed number of synaptic contacts between cell groups. Arrow thickness is proportional to the number of synapses."}
 
 knitr::include_graphics(path = "figures/Fig1.png")
 
 ```
 
-**Nitric oxide produced during UV/violet stimulation gates the output of the cPRC circuit**
+**Nitric oxide is produced during UV/violet stimulation of the cPRCs**
 
 The expression of *NOS* in the INNOS interneurons in the cPRC circuit suggests that NO signalling may be involved in UV/violet-avoidance.
 To test this, first we asked whether NO is produced during UV/violet stimulation of the larvae.
-We injected the fluorescent NO-reporter DAF-FM into zygotes and imaged two-day-old larvae while exposing the ramified sensory cilia of the cPRCs to 405 nm violet light.
-Following light stimulation of the cPRCs but not a control area, we detected an increase in DAF-FM fluorescence in the anterior neurosecretory neuropil, the region of INNOS projections **(Figure 2)**.
+We injected the fluorescent NO-reporter DAF-FM into zygotes and imaged two-day-old larvae while exposing the cPRC region to 405 nm violet light.
+Following light stimulation in the region of the cPRCs but not a control area, we detected an increase in DAF-FM fluorescence in the anterior neurosecretory neuropil, the region of INNOS projections **(Figure 2)**.
 
-```{r echo=FALSE,fig.cap="**Figure 2. NO produced by UV/violet stimulation to cPRCs.** **(A)** A NO-positive cell visualised by DAF-FM (green) is shown (dashline). The white line indicates the outer frame of the larva. All subsequent images are of two-day-old larvae. **(B)** Intensity changes before (upper) and during 405 nm light stimulation (lower) in a cell visualised by DAF-FM. **(C)** The intensity of DAF-FM changes over time when cPRC (green) and other cells (ctr: gray) are stimulated with UV/violet (405 nm) light. Purple squares indicate the timing of 405 nm light stimulation, the transparent lines show the optical responses to individual intensities, each intensities are normalized (ΔF/F0) and the dark trace lines and the shaded bands show the mean value and the standard error range of the mean."}
+```{r echo=FALSE,fig.cap="**Figure 2. NO produced by UV/violet stimulation to cPRCs.** **(A)** DAF-FM fluorescence in the region of the neurosecretory neuropil. The white line indicates the outline of the larva. The dashed line corresponds to the area where fluorescence was quantified. **(B)** Changes in DAF-FM fluorescence before and during 405 nm light stimulation. **(C)** Changes in DAF-FM fluorescence over time during 405 nm stimulation of the cPRCs (green) or a control area (ctr: gray). The purple box indicate the duration of 405 nm stimulation. Individual traces normalized (ΔF/F0) are shown as thin lines. Thick lines show the mean value with 0.95 confidence intervals. N = 6 for cPRC stimulation."}
 
 knitr::include_graphics(path = "figures/Fig2.png")
 
