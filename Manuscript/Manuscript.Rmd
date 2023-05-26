@@ -49,9 +49,9 @@ In nervous systems, synaptic transmission and volume transmission together shape
 While synaptic transmission occurs at specialised contact sites, volume transmission is characterised by the delocalised release of diverse diffusive neuromodulators.
 
 Nitric oxide (NO) is one such modulator with unique physical and signalling properties.
-This free radical synthesized by nitric oxide synthase (NOS) is short-lived and can diffuse across biological membranes [@Cudeiro1999; @thomas2015].
-Canonical NO signalling involves the activation of neuronal NOS following calcium increase, NO production and diffusion, and the NO-dependent activation of soluble guanylate cyclases (sGC) in target cells leading to cGMP production [@Bredt1990; @Hoelscher1997].
-Given that NOS activation is calcium dependent and NOS shows neuron-type-specific expression [@Gibbs1998a; @Wildemann1999; @Mobley2022], NO action can lead to the activity-dependent modulation of neural circuits at specific sites [@Wang2007; @Vielma2014; @jacoby2018] .
+This free radical synthesized by nitric oxide synthase (NOS) from L-arginine is short-lived and can diffuse across biological membranes [@Cudeiro1999; @thomas2015].
+Canonical NO signalling involves the Ca2+/calmodulin-dependent activation of NOS following calcium increase, NO production and diffusion, and the NO-dependent activation of soluble guanylate cyclases (sGC) cell-autonomously or in other cells leading to cGMP production [@Bredt1990; @Hoelscher1997].
+Given that NOS activation is calcium dependent and NOS shows neuron-type-specific expression [@Gibbs1998a; @Wildemann1999; @Aso2019; @Mobley2022], NO action can lead to the activity-dependent modulation of neural circuits at specific sites [@Wang2007; @Vielma2014; @jacoby2018; @Aso2019] .
 
 NO signalling has been extensively studied in the vertebrate retina where NOS is expressed in amacrine, ganglion as well as other cells [@Cudeiro1999; @Wang2007; @jacoby2018].
 The actions of NO can be diverse and not always involve the canonical sGC-cGMP pathway [@Tooker2013; @Wei2012; @jacoby2018].
@@ -87,7 +87,9 @@ In two- and three-day-old larvae, we detected *NOS* expression in four cells (tw
 The four apical organ cells, but not the eyes, were also labelled with a *NOS* reporter construct driving palmitoylated-tdTomato (Figure 1E).
 This reporter also revealed the axonal projections of these central NOS-expressing neurons.
 The position and morphology of the four *NOS+* cells allowed us to identify the same four cells as four interneurons (INNOS) in our three-day-old whole-body *Platynereis* volume EM data [@williams2017; @veraszto2020] (Figure 1B,C).
-In the synaptic connectome, the INNOS cells are postsynaptic to the UV-sensory cPRCs and presynaptic to the INRGW interneurons, which are also cPRC targets (Figure 1C,F). The projections of INNOS cells are segregated into input and output compartments, with cPRCs inputs occurring in the dense neurosecretory plexus. INNOS output synapses form in the more ventral projection region (Figure 1---figure supplement 3).
+In the synaptic connectome, the INNOS cells are postsynaptic to the UV-sensory cPRCs and presynaptic to the INRGW interneurons, which are also cPRC targets (Figure 1C,F).
+The projections of INNOS cells are segregated into input and output compartments, with cPRCs inputs occurring in the dense neurosecretory plexus.
+INNOS output synapses form in the more ventral projection region (Figure 1---figure supplement 3).
 INRGW neurons synapse on the head serotonergic ciliomotor neurons (Ser-h1), which synapse on the prototroch ciliary band and the cholinergic MC ciliomotor neurons (Figure 1C,F) [@Veraszto2017].
 
 ```{r echo=FALSE,fig.cap="**Figure 1. Identification of NOS-expressing interneurons (INNOS) within the cPRC circuit.** **(A)** Scanning electron microscopy image of a three-day-old *Platynereis* larva. **(B, C)** Volume rendering of the neuron types (cPRC, INNOS, INRGW, Ser-h1 and MC) in the cPRC circuit reconstructed from a whole-body transmission electron microscopy volume of a three-day-old larva. Neurite skeletons are shown with cell-body positions represented by spheres. Projections of all neurons in the body are shown in grey to highlight the neuropils. The outline of the yolk is also indicated in grey. In B, nuclei positions of the prototroch head ciliary band are shown as grey spheres. **(D)** Expression of the *NOS* gene detected by in situ HCR (magenta) in a two-day-old larva (anterior view). Antibody staining for acetylated α-tubulin (acTub: green) highlights cPRC cilia and the neuropil. **(E)** Expression of a *NOS* reporter (NOSp::palmi-3xHA: magenta) labelled with an anti-HA antibody in a two-day-old larva (anterior view). Antibody staining for acetylated α-tubulin (acTub: green) highlights cPRC cilia and the neuropil. **(F)** Synaptic wiring diagram of the cPRC circuit. Hexagons represent cell groups, with the number of cells per group shown in square brackets. Arrows represent the summed number of synaptic contacts between cell groups. Arrow thickness is proportional to the number of synapses."}
@@ -100,8 +102,10 @@ knitr::include_graphics(path = "figures/Fig1.png")
 
 The expression of *NOS* in the INNOS interneurons in the cPRC circuit suggests that NO signalling may be involved in UV/violet-avoidance.
 To test this, first we asked whether NO is produced during UV/violet stimulation of the larvae.
-We injected the fluorescent NO-reporter DAF-FM into zygotes and imaged two-day-old larvae while exposing the region of cPRC cilia to 405 nm violet light. To mark cell outlines, we coinjected mRNA encoding a red-fluorescent reporter (RGECO), allowing the identification of the cPRCs.
-Following light stimulation in the region of the ramified cilia of the cPRCs, we detected an increase in DAF-FM fluorescence in the anterior neurosecretory neuropil, the region of INNOS projections. This increase did not occur in larvae where we illuminated a control area  (Figure 2).
+We injected the fluorescent NO-reporter DAF-FM into zygotes and imaged two-day-old larvae while exposing the region of cPRC cilia to 405 nm violet light.
+To mark cell outlines, we coinjected mRNA encoding a red-fluorescent reporter (RGECO), allowing the identification of the cPRCs.
+Following light stimulation in the region of the ramified cilia of the cPRCs, we detected an increase in DAF-FM fluorescence in the anterior neurosecretory neuropil, the region of INNOS projections.
+This increase did not occur in larvae where we illuminated a control area (Figure 2).
 
 ```{r echo=FALSE,fig.cap="**Figure 2. NO produced by UV/violet stimulation to cPRCs.** **(A)** DAF-FM fluorescence in the region of the neurosecretory neuropil. The white line indicates the outline of the larva. The dashed line corresponds to the area where fluorescence was quantified. Circles indicate the location of cPRC and control stimulation. cPRCs are marked by thin lines. **(B)** Changes in DAF-FM fluorescence before and during 405 nm light stimulation. **(C)** Changes in DAF-FM fluorescence over time during 405 nm stimulation of the cPRCs (green) or a control area (ctr: gray). The purple box indicate the duration of 405 nm stimulation. Individual traces normalized (ΔF/F0) are shown as thin lines. Thick lines show the mean value with 0.95 confidence intervals. N = 9 larvae for control and 11 for cPRC stimulation."}
 
@@ -141,7 +145,8 @@ As we have shown previously, a 20-sec local stimulation of cPRC cilia lead to a 
 After \~20-sec, calcium levels in cPRCs were raising again, reaching higher levels than at the start of the stimulus -- a response that may involve depolarisation (Figure 4A, B).
 This activation phase occurs after the 20 sec stimulation period and is likely due to a delayed neuroendocrine feedback [@Veraszto2018].
 To determine whether NO mediates such a feedback, we repeated the experiment in *NOS*-mutant larvae.
-While we detected the initial activation phase followed by inhibition, in homozygous *NOS*-mutants for both CRISPR alleles this was not followed by delayed activation. Instead, calcium levels dropped to a low steady-state level (Figure 4A, B).
+While we detected the initial activation phase followed by inhibition, in homozygous *NOS*-mutants for both CRISPR alleles this was not followed by delayed activation.
+Instead, calcium levels dropped to a low steady-state level (Figure 4A, B).
 We thus identified a requirement for NO signalling in the late-phase activation of cPRCs.
 
 **Two unconventional guanylyl cyclases are expressed in the cPRCs**
@@ -164,7 +169,7 @@ We decided to focus on two NIT-GCs expressed in the cPRCs and with a full-length
 To confirm the single-cell data, we first carried out in situ hybridisation chain reaction (HCR) with probes for *NIT-GC1* and *NIT-GC2* mRNA. Both genes were specifically expression in the four cPRCs, as confirmed by co-labeling with an acetylated α-tubulin antibody and with an HCR probe against *pedal peptide 2/MLD proneuropeptide* (Figure 4C, D and Figure 4---figure supplement 3A-C).
 To analyse the subcellular localisation of NIT-GC1 and NIT-GC2 at the protein level, we raised and affinity-purified polyclonal antibodies against a specific peptide sequence from both proteins.
 In immunostainings, we found that NIT-GC1 was localise to the region corresponding to the axonal projections of the cPRCs in the anterior nerve plexus (Figure 4E).
-Co-immunostaining with the rabbit NIT-GC1 antibody and a custom rat antibody raised against *Platynereis* NOS revealed the localisation of both proteins in close proximity in the neurosecretory plexus (Figure 4---figure supplement 3D).
+Co-immunostaining with the rabbit NIT-GC1 antibody and a custom rat antibody raised against *Platynereis* NOS revealed the localisation of both proteins in dots in the neurosecretory neuropil (Figure 4---figure supplement 3D).
 In contrast, NIT-GC2 specifically labelled the ramified sensory cilia of the cPRCs (Figure 4F).
 These different subcellular localisations suggest that the two NIT-GCs are involved in different intracellular signalling processes in the ciliary and axonal regions of the cPRCs.
 
@@ -196,7 +201,7 @@ The calcium signal decayed during stimulation and was off after light off.
 These data support an essential role for ciliary-localised NIT-GC2 in suppressing cPRC calcium following its transient rise at stimulus onset.
 Overall, these knockdown experiments revealed different signalling mechanisms for the two NIT-GCs that may be due to their different subcellular localisations.
 
-```{r echo=FALSE,fig.cap="**Figure 4. NOS and two NIT-GCs shape calcium signals during cPRC UV/violet response.** **(A, B)** GCaMP6s signals in cPRCs in wild type and *NOS* mutant (A, NOSΔ11/Δ11, B, NOSΔ23/Δ23) larvae during 405 nm light stimulation. **(C, D)** In situ HCR for (C) *NIT-GC1* and (D) *NIT-GC2* (magenta) in three-day-old *Platynereis* larvae. Larvae were co-stained with an antibody agains acetylated α-tubulin to label cPRC cilia and the neuropil (green). **(E, F)** Immunostaining for (E) NIT-GC1 and (F) NIT-GC2 (magenta), co-stained for acetylated α-tubulin (green). **(G)** The domain structure of *Platynereis* NIT-GC1 and the truncated NIT-GC1ΔNIT protein lacking the NIT domain. A predicted transmembrane region (TM) is shown in grey. **(H)** Schematic of the cell-based assay to detect cGMP production following the addition of an NO donor SNAP or DMSO as control. **(I-L)** Green cGull fluorescence over time for the four conditions tested. Individual responses and their mean with 0.95 confidence interval are shown (n > 6 cells). Intensities are normalized (ΔF/F0). The indicated chemicals were added at 2 min after the start of imaging (grey bars). **(M, N)** GCaMP6s signals in cPRCs in (M) NIT-GC1 and (N) NIT-GC2 morphant larvae during 405 nm light stimulation. Individual responses and their mean with 0.95 confidence interval are shown."} 
+```{r echo=FALSE,fig.cap="**Figure 4. NOS and two NIT-GCs shape calcium signals during cPRC UV/violet response.** **(A, B)** GCaMP6s signals in cPRCs in wild type and *NOS* mutant (A, NOSΔ11/Δ11, B, NOSΔ23/Δ23) larvae during 405 nm light stimulation. **(C, D)** In situ HCR for (C) *NIT-GC1* and (D) *NIT-GC2* (magenta) in three-day-old *Platynereis* larvae. Larvae were co-stained with an antibody agains acetylated α-tubulin to label cPRC cilia and the neuropil (green). **(E, F)** Immunostaining for (E) NIT-GC1 and (F) NIT-GC2 (magenta), co-stained for acetylated α-tubulin (green). **(G)** The domain structure of *Platynereis* NIT-GC1 and the truncated NIT-GC1ΔNIT protein lacking the NIT domain. A predicted transmembrane region (TM) is shown in grey. **(H)** Schematic of the cell-based assay to detect cGMP production following the addition of an NO donor SNAP or DMSO as control. **(I-L)** Green cGull fluorescence over time for the four conditions tested. Individual responses and their mean with 0.95 confidence interval are shown (n > 6 cells). Intensities are normalized (ΔF/F0). The indicated chemicals were added at 2 min after the start of imaging (grey bars). **(M, N)** GCaMP6s signals in cPRCs in (M) NIT-GC1 and (N) NIT-GC2 morphant larvae during 405 nm light stimulation. Individual responses and their mean with 0.95 confidence interval are shown."}
 
 knitr::include_graphics(path = "figures/Fig4.png")
 
@@ -274,17 +279,19 @@ Instead, we identified an unconventional NIT-domain containing GC, NIT-GC1 as th
 The NIT domain was first identified in bacteria and animal NIT-GCs have only been recently reported [@Shu2003; @Moroz2020].
 Bacterial NIT domains regulate cellular functions in response to changes in extracellular and intracellular nitrate and/or nitrite concentrations [@camargo2007].
 NO is readily converted to nitrate and nitrite [@santos2011; @moeller2019; @garthwaite2015a] and these molecules accumulate in placozoans and cnidarians in cells and tissues with high NOS activity [@Moroz2004; @Moroz2020].
-It is possible that the NIT domains in NIT-GCs may also sense nitrate and nitrite, as in bacteria.
-Furthermore, if they show different sensitivities to NO, nitrite and nitrate, it is possible that differences in their half-lives could give rise to a range of activation timings [@lundberg2011].
+NIT domains in NIT-GCs may also sense nitrate and nitrite, as in bacteria.
+Furthermore, if different NIT-GCs show different sensitivities to NO, nitrite and nitrate, it is possible that differences in the half-lives of these molecules could give rise to a range of activation timings [@lundberg2011].
 We have found 15 NIT-GCs in *Platynereis*, suggesting a wide range of functions.
 In addition, NIT-GC1 and NIT-GC2 showed very different subcellular localisation and functions.
 It is not clear whether the functional differences are due to the different localisation or also to differences in biochemical function.
 Overall, the diversification and spatially different localisation patterns of NIT-GCs may increase their signalling repertoire.
-Our data revealed key roles for two *Platynereis* NIT-GCs in phototraonsduction and NO-mediated neuromodulation suggesting that these molecules contribute to the diversity of neuronal signalling.
+Our data revealed key roles for two *Platynereis* NIT-GCs in phototransduction and NO-mediated neuromodulation suggesting that these molecules contribute to the diversity of neuronal signalling.
 Sponges and ctenophores, where NO signalling is present, lack NIT-GCs.
 In placozoans as many as 12 have been found, and cnidarians also contain a large diversity.
+Soluble GCs are expressed broadly in the *Drosophila* and mammalian brain and the specificity of NO signalling seems to depend on localised NOS expression and activation, and ectopic NOS expression can confer NO-dependent effects [@Aso2019].
+In *Platyneries* larvae
 
-**Nitric oxide feedback modulation of UV-avoidance behaviour**
+**Nitric oxide confers short-term memory to circuit activity**
 
 Why does a seemingly roundabout feedback pathway exist?
 The activity of synaptic circuits is richly modulated monoamines, neuropeptides and gaseous molecules.
@@ -292,8 +299,8 @@ The gaseous second messenger nitric oxide (NO) is known to activate a post- to p
 It has been reported that NO produced in one of the mammalian retinal cells modulates cGMP-mediated neurotransmission by activating the presynaptic nerve sGC (a general target of NO) through retrograde signalling [@Vielma2014; @Wei2012].
 Retrograde signalling of NO is also known to be one of the molecules that regulate memory formation.
 In Drosophila, NOS of PPL1-γ1pedc shortens memory retention while promoting fast memory updating in response to new experiences, indicating that NO regulates forgetting [@Aso2019].
-Because NO has a short half-life and may be a suitable second messenger for encoding working memories whose duration must be limited.
-R-neuron inputs to the ellipsoid in Drosophila also represent visual object orientation for tens of seconds after the disappearance of an object, suggesting that they are involved in short-term visual memory dependent on nitric oxide signalling [@Kuntz2017].
+In the ellipsoid body of the *Drosophila* central brain, NOS is specifically expressed in the R3 ring neuron, but not other ring (R) neurons [@Kuntz2017]. R3 neurons are required for visual working memory with NO signalling mediating a short-term (~4 sec) component of the visual memory of objects. In this circuit, NO produced in R3 axons acts in an autocrine manner to activate sGC in R3 axons leading to a CNG-dependent (cyclic nucleotide-gated ion channel) temporary increase in calcium levels [@Kuntz2017]. Because of the short life-time of NO, this molecule may be well suited to encode transient memory traces [@Kuntz2017].
+
 In this study, our mathematical modelling results focused on the time of UV stimulation and showed that the late activity comes more delayed during short UV and sooner during long UV.
 This suggests that animals may have a UV length-dependent short-term memory system that regulates cPRC activation, and that there may be mechanisms by which UV stimulation is enhanced and maintained such that NO feedback maintains neural activation even with slight UV.
 It is possible that these mechanisms may have been early signalling pathways controlling stimulus changes across space and time in animals' short-term memory.
@@ -463,7 +470,9 @@ Imaging data analysis was performed using ImageJ (National Institutes of Health,
 
 ## Acknowledgements
 
-This work was funded by the Wellcome Trust (214337/Z/18/Z). This project has received funding from the European Research Council (ERC) under the European Union’s Horizon 2020 research and innovation programme (grant agreement No 101020792). KJ has been supported by a JSPS Postdoctoral fellowhip, LAYG by a BBSRC Discovery fellowship (BB/W010305/1).
+This work was funded by the Wellcome Trust (214337/Z/18/Z).
+This project has received funding from the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme (grant agreement No 101020792).
+KJ has been supported by a JSPS Postdoctoral fellowhip, LAYG by a BBSRC Discovery fellowship (BB/W010305/1).
 
 ## References {.unnumbered}
 
