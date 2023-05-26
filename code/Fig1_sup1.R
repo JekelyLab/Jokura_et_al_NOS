@@ -5,7 +5,7 @@
 source("code/Packages_to_load.R")
 
 # assemble figure ---------------------------------------------------------
-panel_A <- ggdraw() + draw_image(readPNG("pictures/FINALSeq_NOS_cdhit080_one_Lopho_3rd.fasta.alngapp.fasta.treefile.png"))
+panel_A <- ggdraw() + draw_image(readPNG("pictures/NOS_Lopho_plus_cdhit080_095_mix_remo.png"))
 
 #combine panels into Figure and save final figure as pdf and png
 #panels of different sizes
@@ -18,7 +18,7 @@ Fig1_sup1 <- panel_A +
 
 
 ggsave("Manuscript/figures/Fig1_sup1.png", limitsize = FALSE, 
-       units = c("px"), Fig1_sup1, width = 2350, height = 1700, bg='white')  
+       units = c("px"), Fig1_sup1, width = 2000, height = 1800, bg='white')  
 
 ggsave("Manuscript/figures/Fig1_sup1.pdf", limitsize = FALSE, 
-       units = c("px"), Fig1_sup1, width = 2350, height = 1700)  
+       units = c("px"), Fig1_sup1, width = 2000, height = 1800)  
