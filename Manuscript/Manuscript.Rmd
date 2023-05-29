@@ -239,19 +239,7 @@ knitr::include_graphics(path = "figures/Fig5.png")
 
 To further analyse the dynamics of responses to UV light and formally describe cPRC phototransduction, synaptic connections and NO retrograde signalling, we developed a mixed cellular-circuit-level mathematical model. We used our Ca2+ imagining data of cPRC, INNOS and INRGW cells collected in wild type, *NOS* knockout, and *NIT-GC2* morphant larvae to formulate assumptions that are the basis of the proposed model.
 
-We model a direct c-opsin1-dependent response to UV leading to the initial rise in Ca2+ levels. The mechanism of this signal is not known but may include Galpha and Gbeta signalling, CNG channel activation or other pathways. We further model a decrease following UV stimulation in Ca2+ levels that is dependent on NIT-GC2. The
-
-in cPRC cells increase with cGMP. cGMP decreases under NIT-GC2
-exposure to UV (mechanism unknown, comparison of Fig. 4A, B and M with Fig. 4N, described
-in section ’NIT-GC1 is required for NO-mediated feedback to cPRCs during the UV response’).
-cGMP increases with increasing NO (comparison of Fig. 4A with Fig. 4B described in sections
-’NO feedback tunes cPRC responses to UV/violet stimulation’ and ’NIT-GC1 produces cGMP in a
-NO-dependent manner’ and ’NIT-GC1 is required for NO-mediated feedback to cPRCs during the
-UV response’).
-Based on the connectome structure (Fig. 1F) we infer a feedforward coupling between cPRC
-cells and IN-NOS and IN-RGW cells. The proposed synaptic coupling is UV-dependent and decays
-linearly. It is suppressed in NIT-GC2 morphants (observations in Fig. 5
-
+We model a direct c-opsin1-dependent response to UV leading to the initial rise in Ca2+ levels. The mechanism of this signal is not known but may include Gα and Gβ signalling, CNG channel activation or other pathways. We further assume that in cPRC cells, Ca2+ levels increase with cGMP. We model a decrease in cGMP and Ca2+ levels due to a NIT-GC2-dependent pathway. The effect of NO in cPRC cells is captured by another term that describes a NIT-GC1 and NO-dependent increase in cGMP. Based on the synaptic connectome, we infer a feedforward coupling between cPRC cells and INNOS and INRGW cells. The proposed synaptic coupling is UV-dependent, decays linearly and is suppressed in NIT-GC2 morphants.
 
 We analysed the neurotransmitter-related genes expressed in the respective cells identified from the single-cell transcriptome data of Achim et al. to understand the neurotransmission mechanisms in cPRC, INNOS and INRGWa [@Achim2015; @williams2017].
 Interestingly, in cPRC, whereas cholinergic neurons has previously been implicated in neurotransmission [@Randel2014a], we found transporters and synthetic enzymes involved in glutaminergic, glycinergic, GABAergic and adrenergic innervation, respectively (Figure 6A).
