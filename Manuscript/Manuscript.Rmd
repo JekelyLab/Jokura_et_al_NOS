@@ -237,23 +237,42 @@ knitr::include_graphics(path = "figures/Fig5.png")
 
 **Mathematical modelling of cPRC-circuit dynamics**
 
-To further analyse the dynamics of responses to UV light and formally describe cPRC phototransduction, synaptic connections and NO retrograde signalling, we developed a mixed cellular-circuit-level mathematical model. We used our Ca2+ imagining data of cPRC, INNOS and INRGW cells collected in wild type, *NOS* knockout, and *NIT-GC2* morphant larvae to formulate assumptions that are the basis of the proposed model.
+To further analyse the dynamics of responses to UV light and formally describe cPRC phototransduction, synaptic connections and NO retrograde signalling, we developed a mixed cellular-circuit-level mathematical model.
+We used our Ca2+ imagining data of cPRC, INNOS and INRGW cells collected in wild type, *NOS* knockout, and *NIT-GC2* morphant larvae to formulate assumptions that are the basis of the proposed model.
 
-We model a direct c-opsin1-dependent response to UV leading to the initial rise in Ca2+ levels. The mechanism of this signal is not known but may include Gα and Gβ signalling, CNG channel activation or other pathways. We further assume that in cPRC cells, Ca2+ levels increase with cGMP. We model a decrease in cGMP and Ca2+ levels due to a NIT-GC2-dependent pathway. The effect of NO in cPRC cells is captured by another term that describes a NIT-GC1 and NO-dependent increase in cGMP. Based on the synaptic connectome, we infer a feedforward coupling between cPRC cells and INNOS and INRGW cells. The proposed synaptic coupling is UV-dependent, decays linearly and is suppressed in NIT-GC2 morphants.
+We model a direct c-opsin1-dependent response to UV leading to the initial rise in Ca2+ levels.
+The mechanism of this signal is not known but may include Gα and Gβ signalling, CNG channel activation or other pathways.
+We further assume that in cPRC cells, Ca2+ levels increase with cGMP.
+We model a decrease in cGMP and Ca2+ levels due to a NIT-GC2-dependent pathway.
+The effect of NO in cPRC cells is captured by another term that describes a NIT-GC1 and NO-dependent increase in cGMP.
+Based on the synaptic connectome, we infer a feedforward coupling between cPRC cells and INNOS and INRGW cells.
+The proposed synaptic coupling is UV-dependent, decays linearly and is suppressed in NIT-GC2 morphants.
 
-We analysed the neurotransmitter-related genes expressed in the respective cells identified from the single-cell transcriptome data of Achim et al. to understand the neurotransmission mechanisms in cPRC, INNOS and INRGWa [@Achim2015; @williams2017].
-Interestingly, in cPRC, whereas cholinergic neurons has previously been implicated in neurotransmission [@Randel2014a], we found transporters and synthetic enzymes involved in glutaminergic, glycinergic, GABAergic and adrenergic innervation, respectively (Figure 6A).
-Gene expression has been observed by Randel et al. in these genes, suggesting that they may be expressed in cPRC [@Randel2014a].
-Their receptors were also found for each of the expressed genes within INNOS and INRGWa (Figure 6A).
-Based on these expression patterns and results, a model of transduction across the cPRC pathway focusing on Ca2+, cGMP and NO dynamics is proposed (Figure 6B).
-The c-opsin1, which is UV-sensitive, activates G proteins (Gi/Go) and decreases cGMP CNGAα, which is already known to be strongly expressed in cPRC as one of the targets highly dependent on cGMP changes, may regulate the influx of ions into the cell [@Arendt2004; @tsukamoto2017; @Veedin2021].
-The Gβγ released by Gi/o activation also induces K+ efflux (hyperpolarisation) via GIRK channels and closes the voltage-gated Ca2+ channels, thereby reducing intracellular calcium levels[@tsukamoto2023].
-It is also thought that increased calcium levels in INNOS signalled from cPRC may activate NOS and generate nitric oxide; INNOS has glycinergic and glutamatergic potential and may act as an inhibitory signal regulator for INRGWa.
-INRGWa, and may function as an inhibitory signal modulator for INRGWa.
+In the INNOS cells, we assume that excitatory synaptic input from cPRC leads to a rise in Ca2+ leading to NO production via NOS.
+This input is NIT-GC2-dependent.
+In the INRGW cells, we model a decrease in Ca2+ based on an inhibitory UV-dependent synaptic signal from the cPRCs.
+We further assume the existence of direct excitatory coupling between Ca2+ level in cPRC and INRGW Ca2+ to account for the late effects of cPRC on INRGW.
+The Uv-dependent and Ca2+-dependent signals may be mediated by different transmitters released by cPRCs during distinct phases of their activation cycle.
+In addition, we assume a direct inhibitory coupling between INNOS Ca2+ and INRGW Ca2+.
+Finally, in all variables, we assumed a linear decay and constant production to set steady a state.
+Since the aim of the model is to capture the normalised fluorescence data, the model is nondimensionalised.
+UV stimulation is modelled as a square pulse.
+To find model parameters producing an output fitting the experimental data we employed a global optimisation method known as a genetic algorithm (GA).
 
-We used this model and calcium imaging data to develop a mathematical model.
+Our model only includes a minimal set of parameters and assumptions of interactions that are required to describe the dynamics of cPRC, INNOS and INRGW in wild type and loss-of-function conditions (Figure 6C, D).
+The model highlights that cPRC phototransduction employs distinct pathways that operate on different time scales and differentially influence cPRC Ca2+ levels.
+The coupling between cPRCs and interneurons also requires different signalling mechanisms, either through distinct neurotransmitters or receptors expressed in the different cells.
 
-```{r echo=FALSE,fig.cap="**Figure 6. Signalling mechanisms and mathematical modelling between cPRC, INNOS and INRGWa.** **(A)** Dot plot of genes (columns) expressed in three types of cells (rows) in the cPRC circuit using single cell RNA-Seq. The size of the dots is expressed in proportion to the percentage of cells expressing that gene relative to all cells. The colours represent the normal logarithm of the number of transcripts in the cells expressing the gene. **(B)** Schematic diagram of the signalling pathway of the cPRC circuit, focusing on the NO feedback. **(C)** Diagram for **(D)**"}
+To identify possible molecular pathways, we analysed single-cell transcriptome data for cPRC, INNOS and INRGW identified by spatial mapping [@Achim2015] and unique marker genes [@williams2017].
+In cPRCs, we found transporters and synthetic enzymes indicating cholinergic, glutaminergic, glycinergic, GABAergic and adrenergic neurotransmission (Figure 6A).
+For each neurotransmitter, we also found receptor-encoding genes expressed in INNOS and INRGW (Figure 6A).
+The two types of interneurons often expressed different subunits or types of these receptors, indicating differential signalling (Figure 6A).
+
+Based on these data, our experimental results and the mathematical model, we assembled a minimal phototransduction and circuit diagram.
+The components for which experimental data are available are shown in bold.
+Other potential molecular players are also indicated (Figure 6B).
+
+```{r echo=FALSE,fig.cap="**Figure 6. Signalling mechanisms and mathematical modelling between cPRC, INNOS and INRGW.** **(A)** Dot plot of genes (columns) expressed in three types of cells (rows) in the cPRC circuit using single cell RNA-Seq. The size of the dots is expressed in proportion to the percentage of cells expressing that gene relative to all cells. The colours represent the normal logarithm of the number of transcripts in the cells expressing the gene. **(B)** Schematic diagram of the signalling pathway of the cPRC circuit, focusing on the NO feedback. **(C)** Diagram for **(D)**"}
 
 knitr::include_graphics(path = "figures/Fig6.png")
 
@@ -261,39 +280,39 @@ knitr::include_graphics(path = "figures/Fig6.png")
 
 ## Discussion
 
-Our work revealed an essential role for NO-mediated signalling in driving UV/violet avoidance behaviour.
-NO, produced by postsynaptic INNOS interneurons, signals retrogradely to the presynaptic cPRCs leading to their delayed activation.
-The resulting NIT-GC1-dependent late-phase activation of the photoreceptors drives circuit output through projection interneurons and ciliomotor neurons.
+Our work revealed an essential role for NO-mediated signalling in driving UV/violet avoidance behaviour in larval *Platynereis*.
+NO, produced by postsynaptic INNOS interneurons, signals retrogradely to the presynaptic cPRCs via NIT-GC1 leading to delayed and sustained cPRC activation.
+This late-phase activation of the photoreceptors drives circuit output through projection interneurons and ciliomotor neurons.
 In the cPRC circuit, synaptic connectivity alone is thus not sufficient to drive circuit dynamics and behavioural change.
+
 We identified cPRC-expressed NIT-GC1 as a new type of NO sensor.
+We showed that NIT-GC1 can produce cGMP in a NO-dependent manner.
 NIT-GC1 is localised to the axonal projections of the cPRCs in the anterior neurosecretory plexus of the brain.
 Here, cPRC axons intermingle and synapse on INNOS neurites that contain NOS.
 NO-mediated retrograde signalling thus likely occurs in the neurosecretory plexus where NOS- and NIT-GC1-containing projections are in close proximity and where we could detect NO production following UV stimulation.
-We showed that NIT-GC1 can produce cGMP in a NO-dependent manner.
 In cPRCs, increased cGMP levels could open CNGAα, a cyclic nucleotide-gated channels specifically expressed in cPRC [@Tosches2014], leading to their delayed depolarisation, even after UV off.
-
-Also our mathematical model...
 
 **Functional diversity of NIT-GCs**
 
-NO is a free radical with a millisecond-to-second scale half life in vivo and a limited signalling range.
-In neuronal signalling, NOS and sGC have been found to localise at close proximity at synapses [@burette2002][@garthwaite2015a].
+NO is a free radical with a millisecond-to-second half life and thus a limited signalling range.
+In neuronal signalling, NOS is often localized to neurites [@Kuntz2017] at close proximity to sGC at synapses [@burette2002; @garthwaite2015a].
 We identified 12 sGCs in *Platynereis*, but none of these is expressed in the cPRC.
 Instead, we identified an unconventional NIT-domain containing GC, NIT-GC1 as the mediator of NO retrograde signalling.
 The NIT domain was first identified in bacteria and animal NIT-GCs have only been recently reported [@Shu2003; @Moroz2020].
 Bacterial NIT domains regulate cellular functions in response to changes in extracellular and intracellular nitrate and/or nitrite concentrations [@camargo2007].
 NO is readily converted to nitrate and nitrite [@santos2011; @moeller2019; @garthwaite2015a] and these molecules accumulate in placozoans and cnidarians in cells and tissues with high NOS activity [@Moroz2004; @Moroz2020].
-NIT domains in NIT-GCs may also sense nitrate and nitrite, as in bacteria.
-Furthermore, if different NIT-GCs show different sensitivities to NO, nitrite and nitrate, it is possible that differences in the half-lives of these molecules could give rise to a range of activation timings [@lundberg2011].
-We have found 15 NIT-GCs in *Platynereis*, suggesting a wide range of functions.
-In addition, NIT-GC1 and NIT-GC2 showed very different subcellular localisation and functions.
-It is not clear whether the functional differences are due to the different localisation or also to differences in biochemical function.
-Overall, the diversification and spatially different localisation patterns of NIT-GCs may increase their signalling repertoire.
-Our data revealed key roles for two *Platynereis* NIT-GCs in phototransduction and NO-mediated neuromodulation suggesting that these molecules contribute to the diversity of neuronal signalling.
-Sponges and ctenophores, where NO signalling is present, lack NIT-GCs.
-In placozoans as many as 12 have been found, and cnidarians also contain a large diversity.
-Soluble GCs are expressed broadly in the *Drosophila* and mammalian brain and the specificity of NO signalling seems to depend on localised NOS expression and activation, and ectopic NOS expression can confer NO-dependent effects [@Aso2019].
-In *Platyneries* larvae
+NIT domains in NIT-GCs may also sense nitrate and nitrite, as in bacteria, a possibility we cannot rule out based on our cellular assays with NIT-GC1.
+If different NIT-GCs show different sensitivities to NO, nitrite and nitrate, then the differences in the half-lives of these molecules may give rise to a range of activation timings [@lundberg2011].
+
+In *Platynereis*, we have found 15 NIT-GCs, suggesting a wide range of functions.
+We only tested NIT-GC1 and NIT-GC2, and the two proteins showed very different subcellular localisation and functions.
+Differences in cellular expression, subcellular localisation, and biochemical function may thus all contribute to the diversity of NIT-GC functions.
+
+**Mechanism of phototransduction and neurotransmission in the cPRC circuit**
+
+Based on our data herein and previous work we can now propose a more detailed model of cPRC phototransduction and neurotransmission.
+The cPRCs have high basal Ca2+ and respond to UV/violet light dependent on c-opsin1 [@Veraszto2018]. c-opsin1 forms a bistable photopigment and signals through Gi/oα and Gβγ [@tsukamoto2017; @Veedin2021; @tsukamoto2023]. In heterologous systems, the Gβγ subunits released following c-opsin1 activation activate GIRK channels inducing K+ efflux (hyperpolarisation) [@tsukamoto2017; @tsukamoto2023] and closes the voltage-gated Ca2+ channels, thereby reducing intracellular calcium levels [@tsukamoto2023]. An orthologous GIRK channel is also expressed at low levels in the cPRCs (Figure 6A). The pathway for the first rapid activation phase following UV/violet stimulus is not known but may involve the activation of the CNGα channel expressed in the cPRCs. For the second inhibitory phase of phototransduction, we identified a key requirement for the ciliary-localised NIT-GC2. The mechanisms may involve c-opsin1-dependent inhibition of tonic NIT-GC2 activity and the reduction of ciliary cGMP. This signalling step is required for the feedforward activation of the INNOS cells through an unknown transmitter. The activation of INNOS leads to NOS activation and NO release, potentially through a canonical Ca2+-calmodulin pathway. Our model predicts feedforward inhibiton from INNOS to INRGW, possibly mediated by glycin transmission. NO released by INNOS neurites activates NIT-GC1 in cPRC projections, leading to delayed cPRC activation that is not directly dependent on the UV/violet signal. This late activation phase leads to INRGW activation, presumably via a different neurotransmitter.
+In addition, the cPRC circuit expresses neuropeptides and their receptors, suggesting further neuromodulatory signals. For example, INRGW express the proneuropeptide RGWamide and cPRCs and INNOS express its receptor, suggesting retrograde peptidergic signalling. 
 
 **Nitric oxide confers short-term memory to circuit activity**
 
@@ -303,7 +322,10 @@ The gaseous second messenger nitric oxide (NO) is known to activate a post- to p
 It has been reported that NO produced in one of the mammalian retinal cells modulates cGMP-mediated neurotransmission by activating the presynaptic nerve sGC (a general target of NO) through retrograde signalling [@Vielma2014; @Wei2012].
 Retrograde signalling of NO is also known to be one of the molecules that regulate memory formation.
 In Drosophila, NOS of PPL1-γ1pedc shortens memory retention while promoting fast memory updating in response to new experiences, indicating that NO regulates forgetting [@Aso2019].
-In the ellipsoid body of the *Drosophila* central brain, NOS is specifically expressed in the R3 ring neuron, but not other ring (R) neurons [@Kuntz2017]. R3 neurons are required for visual working memory with NO signalling mediating a short-term (~4 sec) component of the visual memory of objects. In this circuit, NO produced in R3 axons acts in an autocrine manner to activate sGC in R3 axons leading to a CNG-dependent (cyclic nucleotide-gated ion channel) temporary increase in calcium levels [@Kuntz2017]. Because of the short life-time of NO, this molecule may be well suited to encode transient memory traces [@Kuntz2017].
+In the ellipsoid body of the *Drosophila* central brain, NOS is specifically expressed in the R3 ring neuron, but not other ring (R) neurons [@Kuntz2017].
+R3 neurons are required for visual working memory with NO signalling mediating a short-term (\~4 sec) component of the visual memory of objects.
+In this circuit, NO produced in R3 axons acts in an autocrine manner to activate sGC in R3 axons leading to a CNG-dependent (cyclic nucleotide-gated ion channel) temporary increase in calcium levels [@Kuntz2017].
+Because of the short life-time of NO, this molecule may be well suited to encode transient memory traces [@Kuntz2017].
 
 In this study, our mathematical modelling results focused on the time of UV stimulation and showed that the late activity comes more delayed during short UV and sooner during long UV.
 This suggests that animals may have a UV length-dependent short-term memory system that regulates cPRC activation, and that there may be mechanisms by which UV stimulation is enhanced and maintained such that NO feedback maintains neural activation even with slight UV.
@@ -313,7 +335,7 @@ Short-term memory is essential for locating less exposed areas to minimise UV-in
 
 **The mystery of why IN-RGW activation causes downward swimming**
 
-One type of interneuron that strongly synapses with the cPRC is INRGWa, which synapses directly onto ciliary motoneurons and is therefore considered to be a very important neuron in larval behavioural control [@williams2017; @Veraszto2018].
+One type of interneuron that strongly synapses with the cPRC is INRGW, which synapses directly onto ciliary motoneurons and is therefore considered to be a very important neuron in larval behavioural control [@williams2017; @Veraszto2018].
 Our results suggest that the depolarising response of the cPRC by NO feedback induces INRGW activation.
 Our experiments have shown that exposure of larvae to RGWamide results in simultaneous downward swimming and that activation of INRGW is sufficient to trigger UV-avoidance behaviour (unpublished data).
 However, whole-cell tracking by connectome has not revealed any equilibrium organ that recognises the direction of gravity, and it remains to be investigated how activation of INRGWs causes animals to recognise 'down', e.g. in RGWamide-deficient larvae.
@@ -510,7 +532,7 @@ knitr::include_graphics(path = "figures/Fig4_sup1.png")
 
 ```
 
-```{r echo=FALSE,fig.cap="**Figure 4 -- figure supplement 2** Phylogenetic tree of guanylate cyclase by maximum likelihood (ML). Guanylate cyclase-coupled receptor and soluble guanylate cyclases (sGC) as outgroups. Guanylate cyclases with NIT domains are found in most animal phyla except Porifera, Ctenophora, Urochordata and Chordata. Dot plot of Platynereis NIT-GC genes (columns) expressed in cPRC, INNOS and INRGWa (rows) using single cell RNA-Seq. The size of the dots is expressed in proportion to the percentage of cells expressing that gene relative to all cells. The colours represent the normal logarithm of the number of transcripts in the cells expressing the gene."}
+```{r echo=FALSE,fig.cap="**Figure 4 -- figure supplement 2** Phylogenetic tree of guanylate cyclase by maximum likelihood (ML). Guanylate cyclase-coupled receptor and soluble guanylate cyclases (sGC) as outgroups. Guanylate cyclases with NIT domains are found in most animal phyla except Porifera, Ctenophora, Urochordata and Chordata. Dot plot of Platynereis NIT-GC genes (columns) expressed in cPRC, INNOS and INRGW (rows) using single cell RNA-Seq. The size of the dots is expressed in proportion to the percentage of cells expressing that gene relative to all cells. The colours represent the normal logarithm of the number of transcripts in the cells expressing the gene."}
 knitr::include_graphics(path = "figures/Fig4_sup2.png")
 
 ```
