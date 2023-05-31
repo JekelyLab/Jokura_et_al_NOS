@@ -195,7 +195,7 @@ For both genes, the morpholinos led to a strong reduction in the respective anti
 
 In NIT-GC1 morphant larvae, the delayed activation of cPRCs following 405 nm stimulation did not occur (Figure 4M).
 This phenotype is similar to the phenotype of *NOS* mutants suggesting that NIT-GC1 acts as the NO sensor in cPRCs to drive their delayed activation.
-This could occur via increased cGMP production and the opening of a cyclic-nucleotide-gated (CNG) channel specific to cPRCs [@Tosches2014].
+This could occur via increased cGMP production and the opening of a cyclic-nucleotide-gated ion channel (CNG) specific to cPRCs [@Tosches2014].
 NIT-GC2 morphant larvae, in contrast, showed a step-up increase in calcium following light stimulation (Figure 4N).
 The calcium signal decayed during stimulation and was off after light off.
 These data support an essential role for ciliary-localised NIT-GC2 in suppressing cPRC calcium following its transient rise at stimulus onset.
@@ -241,7 +241,7 @@ To further analyse the dynamics of responses to UV light and formally describe c
 We used our Ca2+ imagining data of cPRC, INNOS and INRGW cells collected in wild type, *NOS* knockout, and *NIT-GC2* morphant larvae to formulate assumptions that are the basis of the proposed model.
 
 We model a direct c-opsin1-dependent response to UV leading to the initial rise in Ca2+ levels.
-The mechanism of this signal is not known but may include Gα and Gβ signalling, CNG channel activation or other pathways.
+The mechanism of this signal is not known but may include Gα and Gβ signalling, CNGAα channel activation or other pathways.
 We further assume that in cPRC cells, Ca2+ levels increase with cGMP.
 We model a decrease in cGMP and Ca2+ levels due to a NIT-GC2-dependent pathway.
 The effect of NO in cPRC cells is captured by another term that describes a NIT-GC1 and NO-dependent increase in cGMP.
@@ -290,7 +290,7 @@ We showed that NIT-GC1 can produce cGMP in a NO-dependent manner.
 NIT-GC1 is localised to the axonal projections of the cPRCs in the anterior neurosecretory plexus of the brain.
 Here, cPRC axons intermingle and synapse on INNOS neurites that contain NOS.
 NO-mediated retrograde signalling thus likely occurs in the neurosecretory plexus where NOS- and NIT-GC1-containing projections are in close proximity and where we could detect NO production following UV stimulation.
-In cPRCs, increased cGMP levels could open CNGAα, a cyclic nucleotide-gated channels specifically expressed in cPRC [@Tosches2014], leading to their delayed depolarisation, even after UV off.
+In cPRCs, increased cGMP levels could open CNGAα, specifically expressed in cPRC [@Tosches2014], leading to their delayed depolarisation, even after UV off.
 
 **Functional diversity of NIT-GCs**
 
@@ -316,22 +316,14 @@ In addition, the cPRC circuit expresses neuropeptides and their receptors, sugge
 
 **Nitric oxide confers short-term memory to circuit activity**
 
-Why does a seemingly roundabout feedback pathway exist?
-The activity of synaptic circuits is richly modulated monoamines, neuropeptides and gaseous molecules.
-The gaseous second messenger nitric oxide (NO) is known to activate a post- to presynaptic retrograde signalling cascade involving cyclic guanosine monophosphate (cGMP) production.
-It has been reported that NO produced in one of the mammalian retinal cells modulates cGMP-mediated neurotransmission by activating the presynaptic nerve sGC (a general target of NO) through retrograde signalling [@Vielma2014; @Wei2012].
-Retrograde signalling of NO is also known to be one of the molecules that regulate memory formation.
-In Drosophila, NOS of PPL1-γ1pedc shortens memory retention while promoting fast memory updating in response to new experiences, indicating that NO regulates forgetting [@Aso2019].
-In the ellipsoid body of the *Drosophila* central brain, NOS is specifically expressed in the R3 ring neuron, but not other ring (R) neurons [@Kuntz2017].
-R3 neurons are required for visual working memory with NO signalling mediating a short-term (\~4 sec) component of the visual memory of objects.
-In this circuit, NO produced in R3 axons acts in an autocrine manner to activate sGC in R3 axons leading to a CNG-dependent (cyclic nucleotide-gated ion channel) temporary increase in calcium levels [@Kuntz2017].
-Because of the short life-time of NO, this molecule may be well suited to encode transient memory traces [@Kuntz2017].
+Retrograde signalling by NO from INNOS to cPRC leads to the sustained activation of cPRCs and postsynaptic neurons even after the end of stimulation. This activated state is maintained for several tens of second. NO signalling thus induces a transient circuit state orshort-term memory trace in the *Platynereis* larval brain. Because of the short life-time of NO, this molecule may be well suited to encode transient memory traces [@Kuntz2017]. In the ellipsoid body of the *Drosophila* central brain, NO signalling has a similar function. Here, NOS is specifically expressed in the R3 ring neurons and is required for the short-term (\~4 sec) visual memory of objects [@Kuntz2017]. NO is produced in the axons of R3 neurons and acts directly on sGC in the same axons. This autocrine signal leads to a CNG-dependent temporary increase in calcium levels, carrying the working memory trace [@Kuntz2017].
 
-In this study, our mathematical modelling results focused on the time of UV stimulation and showed that the late activity comes more delayed during short UV and sooner during long UV.
-This suggests that animals may have a UV length-dependent short-term memory system that regulates cPRC activation, and that there may be mechanisms by which UV stimulation is enhanced and maintained such that NO feedback maintains neural activation even with slight UV.
-It is possible that these mechanisms may have been early signalling pathways controlling stimulus changes across space and time in animals' short-term memory.
-In planarian UV avoidance behaviour, different time and length scales of neuropeptide and small molecule transmission were reported to generate incoherent patterns of neural activity that competitively control behaviour and memory [@bray2023].
-Short-term memory is essential for locating less exposed areas to minimise UV-induced damage in animals.
+In the *Platynereis* circuit, our mathematical model indicates that the onset, magnitude and duration of the NO-dependent signal depends on the intensity and duration of the UV/violet stimulus. This suggests that the NO-dependent memory trace also encodes the magnitude and duration of the stimulus. During UV avoidance in the planarian *Schmidtea mediterranea*, neuropeptide signalling has a similar integratory function. Planarians exposed to UV light for >30 sec remain active for extended periods (several minutes) post-stimulation [@bray2023]. If neuropeptide signalling is defective, animals can still respond to UV light, but do not maintain a latent memory state and do not display increased post-stimulus activity.
+
+NO signalling may also work on longer time scales. In the fly ellipsoid body, NO signalling is also required for long-term changes of the circuit, acting through CREB-dependent transcription.
+
+In Drosophila, NOS of PPL1-γ1pedc shortens memory retention while promoting fast memory updating in response to new experiences, indicating that NO regulates forgetting [@Aso2019].
+
 
 **The mystery of why IN-RGW activation causes downward swimming**
 
