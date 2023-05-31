@@ -1,109 +1,106 @@
 ,ID,Gene,cluster,count,% Expressing
-0,comp410526_c1_seq1,OPN3_HUMAN Opsin-3,cPRC,1.881509156528189,66.05580763788906
-1,comp414883_c0_seq1,CNGAα,cPRC,2.516258413368675,23.809609362156888
-2,comp411593_c0_seq1,NIT-GC1,cPRC,3.593253935909745,31.147503461685716
-3,Contig2280,NIT-GC2,cPRC,3.9791878355004338,35.73468598396226
-4,comp416839_c0_seq1,NOS,cPRC,0.0,0.0
-5,Pdu_pedal-peptide-2,MLD/pedal-peptide-2,cPRC,3.980302895761628,29.05078940329459
-6,Contig19863,RYa,cPRC,0.0,0.0
-7,Pdu_RYamide,Pdu_RYa,cPRC,0.0,0.0
-8,Contig4590,RGWa,cPRC,0.0,0.0
-9,Pdu_RGWamide,Pdu_RGWa,cPRC,0.0,0.0
-10,comp416782_c0_seq2,RGWa receptor,cPRC,2.1152674435460677,26.24775247942995
-11,Contig7223,Luqin (RYa) receptor 1,cPRC,0.0,0.0
-12,Contig7857,GCYB1_BOVIN Guanylate cyclase soluble subunit beta-1,cPRC,0.0,0.0
-13,Contig11547,VAChT,cPRC,0.46137459864166785,0.16908691294307493
-14,Contig9506,ChACT,cPRC,1.2985465546699482,1.4065925103457142
-15,gi|143347123|gb|EF384218.1|,ChAT mRNA_partial cds_1173_79_1252,cPRC,0.4367235945626748,0.1957507344951679
-16,comp418713_c0_seq14,ACH1_DROME Acetylcholine receptor subunit alpha-like 1,cPRC,0.23409764427933114,0.060469455201679415
-17,Contig3965,ACH3_DROME Acetylcholine receptor subunit beta-like 1,cPRC,0.0,0.0
-18,Contig4609,ACH91_ONCMY Neuronal acetylcholine receptor subunit alpha-9-I,cPRC,1.4735212332363798,2.8391967910875846
-19,comp416391_c0_seq3,DCE1_PIG Glutamate decarboxylase 1,cPRC,1.456297997915308,95.0906314768524
-20,gi|295656551|gb|GU169427.1|,glutamate decarboxylase mRNA_partial cds_447_8_455,cPRC,1.227895348450816,99.99999999999937
-21,comp398647_c1_seq8,GABR1_RAT Gamma-aminobutyric acid type B receptor subunit 1,cPRC,0.0,0.0
-22,Contig12054,GABA receptor,cPRC,0.0,0.0
-23,comp422720_c0_seq7,VGLU1_HUMAN Vesicular glutamate transporter 1,cPRC,0.5837073812033274,1.5931860319597642
-24,Contig9148,VGLU2_RAT Vesicular glutamate transporter 2,cPRC,0.0,0.0
-25,Contig14957,"GRIK2_RAT Glutamate receptor, ionotropic kainate 2",cPRC,1.7977890696840562,2.3212729558754672
-26,Contig1495,"GRIK5_RAT Glutamate receptor, ionotropic kainate 5",cPRC,0.11396931054406169,0.013476802254781517
-27,comp415515_c0_seq11,GLRA4_MOUSE Glycine receptor subunit alpha-4,cPRC,0.0,0.0
-28,Contig5612,Glycine receptor,cPRC,0.0,0.0
-29,comp412317_c0_seq4,GLRA2_MOUSE Glycine receptor subunit alpha-2,cPRC,0.0,0.0
-30,Contig13181,SC6A5_HUMAN Sodium- and chloride-dependent glycine transporter 2,cPRC,0.23964444110918467,0.0779925678906826
-31,Contig14740,SC6A5_XENLA Sodium- and chloride-dependent glycine transporter 2,cPRC,1.3497220515672712,1.303849066254571
-32,Contig13549,DOPO_MOUSE Dopamine beta-hydroxylase,cPRC,1.8511506084354026,43.870340609866325
-33,Contig13759,ADRB2_PIG Beta-2 adrenergic receptor,cPRC,0.0,0.0
-34,Contig14230,ADA2C_DANRE Alpha-2C adrenergic receptor,cPRC,0.0,0.0
-35,comp417233_c1_seq5,IRK5_HUMAN G protein-activated inward rectifier potassium channel 4,cPRC,1.093835602993661,1.3893685303842334
-36,comp410526_c1_seq1,OPN3_HUMAN Opsin-3,INNOS,0.0,0.0
-37,comp414883_c0_seq1,CNGAα,INNOS,0.0,0.0
-38,comp411593_c0_seq1,NIT-GC1,INNOS,0.2101160226824942,0.004945844240863303
-39,Contig2280,NIT-GC2,INNOS,0.0,0.0
-40,comp416839_c0_seq1,NOS,INNOS,1.8895993645586378,39.17441047130688
-41,Pdu_pedal-peptide-2,MLD/pedal-peptide-2,INNOS,0.0,0.0
-42,Contig19863,RYa,INNOS,3.7834379825269857,35.7848473270386
-43,Pdu_RYamide,Pdu_RYa,INNOS,3.285369105561883,57.141266254694166
-44,Contig4590,RGWa,INNOS,0.0,0.0
-45,Pdu_RGWamide,Pdu_RGWa,INNOS,0.0,0.0
-46,comp416782_c0_seq2,RGWa receptor,INNOS,2.561800023177413,73.75224752057002
-47,Contig7223,Luqin (RYa) receptor 1,INNOS,0.0,0.0
-48,Contig7857,GCYB1_BOVIN Guanylate cyclase soluble subunit beta-1,INNOS,0.0,0.0
-49,Contig11547,VAChT,INNOS,0.0,0.0
-50,Contig9506,ChACT,INNOS,0.0,0.0
-51,gi|143347123|gb|EF384218.1|,ChAT mRNA_partial cds_1173_79_1252,INNOS,0.0,0.0
-52,comp418713_c0_seq14,ACH1_DROME Acetylcholine receptor subunit alpha-like 1,INNOS,2.832269717419128,57.44598323865957
-53,Contig3965,ACH3_DROME Acetylcholine receptor subunit beta-like 1,INNOS,2.5197638967341955,16.423329769723534
-54,Contig4609,ACH91_ONCMY Neuronal acetylcholine receptor subunit alpha-9-I,INNOS,0.0,0.0
-55,comp416391_c0_seq3,DCE1_PIG Glutamate decarboxylase 1,INNOS,0.0,0.0
-56,gi|295656551|gb|GU169427.1|,glutamate decarboxylase mRNA_partial cds_447_8_455,INNOS,0.0,0.0
-57,comp398647_c1_seq8,GABR1_RAT Gamma-aminobutyric acid type B receptor subunit 1,INNOS,1.9605048861040704,99.99999999999989
-58,Contig12054,GABA receptor,INNOS,0.0,0.0
-59,comp422720_c0_seq7,VGLU1_HUMAN Vesicular glutamate transporter 1,INNOS,0.0,0.0
-60,Contig9148,VGLU2_RAT Vesicular glutamate transporter 2,INNOS,0.18739976319833088,0.30935341976929176
-61,Contig14957,"GRIK2_RAT Glutamate receptor, ionotropic kainate 2",INNOS,2.1606906473099303,5.4024592642760965
-62,Contig1495,"GRIK5_RAT Glutamate receptor, ionotropic kainate 5",INNOS,2.3998315377014774,11.231857447470464
-63,comp415515_c0_seq11,GLRA4_MOUSE Glycine receptor subunit alpha-4,INNOS,0.0,0.0
-64,Contig5612,Glycine receptor,INNOS,0.0,0.0
-65,comp412317_c0_seq4,GLRA2_MOUSE Glycine receptor subunit alpha-2,INNOS,1.970416053490672,99.45738598709751
-66,Contig13181,SC6A5_HUMAN Sodium- and chloride-dependent glycine transporter 2,INNOS,1.4121446610676527,2.629964051775019
-67,Contig14740,SC6A5_XENLA Sodium- and chloride-dependent glycine transporter 2,INNOS,0.5050151816546139,0.134150009053727
-68,Contig13549,DOPO_MOUSE Dopamine beta-hydroxylase,INNOS,0.0,0.0
-69,Contig13759,ADRB2_PIG Beta-2 adrenergic receptor,INNOS,0.24925394820849123,0.1805323045695495
-70,Contig14230,ADA2C_DANRE Alpha-2C adrenergic receptor,INNOS,0.0,0.0
-71,comp417233_c1_seq5,IRK5_HUMAN G protein-activated inward rectifier potassium channel 4,INNOS,0.0,0.0
-72,comp410526_c1_seq1,OPN3_HUMAN Opsin-3,INRGWa,0.0,0.0
-73,comp414883_c0_seq1,CNGAα,INRGWa,0.20469033055634217,0.04380153083049463
-74,comp411593_c0_seq1,NIT-GC1,INRGWa,0.0,0.0
-75,Contig2280,NIT-GC2,INRGWa,0.2926229947268599,0.00360551857442421
-76,comp416839_c0_seq1,NOS,INRGWa,0.0,0.0
-77,Pdu_pedal-peptide-2,MLD/pedal-peptide-2,INRGWa,1.6641461596182485,0.13725625094575122
-78,Contig19863,RYa,INRGWa,3.5599523821358456,21.387766623732375
-79,Pdu_RYamide,Pdu_RYa,INRGWa,0.0,0.0
-80,Contig4590,RGWa,INRGWa,3.8985838077993935,97.76677864610281
-81,Pdu_RGWamide,Pdu_RGWa,INRGWa,0.7414985255970296,22.08699070831866
-82,comp416782_c0_seq2,RGWa receptor,INRGWa,0.0,0.0
-83,Contig7223,Luqin (RYa) receptor 1,INRGWa,0.16345090538397133,47.74346697651222
-84,Contig7857,GCYB1_BOVIN Guanylate cyclase soluble subunit beta-1,INRGWa,2.244670805050761,31.374480583616204
-85,Contig11547,VAChT,INRGWa,0.09037073086784017,0.020660056224703627
-86,Contig9506,ChACT,INRGWa,0.0,0.0
-87,gi|143347123|gb|EF384218.1|,ChAT mRNA_partial cds_1173_79_1252,INRGWa,0.0,0.0
-88,comp418713_c0_seq14,ACH1_DROME Acetylcholine receptor subunit alpha-like 1,INRGWa,0.0,0.0
-89,Contig3965,ACH3_DROME Acetylcholine receptor subunit beta-like 1,INRGWa,1.1428138552890665,0.641777887028636
-90,Contig4609,ACH91_ONCMY Neuronal acetylcholine receptor subunit alpha-9-I,INRGWa,2.4976934376401005,30.96226738144
-91,comp416391_c0_seq3,DCE1_PIG Glutamate decarboxylase 1,INRGWa,0.0,0.0
-92,gi|295656551|gb|GU169427.1|,glutamate decarboxylase mRNA_partial cds_447_8_455,INRGWa,0.0,0.0
-93,comp398647_c1_seq8,GABR1_RAT Gamma-aminobutyric acid type B receptor subunit 1,INRGWa,0.0,0.0
-94,Contig12054,GABA receptor,INRGWa,2.5812606890199996,51.490189938012854
-95,comp422720_c0_seq7,VGLU1_HUMAN Vesicular glutamate transporter 1,INRGWa,2.0920273146473805,68.91142902795211
-96,Contig9148,VGLU2_RAT Vesicular glutamate transporter 2,INRGWa,0.0,0.0
-97,Contig14957,"GRIK2_RAT Glutamate receptor, ionotropic kainate 2",INRGWa,1.4402504469429045,0.9979511720667714
-98,Contig1495,"GRIK5_RAT Glutamate receptor, ionotropic kainate 5",INRGWa,2.0276217860079893,4.7411134071104275
-99,comp415515_c0_seq11,GLRA4_MOUSE Glycine receptor subunit alpha-4,INRGWa,2.3818410802153562,65.77513193326082
-100,Contig5612,Glycine receptor,INRGWa,2.7870812561352203,46.85794141448764
-101,comp412317_c0_seq4,GLRA2_MOUSE Glycine receptor subunit alpha-2,INRGWa,0.0,0.0
-102,Contig13181,SC6A5_HUMAN Sodium- and chloride-dependent glycine transporter 2,INRGWa,0.0,0.0
-103,Contig14740,SC6A5_XENLA Sodium- and chloride-dependent glycine transporter 2,INRGWa,0.0,0.0
-104,Contig13549,DOPO_MOUSE Dopamine beta-hydroxylase,INRGWa,0.0,0.0
-105,Contig13759,ADRB2_PIG Beta-2 adrenergic receptor,INRGWa,0.0,0.0
-106,Contig14230,ADA2C_DANRE Alpha-2C adrenergic receptor,INRGWa,0.881240485214156,5.002119289367801
-107,comp417233_c1_seq5,IRK5_HUMAN G protein-activated inward rectifier potassium channel 4,INRGWa,2.0923956387829596,14.939398503852663
+0,comp410526_c1_seq1,OPN3_HUMAN Opsin-3,cPRC,1.881509157,66.05580764
+1,comp414883_c0_seq1,CNGAα,cPRC,2.516258413,23.80960936
+2,comp411593_c0_seq1,NIT-GC1,cPRC,3.593253936,31.14750346
+3,Contig2280,NIT-GC2,cPRC,3.979187836,35.73468598
+4,comp416839_c0_seq1,NOS,cPRC,0,0
+5,Pdu_pedal-peptide-2,MLD/pedal-peptide-2,cPRC,3.980302896,29.0507894
+6,Contig19863,RYa,cPRC,0,0
+7,Pdu_RYamide,Pdu_RYa,cPRC,0,0
+8,Contig4590,RGWa,cPRC,0,0
+9,Pdu_RGWamide,Pdu_RGWa,cPRC,0,0
+10,comp416782_c0_seq2,RGWa receptor,cPRC,2.115267444,26.24775248
+11,Contig7223,Luqin (RYa) receptor 1,cPRC,0,0
+12,Contig7857,GCYB1_BOVIN Guanylate cyclase soluble subunit beta-1,cPRC,0,0
+13,Contig11547,VAChT,cPRC,0.461374599,0.169086913
+14,Contig9506,ChACT,cPRC,1.298546555,1.40659251
+15,gi|143347123|gb|EF384218.1|,ChAT mRNA_partial cds_1173_79_1252,cPRC,0.436723595,0.195750734
+16,comp418713_c0_seq14,ACH1_DROME Acetylcholine receptor subunit alpha-like 1,cPRC,0.234097644,0.060469455
+17,Contig3965,ACH3_DROME Acetylcholine receptor subunit beta-like 1,cPRC,0,0
+18,Contig4609,ACH91_ONCMY Neuronal acetylcholine receptor subunit alpha-9-I,cPRC,1.473521233,2.839196791
+19,comp416391_c0_seq3,DCE1_PIG Glutamate decarboxylase 1,cPRC,1.456297998,95.09063148
+20,gi|295656551|gb|GU169427.1|,glutamate decarboxylase mRNA_partial cds_447_8_455,cPRC,1.227895348,100
+21,comp398647_c1_seq8,GABR1_RAT Gamma-aminobutyric acid type B receptor subunit 1,cPRC,0,0
+22,Contig12054,GABA receptor,cPRC,0,0
+23,comp422720_c0_seq7,VGLU1_HUMAN Vesicular glutamate transporter 1,cPRC,0.583707381,1.593186032
+24,Contig9148,VGLU2_RAT Vesicular glutamate transporter 2,cPRC,0,0
+25,Contig14957,"GRIK2_RAT Glutamate receptor, ionotropic kainate 2",cPRC,1.79778907,2.321272956
+26,Contig1495,"GRIK5_RAT Glutamate receptor, ionotropic kainate 5",cPRC,0.113969311,0.013476802
+27,comp415515_c0_seq11,GLRA4_MOUSE Glycine receptor subunit alpha-4,cPRC,0,0
+28,Contig5612,Glycine receptor,cPRC,0,0
+29,comp412317_c0_seq4,GLRA2_MOUSE Glycine receptor subunit alpha-2,cPRC,0,0
+30,Contig13181,SC6A5_HUMAN Sodium- and chloride-dependent glycine transporter 2,cPRC,0.239644441,0.077992568
+31,Contig14740,SC6A5_XENLA Sodium- and chloride-dependent glycine transporter 2,cPRC,1.349722052,1.303849066
+32,Contig13549,DOPO_MOUSE Dopamine beta-hydroxylase,cPRC,1.851150608,43.87034061
+33,Contig14230,ADA2C_DANRE Alpha-2C adrenergic receptor,cPRC,0,0
+34,comp417233_c1_seq5,IRK5_HUMAN G protein-activated inward rectifier potassium channel 4,cPRC,1.093835603,1.38936853
+35,comp410526_c1_seq1,OPN3_HUMAN Opsin-3,INNOS,0,0
+36,comp414883_c0_seq1,CNGAα,INNOS,0,0
+37,comp411593_c0_seq1,NIT-GC1,INNOS,0.210116023,0.004945844
+38,Contig2280,NIT-GC2,INNOS,0,0
+39,comp416839_c0_seq1,NOS,INNOS,1.889599365,39.17441047
+40,Pdu_pedal-peptide-2,MLD/pedal-peptide-2,INNOS,0,0
+41,Contig19863,RYa,INNOS,3.783437983,35.78484733
+42,Pdu_RYamide,Pdu_RYa,INNOS,3.285369106,57.14126625
+43,Contig4590,RGWa,INNOS,0,0
+44,Pdu_RGWamide,Pdu_RGWa,INNOS,0,0
+45,comp416782_c0_seq2,RGWa receptor,INNOS,2.561800023,73.75224752
+46,Contig7223,Luqin (RYa) receptor 1,INNOS,0,0
+47,Contig7857,GCYB1_BOVIN Guanylate cyclase soluble subunit beta-1,INNOS,0,0
+48,Contig11547,VAChT,INNOS,0,0
+49,Contig9506,ChACT,INNOS,0,0
+50,gi|143347123|gb|EF384218.1|,ChAT mRNA_partial cds_1173_79_1252,INNOS,0,0
+51,comp418713_c0_seq14,ACH1_DROME Acetylcholine receptor subunit alpha-like 1,INNOS,2.832269717,57.44598324
+52,Contig3965,ACH3_DROME Acetylcholine receptor subunit beta-like 1,INNOS,2.519763897,16.42332977
+53,Contig4609,ACH91_ONCMY Neuronal acetylcholine receptor subunit alpha-9-I,INNOS,0,0
+54,comp416391_c0_seq3,DCE1_PIG Glutamate decarboxylase 1,INNOS,0,0
+55,gi|295656551|gb|GU169427.1|,glutamate decarboxylase mRNA_partial cds_447_8_455,INNOS,0,0
+56,comp398647_c1_seq8,GABR1_RAT Gamma-aminobutyric acid type B receptor subunit 1,INNOS,1.960504886,100
+57,Contig12054,GABA receptor,INNOS,0,0
+58,comp422720_c0_seq7,VGLU1_HUMAN Vesicular glutamate transporter 1,INNOS,0,0
+59,Contig9148,VGLU2_RAT Vesicular glutamate transporter 2,INNOS,0.187399763,0.30935342
+60,Contig14957,"GRIK2_RAT Glutamate receptor, ionotropic kainate 2",INNOS,2.160690647,5.402459264
+61,Contig1495,"GRIK5_RAT Glutamate receptor, ionotropic kainate 5",INNOS,2.399831538,11.23185745
+62,comp415515_c0_seq11,GLRA4_MOUSE Glycine receptor subunit alpha-4,INNOS,0,0
+63,Contig5612,Glycine receptor,INNOS,0,0
+64,comp412317_c0_seq4,GLRA2_MOUSE Glycine receptor subunit alpha-2,INNOS,1.970416053,99.45738599
+65,Contig13181,SC6A5_HUMAN Sodium- and chloride-dependent glycine transporter 2,INNOS,1.412144661,2.629964052
+66,Contig14740,SC6A5_XENLA Sodium- and chloride-dependent glycine transporter 2,INNOS,0.505015182,0.134150009
+67,Contig13549,DOPO_MOUSE Dopamine beta-hydroxylase,INNOS,0,0
+68,Contig14230,ADA2C_DANRE Alpha-2C adrenergic receptor,INNOS,0,0
+69,comp417233_c1_seq5,IRK5_HUMAN G protein-activated inward rectifier potassium channel 4,INNOS,0,0
+70,comp410526_c1_seq1,OPN3_HUMAN Opsin-3,INRGWa,0,0
+71,comp414883_c0_seq1,CNGAα,INRGWa,0.204690331,0.043801531
+72,comp411593_c0_seq1,NIT-GC1,INRGWa,0,0
+73,Contig2280,NIT-GC2,INRGWa,0.292622995,0.003605519
+74,comp416839_c0_seq1,NOS,INRGWa,0,0
+75,Pdu_pedal-peptide-2,MLD/pedal-peptide-2,INRGWa,1.66414616,0.137256251
+76,Contig19863,RYa,INRGWa,3.559952382,21.38776662
+77,Pdu_RYamide,Pdu_RYa,INRGWa,0,0
+78,Contig4590,RGWa,INRGWa,3.898583808,97.76677865
+79,Pdu_RGWamide,Pdu_RGWa,INRGWa,0.741498526,22.08699071
+80,comp416782_c0_seq2,RGWa receptor,INRGWa,0,0
+81,Contig7223,Luqin (RYa) receptor 1,INRGWa,0.163450905,47.74346698
+82,Contig7857,GCYB1_BOVIN Guanylate cyclase soluble subunit beta-1,INRGWa,2.244670805,31.37448058
+83,Contig11547,VAChT,INRGWa,0.090370731,0.020660056
+84,Contig9506,ChACT,INRGWa,0,0
+85,gi|143347123|gb|EF384218.1|,ChAT mRNA_partial cds_1173_79_1252,INRGWa,0,0
+86,comp418713_c0_seq14,ACH1_DROME Acetylcholine receptor subunit alpha-like 1,INRGWa,0,0
+87,Contig3965,ACH3_DROME Acetylcholine receptor subunit beta-like 1,INRGWa,1.142813855,0.641777887
+88,Contig4609,ACH91_ONCMY Neuronal acetylcholine receptor subunit alpha-9-I,INRGWa,2.497693438,30.96226738
+89,comp416391_c0_seq3,DCE1_PIG Glutamate decarboxylase 1,INRGWa,0,0
+90,gi|295656551|gb|GU169427.1|,glutamate decarboxylase mRNA_partial cds_447_8_455,INRGWa,0,0
+91,comp398647_c1_seq8,GABR1_RAT Gamma-aminobutyric acid type B receptor subunit 1,INRGWa,0,0
+92,Contig12054,GABA receptor,INRGWa,2.581260689,51.49018994
+93,comp422720_c0_seq7,VGLU1_HUMAN Vesicular glutamate transporter 1,INRGWa,2.092027315,68.91142903
+94,Contig9148,VGLU2_RAT Vesicular glutamate transporter 2,INRGWa,0,0
+95,Contig14957,"GRIK2_RAT Glutamate receptor, ionotropic kainate 2",INRGWa,1.440250447,0.997951172
+96,Contig1495,"GRIK5_RAT Glutamate receptor, ionotropic kainate 5",INRGWa,2.027621786,4.741113407
+97,comp415515_c0_seq11,GLRA4_MOUSE Glycine receptor subunit alpha-4,INRGWa,2.38184108,65.77513193
+98,Contig5612,Glycine receptor,INRGWa,2.787081256,46.85794141
+99,comp412317_c0_seq4,GLRA2_MOUSE Glycine receptor subunit alpha-2,INRGWa,0,0
+100,Contig13181,SC6A5_HUMAN Sodium- and chloride-dependent glycine transporter 2,INRGWa,0,0
+101,Contig14740,SC6A5_XENLA Sodium- and chloride-dependent glycine transporter 2,INRGWa,0,0
+102,Contig13549,DOPO_MOUSE Dopamine beta-hydroxylase,INRGWa,0,0
+103,Contig14230,ADA2C_DANRE Alpha-2C adrenergic receptor,INRGWa,0.881240485,5.002119289
+104,comp417233_c1_seq5,IRK5_HUMAN G protein-activated inward rectifier potassium channel 4,INRGWa,2.092395639,14.9393985
