@@ -281,24 +281,23 @@ knitr::include_graphics(path = "figures/Fig6.png")
 ## Discussion
 
 Our work revealed an essential role for NO-mediated signalling in driving UV/violet avoidance behaviour in larval *Platynereis*.
-NO, produced by postsynaptic INNOS interneurons, signals retrogradely to the presynaptic cPRCs via NIT-GC1 leading to delayed and sustained cPRC activation.
+NO, produced by postsynaptic INNOS interneurons, signals retrogradely to presynaptic cPRCs via NIT-GC1 leading to delayed and sustained cPRC activation.
 This late-phase activation of the photoreceptors drives circuit output through projection interneurons and ciliomotor neurons.
-In the cPRC circuit, synaptic connectivity alone is thus not sufficient to drive circuit dynamics and behavioural change.
+In the cPRC circuit, synaptic connectivity alone is thus not sufficient to account for circuit dynamics and behavioural change.
 
-We identified cPRC-expressed NIT-GC1 as a new type of NO sensor.
-We showed that NIT-GC1 can produce cGMP in a NO-dependent manner.
-NIT-GC1 is localised to the axonal projections of the cPRCs in the anterior neurosecretory plexus of the brain.
-Here, cPRC axons intermingle and synapse on INNOS neurites that contain NOS.
+
+**Localised NO signalling in the neurosecretory plexus**
+
+NO is a free radical with a millisecond-to-second half life and thus a limited signalling range.
+In neuronal signalling, NOS is often localized to neurites [@Kuntz2017] at close proximity to sGC at synapses [@burette2002; @garthwaite2015a]. In the cPRC circuit, NOS is localised to the input compartment of INNOS neurites in the neurosecretory plexus where cPRC axons synapse on INNOS neurites. NIT-GC1, the target of NO signalling is localised to cPRC projections.
 NO-mediated retrograde signalling thus likely occurs in the neurosecretory plexus where NOS- and NIT-GC1-containing projections are in close proximity and where we could detect NO production following UV stimulation.
-In cPRCs, increased cGMP levels could open CNGAα, specifically expressed in cPRC [@Tosches2014], leading to their delayed depolarisation, even after UV off.
 
 **Functional diversity of NIT-GCs**
 
-NO is a free radical with a millisecond-to-second half life and thus a limited signalling range.
-In neuronal signalling, NOS is often localized to neurites [@Kuntz2017] at close proximity to sGC at synapses [@burette2002; @garthwaite2015a].
-We identified 12 sGCs in *Platynereis*, but none of these is expressed in the cPRC.
-Instead, we identified an unconventional NIT-domain containing GC, NIT-GC1 as the mediator of NO retrograde signalling.
-The NIT domain was first identified in bacteria and animal NIT-GCs have only been recently reported [@Shu2003; @Moroz2020].
+NO signalling is commonly mediated by sGCs. We identified 12 sGCs in *Platynereis*, but none of these is expressed in the cPRC.
+Instead, we identified an unconventional cPRC-expressed NIT-domain containing GC, NIT-GC1 as the mediator of NO retrograde signalling. In an in vitro assay, we could show that NIT-GC1 can produce cGMP following the addition of an NO donor and that this activity requires the NIT domain.
+
+NIT domains were first identified in bacteria and animal NIT-GCs have only recently been reported [@Shu2003; @Moroz2020].
 Bacterial NIT domains regulate cellular functions in response to changes in extracellular and intracellular nitrate and/or nitrite concentrations [@camargo2007].
 NO is readily converted to nitrate and nitrite [@santos2011; @moeller2019; @garthwaite2015a] and these molecules accumulate in placozoans and cnidarians in cells and tissues with high NOS activity [@Moroz2004; @Moroz2020].
 NIT domains in NIT-GCs may also sense nitrate and nitrite, as in bacteria, a possibility we cannot rule out based on our cellular assays with NIT-GC1.
@@ -311,12 +310,15 @@ Differences in cellular expression, subcellular localisation, and biochemical fu
 **Mechanism of phototransduction and neurotransmission in the cPRC circuit**
 
 Based on our data herein and previous work we can now propose a more detailed model of cPRC phototransduction and neurotransmission.
-The cPRCs have high basal Ca2+ and respond to UV/violet light dependent on c-opsin1 [@Veraszto2018]. c-opsin1 forms a bistable photopigment and signals through Gi/oα and Gβγ [@tsukamoto2017; @Veedin2021; @tsukamoto2023]. In heterologous systems, the Gβγ subunits released following c-opsin1 activation activate GIRK channels inducing K+ efflux (hyperpolarisation) [@tsukamoto2017; @tsukamoto2023] and closes the voltage-gated Ca2+ channels, thereby reducing intracellular calcium levels [@tsukamoto2023]. An orthologous GIRK channel is also expressed at low levels in the cPRCs (Figure 6A). The pathway for the first rapid activation phase following UV/violet stimulus is not known but may involve the activation of the CNGα channel expressed in the cPRCs. For the second inhibitory phase of phototransduction, we identified a key requirement for the ciliary-localised NIT-GC2. The mechanisms may involve c-opsin1-dependent inhibition of tonic NIT-GC2 activity and the reduction of ciliary cGMP. This signalling step is required for the feedforward activation of the INNOS cells through an unknown transmitter. The activation of INNOS leads to NOS activation and NO release, potentially through a canonical Ca2+-calmodulin pathway. Our model predicts feedforward inhibiton from INNOS to INRGW, possibly mediated by glycin transmission. NO released by INNOS neurites activates NIT-GC1 in cPRC projections, leading to delayed cPRC activation that is not directly dependent on the UV/violet signal. This late activation phase leads to INRGW activation, presumably via a different neurotransmitter.
-In addition, the cPRC circuit expresses neuropeptides and their receptors, suggesting further neuromodulatory signals. For example, INRGW express the proneuropeptide RGWamide and cPRCs and INNOS express its receptor, suggesting retrograde peptidergic signalling. 
+The cPRCs have high basal Ca2+ and respond to UV/violet light dependent on c-opsin1 [@Veraszto2018]. c-opsin1 forms a bistable photopigment and signals through Gi/oα and Gβγ [@tsukamoto2017; @Veedin2021; @tsukamoto2023]. In heterologous systems, the Gβγ subunits released following c-opsin1 activation open GIRK channels inducing K+ efflux (hyperpolarisation) [@tsukamoto2017; @tsukamoto2023] and close voltage-gated Ca2+ channels, thereby reducing intracellular calcium levels [@tsukamoto2023]. A GIRK channel is also expressed in the cPRCs (Figure 6A). The pathway for the first rapid cPRC activation phase following UV/violet stimulus is not known but may involve the activation of a CNGα channel expressed in the cPRCs [@Tosches2014]. For the second inhibitory phase of phototransduction, we identified a key requirement for ciliary-localised NIT-GC2. The mechanisms may involve c-opsin1-dependent inhibition of tonic NIT-GC2 activity and the reduction of ciliary cGMP. 
+
+NIT-GC2-dependent signalling is required for the feedforward activation of the INNOS cells through an unknown transmitter. The activation of INNOS leads to NOS activation and NO release, potentially through a canonical Ca2+-calmodulin pathway. Our model predicts feedforward inhibiton from INNOS to INRGW, possibly mediated by glycin transmission. NO released by INNOS neurites activates NIT-GC1 in cPRC projections that could lead to cGMP production and the opening CNGAα. This late-phase cPRC activation is not directly dependent on the UV/violet signal and can happen post-stimulus. The late-phase cPRC activation leads to INRGW activation via an unknown transmitter that is likely different from the one acting on INNOS.
+
+In addition, the cPRC circuit expresses several neuropeptides and their receptors, suggesting further neuromodulatory signals. For example, INRGW express the proneuropeptide RGWamide and cPRCs and INNOS express its receptor, suggesting retrograde peptidergic signalling in the circuit. 
 
 **Nitric oxide confers short-term memory to circuit activity**
 
-Retrograde signalling by NO from INNOS to cPRC leads to the sustained activation of cPRCs and postsynaptic neurons even after the end of stimulation. This activated state is maintained for several tens of second. NO signalling thus induces a transient circuit state orshort-term memory trace in the *Platynereis* larval brain. Because of the short life-time of NO, this molecule may be well suited to encode transient memory traces [@Kuntz2017]. In the ellipsoid body of the *Drosophila* central brain, NO signalling has a similar function. Here, NOS is specifically expressed in the R3 ring neurons and is required for the short-term (\~4 sec) visual memory of objects [@Kuntz2017]. NO is produced in the axons of R3 neurons and acts directly on sGC in the same axons. This autocrine signal leads to a CNG-dependent temporary increase in calcium levels, carrying the working memory trace [@Kuntz2017].
+Retrograde signalling by NO from INNOS to cPRC leads to the sustained activation of cPRCs and postsynaptic neurons even after the end of stimulation. This activated state is maintained for several tens of second. NO signalling thus induces a transient circuit state or short-term memory trace in the *Platynereis* larval brain. Because of the short life time of NO, this molecule may be well suited to encode transient memory traces [@Kuntz2017]. In the ellipsoid body of the *Drosophila* central brain, NO signalling has a similar function. Here, NOS is specifically expressed in the R3 ring neurons and is required for the short-term (\~4 sec) visual memory of objects [@Kuntz2017]. NO is produced in the axons of R3 neurons and acts directly on sGC in the same axons. This autocrine signal leads to a CNG-dependent temporary increase in calcium levels, carrying the working memory trace [@Kuntz2017].
 
 In the *Platynereis* circuit, our mathematical model indicates that the onset, magnitude and duration of the NO-dependent signal depends on the intensity and duration of the UV/violet stimulus. This suggests that the NO-dependent memory trace also encodes the magnitude and duration of the stimulus. During UV avoidance in the planarian *Schmidtea mediterranea*, neuropeptide signalling has a similar integratory function. Planarians exposed to UV light for >30 sec remain active for extended periods (several minutes) post-stimulation [@bray2023]. If neuropeptide signalling is defective, animals can still respond to UV light, but do not maintain a latent memory state and do not display increased post-stimulus activity.
 
@@ -325,12 +327,14 @@ NO signalling may also work on longer time scales. In the fly ellipsoid body, NO
 In Drosophila, NOS of PPL1-γ1pedc shortens memory retention while promoting fast memory updating in response to new experiences, indicating that NO regulates forgetting [@Aso2019].
 
 
-**The mystery of why IN-RGW activation causes downward swimming**
+**The possible mechanism of UV-induced downward swimming**
 
-One type of interneuron that strongly synapses with the cPRC is INRGW, which synapses directly onto ciliary motoneurons and is therefore considered to be a very important neuron in larval behavioural control [@williams2017; @Veraszto2018].
-Our results suggest that the depolarising response of the cPRC by NO feedback induces INRGW activation.
-Our experiments have shown that exposure of larvae to RGWamide results in simultaneous downward swimming and that activation of INRGW is sufficient to trigger UV-avoidance behaviour (unpublished data).
-However, whole-cell tracking by connectome has not revealed any equilibrium organ that recognises the direction of gravity, and it remains to be investigated how activation of INRGWs causes animals to recognise 'down', e.g. in RGWamide-deficient larvae.
+UV/violet light induces downward swimming head down [@Veraszto2018]. Since the direction of UV/violet light is not important for this, swimming direction must be determined by gravity.
+
+Connectome reconstruction and annotation of all cells in the three-day-old *Platynereis* larva has not revealed any balancer organ to sense orientation in the gravity field [@veraszto2020]. It follows that body orientation must be determined by physical mechanisms including the buoyancy and centre of mass of the larva, body shape, drag and differential ciliary activity. Except for ciliary activity, all other parameters are likely invariant during the UV response.
+
+The only motor output of the cPRC circuit in the wiring diagram is the prototroch ciliary band postsynaptic to the MC and Ser-h1 ciliomotor neurons. Our Ca2+-imaging data revealed a late NO-dependent inhibition of Ser-h1 and activation of the MC cell suggesting the inhibition of ciliary beating [@veraszto2017]. 
+
 It is known that complex integrative networks of neurons are involved in UV avoidance behaviour in planaria [@Shettigar2021] and Drosophila [@Imambocus2022].
 It has been reported that the sensory neurons required for UV avoidance behaviour in Drosophila converge and arrest neuromodulatory hub neurons, and that compartmentalised circuit organisation and neuropeptide release from the regulatory hubs act as central circuit elements controlling escape responses.
 RGW interneurons have been suggested to be important for relaying peptidergic signals due to the distinct anatomy and connectivity of projection neurons in peptidergic networks and their high authority values, and central with many neuronal inputs and outputs network components may function as regulatory hubs that gate the activation of specific networks [@williams2017].
