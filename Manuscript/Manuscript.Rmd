@@ -333,7 +333,7 @@ UV/violet light induces downward swimming head down [@Veraszto2018]. Since the d
 
 Connectome reconstruction and annotation of all cells in the three-day-old *Platynereis* larva has not revealed any balancer organ to sense orientation in the gravity field [@veraszto2020]. It follows that body orientation must be determined by physical mechanisms including the buoyancy and centre of mass of the larva, body shape, drag and differential ciliary activity. Except for ciliary activity, all other parameters are likely invariant during the UV response.
 
-The only motor output of the cPRC circuit in the wiring diagram is the prototroch ciliary band postsynaptic to the MC and Ser-h1 ciliomotor neurons. Our Ca2+-imaging data revealed a late NO-dependent inhibition of Ser-h1 and activation of the MC cell suggesting the inhibition of ciliary beating [@veraszto2017]. 
+The only motor output of the cPRC circuit in the wiring diagram is the prototroch ciliary band postsynaptic to the MC and Ser-h1 ciliomotor neurons. Our Ca2+-imaging data revealed a NO-dependent inhibition of Ser-h1 and activation of the MC cell suggesting the inhibition of ciliary beating [@veraszto2017]. 
 
 It is known that complex integrative networks of neurons are involved in UV avoidance behaviour in planaria [@Shettigar2021] and Drosophila [@Imambocus2022].
 It has been reported that the sensory neurons required for UV avoidance behaviour in Drosophila converge and arrest neuromodulatory hub neurons, and that compartmentalised circuit organisation and neuropeptide release from the regulatory hubs act as central circuit elements controlling escape responses.
