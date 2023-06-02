@@ -89,6 +89,8 @@ close3d()
 
 # assemble figure ---------------------------------------------------------
 INNOS_img <- readPNG("pictures/INNOS_synapses.png")
+INNOS_split <- readPNG("pictures/INNOS_axon_dendrite_split.png")
+
 cPRC_img <- readPNG("pictures/cPRC_synapses.png")
 INRGW_img <- readPNG("pictures/INRGW_synapses.png")
 
@@ -109,6 +111,12 @@ panel_INNOS <- ggdraw() +
                linejoin = "mitre",
                arrow.fill = "black", size = 0.2)
 
+panel_INNOS_split <- ggdraw() + 
+  draw_image(INNOS_split) +
+  draw_label("INNOS", x = 0.3, y = 0.99, size = 10) +
+  draw_label("dendrite", x = 0.8, y = 0.45, size = 10, color='grey40') +
+  draw_label("axon", x = 0.75, y = 0.22, size = 10, color='grey20') +
+  draw_label("*", x = 0.52, y = 0.28, color='black',size = 18,fontface='plain') 
 panel_INRGW <- ggdraw() + 
   draw_image(INRGW_img) +
   draw_label("*", x = 0.5, y = 0.29, color='black',size = 18,fontface='plain') +
@@ -120,22 +128,22 @@ panel_cPRC <- ggdraw() +
   draw_label("*", x = 0.5, y = 0.29, color='black',size = 18,fontface='plain')
 
 layout <- "
-A#B#C
+A#B#C#D
 "
 
-Fig1_sup3 <- panel_INNOS + panel_INRGW + panel_cPRC + 
+Fig1_sup3 <- panel_INNOS + panel_INNOS_split + panel_INRGW + panel_cPRC + 
   patchwork::plot_layout(design = layout, 
-                         widths = c(1, 0.02,1,0.02,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
+                         widths = c(1, 0.02,1,0.02,1,0.02,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = "A") &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, 
                                          face='plain', color='black')) #or 'bold', 'italic'
 
 
 ggsave("Manuscript/figures/Fig1_sup3.png", limitsize = FALSE, 
-       units = c("px"), Fig1_sup3, width = 2500, height = 800, bg='white')  
+       units = c("px"), Fig1_sup3, width = 3100, height = 800, bg='white')  
 
 
 ggsave("Manuscript/figures/Fig1_sup3.pdf", limitsize = FALSE, 
-       units = c("px"), Fig1_sup3, width = 2500, height = 800) 
+       units = c("px"), Fig1_sup3, width = 3100, height = 800) 
 
 
