@@ -5,7 +5,7 @@ Sys.setenv('R_MAX_VSIZE'=8000000000)
 
 # load nat and all associated packages, incl catmaid
 {
-  library(natverse)
+  library(catmaid)
   #natverse commands
   #http://natverse.org/rcatmaid/reference/index.html
   #https://rdrr.io/github/natverse/nat/man/
