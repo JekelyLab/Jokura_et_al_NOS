@@ -283,23 +283,26 @@ knitr::include_graphics(path = "figures/Fig6.png")
 Our work revealed an essential role for NO-mediated signalling in driving UV/violet avoidance behaviour in larval *Platynereis*.
 NO, produced by postsynaptic INNOS interneurons, signals retrogradely to presynaptic cPRCs via NIT-GC1 leading to delayed and sustained cPRC activation.
 This late-phase activation of the photoreceptors drives circuit output through projection interneurons and ciliomotor neurons.
-In the cPRC circuit, synaptic connectivity alone is thus not sufficient to account for circuit dynamics and behavioural change, as documented in other circuits [@Imambocus2022].
+In the cPRC circuit, synaptic connectivity alone is thus not sufficient to account for circuit dynamics and behavioural change, as documented in other circuits [@bargmann2013; @Imambocus2022].
 
 **Localised NO signalling in the neurosecretory plexus**
 
 NO is a free radical with a millisecond-to-second half life and thus a limited signalling range.
 In neuronal signalling, NOS is often localized to neurites [@Kuntz2017] at close proximity to sGC at synapses [@burette2002; @garthwaite2015a].
-In the cPRC circuit, NOS is localised to the dendritic compartment of INNOS neurites in the neurosecretory plexus where cPRC axons synapse on INNOS neurites.
+In the cPRC circuit, NOS is localised to the dendritic compartment of INNOS cells where also cPRC postsynaptic sites occur.
 NIT-GC1, the target of NO signalling is localised to cPRC projections.
-NO-mediated retrograde signalling thus likely occurs in the neurosecretory plexus where NOS- and NIT-GC1-containing projections are in close proximity and where we could detect NO production following UV stimulation.
+NO-mediated retrograde signalling thus likely occurs in the neurosecretory plexus where NOS- and NIT-GC1-containing projections are in close proximity and where we detected NO production following UV stimulation.
+In contrast, INNOS to INRGW synapses occur outside the neurosecretory plexus in the ventral brain neuropil.
 
-Compartmentalised signalling also occurs in peptidergic modulatory system and can be important for selective network activity during specific behaviours. In the UV-avoidance circuit of *Drosophila* larvae, a peptidergic hub neuron Dp7 integrates different sensory inputs occurring at functionally separated dendritic compartments.
-The insulin-like peptide 7 (Ilp7) expressed in Dp7 mediates the UV signal from extraocular sensory neurons to motor circuits and is required for acute and sustained UV avoidance [@Imambocus2022].
+Compartmentalised signalling also occurs in peptidergic modulatory systems and can enable selective network activity during specific behaviours.
+In the UV-avoidance circuit of *Drosophila* larvae, a peptidergic hub neuron Dp7 links UV-sensory neurons (v'td2) and motor circuits.
+Dp7 expresses an an insulin-like peptide Ipl7 that is required for acute and sustained UV avoidance.
+Ilp7 signalling occurs at a functionally and morphologically distinct dendritic compartment of Dp7, segregated from other sensory-motor pathways involving Dp7 [@Imambocus2022].
 
 **Functional diversity of NIT-GCs**
 
 NO signalling is commonly mediated by sGCs.
-We identified 12 sGCs in *Platynereis*, but none of these is expressed in the cPRC.
+We identified 12 sGCs in *Platynereis*, but none of these is expressed in the cPRC based on the available scRNAseq data.
 Instead, we identified an unconventional cPRC-expressed NIT-domain containing GC, NIT-GC1 as the mediator of NO retrograde signalling.
 In an in vitro assay, we could show that NIT-GC1 can produce cGMP following the addition of an NO donor and that this activity requires the NIT domain.
 
@@ -307,11 +310,11 @@ NIT domains were first identified in bacteria and animal NIT-GCs have only recen
 Bacterial NIT domains regulate cellular functions in response to changes in extracellular and intracellular nitrate and/or nitrite concentrations [@camargo2007].
 NO is readily converted to nitrate and nitrite [@santos2011; @moeller2019; @garthwaite2015a] and these molecules accumulate in placozoans and cnidarians in cells and tissues with high NOS activity [@Moroz2004; @Moroz2020].
 NIT domains in NIT-GCs may also sense nitrate and nitrite, as in bacteria, a possibility we cannot rule out based on our cellular assays with NIT-GC1.
-If different NIT-GCs show different sensitivities to NO, nitrite and nitrate, then the differences in the half-lives of these molecules may give rise to a range of activation timings [@lundberg2011].
+If different NIT-GCs have different sensitivities to NO, nitrite and nitrate, then a range of activation timings may be possible due to the different half-lives of these molecules [@lundberg2011].
 
-In *Platynereis*, we have found 15 NIT-GCs, suggesting a wide range of functions.
-We only tested NIT-GC1 and NIT-GC2, and the two proteins showed very different subcellular localisation and functions.
-Differences in cellular expression, subcellular localisation, and biochemical function may thus all contribute to the diversity of NIT-GC functions.
+NIT-GC1 and NIT-GC2 showed specific cellular co-expression but very different subcellular localisation and function.
+In *Platynereis*, we identified 15 NIT-GCs, suggesting a wide range of functions.
+Differences in subcellular localisation and biochemical function thus seem to also contribute to the diversity of NIT-GC functions in addition to differences in expression.
 
 **Mechanism of phototransduction and neurotransmission in the cPRC circuit**
 
@@ -334,6 +337,16 @@ The late-phase cPRC activation leads to INRGW activation via an unknown transmit
 In addition, the cPRC circuit expresses several neuropeptides and their receptors, suggesting further neuromodulatory signals.
 For example, INRGW express the proneuropeptide RGWamide and cPRCs and INNOS express its receptor, suggesting retrograde peptidergic signalling in the circuit.
 
+We have recently shown that the cPRC circuit also mediate responses to hydrostatic pressure via the same motor system involving Ser-h1 and the prototroch ciliary band.
+Increased pressure induces cPRC activation and a circuit output that is inverted relative to UV-induced activation.
+Consequently, ciliary beating increases and the larvae swim upwards.
+The effect of pressure on cilia requires synaptic transmission by the serotonergic Ser-h1 neurons [@bezares-calderon2023].
+
+Pressure-induced Ca2+ transients in cPRCs lack an inhibitory phase and late activation and resemble UV responses in NIT-GC2 morphants [@bezares-calderon2023].
+This indicates that the differentiation of sensory cues by the multisensory cPRCs occurs already at the level of sensory signal transduction.
+The different signalling pathways then likely result in the differential release of transmitters and modulators that are decoded by the postsynaptic interneuron circuit.
+The complex transmitter phenotype of cPRCs could underlie such differential signal processing.
+
 **Nitric oxide confers short-term memory to circuit activity**
 
 Retrograde signalling by NO from INNOS to cPRC leads to the sustained activation of cPRCs and postsynaptic neurons even after the end of stimulation.
@@ -347,21 +360,19 @@ This autocrine signal leads to a CNG-dependent temporary increase in calcium lev
 
 In the *Platynereis* circuit, our mathematical model indicates that the onset, magnitude and duration of the NO-dependent signal depends on the intensity and duration of the UV/violet stimulus.
 This suggests that the NO-dependent memory trace also encodes the magnitude and duration of the stimulus.
+
 During UV avoidance in the planarian *Schmidtea mediterranea*, neuropeptide signalling has a similar integratory function.
 Planarians exposed to UV light for \>30 sec remain active for extended periods (several minutes) post-stimulation [@bray2023].
 If neuropeptide signalling is defective, animals can still respond to UV light, but do not maintain a latent memory state and do not display increased post-stimulus activity.
 
-NO signalling may also work on longer time scales.
-In the fly ellipsoid body, NO signalling is also required for long-term changes of the circuit, acting through CREB-dependent transcription.
-
-In Drosophila, NOS of PPL1-γ1pedc shortens memory retention while promoting fast memory updating in response to new experiences, indicating that NO regulates forgetting [@Aso2019].
+In *Drosophila*, NOS of PPL1-γ1pedc shortens memory retention while promoting fast memory updating in response to new experiences, indicating that NO regulates forgetting [@Aso2019].
 
 **The possible mechanism of UV-induced downward swimming**
 
 UV/violet light induces downward swimming head down [@Veraszto2018].
 Since the direction of UV/violet light is not important for this, swimming direction must be determined by gravity.
 
-Connectome reconstruction and annotation of all cells in the three-day-old *Platynereis* larva has not revealed any balancer organ to sense orientation in the gravity field [@veraszto2020].
+Connectome reconstruction and annotation of all cells in the three-day-old *Platynereis* larva has not revealed any balancer organ to sense orientation in the gravity field [@bezares-calderon2019; @veraszto2020].
 It follows that body orientation must be determined by physical mechanisms including the buoyancy and centre of mass of the larva, body shape, drag and differential ciliary activity.
 Except for ciliary activity, all other parameters are likely invariant during the UV response.
 
