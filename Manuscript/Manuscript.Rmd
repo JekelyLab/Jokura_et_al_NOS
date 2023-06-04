@@ -372,18 +372,17 @@ In *Drosophila*, NOS of PPL1-γ1pedc shortens memory retention while promoting f
 UV/violet light induces downward swimming head down [@Veraszto2018].
 Since the direction of UV/violet light is not important for this, swimming direction must be determined by gravity.
 
-Connectome reconstruction and annotation of all cells in the three-day-old *Platynereis* larva has not revealed any balancer organ to sense orientation in the gravity field [@bezares-calderon2019; @veraszto2020].
-It follows that body orientation must be determined by physical mechanisms including the buoyancy and centre of mass of the larva, body shape, drag and differential ciliary activity.
-Except for ciliary activity, all other parameters are likely invariant during the UV response.
+Connectome reconstruction and whole-body cell annotation in the three-day-old *Platynereis* larva has not revealed any balancer organ to sense orientation in the gravity field [@bezares-calderon2019; @veraszto2020].
+It follows that body orientation must be determined by physical parameters including the buoyancy, centre of mass and shape of the larva as well as differential ciliary activity.
+Except for ciliary activity, all these parameters are likely invariant during the UV response. We found a UV-dependent inhibition of the Ser-h1 and activation of the MC cell consistent with the inhibition of ciliary beating [@veraszto2017]. 
 
-The only motor output of the cPRC circuit in the wiring diagram is the prototroch ciliary band postsynaptic to the MC and Ser-h1 ciliomotor neurons.
-Our Ca2+-imaging data revealed a NO-dependent inhibition of Ser-h1 and activation of the MC cell suggesting the inhibition of ciliary beating [@veraszto2017].
+Our current hypothesis about the mechanism of downward orientation posits that the reduced beating of prototroch cilia combined with the invariant beating of trunk cilia result in a head-down stable state due to physics alone. In contrast, during the pressure response prototroch cilia beat faster than trunk cilia, leading to a head-up orientation [@bezares-calderon2023]. Testing this hypothesis will require biophysical experiments and modelling.
+
+## UV-avoidance circuits
+
 
 It is known that complex integrative networks of neurons are involved in UV avoidance behaviour in planaria [@Shettigar2021]
 
-RGW interneurons have been suggested to be important for relaying peptidergic signals due to the distinct anatomy and connectivity of projection neurons in peptidergic networks and their high authority values, and central with many neuronal inputs and outputs network components may function as regulatory hubs that gate the activation of specific networks [@williams2017].
-The finding of sGCs in INRGWs from the present single-cell analysis also suggests that they may be regulated by NO.
-The specific demarcation of sensory input and output through the use of neurotransmitters, neuropeptides and even gaseous NO may further increase the efficiency of network computation in hub neurons and may lead to a more complex mechanism of 'down' recognition.
 
 ## Key resources table
 
