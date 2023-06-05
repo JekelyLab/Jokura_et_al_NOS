@@ -23,7 +23,8 @@ A#B
 C#D
 "
 
-Fig6 <- panel_scRNA_dotplot + panel_model + panel_block_diagram + panel_fitting + 
+Fig6 <-panel_block_diagram + panel_fitting + 
+  panel_scRNA_dotplot + panel_model + 
   patchwork::plot_layout(design = layout, 
                          heights = c(1, 0.05, 1),
                          widths = c(1,0.05, 1)) + #we can change the heights of the rows in our layout (widths also can be defined)
