@@ -6,10 +6,10 @@ author:
 output:
   html_document:
     theme: lumen
+  word_document: default
   pdf_document:
     latex_engine: lualatex
     template: default
-  word_document: default
 geometry: left=0.8in,right=0.8in,top=0.8in,bottom=0.5in
 mainfont: Arial
 monofont: Times New Roman
@@ -33,7 +33,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Nitric oxide (NO) produced by nitric-oxide synthase (NOS) is a key regulator of animal physiology.
 Here we uncover a function for NO in the integration of UV exposure and the gating of a UV-avoidance circuit.
-We studied UV/violet avoidance mediated by brain ciliary photoreceptors (cPRCs) in larvae of the annelid *Platynereis dumerilii*. In the larva, NOS is expressed in interneurons (INNOS) postsynaptic to cPRCs.
+We studied UV/violet avoidance mediated by brain ciliary photoreceptors (cPRCs) in larvae of the annelid *Platynereis dumerilii*.
+In the larva, NOS is expressed in interneurons (INNOS) postsynaptic to cPRCs.
 UV stimulation of cPRCs triggers INNOS activation and NO production.
 NO signals retrogradely to cPRCs to induce their sustained post-stimulus activation through an unconventional guanylyl cyclase.
 This late activation inhibits serotonergic ciliomotor neurons to induce downward swimming.
@@ -59,7 +60,8 @@ Due to the complex expression of NOS in vertebrates and the diversity of its fun
 
 In the *Drosophila* brain, NO signalling is also involved in tuning circuit activity at diverse and specific sites.
 In the ellipsoid body of the central complex, NO is involved in visual working memory [@Kuntz2017].
-NO signalling also tunes the dynamics of associative memories in mushroom body circuits. NOS is expressed in PPL1-γ1pedc mushroom-body neurons where it is involved in shortening memory retention while promoting fast memory updating in response to new experiences [@Aso2019].
+NO signalling also tunes the dynamics of associative memories in mushroom body circuits.
+NOS is expressed in PPL1-γ1pedc mushroom-body neurons where it is involved in shortening memory retention while promoting fast memory updating in response to new experiences [@Aso2019].
 
 In the whole organism context, NO signalling has often been studied in diverse marine invertebrates, where NO can regulate larval settlement and metamorphosis [@leise2001a; @ueda2016; @Locascio2022; @song2021; @Zhang2012].
 While NOS-expressing neurons potentially responsible for these effects have been reported [@bishop2007; @Locascio2022], it has not been possible to link these NO-dependent effects on behaviour or life-cycle transitions to neuronal activity and function.
@@ -266,7 +268,8 @@ Since the aim of the model is to capture the normalised fluorescence data, the m
 UV stimulation is modelled as a square pulse.
 To find model parameters producing an output fitting the experimental data we employed a global optimisation method known as a genetic algorithm (GA).
 
-Through this optimisation procedure, we found parameters that gave a very good fit to our experimental data under all conditions. We could fit to mean Ca2+ values but also individual calcium transients (Figure 6B, Figure 6--figure supplement 1). 
+Through this optimisation procedure, we found parameters that gave a very good fit to our experimental data under all conditions.
+We could fit to mean Ca2+ values but also individual calcium transients (Figure 6B, Figure 6--figure supplement 1).
 Our model only includes a minimal set of parameters and assumptions of interactions that are required to describe the dynamics of cPRC, INNOS and INRGWa in wild type and loss-of-function conditions (Figure 6A, B).
 The model highlights that cPRC phototransduction employs distinct pathways that operate on different time scales and differentially influence cPRC Ca2+ levels.
 The coupling between cPRCs and interneurons also requires different signalling mechanisms, either through distinct neurotransmitters or receptors expressed in the different cells.
@@ -280,8 +283,10 @@ Based on these data, our experimental results and the mathematical model, we ass
 The components for which experimental data are available are shown in bold.
 Other potential molecular players are also indicated (Figure 6D).
 
-To generate new insights from the model, we asked how the duration and intensity of UV stimulation influences signalling output, measured as the magnitude, duration and time to maximum of the NO-dependent Ca2+ signal in the cPRCs. The model allowed us to test a large number of conditions that would not have been feasible in single-larva experiments. We found that the onset, magnitude and duration of the NO-dependent signal scales with stimulus intensity and duration (Figure 6--figure supplement 2). This suggests an integratory function of NO signalling that tunes circuit output to the strength of UV exposure.
-
+To generate new insights from the model, we asked how the duration and intensity of UV stimulation influences signalling output, measured as the magnitude, duration and time to maximum of the NO-dependent Ca2+ signal in the cPRCs.
+The model allowed us to test a large number of conditions that would not have been feasible in single-larva experiments.
+We found that the onset, magnitude and duration of the NO-dependent signal scales with stimulus intensity and duration (Figure 6--figure supplement 2).
+This suggests an integratory function of NO signalling that tunes circuit output to the strength of UV exposure.
 
 ```{r echo=FALSE,fig.cap="**Figure 6. Mathematical modelling of cPRC circuit dynamics during UV stimulation and potential signalling mechanisms.**  **(A)** Diagram for **(B)** **(C)** Dot plot of genes (columns) expressed in three types of cells (rows) in the cPRC circuit using single cell RNA-Seq. The size of the dots is expressed in proportion to the percentage of cells expressing that gene relative to all cells. The colours represent the normal logarithm of the number of transcripts in the cells expressing the gene. **(D)** Schematic diagram of the signalling pathway of the cPRC circuit, focusing on the NO feedback."}
 
@@ -377,7 +382,6 @@ During UV avoidance in the planarian *Schmidtea mediterranea*, neuropeptide sign
 Planarians exposed to UV light for \>30 sec remain active for extended periods (several minutes) post-stimulation [@bray2023].
 If neuropeptide signalling is defective, animals can still respond to UV light, but do not maintain a latent memory state and do not display increased post-stimulus activity.
 
-
 **The possible mechanism of UV-induced downward swimming**
 
 Non-directional UV/violet light induces downward swimming head down in *Platynereis* larvae [@Veraszto2018].
@@ -407,15 +411,16 @@ This can involve peptidergic signals as in planaria and maggots [@bray2023; @Ima
 Volume transmission is well suited to integrate light exposure and maintain an internal state following noxious stimulation.
 The amount of modulator released can scale with stimulus intensity or duration and maintain an altered circuit state due to the slower decay of the diffusive signals relative to synaptic transmission.
 
-We have revealed how NO shapes dynamics in a fully-mapped sensory-motor UV avoidance circuit. We identified an unconventional GC as the NO receptor in *Platynereis* and measured circuit activity in different genetic backgrounds. Finally, we could link circuit activity to light-avoidance behaviour. The richly modulated multi-transmitter cPRC circuit will serve as a fertile ground for future studies on how neuromodulators shape activity and behaviour.
-
-
+We have revealed how NO shapes dynamics in a fully-mapped sensory-motor UV avoidance circuit.
+We identified an unconventional GC as the NO receptor in *Platynereis* and measured circuit activity in different genetic backgrounds.
+Finally, we could link circuit activity to light-avoidance behaviour.
+The richly modulated multi-transmitter cPRC circuit will serve as a fertile ground for future studies on how neuromodulators shape activity and behaviour.
 
 ## Key resources table
 
 ```{r echo=FALSE}
 library(readxl)
-key_resource_tale <- read_excel("key_resource_tale/key_resource_tale.xlsx")
+key_resource_tale <- read_excel("key_resource_tale/key_resource_tale.xls")
 df_key_resource_tale <- as.data.frame(key_resource_tale)
 knitr::kable(df_key_resource_tale, format = "html", booktabs = TRUE)
 ```
@@ -424,88 +429,76 @@ knitr::kable(df_key_resource_tale, format = "html", booktabs = TRUE)
 
 **CRISPR-Cas9 Design and Microinjection**
 
-Before designing the small guide RNA (sgRNA) for the sgRNA:Cas9 nuclease, splice sites and polymorphic sites in our laboratory culture were identified to avoid them.
-The sgRNA targeted the third exon of Platynereis dumerilii NOS (target site: 5'-GGGCAATACTGGCTCCACTC-3').
-The sgRNA was assembled from two annealed oligonucleotides (5'-TAGGGCAATACTGGCTCCACTC-3', 5'-AAACGAGTGGAGCCAGTATTGC-3') forming overhangs for cloning into a BsaI site of the plasmid pDR27456 (Hwang et al. 2013)(42250, Addgene), which contains next to the BsaI site a tracrRNA sequence.
-The plasmid was then used to PCR amplify DNA (primers: T7, 5'-AAAAGCACCGACTCGGTGCC-3') for synthesizing the sgRNA.
-The DNA was purified with the QIAquick PCR Purification Kit (Qiagen).
-From the DNA, the sgRNA was synthesized with the MEGAshortscript Kit (Thermo Fisher Scientific) and was purified with the MEGAclear Kit (Thermo Fisher Scientific).
-Cas9-mRNA was transcribed, capped, and polyA-tailed with the mMessage mMachine Kit and the Poly(A) Tailing Kit (both Thermo Fisher Scientific) from a plasmid (pUC57-T7-RPP2-Cas9) containing the Cas9 ORF fused to 169 base pair 5' UTR from the Platynereis dumerilii 60S acidic ribosomal protein P2.
-The sgRNA (18 ng/ml) and the Cas9-mRNA (180 ng/µl) were coinjected into fertilized eggs of Platynereis dumerilii wild-type parents according to an established injection procedure [@Conzelmann2013a].
+For the generation of a *NOS* knockout we used an sgRNA targeting the third exon of the *Platynereis dumerilii* *NOS* (target site: 5'-GGGCAATACTGGCTCCACTC-3').
+We selected the site to avoid polymorphic sites in our laboratory culture.
+The sgRNA was assembled from two annealed oligonucleotides (5'-TAGGGCAATACTGGCTCCACTC-3', 5'-AAACGAGTGGAGCCAGTATTGC-3') forming overhangs for cloning into the BsaI site of the plasmid pDR27456 [\@hwang2013](42250,%20Addgene), which contains next to the BsaI site a tracrRNA sequence.
+We used this plasmid to PCR amplify DNA (primers: T7, 5'-AAAAGCACCGACTCGGTGCC-3') for synthesizing the sgRNA.
+To purify the PCR product, we used the QIAquick PCR Purification Kit (Qiagen).
+We then synthesized sgRNA with the MEGAshortscript Kit (Thermo Fisher Scientific) and purified it with the MEGAclear Kit (Thermo Fisher Scientific).
+To produce the Cas9-mRNA, we used the plasmid (pUC57-T7-RPP2-Cas9) containing the Cas9 ORF fused to 169 base pair 5' UTR from the *Platynereis dumerilii* 60S acidic ribosomal protein P2.
+After in vitro transcription with the mMessage mMachine Kit (Thermo Fisher Scientific), we capped and polyA-tailed the Cas9-mRNA with the Poly(A) Tailing Kit (Thermo Fisher Scientific).
+We coinjected the sgRNA (18 ng/ml) and the Cas9-mRNA (180 ng/µl) into fertilized eggs of *Platynereis dumerilii* wild-type parents according to an established injection procedure [@Conzelmann2013a].
 The eggs were kept at 18°C for 45 min before injection and were injected at 14.5°C.
-The injected individuals were kept at 18°C for 5 to 8 days in 6-well- plates (Nunc multidish no. 150239, Thermo Scientific) and then cultured at 22°C until sexual maturity.
+The injected individuals were kept at 18°C for 5 to 8 days in 6-well-plates (Nunc multidish no. 150239, Thermo Scientific) and then cultured at 22°C until sexual maturity.
 The mature worms were crossed to wild-type worms and the progeny was genotyped, resulting in two founder lines, which were bred to homozygosity.
 
-**NOS sequencing and genotyping**
+**Genotyping of NOS alleles**
 
 For genotyping of the NOS locus, genomic DNA was isolated from single larvae, groups of 6-20 larvae, or from the tails of adult worms.
 The DNA was amplified by PCR (primers: 5'-GGTTCATTGGTTTCGATAACATTGCGG-3', 5'-CAGAGTCGATCAGTCTGCATATCTCCA-3') with the dilution protocol of the Phusion Human Specimen Direct PCR Kit (Thermo Scientific).
 The PCR product was sequenced directly with a nested sequencing primer (5'-GGTGCTCTCCCGGGTACACAA-3').
 A mixture of wild-type and deletion alleles in a sample gave double peaks in the sequencing chromatograms, with the relative height of the double peaks reflecting the relative allele ratio in the sample.
 
-**Vertical column setup for measuring photoresponses**
+**Vertical column setup to measure photoresponses**
 
-Photoresponses of larvae of different ages were assayed in a vertical Plexiglas column (31 mm x 10 mm x 160 mm water height).
-The column was illuminated from top with light from a monochromator (Polychrome II, Till Photonics).
-The monochromator was controlled by AxioVision 4.8.2.0 (Carl Zeiss MicroImaging GmbH) via analog voltage.
+We assayed larval photoresponses in a vertical Plexiglas column (31 mm x 10 mm x 160 mm water height).
+For stimulation, we illuminated the column from the top with a monochromator (Polychrome II, Till Photonics) controlled by AxioVision 4.8.2.0 (Carl Zeiss MicroImaging GmbH) via analog voltage.
 The light passed a collimator lens (LAG-65.0-53.0-C with MgF2 Coating, CVI Melles Griot) before entering the column.
 The column was illuminated from both sides with light-emitting diodes (LEDs).
 The LEDs on each side were grouped into two strips.
 One strip contained UV (395 nm) LEDs (SMB1W-395, Roithner Lasertechnik) and the other infrared (810 nm) LEDs (SMB1W-810NR-I, Roithner Lasertechnik).
-The UV LEDs were run at 4 V to stimulate the larvae in the column from the side.
-The infrared LEDs were run at 8 V (overvoltage) to illuminate the larvae for the camera (DMK 22BUC03, The Imaging Source), which recorded videos at 15 frames per second and was controlled by IC Capture (The Imaging Source).
+The UV LEDs were run at 4 V. The infrared LEDs were run at 8 V (overvoltage) to illuminate the larvae for imaging with a DMK camera (DMK 22BUC03, The Imaging Source).
+We recorded videos at 15 frames per second with the software IC Capture (The Imaging Source).
 
-**Comparing behavior of wildtype and NOS-knockout 3-day-old larvae**
-
-To compare the behavior of wildtype and NOS-knockout larvae at 3 days in the vertical column, the larvae were mixed and left in the dark for 5 min.
-The larvae were treated with NOS inhibitors for pharmacology.
-The NOS inhibitors were L-NAME.
-The larvae were treated with different concentrations in adjacent columns.
-The concentrations for the NOS inhibitors were control, 1 mM, 0.1 mM.
-The larvae were recorded for 1 min in the dark followed by exposure to collimated cyan (480 nm) light from the top of the column for 2 min, then 2 min darkness, and finally collimated UV (395 nm) light from the top of the column for 2 min.
-Stimulus light was provided by the monochromator (Polychrome II, Till Photonics).
+To compare the behavior of wildtype and NOS-knockout larvae or larvae treated with L-NAME, we first mixed the larvae and left them in the dark for 5 min.
+We then imaged larvae for 1 min in the dark (only IR LED for illumination) followed by exposure to non-directional UV light from both sides, then 2 min darkness, then collimated cyan (480 nm) light from the top of the column for 2 min, then 2 min darkness, and finally collimated UV (395 nm) light from the top of the column for 2 min.
 Scripts are available at <https://github.com/JekelyLab/NOS>.
 
-**NOS Identification and Phylogenetic Analysis**
+**Identification and Phylogenetic Analysis of NOS sequences**
 
-To identify NOS, we obtained a "seed" database of oxygenase domain in Pfam database, PF02898.
-From these sequences, we produced a Hidden Markov Model (HMM) and used this to mine the 47 metazoan species, 2 choanoflagellate species and 2 filasterea species investigated.
+To identify NOS sequences, we obtained a seed database of oxygenase domains from the Pfam database (PF02898).
+From these sequences, we produced a Hidden Markov Model (HMM) and used this to mine the 47 metazoan, 2 choanoflagellate and 2 filasterea species investigated.
 HMM models were run in HMMR3 with an e-value of 1e−15.
 We ran CD-Hit [@Fu2012] to eliminate redundant sequences (at a 80% threshold).
 We aligned the sequences with MAFFT version 7, with the iterative refinement method E-INS-i.
 Alignments were trimmed with TrimAl in gappy-out mode [@Capella-Gutiérrez2009].
 To calculate maximum-likelihood trees, we used IQ-tree2 with the LG+G4 model.
-To calculate branch support, we ran 1,000 replicates with the aLRT-SH-like and aBayes methods [@Minh2020].
+To calculate branch support, we ran 1000 replicates with the aLRT-SH-like and aBayes methods [@Minh2020].
 The sequences used for the phylogenetic analysis are available in **Supplementary File 1**, the trimmed alignment is available in **Supplementary File 2** and the pre-trimmed data in **Supplementary file 3**.
 
-**NIT-GC Identification and Phylogenetic Analysis**
+**Identification and Phylogenetic Analysis of NIT-GC sequences**
 
-To identify NIT-GCs, we obtained a "seed" database of Adenylate and Guanylate cyclase catalytic domain in Pfam database, PF00211.
-From these sequences, we produced a Hidden Markov Model (HMM) and used this to mine the 45 metazoan species, 2 choanoflagellate species and 2 filasterea species investigated.
+To identify NIT-GCs, we obtained a seed database of Adenylate and Guanylate cyclase catalytic domains from the Pfam database (PF00211).
+From these sequences, we produced a Hidden Markov Model (HMM) and used this to mine the 45 metazoan, 2 choanoflagellate and 2 filasterea species investigated.
 HMM models were run in HMMR3 with an e-value of 1e−15.
 We ran CD-Hit [@Fu2012] to eliminate redundant sequences (at a 80% threshold).
-To identify clusters, we used the convex-clustering option with 100 jack-knife replicates.
-The NIT-GCs are extremely well conserved in membrane-bound guanylate cyclases and form an easily recognizable cluster.
+To identify clusters, we used sequence-similarity-based clustering in Clans [@frickey2004] and the convex-clustering option with 100 jack-knife replicates.
+The NIT-GCs are extremely well conserved within the membrane-bound guanylate cyclases and form an easily recognizable cluster.
 To analyze the phylogeny of NIT-GCs, the cluster containing these GCs together with membrane-bound guanylate cyclases were parsed and used for tree building.
 We aligned the sequences with MAFFT version 7, with the iterative refinement method E-INS-i.
 Alignments were trimmed with TrimAl in gappy-out mode [@Capella-Gutiérrez2009].
 To calculate maximum-likelihood trees, we used IQ-tree2 with the LG+G4 model.
-To calculate branch support, we ran 1,000 replicates with the aLRT-SH-like and aBayes methods [@Minh2020].
-The sequences used for the phylogenetic analysis are available in **Supplementary File 1**, the trimmed alignment is available in **Supplementary File 2** and the pre-trimmed data in **Supplementary file 3**.
+To calculate branch support, we ran 1000 replicates with the aLRT-SH-like and aBayes methods [@Minh2020].
+The sequences used for the phylogenetic analysis are available in **Supplementary File 4**, the trimmed alignment is available in **Supplementary File 5** and the pre-trimmed data in **Supplementary file 6**.
 
 **Single-cell analysis**
 
-We used Achim et al. for the single-cell data [@Achim2015].
-In Williams et al., they used 107 cells as neurons by removing duplicates from Achim et al. single-cell data, so we used those cells [@williams2017].
-Since the raw data were read count data, we normalized them to TPM using Python.
-After that we converted them to log10.
-From the sum of the expression levels in 107 cells for each gene, We calculated the percentage in each cell.
-For each cell, we identified them with marker genes.
-After created the data in Python, plotted it using R dot plots.
-RPKM calculates the total number of reads per million bp and then divides by the length of each gene, so it is not possible to compare between samples.
-Instead, TPM first divides by the length of the gene and then divides by the total number of reads per million bases, which allows for more accurate comparisons between samples.
-In this case we wanted to compare between samples, so we used TPM.
+We used a single-cell RNA sequencing dataset from *Platynereis* larvae [@Achim2015] that was further filtered to 107 cells [@williams2017].
+We normalized raw read-count data to TPM and converted to log10.
+To calculate % expression, we used the sum of the expression levels in the 107 cells for each gene.
 The total TPM of each gene between the samples was used to calculate the percentage of expressed genes.
+We processed the data in Python and plotted in R.
+Individual cells were identified by suits of well-characterised marker genes and spatial mapping [@Achim2015].
 The total TPM values for each gene and the percentage of expressed genes are available in **Supplementary file 1**.
 
 **In situ HCR**
@@ -514,8 +507,8 @@ Larvae were fixed and treated with Proteinase K, according to the conventional W
 Specifically, for the HCR protocol, samples were processed in 1.5 ml tubes.
 Probe hybridization buffer, probe wash buffer, amplification buffer, and fluorescent HCR hairpins were purchased from Molecular Instruments (Los Angeles, USA).
 Hairpins associated with the b2 initiator sequence were labeled with Alexa Fluor 647, and the hairpins associated with the b3 initiator sequence were labeled with Alexa Fluor 546.
-To design probes for HCR, we used custom software [@Kuehn2022] to create 20 DNA oligo probe pairs specific to P. dumerilii NOS, NIT-GC1, NIT-GC2, RYa-pNP (GenBank accession: JF811330.1), and MLD/pedal 2-pNP (GenBank accession: KF515945.1).
-The NOS, NIT-GC1 and NIT-GC2 probes were designed to be associated with the b2 initiator sequence, while the RYa-pNP and MLD/pedal 2-pNP probes were designed to be associated with the b3 initiator sequence.
+To design probes for HCR, we used custom software [@Kuehn2022] to create 20 DNA oligo probe pairs specific to *P. dumerilii* *NOS*, *NIT-GC1*, *NIT-GC2*, *RYa proneuropeptide* (GenBank accession: JF811330.1), and *MLD/pedal peptide 2 proneuropeptide* (GenBank accession: KF515945.1).
+The *NOS*, *NIT-GC1* and *NIT-GC2* probes were designed to be associated with the b2 initiator sequence, while the *RYa* and *MLD/pedal peptide 2* probes were designed to be associated with the b3 initiator sequence.
 For the detection stage, samples were pre-hybridized in 200 µl of probe hybridization buffer for 1 hr at 37°C, and then incubated in 250 µl hybridization buffer containing probe oligos (4 pmol/ml) overnight at 37°C.
 To remove excess probe, samples were washed 4× with 1 ml hybridization wash buffer for 15 min at 37°C, and subsequently 2× in 1 ml 5× SSCT (5× SSC with 0.1% Tween20) for 5 min at room temperature.
 For the amplification stage, samples were pre-incubated with 100 µl of amplification buffer for 30 min, room temperature, and then incubated with 150 µl amplification buffer containing fluorescently labeled hairpins (40nM concentration (2ul of 3uM stock in 150ul amplification buffer, snap-cooled as described; [@Choi2018]) overnight in the dark at 25°C.
@@ -524,19 +517,25 @@ During the first 30 min wash, samples were counterstained with DAPI (Cat. #40043
 
 **Immunohistochemistry**
 
-Whole-mount immunostaining of 2 day old Platynereis larvae fixed with 4% paraformaldehyde were carried out using primary antibodies raised against NIT-GC1, NIT-GC2, NOS, RYamide neuropeptide, RGWamide neuropeptide in rabbit, plus a commercial antibody raised against acetylated tubulin in mouse (Sigma T7451).
+Whole-mount immunostaining of *Platynereis* larvae fixed with 4% paraformaldehyde was carried out using the primary antibodies listed in KEY RESOURCES TABLE. Immunostainings were carried out as previously described [@Conzelmann2012].
+
+**Antibody generation and purification**
+
 The synthetic peptides contained an N-terminal Cys that was used for coupling during purification.
 Antibodies were affinity purified from sera as previously described [@Conzelmann2012].
-Immunostainings were carried out as previously described [@Conzelmann2012].
-The NOS promoter (fragment sizes: 12 Kb) was amplified and cloned upstream of 3xHA- Palmi-tdTomato.
+
+
+**Transient transgenesis**
+
+The *NOS* promoter (fragment sizes: 12 Kb) was amplified and cloned upstream of 3xHA- Palmi-tdTomato.
 Larvae injected with promoter constructs (ca. 250 ng/ml) were analysed for reporter expression at 3 days post fertilization using an AxioImager Z.1 fluorescence wide-field microscope (Carl Zeiss GmbH, Jena) and immediately fixed for immunostainings.
 The protocol followed for immunostaining of HA-tagged reporters was recently described [@veraszto2017].
 Specimens were imaged with a LSM 780 NLO or LSM 880 with Airysan Confocal Microscope (Zeiss, Jena).
 
 **Calcium imaging**
 
-For calcium imaging, 49--55 hpf larvae were used.
-Experiments were performed at room temperature and larvae were immobilised by being embedded in 2.5% agarose filtered artificial seawater between a slide and coverslip spaced with adhesive tape.
+For calcium imaging, 49-55 hpf larvae were used.
+Experiments were carried out at room temperature and larvae were immobilised by being embedded in 2.5% agarose filtered artificial seawater between a slide and coverslip spaced with adhesive tape.
 GCaMP6s mRNA (1 mg/ml) was injected into zygotes as described previously [@Randel2014a].
 Larvae were imaged on a Zeiss LSM 880 with Airyscan (with a C-Apochromat 63X/1.2 Corr - water) with a frame rate of 1.88 frame/sec and an image size of 512 x 512 pixels.
 The larvae were stimulated in a region of interest (a circle with 50 pixel diameter) with 405 nm lasers controlled by the Bleaching mode.
@@ -546,9 +545,9 @@ The imaging laser had a similar intensity than the stimulus laser but covered an
 
 Green cGull was used for the cGMP assay [@Matsuda2017].
 A full-length Pdum-NIT-GC1 and -NIT-GC2 coding sequences were amplified by PCR starting from a *Platynereis dumerilii* cDNA library and cloned into the pcDNA3.1(+) vector using the T2A self-cleaving sequence.
-Cos-7 cells with low expression of endogenous soluble guanylate cyclase were used as cultured cells for gene expression.
+COS-7 cells with low expression of endogenous soluble guanylate cyclase were used as cultured cells for gene expression.
 This cell line was purchased from Angio-proteomie (CAT no. cAP-0203).
-The Cos-7 cells were maintained at 37 °C in 35mm dishes (Nunc™ Glass Bottom Dishes) containing 3 mL of DMEM, high glucose glutamax medium (Thermo; Cat. No. 10566016) supplemented with 10% fetal bovine serum (Thermo; Cat. No. 10082147).
+The COS-7 cells were maintained at 37 °C in 35mm dishes (Nunc™ Glass Bottom Dishes) containing 3 mL of DMEM, high glucose glutamax medium (Thermo; Cat. No. 10566016) supplemented with 10% fetal bovine serum (Thermo; Cat. No. 10082147).
 Upon reaching confluency of approximately 85%, we transfected the cells with the plasmid containing Green cGull-T2A-NITGC1.
 Transfections were carried out with 150 ng of each plasmid and 0.3 μl of the transfection Lipofectamine 3000 Reagent (invitrogen; Cat. No. L3000001).
 Two days post-transfection, we removed the culture medium and substituted it for fresh DMEM-medium.
