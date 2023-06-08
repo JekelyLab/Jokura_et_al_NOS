@@ -499,7 +499,7 @@ To calculate % expression, we used the sum of the expression levels in the 107 c
 The total TPM of each gene between the samples was used to calculate the percentage of expressed genes.
 We processed the data in Python and plotted in R.
 Individual cells were identified by suits of well-characterised marker genes and spatial mapping [@Achim2015].
-The total TPM values for each gene and the percentage of expressed genes are available in **Supplementary file 1**.
+The total TPM values for each gene and the percentage of expressed genes are available in **Supplementary file 7**.
 
 **In situ HCR**
 
