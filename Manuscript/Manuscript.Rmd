@@ -499,7 +499,7 @@ To calculate % expression, we used the sum of the expression levels in the 107 c
 The total TPM of each gene between the samples was used to calculate the percentage of expressed genes.
 We processed the data in Python and plotted in R.
 Individual cells were identified by suits of well-characterised marker genes and spatial mapping [@Achim2015].
-The total TPM values for each gene and the percentage of expressed genes are available in **Supplementary file 7** and **Supplementary file 8**.
+The total TPM values for each gene and the percentage of expressed genes are available in **Supplementary file 1**.
 
 **In situ HCR**
 
@@ -558,6 +558,10 @@ S-Nitroso-N-acetyl-D, L-penicillamine (SNAP) was purchased from Sigma-Aldrich (S
 The exposure time of the EM-CCD camera was controlled by the ZEN software (Zeiss).
 Images were acquired every 15 s for 10 min and stimulation was initiated 2 min after starting image acquisition.
 Imaging data analysis was performed using ImageJ (National Institutes of Health, Bethesda, MD, USA).
+
+## Data analysis and figure preparation ##
+
+Data were analysed in R. All figures were assembled in R with the cowplot and patchwork packages. All scripts are available at https://github.com/JekelyLab/Joukra_et_al_NOS (commit ).
 
 ## Acknowledgements
 
