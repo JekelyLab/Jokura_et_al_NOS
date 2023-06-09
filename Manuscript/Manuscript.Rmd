@@ -551,7 +551,6 @@ Transfections were carried out with 150 ng of each plasmid and 0.3 μl of Lipofe
 Two days post-transfection, the culture medium was substituted for fresh DMEM-medium. 
 For single-wavelength imaging experiments, cells in 35-mm dishes were washed twice and imaged in modified Ringer's buffer (140 mM NaCl, 3.5 mM KCl, 0.5 mM NaH~2~PO~4~ , 0.5 mM S-3 MgSO~4~, 1.5 mM CaCl~2~ , 10 mM HEPES, 2 mM NaHCO~3~ and 5 mM glucose).
 Dishes were mounted on a stage heated to 37 °C and imaging was done on an inverted confocal microscope (LSM880, Carl Zeiss GmbH, Jena) equipped with an oil-immersion objective lens (UApo/340, 40x, NA = 0.17).
-Images were acquired using a xenon lamp, a 460-495 nm excitation filter, a 505-nm dichroic mirror and a 510-550-nm emission filter (Carl Zeiss GmbH, Jena).
 The exposure time of the EM-CCD camera was controlled by the ZEN software (Carl Zeiss GmbH, Jena).
 Images were acquired every 15 s for 10 min and stimulation was initiated 2 min after starting image acquisition.
 Imaging data analysis was done with ImageJ (National Institutes of Health, Bethesda, MD, USA).
