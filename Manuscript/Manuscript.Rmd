@@ -283,9 +283,9 @@ Based on these data, our experimental results and the mathematical model, we ass
 The components for which experimental data are available are shown in bold.
 Other potential molecular players are also indicated (Figure 6D).
 
-To generate new insights from the model, we asked how the duration and intensity of UV stimulation influences signalling output, measured as the magnitude, duration and time to maximum of the NO-dependent Ca^2+^ signal in the cPRCs.
-The model allowed us to test a large number of conditions that would not have been feasible in single-larva experiments.
-We found that the onset, magnitude and duration of the NO-dependent signal scales with stimulus intensity and duration (Figure 6--figure supplement 2).
+To generate new insights from the model, we asked how the duration and intensity of UV stimulation influences signalling output, measured as the magnitude (quantified as area under peak, AUP) of the NO-dependent Ca^2+^ signal in the cPRCs.
+The model allowed us to systematically vary stimulus conditions that would not have been feasible in single-larva experiments.
+We found that the magnitude of the NO-dependent signal scales with stimulus intensity and duration (Figure 7).
 This suggests an integratory function of NO signalling that tunes circuit output to the strength of UV exposure.
 
 ```{r echo=FALSE,fig.cap="**Figure 6. Mathematical modelling of cPRC circuit dynamics during UV stimulation and potential signalling mechanisms.**  **(A)** Diagram for **(B)** **(C)** Dot plot of genes (columns) expressed in three types of cells (rows) in the cPRC circuit using single cell RNA-Seq. The size of the dots is expressed in proportion to the percentage of cells expressing that gene relative to all cells. The colours represent the normal logarithm of the number of transcripts in the cells expressing the gene. **(D)** Schematic diagram of the signalling pathway of the cPRC circuit, focusing on the NO feedback."}
