@@ -222,8 +222,12 @@ arrow <- data.frame(x1 = 0.95, x2 = 0.95, y1 = 0.8, y2 = 0.9)
 panel_SEM <- ggdraw() + 
   draw_image(SEM) +
   draw_line(x = c(0.1, 0.2785), y = c(0.07, 0.07), color = "black", size = 0.5) +
-  draw_label(expression(paste("50 ", mu, "m")), x = 0.19, y = 0.11, size = 9) +
+  draw_label(expression(paste("50 ", mu, " m")), x = 0.19, y = 0.11, size = 9) +
   draw_label("dorsal view", x = 0.3, y = 0.99, size = 10) +
+  draw_label("prototroch", x = 0.15, y = 0.8, size = 6) +
+  draw_label("chaetae", x = 0.12, y = 0.52, size = 6) +
+  draw_label("head", x = 0.5, y = 0.82, size = 6) +
+  draw_label("trunk", x = 0.5, y = 0.65, size = 6) +
   draw_label("A", x = 0.95, y = 0.93, size = 6) +
   draw_label("P", x = 0.95, y = 0.77, size = 6) +
   geom_segment(aes(x = x1, y = y1, xend = x2, yend = y2), data = arrow, 
@@ -327,28 +331,6 @@ panel_NOS3d <- ggdraw() + draw_image(readPNG("pictures/NOS-promotor_3d_acTub_XXu
   draw_line(x = c(0.33, 0.47), y = c(0.79, 0.82), color = "white", size = 0.3) +
   draw_line(x = c(0.79, 0.63), y = c(0.79, 0.82), color = "white", size = 0.3) +
   draw_label("INNOS_vl", x = 0.85, y = 0.65, size = 7, color = "white")
-
-
-#combine panels into Figure and save final figure as pdf and png
-#panels of different sizes
-#layout <- "
-#A#B#C#D
-########
-#E#F#G#H
-#"
-
-#Fig1 <- panel_SEM + panel_INNOS_ventr + panel_INNOS_ant + panel_Network +  
-#  panel_NOS3d_ventr_HCR + panel_NOS3d_ant_HCR + panel_NOS2d_ant_HCR + panel_NOS3d + 
-#  patchwork::plot_layout(design = layout, 
-#                         heights = c(1,0.02,1), 
-#                         widths = c(1,0.02,1,0.02,1,0.02,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
-#  patchwork::plot_annotation(tag_levels = "A") &  #we can change this to 'a' for small caps or 'i' or '1'
-#  ggplot2::theme(plot.tag = element_text(size = 12, 
-#      face='plain', color='black')) #or 'bold', 'italic'
-
-
-#ggsave("Manuscript/figures/Fig1.png", limitsize = FALSE, 
-#       units = c("px"), Fig1, width = 2400, height = 1350, bg='white') 
 
 layout <- "
 A#B#C
