@@ -522,7 +522,7 @@ Whole-mount immunostaining of *Platynereis* larvae fixed with 4% paraformaldehyd
 **Antibody generation and purification**
 
 Antibodies were raised in rats or rabbits against synthetic peptides containing an N-term Cys residue (Altabioscience). The same Cys-containing synthetic peptides were used for affinity purification.
-Antibodies were affinity purified from sera on a SulfoLink Coupling Resin (Thermo Fischer) as previously described [@Conzelmann2012].
+Antibodies were affinity purified from sera on a SulfoLink Coupling Resin (Thermo Fischer) as previously described [@Conzelmann2012]. View a detailed protocol here: https://bio-protocol.org/exchange/preprintdetail?id=2333&type=3
 
 **Transient transgenesis**
 
