@@ -588,7 +588,7 @@ All scripts are available at <https://github.com/JekelyLab/Joukra_et_al_NOS> (co
 
 This work was funded by the Wellcome Trust (214337/Z/18/Z).
 This project has received funding from the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme (grant agreement No 101020792).
-KJ has been supported by a JSPS Postdoctoral fellowhip, LAYG by a BBSRC Discovery fellowship (BB/W010305/1), PS by a Wellcome Trust Institutional Strategic Support Award (204909/Z/16/Z), and KCAW by the EPSRC Hub for Quantitive Modelling in Healthcare (EP/T017856/1).
+KJ has been supported by a JSPS Overseas Research Fellowship, LAYG by a BBSRC Discovery fellowship (BB/W010305/1), PS by a Wellcome Trust Institutional Strategic Support Award (204909/Z/16/Z), and KCAW by the EPSRC Hub for Quantitive Modelling in Healthcare (EP/T017856/1).
 
 
 ## References {.unnumbered}
