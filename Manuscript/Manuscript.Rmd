@@ -49,7 +49,7 @@ While synaptic transmission occurs at specialised contact sites, volume transmis
 
 Nitric oxide (NO) is one such modulator with unique physical and signalling properties.
 This free radical synthesized from L-arginine by nitric oxide synthase (NOS) is short-lived and can diffuse across biological membranes [@Cudeiro1999; @thomas2015].
-Canonical NO signalling involves the Ca2+/calmodulin-dependent activation of NOS, NO production and diffusion, and the NO-dependent activation of soluble guanylate cyclases (sGC).
+Canonical NO signalling involves the Ca^2+^/calmodulin-dependent activation of NOS, NO production and diffusion, and the NO-dependent activation of soluble guanylate cyclases (sGC).
 This can occur cell-autonomously or in other cells leading to cGMP production [@Bredt1990; @Hoelscher1997].
 Given that NOS activation is calcium dependent and NOS shows neuron-type-specific expression [@Gibbs1998a; @Wildemann1999; @Aso2019; @Mobley2022], NO action can lead to the activity-dependent modulation of neural circuits at specific sites [@Wang2007; @Vielma2014; @jacoby2018; @Aso2019] .
 
@@ -75,7 +75,7 @@ A whole-body synaptic connectome and gene expression atlases are also available 
 Here we uncovered an essential function for NO signalling in larval UV/violet-light avoidance behaviour.
 In *Platynereis* larvae, UV/violet avoidance is mediated by brain ciliary photoreceptor cells (cPRCs) and is characterised by downward swimming [@Veraszto2018].
 The cPRCs express a ciliary-type opsin, c-opsin1 [@Arendt2004] that forms a UV-absorbing bistable photopigment with an absorption maximum around 384 nm [@tsukamoto2017; @Veraszto2018; @Veedin2021].
-Upon UV/violet exposure, the cPRC show a characteristic biphasic calcium response that is *c-opsin1* dependent.
+Upon UV/violet exposure, the cPRCs show a characteristic biphasic calcium response that is *c-opsin1* dependent.
 UV/violet avoidance is also *c-opsin1*-dependent and is defective in *c-opsin1* mutants [@Veraszto2018].
 Here we show that *Platynereis* *NOS* is expressed in interneurons of the cPRC circuit and is required for UV/violet-avoidance.
 By combining calcium imaging across the fully-mapped cPRC circuit [@Veraszto2018] with genetic perturbations and mathematical modelling, we describe how NO tunes circuit dynamics through non-synaptic retrograde signalling to cPRCs.
@@ -92,11 +92,11 @@ In two- and three-day-old larvae, we detected *NOS* expression in four cells (tw
 *NOS* was also expressed in the region of the visual eyes (adult eyes) and the pigmented eyespots (Figure 1---figure supplement 2).
 The four apical organ cells, but not the eyes, were also labelled with a *NOS* reporter construct driving palmitoylated-tdTomato (Figure 1E).
 This reporter also revealed the axonal projections of these central NOS-expressing neurons.
-The position and morphology of the four *NOS+* cells allowed us to identify the same four cells as four interneurons (INNOS) in our three-day-old whole-body *Platynereis* volume EM data [@williams2017; @veraszto2020] (Figure 1B,C).
+The position and morphology of the four *NOS+* cells allowed us to identify the same four cells as four interneurons (INNOS) in our three-day-old whole-body *Platynereis* volume EM data [@williams2017; @veraszto2020] (Figure 1B, C).
 In the synaptic connectome, the INNOS cells are postsynaptic to the UV-sensory cPRCs and presynaptic to the INRGWa interneurons, which are also cPRC targets (Figure 1C,F).
 The projections of INNOS cells are segregated into input (dendritic) and output (axonal) compartments, with cPRC inputs occurring on the dendritic part in the dense neurosecretory plexus.
 INNOS output synapses form in the more ventral projection region (Figure 1---figure supplement 3).
-INRGWa neurons synapse on the head serotonergic ciliomotor neurons (Ser-h1), which synapse on the prototroch ciliary band and the cholinergic MC ciliomotor neurons (Figure 1C,F) [@veraszto2017].
+INRGWa neurons synapse on the head serotonergic ciliomotor neurons (Ser-h1), which synapse on the cholinergic MC ciliomotor neuron and cells of the prototroch ciliary band (Figure 1C,F) [@veraszto2017].
 
 ```{r echo=FALSE,fig.cap="**Figure 1. Identification of NOS-expressing interneurons (INNOS) within the cPRC circuit.** **(A)** Scanning electron microscopy image of a three-day-old *Platynereis* larva. **(B, C)** Volume rendering of the neuron types (cPRC, INNOS, INRGWa, Ser-h1 and MC) in the cPRC circuit reconstructed from a whole-body transmission electron microscopy volume of a three-day-old larva. Neurite skeletons are shown with cell-body positions represented by spheres. Projections of all neurons in the body are shown in grey to highlight the neuropils. The outline of the yolk is also indicated in grey. In B, nuclei positions of the prototroch head ciliary band are shown as grey spheres. **(D)** Expression of the *NOS* gene detected by in situ HCR (magenta) in a two-day-old larva (anterior view). Antibody staining for acetylated α-tubulin (acTub: green) highlights cPRC cilia and the neuropil. **(E)** Expression of a *NOS* reporter (NOSp::palmi-3xHA: magenta) labelled with an anti-HA antibody in a two-day-old larva (anterior view). Antibody staining for acetylated α-tubulin (acTub: green) highlights cPRC cilia and the neuropil. **(F)** Synaptic wiring diagram of the cPRC circuit. Hexagons represent cell groups, with the number of cells per group shown in square brackets. Arrows represent the summed number of synaptic contacts between cell groups. Arrow thickness is proportional to the number of synapses."}
 
@@ -127,13 +127,13 @@ We recovered two deletions (NOSΔ11/Δ11 and Δ23/Δ23), both frame-shift mutati
 We could establish a homozygous line for both mutations indicating that NOS is not an essential gene in *Platynereis*.
 To quantify UV avoidance, we recorded the trajectories of freely swimming wild type and mutant larvae in vertical columns, illuminated laterally from two opposite sides with 395 nm UV light (Figure 3A and Figure 3---figure supplement 1B).
 As previously shown, wild-type larvae swim downward following non-directional UV/violet light stimulation [@Veraszto2018].
-In contrast, both two- and three-day-old homozygous *NOS*-mutant larvae showed a strongly diminished UV-avoidance response (Figure 3A, B and Figure 3---figure supplement 1B,C).
+In contrast, both two- and three-day-old homozygous *NOS*-mutant larvae showed a strongly diminished UV-avoidance response (Figure 3A, B and Figure 3---figure supplement 1B, C).
 This phenotype is similar to the defective UV-avoidance of *c-opsin1* mutant larvae [@Veraszto2018] and reveals a requirement for NOS in UV-avoidance behaviour.
 Wild type but not mutant larvae also showed an increase in swimming speed under UV light that may be due to downward swimming trajectories (swimming in the direction of gravity) (Figure 3B and Figure 3---figure supplement 1C).
 We also tested directional phototaxis, by exposing larvae to 480 nm directional collimated light from the top of the column.
 Three-day-old but not two-day-old *NOS*-mutant larvae also showed reduced phototactic behaviour, suggesting a function for *NOS* in the visual eyes that mediate three-day-old phototaxis [@Randel2014a] (Figure 3D and Figure 3---figure supplement 1G).
 
-To distinguish between an acute and developmental function of NOS in light responses, we next tested larvae exposed to the NOS inhibitor L-NAME.
+To distinguish between an acute and developmental function of NOS in light responses, we also tested larvae exposed to the NOS inhibitor L-NAME.
 Larvae incubated for 5 min in 0.1 mM or 1 mM L-NAME showed a dose-dependent inhibition of UV avoidance.
 In contrast, phototaxis was not affected (Figure 3C, E).
 Overall, our results indicate an acute requirement for NOS signalling in UV-avoidance and a possible indirect, developmental role in the visual system, reminiscent of the function of NO signalling in *Drosophila* eye development [@Gibbs1998a].
@@ -149,7 +149,7 @@ knitr::include_graphics(path = "figures/Fig3.png")
 To investigate how NO signalling alters the dynamics of the cPRC circuit, we carried out calcium imaging experiments.
 We ubiquitously expressed the calcium sensor GCaMP6s in larvae and imaged calcium signals during 405 nm stimulation of the cPRCs.
 As we have shown previously, a 20-sec local stimulation of cPRC cilia led to a transient increase in cPRC calcium levels, followed by a transient decrease [@Veraszto2018].
-After \~20-sec, calcium levels in cPRCs were raising again, reaching higher levels than at the start of the stimulus -- a response that may involve depolarisation (Figure 4A, B).
+After \~20 sec, calcium levels in cPRCs were raising again, reaching higher levels than at the start of the stimulus -- a response that may involve depolarisation (Figure 4A, B).
 This activation phase occurs after the 20 sec stimulation period and is likely due to a delayed neuroendocrine feedback [@Veraszto2018].
 To determine whether NO mediates such a feedback, we repeated the experiment in *NOS*-mutant larvae.
 While we detected the initial activation phase followed by inhibition, in homozygous *NOS*-mutants for both CRISPR alleles this was not followed by delayed activation.
@@ -161,7 +161,7 @@ We thus identified a requirement for NO signalling in the late-phase activation 
 We aimed next to identify the NO receptor in the cPRCs.
 NO generally acts via soluble guanylate cyclases (sGC), belonging to the guanylate cyclase family with a CYC domain (PFAM domain: PF00211).
 NO binding to the heme group of sGC leads to increased cyclic guanosine monophosphate (cGMP) production.
-Analysis of sGCs in *Platynereis* indicated that these genes are not expressed in any of the cells of the cPRC circuit [@veraszto2017].
+Analysis of sGCs in *Platynereis* indicated that these genes are not expressed in the cPRCs [@veraszto2017] (not shown).
 Recently, Moroz and coworkers reported an atypical but widely conserved family of guanylyl cyclases with a NIT (nitrite/nitrate sensing) domain (PF08376) (NIT-GC) as potential mediators of NO signalling [@Moroz2020].
 To identify NIT-GCs in *Platynereis*, we searched transcriptome resources and retrieved 15 potential NIT-GC homologs (Figure 4---figure supplement 1 and 2).
 To analyse the relationship of these sequences to metazoan NIT-GCs, we retrieved protein sequences with a CYC domain from the transcriptome and genome databases of 45 metazoan and 2 choanoflagellate species.
@@ -222,7 +222,7 @@ We were able to image the activity of all neurons in the cPRC circuit (INNOS, IN
 The MC cell was identified based on its position and intrinsic activity [@veraszto2017].
 To unambiguously identify all other cells from which we recorded calcium signals, we developed an on-slide immunostaining method (Figure 5---figure supplement 1A).
 We used the cell-specific antibody markers against RYamide (INNOS) (Figure 5---figure supplement 1B-D), RGWamide (INRGWa) and serotonin (Ser-h1) [@Conzelmann2011] to immunostain agar-embedded larvae following calcium imaging.
-Based on the position of the nuclei, we could correlate live and fixed samples at a single-cell precision (Figure 5A,B).
+Based on the position of the nuclei, we could correlate live and fixed samples at a single-cell precision (Figure 5A, B).
 Due to the stereotypy of the larvae, we could also identify neurons based on their position and calcium activity in activity-correlation maps (Figure 5C).
 
 We first quantified the responses of the INNOS and INRGWa interneurons during 405 nm stimulation of the cPRCs.
@@ -236,7 +236,7 @@ Next, we imaged calcium signals from Ser-h1 and MC neurons in wild type and *NOS
 Ser-h1 cells showed an activation profile that correlated with cPRC activity, including a reduction in calcium during stimulation followed by rebound, a response that was defective in *NOS* mutants (Figure 5I).
 MC cells showed sustained activation, including a late-phase that was lacking in *NOS* mutants (Figure 5I).
 These data suggest that during 405 nm stimulation the Ser-h1 cells are inhibited and MC cells are activated, and this regulation is NO-dependent.
-This pattern is expected to inhibit ciliary activity in the prototroch but not in the other ciliary bands, triggering NO-dependent downward swimming.
+This pattern is expected to inhibit ciliary activity in the prototroch but not in the other ciliary bands (with no Ser-h1 or MC synapses), triggering NO-dependent downward swimming.
 
 ```{r echo=FALSE,fig.cap="**Figure 5. NOS- and NIT-GC2-dependent dynamics of the cPRC circuit.** **(A, B)** GCaMP6s imaging from cPRCs and INNOS cells (left panels) followed by on-slide immunostaining for (A) RYamide to label INNOS and (B) RGWamide+serotonin to label INRGWa and Ser-h1 (red). Nuclei are stained with DAPI (cyan). Asterisks indicate cPRC nuclei. Numbers mark the same cells in the GCaMP and immunostaining images matched by position. **(C)** Correlation map of neuronal activity of the cPRCs, INNOS, INRGWa, Ser-h1 and MC neurons. **(D)** GCaMP6s fluorescence in INNOS cells in wild type (WT) and NOSΔ11/Δ11 mutant larvae during 405 nm stimulation of the cPRC cilia. **(E)** GCaMP6s fluorescence in INNOS cells in NIT-GC2 morphant larvae during 405 nm stimulation. **(F)** GCaMP6s fluorescence in INRGWa cells in wild type and NOSΔ23/Δ23 mutant larvae during 405 nm stimulation. **(G)** GCaMP6s fluorescence in INRGWa cells in NIT-GC2 morphant larvae during 405 nm stimulation. **(H, I)** GCaMP6s fluorescence in (H) Ser-h1 cells and (I) the MC cell in wild type and NOSΔ11/Δ11 mutant larvae during 405 nm stimulation."}
 
@@ -247,31 +247,31 @@ knitr::include_graphics(path = "figures/Fig5.png")
 **Mathematical modelling of cPRC-circuit dynamics**
 
 To further analyse the dynamics of responses to UV light and formally describe cPRC phototransduction, synaptic connections and NO retrograde signalling, we developed a mixed cellular-circuit-level mathematical model.
-We used our Ca2+ imagining data of cPRC, INNOS and INRGWa cells collected in wild type, *NOS* knockout, and *NIT-GC2* morphant larvae to formulate assumptions that are the basis of the proposed model.
+We used our Ca^2+^ imagining data of cPRC, INNOS and INRGWa cells collected in wild type, *NOS* knockout, and *NIT-GC2* morphant larvae to formulate assumptions that are the basis of the proposed model.
 
-We model a direct c-opsin1-dependent response to UV leading to the initial rise in Ca2+ levels.
+We model a direct c-opsin1-dependent response to UV leading to the initial rise in Ca^2+^ levels.
 The mechanism of this signal is not known but may include Gα and Gβ signalling, CNGAα channel activation or other pathways.
-We further assume that in cPRC cells, Ca2+ levels increase with cGMP.
-We model a decrease in cGMP and Ca2+ levels due to a NIT-GC2-dependent pathway (Figre 6A).
+We further assume that in cPRC cells, Ca^2+^ levels increase with cGMP.
+We model a decrease in cGMP and Ca^2+^ levels due to a NIT-GC2-dependent pathway (Figre 6A).
 The effect of NO in cPRC cells is captured by another term that describes a NIT-GC1 and NO-dependent increase in cGMP.
 Based on the synaptic connectome, we infer a feedforward coupling between cPRC cells and INNOS and INRGWa cells.
 The proposed synaptic coupling is UV-dependent, decays linearly and is suppressed in NIT-GC2 morphants (Figure 6A).
 
-In the INNOS cells, we assume that excitatory synaptic input from cPRC (or rebound from tonic inhibition) leads to a rise in Ca2+ leading to NO production via NOS.
+In the INNOS cells, we assume that excitatory synaptic input from cPRC (or rebound from tonic inhibition) leads to a rise in Ca^2+^ leading to NO production via NOS.
 This input is NIT-GC2-dependent.
-In the INRGWa cells, we model a decrease in Ca2+ based on an inhibitory UV-dependent synaptic signal from the cPRCs.
-We further assume the existence of direct excitatory coupling between cPRC Ca2+ levels and INRGWa Ca2+ to account for the late effects of cPRC on INRGWa (Figure 6A).
-The UV-dependent and Ca2+-dependent signals may be mediated by different transmitters released by cPRCs during distinct phases of their activation cycle.
-In addition, we assume a direct inhibitory coupling between INNOS Ca2+ and INRGWa Ca2+.
+In the INRGWa cells, we model a decrease in Ca^2+^ based on an inhibitory UV-dependent synaptic signal from the cPRCs.
+We further assume the existence of direct excitatory coupling between cPRC Ca^2+^ levels and INRGWa Ca^2+^ to account for the late effects of cPRC on INRGWa (Figure 6A).
+The UV-dependent and Ca^2+^-dependent signals may be mediated by different transmitters released by cPRCs during distinct phases of their activation cycle.
+In addition, we assume a direct inhibitory coupling between INNOS Ca^2+^ and INRGWa Ca^2+^.
 Finally, in all variables, we assumed a linear decay and constant production to set a steady state (Figure 6A).
 Since the aim of the model is to capture the normalised fluorescence data, the model is nondimensionalised.
 UV stimulation is modelled as a square pulse.
-To find model parameters producing an output fitting the experimental data we employed a global optimisation method known as a genetic algorithm (GA).
 
+To find model parameters producing an output fitting the experimental data we employed a global optimisation method known as a genetic algorithm (GA).
 Through this optimisation procedure, we found parameters that gave a very good fit to our experimental data under all conditions.
-We could fit to mean Ca2+ values but also individual calcium transients (Figure 6B, Figure 6--figure supplement 1).
+We could fit to mean Ca^2+^ values but also individual calcium transients (Figure 6B, Figure 6--figure supplement 1).
 Our model only includes a minimal set of parameters and assumptions of interactions that are required to describe the dynamics of cPRC, INNOS and INRGWa in wild type and loss-of-function conditions (Figure 6A, B).
-The model highlights that cPRC phototransduction employs distinct pathways that operate on different time scales and differentially influence cPRC Ca2+ levels.
+The model highlights that cPRC phototransduction employs distinct pathways that operate on different time scales and differentially influence cPRC Ca^2+^ levels.
 The coupling between cPRCs and interneurons also requires different signalling mechanisms, either through distinct neurotransmitters or receptors expressed in the different cells.
 
 To identify possible molecular pathways, we analysed single-cell transcriptome data for cPRC, INNOS and INRGWa identified by spatial mapping [@Achim2015] and unique marker genes [@williams2017].
@@ -283,16 +283,16 @@ Based on these data, our experimental results and the mathematical model, we ass
 The components for which experimental data are available are shown in bold.
 Other potential molecular players are also indicated (Figure 6D).
 
-To generate new insights from the model, we asked how the duration and intensity of UV stimulation influences signalling output, measured as the magnitude, duration and time to maximum of the NO-dependent Ca2+ signal in the cPRCs.
-The model allowed us to test a large number of conditions that would not have been feasible in single-larva experiments.
-We found that the onset, magnitude and duration of the NO-dependent signal scales with stimulus intensity and duration (Figure 6--figure supplement 2).
-This suggests an integratory function of NO signalling that tunes circuit output to the strength of UV exposure.
 
 ```{r echo=FALSE,fig.cap="**Figure 6. Mathematical modelling of cPRC circuit dynamics during UV stimulation and potential signalling mechanisms.**  **(A)** Diagram for **(B)** **(C)** Dot plot of genes (columns) expressed in three types of cells (rows) in the cPRC circuit using single cell RNA-Seq. The size of the dots is expressed in proportion to the percentage of cells expressing that gene relative to all cells. The colours represent the normal logarithm of the number of transcripts in the cells expressing the gene. **(D)** Schematic diagram of the signalling pathway of the cPRC circuit, focusing on the NO feedback."}
-
 knitr::include_graphics(path = "figures/Fig6.png")
-
 ```
+
+To generate new insights from the model, we asked how the duration and intensity of UV stimulation influences signalling output, measured as the magnitude (quantified as area under peak, AUP) of the NO-dependent Ca^2+^ signal in the cPRCs.
+The model allowed us to systematically vary stimulus conditions that would not have been feasible in single-larva experiments.
+We found that the magnitude of the NO-dependent signal scales with stimulus intensity and duration (Figure 7).
+This suggests an integratory function of NO signalling that tunes circuit output to the strength of UV exposure.
+
 
 ## Discussion
 
@@ -312,7 +312,7 @@ In contrast, INNOS to INRGWa synapses occur outside the neurosecretory plexus in
 
 Compartmentalised signalling also occurs in peptidergic modulatory systems and can enable selective network activity during specific behaviours.
 In the UV-avoidance circuit of *Drosophila* larvae, a peptidergic hub neuron Dp7 links UV-sensory neurons (v'td2) and motor circuits.
-Dp7 expresses an an insulin-like peptide Ilp7 that is required for acute and sustained UV avoidance.
+Dp7 expresses an insulin-like peptide Ilp7 that is required for acute and sustained UV avoidance.
 Ilp7 signalling occurs at a functionally and morphologically distinct dendritic compartment of Dp7, segregated from other sensory-motor pathways involving Dp7 [@Imambocus2022].
 
 **Functional diversity of NIT-GCs**
@@ -335,16 +335,16 @@ Differences in subcellular localisation and biochemical function thus seem to al
 **Mechanism of phototransduction and neurotransmission in the cPRC circuit**
 
 Based on our data herein and previous work we can now propose a more detailed model of cPRC phototransduction and neurotransmission.
-The cPRCs have high basal Ca2+ and respond to UV/violet light dependent on c-opsin1 [@Veraszto2018].
+The cPRCs have high basal Ca^2+^ and respond to UV/violet light dependent on c-opsin1 [@Veraszto2018].
 c-opsin1 forms a bistable photopigment and signals through Gi/oα and Gβγ [@tsukamoto2017; @Veedin2021; @tsukamoto2023].
-In heterologous systems, the Gβγ subunits released following c-opsin1 activation open GIRK channels inducing K+ efflux (hyperpolarisation) [@tsukamoto2017; @tsukamoto2023] and close voltage-gated Ca2+ channels, thereby reducing intracellular calcium levels [@tsukamoto2023].
+In heterologous systems, the Gβγ subunits released following c-opsin1 activation open GIRK channels inducing K+ efflux (hyperpolarisation) [@tsukamoto2017; @tsukamoto2023] and close voltage-gated Ca^2+^ channels, thereby reducing intracellular calcium levels [@tsukamoto2023].
 A GIRK channel is also expressed in the cPRCs (Figure 6A).
 The pathway for the first rapid cPRC activation phase following UV/violet stimulus is not known but may involve the activation of a CNGα channel expressed in the cPRCs [@Tosches2014].
 For the second inhibitory phase of phototransduction, we identified a key requirement for ciliary-localised NIT-GC2.
 The mechanisms may involve c-opsin1-dependent inhibition of tonic NIT-GC2 activity and the reduction of ciliary cGMP.
 
 NIT-GC2-dependent signalling is required for the feedforward activation of the INNOS cells through an unknown transmitter.
-The activation of INNOS leads to NOS activation and NO release, potentially through a canonical Ca2+-calmodulin pathway.
+The activation of INNOS leads to NOS activation and NO release, potentially through a canonical Ca^2+^-calmodulin pathway.
 Our model predicts feedforward inhibiton from INNOS to INRGWa, possibly mediated by glycin transmission.
 NO released by INNOS neurites activates NIT-GC1 in cPRC projections that could lead to cGMP production and the opening of CNGAα.
 This late-phase cPRC activation is not directly dependent on the UV/violet signal and can happen post-stimulus.
@@ -358,7 +358,7 @@ Increased pressure induces cPRC activation and a circuit output that is inverted
 Consequently, ciliary beating increases and the larvae swim upwards.
 The effect of pressure on cilia requires synaptic transmission by the serotonergic Ser-h1 neurons [@bezares-calderon2023].
 
-Pressure-induced Ca2+ transients in cPRCs lack an inhibitory phase and late activation and resemble UV responses in NIT-GC2 morphants [@bezares-calderon2023].
+Pressure-induced Ca^2+^ transients in cPRCs lack an inhibitory phase and late activation and resemble UV responses in NIT-GC2 morphants [@bezares-calderon2023].
 This indicates that the differentiation of sensory cues by the multisensory cPRCs occurs already at the level of sensory signal transduction.
 The different signalling pathways then likely result in the differential release of transmitters and modulators that are decoded by the postsynaptic interneuron circuit.
 The complex transmitter phenotype of cPRCs could underlie such differential signal processing.
@@ -375,8 +375,8 @@ Here, NOS is specifically expressed in the R3 ring neurons and is required for t
 NO is produced in the axons of R3 neurons and acts directly on sGC in the same axons.
 This autocrine signal leads to a CNG-dependent temporary increase in calcium levels, carrying the working memory trace [@Kuntz2017].
 
-In the *Platynereis* circuit, our mathematical model indicates that the onset, magnitude and duration of the NO-dependent signal depends on the intensity and duration of the UV/violet stimulus.
-This suggests that the NO-dependent memory trace also encodes the magnitude and duration of the stimulus.
+In the *Platynereis* circuit, our mathematical model indicates that the magnitude of the NO-dependent signal depends on the intensity and duration of the UV/violet stimulus.
+This suggests that the NO-dependent memory trace also encodes the intensity and duration of the stimulus.
 
 During UV avoidance in the planarian *Schmidtea mediterranea*, neuropeptide signalling has a similar integratory function.
 Planarians exposed to UV light for \>30 sec remain active for extended periods (several minutes) post-stimulation [@bray2023].
@@ -420,9 +420,9 @@ The richly modulated multi-transmitter cPRC circuit will serve as a fertile grou
 
 ```{r echo=FALSE}
 library(readxl)
-key_resource_tale <- read_excel("key_resource_tale/key_resource_tale.xls")
-df_key_resource_tale <- as.data.frame(key_resource_tale)
-knitr::kable(df_key_resource_tale, format = "html", booktabs = TRUE)
+key_resource_table <- read_excel("key_resource_table/key_resource_table.xls")
+df_key_resource_table <- as.data.frame(key_resource_table)
+knitr::kable(df_key_resource_table, format = "html", booktabs = TRUE)
 ```
 
 ## Materials and Methods
@@ -521,8 +521,10 @@ Whole-mount immunostaining of *Platynereis* larvae fixed with 4% paraformaldehyd
 
 **Antibody generation and purification**
 
-Antibodies were raised in rats or rabbits against synthetic peptides containing an N-term Cys residue (Altabioscience). The same Cys-containing synthetic peptides were used for affinity purification.
+Antibodies were raised in rats or rabbits against synthetic peptides containing an N-term Cys residue (Altabioscience).
+The same Cys-containing synthetic peptides were used for affinity purification.
 Antibodies were affinity purified from sera on a SulfoLink Coupling Resin (Thermo Fischer) as previously described [@Conzelmann2012].
+View a detailed protocol here: <https://bio-protocol.org/exchange/preprintdetail?id=2333&type=3>
 
 **Transient transgenesis**
 
@@ -548,13 +550,33 @@ For the assay, COS-7 cells (Angio-proteomie, CAT no. cAP-0203) with a low endoge
 Cells were maintained at 37 °C in 35 mm dishes (Nunc™ Glass Bottom Dishes) containing 3 ml of DMEM, high glucose glutamax medium (Thermo; Cat. No. 10566016) supplemented with 10% fetal bovine serum (Thermo; Cat. No. 10082147).
 Upon reaching approximately 85% confluency, cells were transfected with the pcDNA3.1(+)-Green-cGull-T2A-NITGC1 plasmid.
 Transfections were carried out with 150 ng of each plasmid and 0.3 μl of Lipofectamine 3000 Reagent (invitrogen; Cat. No. L3000001).
-Two days post-transfection, the culture medium was substituted for fresh DMEM-medium. 
+Two days post-transfection, the culture medium was substituted for fresh DMEM-medium.
 For single-wavelength imaging experiments, cells in 35-mm dishes were washed twice and imaged in modified Ringer's buffer (140 mM NaCl, 3.5 mM KCl, 0.5 mM NaH~2~PO~4~ , 0.5 mM S-3 MgSO~4~, 1.5 mM CaCl~2~ , 10 mM HEPES, 2 mM NaHCO~3~ and 5 mM glucose).
 Dishes were mounted on a stage heated to 37 °C and imaging was done on an inverted confocal microscope (LSM880, Carl Zeiss GmbH, Jena) equipped with an oil-immersion objective lens (UApo/340, 40x, NA = 0.17).
 The exposure time of the EM-CCD camera was controlled by the ZEN software (Carl Zeiss GmbH, Jena).
 Images were acquired every 15 s for 10 min and stimulation was initiated 2 min after starting image acquisition.
 Imaging data analysis was done with ImageJ (National Institutes of Health, Bethesda, MD, USA).
 As NO donor, we used S-Nitroso-N-acetyl-D, L-penicillamine (SNAP, Sigma-Aldrich, St. Louis, MO, USA).
+
+## Mathematical modelling
+
+The mathematical model for the wild type data comprises six dynamical equations:
+
+\begin{align*}
+\frac{d C_P(t)}{dt} &= 1 - \delta^{C_P} C_P(t) + K_{UV}^{C_P} UV(t) C_O(t)  + K_{G}^{C_P} G(t) , \\
+\frac{dC_O(t)}{dt} &= 1 - \delta^{C_O} C_O(t) - K_{UV}^{C_O} UV(t) C_O(t), \\
+\frac{dG(t)}{dt} &= 1 - \delta^{G} G(t) + K_{GC2}^G \left(1 - UV(t)\right) G(t) + K_{GC1}^G N(t) , \\
+\frac{dS(t)}{dt} &= UV(t) - \frac{S(t)}{\tau_S}, \\
+\frac{dC_N(t)}{dt} &= 1 - \delta^{C_N} C_N(t) + K_{S}^{C_N} S(t), \\
+\frac{dN(t)}{dt} &= 1 - \delta^{N} N(t) + K_{C_N}^{N} C_N(t), \\
+\frac{dC_R(t)}{dt} &= 1 - \delta^{C_R} C_R(t) - K_{S}^{C_R} S(t) + K_{C_P}^{C_R} C_P(t) - K_{C_N}^{C_R} C_N(t) C_R(t), \\
+UV(t) &=
+    \begin{cases}
+        a, & t_{UV\: start} \leq t \leq t_{UV\: end}\\
+        0, & \text{otherwise}
+    \end{cases}   .
+\end{align*}
+
 
 ## Data analysis and figure preparation
 
@@ -566,7 +588,8 @@ All scripts are available at <https://github.com/JekelyLab/Joukra_et_al_NOS> (co
 
 This work was funded by the Wellcome Trust (214337/Z/18/Z).
 This project has received funding from the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme (grant agreement No 101020792).
-KJ has been supported by a JSPS Postdoctoral fellowhip, LAYG by a BBSRC Discovery fellowship (BB/W010305/1).
+KJ has been supported by a JSPS Postdoctoral fellowhip, LAYG by a BBSRC Discovery fellowship (BB/W010305/1), PS by a Wellcome Trust Institutional Strategic Support Award (204909/Z/16/Z), and KCAW by the EPSRC Hub for Quantitive Modelling in Healthcare (EP/T017856/1).
+
 
 ## References {.unnumbered}
 

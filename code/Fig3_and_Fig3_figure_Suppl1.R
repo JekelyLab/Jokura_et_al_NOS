@@ -123,7 +123,7 @@ WTvsNOS_2d %>%
                expression('NOS'^'Δ23/Δ23'))) +
   theme_minimal()+
   theme_plot +
-  labs(fill = "genotype", x = "time (sec)", y = "Vertical displacement (mm/s)")+
+  labs(fill = "genotype", x = "time [s]", y = "Vertical displacement [mm/s]")+
   scale_y_continuous(limits = c(-0.46, 0.56)) +
   scale_x_discrete(labels=c("30", "60", "90", 
                             "30", "60", "90","120",
@@ -181,7 +181,7 @@ WTvsNOS_3d %>%
                expression('NOS'^'Δ23/Δ23'))) +
   theme_minimal()+
   theme_plot +
-  labs(fill = "genotype", x = "time (sec)", y = "Vertical displacement (mm/s)")+
+  labs(fill = "genotype", x = "time [s]", y = "Vertical displacement [mm/s]")+
   scale_y_continuous(limits = c(-0.81, 0.5)) +
   scale_x_discrete(labels=c("30", "60", "90", 
                            "30", "60", "90","120",
@@ -235,7 +235,7 @@ L_NAME_3d %>%
                "1.0 mM" = Okabe_Ito[6])) +
   theme_minimal() +
   theme_plot +
-  labs(x = "time (sec)", y = "Vertical displacement (mm/s)")+
+  labs(x = "time [s]", y = "Vertical displacement [mm/s]")+
   scale_y_continuous(limits = c(-0.67, 0.75)) +
   scale_x_discrete(labels=c("30", "60", "90", 
                             "30", "60", "90","120",
@@ -271,9 +271,9 @@ df_2d_nor %>%
   ggplot(aes(x = x_axis, y = y_axis, colour = sec)) +
   geom_point(size = 0.1) +
   scale_color_viridis_c(option = "plasma", direction = -1) +
-  labs(x = "x movement (mm)", 
-       y = "y movement (mm)", 
-       color = "time (sec)") +
+  labs(x = "x movement [mm]", 
+       y = "y movement [mm]", 
+       color = "time [s]") +
   theme_minimal() +
   coord_fixed() +
   theme_plot +
@@ -312,9 +312,9 @@ df_3d_nor %>%
   ggplot(aes(x = x_axis, y = y_axis, colour = sec)) +
   geom_point(size = 0.1) +
   scale_color_viridis_c(option = "plasma", direction = -1) +
-  labs(x = "x movement (mm)", 
-       y = "y movement (mm)", 
-       color = "time (sec)") +
+  labs(x = "x movement [mm]", 
+       y = "y movement [mm]", 
+       color = "time [s]") +
   theme_minimal() +
   coord_fixed() +
   theme_plot +
@@ -350,14 +350,14 @@ df_2d_nor %>%
   filter(Genotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
   ggplot() +
   annotate("rect", xmin=10, xmax=40, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
-  annotate("text", x=17, y=5.5, label="side 395nm", color="purple", size = 5, fontface="plain") +
+  annotate("text", x=17, y=5.5, label="side 395 nm", color="purple", size = 5, fontface="plain") +
   annotate("rect", xmin=0, xmax=10, ymin=-Inf, ymax=Inf,alpha=0.1, fill="black") +
   annotate("text", x=2.5, y=5.5, label="dark", color="black", size = 5, fontface="plain") +
   aes(x = sec, y = y_axis, color = Genotype) +
   geom_smooth(method = "loess", formula = y ~ x, method.args= list(degree = 1), 
               level = 0.99, size = 1, span = 0.5) +
   theme_minimal() +
-  labs(x = "time (sec)", y = "vertical position (mm)", color = "genotype") +
+  labs(x = "time [s]", y = "vertical position [mm]", color = "genotype") +
   theme_plot +
   theme(axis.title = element_text(size=13),
         axis.text.x = element_text(size = 11, angle = 0),
@@ -394,14 +394,14 @@ df_3d_nor %>%
   filter(Genotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
   ggplot() +
   annotate("rect", xmin=10, xmax=40, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
-  annotate("text", x=17, y=4, label="side 395nm", color="purple", size = 5, fontface="plain") +
+  annotate("text", x=17, y=4, label="side 395 nm", color="purple", size = 5, fontface="plain") +
   annotate("rect", xmin=0, xmax=10, ymin=-Inf, ymax=Inf,alpha=0.1, fill="black") +
   annotate("text", x=2.5, y=4, label="dark", color="black", size = 5, fontface="plain") +
   aes(x = sec, y = y_axis, color = Genotype) +
   geom_smooth(method = "loess", formula = y ~ x, method.args= list(degree = 1), 
               level = 0.99, size = 1, span = 0.2) +
   theme_minimal() +
-  labs(x = "time (sec)", y = "vertical position (mm)", color = "genotype") +
+  labs(x = "time [s]", y = "vertical position [mm]", color = "genotype") +
   theme_plot +
   theme(axis.title = element_text(size=13),
         axis.text.x = element_text(size = 11, angle = 0),
@@ -436,14 +436,14 @@ ggsave("pictures/vertical_tracking_position_sideUV_3d.png", limitsize = FALSE,
 df_L_NAME_tracking %>%
   ggplot() +
   annotate("rect", xmin=10, xmax=40, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
-  annotate("text", x=17, y=65, label="side 395nm", color="purple", size = 5, fontface="plain") +
+  annotate("text", x=17, y=65, label="side 395 nm", color="purple", size = 5, fontface="plain") +
   annotate("rect", xmin=0, xmax=10, ymin=-Inf, ymax=Inf,alpha=0.1, fill="black") +
   annotate("text", x=2.5, y=65, label="dark", color="black", size = 5, fontface="plain") +
   aes(x = `sec`, y = `Ymm`, color = `L-NAME`) +
   geom_smooth(method = "loess", formula = y ~ x, method.args= list(degree = 1), 
               level = 0.99, size = 1, span = 0.8) +
   theme_minimal() +
-  labs(x = "time (sec)", y = "vertical position (mm)") +
+  labs(x = "time [s]", y = "vertical position [mm]") +
   theme(axis.title = element_text(size=13),
         axis.text.x = element_text(size = 11, angle = 0),
         axis.text.y = element_text(size = 11),
@@ -478,14 +478,14 @@ df_2d_nor %>%
   filter(Genotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
   ggplot() +
   annotate("rect", xmin=10, xmax=40, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
-  annotate("text", x=17, y=1.35, label="side 395nm", color="purple", size = 5, fontface="plain") +
+  annotate("text", x=17, y=1.35, label="side 395 nm", color="purple", size = 5, fontface="plain") +
   annotate("rect", xmin=0, xmax=10, ymin=-Inf, ymax=Inf,alpha=0.1, fill="black") +
   annotate("text", x=2.5, y=1.35, label="dark", color="black", size = 5, fontface="plain") +
   aes(x = sec, y = speed, color = Genotype) +
   geom_smooth(method = "loess", formula = y ~ x, method.args= list(degree = 1), 
               level = 0.99, size = 1, span = 0.4) +
   theme_minimal() +
-  labs(x = "time (sec)", y = "speed (mm/sec)", color = "genotype") +
+  labs(x = "time [s]", y = "speed [mm/s]", color = "genotype") +
   theme_plot +
   theme(axis.title = element_text(size=13),
         axis.text.x = element_text(size = 11, angle = 0),
@@ -521,14 +521,14 @@ df_3d_nor %>%
   filter(Genotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
   ggplot() +
   annotate("rect", xmin=10, xmax=40, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
-  annotate("text", x=17, y=4.9, label="side 395nm", color="purple", size = 5, fontface="plain") +
+  annotate("text", x=17, y=4.9, label="side 395 nm", color="purple", size = 5, fontface="plain") +
   annotate("rect", xmin=0, xmax=10, ymin=-Inf, ymax=Inf,alpha=0.1, fill="black") +
   annotate("text", x=2.5, y=4.9, label="dark", color="black", size = 5, fontface="plain") +
   aes(x = sec, y = speed, color = Genotype) +
   geom_smooth(method = "loess", formula = y ~ x, method.args= list(degree = 1), 
               level = 0.99, size = 1, span = 0.4) +
   theme_minimal() +
-  labs(x = "time (sec)", y = "speed (mm/sec)", color = "genotype") +
+  labs(x = "time [s]", y = "speed [mm/s]", color = "genotype") +
   theme_plot +
   theme(axis.title = element_text(size=13),
         axis.text.x = element_text(size = 11, angle = 0),
@@ -563,14 +563,14 @@ ggsave("pictures/vertical_tracking_distanse_sideUV_3d.png", limitsize = FALSE,
 df_L_NAME_tracking %>%
   ggplot() +
   annotate("rect", xmin=10, xmax=40, ymin=-Inf, ymax=Inf,alpha=0.1, fill="blue") +
-  annotate("text", x=17, y=2.75, label="side 395nm", color="purple", size = 5, fontface="plain") +
+  annotate("text", x=17, y=2.75, label="side 395 nm", color="purple", size = 5, fontface="plain") +
   annotate("rect", xmin=0, xmax=10, ymin=-Inf, ymax=Inf,alpha=0.1, fill="black") +
   annotate("text", x=2.5, y=2.75, label="dark", color="black", size = 5, fontface="plain") +
   aes(x = `sec`, y = `mm/sec`, color = `L-NAME`) +
   geom_smooth(method = "loess", formula = y ~ x, method.args= list(degree = 1), 
               level = 0.99, size = 1, span = 0.8) +
   theme_minimal() +
-  labs(x = "time (sec)", y = "speed (mm/sec)") +
+  labs(x = "time [s]", y = "speed [mm/s]") +
   theme(axis.title = element_text(size=13),
         axis.text.x = element_text(size = 11, angle = 0),
         axis.text.y = element_text(size = 11),
