@@ -281,12 +281,19 @@ Based on these data, our experimental results and the mathematical model, we ass
 The components for which experimental data are available are shown in bold.
 Other potential molecular players are also indicated (Figure 6D).
 
+<<<<<<< HEAD
 ```{r echo=FALSE,fig.cap="**Figure 6. Signalling mechanisms and mathematical modelling between cPRC, INNOS and INRGW.** **(A)** Dot plot of genes (columns) expressed in three types of cells (rows) in the cPRC circuit using single cell RNA-Seq. The size of the dots is expressed in proportion to the percentage of cells expressing that gene relative to all cells. The colours represent the normal logarithm of the number of transcripts in the cells expressing the gene. **(B)** Schematic diagram of the signalling pathway of the cPRC circuit, focusing on the NO feedback. **(C)** Diagram for **(D)**"}
 
+=======
+```{r echo=FALSE,fig.cap="**Figure 6. Mathematical modelling of cPRC circuit dynamics during UV stimulation and potential signalling mechanisms.**  **(A)** Diagram for **(B)** **(C)** Dot plot of genes (columns) expressed in three types of cells (rows) in the cPRC circuit using single cell RNA-Seq. The size of the dots is expressed in proportion to the percentage of cells expressing that gene relative to all cells. The colours represent the normal logarithm of the number of transcripts in the cells expressing the gene. **(D)** Schematic diagram of the signalling pathway of the cPRC circuit, focusing on the NO feedback."}
+>>>>>>> 9932f067da10604ec00c679a5b10f91decddfa29
 knitr::include_graphics(path = "figures/Fig6.png")
 
+<<<<<<< HEAD
 ```
 
+=======
+>>>>>>> 9932f067da10604ec00c679a5b10f91decddfa29
 ## Discussion
 
 Our work revealed an essential role for NO-mediated signalling in driving UV/violet avoidance behaviour in larval *Platynereis*.
@@ -391,7 +398,7 @@ During the UV response, prototroch cilia beat slower than trunk cilia, resulting
 In contrast, during the pressure response prototroch cilia beat faster than trunk cilia [@bezares-calderon2023], leading to a head-up orientation ('front-wheel drive').
 Testing this hypothesis will require biophysical experiments and mathematical modelling.
 
-## UV-avoidance circuits of extraocular photoreceptors
+**UV-avoidance circuits of extraocular photoreceptors**
 
 Animals evolved distinct photosensory systems coupled to non-overlapping circuits and guiding unique behavioural responses.
 These sensory systems can employ different opsin molecules and be tuned to different wavelength of light.
@@ -409,11 +416,13 @@ The amount of modulator released can scale with stimulus intensity or duration a
 
 ## Key resources table
 
-```{r echo=FALSE}
+```{r echo=FALSE, warning=FALSE}
 library(readxl)
 key_resource_table <- read_excel("key_resource_table/key_resource_table.xls")
 df_key_resource_table <- as.data.frame(key_resource_table)
+df_key_resource_table <- replace(df_key_resource_table, is.na(df_key_resource_table), "")
 knitr::kable(df_key_resource_table, format = "html", booktabs = TRUE)
+
 ```
 
 ## Materials and Methods
@@ -554,13 +563,48 @@ Images were acquired using a xenon lamp, 460--495 nm excitation filter, 505-nm d
 S-Nitroso-N-acetyl-D, L-penicillamine (SNAP) was purchased from Sigma-Aldrich (St. Louis, MO, USA) .
 The exposure time of the EM-CCD camera was controlled by the ZEN software (Zeiss).
 Images were acquired every 15 s for 10 min and stimulation was initiated 2 min after starting image acquisition.
+<<<<<<< HEAD
 Imaging data analysis was performed using ImageJ (National Institutes of Health, Bethesda, MD, USA).
+=======
+Imaging data analysis was done with ImageJ (National Institutes of Health, Bethesda, MD, USA).
+As NO donor, we used S-Nitroso-N-acetyl-D, L-penicillamine (SNAP, Sigma-Aldrich, St. Louis, MO, USA).
+
+## Mathematical modelling
+
+The mathematical model for the wild type data comprises six dynamical equations:
+
+```{=tex}
+\begin{align*}
+\frac{d C_P(t)}{dt} &= 1 - \delta^{C_P} C_P(t) + K_{UV}^{C_P} UV(t) C_O(t)  + K_{G}^{C_P} G(t) , \\
+\frac{dC_O(t)}{dt} &= 1 - \delta^{C_O} C_O(t) - K_{UV}^{C_O} UV(t) C_O(t), \\
+\frac{dG(t)}{dt} &= 1 - \delta^{G} G(t) + K_{GC2}^G \left(1 - UV(t)\right) G(t) + K_{GC1}^G N(t) , \\
+\frac{dS(t)}{dt} &= UV(t) - \frac{S(t)}{\tau_S}, \\
+\frac{dC_N(t)}{dt} &= 1 - \delta^{C_N} C_N(t) + K_{S}^{C_N} S(t), \\
+\frac{dN(t)}{dt} &= 1 - \delta^{N} N(t) + K_{C_N}^{N} C_N(t), \\
+\frac{dC_R(t)}{dt} &= 1 - \delta^{C_R} C_R(t) - K_{S}^{C_R} S(t) + K_{C_P}^{C_R} C_P(t) - K_{C_N}^{C_R} C_N(t) C_R(t), \\
+UV(t) &=
+    \begin{cases}
+        a, & t_{UV\: start} \leq t \leq t_{UV\: end}\\
+        0, & \text{otherwise}
+    \end{cases}   .
+\end{align*}
+```
+## Data analysis and figure preparation
+
+Data were analysed in ImageJ and R.
+All figures were assembled in R with the cowplot and patchwork packages.
+All scripts are available at <https://github.com/JekelyLab/Joukra_et_al_NOS> (commit ).
+>>>>>>> 9932f067da10604ec00c679a5b10f91decddfa29
 
 ## Acknowledgements
 
 This work was funded by the Wellcome Trust (214337/Z/18/Z).
 This project has received funding from the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme (grant agreement No 101020792).
+<<<<<<< HEAD
 KJ has been supported by a JSPS Postdoctoral fellowhip, LAYG by a BBSRC Discovery fellowship (BB/W010305/1).
+=======
+KJ has been supported by a JSPS Overseas Research Fellowship, LAYG by a BBSRC Discovery fellowship (BB/W010305/1), PS by a Wellcome Trust Institutional Strategic Support Award (204909/Z/16/Z), and KCAW by the EPSRC Hub for Quantitive Modelling in Healthcare (EP/T017856/1).
+>>>>>>> 9932f067da10604ec00c679a5b10f91decddfa29
 
 ## References {.unnumbered}
 
