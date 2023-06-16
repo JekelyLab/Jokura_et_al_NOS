@@ -283,7 +283,6 @@ Based on these data, our experimental results and the mathematical model, we ass
 The components for which experimental data are available are shown in bold.
 Other potential molecular players are also indicated (Figure 6D).
 
-
 ```{r echo=FALSE,fig.cap="**Figure 6. Mathematical modelling of cPRC circuit dynamics during UV stimulation and potential signalling mechanisms.**  **(A)** Diagram for **(B)** **(C)** Dot plot of genes (columns) expressed in three types of cells (rows) in the cPRC circuit using single cell RNA-Seq. The size of the dots is expressed in proportion to the percentage of cells expressing that gene relative to all cells. The colours represent the normal logarithm of the number of transcripts in the cells expressing the gene. **(D)** Schematic diagram of the signalling pathway of the cPRC circuit, focusing on the NO feedback."}
 knitr::include_graphics(path = "figures/Fig6.png")
 ```
@@ -292,7 +291,6 @@ To generate new insights from the model, we asked how the duration and intensity
 The model allowed us to systematically vary stimulus conditions that would not have been feasible in single-larva experiments.
 We found that the magnitude of the NO-dependent signal scales with stimulus intensity and duration (Figure 7).
 This suggests an integratory function of NO signalling that tunes circuit output to the strength of UV exposure.
-
 
 ## Discussion
 
@@ -397,7 +395,7 @@ During the UV response, prototroch cilia beat slower than trunk cilia, resulting
 In contrast, during the pressure response prototroch cilia beat faster than trunk cilia [@bezares-calderon2023], leading to a head-up orientation ('front-wheel drive').
 Testing this hypothesis will require biophysical experiments and mathematical modelling.
 
-## UV-avoidance circuits of extraocular photoreceptors
+**UV-avoidance circuits of extraocular photoreceptors**
 
 Animals evolved distinct photosensory systems coupled to non-overlapping circuits and guiding unique behavioural responses.
 These sensory systems can employ different opsin molecules and be tuned to different wavelengths of light.
@@ -418,11 +416,13 @@ The richly modulated multi-transmitter cPRC circuit will serve as a fertile grou
 
 ## Key resources table
 
-```{r echo=FALSE}
+```{r echo=FALSE, warning=FALSE}
 library(readxl)
 key_resource_table <- read_excel("key_resource_table/key_resource_table.xls")
 df_key_resource_table <- as.data.frame(key_resource_table)
+df_key_resource_table <- replace(df_key_resource_table, is.na(df_key_resource_table), "")
 knitr::kable(df_key_resource_table, format = "html", booktabs = TRUE)
+
 ```
 
 ## Materials and Methods
@@ -562,6 +562,7 @@ As NO donor, we used S-Nitroso-N-acetyl-D, L-penicillamine (SNAP, Sigma-Aldrich,
 
 The mathematical model for the wild type data comprises six dynamical equations:
 
+```{=tex}
 \begin{align*}
 \frac{d C_P(t)}{dt} &= 1 - \delta^{C_P} C_P(t) + K_{UV}^{C_P} UV(t) C_O(t)  + K_{G}^{C_P} G(t) , \\
 \frac{dC_O(t)}{dt} &= 1 - \delta^{C_O} C_O(t) - K_{UV}^{C_O} UV(t) C_O(t), \\
@@ -576,8 +577,7 @@ UV(t) &=
         0, & \text{otherwise}
     \end{cases}   .
 \end{align*}
-
-
+```
 ## Data analysis and figure preparation
 
 Data were analysed in ImageJ and R.
@@ -589,7 +589,6 @@ All scripts are available at <https://github.com/JekelyLab/Joukra_et_al_NOS> (co
 This work was funded by the Wellcome Trust (214337/Z/18/Z).
 This project has received funding from the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme (grant agreement No 101020792).
 KJ has been supported by a JSPS Overseas Research Fellowship, LAYG by a BBSRC Discovery fellowship (BB/W010305/1), PS by a Wellcome Trust Institutional Strategic Support Award (204909/Z/16/Z), and KCAW by the EPSRC Hub for Quantitive Modelling in Healthcare (EP/T017856/1).
-
 
 ## References {.unnumbered}
 
