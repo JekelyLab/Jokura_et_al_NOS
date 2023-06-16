@@ -17,6 +17,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
+<<<<<<< HEAD
  [1] catmaid_0.10.1     nat_1.10.4         rgl_1.1.3          httr_1.4.6         esquisse_1.1.2     scales_1.2.1       tidygraph_1.2.3    rgexf_0.16.2       patchwork_1.1.2   
 [10] webshot2_0.1.0     visNetwork_2.1.2   networkD3_0.4      igraph_1.4.99.9013 RColorBrewer_1.1-3 leiden_0.4.3       forcats_1.0.0      stringr_1.5.0      dplyr_1.1.2       
 [19] purrr_1.0.1        readr_2.1.4        tidyr_1.3.0        tibble_3.2.1       ggplot2_3.4.2      tidyverse_1.3.1    png_0.1-8          cowplot_1.1.1      magick_2.7.4      
@@ -34,3 +35,28 @@ loaded via a namespace (and not attached):
  [82] phosphoricons_0.2.0 yaml_2.3.7          shinyWidgets_0.7.6  evaluate_0.21       codetools_0.2-19    extrafont_0.19      cli_3.6.1           xtable_1.8-4        reticulate_1.30    
  [91] systemfonts_1.0.4   munsell_0.5.0       processx_3.8.1      jquerylib_0.1.4     modelr_0.1.11       Rcpp_1.0.10         readxl_1.4.2        dbplyr_2.3.2        XML_3.99-0.14      
 [100] parallel_4.3.0      ellipsis_0.3.2      reprex_2.0.2        viridisLite_0.4.2   openxlsx_4.2.5.2    crayon_1.5.2        writexl_1.4.2       rlang_1.1.1         rvest_1.0.3        
+=======
+ [1] xlsx_0.6.5         esquisse_1.1.2     scales_1.2.1       tidygraph_1.2.3    rgexf_0.16.2      
+ [6] patchwork_1.1.2    webshot2_0.1.0     visNetwork_2.1.2   networkD3_0.4      igraph_1.4.2      
+[11] RColorBrewer_1.1-3 leiden_0.4.3       lubridate_1.9.2    forcats_1.0.0      stringr_1.5.0     
+[16] dplyr_1.1.2        purrr_1.0.1        readr_2.1.4        tidyr_1.3.0        tibble_3.2.1      
+[21] ggplot2_3.4.2      tidyverse_2.0.0    png_0.1-8          cowplot_1.1.1      magick_2.7.4      
+
+loaded via a namespace (and not attached):
+ [1] reactable_0.4.4     shinybusy_0.3.1     rprojroot_2.0.3     phosphoricons_0.1.2 tools_4.2.1        
+ [6] bslib_0.4.2         utf8_1.2.3          R6_2.5.1            colorspace_2.1-0    withr_2.5.0        
+[11] tidyselect_1.2.0    processx_3.8.1      curl_5.0.0          compiler_4.2.1      cli_3.6.1          
+[16] sass_0.4.6          rappdirs_0.3.3      digest_0.6.31       foreign_0.8-84      rmarkdown_2.21     
+[21] rio_0.5.29          pkgconfig_2.0.3     htmltools_0.5.5     fastmap_1.1.1       htmlwidgets_1.6.2  
+[26] rlang_1.1.1         readxl_1.4.2        rstudioapi_0.14     shiny_1.7.4         jquerylib_0.1.4    
+[31] generics_0.1.3      jsonlite_1.8.4      zip_2.3.0           magrittr_2.0.3      Matrix_1.5-4       
+[36] Rcpp_1.0.10         munsell_0.5.0       fansi_1.0.4         reticulate_1.28     lifecycle_1.0.3    
+[41] stringi_1.7.12      yaml_2.3.7          grid_4.2.1          datamods_1.4.0      promises_1.2.0.1   
+[46] lattice_0.20-45     haven_2.5.2         xlsxjars_0.6.1      chromote_0.1.1      hms_1.1.3          
+[51] knitr_1.42          ps_1.7.5            pillar_1.9.0        servr_0.27          XML_3.99-0.14      
+[56] glue_1.6.2          evaluate_0.21       data.table_1.14.8   vctrs_0.6.2         tzdb_0.3.0         
+[61] httpuv_1.6.11       cellranger_1.1.0    gtable_0.3.3        cachem_1.0.8        xfun_0.39          
+[66] openxlsx_4.2.5.2    mime_0.12           xtable_1.8-4        later_1.3.1         rJava_1.0-6        
+[71] websocket_1.4.1     writexl_1.4.2       shinyWidgets_0.7.6  timechange_0.2.0    ellipsis_0.3.2     
+[76] here_1.0.1         
+>>>>>>> 9932f067da10604ec00c679a5b10f91decddfa29
