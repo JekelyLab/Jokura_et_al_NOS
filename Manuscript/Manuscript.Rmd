@@ -474,7 +474,7 @@ We aligned the sequences with MAFFT version 7, with the iterative refinement met
 Alignments were trimmed with TrimAl in gappy-out mode [@Capella-Gutiérrez2009].
 To calculate maximum-likelihood trees, we used IQ-tree2 with the LG+G4 model.
 To calculate branch support, we ran 1,000 replicates with the aLRT-SH-like and aBayes methods [@Minh2020].
-The sequences used for the phylogenetic analysis are available in **Supplementary File 1**, the trimmed alignment is available in **Supplementary File 2** and the pre-trimmed data in **Supplementary file 3**.
+The sequences used for the phylogenetic analysis are available in **Supplementary file 1**, the trimmed alignment is available in **Supplementary File 2** and the pre-trimmed data in **Supplementary file 3**.
 
 **NIT-GC Identification and Phylogenetic Analysis**
 
@@ -489,7 +489,7 @@ We aligned the sequences with MAFFT version 7, with the iterative refinement met
 Alignments were trimmed with TrimAl in gappy-out mode [@Capella-Gutiérrez2009].
 To calculate maximum-likelihood trees, we used IQ-tree2 with the LG+G4 model.
 To calculate branch support, we ran 1,000 replicates with the aLRT-SH-like and aBayes methods [@Minh2020].
-The sequences used for the phylogenetic analysis are available in **Supplementary File 1**, the trimmed alignment is available in **Supplementary File 2** and the pre-trimmed data in **Supplementary file 3**.
+The sequences used for the phylogenetic analysis are available in **Supplementary file 4**, the trimmed alignment is available in **Supplementary file 5** and the pre-trimmed data in **Supplementary file 6**.
 
 **Single-cell analysis**
 
@@ -504,7 +504,7 @@ RPKM calculates the total number of reads per million bp and then divides by the
 Instead, TPM first divides by the length of the gene and then divides by the total number of reads per million bases, which allows for more accurate comparisons between samples.
 In this case we wanted to compare between samples, so we used TPM.
 The total TPM of each gene between the samples was used to calculate the percentage of expressed genes.
-The total TPM values for each gene and the percentage of expressed genes are available in **Supplementary file 1**.
+The total TPM values for each gene and the percentage of expressed genes are available in **Supplementary file 7**.
 
 **In situ HCR**
 
