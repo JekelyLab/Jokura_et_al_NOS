@@ -1,11 +1,9 @@
 $citation
-
 To cite RStudio in publications use:
 
-  Posit team (2023). RStudio: Integrated Development Environment for R. Posit Software, PBC,
-  Boston, MA. URL http://www.posit.co/.
+  Posit team (2023). RStudio: Integrated Development Environment for R. Posit Software, PBC, Boston, MA. URL http://www.posit.co/.
 
- LaTeX ユーザのための BibTeX エントリーは 
+A BibTeX entry for LaTeX users is
 
   @Manual{,
     title = {RStudio: Integrated Development Environment for R},
@@ -16,16 +14,15 @@ To cite RStudio in publications use:
     url = {http://www.posit.co/},
   }
 
-
 $mode
 [1] "desktop"
 
 $version
-[1] ‘2023.3.1.446’
+[1] ‘2023.6.0.421’
 
 $long_version
-[1] "2023.03.1+446"
+[1] "2023.06.0+421"
 
 $release_name
-[1] "Cherry Blossom"
+[1] "Mountain Hydrangea"
 
