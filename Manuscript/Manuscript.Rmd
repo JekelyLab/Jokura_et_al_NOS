@@ -93,7 +93,7 @@ In two- and three-day-old larvae, we detected *NOS* expression in four cells (tw
 The four apical organ cells, but not the eyes, were also labelled with a *NOS* reporter construct driving palmitoylated-tdTomato (Figure 1E).
 This reporter also revealed the axonal projections of these central NOS-expressing neurons.
 The position and morphology of the four *NOS+* cells allowed us to identify the same four cells as four interneurons (INNOS) in our three-day-old whole-body *Platynereis* volume EM data [@williams2017; @veraszto2020] (Figure 1B,C).
-In the synaptic connectome, the INNOS cells are postsynaptic to the UV-sensory cPRCs and presynaptic to the INRGWa interneurons, which are also cPRC targets (Figure 1C, F). 
+In the synaptic connectome, the INNOS cells are postsynaptic to the UV-sensory cPRCs and presynaptic to the INRGWa interneurons, which are also cPRC targets (Figure 1C, F).
 The projections of INNOS cells are segregated into input (dendritic) and output (axonal) compartments, with cPRC inputs occurring on the dendritic part in the dense neurosecretory plexus.
 INNOS output synapses form in the more ventral projection region (Figure 1---figure supplement 3).
 INRGWa neurons synapse on the head serotonergic ciliomotor neurons (Ser-h1), which synapse on the cholinergic MC ciliomotor neuron and cells of the prototroch ciliary band (Figure 1C, F) [@veraszto2017].
@@ -290,15 +290,13 @@ knitr::include_graphics(path = "figures/Fig6.png")
 
 To generate new insights from the model, we asked how the duration and intensity of UV stimulation influences signalling output, measured as the magnitude (quantified as area under peak, AUP) of the NO-dependent Ca^2+^ signal in the cPRCs.
 The model allowed us to systematically vary stimulus conditions that would not have been feasible in single-larva experiments.
-We found that delayed activation occurs only for UV stimulation of sufficient amplitude and  duration (Figure 7).
+We found that delayed activation occurs only for UV stimulation of sufficient amplitude and duration (Figure 7).
 This suggests an integratory function of NO signalling to tune circuit output to the strength of UV exposure.
-
 
 ```{r echo=FALSE,fig.cap="**Figure 7. Magnitude of cPRC activation as  a function of stimulus duration and intensity.** Median values of the $AUP$ are presented as a heatmap with dark blue indicating flat $C_P(t)$ trajectories with median $AUP$ close to 0 and red indicating that the $C_P(t)$ trajectories have a clearly defined delayed activation peak. "}
 
 knitr::include_graphics(path = "figures/Fig7.svg")
 ```
-
 
 ## Discussion
 
@@ -498,7 +496,7 @@ We ran CD-Hit [@Fu2012] to eliminate redundant sequences (at a 80% threshold).
 To identify clusters, we used sequence-similarity-based clustering in Clans [@frickey2004] and the convex-clustering option with 100 jack-knife replicates.
 The NIT-GCs are extremely well conserved within the membrane-bound guanylate cyclases and form an easily recognizable cluster.
 To analyze the phylogeny of NIT-GCs, the cluster containing these GCs together with membrane-bound guanylate cyclases were parsed and used for tree building.
-We aligned the sequences with MAFFT version 7, with the iterative refinement method E-INS-i.
+We aligned the sequences with MAFFT version 7, with the iterative refinement method E-INS-i[@Katoh2013].
 Alignments were trimmed with TrimAl in gappy-out mode [@Capella-Gutiérrez2009].
 To calculate maximum-likelihood trees, we used IQ-tree2 with the LG+G4 model.
 To calculate branch support, we ran 1000 replicates with the aLRT-SH-like and aBayes methods [@Minh2020].
@@ -560,16 +558,16 @@ The imaging laser had a similar intensity than the stimulus laser but covered an
 To measure cGMP production in a cell culture assay we used the Green cGull reporter [@Matsuda2017].
 Full-length *NIT-GC1* and *NIT-GC2* coding sequences were amplified by PCR from a *Platynereis dumerilii* cDNA library and cloned into the pcDNA3.1(+) vector with the T2A self-cleaving sequence.
 For the assay, COS-7 cells (Angio-proteomie, CAT no. cAP-0203) with a low endogenous level of soluble guanylate cyclase activity were used.
-Cells were maintained at 37 °C in 35 mm dishes (Nunc™ Glass Bottom Dishes) containing 3 ml of DMEM, high glucose glutamax medium (Thermo; Cat. No. 10566016) supplemented with 10% fetal bovine serum (Thermo; Cat. No. 10082147).
+Cells were maintained at 37 °C in 35 mm dishes (Nunc™ Glass Bottom Dishes) containing 3 ml of DMEM, low-glucose medium (Thermo; Cat. No. 11885084) supplemented with 10% fetal bovine serum (Thermo; Cat. No. 10082147).
 Upon reaching approximately 85% confluency, cells were transfected with the pcDNA3.1(+)-Green-cGull-T2A-NITGC1 plasmid.
 Transfections were carried out with 150 ng of each plasmid and 0.3 μl of Lipofectamine 3000 Reagent (invitrogen; Cat. No. L3000001).
-Two days post-transfection, the culture medium was substituted for fresh DMEM-medium.
+Three hours post-transfection, the culture medium was substituted for fresh DMEM-medium.
 For single-wavelength imaging experiments, cells in 35-mm dishes were washed twice and imaged in modified Ringer's buffer (140 mM NaCl, 3.5 mM KCl, 0.5 mM NaH~2~PO~4~ , 0.5 mM S-3 MgSO~4~, 1.5 mM CaCl~2~ , 10 mM HEPES, 2 mM NaHCO~3~ and 5 mM glucose).
 Dishes were mounted on a stage heated to 37 °C and imaging was done on an inverted confocal microscope (LSM880, Carl Zeiss GmbH, Jena) equipped with an oil-immersion objective lens (UApo/340, 40x, NA = 0.17).
 The exposure time of the EM-CCD camera was controlled by the ZEN software (Carl Zeiss GmbH, Jena).
 Images were acquired every 15 s for 10 min and stimulation was initiated 2 min after starting image acquisition.
 Imaging data analysis was done with ImageJ (National Institutes of Health, Bethesda, MD, USA).
-As NO donor, we used S-Nitroso-N-acetyl-D, L-penicillamine (SNAP, Sigma-Aldrich, St. Louis, MO, USA).
+As NO donor, we used S-Nitroso-N-acetyl-D, L-penicillamine (SNAP, Sigma-Aldrich, St.
 
 ## Mathematical modelling
 
@@ -577,6 +575,7 @@ As NO donor, we used S-Nitroso-N-acetyl-D, L-penicillamine (SNAP, Sigma-Aldrich,
 
 The mathematical model for the wild type data comprises six dynamical equations:
 
+```{=tex}
 \begin{align*}
 \frac{d C_P(t)}{dt} &= 1 - \delta^{C_P} C_P(t) + K_{UV}^{C_P} UV(t) C_O(t)  + K_{G}^{C_P} G(t) , \\
 \frac{dC_O(t)}{dt} &= 1 - \delta^{C_O} C_O(t) - K_{UV}^{C_O} UV(t) C_O(t), \\
@@ -591,7 +590,7 @@ UV(t) &=
         0, & \text{otherwise}
     \end{cases}   .
 \end{align*}
-
+```
 The $C_P(t)$ equation describes the dynamics of the Ca^2+^ concentration in the cPRC cells.
 The $K_{UV}^{C_P} UV(t) C_O(t)$ term captures the Ca^2+^ increase due to c-opsin1 activity induced by UV stimulation, while the $K_{G}^{C_P} G(t)$ term captures dependence of the Ca^2+^ dynamics on cGMP.
 The $C_O(t)$ equation is added to capture the decrease of the Ca^2+^ levels observed during the UV stimulation; the mechanism of this decrease is unknown.
@@ -634,6 +633,7 @@ We remark that the above system of equations can be used to also describe the NI
 
 The NIT-GC2 morpholino model is a further restriction of the WT model:
 
+```{=tex}
 \begin{align*}
 \frac{C_P(t)}{dt} &= 1 - \delta^{C_p} C_P(t) + K_{UV}^{C_P} UV(t) C_O(t) , \\
 \frac{C_O(t)}{dt} &= 1 - \delta^{C_O} C_O(t) - K_{UV}^{C_O} UV(t) C_O(t), \\
@@ -644,7 +644,7 @@ UV(t) &=
         0, & \text{otherwise}
     \end{cases} .
 \end{align*}
-
+```
 This reduced model eliminates the $G(t)$, $S(t)$, $C_N(t)$ and $N(t)$ variables and hence includes only c-opsin1 activity in the cPRC cells and the feedforward coupling to INRGW cells.
 The synaptic signal $S(t)$ and all terms depending on it are removed due to the assumed dependence on NIT-GC2.
 When the $S(t)$ input is disregarded, the activity of the INNOS cells ($C_N(t)$ and $N(t)$ variables) can be represented by a constant steady state whose values can subsequently be absorbed into all of the terms depending on these variables.
@@ -681,7 +681,8 @@ We use the default settings for most hyperparameters of the algorithm.
 Here we outline the main steps of the \texttt{gamultiobj} implementation of the GA.
 The first step is to generate a set of random model parameter sets, known as the initial population.
 Next, we score the fitness of each parameter set in the population according to the objective function.
-Using these scores, the \texttt{gamultiobj} algorithm employs a binary tournament selection function\cite{Miller1995GeneticAT} to select 'parents' for the next population. A population of children (i.e., new parameter sets) is generated by 'breeding' randomly chosen pairs of parents (exchanging subsets of parameter values between them).
+Using these scores, the \texttt{gamultiobj} algorithm employs a binary tournament selection function\cite{Miller1995GeneticAT} to select 'parents' for the next population.
+A population of children (i.e., new parameter sets) is generated by 'breeding' randomly chosen pairs of parents (exchanging subsets of parameter values between them).
 Parameter values in these children can also be changed by 'mutations', which perturb said values randomly by a small amount.
 Breeding and mutation introduce a level of randomness to the optimisation process that allows for exploration of the objective function (fitting) landscape.
 The stochastic nature of GAs helps them to avoid local minima that can plague gradient-descent-based optimisation methods.
@@ -698,15 +699,18 @@ To identify a single optimal solution, we select the parameter set along the Par
 
 Below we present a summary of the steps of our optimisation pipeline for fitting the experimental recordings from the cPRC cells.
 
-* When fitting to the cPRC data using WT or NIT-GC2 morpholino models, we eliminate the $C_R(t)$ variable since it does not have any feedback coupling with the $C_P(t)$ equation and does not affect its dynamics. When fitting to the cPRC data using the NOS-knockout model, we also eliminate the $S(t)$, $C_N(t)$ and $C_R(t)$ variables since these do not have any effect on the $C_P(t)$.
-*  Set the size of the initial population to 1,000. This value provides a compromise in terms of the coverage of the parameter space and run-time of the GA.
-* Set bounds of random distributions of parameters. We draw all the initial parameter values from uniform distributions over the unit interval ([0,1]). For WT condition, we fit 13 parameters, for NOS-knockout, we fit 7 parameters and for NIT-GC2 morpholino, we fit 4 parameters. 
-* Evaluate the objective function on the initial population.
-* Run the \texttt{gamultiobj} algorithm.
-* Repeat steps 1 to 4 with bounds of parameters extended to [0,5] and using the Pareto front returned in step 4 as a part of the initial population. This step was added after observing that, although good fits to most datasets are achieved with parameter values in the interval [0,1], fits to some datasets can be improved by extending the admissible parameter range.
-* Use the Euclidean norm to find the set of model parameters that best fits the data.
+-   When fitting to the cPRC data using WT or NIT-GC2 morpholino models, we eliminate the $C_R(t)$ variable since it does not have any feedback coupling with the $C_P(t)$ equation and does not affect its dynamics. When fitting to the cPRC data using the NOS-knockout model, we also eliminate the $S(t)$, $C_N(t)$ and $C_R(t)$ variables since these do not have any effect on the $C_P(t)$.
+-   Set the size of the initial population to 1,000. This value provides a compromise in terms of the coverage of the parameter space and run-time of the GA.
+-   Set bounds of random distributions of parameters. We draw all the initial parameter values from uniform distributions over the unit interval ([0,1]). For WT condition, we fit 13 parameters, for NOS-knockout, we fit 7 parameters and for NIT-GC2 morpholino, we fit 4 parameters.
+-   Evaluate the objective function on the initial population.
+-   Run the \texttt{gamultiobj} algorithm.
+-   Repeat steps 1 to 4 with bounds of parameters extended to [0,5] and using the Pareto front returned in step 4 as a part of the initial population. This step was added after observing that, although good fits to most datasets are achieved with parameter values in the interval [0,1], fits to some datasets can be improved by extending the admissible parameter range.
+-   Use the Euclidean norm to find the set of model parameters that best fits the data.
 
-Since INNOS cells in the NOS-knockout condition and INRGW cells in all conditions are coupled in a feedforward manner and do not affect the 'up-stream' dynamics, we run a separate optimisation to fit data from these cells. This minimises the number of parameters that are being fitted simultaneously and ensures that the objective function is as simple as possible (using only recordings from a cell type that is being fitted). First, we fix the parameters that were found by fitting the model to the cPRC data. Next, we run the optimisation in the same way as in the case of the cPRC data but only for the parameters that pertain to dynamics that is strictly`downstream' of cPRC dynamics.
+Since INNOS cells in the NOS-knockout condition and INRGW cells in all conditions are coupled in a feedforward manner and do not affect the 'up-stream' dynamics, we run a separate optimisation to fit data from these cells.
+This minimises the number of parameters that are being fitted simultaneously and ensures that the objective function is as simple as possible (using only recordings from a cell type that is being fitted).
+First, we fix the parameters that were found by fitting the model to the cPRC data.
+Next, we run the optimisation in the same way as in the case of the cPRC data but only for the parameters that pertain to dynamics that is strictly\`downstream' of cPRC dynamics.
 
 Fixing a subset of parameters allows us to ensure that model parameters inferred from recordings of one cell type stay relevant when fitting the model to the data from other cells.
 This means that the fitted model is extended to include other cell types, rather than being completely reparamatrised for each cell type.
@@ -725,19 +729,20 @@ To explore possible effects of varying the intensity and duration of the UV stim
 To quantify the effects of the stimulation, we measure the area under the peak of the delayed activation $AUP$ in the $C_P(t)$ variable.
 To compute the $AUP$:
 
-* We find an inflection point that occurs after the start ($t_{UV\: start}$) of the UV stimulation. To this end, we identify the first time point $t_{AUP\: start}>t_{UV\: start}$ for which $d^2C_P(t)/dt^2=0$ and $d^2C_P(t_{k_{AUP\: start}}-1)/dt^2<d^2C_P(t_{k_{AUP\: start}})/dt^2<d^2C_P(t_{k_{AUP\: start}}+1)/dt^2$. We assume that the inflection is caused by the input from the INNOS cells.
-* We then compute the $AUP$ as an integral over $C_P(t)$ starting at the inflection point and ending 125 seconds later: $AUP=\int_{t_{start}}^{t_{end}} C_P(t) dt $. To compute this, we use numerical integration via the trapezoidal method as implemented in Matlab function \texttt{trapz}. We remark that the baseline value of the $AUP$ for a Ca^2+^ profile of constant, unit value is 125.
-* To capture possible variability between different cells/organisms, we compute the $AUP$ using 47 model parameter sets fitted to individual WT cPRC experimental recordings. We remove outliers, defined as being any simulated trajectories for which $C_P(t)$, after normalisation, exits the interval [0.25, 4] at any time. This $C_P(t)$ range was decided of the basis of values observed in various experiments in the lab. 
-* For analysis, we use the median value of the $AUP$ at each combination of amplitude and duration.
+-   We find an inflection point that occurs after the start ($t_{UV\: start}$) of the UV stimulation. To this end, we identify the first time point $t_{AUP\: start}>t_{UV\: start}$ for which $d^2C_P(t)/dt^2=0$ and $d^2C_P(t_{k_{AUP\: start}}-1)/dt^2<d^2C_P(t_{k_{AUP\: start}})/dt^2<d^2C_P(t_{k_{AUP\: start}}+1)/dt^2$. We assume that the inflection is caused by the input from the INNOS cells.
+-   We then compute the $AUP$ as an integral over $C_P(t)$ starting at the inflection point and ending 125 seconds later: \$AUP=\int*{t*{start}}\^{t\_{end}} C_P(t) dt \$. To compute this, we use numerical integration via the trapezoidal method as implemented in Matlab function \texttt{trapz}. We remark that the baseline value of the $AUP$ for a Ca^2+^ profile of constant, unit value is 125.
+-   To capture possible variability between different cells/organisms, we compute the $AUP$ using 47 model parameter sets fitted to individual WT cPRC experimental recordings. We remove outliers, defined as being any simulated trajectories for which $C_P(t)$, after normalisation, exits the interval [0.25, 4] at any time. This $C_P(t)$ range was decided of the basis of values observed in various experiments in the lab.
+-   For analysis, we use the median value of the $AUP$ at each combination of amplitude and duration.
 
-Figure 6 shows how the results of the simulations of the WT model depend on the amplitude and duration of UV stimulation, as captured by the median values of $AUP$. Delayed activation occurs only for UV stimulation of sufficient amplitude and duration. Specifically, we observe sudden increase in AUP for UV pulse amplitude $a>0.5$ and a linear dependence of AUP on the pulse duration.
+Figure 6 shows how the results of the simulations of the WT model depend on the amplitude and duration of UV stimulation, as captured by the median values of $AUP$.
+Delayed activation occurs only for UV stimulation of sufficient amplitude and duration.
+Specifically, we observe sudden increase in AUP for UV pulse amplitude $a>0.5$ and a linear dependence of AUP on the pulse duration.
 
 ## Data analysis and figure preparation
 
 Data were analysed in ImageJ and R.
 All figures were assembled in R with the cowplot and patchwork packages.
 All scripts are available at <https://github.com/JekelyLab/Joukra_et_al_NOS> (commit ).
-
 
 ## Acknowledgements
 
@@ -777,8 +782,8 @@ knitr::include_graphics(path = "figures/Fig4_sup1.png")
 
 ```
 
-
-Maximum-likelihood phylogenetic tree of NOS protein sequences.** Individual branches are coloured by taxonomy. Support values are based on 1000 replicates of ultrafast bootstrap with the aLRT-SH-like and aBayes methods.
+Maximum-likelihood phylogenetic tree of NOS protein sequences.\*\* Individual branches are coloured by taxonomy.
+Support values are based on 1000 replicates of ultrafast bootstrap with the aLRT-SH-like and aBayes methods.
 
 ```{r echo=FALSE,fig.cap="**Figure 4 -- figure supplement 2. Maximum-likelihood phylogenetic tree of NIT-domain-containing guanylate cyclases** Membrane-bound and soluble guanylate cyclases (sGC) were included as outgroups. Guanylate cyclases with NIT domains are found in most animal phyla except Porifera, Ctenophora, Urochordata and Chordata. The expression of *Platynereis* NIT-GC genes in cPRC, INNOS and INRGW cells is indicated on the right side of the tree. The values represent expression in single-cell sequencing data. Dot size indicates specificity (percent of transcripts expressed in the indicated cell across all cells). Dot colour represents the logarithm of the number of transcripts in the expressing cells."}
 knitr::include_graphics(path = "figures/Fig4_sup2.png")
@@ -795,32 +800,22 @@ knitr::include_graphics(path = "figures/Fig5_sup1.png")
 
 ```
 
-
-
 ```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 1. Simulated Ca^2+^ trajectories for parameter sets fitted to individual Ca^2+^-recordings collected in wild type, *NOS* knockout, and *NIT-GC2* morphant larvae.** (**A-C**) Simulated Ca^2+^ trajectories in cPRC (A), INNOS (B) and INRGW (C) cells in the wild-type condition. (**D-F**) Simulated Ca^2+^ trajectories in cPRC (D), INNOS (E) and INRGW (F) cells in the *NOS*-knockout condition. (**G-I**) Simulated Ca^2+^ trajectories in cPRC (G), INNOS (H) and INRGW (I) cells in the *NIT-GC2*-morphant condition. Thin coloured curves indicate individual recordings (cPRC - purple, INNOS - blue and INRGW - green), thin grey curves indicate simulated Ca^2+^ trajectories based on model parameters fitted to the individual recording, thick coloured curves indicate averages of the recordings and thick black curves represent the average of the fits. "}
 knitr::include_graphics(path = "figures/Figure6_fig_Suppl1.svg")
 
 ```
 
-
-
-
 ```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 2. Comparison of fits with different fixed parameter sets when fitting the WT model to individual recordings from the WT INRGW cells.** Panels A-B, D-E, G-H  (column fixed parameters) show simulated trajectories of the Ca^2+^ levels in cPRC and INNOS cells produced by different fixed parameter sets. Panels C, F and I show individual recordings fitted to the data from INRGW cells."}
 knitr::include_graphics(path = "figures/Figure6_fig_Suppl2.svg")
 ```
-
 
 ```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 3. Comparison of fits to the cPRC recordings from NIT-GC2 morphant larvae using the NIT-GC2 morpholino model or the NOS-knockout model.**  Thin coloured curves indicate individual recordings, thin grey curves are simulated Ca^2+^ trajectories, thick coloured curves indicate averages of the recordings and thick black curves represent the mean of the fits."}
 knitr::include_graphics(path = "figures/Figure6_fig_Suppl3.svg")
 ```
 
-
-
 ```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 4. Distributions of the parameter values fitted to the cPRC recordings.** Violin plots (grey lines) are kernel density estimates of the underlying distributions; computed using the Matlab function *ksdensity* with default settings, i.e., using normal kernel function, plots are trimmed to the observed range of data. Markers represent individual parameter values, white markers indicate medians, vertical grey bars indicate interquartile range (Q25 to Q75), and the dashed line indicates the value 1. Where violin plots are not shown, these parameters are associated with terms/equations that are excluded from the fitting procedure (see Methods for details)." }
 knitr::include_graphics(path = "figures/Figure6_fig_Suppl4.svg")
 ```
-
-
 
 ```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 5. Pairwise correlations between parameters of the WT model fitted to WT cPRC recordings** Parameters associated with the $C_R$ equation are not included (see Methods for details). Panels on the diagonal show kernel density estimates of the distributions of the individual parameters; computed using Matlab function *ksdensity* with default settings, i.e., using normal kernel function, plots are trimmed to the observed range of data. The other panels show kernel density estimates of bivariate distributions of pairs of parameters (heatmaps; darker colours indicate higher density). Also shown using markers are the values of the individual parameter combinations."}
 knitr::include_graphics(path = "figures/Figure6_fig_Suppl5.svg")
