@@ -19,7 +19,7 @@ panel_NIT1_MLD <- ggdraw() + draw_image(readPNG("pictures/HCR_51_AP_NITGC1_MLD_D
   draw_label("NIT-GC1", x = 0.12, y = 0.91, color="magenta", size = 10, fontface="italic") +
   draw_label("MLD/pedal peptide 2", x = 0.26, y = 0.85, color="green", size = 10, fontface="italic") +
   draw_label("DAPI", x = 0.32, y = 0.91, color="cyan", size = 10, fontface="plain") +
-  draw_line(x = c(0.04, 0.22), y = c(0.08, 0.08), color = "white", size = 0.5) +
+  draw_line(x = c(0.04, 0.218), y = c(0.08, 0.08), color = "white", size = 0.5) +
   draw_label(expression(paste("20 ", mu, "m")), x = 0.13, y = 0.11, color = "white", size = 8) +
   draw_label("D", x = 0.95, y = 0.93, size = 6, color = "white") +
   draw_label("V", x = 0.95, y = 0.77, size = 6, color = "white") +
@@ -33,13 +33,15 @@ panel_72_AP_NIT2 <- ggdraw() + draw_image(readPNG("pictures/HCR_72_AP_NIT_93.98u
   draw_label("in situ HCR", x = 0.25, y = 0.995, size = 10) +
   draw_label("NIT-GC2", x = 0.12, y = 0.91, color="magenta", size = 10, fontface="italic") +
   draw_label("DAPI", x = 0.32, y = 0.91, color="cyan", size = 10, fontface="plain") +
-  draw_line(x = c(0.04, 0.25), y = c(0.08, 0.08), color = "white", size = 0.5)
+  draw_line(x = c(0.04, 0.252), y = c(0.08, 0.08), color = "white", size = 0.5) +
+  draw_label(expression(paste("20 ", mu, "m")), x = 0.13, y = 0.11, color = "white", size = 8) 
+  
 
 panel_72_DV_NIT2 <- ggdraw() + draw_image(readPNG("pictures/HCR_72_DV_NIT_180.08um.png")) +
   draw_label("in situ HCR", x = 0.25, y = 0.995, size = 10) +
   draw_label("NIT-GC2", x = 0.12, y = 0.91, color="magenta", size = 10, fontface="italic") +
   draw_label("DAPI", x = 0.32, y = 0.91, color="cyan", size = 10, fontface="plain") +
-  draw_line(x = c(0.04, 0.31), y = c(0.08, 0.08), color = "white", size = 0.5) +
+  draw_line(x = c(0.04, 0.317), y = c(0.08, 0.08), color = "white", size = 0.5) +
   draw_label(expression(paste("50 ", mu, "m")), x = 0.175, y = 0.11, color = "white", size = 8) +
   draw_label("A", x = 0.95, y = 0.93, size = 6, color = "white") +
   draw_label("P", x = 0.95, y = 0.77, size = 6, color = "white") +
@@ -56,7 +58,7 @@ panel_NIT1MO_NIT1 <- ggdraw() + draw_image(readPNG("pictures/IHC_51_AP_NIT1MO_NI
   draw_label("morpholino", x = 0.57, y = 0.995, size = 10) +
   draw_label("NIT-GC1", x = 0.12, y = 0.91, color="magenta", size = 10, fontface="plain") +
   draw_label("acTub", x = 0.33, y = 0.91, color="green", size = 10, fontface="plain") +
-  draw_line(x = c(0.04, 0.39), y = c(0.08, 0.08), color = "white", size = 0.5)
+  draw_line(x = c(0.04, 0.392), y = c(0.08, 0.08), color = "white", size = 0.5)
 
 panel_NIT2MO_NIT2 <- ggdraw() + draw_image(readPNG("pictures/IHC_57_AP_NIT2MO_NITGC2_actub_57um.png")) +
   draw_label("IHC:", x = 0.15, y = 0.995, size = 10) +
@@ -64,7 +66,9 @@ panel_NIT2MO_NIT2 <- ggdraw() + draw_image(readPNG("pictures/IHC_57_AP_NIT2MO_NI
   draw_label("morpholino", x = 0.57, y = 0.995, size = 10) +
   draw_label("NIT-GC2", x = 0.12, y = 0.91, color="magenta", size = 10, fontface="plain") +
   draw_label("acTub", x = 0.33, y = 0.91, color="green", size = 10, fontface="plain") +
-  draw_line(x = c(0.04, 0.39), y = c(0.08, 0.08), color = "white", size = 0.5)
+  draw_line(x = c(0.04, 0.392), y = c(0.08, 0.08), color = "white", size = 0.5) +
+  draw_label(expression(paste("20 ", mu, "m")), x = 0.21, y = 0.11, color = "white", size = 8) 
+
 
 panel_NIT1_NOS <- ggdraw() + draw_image(readPNG("pictures/IHC_55_NIT1_NOS_acTub_AP_3_58.87um.png")) +
   draw_label("IHC", x = 0.12, y = 0.995, size = 10) +

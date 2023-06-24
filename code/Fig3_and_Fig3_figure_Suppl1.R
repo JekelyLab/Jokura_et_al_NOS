@@ -666,16 +666,15 @@ ggsave("Manuscript/figures/Fig3.pdf", limitsize = FALSE,
 
 
 layout2 <- "
-AAAABBBBGGGG
+AAAABBBBCCCC
 ############
-CCCDDDEEEFFF
+DDDEEEFFFGGG
 "
 
 Fig3_sup1 <-  
   panel_Architecture + 
-  panel_2dpf_Tracking +   
+  panel_2dpf_Tracking +   panel_2d_vd +
   panel_2dpf_TP + panel_2dpf_TD + panel_3dpf_TD + panel_L_NAME_TD +
-  panel_2d_vd + 
   patchwork::plot_layout(design = layout2, heights = c(1, 0.05, 0.7)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
