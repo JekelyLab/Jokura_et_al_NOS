@@ -491,7 +491,7 @@ The sequences used for the phylogenetic analysis are available in **Supplementar
 
 To identify NIT-GCs, we obtained a seed database of adenylate and guanylate cyclase catalytic domains from the Pfam database (PF00211).
 From these sequences, we produced a Hidden Markov Model (HMM) and used this to mine the 45 metazoan, 2 choanoflagellate and 2 filasterea species investigated.
-HMM models were run in HMMR3 with an e-value of 1e−15.
+HMM models were run in HMMR3 [@Eddy2011] with an e-value of 1e−15.
 We ran CD-Hit [@Fu2012] to eliminate redundant sequences (at a 80% threshold).
 To identify clusters, we used sequence-similarity-based clustering in Clans [@frickey2004] and the convex-clustering option with 100 jack-knife replicates.
 The NIT-GCs are extremely well conserved within the membrane-bound guanylate cyclases and form an easily recognizable cluster.
@@ -558,6 +558,7 @@ The imaging laser had a similar intensity than the stimulus laser but covered an
 To measure cGMP production in a cell culture assay we used the Green cGull reporter [@Matsuda2017].
 Full-length *NIT-GC1* and *NIT-GC2* coding sequences were amplified by PCR from a *Platynereis dumerilii* cDNA library and cloned into the pcDNA3.1(+) vector with the T2A self-cleaving sequence.
 For the assay, COS-7 cells (Angio-proteomie, CAT no. cAP-0203) with a low endogenous level of soluble guanylate cyclase activity were used.
+Cells were not contaminated with mycoplasma.
 Cells were maintained at 37 °C in 35 mm dishes (Nunc™ Glass Bottom Dishes) containing 3 ml of DMEM, low-glucose medium (Thermo; Cat. No. 11885084) supplemented with 10% fetal bovine serum (Thermo; Cat. No. 10082147).
 Upon reaching approximately 85% confluency, cells were transfected with the pcDNA3.1(+)-Green-cGull-T2A-NITGC1 plasmid.
 Transfections were carried out with 150 ng of each plasmid and 0.3 μl of Lipofectamine 3000 Reagent (invitrogen; Cat. No. L3000001).
@@ -749,6 +750,7 @@ All scripts are available at <https://github.com/JekelyLab/Joukra_et_al_NOS> (co
 This work was funded by the Wellcome Trust (214337/Z/18/Z).
 This project has received funding from the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme (grant agreement No 101020792).
 KJ has been supported by a JSPS Overseas Research Fellowship, LAYG by a BBSRC Discovery fellowship (BB/W010305/1), PS by a Wellcome Trust Institutional Strategic Support Award (204909/Z/16/Z), and KCAW by the EPSRC Hub for Quantitive Modelling in Healthcare (EP/T017856/1).
+We thank Dr. Francesca Carlisle for the mycoplasma testing of COS-7 cells.
 
 ## References {.unnumbered}
 
