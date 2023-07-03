@@ -48,12 +48,12 @@ In nervous systems, synaptic transmission and volume transmission together shape
 While synaptic transmission occurs at specialised contact sites, volume transmission is characterised by the delocalised release of diverse diffusive neuromodulators.
 
 Nitric oxide (NO) is one such modulator with unique physical and signalling properties.
-This free radical synthesized from L-arginine by nitric oxide synthase (NOS) is short-lived and can diffuse across biological membranes [@Cudeiro1999; @thomas2015].
+This free radical synthesized from L-arginine by nitric oxide synthase (NOS), is short-lived and can diffuse across biological membranes [@Cudeiro1999; @thomas2015].
 Canonical NO signalling involves the Ca^2+^/calmodulin-dependent activation of NOS, NO production and diffusion, and the NO-dependent activation of soluble guanylate cyclases (sGC) leading to cGMP production [@Bredt1990; @Hoelscher1997].
 Given that NOS activation is Ca^2+^ dependent and NOS shows neuron-type-specific expression [@Gibbs1998a; @Wildemann1999; @Aso2019; @Mobley2022], NO action can lead to the activity-dependent modulation of neural circuits at specific sites [@Wang2007; @Vielma2014; @jacoby2018; @Aso2019] .
 
 In the vertebrate retina, NOS is expressed in amacrine, ganglion and other cells and the actions of NO can be diverse [@Cudeiro1999; @Wang2007; @jacoby2018].
-For example, defective NO signalling in NOS knockouts leads to a decreased sensitivity of retinal ganglion cells to light stimulation [@Wang2007].
+For example, defective NO signalling in NOS knockout mice leads to a decreased sensitivity of retinal ganglion cells to light stimulation [@Wang2007].
 In the retina, NO signalling can also involve pathways other than canonical sGC signalling [@Tooker2013; @Wei2012; @jacoby2018].
 Due to the complex expression of NOS in vertebrates and the diversity of its functions, it has been challenging to link the neurophysiological effects of NO to signalling mechanisms and behaviour change.
 
@@ -112,7 +112,7 @@ To mark cell outlines, we coinjected mRNA encoding a red-fluorescent reporter (R
 Following light stimulation in the region of the ramified cilia of the cPRCs, we detected an increase in DAF-FM fluorescence in the anterior neurosecretory neuropil, the region of INNOS projections.
 This increase did not occur in larvae in which we illuminated a control area (Figure 2).
 
-```{r echo=FALSE,fig.cap="**Figure 2. NO produced by UV/violet stimulation to cPRCs.** (**A**) DAF-FM fluorescence in the region of the neurosecretory neuropil. The white line indicates the outline of the larva. The dashed line corresponds to the area where fluorescence was quantified. Circles indicate the location of cPRC and control stimulation. cPRCs are marked by thin lines. (**B**) Changes in DAF-FM fluorescence before and during 405 nm light stimulation. (**C**) Changes in DAF-FM fluorescence over time during 405 nm stimulation of the cPRCs (green) or a control area (ctr: gray). The purple box indicates the duration of 405 nm stimulation. Individual traces normalized (ΔF/F0) are shown as thin lines. Thick lines show the mean value with 0.95 confidence intervals. N = 9 larvae for control and 11 for cPRC stimulation."}
+```{r echo=FALSE,fig.cap="**Figure 2. NO produced by UV/violet stimulation to cPRCs.** (**A**) DAF-FM fluorescence in the region of the neurosecretory neuropil. The white line indicates the outline of the larva. The dashed line corresponds to the area where fluorescence was quantified. The circles indicate the location of cPRC and control stimulation. The cPRCs are marked by thin lines. (**B**) Changes in DAF-FM fluorescence before and during 405 nm light stimulation. (**C**) Changes in DAF-FM fluorescence over time during 405 nm stimulation of the cPRCs (green) or a control area (ctr: gray). The purple box indicates the duration of 405 nm stimulation. Individual traces normalized (ΔF/F0) are shown as thin lines. Thick lines show the mean value with 0.95 confidence intervals. N = 9 larvae for control and 11 for cPRC stimulation."}
 
 knitr::include_graphics(path = "figures/Fig2.png")
 
@@ -170,10 +170,10 @@ The 15 *Platynereis* sequences belonged to several deeply diverged clades in the
 
 To characterise the expression of NIT-GCs, we used previously published spatially mapped single-cell transcriptome data [@Achim2015; @williams2017].
 Among the 15 NIT-GCs, two showed high and specific expression in the cPRCs and one was expressed in the INNOS cells (Figure 4---figure supplement 2).
-In the single-cell data, we could identify the cPRCs by the specific expression of *c-opsin1* and the *pedal-peptide2 neuropeptide precursor* (*MLD proneuropeptide*), previously described cPRC markers [@Arendt2004; @williams2017] (Figure 4---figure supplement 3A).
+In the single-cell data, we could identify the cPRCs by the specific expression of the markers *c-opsin1* and the *pedal-peptide2 neuropeptide precursor* (*MLD proneuropeptide*) [@Arendt2004; @williams2017] (Figure 4---figure supplement 3A).
 The INNOS cells were identified by NOS expression and spatial mapping in the brain [@Achim2015].
 We decided to focus on two NIT-GCs expressed in the cPRCs and with a full-length sequence, *NIT-GC1* and *NIT-GC2*.
-To confirm the single-cell data, we first carried out in situ hybridisation chain reaction (HCR) with probes for *NIT-GC1* and *NIT-GC2* mRNA. Both genes were specifically expression in the four cPRCs, as confirmed by co-labeling with an acetylated α-tubulin antibody and with an HCR probe against *pedal peptide 2/MLD proneuropeptide* (Figure 4C, D and Figure 4---figure supplement 3A-C).
+To confirm the single-cell data, we first carried out in situ hybridisation chain reaction (HCR) with probes for *NIT-GC1* and *NIT-GC2* mRNA. Both genes were specifically expressed in the four cPRCs, as confirmed by co-labeling with an acetylated α-tubulin antibody and with an HCR probe against *pedal peptide 2/MLD proneuropeptide* (Figure 4C, D and Figure 4---figure supplement 3A-C).
 To analyse the subcellular localisation of NIT-GC1 and NIT-GC2 at the protein level, we raised and affinity-purified polyclonal antibodies against a specific peptide sequence from both proteins.
 In immunostainings, we found that NIT-GC1 was localise to the region corresponding to the axonal projections of the cPRCs in the anterior neurosecretory plexus (Figure 4E).
 Co-immunostaining with the rabbit NIT-GC1 antibody and a custom rat antibody raised against *Platynereis* NOS revealed the localisation of both proteins in dots in the neurosecretory neuropil (Figure 4---figure supplement 3D).
@@ -227,14 +227,14 @@ Due to the stereotypy of the larvae, we could also identify neurons based on the
 We first quantified the responses of the INNOS and INRGWa interneurons during 405 nm stimulation of the cPRCs.
 In both wild type and *NOS*-mutant larvae, INNOS cells showed an increase in Ca^2+^ during stimulation (Figure 5D).
 In contrast, the INNOS response was flat or slightly negative in NIT-GC2 morphant larvae (Figure 5E) revealing an essential role for NIT-GC2-mediated cPRC suppression in INNOS activation.
-INRGWa cells were initially inhibited during cPRC stimulation, followed by a delayed activation paralleling the second activation phase of cPRCs.
+The INRGWa cells were initially inhibited during cPRC stimulation, followed by a delayed activation paralleling the second activation phase of the cPRCs.
 This late INRGWa response was lacking in *NOS*-mutants (Figure 5F).
 In NIT-GC2 morphants, INRGWa cells showed a transient increase in Ca^2+^ that decayed after light off and a delayed activation was not present (Figure 5G).
 
 Next, we imaged Ca^2+^ signals from Ser-h1 and MC neurons in wild type and *NOS* mutant larvae.
-Ser-h1 cells showed an activation profile that correlated with cPRC activity, including a reduction in Ca^2+^ during stimulation followed by rebound, a response that was defective in *NOS* mutants (Figure 5I).
-MC cells showed sustained activation, including a late-phase that was lacking in *NOS* mutants (Figure 5I).
-These data suggest that during 405 nm stimulation the Ser-h1 cells are inhibited and MC cells are activated, and this regulation is NO-dependent.
+Ser-h1 cells showed an activation profile that correlated with cPRC activity, including a reduction in Ca^2+^ during stimulation followed by a rebound, a response that was defective in *NOS* mutants (Figure 5I).
+The MC cell showed sustained activation, including a late-phase that was lacking in *NOS* mutants (Figure 5I).
+These data suggest that during 405 nm stimulation the Ser-h1 cells are inhibited and the MC cell is activated, and this regulation is NO-dependent.
 This pattern is expected to inhibit ciliary activity in the prototroch but not in the other ciliary bands (with no Ser-h1 or MC synapses), triggering NO-dependent downward swimming.
 
 ```{r echo=FALSE,fig.cap="**Figure 5. NOS- and NIT-GC2-dependent dynamics of the cPRC circuit.** **(A, B)** GCaMP6s imaging from cPRCs and INNOS cells (left panels) followed by on-slide immunostaining for (A) RYamide to label INNOS and (B) RGWamide+serotonin to label INRGWa and Ser-h1 (red). Nuclei are stained with DAPI (cyan). Asterisks indicate cPRC nuclei. Numbers mark the same cells in the GCaMP and immunostaining images matched by position. **(C)** Correlation map of neuronal activity of the cPRCs, INNOS, INRGWa, Ser-h1 and MC neurons. **(D)** GCaMP6s fluorescence in INNOS cells in wild type (WT) and NOSΔ11/Δ11 mutant larvae during 405 nm stimulation of the cPRC cilia. **(E)** GCaMP6s fluorescence in INNOS cells in NIT-GC2 morphant larvae during 405 nm stimulation. **(F)** GCaMP6s fluorescence in INRGWa cells in wild type and NOSΔ23/Δ23 mutant larvae during 405 nm stimulation. **(G)** GCaMP6s fluorescence in INRGWa cells in NIT-GC2 morphant larvae during 405 nm stimulation. **(H, I)** GCaMP6s fluorescence in (H) Ser-h1 cells and (I) the MC cell in wild type and NOSΔ11/Δ11 mutant larvae during 405 nm stimulation."}
@@ -246,22 +246,22 @@ knitr::include_graphics(path = "figures/Fig5.png")
 **Mathematical modelling of cPRC-circuit dynamics**
 
 To further analyse the dynamics of responses to UV light and formally describe cPRC phototransduction, synaptic connections and NO retrograde signalling, we developed a mixed cellular-circuit-level mathematical model.
-We used our Ca^2+^ imagining data of cPRC, INNOS and INRGWa cells collected in wild type, *NOS* knockout, and *NIT-GC2* morphant larvae to formulate assumptions that are the basis of the proposed model.
+We used our Ca^2+^ imagining data of cPRC, INNOS and INRGWa cells collected in wild type, *NOS* knockout and *NIT-GC2* morphant larvae to formulate assumptions that are the basis of the proposed model.
 
-We model a direct c-opsin1-dependent response to UV leading to the initial rise in Ca^2+^ levels.
+We modeled a direct c-opsin1-dependent response to UV leading to the initial rise in Ca^2+^ levels.
 The mechanism of this signal is not known but may include Gα and Gβ signalling, CNGAα channel activation or other pathways.
-We further assume that in cPRC cells, Ca^2+^ levels increase with cGMP.
-We model a decrease in cGMP and Ca^2+^ levels due to a NIT-GC2-dependent pathway (Figure 6A).
+We further assumed that in cPRC cells, Ca^2+^ levels increase with cGMP.
+We modeled a decrease in cGMP and Ca^2+^ levels due to a NIT-GC2-dependent pathway (Figure 6A).
 The effect of NO in cPRC cells is captured by another term that describes a NIT-GC1 and NO-dependent increase in cGMP.
-Based on the synaptic connectome, we infer a feedforward coupling between cPRC cells and INNOS and INRGWa cells.
+Based on the synaptic connectome, we infered a feedforward coupling between cPRC cells and INNOS and INRGWa cells.
 The proposed synaptic coupling is UV-dependent, decays linearly and is suppressed in NIT-GC2 morphants (Figure 6A).
 
-In the INNOS cells, we assume that excitatory synaptic input from cPRC (or rebound from tonic inhibition) leads to a rise in Ca^2+^ leading to NO production via NOS.
+In the INNOS cells, we assumed that excitatory synaptic input from cPRC (or rebound from tonic inhibition) leads to a rise in Ca^2+^ leading to NO production via NOS.
 This input is NIT-GC2-dependent.
-In the INRGWa cells, we model a decrease in Ca^2+^ based on an inhibitory UV-dependent synaptic signal from the cPRCs.
-We further assume the existence of direct excitatory coupling between cPRC Ca^2+^ levels and INRGWa Ca^2+^ to account for the late effects of cPRC on INRGWa (Figure 6A).
+In the INRGWa cells, we modeled a decrease in Ca^2+^ based on an inhibitory UV-dependent synaptic signal from the cPRCs.
+We further assumed the existence of direct excitatory coupling between cPRC Ca^2+^ levels and INRGWa Ca^2+^ to account for the late effects of cPRC on INRGWa (Figure 6A).
 The UV-dependent and Ca^2+^-dependent signals may be mediated by different transmitters released by cPRCs during distinct phases of their activation cycle.
-In addition, we assume a direct inhibitory coupling between INNOS Ca^2+^ and INRGWa Ca^2+^.
+In addition, we assumed a direct inhibitory coupling between INNOS Ca^2+^ and INRGWa Ca^2+^.
 Finally, in all variables, we assumed a linear decay and constant production to set a steady state (Figure 6A).
 Since the aim of the model is to capture the normalised fluorescence data, the model is nondimensionalised.
 UV stimulation is modelled as a square pulse.
@@ -282,7 +282,7 @@ Based on these data, our experimental results and the mathematical model, we ass
 The components for which experimental data are available are shown in bold.
 Other potential molecular players are also indicated (Figure 6D).
 
-```{r echo=FALSE,fig.cap="**Figure 6. Mathematical modelling and signalling mechanisms of the cPRC circuit.** (**A**) Diagram of the mathematical model with componenets, interactions, parameters and equations used to model Ca^2+^ dynamics. (**B**) Average Ca^2+^ traces (upper) and traces from model simulations (lower) fitted to the data. (**C**) Dot plot of genes (columns) expressed in three types of cells (rows) in the cPRC circuit using single cell RNA-Seq. The size of the dots is expressed in proportion to the percentage of cells expressing that gene relative to all cells. The colours represent the normal logarithm of the number of transcripts in the cells expressing the gene. (**D**) Schematic diagram of the signalling pathway of the cPRC circuit, focusing on the NO feedback. "}
+```{r echo=FALSE,fig.cap="**Figure 6. Mathematical modelling and signalling mechanisms of the cPRC circuit.** (**A**) Diagram of the mathematical model with the componenets, interactions, parameters and equations used to model Ca^2+^ dynamics. (**B**) Average Ca^2+^ traces (upper) and traces from model simulations (lower) fitted to the data. (**C**) Dot plot of genes (columns) expressed in three types of cells (rows) in the cPRC circuit using single cell RNA-Seq. The size of the dots is expressed in proportion to the percentage of cells expressing that gene relative to all cells. The colours represent the normal logarithm of the number of transcripts in the cells expressing the gene. (**D**) Schematic diagram of the signalling pathway of the cPRC circuit, focusing on the NO feedback. <br> Figure 6 -- source data 1. TPM values for each gene and the percentage of expressed genes."}
 
 knitr::include_graphics(path = "figures/Fig6.png")
 ```
@@ -292,7 +292,7 @@ The model allowed us to systematically vary stimulus conditions that would not h
 We found that delayed activation occurs only for UV stimulation of sufficient amplitude and duration (Figure 7).
 This suggests an integratory function of NO signalling to tune circuit output to the strength of UV exposure.
 
-```{r echo=FALSE,fig.cap="**Figure 7. Magnitude of cPRC activation as  a function of stimulus duration and intensity.** Median values of the $AUP$ are presented as a heatmap with dark blue indicating flat $C_P(t)$ trajectories with median $AUP$ close to 0 and red indicating that the $C_P(t)$ trajectories have a clearly defined delayed activation peak. "}
+```{r echo=FALSE,fig.cap="**Figure 7. Magnitude of cPRC activation as  a function of stimulus duration and intensity.** Median values of the $AUP$ are presented as a heatmap with dark blue indicating flat $C_P(t)$ traces with median $AUP$ close to 0 and red indicating that the $C_P(t)$ traces have a clearly defined delayed activation peak. "}
 
 knitr::include_graphics(path = "figures/Fig7.svg")
 ```
@@ -307,10 +307,10 @@ In the cPRC circuit, synaptic connectivity alone is thus not sufficient to accou
 **Localised NO signalling in the neurosecretory plexus**
 
 NO is a free radical with a millisecond-to-second half life and thus a limited signalling range.
-In neuronal signalling, NOS is often localized to neurites [@Kuntz2017] at close proximity to sGC at synapses [@burette2002; @garthwaite2015a].
+In neuronal signalling, NOS is often localised to neurites [@Kuntz2017] close to sGC at synapses [@burette2002; @garthwaite2015a].
 In the cPRC circuit, NOS is localised to the dendritic compartment of INNOS cells where also cPRC postsynaptic sites occur.
 NIT-GC1, the target of NO signalling is localised to cPRC projections.
-NO-mediated retrograde signalling thus likely occurs in the neurosecretory plexus where NOS- and NIT-GC1-containing projections are in close proximity and where we detected NO production following UV stimulation.
+NO-mediated retrograde signalling thus likely occurs in the neurosecretory plexus where NOS- and NIT-GC1-containing projections are in close proximity and where we detected NO production after UV stimulation.
 In contrast, INNOS to INRGWa synapses occur outside the neurosecretory plexus in the ventral brain neuropil.
 
 Compartmentalised signalling also occurs in peptidergic modulatory systems and can enable selective network activity during specific behaviours.
@@ -348,13 +348,13 @@ The mechanisms may involve c-opsin1-dependent inhibition of tonic NIT-GC2 activi
 
 NIT-GC2-dependent signalling is required for the feedforward activation of the INNOS cells through an unknown transmitter.
 The activation of INNOS leads to NOS activation and NO release, potentially through a canonical Ca^2+^-calmodulin pathway.
-Our model predicts feedforward inhibiton from INNOS to INRGWa, possibly mediated by glycin transmission.
+Our model predicts feedforward inhibition from INNOS to INRGWa, possibly mediated by glycin transmission.
 NO released by INNOS neurites activates NIT-GC1 in cPRC projections that could lead to cGMP production and the opening of CNGAα.
-This late-phase cPRC activation is not directly dependent on the UV/violet signal and can happen post-stimulus.
+This late-phase cPRC activation does not directly depend on the UV/violet signal and can happen post-stimulus.
 The late-phase cPRC activation leads to INRGWa activation via an unknown transmitter that is likely different from the one acting on INNOS.
 
 In addition, the cPRC circuit expresses several neuropeptides and their receptors, suggesting further neuromodulatory signals.
-For example, INRGWa express the proneuropeptide RGWamide and cPRCs and INNOS express its receptor, suggesting retrograde peptidergic signalling in the circuit.
+For example, the INRGWa cells express the proneuropeptide RGWamide and cPRCs and INNOS express its receptor, suggesting retrograde peptidergic signalling in the circuit.
 
 We have recently shown that the cPRC circuit also mediates responses to hydrostatic pressure via the same motor system involving Ser-h1 and the prototroch ciliary band.
 Increased pressure induces cPRC activation and a circuit output that is inverted relative to UV-induced activation.
@@ -395,7 +395,7 @@ It follows that body orientation must be determined by physical parameters inclu
 Except for ciliary activity, all these parameters are likely invariant during the UV response.
 Our data suggest the UV-dependent inhibition of prototroch ciliary beating via Ser-h1 inhibition and MC activation [@veraszto2017].
 
-We hypothesise that the differential beating of prototroch versus trunk cilia causes a head-up or head-down orientation due to physics alone.
+We hypothesize that the differential beating of prototroch versus trunk cilia causes a head-up or head-down orientation due to physics alone.
 During the UV response, prototroch cilia beat slower than trunk cilia, resulting in a head-down stable state ('rear-wheel drive').
 In contrast, during the pressure response prototroch cilia beat faster than trunk cilia [@bezares-calderon2023], leading to a head-up orientation ('front-wheel drive').
 Testing this hypothesis will require biophysical experiments and mathematical modelling.
@@ -405,7 +405,7 @@ Testing this hypothesis will require biophysical experiments and mathematical mo
 Animals evolved distinct photosensory systems coupled to non-overlapping circuits and guiding unique behavioural responses.
 These sensory systems can employ different opsin molecules and be tuned to different wavelengths of light.
 The avoidance of noxious UV/violet light is often mediated by extraocular photoreceptors and their circuits, distinct from the pigmented visual eyes.
-These two types of systems co-exist in *Platynereis* where the pigmented eyes and eyespots guide phototaxis with a maximum sensitivity to cyan light (\~500 nm) [@Randel2014a; @Veraszto2018].
+These two types of systems co-exist in *Platynereis* where the pigmented eyes and eyespots guide phototaxis with a maximum sensitivity to cyan light (\~500 nm) [@Randel2014a; @Gühmann2015; @Veraszto2018].
 Planarians also have pigmented visual eyes mediating phototaxis to cyan light and peripheral extraocular photoreceptors mediating UV avoidance behaviour [@Shettigar2021].
 *Drosophila* larvae have cerebral eyes called Bolwig's organs involved in phototaxis [@kane2013] and several types of extraocular UV-sensory cells that tile the body wall and mediate UV avoidance [@Imambocus2022].
 
@@ -434,7 +434,7 @@ knitr::kable(df_key_resource_table, format = "html", booktabs = TRUE)
 
 **CRISPR-Cas9 Design and Microinjection**
 
-For the generation of a *NOS* knockout we used an sgRNA targeting the third exon of the *Platynereis dumerilii* *NOS* (target site: 5'-GGGCAATACTGGCTCCACTC-3').
+For the generation of a *NOS* knockout, we used an sgRNA targeting the third exon of the *Platynereis dumerilii* *NOS* gene (target site: 5'-GGGCAATACTGGCTCCACTC-3').
 We selected the site to avoid polymorphic sites in our laboratory culture.
 The sgRNA was assembled from two annealed oligonucleotides (5'-TAGGGCAATACTGGCTCCACTC-3', 5'-AAACGAGTGGAGCCAGTATTGC-3') forming overhangs for cloning into the BsaI site of the plasmid pDR27456 [\@hwang2013](42250,%20Addgene), which contains next to the BsaI site a tracrRNA sequence.
 We used this plasmid to PCR amplify DNA (primers: T7, 5'-AAAAGCACCGACTCGGTGCC-3') for synthesizing the sgRNA.
@@ -457,7 +457,7 @@ A mixture of wild-type and deletion alleles in a sample gave double peaks in the
 **Vertical column setup to measure photoresponses**
 
 We assayed larval photoresponses in a vertical Plexiglas column (31 mm x 10 mm x 160 mm water height).
-For stimulation, we illuminated the column from the top with a monochromator (Polychrome II, Till Photonics) controlled by AxioVision 4.8.2.0 (Carl Zeiss GmbH, Jena) via analog voltage.
+For stimulation, we illuminated the column from above with a monochromator (Polychrome II, Till Photonics) controlled by AxioVision 4.8.2.0 (Carl Zeiss GmbH, Jena) via analog voltage.
 The light passed a collimator lens (LAG-65.0-53.0-C with MgF2 Coating, CVI Melles Griot) before entering the column.
 The column was illuminated from both sides with light-emitting diodes (LEDs).
 The LEDs on each side were grouped into two strips.
@@ -465,69 +465,65 @@ One strip contained UV (395 nm) LEDs (SMB1W-395, Roithner Lasertechnik) and the 
 The UV LEDs were run at 4 V. The infrared LEDs were run at 8 V (overvoltage) to illuminate the larvae for imaging with a DMK camera (DMK 22BUC03, The Imaging Source).
 We recorded videos at 15 frames per second with the software IC Capture (The Imaging Source).
 
-To compare the behavior of wildtype and NOS-knockout larvae at 3 days in the vertical column, the larvae were mixed and left in the dark for 5 min.
-The larvae were treated with NOS inhibitors for pharmacology.
-The NOS inhibitors were L-NAME.
-The larvae were treated with different concentrations in adjacent columns.
-The concentrations for the NOS inhibitors were control, 1 mM, 0.1 mM.
-The larvae were recorded for 1 min in the dark followed by exposure to collimated cyan (480 nm) light from the top of the column for 2 min, then 2 min darkness, and finally collimated UV (395 nm) light from the top of the column for 2 min.
-Stimulus light was provided by the monochromator (Polychrome II, Till Photonics).
-Scripts are available at <https://github.com/JekelyLab/NOS>.
+We compared the behavior of wildtype and *NOS*-knockout larvae in the vertical column.
+In the inhibitor experiments we compared wildtype larvae before and after treatment with 0.1 mM or 1.0 mM NOS inhibitor L-NAME (in seawater).
+All larvae were three days oldt.
+Before the experiment, the larvae were mixed and left in the dark for 5 min.
+The larvae were recorded for 1.5 min in the dark followed by exposure to diffuse UV light (395 nm) from the side for 2 min.
+Then the larvae were left for another 2 min in darkness followed by exposue to collimated cyan (480 nm) light from above for 2 min, then 2 min darkness, and finally collimated UV (395 nm) light from above for 2 min.
+Scripts are available at <https://github.com/JekelyLab/Jokura_et_al_NOS>.
 
 **Identification and Phylogenetic Analysis of NOS sequences**
 
 To identify NOS sequences, we obtained a seed database of oxygenase domains from the Pfam database (PF02898).
-From these sequences, we produced a Hidden Markov Model (HMM) and used this to mine the 47 metazoan, 2 choanoflagellate and 2 filasterea species investigated.
-HMM models were run in HMMR3 with an e-value of 1e−15.
+From these sequences, we generated a Hidden Markov Model (HMM) to mine the genomes and transcriptomes of 47 metazoan, 2 choanoflagellate and 2 filasterea species.
+The HMM model was run in HMMR3 with an e-value of 1e−15.
 We ran CD-Hit [@Fu2012] to eliminate redundant sequences (at a 80% threshold).
 We aligned the sequences with MAFFT version 7, with the iterative refinement method E-INS-i.
-Alignments were trimmed with TrimAl in gappy-out mode [@Capella-Gutiérrez2009].
-To calculate maximum-likelihood trees, we used IQ-tree2 with the LG+G4 model.
-To calculate branch support, we ran 1000 replicates with the aLRT-SH-like and aBayes methods [@Minh2020].
-The sequences used for the phylogenetic analysis are available in **Supplementary file 1**, the trimmed alignment is available in **Supplementary File 2** and the pre-trimmed data in **Supplementary file 3**.
+The alignment was trimmed with TrimAl in gappy-out mode [@Capella-Gutierrez2009].
+To calculate a maximum-likelihood tree, we used IQ-tree2 with the LG+G4 model.
+To calculate branch support, we ran 1000 replicates with the aLRT-SH-like [@Guindon2010] and aBayes methods [@Minh2020].
 
 **Identification and Phylogenetic Analysis of NIT-GC sequences**
 
 To identify NIT-GCs, we obtained a seed database of adenylate and guanylate cyclase catalytic domains from the Pfam database (PF00211).
-From these sequences, we produced a Hidden Markov Model (HMM) and used this to mine the 45 metazoan, 2 choanoflagellate and 2 filasterea species investigated.
-HMM models were run in HMMR3 [@Eddy2011] with an e-value of 1e−15.
+From these sequences, we generated a Hidden Markov Model (HMM) to mine the 45 metazoan, 2 choanoflagellate and 2 filasterea genomes and transcriptomes.
+The HMM model was run in HMMR3 [@Eddy2011] with an e-value of 1e−15.
 We ran CD-Hit [@Fu2012] to eliminate redundant sequences (at a 80% threshold).
 To identify clusters, we used sequence-similarity-based clustering in Clans [@frickey2004] and the convex-clustering option with 100 jack-knife replicates.
 The NIT-GCs are extremely well conserved within the membrane-bound guanylate cyclases and form an easily recognizable cluster.
 To analyze the phylogeny of NIT-GCs, the cluster containing these GCs together with membrane-bound guanylate cyclases were parsed and used for tree building.
 We aligned the sequences with MAFFT version 7, with the iterative refinement method E-INS-i[@Katoh2013].
-Alignments were trimmed with TrimAl in gappy-out mode [@Capella-Gutiérrez2009].
-To calculate maximum-likelihood trees, we used IQ-tree2 with the LG+G4 model.
+The alignment was trimmed with TrimAl in gappy-out mode [@Capella-Gutierrez2009].
+To calculate a maximum-likelihood tree, we used IQ-tree2 with the LG+G4 model.
 To calculate branch support, we ran 1000 replicates with the aLRT-SH-like and aBayes methods [@Minh2020].
-The sequences used for the phylogenetic analysis are available in **Supplementary File 4**, the trimmed alignment is available in **Supplementary File 5** and the pre-trimmed data in **Supplementary file 6**.
 
 **Single-cell analysis**
 
 We used a single-cell RNA sequencing dataset from *Platynereis* larvae [@Achim2015] that was further filtered to 107 cells [@williams2017].
-We normalized raw read-count data to TPM and converted to log10.
+We normalized the raw read-count data to TPM and converted to log10.
 To calculate % expression, we used the sum of the expression levels in the 107 cells for each gene.
 The total TPM of each gene between the samples was used to calculate the percentage of expressed genes.
 We processed the data in Python and plotted in R.
 Individual cells were identified by suits of well-characterised marker genes and spatial mapping [@Achim2015].
-The total TPM values for each gene and the percentage of expressed genes are available in **Supplementary file 7**.
 
 **In situ HCR**
 
 Larvae were fixed and treated with Proteinase K, according to the conventional WMISH protocol [@Tessmar-Raible2005], with fixation in 4% paraformaldehyde/ PTW (PBS with 0.05% Tween20) for 2 hr at room temperature, and Proteinase K treatment in 100 µg/ml Proteinase K/ PTW for 3 min [@Tessmar-Raible2005].
 Specifically, for the HCR protocol, samples were processed in 1.5 ml tubes.
 Probe hybridization buffer, probe wash buffer, amplification buffer, and fluorescent HCR hairpins were purchased from Molecular Instruments (Los Angeles, USA).
-Hairpins associated with the b2 initiator sequence were labeled with Alexa Fluor 647, and the hairpins associated with the b3 initiator sequence were labeled with Alexa Fluor 546.
+The hairpins associated with the b2 initiator sequence were labeled with Alexa Fluor 647, and the hairpins associated with the b3 initiator sequence were labeled with Alexa Fluor 546.
 To design probes for HCR, we used custom software [@Kuehn2022] to create 20 DNA oligo probe pairs specific to *P. dumerilii* *NOS*, *NIT-GC1*, *NIT-GC2*, *RYa proneuropeptide* (GenBank accession: JF811330.1), and *MLD/pedal peptide 2 proneuropeptide* (GenBank accession: KF515945.1).
 The *NOS*, *NIT-GC1* and *NIT-GC2* probes were designed to be associated with the b2 initiator sequence, while the *RYa* and *MLD/pedal peptide 2* probes were designed to be associated with the b3 initiator sequence.
 For the detection stage, samples were pre-hybridized in 200 µl of probe hybridization buffer for 1 hr at 37°C, and then incubated in 250 µl hybridization buffer containing probe oligos (4 pmol/ml) overnight at 37°C.
 To remove excess probe, samples were washed 4× with 1 ml hybridization wash buffer for 15 min at 37°C, and subsequently 2× in 1 ml 5× SSCT (5× SSC with 0.1% Tween20) for 5 min at room temperature.
-For the amplification stage, samples were pre-incubated with 100 µl of amplification buffer for 30 min, room temperature, and then incubated with 150 µl amplification buffer containing fluorescently labeled hairpins (40nM concentration (2ul of 3uM stock in 150ul amplification buffer, snap-cooled as described; [@Choi2018]) overnight in the dark at 25°C.
+For the amplification stage, samples were pre-incubated with 100 µl of amplification buffer for 30 min, room temperature, and then incubated with 150 µl amplification buffer containing fluorescently labelled hairpins (40nM concentration (2ul of 3uM stock in 150ul amplification buffer, snap-cooled as described; [@Choi2018]) overnight in the dark at 25°C.
 To remove excess hairpins, samples were washed in 1 ml 5× SSCT at room temperature, twice for 5 min, twice for 30 min, and once for 5 min.
 During the first 30 min wash, samples were counterstained with DAPI (Cat. #40043, Biotium, USA).
 
 **Immunohistochemistry**
 
-Whole-mount immunostaining of *Platynereis* larvae fixed with 4% paraformaldehyde was carried out using the primary antibodies listed in KEY RESOURCES TABLE. Immunostainings were carried out as previously described [@Conzelmann2012].
+Whole-mount immunostaining of *Platynereis* larvae fixed with 4% paraformaldehyde was carried out using the primary antibodies listed in the KEY RESOURCES TABLE. Immunostainings were carried out as previously described [@Conzelmann2012].
 
 **Antibody generation and purification**
 
@@ -539,17 +535,16 @@ View a detailed protocol here: <https://bio-protocol.org/exchange/preprintdetail
 **Transient transgenesis**
 
 A 12 kb genomic region upstream of the start site of the *NOS* gene was amplified and cloned upstream of 3xHA-Palmi-tdTomato to yield the plasmid *NOS-3xHA-Palmi-tdTomato*.
-Larvae injected with the promoter construct (ca. 250 ng/ml) were analysed for reporter expression at three days post fertilization on an AxioImager Z.1 fluorescence microscope (Carl Zeiss GmbH, Jena) and if positive fixed for immunostaining.
+Larvae injected with the promoter construct (ca. 250 ng/ml) were analysed for reporter expression at three days post fertilization on an AxioImager Z.1 fluorescence microscope (Carl Zeiss GmbH, Jena) and if positive were fixed for immunostaining.
 The immunostaining for the HA-tagged reporter was done as described [@veraszto2017].
 Stained specimens were imaged on an LSM 780 NLO or LSM 880 Airysan Confocal Microscope (Carl Zeiss GmbH, Jena).
 
 **Calcium imaging**
 
-For Ca^2+^ imaging, 49-55 hours post fertilisation larvae were used.
-Experiments were carried out at room temperature and larvae were immobilised in 2.5% agarose in artificial sea water and mounted between a slide and coverslip spaced with adhesive tape.
-GCaMP6s mRNA (1 mg/ml) was injected into zygotes as described previously [@Randel2014a].
-Larvae were imaged on a Zeiss LSM 880 with Airyscan (with a C-Apochromat 63X/1.2 Corr - water) with a frame rate of 1.88 frame/sec and an image size of 512 x 512 pixels.
-The larvae were stimulated in a region of interest (a circle with 50 pixel diameter) with a 405 nm laser controlled by the Bleaching mode of the Zeiss software.
+For Ca^2+^ imaging, GCaMP6s mRNA (1 mg/ml) was injected into zygotes as described previously [@Randel2014a].
+At 49-55 hours post fertilisation, larvae were immobilised in 2.5% agarose in artificial sea water and mounted between a slide and coverslip spaced with adhesive tape.
+Larvae were imaged at room temperature on a Zeiss LSM 880 with Airyscan (with a C-Apochromat 63X/1.2 Corr - water) with a frame rate of 1.88 frame/sec and an image size of 512 x 512 pixels.
+The larvae were stimulated in a region of interest (a circle with 50 pixel diameter) with a 405 nm laser controlled by the bleaching mode of the Zeiss software.
 The imaging laser had a similar intensity than the stimulus laser but covered an area that was 10 times larger than the stimulus ROI.
 
 **cGMP production assay**
@@ -561,12 +556,12 @@ Cells were not contaminated with mycoplasma.
 Cells were maintained at 37 °C in 35 mm dishes (Nunc™ Glass Bottom Dishes) containing 3 ml of DMEM, low-glucose medium (Thermo; Cat. No. 11885084) supplemented with 10% fetal bovine serum (Thermo; Cat. No. 10082147).
 Upon reaching approximately 85% confluency, cells were transfected with the pcDNA3.1(+)-Green-cGull-T2A-NITGC1 plasmid.
 Transfections were carried out with 150 ng of each plasmid and 0.3 μl of Lipofectamine 3000 Reagent (invitrogen; Cat. No. L3000001).
-Three hours post-transfection, the culture medium was substituted for fresh DMEM-medium.
+Three hours post-transfection, the culture medium was substituted with fresh DMEM medium.
 For single-wavelength imaging experiments, cells in 35-mm dishes were washed twice and imaged in modified Ringer's buffer (140 mM NaCl, 3.5 mM KCl, 0.5 mM NaH~2~PO~4~ , 0.5 mM S-3 MgSO~4~, 1.5 mM CaCl~2~ , 10 mM HEPES, 2 mM NaHCO~3~ and 5 mM glucose).
-Dishes were mounted on a stage heated to 37 °C and imaging was done on an inverted confocal microscope (LSM880, Carl Zeiss GmbH, Jena) equipped with an oil-immersion objective lens (UApo/340, 40x, NA = 0.17).
+The dishes were mounted on a stage heated to 37 °C and imaged on an inverted confocal microscope (LSM880, Carl Zeiss GmbH, Jena) equipped with an oil-immersion objective lens (UApo/340, 40x, NA = 0.17).
 The exposure time of the EM-CCD camera was controlled by the ZEN software (Carl Zeiss GmbH, Jena).
 Images were acquired every 15 s for 10 min and stimulation was initiated 2 min after starting image acquisition.
-Imaging data analysis was done with ImageJ (National Institutes of Health, Bethesda, MD, USA).
+Imaging data were processed with ImageJ (National Institutes of Health, Bethesda, MD, USA).
 As NO donor, we used S-Nitroso-N-acetyl-D, L-penicillamine (SNAP, Sigma-Aldrich, St.
 
 ## Mathematical modelling
@@ -647,15 +642,15 @@ UV(t) &=
 ```
 This reduced model eliminates the $G(t)$, $S(t)$, $C_N(t)$ and $N(t)$ variables and hence includes only c-opsin1 activity in the cPRC cells and the feedforward coupling to INRGW cells.
 The synaptic signal $S(t)$ and all terms depending on it are removed due to the assumed dependence on NIT-GC2.
-When the $S(t)$ input is disregarded, the activity of the INNOS cells ($C_N(t)$ and $N(t)$ variables) can be represented by a constant steady state whose values can subsequently be absorbed into all of the terms depending on these variables.
+When the $S(t)$ input is disregarded, the activity of the INNOS cells ($C_N(t)$ and $N(t)$ variables) can be represented by a constant steady state whose values can subsequently be absorbed into all the terms depending on these variables.
 Hence these variables are eliminated in the reduced model.
 Since the $K_{GC2}^G \left(1 - UV(t)\right) G(t)$ term depends directly on NIT-GC2 and when $N(t)$ is ignored the $K_{GC1}^G N(t)$ term disappears, the $G(t)$ variable can be eliminated, which consequently simplifies the $C_P(t)$ equation.
 The only remaining term in $C_R(t)$ equation, $K_{C_P}^{C_R} C_P(t)$, describes feedforward coupling between the cPRC and INRGW cells.
 
 ### Parameter fitting (genetic algorithm)
 
-To find sets of model parameters that reproduce recordings from the Ca^2+^ imaging experiments, we establish an optimisation problem to minimise the discrepancy between the modelled Ca^2+^ trajectories and the experimental data.
-To obtain the modelled Ca^2+^ trajectories, we simulated the model using the Matlab built-in solvers \texttt{fsolve} to find the steady state in the absence of UV stimulation, and then use the explicit integration algorithm \texttt{ode45} to simulate the model using the computed steady state as the initial condition.
+To find sets of model parameters that reproduce recordings from the Ca^2+^ imaging experiments, we define an optimisation problem to minimise the discrepancy between the modelled Ca^2+^ traces and the experimental data.
+To obtain the modelled Ca^2+^ traces, we run the model using the Matlab built-in solvers \texttt{fsolve} to find the steady state in the absence of UV stimulation, and then use the explicit integration algorithm \texttt{ode45} to simulate the model with the computed steady state as the initial condition.
 
 We quantify the difference between the model output and the data using a vector-valued objective function.
 The first component of this function measures this difference during the UV stimulation, whilst the second component measures the difference from the end of the stimulation until the end of the recording.
@@ -666,15 +661,15 @@ We thus define a vector-valued objective function, $\mathbf{D} \in \mathbb{R}^2_
 \begin{equation*}
  D_{k_1}^{k_2}\left({C}_X^{data}(t),{C}_X^{model}(t)\right)=\sqrt{\sum_{i=k_1}^{k_2}\left({C}_{X}^{data}(t_i)-{C}_{X}^{model}(t_i)\right)^2} ,   
 \end{equation*} where the timepoints $t_i = i \Delta t$ are equispaced with $\Delta = 0.5s$ and where $t_{k_{UV\: start}} = t_{UV \: start}$ (and similar for the other time points).
-Here ${C}_X^{data}$ denotes normalised experimental data and ${C}_X^{model}$ denotes normalised simulated Ca^2+^ trajectory with $X \in \{ P, N, R\}$ indicating cell type.
-Simulated Ca^2+^ trajectories, ${C}_X^{model}$, are normalised in the same way as the experimental data, i.e., we divide values uniformly by their value at $t_{k_{UV\: start}-1}$, a time point immediately prior to the start of the UV stimulation.
+Here ${C}_X^{data}$ denotes normalised experimental data and ${C}_X^{model}$ denotes normalised simulated Ca^2+^ trace with $X \in \{ P, N, R\}$ indicating cell type.
+Simulated Ca^2+^ traces, ${C}_X^{model}$, are normalised in the same way as the experimental data, i.e., we divide values uniformly by their value at $t_{k_{UV\: start}-1}$, a time point immediately prior to the start of the UV stimulation.
 Simulations are sampled with the same sampling rate as the data.
 (Recall that $t_{UV\: start}$ is the time of the start of UV stimulation, $t_{UV\: end}$ is the time of the end of UV stimulation, and $t_{end}$ is the last time sample.)
 
 To solve the optimisation problem with the above objective function, we employ a global optimisation method known as a genetic algorithm (GA).
-GAs are a class of iterative, gradient-free algorithms inspired by processes of natural selection including breeding and mutation, amongst others \cite{GAbook}.
+GAs are a class of iterative, gradient-free algorithms inspired by processes of natural selection including breeding and mutation \cite{GAbook}.
 In reference to natural selection, sets of candidate solutions in GAs are referred to as \`populations'.
-As our algorithm of choice, we use the Matlab implementation of a genetic algorithm for multiobjective optimisation, \texttt{gamultiobj}.
+As our algorithm of choice, we use the Matlab implementation of a genetic algorithm for multiobjective optimisation \texttt{gamultiobj}.
 The \texttt{gamultiobj} algorithm uses a controlled, elitist genetic algorithm (a variant of NSGA-II \cite{GAbook}).
 We use the default settings for most hyperparameters of the algorithm.
 
@@ -684,13 +679,13 @@ Next, we score the fitness of each parameter set in the population according to 
 Using these scores, the \texttt{gamultiobj} algorithm employs a binary tournament selection function\cite{Miller1995GeneticAT} to select 'parents' for the next population.
 A population of children (i.e., new parameter sets) is generated by 'breeding' randomly chosen pairs of parents (exchanging subsets of parameter values between them).
 Parameter values in these children can also be changed by 'mutations', which perturb said values randomly by a small amount.
-Breeding and mutation introduce a level of randomness to the optimisation process that allows for exploration of the objective function (fitting) landscape.
+Breeding and mutation introduce a level of randomness to the optimisation process that allows exploring the objective function (fitting) landscape.
 The stochastic nature of GAs helps them to avoid local minima that can plague gradient-descent-based optimisation methods.
 
 In the next step, the \texttt{gamultiobj} algorithm scores the parameter sets in the children population using the values of the objective function.
 Scores from the parent and child populations are combined.
 A subset of the size of the initial population is then selected as a new parent population based on the scores and the \textit{Crowding Distance}, distance to other parameter sets in terms of a sum of element-wise differences between values of the objective function (used to ensure diversity of the parent population)\cite{crowding_distance,GAbook}.
-This iterative process is repeated until set convergence criteria are met, indicating that the GA has found a set of model parameters that best reproduce the data under consideration.
+This iterative process is repeated until the convergence criteria are met, indicating that the GA has found a set of model parameters that best reproduce the data under consideration.
 
 The \texttt{gamultiobj} algorithm returns a set of model parameter values on a Pareto front \cite{censor1977pareto,GAbook}.
 The coordinates of points on the front are the values of the components of the objective function $\mathbf{D}$.
@@ -730,11 +725,11 @@ To quantify the effects of the stimulation, we measure the area under the peak o
 To compute the $AUP$:
 
 -   We find an inflection point that occurs after the start ($t_{UV\: start}$) of the UV stimulation. To this end, we identify the first time point $t_{AUP\: start}>t_{UV\: start}$ for which $d^2C_P(t)/dt^2=0$ and $d^2C_P(t_{k_{AUP\: start}}-1)/dt^2<d^2C_P(t_{k_{AUP\: start}})/dt^2<d^2C_P(t_{k_{AUP\: start}}+1)/dt^2$. We assume that the inflection is caused by the input from the INNOS cells.
--   We then compute the $AUP$ as an integral over $C_P(t)$ starting at the inflection point and ending 125 seconds later: \$AUP=\int*{t*{start}}\^{t\_{end}} C_P(t) dt \$. To compute this, we use numerical integration via the trapezoidal method as implemented in Matlab function \texttt{trapz}. We remark that the baseline value of the $AUP$ for a Ca^2+^ profile of constant, unit value is 125.
--   To capture possible variability between different cells/organisms, we compute the $AUP$ using 47 model parameter sets fitted to individual WT cPRC experimental recordings. We remove outliers, defined as being any simulated trajectories for which $C_P(t)$, after normalisation, exits the interval [0.25, 4] at any time. This $C_P(t)$ range was decided of the basis of values observed in various experiments in the lab.
+-   We then compute the $AUP$ as an integral over $C_P(t)$ starting at the inflection point and ending 125 seconds later: \$AUP=\int\*{t\*{start}}\^{t\_{end}} C_P(t) dt \$. To compute this, we use numerical integration via the trapezoidal method as implemented in Matlab function \texttt{trapz}. We remark that the baseline value of the $AUP$ for a Ca^2+^ profile of constant, unit value is 125.
+-   To capture possible variability between different cells/organisms, we compute the $AUP$ using 47 model parameter sets fitted to individual WT cPRC experimental recordings. We remove outliers, defined as being any simulated traces for which $C_P(t)$, after normalisation, exits the interval [0.25, 4] at any time. This $C_P(t)$ range was decided of the basis of values observed in various experiments in the lab.
 -   For analysis, we use the median value of the $AUP$ at each combination of amplitude and duration.
 
-Figure 6 shows how the results of the simulations of the WT model depend on the amplitude and duration of UV stimulation, as captured by the median values of $AUP$.
+Figure 7 shows how the results of the simulations of the WT model depend on the amplitude and duration of UV stimulation, as captured by the median values of $AUP$.
 Delayed activation occurs only for UV stimulation of sufficient amplitude and duration.
 Specifically, we observe sudden increase in AUP for UV pulse amplitude $a>0.5$ and a linear dependence of AUP on the pulse duration.
 
@@ -758,7 +753,7 @@ We thank Dr. Francesca Carlisle for the mycoplasma testing of COS-7 cells.
 
 ## Figure supplements
 
-```{r echo=FALSE,fig.cap="**Figure 1 -- figure supplement 1. Maximum-likelihood phylogenetic tree of NOS protein sequences.** Individual branches are coloured by taxonomy. Support values are based on 1000 replicates of ultrafast bootstrap with the aLRT-SH-like and aBayes methods."}
+```{r echo=FALSE,fig.cap="**Figure 1 -- figure supplement 1. Maximum-likelihood phylogenetic tree of NOS protein sequences.** Individual branches are coloured by taxonomy. Support values are based on 1000 replicates of ultrafast bootstrap with the aLRT-SH-like and aBayes methods. <br> Figure 1 -- figure supplement 1 -- source data 1. NOS sequences used for the phylogenetic reconstruction. <br> Figure 1 -- figure supplement 1 -- source data 2. Aligned and trimmed NOS sequences used for the phylogenetic reconstruction. <br> Figure 1 -- figure supplement 1 -- source data 3. Tree file of the reconstructed NOS phylogeny. "}
 knitr::include_graphics(path = "figures/Fig1_sup1.png")
 
 ```
@@ -783,10 +778,7 @@ knitr::include_graphics(path = "figures/Fig4_sup1.png")
 
 ```
 
-Maximum-likelihood phylogenetic tree of NOS protein sequences.\*\* Individual branches are coloured by taxonomy.
-Support values are based on 1000 replicates of ultrafast bootstrap with the aLRT-SH-like and aBayes methods.
-
-```{r echo=FALSE,fig.cap="**Figure 4 -- figure supplement 2. Maximum-likelihood phylogenetic tree of NIT-domain-containing guanylate cyclases** Membrane-bound and soluble guanylate cyclases (sGC) were included as outgroups. Guanylate cyclases with NIT domains are found in most animal phyla except Porifera, Ctenophora, Urochordata and Chordata. The expression of *Platynereis* NIT-GC genes in cPRC, INNOS and INRGW cells is indicated on the right side of the tree. The values represent expression in single-cell sequencing data. Dot size indicates specificity (percent of transcripts expressed in the indicated cell across all cells). Dot colour represents the logarithm of the number of transcripts in the expressing cells."}
+```{r echo=FALSE,fig.cap="**Figure 4 -- figure supplement 2. Maximum-likelihood phylogenetic tree of NIT-domain-containing guanylate cyclases** Membrane-bound and soluble guanylate cyclases (sGC) were included as outgroups. Guanylate cyclases with NIT domains are found in most animal phyla except Porifera, Ctenophora, Urochordata and Chordata. The expression of *Platynereis* NIT-GC genes in cPRC, INNOS and INRGW cells is indicated on the right side of the tree. The values represent expression in single-cell sequencing data. Dot size indicates specificity (percent of transcripts expressed in the indicated cell across all cells). Dot colour represents the logarithm of the number of transcripts in the expressing cells. <br> Figure 4 -- figure supplement 2 -- source data 1. GC sequences used for the phylogenetic reconstruction. <br> Figure 4 -- figure supplement 2 -- source data 2. Aligned and trimmed GC sequences used for the phylogenetic reconstruction. <br> Figure 4 -- figure supplement 3 -- source data 3. Tree file of the reconstructed GC phylogeny. "}
 knitr::include_graphics(path = "figures/Fig4_sup2.png")
 
 ```
@@ -801,16 +793,16 @@ knitr::include_graphics(path = "figures/Fig5_sup1.png")
 
 ```
 
-```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 1. Simulated Ca^2+^ trajectories for parameter sets fitted to individual Ca^2+^-recordings collected in wild type, *NOS* knockout, and *NIT-GC2* morphant larvae.** (**A-C**) Simulated Ca^2+^ trajectories in cPRC (A), INNOS (B) and INRGW (C) cells in the wild-type condition. (**D-F**) Simulated Ca^2+^ trajectories in cPRC (D), INNOS (E) and INRGW (F) cells in the *NOS*-knockout condition. (**G-I**) Simulated Ca^2+^ trajectories in cPRC (G), INNOS (H) and INRGW (I) cells in the *NIT-GC2*-morphant condition. Thin coloured curves indicate individual recordings (cPRC - purple, INNOS - blue and INRGW - green), thin grey curves indicate simulated Ca^2+^ trajectories based on model parameters fitted to the individual recording, thick coloured curves indicate averages of the recordings and thick black curves represent the average of the fits. "}
+```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 1. Simulated Ca^2+^ traces for parameter sets fitted to individual Ca^2+^-recordings collected in wild type, *NOS* knockout, and *NIT-GC2* morphant larvae.** (**A-C**) Simulated Ca^2+^ traces in cPRC (A), INNOS (B) and INRGW (C) cells in the wild-type condition. (**D-F**) Simulated Ca^2+^ traces in cPRC (D), INNOS (E) and INRGW (F) cells in the *NOS*-knockout condition. (**G-I**) Simulated Ca^2+^ traces in cPRC (G), INNOS (H) and INRGW (I) cells in the *NIT-GC2*-morphant condition. Thin coloured curves indicate individual recordings (cPRC - purple, INNOS - blue and INRGW - green), thin grey curves indicate simulated Ca^2+^ traces based on model parameters fitted to the individual recording, thick coloured curves indicate averages of the recordings and thick black curves represent the average of the fits. "}
 knitr::include_graphics(path = "figures/Figure6_fig_Suppl1.svg")
 
 ```
 
-```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 2. Comparison of fits with different fixed parameter sets when fitting the WT model to individual recordings from the WT INRGW cells.** Panels A-B, D-E, G-H  (column fixed parameters) show simulated trajectories of the Ca^2+^ levels in cPRC and INNOS cells produced by different fixed parameter sets. Panels C, F and I show individual recordings fitted to the data from INRGW cells."}
+```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 2. Comparison of fits with different fixed parameter sets when fitting the WT model to individual recordings from the WT INRGW cells.** Panels A-B, D-E, G-H  (column fixed parameters) show simulated traces of the Ca^2+^ levels in cPRC and INNOS cells produced by different fixed parameter sets. Panels C, F and I show individual recordings fitted to the data from INRGW cells."}
 knitr::include_graphics(path = "figures/Figure6_fig_Suppl2.svg")
 ```
 
-```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 3. Comparison of fits to the cPRC recordings from NIT-GC2 morphant larvae using the NIT-GC2 morpholino model or the NOS-knockout model.**  Thin coloured curves indicate individual recordings, thin grey curves are simulated Ca^2+^ trajectories, thick coloured curves indicate averages of the recordings and thick black curves represent the mean of the fits."}
+```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 3. Comparison of fits to the cPRC recordings from NIT-GC2 morphant larvae using the NIT-GC2 morpholino model or the NOS-knockout model.**  Thin coloured curves indicate individual recordings, thin grey curves are simulated Ca^2+^ traces, thick coloured curves indicate averages of the recordings and thick black curves represent the mean of the fits."}
 knitr::include_graphics(path = "figures/Figure6_fig_Suppl3.svg")
 ```
 
