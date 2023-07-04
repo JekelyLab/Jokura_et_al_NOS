@@ -759,7 +759,7 @@ We thank Dr. Francesca Carlisle for the mycoplasma testing of COS-7 cells.
 
 ## Figure supplements
 
-```{r echo=FALSE,fig.cap="**Figure 1 -- figure supplement 1. Maximum-likelihood phylogenetic tree of NOS protein sequences.** Individual branches are coloured by taxonomy. Support values are based on 1000 replicates of ultrafast bootstrap with the aLRT-SH-like and aBayes methods. <br> Figure 1 -- figure supplement 1 -- source data 1. NOS sequences used for the phylogenetic reconstruction. <br> Figure 1 -- figure supplement 1 -- source data 2. Aligned and trimmed NOS sequences used for the phylogenetic reconstruction. <br> Figure 1 -- figure supplement 1 -- source data 3. Tree file of the reconstructed NOS phylogeny. "}
+```{r echo=FALSE,fig.cap="**Figure 1 -- figure supplement 1. Maximum-likelihood phylogenetic tree of NOS protein sequences.** Individual branches are coloured by taxonomy. Support values are based on 1000 replicates of ultrafast bootstrap with the ultrafast bootstrap approximation (UFBoot) and aLRT-SH-like values methods. <br> Figure 1 -- figure supplement 1 -- source data 1. NOS sequences used for the phylogenetic reconstruction. <br> Figure 1 -- figure supplement 1 -- source data 2. Aligned and trimmed NOS sequences used for the phylogenetic reconstruction. <br> Figure 1 -- figure supplement 1 -- source data 3. Tree file of the reconstructed NOS phylogeny. "}
 knitr::include_graphics(path = "figures/Fig1_sup1.png")
 
 ```
