@@ -454,7 +454,7 @@ The DNA was amplified by PCR (primers: 5'-GGTTCATTGGTTTCGATAACATTGCGG-3', 5'-CAG
 The PCR product was sequenced directly with a nested sequencing primer (5'-GGTGCTCTCCCGGGTACACAA-3').
 A mixture of wild-type and deletion alleles in a sample gave double peaks in the sequencing chromatograms, with the relative height of the double peaks reflecting the relative allele ratio in the sample.
 
-**Morpholino design**
+**Morpholino-mediated knockdowns**
 
 Morpholino injections were performed as previously described [@Conzelmann2013].
 We used the following morpholinos to target the NIT-GC1 and NIT-GC2 genes (GeneTools, LLC).
