@@ -267,8 +267,8 @@ Since the aim of the model is to capture the normalised fluorescence data, the m
 UV stimulation is modelled as a square pulse.
 To find model parameters producing an output fitting the experimental data we employed a global optimisation method known as a genetic algorithm (GA).
 
-Through this optimisation procedure, we found parameters that gave a fit to our experimental data under all conditions.
-We could fit to mean Ca^2+^ profiles but also individual Ca^2+^ transients (Figure 6B, Figure 6--figure supplement 1).
+Through this optimisation procedure, we found parameters that gave a fit to our experimental data under all conditions (Figure 6B; Figure 6--figure supplement 1-5).
+We could fit to mean Ca^2+^ profiles but also individual Ca^2+^ transients.
 Our model only includes a minimal set of parameters and assumptions of interactions that are required to describe the dynamics of cPRC, INNOS and INRGWa in wild type and loss-of-function conditions (Figure 6A, B).
 The model highlights that cPRC phototransduction employs distinct pathways that operate on different time scales and differentially influence cPRC Ca^2+^ levels.
 The coupling between cPRCs and interneurons also requires different signalling mechanisms, either through distinct neurotransmitters or receptors expressed in the different cells.
@@ -487,8 +487,8 @@ The HMM model was run in HMMR3 [@Eddy2011] with an e-value of 1e−15.
 We ran CD-Hit [@Fu2012] to eliminate redundant sequences (at a 80% threshold).
 We aligned the sequences with MAFFT version 7, with the iterative refinement method E-INS-i [@Katoh2008].
 The alignment was trimmed with TrimAl in gappy-out mode [@Capella-Gutierrez2009].
-To calculate a maximum-likelihood tree, we used IQ-tree2 with the LG+G4 model.
-To calculate branch support, we ran 1000 replicates with the ultrafast bootstrap approximation (UFBoot) [@Hoang2018] and aLRT-SH-like values [@Guindon2010] methods.
+To calculate a maximum-likelihood tree, we used IQ-tree2 with the LG+G4 model with the following options: iqtree2 -s "FILENAME" -mset WAG, LG, Blosum62, Dayhoff, JTT, Poisson -B 1000 -alrt 1000 -T AUTO.
+Branch-support values are based on 1000 replicates with the ultrafast bootstrap approximation (UFBoot) [@Hoang2018] and aLRT-SH-like [@Guindon2010] methods. 
 
 **Identification and Phylogenetic Analysis of NIT-GC sequences**
 
@@ -501,8 +501,9 @@ The NIT-GCs are extremely well conserved within the membrane-bound guanylate cyc
 To analyze the phylogeny of NIT-GCs, the cluster containing these GCs together with membrane-bound guanylate cyclases were parsed and used for tree building.
 We aligned the sequences with MAFFT version 7, with the iterative refinement method E-INS-i [@Katoh2008].
 The alignment was trimmed with TrimAl in gappy-out mode [@Capella-Gutierrez2009].
-To calculate a maximum-likelihood tree, we used IQ-tree2 with the LG+G4 model.
-To calculate branch support, we ran 1000 replicates with the ultrafast bootstrap approximation (UFBoot) [@Hoang2018] and aLRT-SH-like values [@Guindon2010] methods.
+To calculate a maximum-likelihood tree, we used IQ-tree2 with the LG+G4 model with the following options: iqtree2 -s "FILENAME" -mset WAG, LG, Blosum62, Dayhoff, JTT, Poisson -B 1000 -alrt 1000 -T AUTO.
+Branch-support values are based on 1000 replicates with the ultrafast bootstrap approximation (UFBoot) [@Hoang2018] and aLRT-SH-like [@Guindon2010] methods.
+
 
 **Single-cell analysis**
 
@@ -759,7 +760,7 @@ We thank Dr. Francesca Carlisle for the mycoplasma testing of COS-7 cells.
 
 ## Figure supplements
 
-```{r echo=FALSE,fig.cap="**Figure 1 -- figure supplement 1. Maximum-likelihood phylogenetic tree of NOS protein sequences.** Individual branches are coloured by taxonomy. Support values are based on 1000 replicates of ultrafast bootstrap with the ultrafast bootstrap approximation (UFBoot) and aLRT-SH-like values methods. <br> Figure 1 -- figure supplement 1 -- source data 1. NOS sequences used for the phylogenetic reconstruction. <br> Figure 1 -- figure supplement 1 -- source data 2. Aligned and trimmed NOS sequences used for the phylogenetic reconstruction. <br> Figure 1 -- figure supplement 1 -- source data 3. Tree file of the reconstructed NOS phylogeny. "}
+```{r echo=FALSE,fig.cap="**Figure 1 -- figure supplement 1. Maximum-likelihood phylogenetic tree of NOS protein sequences.** Individual branches are coloured by taxonomy. Branch support values indicate UFBoot and aLRT-SH-like values. <br> Figure 1 -- figure supplement 1 -- source data 1. NOS sequences used for the phylogenetic reconstruction. <br> Figure 1 -- figure supplement 1 -- source data 2. Aligned and trimmed NOS sequences used for the phylogenetic reconstruction. <br> Figure 1 -- figure supplement 1 -- source data 3. Tree file of the reconstructed NOS phylogeny. "}
 knitr::include_graphics(path = "figures/Fig1_sup1.png")
 
 ```
@@ -784,7 +785,7 @@ knitr::include_graphics(path = "figures/Fig4_sup1.png")
 
 ```
 
-```{r echo=FALSE,fig.cap="**Figure 4 -- figure supplement 2. Maximum-likelihood phylogenetic tree of NIT-domain-containing guanylate cyclases** Membrane-bound and soluble guanylate cyclases (sGC) were included as outgroups. Guanylate cyclases with NIT domains are found in most animal phyla except Porifera, Ctenophora, Urochordata and Chordata. The expression of *Platynereis* NIT-GC genes in cPRC, INNOS and INRGW cells is indicated on the right side of the tree. The values represent expression in single-cell sequencing data. Dot size indicates specificity (percent of transcripts expressed in the indicated cell across all cells). Dot colour represents the logarithm of the number of transcripts in the expressing cells. <br> Figure 4 -- figure supplement 2 -- source data 1. GC sequences used for the phylogenetic reconstruction. <br> Figure 4 -- figure supplement 2 -- source data 2. Aligned and trimmed GC sequences used for the phylogenetic reconstruction. <br> Figure 4 -- figure supplement 3 -- source data 3. Tree file of the reconstructed GC phylogeny. "}
+```{r echo=FALSE,fig.cap="**Figure 4 -- figure supplement 2. Maximum-likelihood phylogenetic tree of NIT-domain-containing guanylate cyclases** Membrane-bound and soluble guanylate cyclases (sGC) were included as outgroups. Guanylate cyclases with NIT domains are found in most animal phyla except Porifera, Ctenophora, Urochordata and Chordata. Branch support values indicate UFBoot and aLRT-SH-like values. The expression of *Platynereis* NIT-GC genes in cPRC, INNOS and INRGW cells is indicated on the right side of the tree. The values represent expression based on single-cell sequencing data. Dot size indicates specificity (percent of transcripts expressed in the indicated cell across all cells). Dot colour represents the logarithm of the number of transcripts in the expressing cells. <br> Figure 4 -- figure supplement 2 -- source data 1. GC sequences used for the phylogenetic reconstruction. <br> Figure 4 -- figure supplement 2 -- source data 2. Aligned and trimmed GC sequences used for the phylogenetic reconstruction. <br> Figure 4 -- figure supplement 3 -- source data 3. Tree file of the reconstructed GC phylogeny. "}
 knitr::include_graphics(path = "figures/Fig4_sup2.png")
 
 ```
