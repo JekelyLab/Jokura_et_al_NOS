@@ -6,10 +6,10 @@ author:
 output:
   html_document:
     theme: lumen
+  word_document: default
   pdf_document:
     latex_engine: lualatex
     template: default
-  word_document: default
 geometry: left=0.8in,right=0.8in,top=0.8in,bottom=0.5in
 mainfont: Arial
 monofont: Times New Roman
