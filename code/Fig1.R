@@ -198,7 +198,7 @@ visNet
 
 # save network diagram as html --------------------------------------------
 
-saveNetwork(visNet, "pictures/visNetwork_INNOS.html")
+saveNetwork(visNet, "pictures/visNetwork_INNOS.html", selfcontained = TRUE)
 webshot2::webshot(url="pictures/visNetwork_INNOS.html",
                   file="pictures/visNetwork_INNOS.png",
                   cliprect = c(120, 150, 900, 560), zoom=1)
