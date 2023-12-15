@@ -318,7 +318,7 @@ panel_NOS2d_ant_HCR <- ggdraw() + draw_image(readPNG("pictures/HCR-IHC_51_AP_NOS
   draw_line(x = c(0.74, 0.63), y = c(0.78, 0.8), color = "white", size = 0.3)
 
 
-panel_NOS3d <- ggdraw() + draw_image(readPNG("pictures/NOS-promotor_3d_acTub_XXum_crop.png")) +
+panel_NOS3d_trans <- ggdraw() + draw_image(readPNG("pictures/NOS-promotor_3d_acTub_XXum_crop.png")) +
   draw_label("transgene + IHC", x = 0.38, y = 0.99, size = 10) +
   draw_label("*", x = 0.55, y = 0.32, color='white',size = 18,fontface="plain") +
   #draw_image(readPNG("pictures/INNOS_vl.png"), 
@@ -332,24 +332,53 @@ panel_NOS3d <- ggdraw() + draw_image(readPNG("pictures/NOS-promotor_3d_acTub_XXu
   draw_line(x = c(0.79, 0.63), y = c(0.79, 0.82), color = "white", size = 0.3) +
   draw_label("INNOS_vl", x = 0.85, y = 0.65, size = 7, color = "white")
 
+
+panel_NOS3d_IHC <- ggdraw() + draw_image(readPNG("pictures/IHC_NOS_3d_XXum_3.png")) +
+  draw_label("IHC", x = 0.3, y = 0.99, size = 10) +
+  draw_label("NOS", x = 0.12, y = 0.9, color="magenta", size = 11, fontface="plain") +
+  draw_label("acTub", x = 0.36, y = 0.9, color="green", size = 11, fontface="plain") +
+  draw_line(x = c(0.04, 0.4), y = c(0.08, 0.08), color = "white", size = 0.5) +
+  draw_label("cPRC", x = 0.55, y = 0.82, size = 7, color = "white") +
+  draw_line(x = c(0.33, 0.47), y = c(0.79, 0.82), color = "white", size = 0.3) +
+  draw_line(x = c(0.79, 0.63), y = c(0.79, 0.82), color = "white", size = 0.3)
+
+
+INNOS_img <- readPNG("pictures/INNOS_synapses.png")
+arrow <- data.frame(x1 = 0.95, x2 = 0.95, y1 = 0.8, y2 = 0.9)
+panel_INNOS <- ggdraw() + 
+  draw_image(INNOS_img) +
+  draw_label("INNOS", x = 0.3, y = 0.99, size = 10) +
+  draw_label("NS plexus", x = 0.485, y = 0.59, size = 8) +
+  draw_label("outgoing", x = 0.9, y = 0.45, size = 10, color='#E69F00') +
+  draw_label("incoming", x = 0.89, y = 0.5, size = 10, color='#0072B2') +
+  draw_label("D", x = 0.95, y = 0.93, size = 6) +
+  draw_label("V", x = 0.95, y = 0.77, size = 6) +
+  draw_label("*", x = 0.5, y = 0.29, color='black',size = 18,fontface='plain') +
+  geom_segment(aes(x = x1, y = y1, xend = x2, yend = y2), data = arrow, 
+               arrow = arrow(ends = "both", type = "closed", length = unit(0.1,"cm")),
+               lineend = "butt",
+               linejoin = "mitre",
+               arrow.fill = "black", size = 0.2)
+
+
 layout <- "
-A#B#C
-#####
-D#E#F
+A#B#C#D
+#######
+E#F#G#H
 "
 
-Fig1 <- panel_SEM + panel_INNOS_ventr + panel_INNOS_ant +   
-  panel_NOS2d_ant_HCR + panel_NOS3d + panel_Network +
+Fig1 <- panel_SEM + panel_INNOS_ventr + panel_INNOS_ant + panel_INNOS +  
+  panel_NOS2d_ant_HCR + panel_NOS3d_trans + panel_NOS3d_IHC + panel_Network +
   patchwork::plot_layout(design = layout, 
                          heights = c(1,0.02,1), 
-                         widths = c(1,0.02,1,0.02,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
+                         widths = c(1,0.02,1,0.02,1,0.02,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = "A") &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, 
       face='plain', color='black')) #or 'bold', 'italic'
  
 
 ggsave("Manuscript/figures/Fig1.png", limitsize = FALSE, 
-       units = c("px"), Fig1, width = 1800, height = 1350, bg='white')  
+       units = c("px"), Fig1, width = 2500, height = 1400, bg='white')  
 
 
 ggsave("Manuscript/figures/Fig1.pdf", limitsize = FALSE, 

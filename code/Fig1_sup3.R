@@ -96,6 +96,7 @@ INRGW_img <- readPNG("pictures/INRGW_synapses.png")
 
 #read png convert to image panel
 arrow <- data.frame(x1 = 0.95, x2 = 0.95, y1 = 0.8, y2 = 0.9)
+
 panel_INNOS <- ggdraw() + 
   draw_image(INNOS_img) +
   draw_label("INNOS", x = 0.3, y = 0.99, size = 10) +
@@ -147,3 +148,23 @@ ggsave("Manuscript/figures/Fig1_sup3.pdf", limitsize = FALSE,
        units = c("px"), Fig1_sup3, width = 3100, height = 800) 
 
 
+
+
+layout <- "
+A#B#C
+"
+
+Fig1_sup3 <- panel_INNOS_split + panel_INRGW + panel_cPRC + 
+  patchwork::plot_layout(design = layout, 
+                         widths = c(1, 0.02,1,0.02,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
+  patchwork::plot_annotation(tag_levels = "A") &  #we can change this to 'a' for small caps or 'i' or '1'
+  ggplot2::theme(plot.tag = element_text(size = 12, 
+                                         face='plain', color='black')) #or 'bold', 'italic'
+
+
+ggsave("Manuscript/figures/Fig1_sup3.png", limitsize = FALSE, 
+       units = c("px"), Fig1_sup3, width = 2400, height = 800, bg='white')  
+
+
+ggsave("Manuscript/figures/Fig1_sup3.pdf", limitsize = FALSE, 
+       units = c("px"), Fig1_sup3, width = 3100, height = 800) 

@@ -93,22 +93,27 @@ panel_DAFFM_intensity  <- ggdraw() + draw_image(readPNG("pictures/55hpf_DAF-FM_i
 
 panel_DAFFM  <- ggdraw() + draw_image(readPNG("pictures/DAFFM.png"))
 
+panel_UV_stimulation  <- ggdraw() + draw_image(readPNG("pictures/UV_stimulation.png"))
 
 #combine panels into Figure and save final figure as pdf and png
 #panels of different sizes
 layout <- "
-AA#B#CCC
+AAA#B
+#####
+C#DDD
 "
 
-Fig2v2 <- panel_DAF + panel_DAFFM_intensity + panel_DAFFM + 
+
+Fig2v2 <- panel_UV_stimulation + panel_DAF + panel_DAFFM_intensity + panel_DAFFM + 
   patchwork::plot_layout(design = layout, 
-                         widths = c(1,0.78,0.05,1,0.05,1,0.78,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
+                         heights = c(1,0.05,1), 
+                         widths = c(0.45,0.05,0.8,0.05,0.8)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, 
                                          face='plain')) #or 'bold', 'italic'
 
 ggsave("Manuscript/figures/Fig2.png", limitsize = FALSE, 
-       units = c("px"), Fig2v2, width = 2100, height = 800, bg='white')
+       units = c("px"), Fig2v2, width = 2100, height = 1800, bg='white')
 
 ggsave("Manuscript/figures/Fig2.pdf", limitsize = FALSE, 
        units = c("px"), Fig2v2, width = 2100, height = 800)  

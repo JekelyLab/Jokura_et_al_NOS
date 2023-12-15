@@ -20,6 +20,11 @@ Sys.setenv('R_MAX_VSIZE'=800000000)
   library(tidygraph)
   library(scales)
   library(esquisse)
+  library(multcomp)
+  library(PMCMRplus)
+  library(ggpubr)
+  library(gridExtra)
+  library(ggbeeswarm)
 }
 
 
