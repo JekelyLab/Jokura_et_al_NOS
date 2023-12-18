@@ -333,14 +333,14 @@ panel_NOS3d_trans <- ggdraw() + draw_image(readPNG("pictures/NOS-promotor_3d_acT
   draw_label("INNOS_vl", x = 0.85, y = 0.65, size = 7, color = "white")
 
 
-panel_NOS3d_IHC <- ggdraw() + draw_image(readPNG("pictures/IHC_NOS_3d_XXum_3.png")) +
-  draw_label("IHC", x = 0.3, y = 0.99, size = 10) +
+panel_NOS3d_IHC <- ggdraw() + draw_image(readPNG("pictures/IHC_NOS_3d_48.1um_3.png")) +
+  draw_label("IHC", x = 0.15, y = 0.99, size = 10) +
   draw_label("NOS", x = 0.12, y = 0.9, color="magenta", size = 11, fontface="plain") +
   draw_label("acTub", x = 0.36, y = 0.9, color="green", size = 11, fontface="plain") +
   draw_line(x = c(0.04, 0.4), y = c(0.08, 0.08), color = "white", size = 0.5) +
-  draw_label("cPRC", x = 0.55, y = 0.82, size = 7, color = "white") +
-  draw_line(x = c(0.33, 0.47), y = c(0.79, 0.82), color = "white", size = 0.3) +
-  draw_line(x = c(0.79, 0.63), y = c(0.79, 0.82), color = "white", size = 0.3)
+  draw_label("cPRC", x = 0.49, y = 0.83, size = 7, color = "white") +
+  draw_line(x = c(0.33, 0.42), y = c(0.8, 0.83), color = "white", size = 0.3) +
+  draw_line(x = c(0.67, 0.56), y = c(0.8, 0.83), color = "white", size = 0.3)
 
 
 INNOS_img <- readPNG("pictures/INNOS_synapses.png")
@@ -382,6 +382,6 @@ ggsave("Manuscript/figures/Fig1.png", limitsize = FALSE,
 
 
 ggsave("Manuscript/figures/Fig1.pdf", limitsize = FALSE, 
-       units = c("px"), Fig1, width = 1800, height = 1350) 
+       units = c("px"), Fig1, width = 2500, height = 1400) 
 
 

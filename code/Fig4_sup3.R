@@ -150,7 +150,8 @@ panel_NIT1MO_NIT1 <- ggdraw() + draw_image(readPNG("pictures/IHC_51_AP_NIT1MO_NI
   draw_label("morpholino", x = 0.57, y = 0.995, size = 10) +
   draw_label("NIT-GC1", x = 0.12, y = 0.91, color="magenta", size = 10, fontface="plain") +
   draw_label("acTub", x = 0.33, y = 0.91, color="green", size = 10, fontface="plain") +
-  draw_line(x = c(0.04, 0.392), y = c(0.08, 0.08), color = "white", size = 0.5)
+  draw_line(x = c(0.04, 0.392), y = c(0.08, 0.08), color = "white", size = 0.5) +
+  draw_label(expression(paste("20 ", mu, "m")), x = 0.21, y = 0.11, color = "white", size = 8)
 
 panel_NIT2MO_NIT2 <- ggdraw() + draw_image(readPNG("pictures/IHC_57_AP_NIT2MO_NITGC2_actub_57um.png")) +
   draw_label("IHC:", x = 0.15, y = 0.995, size = 10) +

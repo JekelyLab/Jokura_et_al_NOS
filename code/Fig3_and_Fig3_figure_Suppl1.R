@@ -32,7 +32,7 @@ df_WT_test <- read_csv("data/220923_Tracking raw data/WT_0701_08_01.csv")
 df_NOS_test <- read_csv("data/220923_Tracking raw data/NOS_0623_00_01.csv")
 
 #read L-NAME 3days tracking csv file
-df_L_NAME_tracking <- read_csv("data/230511_df_L_NAME_2.csv")
+df_L_NAME_tracking <- read_csv("data/230511_df_L_NAME.csv")
 
 }
 
@@ -1655,16 +1655,16 @@ df_2d_nor_stat <- df_2d_nor %>%
 
 df_2d_nor_stat <- df_2d_nor_stat %>%
   filter(!(Genotype %in% "NOS11x23")) %>%
-  filter(sec >= 39.9 & sec < 40)
+  filter(sec >= 39.86 & sec < 40)
 
 #Dunnett's test
 genotype_2d=factor(df_2d_nor_stat$Genotype)
 y_axis_2d=df_2d_nor_stat$y_axis
 summary(glht(aov(y_axis_2d~genotype_2d),linfct=mcp(genotype_2d= "Dunnett")))
 
-#                     Estimate Std. Error t value Pr(>|t|)
-#NOS11x11 - cont == 0    6.926      4.207   1.646    0.194
-#NOS23x23 - cont == 0    9.295      5.707   1.629    0.201
+#                     Estimate Std. Error t value Pr(>|t|)  
+#NOS11x11 - cont == 0    6.923      2.935   2.359   0.0389 *
+#NOS23x23 - cont == 0    9.282      3.982   2.331   0.0417 *
 
 #‘***’ <0.001 ‘**’ <0.01 ‘*’ <0.05
 
@@ -1674,7 +1674,7 @@ ggplot(df_2d_nor_stat) +
   geom_boxplot(size = 0.5, outlier.shape = NA) +
   geom_beeswarm(aes(color = Genotype),
                 size = 2,
-                cex = 3.2,
+                cex = 3,
                 alpha =.3, 
                 color = "gray5") +
   labs(y = "vertical displacement [mm/s]")+
@@ -1690,10 +1690,10 @@ ggplot(df_2d_nor_stat) +
                               "NOS11x11" = expression('NOS'^'Δ11/Δ11'), 
                               "NOS23x23" = expression('NOS'^'Δ23/Δ23'))) +
   geom_signif(comparisons = list(c("cont", "NOS11x11")),
-              annotations = "0.194",
+              annotations = "0.039 *",
               y_position = 30) +
   geom_signif(comparisons = list(c("cont", "NOS23x23")),
-              annotations = "0.201",
+              annotations = "0.042 *",
               y_position = 40)
 
 
@@ -1824,7 +1824,7 @@ ggplot(df_3d_nor_stat) +
 
 # save plot ---------------------------------------------------------------
 ggsave("pictures/Vertical displacement_mean_3d_statics.png", limitsize = FALSE, 
-       units = c("px"), width = 800, height = 1000, bg='white')
+       units = c("px"), width = 800, height = 1225, bg='white')
 
 
 
@@ -1909,7 +1909,7 @@ ggplot(df_L_NAME_stat) +
               annotations = "0.22",
               y_position = 30) +
   geom_signif(comparisons = list(c("0 mM", "1 mM")),
-              annotations = "<0.001 ***",
+              annotations = "0.0008 ***",
               y_position = 40)
 
 
@@ -1923,7 +1923,7 @@ ggplot(df_L_NAME_stat) +
 
 # save plot ---------------------------------------------------------------
 ggsave("pictures/Vertical displacement_mean_L_NAME_statics.png", limitsize = FALSE, 
-       units = c("px"), width = 800, height = 1000, bg='white')
+       units = c("px"), width = 800, height = 1225, bg='white')
 
 
 
@@ -2053,7 +2053,9 @@ df_2d_nor_speeed_mean %>%
   stat_compare_means(comparisons = list(c("dark", "sideUV")), 
                      method = "t.test", 
                      label = "p.signif", 
-                     paired=TRUE)
+                     paired=TRUE,
+                     symnum.args = list(cutpoints = c(0, 0.001, 0.01, 0.05, 1), 
+                                        symbols = c("***", "ns", "ns", "ns")))
 
 
 
@@ -2385,7 +2387,7 @@ CBF %>%
 
 # save plot ---------------------------------------------------------------
 ggsave("pictures/CBF_2d_plot.png", limitsize = FALSE, 
-       units = c("px"), width = 1400, height = 1000, bg='white')
+       units = c("px"), width = 1600, height = 1000, bg='white')
 
 # CBF_3d --------------------------------------------------------------------
 
@@ -2421,7 +2423,7 @@ CBF %>%
   
 # save plot ---------------------------------------------------------------
 ggsave("pictures/CBF_3d_plot.png", limitsize = FALSE, 
-       units = c("px"), width = 1400, height = 1000, bg='white')
+       units = c("px"), width = 1600, height = 1000, bg='white')
 
 # save to source data-------------------------------------------------------
 
@@ -2468,56 +2470,35 @@ panel_3d_CBF <- ggdraw() + draw_image(readPNG("pictures/CBF_3d_plot.png"))
 
 
 #combine panels into Figure and save final figure as pdf and png
-#panels of different sizes
-#layout <- "
-#AABBCCDD
-#EEEEFFFF
-#"
-
-#Fig3v2 <-  panel_Architecture + panel_3dpf_Tracking + 
-#  panel_3dpf_TP  + panel_3dpf_TD + 
-#  panel_3d_vd + panel_3d_L_NAME_vd +
-#  patchwork::plot_layout(design = layout, heights = c(0.55, 1),) + #we can change the heights of the rows in our layout (widths also can be defined)
-#  patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
-#  ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
-
-
-#ggsave("Manuscript/figures/Fig3v2.pdf", limitsize = FALSE, 
-#       units = c("px"), Fig3v2, width = 2400, height = 1200)  
-
-#ggsave("Manuscript/figures/Fig3v2.png", limitsize = FALSE, 
-#       units = c("px"), Fig3v2, width = 2400, height = 1200, bg='white')  
-
-
-
-
+#panels of different size
 
 
 layout <- "
-AAAA#FFFFF
-AAAA#FFFFF
-AAAA#FFFFF
-AAAA#FFFFF
-AAAA#FFFFF
-AAAA#FFFFF
-#####FFFFF
-BBBC#FFFFF
+AAAA#DDDDD
+AAAA#DDDDD
+AAAA#DDDDD
+AAAA#DDDDD
+AAAA#DDDDD
+AAAA#DDDDD
+#####DDDDD
+BBBC#DDDDD
 BBBC#GGGGG
 BBBC#GGGGG
 BBBC#GGGGG
 #####GGGGG
-DDDE#GGGGG
-DDDE#GGGGG
-DDDE#GGGGG
-DDDE#GGGGG
+EEEF#GGGGG
+EEEF#GGGGG
+EEEF#GGGGG
+EEEF#GGGGG
 "
 
 Fig3 <-  panel_3dpf_Tracking + 
-  panel_3dpf_TP + panel_3d_mTP + 
+  panel_3dpf_TP + panel_3d_mTP +
+  panel_3d_vd + 
   panel_L_NAME_TP + panel_3d_L_NAME_mTP +
-  panel_3d_vd + panel_3d_L_NAME_vd +
+  panel_3d_L_NAME_vd +
   patchwork::plot_layout(design = layout,
-                         widths = c(1,1,1,1,0.01,1,1,1,1,1), 
+                         widths = c(1,1,0.8,1.2,0.01,1,1,1,1,1), 
                          heights = c(1,1,1,1,1,1,0.05,1,1,1,1,0.05,1,1,1,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
@@ -2527,37 +2508,14 @@ ggsave("Manuscript/figures/Fig3.png", limitsize = FALSE,
        units = c("px"), Fig3, width = 3200, height = 2100, bg='white')  
 
 ggsave("Manuscript/figures/Fig3.pdf", limitsize = FALSE, 
-       units = c("px"), Fig3, width = 2400, height = 1300)  
-
-
-
-
-#layout <- "
-#AABBCC
-#######
-#DDDEEE
-#"
-
-#Fig3 <-  panel_3dpf_Tracking + panel_3dpf_TP + panel_L_NAME_TP +
-#  panel_3d_vd + panel_3d_L_NAME_vd +
-#  patchwork::plot_layout(design = layout, heights = c(0.8, 0.05, 1)) + #we can change the heights of the rows in our layout (widths also can be defined)
-#  patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
-#  ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
-
-
-#ggsave("Manuscript/figures/Fig3.png", limitsize = FALSE, 
-#       units = c("px"), Fig3, width = 2400, height = 1300, bg='white')  
-
-#ggsave("Manuscript/figures/Fig3.pdf", limitsize = FALSE, 
-#       units = c("px"), Fig3, width = 2400, height = 1300)  
-
+       units = c("px"), Fig3, width = 3200, height = 2100)  
 
 
 
 
 
 layout_sup1 <- "
-A#BB#CCC
+AA#B#CCC
 #####CCC
 FFFF#CCC
 FFFF####
@@ -2565,12 +2523,12 @@ FFFF#DDE
 "
 
 Fig3_sup1 <-  
-  panel_setup + panel_Architecture + 
+  panel_Architecture + panel_setup + 
   panel_2dpf_Tracking + 
   panel_2dpf_TP + panel_2d_mTP +
   panel_2d_vd +
   patchwork::plot_layout(design = layout_sup1,
-                         widths = c(5.8,0.05,4.25,4.25,0.05,3.6,3.6,3.6), 
+                         widths = c(4.25,4.25,0.05,5.8,0.05,3.6,3.6,3.6), 
                          heights = c(2.3,0.05,1.2,0.05,3.0)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
@@ -2579,7 +2537,10 @@ ggsave("Manuscript/figures/Fig3_sup1.png", limitsize = FALSE,
        units = c("px"), Fig3_sup1, width = 3000, height = 1570, bg='white')  
 
 ggsave("Manuscript/figures/Fig3_sup1.pdf", limitsize = FALSE, 
-       units = c("px"), Fig3_sup1, width = 3200, height = 1200)  
+       units = c("px"), Fig3_sup1, width = 3000, height = 1570)  
+
+
+
 
 
 
@@ -2590,9 +2551,9 @@ B#D#F
 "
 
 Fig3_sup2 <-  
-  panel_2dpf_TD + panel_2dpf_mTD + 
-  panel_3dpf_TD + panel_3dpf_mTD + 
-  panel_L_NAME_TD + panel_L_NAME_mTD + 
+  panel_2dpf_TD + panel_3dpf_TD + 
+  panel_2dpf_mTD + panel_3dpf_mTD + 
+  panel_2d_CBF + panel_3d_CBF + 
   patchwork::plot_layout(design = layout_sup2,
                          widths = c(1,0.05,1,0.05,1), 
                          heights = c(1,0.05,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
@@ -2600,20 +2561,7 @@ Fig3_sup2 <-
   ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
 
 ggsave("Manuscript/figures/Fig3_sup2.png", limitsize = FALSE, 
-       units = c("px"), Fig3_sup2, width = 3000, height = 1200, bg='white')  
+       units = c("px"), Fig3_sup2, width = 3000, height = 1300, bg='white')  
 
-
-
-layout_sup3 <- "
-A#B
-"
-
-Fig3_sup3 <-  
-  panel_2d_CBF + panel_3d_CBF +
-  patchwork::plot_layout(design = layout_sup3,
-                         widths = c(1,0.05,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
-  patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
-  ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
-
-ggsave("Manuscript/figures/Fig3_sup3.png", limitsize = FALSE, 
-       units = c("px"), Fig3_sup3, width = 2400, height = 800, bg='white')  
+ggsave("Manuscript/figures/Fig3_sup2.pdf", limitsize = FALSE, 
+       units = c("px"), Fig3_sup2, width = 3000, height = 1300) 

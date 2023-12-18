@@ -71,25 +71,9 @@ ggsave("pictures/DAFFM.png", limitsize = FALSE,
 # assemble figure ---------------------------------------------------------
 arrow_fluo <- data.frame(x1 = 0.95, x2 = 0.95, y1 = 0.75, y2 = 0.85)
 
-panel_DAF <- ggdraw() + draw_image(readPNG("pictures/55hpf_DAF-FM_134.95um.png")) +
-  draw_label("DAF-FM", x = 0.15, y = 0.88, color="#009E73", size = 11, fontface="plain") +
-  draw_line(x = c(0.04, 0.42), y = c(0.09, 0.09), color = "white", size = 0.5) +
-  draw_label(expression(paste("50 ", mu, "m")), x = 0.23, y = 0.12, color = "white", size = 8) +
-  draw_label("D", x = 0.95, y = 0.88, size = 6, color = "white") +
-  draw_label("V", x = 0.95, y = 0.72, size = 6, color = "white") +
-  draw_label("cPRC stim.", x = 0.67, y = 0.43, size = 4, color = "darkorchid1", fontface='bold') +
-  draw_label("ctr stim.", x = 0.75, y = 0.38, size = 4, color = "darkorchid1", fontface='bold') +
-  geom_segment(aes(x = x1, y = y1, xend = x2, yend = y2), data = arrow_fluo, color = "white", 
-               arrow = arrow(ends = "both", type = "closed", length = unit(0.1,"cm")),
-               lineend = "butt",
-               linejoin = "mitre",
-               arrow.fill = "white", size = 0.2)
+panel_DAF <- ggdraw() + draw_image(readPNG("pictures/55hpf_DAF-FM_134.95um.png"))
 
-panel_DAFFM_intensity  <- ggdraw() + draw_image(readPNG("pictures/55hpf_DAF-FM_intensity.png")) +
-  draw_label("before", x = 0.17, y = 0.9, color='white',size = 9, fontface='plain') +
-  draw_label("405 nm", x = 0.2, y = 0.45, color='white',size = 9, fontface='plain') +
-  draw_line(x = c(0.05, 0.42), y = c(0.08, 0.08), color = "white", size = 0.5) +
-  draw_label(expression(paste("10 ", mu, "m")), x = 0.23, y = 0.11, color = "white", size = 8)
+panel_DAFFM_intensity  <- ggdraw() + draw_image(readPNG("pictures/55hpf_DAF-FM_intensity.png"))
 
 panel_DAFFM  <- ggdraw() + draw_image(readPNG("pictures/DAFFM.png"))
 
@@ -98,23 +82,36 @@ panel_UV_stimulation  <- ggdraw() + draw_image(readPNG("pictures/UV_stimulation.
 #combine panels into Figure and save final figure as pdf and png
 #panels of different sizes
 layout <- "
-AAA#B
-#####
-C#DDD
+A#B#C
 "
 
-
-Fig2v2 <- panel_UV_stimulation + panel_DAF + panel_DAFFM_intensity + panel_DAFFM + 
+Fig2 <- panel_DAF + panel_DAFFM_intensity + panel_DAFFM + 
   patchwork::plot_layout(design = layout, 
-                         heights = c(1,0.05,1), 
-                         widths = c(0.45,0.05,0.8,0.05,0.8)) + #we can change the heights of the rows in our layout (widths also can be defined)
+                         widths = c(0.5,0.05,0.28,0.025,0.95)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, 
                                          face='plain')) #or 'bold', 'italic'
 
 ggsave("Manuscript/figures/Fig2.png", limitsize = FALSE, 
-       units = c("px"), Fig2v2, width = 2100, height = 1800, bg='white')
+       units = c("px"), Fig2, width = 3000, height = 950, bg='white')
 
 ggsave("Manuscript/figures/Fig2.pdf", limitsize = FALSE, 
-       units = c("px"), Fig2v2, width = 2100, height = 800)  
+       units = c("px"), Fig2, width = 3000, height = 950)  
   
+
+
+
+layout_sup1 <- "
+A
+"
+Fig2_sup1 <- panel_UV_stimulation +
+  patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
+  ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'bold', 'italic'
+
+ggsave("Manuscript/figures/Fig2_sup1.png", limitsize = FALSE, 
+       units = c("px"), Fig2_sup1, width = 1200, height = 850, bg='white')
+
+ggsave("Manuscript/figures/Fig2_sup1.pdf", limitsize = FALSE, 
+       units = c("px"), Fig2_sup1, width = 1200, height = 850)  
+
+

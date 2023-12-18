@@ -1,8 +1,8 @@
 ---
 title: Nitric oxide feedback to ciliary photoreceptor cells gates a UV avoidance circuit
 author: 
-  - name: "Kei Jokura<sup>1,`*`</sup>, Nobuo Ueda<sup>2</sup>, Martin Gühmann<sup>3</sup>, Luis Alfonso Yañez-Guerra<sup>1</sup>, Piotr Słowiński<sup>1</sup>, Kyle C. A. Wedgwood<sup>1</sup> and Gáspár Jékely<sup>1,4,`*`</sup>"
-    affiliation: "<sup>1</sup>Living Systems Institute, University of Exeter, Stocker road, Exeter, EX4 4QD, United Kingdom <sup>2</sup>Okinawa Institute of Science and Technology, Okinawa, Japan, <sup>3</sup>School of Biological Sciences, University of Bristol, Bristol, United Kingdom, <sup>4</sup>Centre for Organismal Studies (COS), University of Heidelberg, 69120 Heidelberg, Germany  <br> <sup>*</sup>Correspondence`:` k.jokura @ exeter.ac.uk, gaspar.jekely @ cos.uni-heidelberg.de"
+  - name: "Kei Jokura<sup>1,`*`</sup>, Nobuo Ueda<sup>2</sup>, Martin Gühmann<sup>3</sup>, Luis Alfonso Yañez-Guerra<sup>1,4</sup>, Piotr Słowiński<sup>1</sup>, Kyle C. A. Wedgwood<sup>1</sup> and Gáspár Jékely<sup>1,5,`*`</sup>"
+    affiliation: "<sup>1</sup>Living Systems Institute, University of Exeter, Stocker road, Exeter, EX4 4QD, United Kingdom <sup>2</sup>Okinawa Institute of Science and Technology, Okinawa, Japan, <sup>3</sup>School of Biological Sciences, University of Bristol, Bristol, United Kingdom, <sup>4</sup>School of Biological sciences, University of Southampton, Southampton, United Kingdom, <sup>5</sup>Centre for Organismal Studies (COS), University of Heidelberg, 69120 Heidelberg, Germany  <br> <sup>*</sup>Correspondence`:` k.jokura @ exeter.ac.uk, gaspar.jekely @ cos.uni-heidelberg.de"
 output:
   html_document:
     theme: lumen
@@ -87,17 +87,18 @@ This delayed neuroendocrine feedback integrates UV/violet exposure to induce a s
 We identified a single *nitric oxide synthase* (*NOS*) gene in the *Platynereis dumerilii* genome and transcriptome data.
 Phylogenetic analysis of NOS proteins indicate that *Platynereis* NOS belongs to an orthology group of bilaterian NOS sequences (Figure 1---figure supplement 1).
 To characterise the expression pattern of *NOS*, we used in situ hybridization chain reaction (HCR) and transient transgenesis.
-In two- and three-day-old larvae, we detected *NOS* expression in four cells (two of them weakly expressing) in the apical organ region (Figure 1D and Figure 1---figure supplement 2).
+In two- and three-day-old larvae, we detected *NOS* expression in four cells (two of them weakly expressing) in the apical organ region (Figure 1E and Figure 1---figure supplement 2).
 *NOS* was also expressed in the region of the visual eyes (adult eyes) and the pigmented eyespots (Figure 1---figure supplement 2).
-The four apical organ cells, but not the eyes, were also labelled with a *NOS* reporter construct driving palmitoylated tdTomato (Figure 1E).
+The four apical organ cells, but not the eyes, were also labelled with a *NOS* reporter construct driving palmitoylated tdTomato (Figure 1F).
 This reporter also revealed the axonal projections of these central NOS-expressing neurons.
 The position and morphology of the four *NOS+* cells allowed us to identify the same four cells as four interneurons (INNOS) in our three-day-old whole-body *Platynereis* volume EM data [@williams2017; @veraszto2020] (Figure 1B,C).
-In the synaptic connectome, the INNOS cells are postsynaptic to the UV-sensory cPRCs and presynaptic to the INRGWa interneurons, which are also cPRC targets (Figure 1C, F).
-The projections of INNOS cells are segregated into input (dendritic) and output (axonal) compartments, with cPRC inputs occurring on the dendritic part in the dense neurosecretory plexus.
+In the synaptic connectome, the INNOS cells are postsynaptic to the UV-sensory cPRCs and presynaptic to the INRGWa interneurons, which are also cPRC targets (Figure 1C, H).
+The projections of INNOS cells are segregated into input (dendritic) and output (axonal) compartments, with cPRC inputs occurring on the dendritic part in the dense neurosecretory plexus (Figure 1D).
+Immunostaining revealed that the localization of NOS at the protein level is concentrated in the dendrites of the input region even within INNOS (Figure 1G).
 INNOS output-synapses form in the more ventral projection region (Figure 1---figure supplement 3).
-INRGWa neurons synapse on the head serotonergic ciliomotor neurons (Ser-h1), which synapse on the cholinergic MC ciliomotor neuron and cells of the prototroch ciliary band (Figure 1C, F) [@veraszto2017].
+INRGWa neurons synapse on the head serotonergic ciliomotor neurons (Ser-h1), which synapse on the cholinergic MC ciliomotor neuron and cells of the prototroch ciliary band (Figure 1C, H) [@veraszto2017].
 
-```{r echo=FALSE,fig.cap="**Figure 1. Identification of *NOS*-expressing interneurons (INNOS) within the cPRC circuit.** **(A)** Scanning electron microscopy image of a three-day-old *Platynereis* larva. **(B, C)** Volume rendering of the neuron types (cPRC, INNOS, INRGWa, Ser-h1 and MC) in the cPRC circuit reconstructed from a whole-body transmission electron microscopy volume of a three-day-old larva. Neurite skeletons are shown with cell-body positions represented by spheres. Projections of all neurons in the body are shown in grey to highlight the neuropils. The outline of the yolk is also indicated in grey. In B, nuclei positions of the prototroch head ciliary band are shown as grey spheres. **(D)** Expression of the *NOS* gene detected by in situ HCR (magenta) in a two-day-old larva (anterior view). Antibody staining for acetylated α-tubulin (acTub: green) highlights cPRC cilia and the neuropil. **(E)** Expression of a *NOS* reporter (NOSp::palmi-3xHA; magenta) labelled with an anti-HA antibody in a two-day-old larva (anterior view). Antibody staining for acetylated α-tubulin (acTub; green) highlights cPRC cilia and the neuropil. **(F)** Synaptic wiring diagram of the cPRC circuit. Hexagons represent cell groups, with the number of cells per group shown in square brackets. Arrows represent the summed number of synaptic contacts between cell groups. Arrow thickness is proportional to the number of synapses."}
+```{r echo=FALSE,fig.cap="**Figure 1. Identification of *NOS*-expressing interneurons (INNOS) within the cPRC circuit.** **(A)** Scanning electron microscopy image of a three-day-old *Platynereis* larva. **(B, C)** Volume rendering of the neuron types (cPRC, INNOS, INRGWa, Ser-h1 and MC) in the cPRC circuit reconstructed from a whole-body transmission electron microscopy volume of a three-day-old larva. Neurite skeletons are shown with cell-body positions represented by spheres. Projections of all neurons in the body are shown in grey to highlight the neuropils. The outline of the yolk is also indicated in grey. In B, nuclei positions of the prototroch head ciliary band are shown as grey spheres. **(D)** Volume rendering of the four INNOS neurons with incoming and outgoing synapses. **(E)** Expression of the *NOS* gene detected by in situ HCR (magenta) in a two-day-old larva (anterior view). Antibody staining for acetylated α-tubulin (acTub: green) highlights cPRC cilia and the neuropil. **(F)** Expression of a *NOS* reporter (NOSp::palmi-3xHA; magenta) labelled with an anti-HA antibody in a two-day-old larva (anterior view). Antibody staining for acetylated α-tubulin (acTub; green) highlights cPRC cilia and the neuropil. **(G)** Immunostaining for NOS (magenta), co-stained for acetylated α-tubulin (acTub; green). **(H)** Synaptic wiring diagram of the cPRC circuit. Hexagons represent cell groups, with the number of cells per group shown in square brackets. Arrows represent the summed number of synaptic contacts between cell groups. Arrow thickness is proportional to the number of synapses."}
 
 knitr::include_graphics(path = "figures/Fig1.png")
 
@@ -107,7 +108,7 @@ knitr::include_graphics(path = "figures/Fig1.png")
 
 The expression of *NOS* in the INNOS interneurons in the cPRC circuit suggests that NO signalling may be involved in UV/violet-avoidance.
 To test this, first we asked whether NO is produced during UV/violet stimulation of the larvae.
-We injected the fluorescent NO-reporter DAF-FM into zygotes and imaged two-day-old larvae while exposing the region of cPRC cilia to 405 nm violet light.
+We injected the fluorescent NO-reporter DAF-FM into zygotes and imaged two-day-old larvae while exposing the region of cPRC cilia to 405 nm violet light (Figure 2---figure supplement 1).
 To mark cell outlines, we coinjected mRNA encoding a red-fluorescent reporter (RGECO), allowing the identification of the cPRCs.
 Following light stimulation in the region of the ramified cilia of the cPRCs, we detected an increase in DAF-FM fluorescence in the anterior neurosecretory neuropil, the region of INNOS projections.
 This increase did not occur in larvae in which we illuminated a control area (Figure 2).
@@ -124,20 +125,20 @@ We next tested whether NO signalling regulates UV/violet avoidance.
 To achieve this, we generated two *Platynereis* *NOS* knockout lines using the CRISPR/Cas9 method.
 We recovered two deletions (NOSΔ11/Δ11 and Δ23/Δ23), both frame-shift mutations leading to an early stop codon and thus likely representing null alleles (Figure 3---figure supplement 1A).
 We could establish a homozygous line for both mutations indicating that NOS is not an essential gene in *Platynereis*.
-To quantify UV avoidance, we recorded the trajectories of freely swimming wild type and mutant larvae in vertical columns, illuminated laterally from two opposite sides with 395 nm UV light (Figure 3A and Figure 3---figure supplement 1B).
+To quantify UV avoidance, we recorded the trajectories of freely swimming wild type and mutant larvae in vertical columns, illuminated laterally from two opposite sides with 395 nm UV light (Figure 3A and Figure 3---figure supplement 1B, C).
 As previously shown, wild-type larvae swim downward following non-directional UV/violet light stimulation [@Veraszto2018].
-In contrast, both two- and three-day-old homozygous *NOS*-mutant larvae showed a strongly diminished UV-avoidance response (Figure 3A, B and Figure 3---figure supplement 1B, C).
+In contrast, both two- and three-day-old homozygous *NOS*-mutant larvae showed a significantly diminished UV-avoidance response (Figure 3B, C and Figure 3---figure supplement 1D, E).
 This phenotype is similar to the defective UV-avoidance of *c-opsin1* mutant larvae [@Veraszto2018] and reveals a requirement for NOS in UV-avoidance behaviour.
-Wild type but not mutant larvae also showed an increase in swimming speed under UV light that may be due to downward swimming trajectories (swimming in the direction of gravity) (Figure 3B and Figure 3---figure supplement 1C).
+Wild type but not mutant larvae also showed a significantly increase in swimming speed with an increase in ciliary beat frequency under UV light that may be due to downward swimming trajectories (swimming in the direction of gravity) (Figure 3---figure supplement 2).
 We also tested directional phototaxis, by exposing larvae to 480 nm directional collimated light from the top of the column.
-Three-day-old but not two-day-old *NOS*-mutant larvae also showed reduced phototactic behaviour, suggesting a function for *NOS* in the visual eyes that mediate three-day-old phototaxis [@Randel2014a] (Figure 3D and Figure 3---figure supplement 1G).
+Three-day-old but not two-day-old *NOS*-mutant larvae also showed reduced phototactic behaviour, suggesting a function for *NOS* in the visual eyes that mediate three-day-old phototaxis [@Randel2014a] (Figure 3D and Figure 3---figure supplement 1F).
 
 To distinguish between an acute and developmental function of NOS in light responses, we also tested larvae exposed to the NOS inhibitor L-NAME.
-Larvae incubated for 5 min in 0.1 mM or 1 mM L-NAME showed a dose-dependent inhibition of UV avoidance.
-In contrast, phototaxis was not affected (Figure 3C, E).
+Larvae incubated for 5 min in 0.1 mM or 1 mM L-NAME showed a dose-dependent inhibition of UV avoidance (Figure 3E, F).
+In contrast, phototaxis was not affected (Figure 3G).
 Overall, our results indicate an acute requirement for NOS signalling in UV-avoidance and a possible indirect, developmental role in the visual system, reminiscent of the function of NO signalling in *Drosophila* eye development [@Gibbs1998a].
 
-```{r echo=FALSE,fig.cap="**Figure 3. NOS is required for UV avoidance in *Platynereis* larvae.**  (**A**) Swimming trajectories of wild type (WT, n=32) and *NOS* mutant (*NOSΔ11/Δ11*, n=26 and *NOSΔ23/Δ23*, n=47) three-day-old larvae. All trajectories start at 0 x and y position and time 0 corresponding to 10 sec after the onset of 395 nm stimulation from the side. (**B**) Vertical position of batches of wild type and mutant three-day-old larvae over time under 395 nm UV stimulation. The starting position of each larval trajectory was set to 0. (**C**) Vertical position of batches of control and L-NAME-treated (0.1 and 1 mM) three-day-old larvae over time under 395 nm UV stimulation. The starting position of each larval trajectory was set to 0. (**D**) Vertical displacement in 30 sec bins of wild type and mutant (*NOSΔ11/Δ11* and *NOSΔ23/Δ23*) three-day-old larvae stimulated with 395 nm light from the side, 488 nm light from the top and 395 nm light from the top. (**E**) Vertical displacement in 30 sec bins of control and L-NAME-treated (0.1 and 1 mM) three-day-old larvae stimulated with 395 nm light from the side, 488 nm light from the top and 395 nm light from the top. <br> Figure 3 -- source data 1-5. Source data for panels A-E."}
+```{r echo=FALSE,fig.cap="**Figure 3. NOS is required for UV avoidance in *Platynereis* larvae.**  (**A**) Swimming trajectories of wild type (WT, n=32) and *NOS* mutant (*NOSΔ11/Δ11*, n=26 and *NOSΔ23/Δ23*, n=47) three-day-old larvae. All trajectories start at 0 x and y position and time 0 corresponding to 10 sec before the onset of 395 nm stimulation from the side. (**B**) Vertical position of batches of wild type and mutant three-day-old larvae over time under 395 nm UV stimulation. The starting position of each larval trajectory was set to 0. (**C**) Comparison of vertical position of wild type and mutant three-day-old larvae after 30 seconds of UV stimulation. One-way ANOVA with Dunnett’s multiple-comparison test are shown. The wild type (WT, n=32) and *NOS* mutant (*NOSΔ11/Δ11*, n=26 and *NOSΔ23/Δ23*, n=47) larvae. (**D**) Vertical displacement in 30 sec bins of wild type (10 batches) and mutant (*NOSΔ11/Δ11*, 5 batches and *NOSΔ23/Δ23*, 7 batches) three-day-old larvae stimulated with 395 nm light from the side, 488 nm light from the top and 395 nm light from the top. One-way ANOVA with Dunnett’s multiple-comparison test are shown. *P < 0.05. (**E**) Vertical position of batches of control and L-NAME-treated (0.1 and 1 mM) three-day-old larvae over time under 395 nm UV stimulation. The starting position of each larval trajectory was set to 0. (**F**) Comparison of vertical position of control (n=6) and L-NAME-treated (0.1 and 1 mM, n=6 each) three-day-old larvae after 30 seconds of UV stimulation. One-way ANOVA with Dunnett’s multiple-comparison test are shown. (**G**) Vertical displacement in 30 sec bins of control (15 batches) and L-NAME-treated (0.1 and 1 mM, 15 batches each) three-day-old larvae stimulated with 395 nm light from the side, 488 nm light from the top and 395 nm light from the top. One-way ANOVA with Dunnett’s multiple-comparison test are shown. *P < 0.05. <br> Figure 3 -- source data 1-5. Source data for panels A-E."}
 
 knitr::include_graphics(path = "figures/Fig3.png")
 
@@ -488,7 +489,7 @@ We ran CD-Hit [@Fu2012] to eliminate redundant sequences (at a 80% threshold).
 We aligned the sequences with MAFFT version 7, with the iterative refinement method E-INS-i [@Katoh2008].
 The alignment was trimmed with TrimAl in gappy-out mode [@Capella-Gutierrez2009].
 To calculate a maximum-likelihood tree, we used IQ-tree2 with the LG+G4 model with the following options: iqtree2 -s "FILENAME" -mset WAG, LG, Blosum62, Dayhoff, JTT, Poisson -B 1000 -alrt 1000 -T AUTO.
-Branch-support values are based on 1000 replicates with the ultrafast bootstrap approximation (UFBoot) [@Hoang2018] and aLRT-SH-like [@Guindon2010] methods. 
+Branch-support values are based on 1000 replicates with the ultrafast bootstrap approximation (UFBoot) [@Hoang2018] and aLRT-SH-like [@Guindon2010] methods.
 
 **Identification and Phylogenetic Analysis of NIT-GC sequences**
 
@@ -503,7 +504,6 @@ We aligned the sequences with MAFFT version 7, with the iterative refinement met
 The alignment was trimmed with TrimAl in gappy-out mode [@Capella-Gutierrez2009].
 To calculate a maximum-likelihood tree, we used IQ-tree2 with the LG+G4 model with the following options: iqtree2 -s "FILENAME" -mset WAG, LG, Blosum62, Dayhoff, JTT, Poisson -B 1000 -alrt 1000 -T AUTO.
 Branch-support values are based on 1000 replicates with the ultrafast bootstrap approximation (UFBoot) [@Hoang2018] and aLRT-SH-like [@Guindon2010] methods.
-
 
 **Single-cell analysis**
 
@@ -553,6 +553,12 @@ At 49-55 hours post fertilisation, larvae were immobilised in 2.5% agarose in ar
 Larvae were imaged at room temperature on a Zeiss LSM 880 with Airyscan (with a C-Apochromat 63X/1.2 Corr - water) with a frame rate of 1.88 frame/sec and an image size of 512 x 512 pixels.
 The larvae were stimulated in a region of interest (a circle with 50 pixel diameter) with a 405 nm laser controlled by the bleaching mode of the Zeiss software.
 The imaging laser had a similar intensity than the stimulus laser but covered an area that was 10 times larger than the stimulus ROI.
+
+**Ciliary beat frequency analysis**
+
+Larvae were imaged at room temperature on a Zeiss AxioObserver Z1 Microscope (Carl Zeiss Microscopy, Germany) with a C-Apochromat 10X lens, 850 nm power LED (OSRAM OSLON® Black, SFH 4716S) and filter sets equipped with a 405/40 ET excitation Bandpass, Beamsplitter dichroic mirror 495LPXR and without an emission filter with a IR camera (UI-3360CP-NIR-GL Rev.2, IDS Imaging Development Systems GmbH, Germany) frame rate of 200 frame/sec with 0.2 msec pulse controlled by the LED stroboscopic illumination system synchronized with the exposure signals from the camera (TYM-002, developed by Dr.Shoji A. Baba, Ochanomizu University, Otsuka, Japan) and an image size of 640 x 480 pixels.
+The larvae were stimulated with a 395 nm LED (M395L5, Thorlabs).
+Kymographs of the cilia obtained with a Fiji were used to measure the ciliary beat frequency.
 
 **cGMP production assay**
 
@@ -748,6 +754,7 @@ All scripts are available at <https://github.com/JekelyLab/Joukra_et_al_NOS> (co
 
 ## Acknowledgements
 
+We thank Dr. Cameron Hird, Adam Johnstone, Rebecca Turner and Jamie Haddon for animal husbandry, Dr. Corin Liddle for advice on calcium imaging, and Dr. Emelie Brodrick and Dr. Elizabeth Williams for critical reading of the manuscript.
 This work was funded by the Wellcome Trust (214337/Z/18/Z).
 This project has received funding from the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme (grant agreement No 101020792).
 KJ has been supported by a JSPS Overseas Research Fellowship, LAYG by a BBSRC Discovery fellowship (BB/W010305/1), PS by a Wellcome Trust Institutional Strategic Support Award (204909/Z/16/Z), and KCAW by the EPSRC Hub for Quantitive Modelling in Healthcare (EP/T017856/1).
@@ -770,13 +777,23 @@ knitr::include_graphics(path = "figures/Fig1_sup2.png")
 
 ```
 
-```{r echo=FALSE,fig.cap="**Figure 1 -- figure supplement 3. Synapse distribution in cPRCs and possynaptic interneurons** (**A**) Volume rendering of the four INNOS neurons with incoming and outgoing synapses. (**B**) Axo-dendritic splitting of the INNOS neurons. (**C**) Volume rendering of the four INRGW neurons with incoming and outgoing synapses. (**D**) Volume rendering of the four cPRC neurons with incoming and outgoing synapses. All images are anterior views. Asterisk marks the same position across images for reference. Grey speheres indicate the position of cell nuclei. NS plexus; neurosecretory plexus. The radius of INNOS nuclei is set to 2 µm for scale."}
+```{r echo=FALSE,fig.cap="**Figure 1 -- figure supplement 3. Synapse distribution in cPRCs and possynaptic interneurons** (**A**) Axo-dendritic splitting of the INNOS neurons. (**B**) Volume rendering of the four INRGW neurons with incoming and outgoing synapses. (**C**) Volume rendering of the four cPRC neurons with incoming and outgoing synapses. All images are anterior views. Asterisk marks the same position across images for reference. Grey speheres indicate the position of cell nuclei. NS plexus; neurosecretory plexus. The radius of INNOS nuclei is set to 2 µm for scale."}
 knitr::include_graphics(path = "figures/Fig1_sup3.png")
 
 ```
 
-```{r echo=FALSE,fig.cap="**Figure 3 -- figure supplement 1. Generation and behavioural characterisation of *NOS* CRISPR knockouts.** (**A**) Top: The domain organisation of *Platynereis* NOS protein and exon/intron structure of the *NOS* gene. Bottom: The genomic locus of *NOS* with the CRISPR target site, wild-type and knockout (NOSΔ11, NOSΔ23) sequences and predicted protein sequences. The PAM sequence is shown in grey, stop codons in red. (**B**) Swimming trajectories of wild type (WT, n=37) and *NOS* mutant (NOSΔ11/Δ11, n=18 and NOSΔ23/Δ23, n=8) two-day-old larvae. All trajectories start at 0 x and y position and time 0 corresponding to 10 sec after the onset of 395 nm stimulation from the side. (**C**)  Vertical displacement in 30 sec bins of wild type and mutant (NOSΔ11 and NOSΔ23) two-day-old larvae stimulated with 395 nm light from the side, 488 nm light from the top and 395 nm light from the top. (**D**) Vertical position of batches of wild type and mutant two-day-old larvae over time under 395 nm UV stimulation. The starting position of each larval trajectory was set to 0. (**E-G**) Swimming speed of batches of wild type and mutant two-day old (E) and three-day-old (F) larvae and L-NAME-treated (NOS inhibitor) three-day-old larvae under 395 nm UV stimulation. <br> Figure 3 -- figure suppmenet 1 -- source data 1-6. Source data for panels B-G."}
+```{r echo=FALSE,fig.cap="**Figure 2 -- figure supplement 1. Schematic diagrams of the UV stimulation experiment.** (**A**) Left: The larvae were embedded in 2% agarose seawater with the anterior side down. Right: Changes in DAF-FM fluorescence intensities were examined when the ciliary region of the cPRC was stimulated with a 405 nm laser."}
+knitr::include_graphics(path = "figures/Fig2_sup1.png")
+
+```
+
+```{r echo=FALSE,fig.cap="**Figure 3 -- figure supplement 1. Generation and behavioural characterisation of *NOS* CRISPR knockouts.** (**A**) Top: The domain organisation of *Platynereis* NOS protein and exon/intron structure of the *NOS* gene. Bottom: The genomic locus of *NOS* with the CRISPR target site, wild-type and knockout (NOSΔ11, NOSΔ23) sequences and predicted protein sequences. The PAM sequence is shown in grey, stop codons in red. (**B**) Schematic diagram of the set-up of the behavioural experiment. (**C**) Swimming trajectories of wild type (WT, n=37) and *NOS* mutant (NOSΔ11/Δ11, n=18 and NOSΔ23/Δ23, n=8) two-day-old larvae. All trajectories start at 0 x and y position and time 0 corresponding to 10 sec before the onset of 395 nm stimulation from the side. (**D**)  Vertical displacement in 30 sec bins of wild type (WT, n=37) and mutant (NOSΔ11/Δ11, n=18 and NOSΔ23/Δ23, n=8) two-day-old larvae stimulated with 395 nm light from the side, 488 nm light from the top and 395 nm light from the top. (**E**) Comparison of vertical position of wild type and mutant two-day-old larvae after 30 seconds of UV stimulation. One-way ANOVA with Dunnett’s multiple-comparison test are shown. The wild type (WT, n=52) and *NOS* mutant (*NOSΔ11/Δ11*, n=30 and *NOSΔ23/Δ23*, n=16) larvae. (**F**) Vertical position of batches of wild type (12 batches) and mutant (NOSΔ11/Δ11, 8 batches and NOSΔ23/Δ23, 3 batches) two-day-old larvae over time under 395 nm UV stimulation. The starting position of each larval trajectory was set to 0. One-way ANOVA with Dunnett’s multiple-comparison test are shown. *P < 0.05. <br> Figure 3 -- figure suppmenet 1 -- source data 1-6. Source data for panels B-G."}
 knitr::include_graphics(path = "figures/Fig3_sup1.png")
+
+```
+
+```{r echo=FALSE,fig.cap="**Figure 3 -- figure supplement 2. Generation and behavioural characterisation of *NOS* CRISPR knockouts.** (**A,B**) Swimming speed of batches of wild type and *NOS* mutant two-day-old (WT, n=37, NOSΔ11/Δ11, n=18 and NOSΔ23/Δ23, n=8) (A) and three-day-old (WT, n=32, *NOSΔ11/Δ11*, n=26 and *NOSΔ23/Δ23*, n=47) (B) larvae under 395 nm UV stimulation. (**C,D**) Mean swimming speed of wild type and *NOS* mutant two-day-old (WT, n=37, NOSΔ11/Δ11, n=18 and NOSΔ23/Δ23, n=8) (C) and three-day-old (WT, n=32, *NOSΔ11/Δ11*, n=26 and *NOSΔ23/Δ23*, n=47) (D) larvae during 10 seconds before (dark) and 10 seconds after the start of 395 nm UV stimulation (sideUV). Data points for the same larva are joined by lines. One-tailed paired t-test; p-values (‘***’ <0.001) are shown. (**E,F**) Average ciliary beat frequency of wild type and mutant two-day-old (E) and three-day-old (F) single larvae during 10 seconds before (gray) and 10 seconds after the start of 395 nm UV stimulation (purple). N=6 larvae each. Data points for the same larva are joined by lines. One-tailed paired t-test; p-values (‘**’ <0.01 or ‘*’ <0.05) are shown. <br> Figure 3 -- figure suppmenet 2 -- source data 1-6. Source data for panels B-G."}
+knitr::include_graphics(path = "figures/Fig3_sup2.png")
 
 ```
 
@@ -790,7 +807,7 @@ knitr::include_graphics(path = "figures/Fig4_sup2.png")
 
 ```
 
-```{r echo=FALSE,fig.cap="**Figure 4 -- figure supplement 3. Expression of NIT-GC1 and NIT-GC2 in the cPRCs** (**A**) HCR co-expression analysis of *NIT-GC1* (magenta) and *MLD/pedal-peptide-2 proneuropeptide* (green). Anterior view of a two-day-old larva. Nuclei were stained with DAPI (cyan). **(B, C)** Expression of *NIT-GC2* (magenta) detected by in situ HCR. Anterior (B) and ventral (C) views of a three-day-old larva. Nuclei were stained with DAPI (cyan). (**D**) Immunostaining for NIT-GC1 (magenta) and NOS (green). Anterior view of a two-day-old larva. Acetylated α-tubulin staining (blue) highlights the neuropil and cPRC cilia. **(E, F)** Immunostaining for NIT-GC1 (E) and NIT-GC2 (F) antibodies in larvae injected with NIT-GC1 (E) or NIT-GC2 (F) morpholinos. Acetylated α-tubulin staining (green) highlights the neuropil and cPRC cilia. Anterior view of a two-day-old larva."}
+```{r echo=FALSE,fig.cap="**Figure 4 -- figure supplement 3. Expression of NIT-GC1 and NIT-GC2 in the cPRCs** (**A**) HCR co-expression analysis of *NIT-GC1* (magenta) and *MLD/pedal-peptide-2 proneuropeptide* (green). Anterior view of a two-day-old larva. Nuclei were stained with DAPI (cyan). **(B, C)** Expression of *NIT-GC2* (magenta) detected by in situ HCR. Anterior (B) and ventral (C) views of a three-day-old larva. Nuclei were stained with DAPI (cyan). **(D, E)** Immunostaining for NIT-GC1 (D) and NIT-GC2 (E) antibodies in larvae injected with NIT-GC1 (D) or NIT-GC2 (E) morpholinos. Acetylated α-tubulin staining (green) highlights the neuropil and cPRC cilia. Anterior view of a two-day-old larva. (**F**) The fluorescence intensities of the NIT-GC1 or NIT-GC2 in the control and morphant (MO1 and MO2) larvae (n=6 each) were normalized to the Acetylated α-tubulin signals and plotted as a relative fluorescence. One-way ANOVA with Dunnett’s multiple-comparison test; p-values (‘***’ <0.001) are shown."}
 knitr::include_graphics(path = "figures/Fig4_sup3.png")
 
 ```

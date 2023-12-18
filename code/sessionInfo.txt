@@ -13,40 +13,38 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
- [1] shiny_1.7.4        ggbeeswarm_0.7.2   gridExtra_2.3      ggpubr_0.6.0      
- [5] PMCMRplus_1.9.9    multcomp_1.4-25    TH.data_1.1-2      MASS_7.3-60       
- [9] survival_3.5-5     mvtnorm_1.2-3      esquisse_1.1.2     scales_1.2.1      
-[13] tidygraph_1.2.3    rgexf_0.16.2       patchwork_1.1.2    webshot2_0.1.0    
-[17] visNetwork_2.1.2   networkD3_0.4      igraph_1.4.2       RColorBrewer_1.1-3
-[21] leiden_0.4.3       lubridate_1.9.2    forcats_1.0.0      stringr_1.5.0     
-[25] dplyr_1.1.2        purrr_1.0.1        readr_2.1.4        tidyr_1.3.0       
-[29] tibble_3.2.1       ggplot2_3.4.2      tidyverse_2.0.0    png_0.1-8         
-[33] cowplot_1.1.1      magick_2.7.4      
+ [1] ggbeeswarm_0.7.2   gridExtra_2.3      ggpubr_0.6.0       PMCMRplus_1.9.9   
+ [5] multcomp_1.4-25    TH.data_1.1-2      MASS_7.3-60        survival_3.5-5    
+ [9] mvtnorm_1.2-3      esquisse_1.1.2     scales_1.2.1       tidygraph_1.2.3   
+[13] rgexf_0.16.2       patchwork_1.1.2    webshot2_0.1.0     visNetwork_2.1.2  
+[17] networkD3_0.4      igraph_1.4.2       RColorBrewer_1.1-3 leiden_0.4.3      
+[21] lubridate_1.9.2    forcats_1.0.0      stringr_1.5.0      dplyr_1.1.2       
+[25] purrr_1.0.1        readr_2.1.4        tidyr_1.3.0        tibble_3.2.1      
+[29] ggplot2_3.4.2      tidyverse_2.0.0    png_0.1-8          cowplot_1.1.1     
+[33] magick_2.7.4      
 
 loaded via a namespace (and not attached):
-  [1] websocket_1.4.1     colorspace_2.1-0    ggsignif_0.6.4      ellipsis_0.3.2     
-  [5] rio_0.5.29          rprojroot_2.0.3     rstudioapi_0.14     farver_2.1.1       
-  [9] bit64_4.0.5         chromote_0.1.1      fansi_1.0.4         codetools_0.2-18   
- [13] splines_4.2.1       cachem_1.0.8        SuppDists_1.1-9.7   jsonlite_1.8.4     
- [17] broom_1.0.4         Rmpfr_0.9-3         servr_0.27          compiler_4.2.1     
- [21] backports_1.4.1     Matrix_1.6-3        fastmap_1.1.1       cli_3.6.1          
- [25] later_1.3.1         htmltools_0.5.5     tools_4.2.1         gmp_0.7-2          
- [29] gtable_0.3.3        glue_1.6.2          rappdirs_0.3.3      Rcpp_1.0.10        
- [33] carData_3.0-5       cellranger_1.1.0    jquerylib_0.1.4     vctrs_0.6.2        
- [37] writexl_1.4.2       nlme_3.1-162        xfun_0.39           ps_1.7.5           
- [41] openxlsx_4.2.5.2    timechange_0.2.0    mime_0.12           lifecycle_1.0.3    
- [45] rstatix_0.7.2       XML_3.99-0.14       zoo_1.8-12          vroom_1.6.3        
- [49] ragg_1.2.5          hms_1.1.3           promises_1.2.0.1    parallel_4.2.1     
- [53] sandwich_3.0-2      curl_5.0.0          memoise_2.0.1       reticulate_1.28    
- [57] datamods_1.4.0      sass_0.4.6          stringi_1.7.12      zip_2.3.0          
- [61] systemfonts_1.0.4   rlang_1.1.1         pkgconfig_2.0.3     lattice_0.20-45    
- [65] labeling_0.4.2      htmlwidgets_1.6.2   bit_4.0.5           processx_3.8.1     
- [69] tidyselect_1.2.0    here_1.0.1          magrittr_2.0.3      R6_2.5.1           
- [73] generics_0.1.3      multcompView_0.1-9  BWStest_0.2.3       mgcv_1.8-40        
- [77] pillar_1.9.0        haven_2.5.2         foreign_0.8-84      withr_2.5.0        
- [81] abind_1.4-5         reactable_0.4.4     crayon_1.5.2        car_3.1-2          
- [85] shinyWidgets_0.7.6  utf8_1.2.3          shinybusy_0.3.1     tzdb_0.3.0         
- [89] kSamples_1.2-10     grid_4.2.1          readxl_1.4.2        data.table_1.14.8  
- [93] digest_0.6.31       xtable_1.8-4        httpuv_1.6.11       textshaping_0.3.6  
- [97] munsell_0.5.0       viridisLite_0.4.2   beeswarm_0.4.0      vipor_0.4.5        
-[101] bslib_0.4.2         phosphoricons_0.1.2
+ [1] websocket_1.4.1     colorspace_2.1-0    ggsignif_0.6.4      ellipsis_0.3.2     
+ [5] rio_0.5.29          rprojroot_2.0.3     rstudioapi_0.14     chromote_0.1.1     
+ [9] fansi_1.0.4         codetools_0.2-18    splines_4.2.1       cachem_1.0.8       
+[13] knitr_1.42          SuppDists_1.1-9.7   jsonlite_1.8.4      broom_1.0.4        
+[17] Rmpfr_0.9-3         servr_0.27          shiny_1.7.4         compiler_4.2.1     
+[21] backports_1.4.1     Matrix_1.6-3        fastmap_1.1.1       cli_3.6.1          
+[25] later_1.3.1         htmltools_0.5.5     tools_4.2.1         gmp_0.7-2          
+[29] gtable_0.3.3        glue_1.6.2          rappdirs_0.3.3      Rcpp_1.0.10        
+[33] carData_3.0-5       cellranger_1.1.0    jquerylib_0.1.4     vctrs_0.6.2        
+[37] writexl_1.4.2       xfun_0.39           ps_1.7.5            openxlsx_4.2.5.2   
+[41] timechange_0.2.0    mime_0.12           lifecycle_1.0.3     rstatix_0.7.2      
+[45] XML_3.99-0.14       zoo_1.8-12          hms_1.1.3           promises_1.2.0.1   
+[49] sandwich_3.0-2      yaml_2.3.7          curl_5.0.0          memoise_2.0.1      
+[53] reticulate_1.28     datamods_1.4.0      sass_0.4.6          stringi_1.7.12     
+[57] zip_2.3.0           rlang_1.1.1         pkgconfig_2.0.3     evaluate_0.21      
+[61] lattice_0.20-45     htmlwidgets_1.6.2   processx_3.8.1      tidyselect_1.2.0   
+[65] here_1.0.1          magrittr_2.0.3      R6_2.5.1            multcompView_0.1-9 
+[69] generics_0.1.3      BWStest_0.2.3       pillar_1.9.0        haven_2.5.2        
+[73] foreign_0.8-84      withr_2.5.0         abind_1.4-5         reactable_0.4.4    
+[77] car_3.1-2           shinyWidgets_0.7.6  utf8_1.2.3          shinybusy_0.3.1    
+[81] tzdb_0.3.0          rmarkdown_2.21      kSamples_1.2-10     grid_4.2.1         
+[85] readxl_1.4.2        data.table_1.14.8   digest_0.6.31       xtable_1.8-4       
+[89] httpuv_1.6.11       munsell_0.5.0       beeswarm_0.4.0      vipor_0.4.5        
+[93] bslib_0.4.2         phosphoricons_0.1.2
