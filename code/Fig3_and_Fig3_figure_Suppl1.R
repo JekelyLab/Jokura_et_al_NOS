@@ -2438,6 +2438,23 @@ ggsave("pictures/CBF_3d_plot.png", limitsize = FALSE,
 panel_Architecture <- ggdraw() + draw_image(readPNG("pictures/NOS-Architecture.png"))
 panel_setup <- ggdraw() + draw_image(readPNG("pictures/vertical_experiment_setup.png"))
 
+#NOS mutant immunostaining
+panel_IHC_3d_NOS11 <- ggdraw() + draw_image(readPNG("pictures/IHC_3d_NOS11_7.png")) +
+  draw_label("IHC:", x = 0.16, y = 0.991, size = 10) +
+  draw_label(expression(paste('NOS'^'Δ11/Δ11')), x = 0.43, y = 0.999, size = 10) +
+  draw_label("NOS", x = 0.12, y = 0.91, color="magenta", size = 10, fontface="plain") +
+  draw_label("acTub", x = 0.33, y = 0.91, color="green", size = 10, fontface="plain") +
+  draw_line(x = c(0.04, 0.392), y = c(0.08, 0.08), color = "white", size = 0.5) +
+  draw_label(expression(paste("20 ", mu, "m")), x = 0.21, y = 0.11, color = "white", size = 8) 
+
+panel_IHC_3d_NOS23 <- ggdraw() + draw_image(readPNG("pictures/IHC_3d_NOS23_8.png")) +
+  draw_label("IHC:", x = 0.16, y = 0.991, size = 10) +
+  draw_label(expression(paste('NOS'^'Δ23/Δ23')), x = 0.43, y = 0.999, size = 10) +
+  draw_label("NOS", x = 0.12, y = 0.91, color="magenta", size = 10, fontface="plain") +
+  draw_label("acTub", x = 0.33, y = 0.91, color="green", size = 10, fontface="plain") +
+  draw_line(x = c(0.04, 0.392), y = c(0.08, 0.08), color = "white", size = 0.5) +
+  draw_label(expression(paste("20 ", mu, "m")), x = 0.21, y = 0.11, color = "white", size = 8) 
+  
 #Martin images
 panel_2d_vd <- ggdraw() + draw_image(readPNG("pictures/vertical_displacement_2dpf_WTvsNOSmix.png"))
 panel_3d_vd <- ggdraw() + draw_image(readPNG("pictures/vertical_displacement_3dpf_WTvsNOSmix.png"))
@@ -2513,31 +2530,23 @@ ggsave("Manuscript/figures/Fig3.pdf", limitsize = FALSE,
 
 
 
-
 layout_sup1 <- "
-AA#B#CCC
-#####CCC
-FFFF#CCC
-FFFF####
-FFFF#DDE
+A#B#C
 "
 
 Fig3_sup1 <-  
-  panel_Architecture + panel_setup + 
-  panel_2dpf_Tracking + 
-  panel_2dpf_TP + panel_2d_mTP +
-  panel_2d_vd +
+  panel_Architecture + panel_IHC_3d_NOS11 + panel_IHC_3d_NOS23 +
   patchwork::plot_layout(design = layout_sup1,
-                         widths = c(4.25,4.25,0.05,5.8,0.05,3.6,3.6,3.6), 
-                         heights = c(2.3,0.05,1.2,0.05,3.0)) + #we can change the heights of the rows in our layout (widths also can be defined)
+                         widths = c(2,0.05,1,0.05,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
 
 ggsave("Manuscript/figures/Fig3_sup1.png", limitsize = FALSE, 
-       units = c("px"), Fig3_sup1, width = 3000, height = 1570, bg='white')  
+       units = c("px"), Fig3_sup1, width = 2400, height = 680, bg='white')  
 
 ggsave("Manuscript/figures/Fig3_sup1.pdf", limitsize = FALSE, 
-       units = c("px"), Fig3_sup1, width = 3000, height = 1570)  
+       units = c("px"), Fig3_sup1, width = 2400, height = 680)  
+
 
 
 
@@ -2545,23 +2554,53 @@ ggsave("Manuscript/figures/Fig3_sup1.pdf", limitsize = FALSE,
 
 
 layout_sup2 <- "
+#AABBBB
+###BBBB
+#######
+#CCC#D#
+#######
+EEEEEEE
+"
+
+Fig3_sup2 <-  
+  panel_setup + panel_2dpf_Tracking + 
+  panel_2dpf_TP + panel_2d_mTP +
+  panel_2d_vd +
+  patchwork::plot_layout(design = layout_sup2,
+                         widths = c(0.1,0.4,0.4,0.3,0.1,0.6,0.1), 
+                         heights = c(0.8,0.1,0.1,1,0.01,1.6)) + #we can change the heights of the rows in our layout (widths also can be defined)
+  patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
+  ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
+
+ggsave("Manuscript/figures/Fig3_sup2.png", limitsize = FALSE, 
+       units = c("px"), Fig3_sup2, width = 1300, height = 1800, bg='white')  
+
+ggsave("Manuscript/figures/Fig3_sup2.pdf", limitsize = FALSE, 
+       units = c("px"), Fig3_sup2, width = 1300, height = 1800)  
+
+
+
+
+
+
+layout_sup3 <- "
 A#C#E
 #####
 B#D#F
 "
 
-Fig3_sup2 <-  
+Fig3_sup3 <-  
   panel_2dpf_TD + panel_3dpf_TD + 
   panel_2dpf_mTD + panel_3dpf_mTD + 
   panel_2d_CBF + panel_3d_CBF + 
-  patchwork::plot_layout(design = layout_sup2,
+  patchwork::plot_layout(design = layout_sup3,
                          widths = c(1,0.05,1,0.05,1), 
                          heights = c(1,0.05,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
 
-ggsave("Manuscript/figures/Fig3_sup2.png", limitsize = FALSE, 
-       units = c("px"), Fig3_sup2, width = 3000, height = 1300, bg='white')  
+ggsave("Manuscript/figures/Fig3_sup3.png", limitsize = FALSE, 
+       units = c("px"), Fig3_sup3, width = 3000, height = 1300, bg='white')  
 
-ggsave("Manuscript/figures/Fig3_sup2.pdf", limitsize = FALSE, 
-       units = c("px"), Fig3_sup2, width = 3000, height = 1300) 
+ggsave("Manuscript/figures/Fig3_sup3.pdf", limitsize = FALSE, 
+       units = c("px"), Fig3_sup3, width = 3000, height = 1300) 
