@@ -140,7 +140,7 @@ We have added statistical tests to the data in Figure 3.
 
 *Page 5: "Analysis of sGCs in Platynereis indicated that these genes are not expressed in any of the cells of the cPRC circuit (not shown and (Verasztó et al., 2017))." Hence the data is relevant; please provide this data in supplementary.*
 
-We re-analysed previous single-cell data (Achim et al., 2018) and found no sGC homologues detected in cPRC and INNOS. However, a few were detected in INRGW. Additions were made to the SUPPLEMENT data regarding these data and the text was also amended.
+We re-analysed previous single-cell data (Achim et al., 2018) and found no sGC homologues detected in cPRC and INNOS. However, a few were detected in INRGW. Additions were made to the supplement data regarding these data and the text was also amended.
 
 *Page 10: "Diagram of the mathematical model with the components, interactions, parameters and equations used to model Ca dynamics." It would be helpful to include a legend explaining the meaning of each term (e.g. what is K, Co, Cp etc) and arrow color. Additionally, the main text should provide detailed descriptions to aid understanding.*
 
