@@ -87,15 +87,15 @@ This delayed neuroendocrine feedback integrates UV/violet exposure to induce a s
 We identified a single *nitric oxide synthase* (*NOS*) gene in the *Platynereis dumerilii* genome and transcriptome data.
 Phylogenetic analysis of NOS proteins indicate that *Platynereis* NOS belongs to an orthology group of bilaterian NOS sequences (Figure 1---figure supplement 1).
 To characterise the expression pattern of *NOS*, we used in situ hybridization chain reaction (HCR) and transient transgenesis.
-In two- and three-day-old larvae, we detected *NOS* expression in four cells (two of them weakly expressing) in the apical organ region (Figure 1E and Figure 1---figure supplement 2).
-*NOS* was also expressed in the region of the visual eyes (adult eyes) and the pigmented eyespots (Figure 1---figure supplement 2).
-The four apical organ cells, but not the eyes, were also labelled with a *NOS* reporter construct driving palmitoylated tdTomato (Figure 1F).
+In two- and three-day-old larvae, we detected *NOS* expression in four cells (two of them weakly expressing) in the apical organ region (Figure 1E and Figure 1---figure supplement 2A, B).
+*NOS* was also expressed in the region of the visual eyes (adult eyes) and the pigmented eyespots (Figure 1---figure supplement 2A, B).
+The four apical organ cells, but not the eyes, were also labelled with an upstream promoter sequence of the *NOS* gene construct driving membrane-targeted palmitoylated tdTomato reporter (Figure 1F).
 This reporter also revealed the axonal projections of these central NOS-expressing neurons.
-The position and morphology of the four *NOS+* cells allowed us to identify the same four cells as four interneurons (INNOS) in our three-day-old whole-body *Platynereis* volume EM data [@williams2017; @veraszto2020] (Figure 1B,C).
+The position and morphology of the four *NOS+* cells allowed us to identify the same four cells as four interneurons (INNOS) in our three-day-old whole-body *Platynereis* volume EM data [@williams2017; @veraszto2020] (Figure 1C, D).
 In the synaptic connectome, the INNOS cells are postsynaptic to the UV-sensory cPRCs and presynaptic to the INRGWa interneurons (cholinergic neurons that strongly express RGW neuropeptide), which are also cPRC targets (Figure 1C, H).
-The projections of INNOS cells are segregated into input (dendritic) and output (axonal) compartments, with cPRC inputs occurring on the dendritic part in the dense neurosecretory plexus (Figure 1D).
-Immunostaining revealed that the localization of NOS at the protein level is concentrated in the dendrites of the input region even within INNOS (Figure 1G).
-INNOS output-synapses form in the more ventral projection region (Figure 1---figure supplement 3).
+The projections of INNOS cells are segregated into input (dendritic) and output (axonal) compartments, with cPRC inputs occurring on the dendritic part in the dense neurosecretory plexus (Figure 1D and Figure 1---figure supplement 3A).
+Immunostaining revealed that the localization of NOS at the protein level is more strongly concentrated in the dendrites of the input region even within INNOS (Figure 1G and Figure 1---figure supplement 2C).
+INNOS output-synapses form in the more ventral projection region (Figure 1D and Figure 1---figure supplement 3).
 INRGWa neurons synapse on the head serotonergic ciliomotor neurons (Ser-h1), which synapse on the cholinergic MC ciliomotor neuron and cells of the prototroch ciliary band (Figure 1C, H) [@veraszto2017].
 
 ```{r echo=FALSE,fig.cap="**Figure 1. Identification of *NOS*-expressing interneurons (INNOS) within the cPRC circuit.** **(A)** Scanning electron microscopy image of a three-day-old *Platynereis* larva. **(B, C)** Volume rendering of the neuron types (cPRC, INNOS, INRGWa, Ser-h1 and MC) in the cPRC circuit reconstructed from a whole-body transmission electron microscopy volume of a three-day-old larva. Neurite skeletons are shown with cell-body positions represented by spheres. Projections of all neurons in the body are shown in grey to highlight the neuropils. The outline of the yolk is also indicated in grey. In B, nuclei positions of the prototroch head ciliary band are shown as grey spheres. **(D)** Volume rendering of the four INNOS neurons with incoming and outgoing synapses. **(E)** Expression of the *NOS* gene detected by in situ HCR (magenta) in a two-day-old larva (anterior view). Antibody staining for acetylated α-tubulin (acTub: green) highlights cPRC cilia and the neuropil. **(F)** Expression of a *NOS* reporter (NOSp::palmi-3xHA; magenta) labelled with an anti-HA antibody in a two-day-old larva (anterior view). Antibody staining for acetylated α-tubulin (acTub; green) highlights cPRC cilia and the neuropil. **(G)** Immunostaining for NOS (magenta), co-stained for acetylated α-tubulin (acTub; green). **(H)** Synaptic wiring diagram of the cPRC circuit. Hexagons represent cell groups, with the number of cells per group shown in square brackets. Arrows represent the summed number of synaptic contacts between cell groups. Arrow thickness is proportional to the number of synapses."}
@@ -124,14 +124,14 @@ knitr::include_graphics(path = "figures/Fig2.png")
 We next tested whether NO signalling regulates UV/violet avoidance.
 To achieve this, we generated two *Platynereis* *NOS* knockout lines using the CRISPR/Cas9 method.
 We recovered two deletions (NOSΔ11/Δ11 and Δ23/Δ23), both frame-shift mutations leading to an early stop codon and thus likely representing null alleles (Figure 3---figure supplement 1A).
-We could establish a homozygous line for both mutations indicating that NOS is not an essential gene in *Platynereis*.
-To quantify UV avoidance, we recorded the trajectories of freely swimming wild type and mutant larvae in vertical columns, illuminated laterally from two opposite sides with 395 nm UV light (Figure 3A and Figure 3---figure supplement 1B, C).
+We could establish a homozygous line for both mutations indicating that NOS is not an essential gene in *Platynereis* (Figure 3---figure supplement 1B, C).
+To quantify UV avoidance, we recorded the trajectories of freely swimming wild type and mutant larvae in vertical columns, illuminated laterally from two opposite sides with 395 nm UV light (Figure 3A and Figure 3---figure supplement 2A, B).
 As previously shown, wild-type larvae swim downward following non-directional UV/violet light stimulation [@Veraszto2018].
-In contrast, both two- and three-day-old homozygous *NOS*-mutant larvae showed a significantly diminished UV-avoidance response (Figure 3B, C and Figure 3---figure supplement 1D, E).
+In contrast, both two- and three-day-old homozygous *NOS*-mutant larvae showed a significantly diminished UV-avoidance response (Figure 3B, C and Figure 3---figure supplement 1C, D).
 This phenotype is similar to the defective UV-avoidance of *c-opsin1* mutant larvae [@Veraszto2018] and reveals a requirement for NOS in UV-avoidance behaviour.
-Wild type but not mutant larvae also showed a significantly increase in swimming speed with an increase in ciliary beat frequency under UV light that may be due to downward swimming trajectories (swimming in the direction of gravity) (Figure 3---figure supplement 2).
-We also tested directional phototaxis, by exposing larvae to 480 nm directional collimated light from the top of the column.
-Three-day-old but not two-day-old *NOS*-mutant larvae also showed reduced phototactic behaviour, suggesting a function for *NOS* in the visual eyes that mediate three-day-old phototaxis [@Randel2014a] (Figure 3D and Figure 3---figure supplement 1F).
+Wild type but not mutant larvae also showed a significantly increase in swimming speed with an increase in ciliary beat frequency under UV light that may be due to downward swimming trajectories (swimming in the direction of gravity) (Figure 3---figure supplement 3).
+We also tested directional phototaxis, by exposing larvae to 480 nm directional collimated light from the top of the column (Figure 3---figure supplement 2A).
+Three-day-old but not two-day-old *NOS*-mutant larvae also showed reduced phototactic behaviour, suggesting a function for *NOS* in the visual eyes that mediate three-day-old phototaxis [@Randel2014a] (Figure 3D and Figure 3---figure supplement 1E).
 
 To distinguish between an acute and developmental function of NOS in light responses, we also tested larvae exposed to the NOS inhibitor L-NAME.
 Larvae incubated for 5 min in 0.1 mM or 1 mM L-NAME showed a dose-dependent inhibition of UV avoidance (Figure 3E, F).
@@ -161,7 +161,7 @@ We thus identified a requirement for NO signalling in the late-phase activation 
 Next we aimed to identify the NO receptor in the cPRCs.
 NO generally acts via soluble guanylate cyclases (sGC), belonging to the guanylate cyclase family with a CYC domain (PFAM domain: PF00211).
 NO binding to the heme group of sGC leads to increased cyclic guanosine monophosphate (cGMP) production.
-Analysis of sGCs in *Platynereis* indicated that these genes are not expressed in any of the cells of the cPRC circuit (not shown and [@veraszto2017]).
+Analysis of sGCs in *Platynereis* showed that these genes were not expressed in cPRC and INNOS in the cells of the cPRC circuit, but only in INRGW [@veraszto2017].
 Recently, Moroz and coworkers reported an atypical but widely conserved family of guanylate cyclases with a NIT (nitrite/nitrate sensing) domain (PF08376) (NIT-GC) as potential mediators of NO signalling [@Moroz2020].
 To identify NIT-GCs in *Platynereis*, we searched transcriptome resources and retrieved 15 potential NIT-GC homologs (Figure 4---figure supplement 1 and 2).
 To analyse the relationship of these sequences to metazoan NIT-GCs, we retrieved protein sequences with a CYC domain from the transcriptome and genome databases of 45 metazoan and 2 choanoflagellate species.
@@ -177,7 +177,6 @@ We decided to focus on two NIT-GCs expressed in the cPRCs and with a full-length
 To confirm the single-cell data, we first carried out in situ hybridisation chain reaction (HCR) with probes for *NIT-GC1* and *NIT-GC2* mRNA. Both genes were specifically expressed in the four cPRCs, as confirmed by co-labeling with an acetylated α-tubulin antibody and with an HCR probe against *pedal peptide 2/MLD proneuropeptide* (Figure 4C, D and Figure 4---figure supplement 3A-C).
 To analyse the subcellular localisation of NIT-GC1 and NIT-GC2 at the protein level, we raised and affinity-purified polyclonal antibodies against a specific peptide sequence from both proteins.
 In immunostainings, we found that NIT-GC1 was localise to the region corresponding to the axonal projections of the cPRCs in the anterior neurosecretory plexus (Figure 4E).
-Co-immunostaining with the rabbit NIT-GC1 antibody and a custom rat antibody raised against *Platynereis* NOS revealed the localisation of both proteins in dots in the neurosecretory neuropil (Figure 4---figure supplement 3D).
 In contrast, NIT-GC2 specifically labelled the ramified sensory cilia of the cPRCs (Figure 4F).
 These different subcellular localisations suggest that the two NIT-GCs are involved in different intracellular signalling processes in the ciliary and axonal regions of the cPRCs.
 
@@ -198,8 +197,8 @@ These results establish NIT-GC1 as a biochemical sensor of NO or its derivatives
 **NIT-GC1 is required for NO-mediated retrograde signalling to cPRCs during the UV response**
 
 To test the in vivo function of NIT-GC1 and NIT-GC2 in cPRC responses, we combined Ca^2+^ imaging with morpholino-mediated knockdowns.
-We used two translation-blocking morpholinos for each *NIT-GC* gene and tested knockdown efficiency by immunostaining injected animals with the NIT-GC1 and NIT-GC2 antibodies (Figure 4---figure supplement 3E,F).
-For both genes, the morpholinos led to a strong reduction in the respective antibody signal, confirming efficient knockdown and antibody specificity.
+We used two translation-blocking morpholinos for each *NIT-GC* gene and tested knockdown efficiency by immunostaining injected animals with the NIT-GC1 and NIT-GC2 antibodies (Figure 4---figure supplement 3D,E).
+For both genes, the morpholinos led to a strong reduction in the respective antibody signal, confirming efficient knockdown and antibody specificity (Figure 4---figure supplement 3F).
 
 In NIT-GC1 morphant larvae, the delayed activation of cPRCs following 405 nm stimulation did not occur (Figure 4M).
 This phenotype is similar to the phenotype of *NOS* mutants suggesting that NIT-GC1 acts as the NO sensor in cPRCs to drive their delayed activation.
