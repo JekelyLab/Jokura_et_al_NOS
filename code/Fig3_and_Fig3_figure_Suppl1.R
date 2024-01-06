@@ -613,7 +613,7 @@ WTvsNOS_2d %>%
     "dark_30", "dark_60", "dark_90", "dark_120", "dark_150",
     "dark3_30", "dark3_60", "dark3_90", "dark3_120", "dark3_150", "dark3_180"))) %>%
   filter(genotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
-  write_csv("source_data/Figure3_supplement1_source_data2.csv")
+  write_csv("source_data/Figure3_supplement2_source_data4.csv")
 
 
 # save plot ---------------------------------------------------------------
@@ -1505,7 +1505,7 @@ L_NAME_3d %>%
   filter(!(condition %in% c(
     "dark_30", "dark_60", "dark_90", "dark_120", "dark_150",
     "dark3_30", "dark3_60", "dark3_90", "dark3_120", "dark3_150", "dark3_180"))) %>%
-  write_csv("source_data/Figure3_source_data5.csv")
+  write_csv("source_data/Figure3_source_data7.csv")
 
 
 # save plot ---------------------------------------------------------------
@@ -1550,7 +1550,7 @@ df_2d_nor %>%
 # save to source data-------------------------------------------------------
 
 df_2d_nor %>%
-  write_csv("source_data/Figure3_supplement1_source_data1.csv")
+  write_csv("source_data/Figure3_supplement2_source_data1.csv")
 
 
 
@@ -1639,7 +1639,7 @@ df_2d_nor %>%
 df_2d_nor %>%
   filter(sec > 0 & sec <= 40) %>%
   filter(Genotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
-  write_csv("source_data/Figure3_supplement1_source_data3.csv")
+  write_csv("source_data/Figure3_supplement2_source_data2.csv")
 
 
 # save plot ---------------------------------------------------------------
@@ -1650,8 +1650,11 @@ ggsave("pictures/vertical_tracking_position_sideUV_2d.png", limitsize = FALSE,
 # statistics analysis of the 2d tracking mean vertical position (side UV after 30sec)--------------------------------------
 
 #Change the name to perform the Dunnett
-df_2d_nor_stat <- df_2d_nor %>% 
-  mutate(Genotype = ifelse(Genotype == "WT", "cont", Genotype))
+df_2d_nor_stat <- df_2d_nor %>%
+  mutate(Genotype = case_when(
+    Genotype == "WT" ~ "cont",
+    TRUE ~ Genotype
+  ))
 
 df_2d_nor_stat <- df_2d_nor_stat %>%
   filter(!(Genotype %in% "NOS11x23")) %>%
@@ -1699,10 +1702,8 @@ ggplot(df_2d_nor_stat) +
 
 # save to source data-------------------------------------------------------
 
-#df_2d_nor %>%
-#  filter(sec > 0 & sec <= 40) %>%
-#  filter(Genotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
-#  write_csv("source_data/Figure3_supplement1_source_data3.csv")
+df_2d_nor_stat %>%
+  write_csv("source_data/Figure3_supplement2_source_data3.csv")
 
 
 # save plot ---------------------------------------------------------------
@@ -1758,8 +1759,11 @@ ggsave("pictures/vertical_tracking_position_sideUV_3d.png", limitsize = FALSE,
 # statistics analysis of the 3d tracking mean vertical position (side UV after 30sec)--------------------------------------
 
 #Change the name to perform the Dunnett
-df_3d_nor_stat <- df_3d_nor %>% 
-  mutate(Genotype = ifelse(Genotype == "WT", "cont", Genotype))
+df_3d_nor_stat <- df_3d_nor %>%
+  mutate(Genotype = case_when(
+    Genotype == "WT" ~ "cont",
+    TRUE ~ Genotype
+  ))
 
 df_3d_nor_stat <- df_3d_nor_stat %>%
   filter(!(Genotype %in% "NOS11x23")) %>%
@@ -1816,10 +1820,8 @@ ggplot(df_3d_nor_stat) +
 
 # save to source data-------------------------------------------------------
 
-#df_3d_nor %>%
-#  filter(sec > 0 & sec <= 40) %>%
-#  filter(Genotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
-#  write_csv("source_data/Figure3_source_data2.csv")
+df_3d_nor_stat %>%
+  write_csv("source_data/Figure3_source_data3.csv")
 
 
 # save plot ---------------------------------------------------------------
@@ -1856,7 +1858,7 @@ df_L_NAME_tracking %>%
 # save to source data-------------------------------------------------------
 
 df_L_NAME_tracking %>%
-  write_csv("source_data/Figure3_source_data3.csv")
+  write_csv("source_data/Figure3_source_data5.csv")
 
 
 
@@ -1916,8 +1918,8 @@ ggplot(df_L_NAME_stat) +
 
 # save to source data-------------------------------------------------------
 
-#df_L_NAME_tracking %>%
-#  write_csv("source_data/Figure3_source_data3.csv")
+df_L_NAME_stat %>%
+  write_csv("source_data/Figure3_source_data6.csv")
 
 
 
@@ -1967,7 +1969,7 @@ df_2d_nor %>%
 df_2d_nor %>%
   filter(sec > 0 & sec <= 40) %>%
   filter(Genotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
-  write_csv("source_data/Figure3_supplement1_source_data4.csv")
+  write_csv("source_data/Figure3_supplement3_source_data1.csv")
 
 
 # save plot -------------------------------------------------------------------------------------------
@@ -2061,10 +2063,12 @@ df_2d_nor_speeed_mean %>%
 
 # save to source data-------------------------------------------------------
 
-#df_2d_nor %>%
-#  filter(sec > 0 & sec <= 40) %>%
-#  filter(Genotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
-#  write_csv("source_data/Figure3_supplement1_source_data4.csv")
+df_2d_nor_speeed_mean %>% 
+  mutate(genotype_label = case_when(Genotype == "WT" ~ label[1], # replace "a" with "label[i]"
+                                    Genotype == "NOS11x11" ~ label[2], # ditto
+                                    Genotype == "NOS23x23" ~ label[3]),
+         genotype_label = factor(genotype_label, levels = label)) %>% 
+  write_csv("source_data/Figure3_supplement3_source_data3.csv")
 
 
 # save plot -------------------------------------------------------------------------------------------
@@ -2108,7 +2112,7 @@ df_3d_nor %>%
 df_3d_nor %>%
   filter(sec > 0 & sec <= 40) %>%
   filter(Genotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
-  write_csv("source_data/Figure3_supplement1_source_data5.csv")
+  write_csv("source_data/Figure3_supplement3_source_data2.csv")
 
 
 # save plot ---------------------------------------------------------------
@@ -2204,10 +2208,12 @@ df_3d_nor_speeed_mean %>%
 
 # save to source data-------------------------------------------------------
 
-#df_3d_nor %>%
-#  filter(sec > 0 & sec <= 40) %>%
-#  filter(Genotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
-#  write_csv("source_data/Figure3_supplement1_source_data5.csv")
+df_3d_nor_speeed_mean %>% 
+  mutate(genotype_label = case_when(Genotype == "WT" ~ label[1], # replace "a" with "label[i]"
+                                    Genotype == "NOS11x11" ~ label[2], # ditto
+                                    Genotype == "NOS23x23" ~ label[3]),
+         genotype_label = factor(genotype_label, levels = label)) %>%
+  write_csv("source_data/Figure3_supplement3_source_data4.csv")
 
 
 # save plot ---------------------------------------------------------------
@@ -2245,13 +2251,13 @@ df_L_NAME_tracking %>%
 
 # save to source data-------------------------------------------------------
 
-df_L_NAME_tracking %>%
-  write_csv("source_data/Figure3_supplement1_source_data6.csv")
+#df_L_NAME_tracking %>%
+#  write_csv("source_data/Figure3_supplement1_source_data6.csv")
 
 
 # save plot ---------------------------------------------------------------
-ggsave("pictures/vertical_tracking_distanse_sideUV_L_NAME.png", limitsize = FALSE, 
-       units = c("px"), width = 1600, height = 1000, bg='white')
+#ggsave("pictures/vertical_tracking_distanse_sideUV_L_NAME.png", limitsize = FALSE, 
+#       units = c("px"), width = 1600, height = 1000, bg='white')
 
 
 
@@ -2331,10 +2337,6 @@ df_L_NAME_nor_speeed_mean %>%
                      label = "p.signif", 
                      paired=TRUE)
 
-
-
-
-
 # save to source data-------------------------------------------------------
 
 #df_L_NAME_tracking %>%
@@ -2342,8 +2344,8 @@ df_L_NAME_nor_speeed_mean %>%
 
 
 # save plot ---------------------------------------------------------------
-ggsave("pictures/vertical_tracking_mean_speed_L_NAME.png", limitsize = FALSE, 
-       units = c("px"), width = 1600, height = 1000, bg='white')
+#ggsave("pictures/vertical_tracking_mean_speed_L_NAME.png", limitsize = FALSE, 
+#       units = c("px"), width = 1600, height = 1000, bg='white')
 
 
 
@@ -2371,7 +2373,7 @@ CBF %>%
              strip.position = "bottom",
              labeller = label_parsed) +  
   theme_minimal() +
-  ylim(7, 21) +
+  ylim(5, 21) +
   labs(fill = "two-day-old", x = "", y = "ciliary beat frequency [Hz]") +
   theme(strip.placement = "outside",
         strip.background = element_blank(),
@@ -2388,6 +2390,16 @@ CBF %>%
 # save plot ---------------------------------------------------------------
 ggsave("pictures/CBF_2d_plot.png", limitsize = FALSE, 
        units = c("px"), width = 1600, height = 1000, bg='white')
+
+# save to source data-------------------------------------------------------
+
+CBF %>%
+  filter(age %in% c("2days")) %>% 
+  mutate(genotype_label = case_when(type == "WT" ~ label[1], # replace "a" with "label[i]"
+                                    type == "NOSΔ11/Δ11" ~ label[2], # ditto
+                                    type == "NOSΔ23/Δ23" ~ label[3]),
+         genotype_label = factor(genotype_label, levels = label)) %>%
+  write_csv("source_data/Figure3_supplement3_source_data5.csv")
 
 # CBF_3d --------------------------------------------------------------------
 
@@ -2427,8 +2439,13 @@ ggsave("pictures/CBF_3d_plot.png", limitsize = FALSE,
 
 # save to source data-------------------------------------------------------
 
-#df_L_NAME_tracking %>%
-#  write_csv("source_data/Figure3_supplement1_source_data6.csv")
+CBF %>%
+  filter(age %in% c("3days")) %>% 
+  mutate(genotype_label = case_when(type == "WT" ~ label[1], # replace "a" with "label[i]"
+                                    type == "NOSΔ11/Δ11" ~ label[2], # ditto
+                                    type == "NOSΔ23/Δ23" ~ label[3]),
+         genotype_label = factor(genotype_label, levels = label)) %>%
+  write_csv("source_data/Figure3_supplement3_source_data6.csv")
 
 
 # assemble figure ---------------------------------------------------------
@@ -2475,10 +2492,10 @@ panel_3d_mTP <- ggdraw() + draw_image(readPNG("pictures/Vertical displacement_me
 panel_3dpf_TD <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_distanse_sideUV_3d.png"))
 panel_3dpf_mTD <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_mean_speed_3d.png"))
 
-panel_L_NAME_TP <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_position_sideUV_L_NAME.png"))
-panel_3d_L_NAME_mTP <- ggdraw() + draw_image(readPNG("pictures/Vertical displacement_mean_L_NAME_statics.png"))
-panel_L_NAME_TD <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_distanse_sideUV_L_NAME.png"))
-panel_L_NAME_mTD <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_mean_speed_L_NAME.png"))
+#panel_L_NAME_TP <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_position_sideUV_L_NAME.png"))
+#panel_3d_L_NAME_mTP <- ggdraw() + draw_image(readPNG("pictures/Vertical displacement_mean_L_NAME_statics.png"))
+#panel_L_NAME_TD <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_distanse_sideUV_L_NAME.png"))
+#panel_L_NAME_mTD <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_mean_speed_L_NAME.png"))
 
 #CBF images
 panel_2d_CBF <- ggdraw() + draw_image(readPNG("pictures/CBF_2d_plot.png"))

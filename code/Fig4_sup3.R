@@ -94,8 +94,8 @@ summary(glht(aov(y_NIT2 ~ vx_NIT2),
 
 # save to source data-------------------------------------------------------
 
-#df_L_NAME_tracking %>%
-#  write_csv("source_data/Figure3_supplement1_source_data6.csv")
+immuno_NIT %>%
+  write_csv("source_data/Figure4_supplement3_source_data1.csv")
 
 
 # save plot ---------------------------------------------------------------

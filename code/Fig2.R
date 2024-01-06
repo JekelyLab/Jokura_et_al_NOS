@@ -22,13 +22,13 @@ DAFFM <- rbind(long_cPRC, long_NC)
 #sample size control
 DAFFM %>%
   filter(stimuli=='NC') %>%
-  select(sample) %>%
+  dplyr::select(sample) %>%
   unique()
 
 #sample size cPRC
 DAFFM %>%
   filter(stimuli=='cPRC') %>%
-  select(sample) %>%
+  dplyr::select(sample) %>%
   unique()
 DAFFM
 

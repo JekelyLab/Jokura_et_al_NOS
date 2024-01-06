@@ -93,4 +93,4 @@ ggsave("Manuscript/figures/Fig1_sup2.png", limitsize = FALSE,
        units = c("px"), Fig1_sup2, width = 1800, height = 688, bg='white') 
 
 ggsave("Manuscript/figures/Fig1_sup2.pdf", limitsize = FALSE, 
-       units = c("px"), Fig1_sup2, width = 1200, height = 688)  
+       units = c("px"), Fig1_sup2, width = 1800, height = 688)  
