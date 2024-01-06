@@ -292,9 +292,9 @@ The model allowed us to systematically vary stimulus conditions that would not h
 We found that delayed activation occurs only for UV stimulation of sufficient amplitude and duration (Figure 7).
 This suggests an integratory function of NO signalling to tune circuit output to the strength of UV exposure.
 
-```{r echo=FALSE,fig.cap="**Figure 7. Magnitude of cPRC activation as  a function of stimulus duration and intensity.** Median values of the $AUP$ are presented as a heatmap with dark blue indicating flat $C_P(t)$ traces with median $AUP$ close to 0 and red indicating that the $C_P(t)$ traces have a clearly defined delayed activation peak. "}
+```{r echo=FALSE,fig.cap="**Figure 7. Comparison of the magnitude of cPRC activation as a function of stimulus duration and intensity.** (**A**) Change in magnitude calculated from mathematical models. Median values of the $AUP$ are presented as a heatmap with dark blue indicating flat $C_P(t)$ traces with median $AUP$ close to 0 and red indicating that the $C_P(t)$ traces have a clearly defined delayed activation peak. (**B**) Change in magnitude calculated from experiments data. The amount of change in cPRC fluorescence intensity (ΔF/F0) when the laser power (%) and time duration (seconds) of the stimulus are varied using calcium imaging. Laser power is shown as relative values. "}
 
-knitr::include_graphics(path = "figures/Fig7.svg")
+knitr::include_graphics(path = "figures/Fig7.png")
 ```
 
 ## Discussion
