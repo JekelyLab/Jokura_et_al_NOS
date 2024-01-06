@@ -30,6 +30,7 @@ This study reports the discovery of a new circuit mechanism for light-avoidance 
 
 *Weaknesses: While I appreciate the intent of bringing together a large set of measurements from connectomics and calcium imaging in the framework of a model, the model seemed rather poorly constrained. How many parameters are in the model shown in Figure 6A? How many of them are well constrained by experimental measurements? The authors also don't perform sensitivity analysis on the parameters of the model. And ultimately, the conclusion over the model in Figure 7 is somewhat trivial within the unitless construction: larger amplitude and longer duration stimuli lead to increased activation of the downstream neuron thought to lead to the downward swim behavior. I could imagine that a large family of models would arrive at this same result, and without units, there is no way to really test it with new behavioral experiments.*
 
+
 **Reviewer #3 (Public Review):**
 
 *The transition from planktonic to benthic depends upon several physical and chemical cues. Nitric oxide (NO) is known as a critical player in the induction of larval metamorphosis in several invertebrates. Although NO is a widespread signalling molecule in a broad range of organisms regulating key physiological processes, internal regulatory mechanisms studies are scarce. While the UV sensing in larvae of the annelid Platynereis dumerilii using ciliary photoreceptors has been studied, the neuronal signalling mechanism remains unknown. In this study, Kei Jokura et al. investigated how annelid Platynereis dumerilii larvae detect UV sensing and modulate swimming behaviour through nitric oxide feedback. Using existing resources of Platynereis larval connectome/volume EM data, they identified NOS-expressing interneurons within the ciliary photoreceptors circuit (cPRCs). They demonstrated that NO is produced in cPRCs during UV/violet stimulation by using a fluorescent NO-reporter line. Further, they demonstrated that Nitric oxide signalling mediates UV-avoidance behaviour by using NOS-mutant larvae. Finally, they mapped out the signalled mechanisms of the cPRC circuit using published spatially mapped single-cell transcriptome data of Platynereis larvae, the Ca sensor lines, in situ HCR, and immunostaining. Additionally, by using their findings from Ca imagining data of cPRC, INNOS and INRGWa cells collected in wild-type, NOS knockout and NIT-GC2 morphant larvae, Kei Jokura et al. developed a mixed cellular-circuit-level mathematical model. However, my expertise in mathematical modelling is limited, so I cannot comment on this section.*
@@ -96,6 +97,8 @@ Recommendations for the authors: please note that you control which revisions to
 
 9)  *Related to Figure 7, how do the larvae respond to a sequence of UV light (e.g. ten times 0.5s ON and 0.5 OFF) or ramping up/down UV light? Can the model make any predictions?*
 
+    We performed new experiments, both in the mathematical model and in real calcium imaging, changing the amplitude and duration of UV stimulation. The results are shown in Figure 7A and B.
+
 10) *What are the knock down efficiency of NOS and NIT-GC morpholnio?*
 
     We compared the fluorescence intensity in immunostaining of each morphant larvae and added a graph to Figure 4---supplement 3F.
@@ -150,4 +153,10 @@ We re-analysed previous single-cell data (Achim et al., 2018) and found no sGC h
 
 *Page 12: "This activated state is maintained for several tens of second." Can authors point out the data?*
 
+In Figure4A and B, it can be seen that cPRC activity continues after UV stimulation.
+
 *Page 13: "In the Platynereis circuit, our mathematical model indicates that the magnitude of the NO-dependent signal depends on the intensity and duration of the UV/violet stimulus." Did the authors conduct experiments of various intensity and duration apart from modelling? If not, such experiments should be carried out to validate the mathematical model.*
+
+We have performed a new calcium imaging experiment: a plot of the change in calcium levels in the cPRC when changing the power and duration of the UV stimulus is added in Figure7B.
+
+
