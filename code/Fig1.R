@@ -19,8 +19,11 @@ connectome_neuron = nlapply(read.neurons.catmaid("^connectome_neuron$", pid=11),
                  function(x) smooth_neuron(x, sigma=6000))
 MC = nlapply(read.neurons.catmaid("^celltype9$", pid=11),
                function(x) smooth_neuron(x, sigma=6000))
+NS = nlapply(read.neurons.catmaid("^neurosecretory_plexus$", pid=11),
+             function(x) smooth_neuron(x, sigma=6000))
 prototroch = nlapply(read.neurons.catmaid("^celltype_non_neuronal3$", pid=11),
              function(x) smooth_neuron(x, sigma=6000))
+
 
 {
 plot_background()
@@ -80,6 +83,32 @@ plot3d(outline, WithConnectors = F, WithNodes = F, soma=F, lwd=2,
 rgl.snapshot("pictures/INNOS_Catmaid_ventr.png")
 close3d()
 }
+
+
+# plot INNOS with connectors -------------
+
+# extract connectors to be able to plot them by unique colours
+INNOS_conn <- connectors(INNOS)
+presyn_INNOS <- INNOS_conn[INNOS_conn$prepost == 0, ]
+postsyn_INNOS <- INNOS_conn[INNOS_conn$prepost == 1, ]
+
+
+
+plot_background()
+clear3d()
+# plot only the presyn connectors
+#for reference, plot neuropil
+plot3d(NS, soma = FALSE, lwd = 1, 
+       alpha = 0.06, col = 'black')
+plot3d(INNOS, WithConnectors = FALSE, soma = T, lwd=c(3,2,3.5,3), alpha = c(0.2,0.3,0.4,0.5), col = Okabe_Ito[8])
+plot3d(presyn_INNOS$x, presyn_INNOS$y, presyn_INNOS$z, size = 15, alpha = 1, col = "#E69F00", add = T)
+plot3d(postsyn_INNOS$x, postsyn_INNOS$y, postsyn_INNOS$z, size = 15, alpha = 1, col = "#0072B2", add = T)
+par3d(zoom=0.33)
+#adjust clipping
+clipplanes3d(0, 1, 0, -30000)
+#make snapshot
+rgl.snapshot("pictures/INNOS_synapses.png")
+close3d()
 
 # get connectivity from CATMAID and plot network --------------------------
 {
