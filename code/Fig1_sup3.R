@@ -88,7 +88,7 @@ close3d()
 
 
 # assemble figure ---------------------------------------------------------
-INNOS_img <- readPNG("pictures/INNOS_synapses.png")
+
 INNOS_split <- readPNG("pictures/INNOS_axon_dendrite_split.png")
 
 cPRC_img <- readPNG("pictures/cPRC_synapses.png")
@@ -97,31 +97,28 @@ INRGW_img <- readPNG("pictures/INRGW_synapses.png")
 #read png convert to image panel
 arrow <- data.frame(x1 = 0.95, x2 = 0.95, y1 = 0.8, y2 = 0.9)
 
-panel_INNOS <- ggdraw() + 
-  draw_image(INNOS_img) +
+panel_INNOS_split <- ggdraw() + 
+  draw_image(INNOS_split) +
   draw_label("INNOS", x = 0.3, y = 0.99, size = 10) +
-  draw_label("NS plexus", x = 0.485, y = 0.59, size = 8) +
-  draw_label("outgoing", x = 0.9, y = 0.45, size = 10, color='#E69F00') +
-  draw_label("incoming", x = 0.89, y = 0.5, size = 10, color='#0072B2') +
+  draw_label("dendrite", x = 0.8, y = 0.45, size = 10, color='grey40') +
+  draw_label("axon", x = 0.75, y = 0.22, size = 10, color='grey20') +
+  draw_label("*", x = 0.52, y = 0.28, color='black',size = 18,fontface='plain') +
   draw_label("D", x = 0.95, y = 0.93, size = 6) +
   draw_label("V", x = 0.95, y = 0.77, size = 6) +
-  draw_label("*", x = 0.5, y = 0.29, color='black',size = 18,fontface='plain') +
   geom_segment(aes(x = x1, y = y1, xend = x2, yend = y2), data = arrow, 
                arrow = arrow(ends = "both", type = "closed", length = unit(0.1,"cm")),
                lineend = "butt",
                linejoin = "mitre",
                arrow.fill = "black", size = 0.2)
 
-panel_INNOS_split <- ggdraw() + 
-  draw_image(INNOS_split) +
-  draw_label("INNOS", x = 0.3, y = 0.99, size = 10) +
-  draw_label("dendrite", x = 0.8, y = 0.45, size = 10, color='grey40') +
-  draw_label("axon", x = 0.75, y = 0.22, size = 10, color='grey20') +
-  draw_label("*", x = 0.52, y = 0.28, color='black',size = 18,fontface='plain') 
 panel_INRGW <- ggdraw() + 
   draw_image(INRGW_img) +
   draw_label("*", x = 0.5, y = 0.29, color='black',size = 18,fontface='plain') +
-  draw_label("INRGW", x = 0.3, y = 0.99, size = 10)
+  draw_label("INRGW", x = 0.3, y = 0.99, size = 10) +
+  draw_label("NS plexus", x = 0.485, y = 0.59, size = 8) +
+  draw_label("outgoing", x = 0.9, y = 0.45, size = 10, color='#E69F00') +
+  draw_label("incoming", x = 0.89, y = 0.5, size = 10, color='#0072B2') +
+  draw_label("*", x = 0.5, y = 0.29, color='black',size = 18,fontface='plain')
 
 panel_cPRC <- ggdraw() + 
   draw_image(cPRC_img) +

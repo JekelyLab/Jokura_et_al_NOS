@@ -82,36 +82,26 @@ panel_UV_stimulation  <- ggdraw() + draw_image(readPNG("pictures/UV_stimulation.
 #combine panels into Figure and save final figure as pdf and png
 #panels of different sizes
 layout <- "
-A#B#C
+AAAA#B
+######
+C#DDDD
 "
 
-Fig2 <- panel_DAF + panel_DAFFM_intensity + panel_DAFFM + 
+Fig2 <- panel_UV_stimulation + panel_DAF + panel_DAFFM_intensity + panel_DAFFM + 
   patchwork::plot_layout(design = layout, 
-                         widths = c(0.5,0.05,0.28,0.025,0.95)) + #we can change the heights of the rows in our layout (widths also can be defined)
+                         heights = c(1, 0.05, 1), 
+                         widths = c(0.5,0.1,0.5,0.5,0.1,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, 
                                          face='plain')) #or 'bold', 'italic'
 
 ggsave("Manuscript/figures/Fig2.png", limitsize = FALSE, 
-       units = c("px"), Fig2, width = 3000, height = 950, bg='white')
+       units = c("px"), Fig2, width = 2000, height = 1700, bg='white')
 
 ggsave("Manuscript/figures/Fig2.pdf", limitsize = FALSE, 
-       units = c("px"), Fig2, width = 3000, height = 950)  
+       units = c("px"), Fig2, width = 2000, height = 1700)  
   
 
 
-
-layout_sup1 <- "
-A
-"
-Fig2_sup1 <- panel_UV_stimulation +
-  patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
-  ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'bold', 'italic'
-
-ggsave("Manuscript/figures/Fig2_sup1.png", limitsize = FALSE, 
-       units = c("px"), Fig2_sup1, width = 1200, height = 850, bg='white')
-
-ggsave("Manuscript/figures/Fig2_sup1.pdf", limitsize = FALSE, 
-       units = c("px"), Fig2_sup1, width = 1200, height = 850)  
 
 

@@ -37,6 +37,11 @@ df_L_NAME_tracking <- read_csv("data/230511_df_L_NAME.csv")
 }
 
 
+df_2d_nor$Genotype = factor(df_2d_nor$Genotype, levels=c("WT", "NOS11x11", "NOS23x23", "NOS11x23"))
+df_3d_nor$Genotype = factor(df_3d_nor$Genotype, levels=c("WT", "NOS11x11", "NOS23x23", "NOS11x23"))
+
+label <- c("WT", "NOS^'Δ11/Δ11'", "NOS^'Δ23/Δ23'")
+
 
 # tidying Martin data (30 sec bins, vertical displacement)------------------------------------------------
 
@@ -134,7 +139,7 @@ WTvsNOS_2d %>%
                expression('NOS'^'Δ23/Δ23'))) +
   theme_minimal()+
   theme_plot +
-  labs(fill = "genotype", x = "time [s]", y = "Vertical displacement [mm/s]")+
+  labs(fill = "two-day-old", x = "time [s]", y = "Vertical displacement [mm/s]")+
   scale_y_continuous(limits = c(-0.46, 0.56)) +
   scale_x_discrete(labels=c("30", "60", "90", 
                             "30", "60", "90","120",
@@ -655,7 +660,7 @@ WTvsNOS_3d %>%
                expression('NOS'^'Δ23/Δ23'))) +
   theme_minimal()+
   theme_plot +
-  labs(fill = "genotype", x = "time [s]", y = "Vertical displacement [mm/s]")+
+  labs(fill = "three-day-old", x = "time [s]", y = "Vertical displacement [mm/s]")+
   scale_y_continuous(limits = c(-0.81, 0.5)) +
   scale_x_discrete(labels=c("30", "60", "90", 
                            "30", "60", "90","120",
@@ -663,28 +668,41 @@ WTvsNOS_3d %>%
                            "30", "60", "90","120",
                            "30", "60", "90","120",
                            "30", "60", "90","120")) +
-  annotate("text", x=5.255, y=0.07, label="*", color="black", size = 5, fontface="plain") +
+  annotate("text", x=4, y=-0.09, label="*", color="black", size = 5, fontface="plain") +
+  annotate("text", x=4.255, y=-0.01, label="*", color="black", size = 5, fontface="plain") +
+  annotate("text", x=5, y=0, label="*", color="black", size = 5, fontface="plain") +
+  annotate("text", x=5.255, y=0.07, label="**", color="black", size = 5, fontface="plain") +
   annotate("text", x=6, y=0, label="*", color="black", size = 5, fontface="plain") +
-  annotate("text", x=6.255, y=0.1, label="*", color="black", size = 5, fontface="plain") +
+  annotate("text", x=6.255, y=0.1, label="**", color="black", size = 5, fontface="plain") +
   annotate("text", x=7, y=0.015, label="*", color="black", size = 5, fontface="plain") +
   annotate("text", x=7.255, y=0.06, label="*", color="black", size = 5, fontface="plain") +
+  
+  annotate("text", x=8, y=-0.09, label="*", color="black", size = 5, fontface="plain") +
   annotate("text", x=9, y=-0.03, label="*", color="black", size = 5, fontface="plain") +
   annotate("text", x=9.255, y=-0.1, label="*", color="black", size = 5, fontface="plain") +
   annotate("text", x=10, y=-0.03, label="*", color="black", size = 5, fontface="plain") +
   annotate("text", x=10.255, y=-0.08, label="*", color="black", size = 5, fontface="plain") +
-  annotate("text", x=13, y=0.22, label="*", color="black", size = 5, fontface="plain") +
-  annotate("text", x=13.255, y=0.23, label="*", color="black", size = 5, fontface="plain") +
+  
+  
   annotate("text", x=14, y=0.23, label="*", color="black", size = 5, fontface="plain") +
-  annotate("text", x=14.255, y=0.2, label="*", color="black", size = 5, fontface="plain") +
   annotate("text", x=15, y=0.24, label="*", color="black", size = 5, fontface="plain") +
   annotate("text", x=15.255, y=0.23, label="*", color="black", size = 5, fontface="plain") +
-  annotate("text", x=16.255, y=-0.14, label="*", color="black", size = 5, fontface="plain") +
+  
   annotate("text", x=17, y=-0.06, label="*", color="black", size = 5, fontface="plain") +
   annotate("text", x=18, y=0.13, label="*", color="black", size = 5, fontface="plain") +
   annotate("text", x=19.255, y=-0.11, label="*", color="black", size = 5, fontface="plain") +
+  
+  annotate("text", x=21, y=0.185, label="*", color="black", size = 5, fontface="plain") +
   annotate("text", x=21.255, y=0.26, label="*", color="black", size = 5, fontface="plain") +
+  annotate("text", x=22, y=0.14, label="*", color="black", size = 5, fontface="plain") +
   annotate("text", x=22.255, y=0.2, label="*", color="black", size = 5, fontface="plain") +
-  annotate("text", x=23.255, y=0.115, label="*", color="black", size = 5, fontface="plain")
+  annotate("text", x=23, y=0.1, label="*", color="black", size = 5, fontface="plain") +
+  annotate("text", x=23.255, y=0.11, label="*", color="black", size = 5, fontface="plain")
+
+#Signif. codes: 
+#‘**’ 0.001
+#‘*’ 0.05
+#(Adjusted p values reported -- single-step method)
 
 
 
@@ -702,9 +720,9 @@ vx_3d_dark_180 = factor(WTvsNOS_3d_dark_180_stat$genotype)
 y_axis_3d_dark_180 = WTvsNOS_3d_dark_180_stat$displacement
 summary(glht(aov(y_axis_3d_dark_180 ~ vx_3d_dark_180),
              linfct = mcp(vx_3d_dark_180 = "Dunnett")))
-#                     Estimate Std. Error t value Pr(>|t|)  
-#NOS11x11 - cont == 0 -0.02205    0.04792  -0.460    0.867
-#NOS23x23 - cont == 0 -0.00755    0.04311  -0.175    0.979
+#                     Estimate Std. Error t value Pr(>|t|)
+#NOS11x11 - cont == 0  0.05983    0.05225   1.145    0.435
+#NOS23x23 - cont == 0  0.07433    0.04770   1.558    0.238
 
 
 
@@ -720,9 +738,9 @@ vx_3d_dark_210 = factor(WTvsNOS_3d_dark_210_stat$genotype)
 y_axis_3d_dark_210 = WTvsNOS_3d_dark_210_stat$displacement
 summary(glht(aov(y_axis_3d_dark_210 ~ vx_3d_dark_210),
              linfct = mcp(vx_3d_dark_210 = "Dunnett")))
-#                      Estimate Std. Error t value Pr(>|t|)
-#NOS11x11 - cont == 0 -0.009536   0.048179  -0.198    0.974
-#NOS23x23 - cont == 0 -0.009426   0.043348  -0.217    0.968
+#                     Estimate Std. Error t value Pr(>|t|)
+#NOS11x11 - cont == 0  0.06769    0.04821   1.404    0.302
+#NOS23x23 - cont == 0  0.06780    0.04401   1.541    0.245
 
 
 
@@ -739,8 +757,8 @@ y_axis_3d_dark_240 = WTvsNOS_3d_dark_240_stat$displacement
 summary(glht(aov(y_axis_3d_dark_240 ~ vx_3d_dark_240),
              linfct = mcp(vx_3d_dark_240 = "Dunnett")))
 #                     Estimate Std. Error t value Pr(>|t|)
-#NOS11x11 - cont == 0  0.01091    0.04044   0.270    0.952
-#NOS23x23 - cont == 0 -0.01301    0.03638  -0.358    0.917
+#NOS11x11 - cont == 0  0.07371    0.03882   1.898    0.134
+#NOS23x23 - cont == 0  0.04978    0.03544   1.405    0.302
 
 
 
@@ -756,9 +774,9 @@ vx_3d_sideUV_30 = factor(WTvsNOS_3d_sideUV_30_stat$genotype)
 y_axis_3d_sideUV_30 = WTvsNOS_3d_sideUV_30_stat$displacement
 summary(glht(aov(y_axis_3d_sideUV_30 ~ vx_3d_sideUV_30),
              linfct = mcp(vx_3d_sideUV_30 = "Dunnett")))
-#                     Estimate Std. Error t value Pr(>|t|)  
-#NOS11x11 - cont == 0  0.00761    0.05164   0.147    0.985
-#NOS23x23 - cont == 0  0.02305    0.04646   0.496    0.848
+#                     Estimate Std. Error t value Pr(>|t|)   
+#NOS11x11 - cont == 0  0.10625    0.03731   2.847  0.02176 * 
+#NOS23x23 - cont == 0  0.12169    0.03406   3.573  0.00485 **
 
 
 
@@ -776,9 +794,9 @@ vx_3d_sideUV_60 = factor(WTvsNOS_3d_sideUV_60_stat$genotype)
 y_axis_3d_sideUV_60 = WTvsNOS_3d_sideUV_60_stat$displacement
 summary(glht(aov(y_axis_3d_sideUV_60 ~ vx_3d_sideUV_60),
              linfct = mcp(vx_3d_sideUV_60 = "Dunnett")))
-#                     Estimate Std. Error t value Pr(>|t|)  
-#NOS11x11 - cont == 0  0.12660    0.06018   2.104  0.09052 . 
-#NOS23x23 - cont == 0  0.18060    0.05415   3.335  0.00674 **
+#                     Estimate Std. Error t value Pr(>|t|)    
+#NOS11x11 - cont == 0  0.17857    0.04992   3.577 0.004803 ** 
+#NOS23x23 - cont == 0  0.23257    0.04557   5.103 0.000207 ***
 
 
 
@@ -798,9 +816,9 @@ vx_3d_sideUV_90 = factor(WTvsNOS_3d_sideUV_90_stat$genotype)
 y_axis_3d_sideUV_90 = WTvsNOS_3d_sideUV_90_stat$displacement
 summary(glht(aov(y_axis_3d_sideUV_90 ~ vx_3d_sideUV_90),
              linfct = mcp(vx_3d_sideUV_90 = "Dunnett")))
-#                     Estimate Std. Error t value Pr(>|t|)  
-#NOS11x11 - cont == 0  0.16654    0.06867   2.425  0.04787 * 
-#NOS23x23 - cont == 0  0.23347    0.06179   3.779  0.00248 **
+#                     Estimate Std. Error t value Pr(>|t|)    
+#NOS11x11 - cont == 0  0.19427    0.06391   3.040 0.014675 *  
+#NOS23x23 - cont == 0  0.26120    0.05834   4.477 0.000736 ***
 
 
 
@@ -820,9 +838,9 @@ vx_3d_sideUV_120 = factor(WTvsNOS_3d_sideUV_120_stat$genotype)
 y_axis_3d_sideUV_120 = WTvsNOS_3d_sideUV_120_stat$displacement
 summary(glht(aov(y_axis_3d_sideUV_120 ~ vx_3d_sideUV_120),
              linfct = mcp(vx_3d_sideUV_120 = "Dunnett")))
-#                     Estimate Std. Error t value Pr(>|t|)  
-#NOS11x11 - cont == 0  0.17793    0.06337   2.808  0.02146 * 
-#NOS23x23 - cont == 0  0.21252    0.05702   3.727  0.00278 **
+#                     Estimate Std. Error t value Pr(>|t|)   
+#NOS11x11 - cont == 0  0.19383    0.06182   3.135  0.01205 * 
+#NOS23x23 - cont == 0  0.22843    0.05643   4.048  0.00179 **
 
 
 
@@ -843,8 +861,8 @@ y_axis_3d_dark1_30 = WTvsNOS_3d_dark1_30_stat$displacement
 summary(glht(aov(y_axis_3d_dark1_30 ~ vx_3d_dark1_30),
              linfct = mcp(vx_3d_dark1_30 = "Dunnett")))
 #                     Estimate Std. Error t value Pr(>|t|)  
-#NOS11x11 - cont == 0  0.08979    0.03832   2.343   0.0565 .
-#NOS23x23 - cont == 0  0.07077    0.03447   2.053   0.0997 .
+#NOS11x11 - cont == 0  0.07119    0.02814   2.530   0.0411 *
+#NOS23x23 - cont == 0  0.05218    0.02569   2.031   0.1061
 
 
 
@@ -861,8 +879,8 @@ y_axis_3d_dark1_60 = WTvsNOS_3d_dark1_60_stat$displacement
 summary(glht(aov(y_axis_3d_dark1_60 ~ vx_3d_dark1_60),
              linfct = mcp(vx_3d_dark1_60 = "Dunnett")))
 #                     Estimate Std. Error t value Pr(>|t|)  
-#NOS11x11 - cont == 0  0.16124    0.05571   2.894   0.0178 *
-#NOS23x23 - cont == 0  0.13311    0.05013   2.655   0.0297 *
+#NOS11x11 - cont == 0  0.11774    0.03722   3.163   0.0114 *
+#NOS23x23 - cont == 0  0.08962    0.03398   2.638   0.0332 *
 
 
 #3d_dark1_90
@@ -877,9 +895,9 @@ vx_3d_dark1_90 = factor(WTvsNOS_3d_dark1_90_stat$genotype)
 y_axis_3d_dark1_90 = WTvsNOS_3d_dark1_90_stat$displacement
 summary(glht(aov(y_axis_3d_dark1_90 ~ vx_3d_dark1_90),
              linfct = mcp(vx_3d_dark1_90 = "Dunnett")))
-#                     Estimate Std. Error t value Pr(>|t|)  
-#NOS11x11 - cont == 0  0.13698    0.04839   2.831   0.0204 *
-#NOS23x23 - cont == 0  0.11273    0.04354   2.589   0.0341 *
+#                     Estimate Std. Error t value Pr(>|t|)   
+#NOS11x11 - cont == 0  0.10218    0.02915   3.505  0.00558 **
+#NOS23x23 - cont == 0  0.07793    0.02661   2.929  0.01844 *
 
 
 #3d_dark1_120
@@ -894,9 +912,9 @@ vx_3d_dark1_120 = factor(WTvsNOS_3d_dark1_120_stat$genotype)
 y_axis_3d_dark1_120 = WTvsNOS_3d_dark1_120_stat$displacement
 summary(glht(aov(y_axis_3d_dark1_120 ~ vx_3d_dark1_120),
              linfct = mcp(vx_3d_dark1_120 = "Dunnett")))
-#                     Estimate Std. Error t value Pr(>|t|)  
-#NOS11x11 - cont == 0  0.05740    0.04081   1.407    0.303
-#NOS23x23 - cont == 0  0.04036    0.03672   1.099    0.468
+#                     Estimate Std. Error t value Pr(>|t|)
+#NOS11x11 - cont == 0  0.03844    0.03137   1.225    0.391
+#NOS23x23 - cont == 0  0.02139    0.02864   0.747    0.686
 
 
 
@@ -913,9 +931,9 @@ vx_3d_top488_30 = factor(WTvsNOS_3d_top488_30_stat$genotype)
 y_axis_3d_top488_30 = WTvsNOS_3d_top488_30_stat$displacement
 summary(glht(aov(y_axis_3d_top488_30 ~ vx_3d_top488_30),
              linfct = mcp(vx_3d_top488_30 = "Dunnett")))
-#                     Estimate Std. Error t value Pr(>|t|)  
-#NOS11x11 - cont == 0 -0.069110   0.057840  -1.195    0.412
-#NOS23x23 - cont == 0 -0.007043   0.052041  -0.135    0.988
+#                      Estimate Std. Error t value Pr(>|t|)
+#NOS11x11 - cont == 0 -0.009818   0.066586  -0.147    0.985
+#NOS23x23 - cont == 0  0.052249   0.060785   0.860    0.612
 
 
 #3d_top488_60
@@ -930,9 +948,9 @@ vx_3d_top488_60 = factor(WTvsNOS_3d_top488_60_stat$genotype)
 y_axis_3d_top488_60 = WTvsNOS_3d_top488_60_stat$displacement
 summary(glht(aov(y_axis_3d_top488_60 ~ vx_3d_top488_60),
              linfct = mcp(vx_3d_top488_60 = "Dunnett")))
-#                     Estimate Std. Error t value Pr(>|t|)  
-#NOS11x11 - cont == 0 -0.15649    0.04496  -3.480  0.00486 **
-#NOS23x23 - cont == 0 -0.09932    0.04046  -2.455  0.04503 *
+#                     Estimate Std. Error t value Pr(>|t|)
+#NOS11x11 - cont == 0 -0.09884    0.06210  -1.592    0.226
+#NOS23x23 - cont == 0 -0.04167    0.05669  -0.735    0.694
 
 
 
@@ -950,8 +968,8 @@ y_axis_3d_top488_90 = WTvsNOS_3d_top488_90_stat$displacement
 summary(glht(aov(y_axis_3d_top488_90 ~ vx_3d_top488_90),
              linfct = mcp(vx_3d_top488_90 = "Dunnett")))
 #                     Estimate Std. Error t value Pr(>|t|)  
-#NOS11x11 - cont == 0 -0.19197    0.03517  -5.459 5.69e-05 ***
-#NOS23x23 - cont == 0 -0.16189    0.03164  -5.117 0.000121 ***
+#NOS11x11 - cont == 0 -0.14050    0.05550  -2.531   0.0410 *
+#NOS23x23 - cont == 0 -0.11042    0.05067  -2.179   0.0807 .
 
 
 
@@ -968,9 +986,9 @@ vx_3d_top488_120 = factor(WTvsNOS_3d_top488_120_stat$genotype)
 y_axis_3d_top488_120 = WTvsNOS_3d_top488_120_stat$displacement
 summary(glht(aov(y_axis_3d_top488_120 ~ vx_3d_top488_120),
              linfct = mcp(vx_3d_top488_120 = "Dunnett")))
-#                     Estimate Std. Error t value Pr(>|t|)  
-#NOS11x11 - cont == 0 -0.16933    0.03795  -4.462 0.000525 ***
-#NOS23x23 - cont == 0 -0.19211    0.03414  -5.627 3.95e-05 ***
+#                     Estimate Std. Error t value Pr(>|t|)   
+#NOS11x11 - cont == 0 -0.12906    0.04718  -2.735  0.02730 * 
+#NOS23x23 - cont == 0 -0.15185    0.04307  -3.525  0.00535 **
 
 
 
@@ -986,9 +1004,9 @@ vx_3d_dark2_30 = factor(WTvsNOS_3d_dark2_30_stat$genotype)
 y_axis_3d_dark2_30 = WTvsNOS_3d_dark2_30_stat$displacement
 summary(glht(aov(y_axis_3d_dark2_30 ~ vx_3d_dark2_30),
              linfct = mcp(vx_3d_dark2_30 = "Dunnett")))
-#                     Estimate Std. Error t value Pr(>|t|)  
-#NOS11x11 - cont == 0 -0.10109    0.07245  -1.395   0.3088  
-#NOS23x23 - cont == 0 -0.20197    0.06519  -3.098   0.0114 *
+#                     Estimate Std. Error t value Pr(>|t|)
+#NOS11x11 - cont == 0 -0.04947    0.08611  -0.574    0.796
+#NOS23x23 - cont == 0 -0.15035    0.07861  -1.913    0.131
 
 
 
@@ -1005,8 +1023,8 @@ y_axis_3d_dark2_60 = WTvsNOS_3d_dark2_60_stat$displacement
 summary(glht(aov(y_axis_3d_dark2_60 ~ vx_3d_dark2_60),
              linfct = mcp(vx_3d_dark2_60 = "Dunnett")))
 #                     Estimate Std. Error t value Pr(>|t|)  
-#NOS11x11 - cont == 0  0.12968    0.05208   2.490   0.0419 *
-#NOS23x23 - cont == 0 -0.05428    0.04686  -1.158   0.4328  
+#NOS11x11 - cont == 0  0.13238    0.04234   3.127   0.0123 *
+#NOS23x23 - cont == 0 -0.05159    0.03865  -1.335   0.3346  
 
 
 
@@ -1023,8 +1041,8 @@ y_axis_3d_dark2_90 = WTvsNOS_3d_dark2_90_stat$displacement
 summary(glht(aov(y_axis_3d_dark2_90 ~ vx_3d_dark2_90),
              linfct = mcp(vx_3d_dark2_90 = "Dunnett")))
 #                     Estimate Std. Error t value Pr(>|t|)  
-#NOS11x11 - cont == 0  0.12341    0.04572   2.699    0.027 *
-#NOS23x23 - cont == 0 -0.05830    0.04114  -1.417    0.299
+#NOS11x11 - cont == 0  0.10880    0.03875   2.808   0.0236 *
+#NOS23x23 - cont == 0 -0.07291    0.03537  -2.061   0.1004
 
 
 
@@ -1040,9 +1058,9 @@ vx_3d_dark2_120 = factor(WTvsNOS_3d_dark2_120_stat$genotype)
 y_axis_3d_dark2_120 = WTvsNOS_3d_dark2_120_stat$displacement
 summary(glht(aov(y_axis_3d_dark2_120 ~ vx_3d_dark2_120),
              linfct = mcp(vx_3d_dark2_120 = "Dunnett")))
-#                     Estimate Std. Error t value Pr(>|t|)  
-#NOS11x11 - cont == 0  0.08498    0.03955   2.149    0.083 .
-#NOS23x23 - cont == 0 -0.08941    0.03559  -2.512    0.040 *
+#                     Estimate Std. Error t value Pr(>|t|)   
+#NOS11x11 - cont == 0  0.06004    0.03647   1.647  0.20644   
+#NOS23x23 - cont == 0 -0.11435    0.03329  -3.435  0.00646 **
 
 
 
@@ -1058,9 +1076,9 @@ vx_3d_top395_30 = factor(WTvsNOS_3d_top395_30_stat$genotype)
 y_axis_3d_top395_30 = WTvsNOS_3d_top395_30_stat$displacement
 summary(glht(aov(y_axis_3d_top395_30 ~ vx_3d_top395_30),
              linfct = mcp(vx_3d_top395_30 = "Dunnett")))
-#                     Estimate Std. Error t value Pr(>|t|)  
-#NOS11x11 - cont == 0  0.04214    0.04201   1.003    0.527
-#NOS23x23 - cont == 0  0.02282    0.03779   0.604    0.784
+#                     Estimate Std. Error t value Pr(>|t|)
+#NOS11x11 - cont == 0  0.05976    0.04662   1.282    0.361
+#NOS23x23 - cont == 0  0.04044    0.04256   0.950    0.553
 
 
 #3d_top395_60
@@ -1075,9 +1093,9 @@ vx_3d_top395_60 = factor(WTvsNOS_3d_top395_60_stat$genotype)
 y_axis_3d_top395_60 = WTvsNOS_3d_top395_60_stat$displacement
 summary(glht(aov(y_axis_3d_top395_60 ~ vx_3d_top395_60),
              linfct = mcp(vx_3d_top395_60 = "Dunnett")))
-#                     Estimate Std. Error t value Pr(>|t|)  
-#NOS11x11 - cont == 0  0.18607    0.09986   1.863   0.1416  
-#NOS23x23 - cont == 0  0.22600    0.08985   2.515   0.0398 *
+#                     Estimate Std. Error t value Pr(>|t|)   
+#NOS11x11 - cont == 0  0.21245    0.08207   2.589  0.03662 * 
+#NOS23x23 - cont == 0  0.25238    0.07492   3.369  0.00742 **
 
 
 
@@ -1094,9 +1112,9 @@ vx_3d_top395_90 = factor(WTvsNOS_3d_top395_90_stat$genotype)
 y_axis_3d_top395_90 = WTvsNOS_3d_top395_90_stat$displacement
 summary(glht(aov(y_axis_3d_top395_90 ~ vx_3d_top395_90),
              linfct = mcp(vx_3d_top395_90 = "Dunnett")))
-#                     Estimate Std. Error t value Pr(>|t|)  
-#NOS11x11 - cont == 0   0.2864     0.1336   2.144   0.0838 .
-#NOS23x23 - cont == 0   0.3468     0.1202   2.884   0.0182 *
+#                     Estimate Std. Error t value Pr(>|t|)   
+#NOS11x11 - cont == 0   0.3206     0.1161   2.762  0.02588 * 
+#NOS23x23 - cont == 0   0.3809     0.1060   3.595  0.00462 **
 
 
 
@@ -1113,9 +1131,9 @@ vx_3d_top395_120 = factor(WTvsNOS_3d_top395_120_stat$genotype)
 y_axis_3d_top395_120 = WTvsNOS_3d_top395_120_stat$displacement
 summary(glht(aov(y_axis_3d_top395_120 ~ vx_3d_top395_120),
              linfct = mcp(vx_3d_top395_120 = "Dunnett")))
-#                     Estimate Std. Error t value Pr(>|t|)  
-#NOS11x11 - cont == 0   0.2956     0.1338   2.210   0.0736 .
-#NOS23x23 - cont == 0   0.3663     0.1203   3.044   0.0128 *
+#                     Estimate Std. Error t value Pr(>|t|)   
+#NOS11x11 - cont == 0   0.3189     0.1124   2.837  0.02220 * 
+#NOS23x23 - cont == 0   0.3896     0.1026   3.797  0.00303 **
 
 
 
@@ -1517,25 +1535,28 @@ ggsave("pictures/vertical_displacement_3dpf_L_NAME.png", limitsize = FALSE,
 
 # plot 2d Tracking ---------------------------------------------------------------------
 
-df_2d_nor$Genotype = factor(df_2d_nor$Genotype, levels=c("WT", "NOS11x11", "NOS23x23", "NOS11x23"))
 
-label <- c("WT", "NOS^'Δ11/Δ11'", "NOS^'Δ23/Δ23'")
+gradient_dark <- rev(grey.colors(5))
+gradient_UV <- rev(viridis(15))
 
 df_2d_nor %>%
   filter(Genotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
-  mutate(genotype_label = case_when(Genotype == "WT" ~ label[1], # replace "a" with "label[i]"
-                                    Genotype == "NOS11x11" ~ label[2], # ditto
+  mutate(genotype_label = case_when(Genotype == "WT" ~ label[1], 
+                                    Genotype == "NOS11x11" ~ label[2], 
                                     Genotype == "NOS23x23" ~ label[3]),
          genotype_label = factor(genotype_label, levels = label)) %>%
-  ggplot(aes(x = x_axis, y = y_axis, colour = sec)) +
-  geom_point(size = 0.1) +
-  scale_color_viridis_c(option = "plasma", direction = -1) +
+  ggplot() +
+  aes(x = x_axis, y = y_axis, color = Condition, group = Condition) +
+  geom_point(df_2d_nor = subset(df_2d_nor, Condition == "dark"), aes(colour = sec), size = 0.1) +  
+  geom_point(df_2d_nor = subset(df_2d_nor, Condition == "sideUV"), aes(colour = sec), size = 0.1) +  
+  scale_color_gradientn(name = "time [sec]",
+                        colours = c(gradient_dark, gradient_UV),
+                        breaks = c(0, 10, 20, 30, 40),
+                        labels = c("0","10", "20","30","40")) +
   labs(x = "x movement [mm]", 
-       y = "y movement [mm]", 
-       color = "time [s]") +
+       y = "y movement [mm]") +
   theme_minimal() +
   coord_fixed() +
-  theme_plot +
   theme(axis.title = element_text(size=16),
         axis.text.x = element_text(size = 11, angle = 0),
         axis.text.y = element_text(size = 11),
@@ -1545,6 +1566,7 @@ df_2d_nor %>%
   scale_x_continuous(breaks = c(-10, 0, 10)) +
   facet_wrap(vars(genotype_label),
              labeller = label_parsed)
+
 
 
 # save to source data-------------------------------------------------------
@@ -1562,25 +1584,25 @@ ggsave("pictures/vertical_tracking_sideUV_2d.png", limitsize = FALSE,
 
 # plot 3d Tracking ---------------------------------------------------------------------
 
-df_3d_nor$Genotype = factor(df_3d_nor$Genotype, levels=c("WT", "NOS11x11", "NOS23x23", "NOS11x23"))
-
-label <- c("WT", "NOS^'Δ11/Δ11'", "NOS^'Δ23/Δ23'")
 
 df_3d_nor %>%
   filter(Genotype %in% c("WT", "NOS11x11", "NOS23x23")) %>%
-  mutate(genotype_label = case_when(Genotype == "WT" ~ label[1], # replace "a" with "label[i]"
-                                    Genotype == "NOS11x11" ~ label[2], # ditto
+  mutate(genotype_label = case_when(Genotype == "WT" ~ label[1], 
+                                    Genotype == "NOS11x11" ~ label[2], 
                                     Genotype == "NOS23x23" ~ label[3]),
          genotype_label = factor(genotype_label, levels = label)) %>%
-  ggplot(aes(x = x_axis, y = y_axis, colour = sec)) +
-  geom_point(size = 0.1) +
-  scale_color_viridis_c(option = "plasma", direction = -1) +
+  ggplot() +
+  aes(x = x_axis, y = y_axis, color = Condition, group = Condition) +
+  geom_point(df_3d_nor = subset(df_3d_nor, Condition == "dark"), aes(colour = sec), size = 0.1) +  
+  geom_point(df_3d_nor = subset(df_3d_nor, Condition == "sideUV"), aes(colour = sec), size = 0.1) +  
+  scale_color_gradientn(name = "time [sec]",
+                        colours = c(gradient_dark, gradient_UV),
+                        breaks = c(0, 10, 20, 30, 40),
+                        labels = c("0","10", "20","30","40")) +
   labs(x = "x movement [mm]", 
-       y = "y movement [mm]", 
-       color = "time [s]") +
+       y = "y movement [mm]") +
   theme_minimal() +
   coord_fixed() +
-  theme_plot +
   theme(axis.title = element_text(size=16),
         axis.text.x = element_text(size = 11, angle = 0),
         axis.text.y = element_text(size = 11),
@@ -1618,7 +1640,7 @@ df_2d_nor %>%
   geom_smooth(method = "loess", formula = y ~ x, method.args= list(degree = 1), 
               level = 0.99, size = 1, span = 0.5) +
   theme_minimal() +
-  labs(x = "time [s]", y = "vertical position [mm]", color = "genotype") +
+  labs(x = "time [s]", y = "vertical position [mm]", color = "two-day-old") +
   theme_plot +
   theme(axis.title = element_text(size=13),
         axis.text.x = element_text(size = 11, angle = 0),
@@ -1633,6 +1655,8 @@ df_2d_nor %>%
     labels = c("WT", 
                expression('NOS'^'Δ11/Δ11'), 
                expression('NOS'^'Δ23/Δ23')))
+
+
 
 # save to source data-------------------------------------------------------
 
@@ -1680,7 +1704,7 @@ ggplot(df_2d_nor_stat) +
                 cex = 3,
                 alpha =.3, 
                 color = "gray5") +
-  labs(y = "vertical displacement [mm/s]")+
+  labs(y = "vertical position [mm]")+
   theme_minimal() +
   theme(legend.position = 'none', 
         axis.title.x = element_blank()) +
@@ -1693,10 +1717,10 @@ ggplot(df_2d_nor_stat) +
                               "NOS11x11" = expression('NOS'^'Δ11/Δ11'), 
                               "NOS23x23" = expression('NOS'^'Δ23/Δ23'))) +
   geom_signif(comparisons = list(c("cont", "NOS11x11")),
-              annotations = "0.039 *",
+              annotations = "0.039",
               y_position = 30) +
   geom_signif(comparisons = list(c("cont", "NOS23x23")),
-              annotations = "0.042 *",
+              annotations = "0.042",
               y_position = 40)
 
 
@@ -1726,7 +1750,7 @@ df_3d_nor %>%
   geom_smooth(method = "loess", formula = y ~ x, method.args= list(degree = 1), 
               level = 0.99, size = 1, span = 0.2) +
   theme_minimal() +
-  labs(x = "time [s]", y = "vertical position [mm]", color = "genotype") +
+  labs(x = "time [s]", y = "vertical position [mm]", color = "three-day-old") +
   theme_plot +
   theme(axis.title = element_text(size=13),
         axis.text.x = element_text(size = 11, angle = 0),
@@ -1794,7 +1818,7 @@ ggplot(df_3d_nor_stat) +
                 cex = 3.2,
                 alpha =.3, 
                 color = "gray5") +
-  labs(y = "vertical displacement [mm/s]")+
+  labs(y = "vertical position [mm]")+
   theme_minimal() +
   theme(legend.position = 'none', 
         axis.title.x = element_blank()) +
@@ -1807,10 +1831,10 @@ ggplot(df_3d_nor_stat) +
                               "NOS11x11" = expression('NOS'^'Δ11/Δ11'), 
                               "NOS23x23" = expression('NOS'^'Δ23/Δ23'))) +
   geom_signif(comparisons = list(c("cont", "NOS11x11")),
-              annotations = "0.0015 **",
+              annotations = "0.0015",
               y_position = 30) +
   geom_signif(comparisons = list(c("cont", "NOS23x23")),
-              annotations = "0.0005 ***",
+              annotations = "0.0005",
               y_position = 40)
 
 
@@ -1895,7 +1919,7 @@ ggplot(df_L_NAME_stat) +
                 cex = 3.2,
                 alpha =.3, 
                 color = "gray5") +
-  labs(y = "vertical displacement [mm/s]")+
+  labs(y = "vertical position [mm]")+
   theme_minimal() +
   theme(legend.position = 'none',
         axis.title.x = element_text(size = 9)) +
@@ -1911,7 +1935,7 @@ ggplot(df_L_NAME_stat) +
               annotations = "0.22",
               y_position = 30) +
   geom_signif(comparisons = list(c("0 mM", "1 mM")),
-              annotations = "0.0008 ***",
+              annotations = "0.0008",
               y_position = 40)
 
 
@@ -2492,8 +2516,8 @@ panel_3d_mTP <- ggdraw() + draw_image(readPNG("pictures/Vertical displacement_me
 panel_3dpf_TD <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_distanse_sideUV_3d.png"))
 panel_3dpf_mTD <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_mean_speed_3d.png"))
 
-#panel_L_NAME_TP <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_position_sideUV_L_NAME.png"))
-#panel_3d_L_NAME_mTP <- ggdraw() + draw_image(readPNG("pictures/Vertical displacement_mean_L_NAME_statics.png"))
+panel_L_NAME_TP <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_position_sideUV_L_NAME.png"))
+panel_3d_L_NAME_mTP <- ggdraw() + draw_image(readPNG("pictures/Vertical displacement_mean_L_NAME_statics.png"))
 #panel_L_NAME_TD <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_distanse_sideUV_L_NAME.png"))
 #panel_L_NAME_mTD <- ggdraw() + draw_image(readPNG("pictures/vertical_tracking_mean_speed_L_NAME.png"))
 
@@ -2526,23 +2550,55 @@ EEEF#GGGGG
 EEEF#GGGGG
 "
 
-Fig3 <-  panel_3dpf_Tracking + 
-  panel_3dpf_TP + panel_3d_mTP +
-  panel_3d_vd + 
-  panel_L_NAME_TP + panel_3d_L_NAME_mTP +
-  panel_3d_L_NAME_vd +
-  patchwork::plot_layout(design = layout,
-                         widths = c(1,1,0.8,1.2,0.01,1,1,1,1,1), 
-                         heights = c(1,1,1,1,1,1,0.05,1,1,1,1,0.05,1,1,1,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
+#Fig3 <-  panel_3dpf_Tracking + 
+#  panel_3dpf_TP + panel_3d_mTP +
+#  panel_3d_vd + 
+#  panel_L_NAME_TP + panel_3d_L_NAME_mTP +
+#  panel_3d_L_NAME_vd +
+#  patchwork::plot_layout(design = layout,
+#                         widths = c(1,1,0.8,1.2,0.01,1,1,1,1,1), 
+#                         heights = c(1,1,1,1,1,1,0.05,1,1,1,1,0.05,1,1,1,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
+#  patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
+#  ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
+
+
+#ggsave("Manuscript/figures/Fig3.png", limitsize = FALSE, 
+#       units = c("px"), Fig3, width = 3200, height = 2100, bg='white')  
+
+#ggsave("Manuscript/figures/Fig3.pdf", limitsize = FALSE, 
+#       units = c("px"), Fig3, width = 3200, height = 2100)  
+
+
+
+
+#combine panels into Figure and save final figure as pdf and png
+#panels of different size
+
+
+layout2 <- "
+AABB
+####
+CCDE
+####
+FFGH
+"
+
+Fig3 <-  panel_setup + panel_3d_vd + 
+  panel_3dpf_Tracking + panel_3dpf_TP + panel_3d_mTP +
+  panel_3d_L_NAME_vd + panel_L_NAME_TP + panel_3d_L_NAME_mTP +
+  patchwork::plot_layout(design = layout2,
+                         widths = c(1,1,1.5,1), 
+                         heights = c(1.25,0.05,1,0.05,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
 
 
 ggsave("Manuscript/figures/Fig3.png", limitsize = FALSE, 
-       units = c("px"), Fig3, width = 3200, height = 2100, bg='white')  
+       units = c("px"), Fig3, width = 3200, height = 2400, bg='white')  
 
 ggsave("Manuscript/figures/Fig3.pdf", limitsize = FALSE, 
-       units = c("px"), Fig3, width = 3200, height = 2100)  
+       units = c("px"), Fig3, width = 3200, height = 2400)  
+
 
 
 
@@ -2571,29 +2627,24 @@ ggsave("Manuscript/figures/Fig3_sup1.pdf", limitsize = FALSE,
 
 
 layout_sup2 <- "
-#AABBBB
-###BBBB
-#######
-#CCC#D#
-#######
-EEEEEEE
+AB
+CD
 "
 
 Fig3_sup2 <-  
-  panel_setup + panel_2dpf_Tracking + 
+  panel_2d_vd + panel_2dpf_Tracking + 
   panel_2dpf_TP + panel_2d_mTP +
-  panel_2d_vd +
   patchwork::plot_layout(design = layout_sup2,
-                         widths = c(0.1,0.4,0.4,0.3,0.1,0.6,0.1), 
-                         heights = c(0.8,0.1,0.1,1,0.01,1.6)) + #we can change the heights of the rows in our layout (widths also can be defined)
+                         widths = c(1.5,1), 
+                         heights = c(1.25,1)) + #we can change the heights of the rows in our layout (widths also can be defined)
   patchwork::plot_annotation(tag_levels = 'A') &  #we can change this to 'a' for small caps or 'i' or '1'
   ggplot2::theme(plot.tag = element_text(size = 12, face='plain')) #or 'plain', 'italic'
 
 ggsave("Manuscript/figures/Fig3_sup2.png", limitsize = FALSE, 
-       units = c("px"), Fig3_sup2, width = 1300, height = 1800, bg='white')  
+       units = c("px"), Fig3_sup2, width = 2800, height = 2000, bg='white')  
 
 ggsave("Manuscript/figures/Fig3_sup2.pdf", limitsize = FALSE, 
-       units = c("px"), Fig3_sup2, width = 1300, height = 1800)  
+       units = c("px"), Fig3_sup2, width = 2800, height = 2000)  
 
 
 

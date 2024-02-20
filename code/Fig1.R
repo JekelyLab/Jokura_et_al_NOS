@@ -5,7 +5,7 @@
 source("code/Packages_Catmaid_connection.R")
 
 
-# load and plot neurons ---------------------------------------------------
+# load neurons ---------------------------------------------------
 
 cPRC = nlapply(read.neurons.catmaid("^celltype5$", pid=11),
                     function(x) smooth_neuron(x, sigma=20))
@@ -21,6 +21,9 @@ MC = nlapply(read.neurons.catmaid("^celltype9$", pid=11),
                function(x) smooth_neuron(x, sigma=6000))
 prototroch = nlapply(read.neurons.catmaid("^celltype_non_neuronal3$", pid=11),
              function(x) smooth_neuron(x, sigma=6000))
+
+# plot neurons ---------------------------------------------------
+
 
 {
 plot_background()
@@ -49,6 +52,9 @@ clipplanes3d(0, -1, 0, 145000)
 rgl.snapshot("pictures/INNOS_Catmaid.png")
 close3d()
 }
+
+
+
 
 {
 plot_background_ventral2()
@@ -80,6 +86,8 @@ plot3d(outline, WithConnectors = F, WithNodes = F, soma=F, lwd=2,
 rgl.snapshot("pictures/INNOS_Catmaid_ventr.png")
 close3d()
 }
+
+
 
 # get connectivity from CATMAID and plot network --------------------------
 {
@@ -335,6 +343,7 @@ panel_NOS3d_trans <- ggdraw() + draw_image(readPNG("pictures/NOS-promotor_3d_acT
 
 panel_NOS3d_IHC <- ggdraw() + draw_image(readPNG("pictures/IHC_NOS_3d_48.1um_3.png")) +
   draw_label("IHC", x = 0.15, y = 0.99, size = 10) +
+  draw_label("*", x = 0.5, y = 0.35, color='white',size = 18,fontface="plain", alpha = 0.8) +
   draw_label("NOS", x = 0.12, y = 0.9, color="magenta", size = 11, fontface="plain") +
   draw_label("acTub", x = 0.36, y = 0.9, color="green", size = 11, fontface="plain") +
   draw_line(x = c(0.04, 0.4), y = c(0.08, 0.08), color = "white", size = 0.5) +
