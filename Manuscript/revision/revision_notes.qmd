@@ -1,0 +1,10 @@
+---
+title: "revisions - to do"
+format: html
+---
+
+## Revisions to do
+
+Figure 3 panels E, H - change axis label font size to match other panels
+
+Figure 3 -- source data 1-7. Source data for panels A-G. - is there source data for panel H? check and correct

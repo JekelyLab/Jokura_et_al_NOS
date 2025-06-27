@@ -1,0 +1,161 @@
+Discussion with Kei - 14 Sept 2023
+
+
+Reviewer #1 (Recommendations For The Authors):
+
+1) The current introduction focuses on the nitric oxide signaling. It would be helpful for readers to have an introductory section about Platynereis larvae (a total number of neurons, etc) and rationales to use its nervous system as a model to study mechanisms of NO signaling and gating of visual response.
+
+Gaspar - add a few sentences
+
+2) The readers would want to know why these larvae swim downward in response to UV and upward to 480nm light. Is that for maintaining the certain depth from the surface of the water?
+
+Gaspar - add a few sentences
+
+3) Are there splicing isoforms of NOS in the Platynereis dumerilii? If so, do antibodies and probes for in situ distinguish them? In Drosophila, truncated isoforms can inhibit the function of full length isoform, and therefore it was important to use methods to distinguish spicing isoforms.
+
+Kei - check BLAST site, add a note
+
+4) "INRGWs" acronym appears without explanation in the first paragraph of the results.
+
+edit text
+
+5) In Figure 1C, it is difficult to see the projection patterns of individual cell types. Figure supplement 3 can be combined with the current Figure 1.
+
+combine the figure with supplement
+
+6) Add more explanation about NOSp::palmi-3xHA reporter. Is it membrane-targeted reporter with the upstream promotor sequence of NOS? Or is it endogenous NOS that was tagged with palmi-3xHA?
+
+add more text - add as suppl the primer (add also to resources table) and add the Sanger seq from Nobuo
+
+7) Show lack of anti-NOS immunostaining in NOS mutant to warrant specificity of the antibody. The subcellular localization of NOS in the dendritic arbors of INNOS is essential for the proposed model. The immunostaining image in Figure 4 -figure supplement 3D can be in the main figure. Is NOS also in the axons of INNOS?
+
+add clarification, ask Adam to set up NOS batches and fix - maybe ask Luis B to do fixations and store at -20
+does not matter which NOS batch, even trans-heterozygous is good
+check also genotype
+
+
+8) "that was defective in NOS mutant (Figure 5I)" should be corrected as "Figure 5H".
+
+editing
+
+9) Related to Figure 7, how do the larvae respond to a sequence of UV light (e.g. ten times 0.5s ON and 0.5 OFF) or ramping up/down UV light? Can the model make any predictions?
+
+model predictions ask Piotr
+
+10) What are the knock down efficiency of NOS and NIT-GC morpholnio?
+
+NOS - is KO
+NIT-GC stainings
+look at existing data - add a suppl of quantification
+
+
+Reviewer #2 (Recommendations For The Authors):
+
+Why is the behavior of the control animals so different in panels B and C of Figure 3? One group reaches only 15 mm vertical position and the other reaches ~60 mm. Is this just batch variation? Am I missing an experimental variable here? If this is indeed batch variation, then some additional text and statistical analyses might help the reader interpret the behavioral data.
+
+Really, that's the only, relatively minor issue I could find. This was a pleasure to read, and I learned a lot. Congratulations on an excellent study.
+
+Kei will check raw data    ..... 
+
+Reviewer #3 (Recommendations For The Authors):
+
+Page 3, Figure 1 A: The authors reconstructed the cPRC circuit in 3-day-old larvae and detected NOS gene expression in 2-day-old larvae in Figure 1D&E. Can the authors provide a cPRC circuit reconstruction for 2-day-old larvae?
+
+no we cannot
+
+Page 4, Figure 2: NO produced by UV/violet stimulation to cPRCs: Including a diagram of the larvae would enhance reader understanding.
+
+ok, include diagram
+
+Page 4: Two Platynereis NOS knockout lines (NOSΔ11/Δ11 and Δ23/Δ23) using the CRISPR/Cas9: Could you direct me to the knockout conformation results for NOS knockout lines NOSΔ11/Δ11 and Δ23/Δ23?
+
+Figure 3 – figure supplement 1.  - explain
+
+
+Page 4: "Three day-old but not two-day-old NOS-mutant larvae also showed reduced phototactic behaviour, suggesting a function for NOS in the visual eyes that mediate three-day-old phototaxis" This sentence is unclear. Why is it only three days old but not two days old?
+
+explain - 
+
+Page 5: "Figure 3. NOS is required for UV avoidance in Platynereis larvae." Detailed experiment setup, if possible, schematic or real setup images would help to replicate the experiments.
+
+do it - Kei - add it
+
+Page 5: "All trajectories start at 0 x and y position and time 0 corresponding to 10 sec after the onset of 395 nm stimulation from the side." How did the authors determine the 10-second duration? Are there any potential reasons for this choice?
+
+this is 10 sec after the onset - is a mistake - correct
+just an arbitrary period to show the dark phase
+
+"(A) Swimming trajectories of wild type (WT, n=32) and NOS mutant (NOSΔ11/Δ11, n=26 and NOSΔ23/Δ23, n=47) three-day-old larvae." Authors keep shifting between 2-day and 3-day-old larval data in Figures 1, 2, and 3, causing inconsistency.
+
+Fig1 - change micron
+Fig1 - put NOS in 3d in main figure
+Kei - check if there is a 3d NOS in situ with tubulin
+
+maybe change 2 day old 3 day old 
+to late trochophore and nectochaete. explain in methods
+development progresses
+explain and review
+
+Page 5: "Figure 3. NOS is required for UV avoidance in Platynereis larvae." Why didn't the authors present any statistics on the plots? A statistical test is required to prove that the difference is significant.
+
+do it
+
+Page 5: "Analysis of sGCs in Platynereis indicated that these genes are not expressed in any of the cells of the cPRC circuit (not shown and (Verasztó et al., 2017))." Hence the data is relevant; please provide this data in supplementary.
+
+add to the scRNA source data all the sGCs
+there is an sGCbeta in the INRGW - correct
+
+
+Page 10: "Diagram of the mathematical model with the components, interactions, parameters and equations used to model Ca dynamics." It would be helpful to include a legend explaining the meaning of each term (e.g. what is K, Co, Cp etc) and arrow color. Additionally, the main text should provide detailed descriptions to aid understanding.
+
+add a legend explaining the terms
+
+Page 12: "This activated state is maintained for several tens of second." Can authors point out the data?
+
+refer to figure 
+
+Page 13: "In the Platynereis circuit, our mathematical model indicates that the magnitude of the NO-dependent signal depends on the intensity and duration of the UV/violet stimulus." Did the authors conduct experiments of various intensity and duration apart from modelling? If not, such experiments should be carried out to validate the mathematical model.
+
+Kei could do calcium imaging
+try 5, 10, 20, 30 sec 
+
+Weaknesses: Statistics are missing in both figure legends and methods. The perturbations of genes and molecules were not cell-type-specific and therefore the observed behavioral defect could be attributed to the malfunction of the circuit elsewhere not examined in this study. I suggest adding more explanation about the functions of other NOS-expressing cells and conducting a control experiment to test behavioral response to a non-visual stimulus. 
+
+add explanation that NIT-GC1 and 2 are super cell type specific, therefore the knock down can only effect those cells
+NOS is also quite specific
+we could show that the behaviour is c-opsin1 and cPRC dependent
+
+
+While I appreciate the intent of bringing together a large set of measurements from connectomics and calcium imaging in the framework of a model, the model seemed rather poorly constrained. How many parameters are in the model shown in Figure 6A? How many of them are well constrained by experimental measurements? The authors also don't perform sensitivity analysis on the parameters of the model. And ultimately, the conclusion over the model in Figure 7 is somewhat trivial within the unitless construction: larger amplitude and longer duration stimuli lead to increased activation of the downstream neuron thought to lead to the downward swim behavior. I could imagine that a large family of models would arrive at this same result, and without units, there is no way to really test it with new behavioral experiments. 
+
+discuss with Kyle Piotr, do sensitivity analysis
+at least the signs of the interactions are conserved and other models with reversed signs could not fitted
+
+
+Page 4: "In contrast, both two- and three-day-old homozygous NOS-mutant larvae showed a strongly diminished UV avoidance response (Figure 3A, B and Figure 3-figure supplement 1B, C)." Instead of using subjective terms like "strongly," it would be more relevant to provide statistical values. However, I could not locate any means of statistical analysis on larval behaviour. Can the authors indicate the statistical values for all behaviour studies?
+
+do statistical analysis
+check Luis' paper
+
+Page 5: "(D) Vertical displacement in 30 sec bins of wild type and mutant (NOSΔ11/Δ11 and NOSΔ23/Δ23) three-day-old larvae stimulated with 395 nm light from the side, 488 nm light from the top and 395 nm light from the top." The error bars for WT are too long at the end of the experiment. It is not clear how the authors decided to use this time frame. Did the authors try carrying this out for an extended time period? How did the authors decide on 120 seconds as the time frame for exposure? Authors should provide data on larval behaviour for an extended time.
+
+explain - that larvae swim out of the field of view
+check distribution, add statistics
+add N of batches and larvae to figure legend
+
+Page 13: "During the UV response, prototroch cilia beat slower than trunk cilia, resulting in a head-down stable state ('rear-wheel drive'). In contrast, during the pressure response prototroch cilia beat faster than trunk cilia, leading to a head-up orientation ('front-wheel drive'). Testing this hypothesis will require biophysical experiments and mathematical modelling." Authors should carry out ciliary beating analysis under UV light in the current study with NOS mutant larvae. Since the pressure and UV detection systems are closely related, comparing the difference in ciliary beating is important to demonstrate this hypothesis. Further, did the authors check the Ca sensor GCaMP6s under pressure conditions?
+
+ciliary beating in WT under UV light
+Kei will do
+
+
+Page 18: "strips. One strip contained UV (395 nm) LEDs (SMB1W-395, Roithner Lasertechnik) and the other infrared (810 nm) LEDs (SMB1W-810NR-I, Roithner Lasertechnik)." Authors should test larval swimming behaviour at different wavelengths. Even though they are performed in previous work, the experiment with different wavelengths is necessary to be conducted in NOS mutant larvae in parallel with a control. This will confirm that NOS is principally associated with UV. Further, to demonstrate that this mechanism is associated with ciliary movement, authors need to provide this evidence.
+
+explain that we have done that to some extend
+explain that we can separate the two behaviours
+
+
+other fixes:
+Figure 4 – figure supplement 3.  - change type of micron scale
+
+

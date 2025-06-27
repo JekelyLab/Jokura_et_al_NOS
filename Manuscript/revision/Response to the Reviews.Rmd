@@ -19,8 +19,11 @@ This study reports the discovery of a new circuit mechanism for light-avoidance 
 
 *Weaknesses: Statistics are missing in both figure legends and methods. The perturbations of genes and molecules were not cell-type-specific and therefore the observed behavioral defect could be attributed to the malfunction of the circuit elsewhere not examined in this study. I suggest adding more explanation about the functions of other NOS-expressing cells and conducting a control experiment to test behavioral response to a non-visual stimulus.*
 
-1.  As you point out, we have performed statistical tests and added explanatory text to figure legends.
-2.  Only one NOS homologue has been found in the Platynereis genome. Note that it is specifically expressed in NOS interneurons, which are our target in this study, based on the results of single-cell transcriptome analysis and in situ hybridisation against the NOS gene. However, as you have pointed out, the functions of nitric oxide are diverse and we have revised some of our discussion to include the possibility of its interneurons outside the non-visual system.
+Response: Thank you for this assessment of our work. We have now added the results of statistical tests to the figures and included explanatory text in the figure legends.
+Regarding the cell-type-specific effects, in the larval stage NOS is only expressed in the INNOS cells and the pigmented eyes. We could previously show that UV avoidance is only mediated by the cPRC circuit (including INNOS) whereas phototaxis is exclusively mediated by the pigmented eyes (Jekely et al 2008, Randel et al 2014 and Veraszto el al. 2018). Due to this behavioural specificity, we are therefore confident that the effects of the NOS mutation on UV avoidance are due to the lack of NOS from the INNOS cells and not the pigmented eyes. Besides UV avoidance, we have characterised the speed of ciliary swimming without a light stimulus, as well as phototaxis (Randel et al 2014). Likewise, the effects of NIT-GC-knockdown can only be due to cell-type-specific effects in the cPRCs, since the two NIT-GC genes are only expressed in the four cPRCs, as we demonstrated by HCR, immunostainings and the analysis of single-cell RNAseq data. Given that we used two morpholinos per gene, it is also unlikely that the observed changes in Ca-dynamics are due to off-target effects.
+
+We have now updated the discussion to better address these points.
+
 
 **Reviewer #2 (Public Review):**
 
@@ -31,6 +34,41 @@ This study reports the discovery of a new circuit mechanism for light-avoidance 
 *Weaknesses: While I appreciate the intent of bringing together a large set of measurements from connectomics and calcium imaging in the framework of a model, the model seemed rather poorly constrained. How many parameters are in the model shown in Figure 6A? How many of them are well constrained by experimental measurements? The authors also don't perform sensitivity analysis on the parameters of the model. And ultimately, the conclusion over the model in Figure 7 is somewhat trivial within the unitless construction: larger amplitude and longer duration stimuli lead to increased activation of the downstream neuron thought to lead to the downward swim behavior. I could imagine that a large family of models would arrive at this same result, and without units, there is no way to really test it with new behavioral experiments.*
 
 
+Response:
+We have now carried out a variance-based sensitivity analysis that is included as Figure...
+
+In the model, most parameters are identifiable. If we fix only to of the parameters (C  and ..) all other parameters can be identified.
+
+The model is unitless, since already our input data from calcium imaging represent normalised data and the model was fit to these data. We would need a lot more information to build up a proper ground-up biophysical model (e.g. including capacitance, ionic concentrations etc.).
+
+We have created a pipeline to carry out- local and global sensitivity analysis
+
+all but two of our parameters were identifiable.
+
+In terms of the constrains, since we don't have dimensioned quantitites, our constraints are bounds on the parameters. However, the structural identifibiality analysis tells us where we can identify parameters
+guard against sloppiness and overfitting
+
+Lots of models: 
+we only fitted the model on a subset of the data and can reproduce dynamics on a larger set of data
+
+A family of models that can capture the same mechanism that we are postulating 
+for important mechanistic interactions (the signs and some interactions that are not possible) are constraint. And the model shows that we don't need them or the signs are constrained.
+
+In the future, we can use this model to generate prediction e.g. about what the response to repeated stimulations can be.
+
+To map out the components 
+we can rule out things - e.g. we could rule out a very simple model of progression from step to step
+
+The modelling also completely changed the way we were thinking about the system. We needed to include a time-limited step in the cPRC transduction cascade leading to NOS activation to capture the time-invariance of the peak. 
+
+Many of the couplings in our model are constrained (e.g. UV leads to INNOS activation) and e.g. reversing the sign of some of these couplings would not arrive at this same result. Several earlier variants of the model could not be fit to the data, therefore we disagree that the model is poorly constrained and cannot be tested with behavioural experiments.
+
+In the revised version, we included a new series of measurements of calcium dynamics in the cPRCs under varying duration and intensity of UV light. These important new results gave us further insights and necessitated a revision of the model.
+
+We can reproduce all the qualitative dynamics
+
+
+
 **Reviewer #3 (Public Review):**
 
 *The transition from planktonic to benthic depends upon several physical and chemical cues. Nitric oxide (NO) is known as a critical player in the induction of larval metamorphosis in several invertebrates. Although NO is a widespread signalling molecule in a broad range of organisms regulating key physiological processes, internal regulatory mechanisms studies are scarce. While the UV sensing in larvae of the annelid Platynereis dumerilii using ciliary photoreceptors has been studied, the neuronal signalling mechanism remains unknown. In this study, Kei Jokura et al. investigated how annelid Platynereis dumerilii larvae detect UV sensing and modulate swimming behaviour through nitric oxide feedback. Using existing resources of Platynereis larval connectome/volume EM data, they identified NOS-expressing interneurons within the ciliary photoreceptors circuit (cPRCs). They demonstrated that NO is produced in cPRCs during UV/violet stimulation by using a fluorescent NO-reporter line. Further, they demonstrated that Nitric oxide signalling mediates UV-avoidance behaviour by using NOS-mutant larvae. Finally, they mapped out the signalled mechanisms of the cPRC circuit using published spatially mapped single-cell transcriptome data of Platynereis larvae, the Ca sensor lines, in situ HCR, and immunostaining. Additionally, by using their findings from Ca imagining data of cPRC, INNOS and INRGWa cells collected in wild-type, NOS knockout and NIT-GC2 morphant larvae, Kei Jokura et al. developed a mixed cellular-circuit-level mathematical model. However, my expertise in mathematical modelling is limited, so I cannot comment on this section.*
@@ -39,19 +77,18 @@ This study reports the discovery of a new circuit mechanism for light-avoidance 
 
 *Page 4: "In contrast, both two- and three-day-old homozygous NOS-mutant larvae showed a strongly diminished UV avoidance response (Figure 3A, B and Figure 3-figure supplement 1B, C)." Instead of using subjective terms like "strongly," it would be more relevant to provide statistical values. However, I could not locate any means of statistical analysis on larval behaviour. Can the authors indicate the statistical values for all behaviour studies?*
 
-As noted, we have performed statistical analyses and added to the figures in all behavioural experiments. We have also corrected the wording in the text.
+Response: We thank the reviewer for these comments. We have changed the wording and also added the results of statistical analyses to the figures and explanations to the figure legends.
 
 *Page 5: "(D) Vertical displacement in 30 sec bins of wild type and mutant (NOSΔ11/Δ11 and NOSΔ23/Δ23) three-day-old larvae stimulated with 395 nm light from the side, 488 nm light from the top and 395 nm light from the top." The error bars for WT are too long at the end of the experiment. It is not clear how the authors decided to use this time frame. Did the authors try carrying this out for an extended time period? How did the authors decide on 120 seconds as the time frame for exposure? Authors should provide data on larval behaviour for an extended time.*
 
-The size of the chamber is limited due to the experimental system, so many larvae tend to accumulate at the bottom of the chamber by descending swimming at the end of the experiment. This may have led to variability in the data at the end point and lengthened the error bars.
-
-A 120 s exposure time was most suitable for quantifying larval behaviour from a previous paper by Verasztó et al. 2017.
+Response: The 120 seconds time frame of exposure takes into account the reaction time and swimming speed of the larvae as well as the size of the assay chamber (160 mm water height). By the end of a 120 stimulation many larvae tend to accumulate at the bottom of the chamber due to downward swimming and cannot be further tracked. This effect leads to higher variability in the data towards the end of the experiment in the wild-type batches. We have showed both continuous vertical data as well as the binned data. The 30 sec bin was chosen for convenience and for better comparison with our previous paper on UV avoidance behaviour (Verasztó et al. 2018)
 
 *Page 13: "During the UV response, prototroch cilia beat slower than trunk cilia, resulting in a head-down stable state ('rear-wheel drive'). In contrast, during the pressure response prototroch cilia beat faster than trunk cilia, leading to a head-up orientation ('front-wheel drive'). Testing this hypothesis will require biophysical experiments and mathematical modelling." Authors should carry out ciliary beating analysis under UV light in the current study with NOS mutant larvae. Since the pressure and UV detection systems are closely related, comparing the difference in ciliary beating is important to demonstrate this hypothesis. Further, did the authors check the Ca sensor GCaMP6s under pressure conditions?*
 
-We have newly analysed the ciliary beat frequency of larvae by UV stimulation and added Figure 3---figure supplement 3.
+We thank the reviewer for this suggestion. We have carried out further experiments and analysed the ciliary beat frequency (CBF) of larvae exposed to UV stimulation. We added these data to Figure 3---figure supplement 3. The results (increase of CBF under UV in wild-type but not NOS mutant larvae) were quite surprising to us and falsified our initial hypothesis. We have rewritten the discussion to reflect this important new finding.
 
-For calcium imaging under pressurised conditions, this was done in Bezares-Calderón et al., 2023, see: doi: <https://doi.org/10.1101/2023.02.28.530398>
+The response of cPRC cilia to changes in hydrostatic pressure has been extensively documented in our recent paper on the mechanism of barotaxis in the Platynereis larva (see Bezares-Calderón et al., https://doi.org/10.1101/2023.02.28.530398).
+
 
 *Page 18: "strips. One strip contained UV (395 nm) LEDs (SMB1W-395, Roithner Lasertechnik) and the other infrared (810 nm) LEDs (SMB1W-810NR-I, Roithner Lasertechnik)." Authors should test larval swimming behaviour at different wavelengths. Even though they are performed in previous work, the experiment with different wavelengths is necessary to be conducted in NOS mutant larvae in parallel with a control. This will confirm that NOS is principally associated with UV. Further, to demonstrate that this mechanism is associated with ciliary movement, authors need to provide this evidence.*
 
