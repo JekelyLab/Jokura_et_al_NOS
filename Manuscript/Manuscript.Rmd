@@ -139,7 +139,7 @@ Larvae incubated for 5 min in 0.1 mM or 1 mM L-NAME showed a dose-dependent inhi
 In contrast, phototaxis was not affected (Figure 3F).
 Overall, our results indicate an acute requirement for NOS signalling in UV-avoidance and a possible indirect, developmental role in the visual system, reminiscent of the function of NO signalling in *Drosophila* eye development [@Gibbs1998a].
 
-<<<<<<< HEAD
+
 ```{r echo=FALSE,fig.cap="**Figure 3. NOS is required for UV avoidance in *Platynereis* larvae.** (**A**) Schematic diagram of the set-up of the behavioural experiment. (**B**) Vertical displacement in 30 sec bins of wild type (10 batches) and mutant (*NOSΔ11/Δ11*, 5 batches and *NOSΔ23/Δ23*, 7 batches) three-day-old larvae stimulated with 395 nm light from the side, 488 nm light from the top and 395 nm light from the top. One-way ANOVA with Dunnett’s multiple-comparison test are shown. *P < 0.05, **P < 0.01. (**C**) Swimming trajectories of wild type (WT, n=32) and *NOS* mutant (*NOSΔ11/Δ11*, n=26 and *NOSΔ23/Δ23*, n=47) three-day-old larvae. All trajectories start at 0 x and y position and time 0 corresponding to 10 sec before the onset of 395 nm stimulation from the side. (**D**) Vertical position of batches of wild type and mutant three-day-old larvae over time under 395 nm UV stimulation. The starting position of each larval trajectory was set to 0. (**E**) Comparison of vertical position of wild type and mutant three-day-old larvae after 30 seconds of UV stimulation. One-way ANOVA with Dunnett’s multiple-comparison test are shown. The wild type (WT, n=32) and *NOS* mutant (*NOSΔ11/Δ11*, n=26 and *NOSΔ23/Δ23*, n=47) larvae. (**F**) Vertical displacement in 30 sec bins of control (15 batches) and L-NAME-treated (0.1 and 1 mM, 15 batches each) three-day-old larvae stimulated with 395 nm light from the side, 488 nm light from the top and 395 nm light from the top. One-way ANOVA with Dunnett’s multiple-comparison test are shown. *P < 0.05. (**G**) Vertical position of batches of control and L-NAME-treated (0.1 and 1 mM) three-day-old larvae over time under 395 nm UV stimulation. The starting position of each larval trajectory was set to 0. (**H**) Comparison of vertical position of control (n=6) and L-NAME-treated (0.1 and 1 mM, n=6 each) three-day-old larvae after 30 seconds of UV stimulation. One-way ANOVA with Dunnett’s multiple-comparison test are shown.  <br> Figure 3 -- source data 1-7. Source data for panels A-G."}
 
 knitr::include_graphics(path = "figures/Fig3.png")
@@ -217,13 +217,11 @@ knitr::include_graphics(path = "figures/Fig4.png")
 
 **NO signalling shapes the dynamics of the cPRC circuit**
 
-To investigate how NO and NIT-GC signalling influence the dynamics of the cPRC circuit, we imaged Ca^2+^ signals from postsynaptic neurons in wild type, mutant and morphant larvae.
-We were able to image the activity of all neurons in the cPRC circuit (INNOS, INRGWa, Ser-h1 and MC).
-The MC cell was identified based on its position and intrinsic activity [@veraszto2017].
-To unambiguously identify all other cells from which we recorded Ca^2+^ signals, we developed an on-slide immunostaining method (Figure 5---figure supplement 1A).
+To investigate how NO and NIT-GC signalling influence the dynamics of the cPRC circuit, we imaged Ca^2+^ signals from the INNOS, INRGWa and Ser-h1 neurons in wild type, mutant and morphant larvae.
+To unambiguously identify the neurons from which we recorded Ca^2+^ signals, we developed an on-slide immunostaining method (Figure 5---figure supplement 1A).
 We used the cell-specific antibody markers against RYamide (INNOS) (Figure 5---figure supplement 1B-D), RGWamide (INRGWa) and serotonin (Ser-h1) [@Conzelmann2011] to immunostain agar-embedded larvae following Ca^2+^ imaging.
 Based on the position of the nuclei, we could correlate live and fixed samples at a single-cell precision (Figure 5A, B).
-Due to the stereotypy of the larvae, we could also identify neurons based on their position and Ca^2+^ activity in activity-correlation maps (Figure 5C).
+Due to the stereotypy of the larvae, we could also identify neurons based on their position and Ca^2+^ activity in activity-correlation maps (Figure 5C <!--make Ser-h1 part of the figure supplementary with the correlation map -->).
 
 We first quantified the responses of the INNOS and INRGWa interneurons during 405 nm stimulation of the cPRCs.
 In both wild type and *NOS*-mutant larvae, INNOS cells showed an increase in Ca^2+^ during stimulation (Figure 5D).
@@ -249,13 +247,20 @@ knitr::include_graphics(path = "figures/Fig5.png")
 To further analyse the dynamics of responses to UV light and formally describe cPRC phototransduction, synaptic connections and NO retrograde signalling, we developed a mixed cellular-circuit-level mathematical model.
 We used our Ca^2+^ imagining data of cPRC, INNOS and INRGWa cells collected in wild type, *NOS* knockout and *NIT-GC2* morphant larvae to formulate assumptions that are the basis of the proposed model.
 
-We modeled a direct c-opsin1-dependent response to UV leading to the initial rise in Ca^2+^ levels.
-The mechanism of this signal is not known but may include Gα and Gβ signalling, CNGAα channel activation or other pathways.
-We further assumed that in cPRC cells, Ca^2+^ levels increase with cGMP.
-We modeled a decrease in cGMP and Ca^2+^ levels due to a NIT-GC2-dependent pathway (Figure 6A).
-The effect of NO in cPRC cells is captured by another term that describes a NIT-GC1 and NO-dependent increase in cGMP.
-Based on the synaptic connectome, we infered a feedforward coupling between cPRC cells and INNOS and INRGWa cells.
+We modelled a c-opsin1-dependent phototransduction response to UV (Figure 6A).
+This pathway includes c-opsin1, G-protein signalling, NIT-GC2, cGMP and other unknown components, possibly a cGMP-gated CNGAα channel, a GIRK [@refs] channel and others.
+
+This phototransduction signal is one input to Ca^2+^ levels in the cPRC. This signal leads to the activation (Ca^2+^ increase) of the postsynaptic INNOS cells, and this requires NIT-GC2. 
 The proposed synaptic coupling is UV-dependent, decays linearly and is suppressed in NIT-GC2 morphants (Figure 6A).
+
+The phototransduction signal also modulates the later Ca^2+^ dynamics, including the baseline and the NO-dependent feedback.
+
+We then model NO production as a first-order process dependent on Ca^2+^ levels in INNOS. We do not explicitly incorporate diffusion of NO into the model.
+
+The effect of NO in cPRC cells is captured additional terms that describe a NIT-GC1 and NO-dependent increase in  Ca^2+^. This step is also dependent on the previously mentioned phototransduction pathway. The effect on calcium may be mediated by cGMP, not modelled here.
+
+Based on the synaptic connectome, we inferred a feedforward coupling between cPRC cells and INNOS and INRGWa cells.
+
 
 In the INNOS cells, we assumed that excitatory synaptic input from cPRC (or rebound from tonic inhibition) leads to a rise in Ca^2+^ leading to NO production via NOS.
 This input is NIT-GC2-dependent.
@@ -400,6 +405,13 @@ We hypothesize that the differential beating of prototroch versus trunk cilia ca
 During the UV response, prototroch cilia beat slower than trunk cilia, resulting in a head-down stable state ('rear-wheel drive').
 In contrast, during the pressure response prototroch cilia beat faster than trunk cilia [@bezares-calderon2023], leading to a head-up orientation ('front-wheel drive').
 Testing this hypothesis will require biophysical experiments and mathematical modelling.
+
+
+**Future directions**
+
+- add NO donor to larvae and measure cPRC calcium
+- knock-down further components
+- use Green cGull to directly measure cGMP and build it into the model
 
 **UV-avoidance circuits of extraocular photoreceptors**
 
