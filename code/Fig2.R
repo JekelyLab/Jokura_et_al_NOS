@@ -39,7 +39,7 @@ min(DAFFM$intensity)
 
 DAFFM %>%
   ggplot(aes(x=frame,y=intensity,color = stimuli)) +
-  annotate("rect", xmin=51, xmax=90, ymin=-Inf, ymax=Inf, alpha=0.1, fill="blue") +
+  annotate("rect", xmin=48, xmax=88, ymin=-Inf, ymax=Inf, alpha=0.1, fill="blue") +
   geom_line(aes(group = sample), size=0.2, alpha=0.2) +
   geom_smooth(aes(fill = stimuli), level = 0.95, size = 1, span = 0.05, method = "loess") +
   annotate("segment", x=20, xend=40, y=1.2, yend=1.2, size=1)+
