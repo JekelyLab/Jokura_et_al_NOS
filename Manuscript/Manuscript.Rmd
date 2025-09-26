@@ -247,28 +247,19 @@ knitr::include_graphics(path = "figures/Fig5.png")
 To further analyse the dynamics of responses to UV light and formally describe cPRC phototransduction, synaptic connections and NO retrograde signalling, we developed a mixed cellular-circuit-level mathematical model.
 We used our Ca^2+^ imagining data of cPRC, INNOS and INRGWa cells collected in wild type, *NOS* knockout and *NIT-GC2* morphant larvae to formulate assumptions that are the basis of the proposed model.
 
-We modelled a c-opsin1-dependent phototransduction response to UV (Figure 6A).
-This pathway includes c-opsin1, G-protein signalling, NIT-GC2, cGMP and other unknown components, possibly a cGMP-gated CNGAα channel, a GIRK [@refs] channel and others.
+We modelled a c-opsin1-dependent phototransduction response to UV (Figure 6A). This pathway depends on UV input and includes c-opsin1 and its downstream pathways with two branches. One is NIT-GC2 dependent, the other one is NIT-GC2 independent. Biochemically, the pathways could include cGMP, possibly a cGMP-gated CNGAα channel, a GIRK [@refs] channel and other unknown components.
 
-This phototransduction signal is one input to Ca^2+^ levels in the cPRC. This signal leads to the activation (Ca^2+^ increase) of the postsynaptic INNOS cells, and this requires NIT-GC2. 
-The proposed synaptic coupling is UV-dependent, decays linearly and is suppressed in NIT-GC2 morphants (Figure 6A).
+The NIT-GC2-dependent branch of the phototransduction signal is one input to Ca^2+^ levels in the cPRC and leads to the activation (Ca^2+^ increase) of the postsynaptic INNOS cells (via synaptic transmission) (Figure 6A). In the INNOS cells, we assumed that excitatory synaptic input from cPRC (or rebound from tonic inhibition) leads to a rise in Ca^2+^ leading to NO production via NOS. We do not explicitly incorporate diffusion of NO into the model.
 
-The phototransduction signal also modulates the later Ca^2+^ dynamics, including the baseline and the NO-dependent feedback.
+The second branch of the phototransduction signal modulates the later Ca^2+^ dynamics in the cPRCs, including the baseline and the NO-dependent feedback.
 
-We then model NO production as a first-order process dependent on Ca^2+^ levels in INNOS. We do not explicitly incorporate diffusion of NO into the model.
+The effect of NO in cPRC cells is captured by additional terms that describe a NIT-GC1 and NO-dependent increase in  Ca^2+^. This step is also dependent on the previously mentioned second branch phototransduction pathway. The effect on calcium may be mediated by cGMP, not modelled here.
 
-The effect of NO in cPRC cells is captured additional terms that describe a NIT-GC1 and NO-dependent increase in  Ca^2+^. This step is also dependent on the previously mentioned phototransduction pathway. The effect on calcium may be mediated by cGMP, not modelled here.
+Based on the synaptic connectome, we inferred a feedforward coupling between the INNOS and INRGWa cells. We modelled this as an inhibitory connection, given the decrease in Ca^2+^ in the INRGWa cells at the onset of simulation. This inhibition is also dependent on NIT-GC2 (Figure 5G).
+We further assumed the existence of direct excitatory coupling between the NIT-GC1-dependent NO response in cPRC and INRGWa Ca^2+^ to account for the late effects of cPRC on INRGWa (Figure 6A).
 
-Based on the synaptic connectome, we inferred a feedforward coupling between cPRC cells and INNOS and INRGWa cells.
-
-
-In the INNOS cells, we assumed that excitatory synaptic input from cPRC (or rebound from tonic inhibition) leads to a rise in Ca^2+^ leading to NO production via NOS.
-This input is NIT-GC2-dependent.
-In the INRGWa cells, we modeled a decrease in Ca^2+^ based on an inhibitory UV-dependent synaptic signal from the cPRCs.
-We further assumed the existence of direct excitatory coupling between cPRC Ca^2+^ levels and INRGWa Ca^2+^ to account for the late effects of cPRC on INRGWa (Figure 6A).
-The UV-dependent and Ca^2+^-dependent signals may be mediated by different transmitters released by cPRCs during distinct phases of their activation cycle.
-In addition, we assumed a direct inhibitory coupling between INNOS Ca^2+^ and INRGWa Ca^2+^.
 Finally, in all variables, we assumed a linear decay and constant production to set a steady state (Figure 6A).
+
 Since the aim of the model is to capture the normalised fluorescence data, the model is nondimensionalised.
 UV stimulation is modelled as a square pulse.
 To find model parameters producing an output fitting the experimental data we employed a global optimisation method known as a genetic algorithm (GA).
