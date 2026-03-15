@@ -29,7 +29,6 @@ Sys.setenv('R_MAX_VSIZE'=800000000)
 }
 
 
-
 #save session info and Rstudio version info for reproducibility
 writeLines(capture.output(sessionInfo()), "code/sessionInfo.txt")
 writeLines(capture.output(rstudioapi::versionInfo()), "code/versionInfo.txt")
