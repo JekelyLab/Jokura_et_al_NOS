@@ -68,6 +68,7 @@ In the revised version, we included a new series of measurements of calcium dyna
 We can reproduce all the qualitative dynamics
 
 
+- two timescale process
 
 **Reviewer #3 (Public Review):**
 
