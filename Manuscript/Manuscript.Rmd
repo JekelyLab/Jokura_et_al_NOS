@@ -1,22 +1,36 @@
 ---
 title: Nitric oxide feedback to ciliary photoreceptor cells gates a UV avoidance circuit
-author: 
+subtitle: 
   - name: "Kei Jokura<sup>1,`*`</sup>, Nobuo Ueda<sup>2</sup>, Martin Gühmann<sup>3</sup>, Luis Alfonso Yañez-Guerra<sup>1,4</sup>, Piotr Słowiński<sup>1</sup>, Kyle C. A. Wedgwood<sup>1</sup> and Gáspár Jékely<sup>1,5,`*`</sup>"
     affiliation: "<sup>1</sup>Living Systems Institute and Biosciences, Faculty of Health and Life Sciences, University of Exeter, Exeter EX4 4QD, United Kingdom <sup>2</sup>Okinawa Institute of Science and Technology, Okinawa, Japan, <sup>3</sup>School of Biological Sciences, University of Bristol, Bristol, United Kingdom, <sup>4</sup>School of Biological sciences, University of Southampton, Southampton, United Kingdom, <sup>5</sup>Centre for Organismal Studies (COS), Heidelberg University, 69120 Heidelberg, Germany  <br> <sup>*</sup>Correspondence`:` k.jokura @ exeter.ac.uk, gaspar.jekely @ cos.uni-heidelberg.de"
 output:
   html_document:
     theme: lumen
-  pdf_document:
-    latex_engine: lualatex
-    template: default
-  word_document: default
-geometry: left=0.8in,right=0.8in,top=0.8in,bottom=0.5in
-mainfont: Arial
-monofont: Times New Roman
-documentclass: article
-classoption: onecolumn
+pdf:
+    pdf-engine: xelatex
+    fig-align: left
+    fig-cap-location: bottom
+    number-sections: false
+    fontsize: 11pt
+    justification: raggedright
+    margin-left: 0.8in
+    margin-right: 0.8in
+    margin-top: 0.8in
+    margin-bottom: 0.8in
+    toc: false
+    keep-tex: true
+    include-in-header: 
+      text: |
+        \usepackage{scrlayer-scrpage}
+        \rohead{DFG form 53.01}
+        \usepackage[font=small, labelfont={bf,normalsize}, justification=raggedright, format=plain]{caption}
+        % Reduce space between figure and caption
+        \setlength{\abovecaptionskip}{0pt}
+        \setlength{\belowcaptionskip}{0pt}
+mainfont: Noto Sans
+monofont: FreeMono
+fontsize: 11pt
 linestretch: 1.2
-fontsize: 10pt
 bibliography: references.bib
 csl: elife.csl
 editor_options: 
@@ -787,10 +801,7 @@ knitr::include_graphics(path = "figures/Fig1_sup3.png")
 
 ```
 
-```{r echo=FALSE,fig.cap="**Figure 2 -- figure supplement 1. "}
-knitr::include_graphics(path = "figures/Fig2_sup1.png")
 
-```
 
 ```{r echo=FALSE,fig.cap="**Figure 3 -- figure supplement 1. Generation and behavioural characterisation of *NOS* CRISPR knockouts.** (**A**) Top: The domain organisation of *Platynereis* NOS protein and exon/intron structure of the *NOS* gene. Bottom: The genomic locus of *NOS* with the CRISPR target site, wild-type and knockout (NOSΔ11, NOSΔ23) sequences and predicted protein sequences. The PAM sequence is shown in grey, stop codons in red. **(B, C)** Immunostaining for NOS antibody in NOS mutant (B, NOSΔ11/Δ11; C, NOSΔ23/Δ23) larvae. Acetylated α-tubulin staining (green) highlights the neuropil and cPRC cilia. Anterior view of a three-day-old larva."}
 knitr::include_graphics(path = "figures/Fig3_sup1.png")
