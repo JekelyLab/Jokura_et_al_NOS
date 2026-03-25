@@ -1,4 +1,4 @@
-#Code to assemble Fig1 sup2 of the Jokura et al Platynereis NOS paper
+# ode to assemble Fig1 sup2 of the Jokura et al Platynereis NOS paper
 #2022 June - Kei Jokura, Gaspar Jekely
 
 rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
