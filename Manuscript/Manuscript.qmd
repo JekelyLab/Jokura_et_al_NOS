@@ -260,11 +260,9 @@ knitr::include_graphics(path = "figures/Fig5.png")
 To further analyse the dynamics of responses to UV light and formally describe cPRC phototransduction, synaptic connections, and NO retrograde signalling, we developed a mixed cellular-circuit-level mathematical model.
 We used our Ca^2+^ imagining data of cPRC, INNOS and INRGWa cells collected in wild type, *NOS* knockout and *NIT-GC2* morphant larvae to formulate assumptions that are the basis of the proposed model.
 
-We modelled a c-opsin1-dependent Ca^2+^-response to UV in the cPRCs (Figure 6A). This response depends on UV-dependent phototransduction, inhibition from NIT-GC2 activity, and NO-dependent activation. Biochemically, the pathways could include --- besides c-opsin1 and NIT-GC2 --- cGMP, possibly a cGMP-gated CNGAα channel, a GIRK [@refs] channel and other unknown components.
-
+We modelled a c-opsin1-dependent Ca^2+^-response to UV in the cPRCs (Figure 6A). This response depends on UV-dependent phototransduction, inhibition from NIT-GC2 activity, and NO-dependent activation. Biochemically, the pathways could include --- besides c-opsin1 and NIT-GC2 --- Gβγ-biased signaling to a GIRK channel [@Tsukamoto_2023A], cGMP, a cGMP-gated CNGAα channel, and other unknown components.
+ 
 The NIT-GC2-dependent branch of the phototransduction signal is one input to Ca^2+^ levels in the cPRC and leads to the activation (Ca^2+^ increase) of the postsynaptic INNOS cells (via synaptic transmission) (Figure 6A). In the INNOS cells, we assumed that excitatory synaptic input from cPRC (or rebound from tonic inhibition) leads to a rise in Ca^2+^ leading to NO production via NOS. We do not explicitly incorporate diffusion of NO into the model.
-
-The second branch of the phototransduction signal modulates the later Ca^2+^ dynamics in the cPRCs, including the baseline and the NO-dependent feedback.
 
 The effect of NO in cPRC cells is captured by additional terms that describe a NIT-GC1 and NO-dependent increase in  Ca^2+^. This step is also dependent on the previously mentioned second branch phototransduction pathway. The effect on calcium may be mediated by cGMP, not modelled here.
 
@@ -636,11 +634,11 @@ It inhibits the UV dynamics and also represents synaptic coupling from the cPRC 
 
 The $C_N(t)$ equation describes the Ca^2+^ dynamics in the INNOS cells. The $K_{S}^{C_N} S(t)$ term describes the Ca^2+^ increase due to the synaptic signal $S(t)$. The $N(t)$ variable represents NO produced and secreted by the INNOS cells. The $(\kappa_{N,1} (C_N(t) - 1/\delta_{C_N}))/(1 + \kappa_{N,2}(C_N(t) - 1/\delta_{C_N}))$ term describes the Ca^2+^-dependent NO production within the INNOS cells.
 
-The $S_{GC1}(t)$ equation describes the NO signalling dependent on the NIT-GC1. This signal activates two pathways. The first modulates phototransduction via the $N_{in,1}$ variable. The second pathway captures the delayed time limited increase in the Ca^2+^ in cPRC cells. The delay occurs because the signal $S_{GC1}(t)$ is transmitted via the $S_1(t)$ and $S_2(t)$ equations. To achieve time bounded response to the NO signal, we introduce the $N_{in,2}^{+}$ and $N_{in,2}$ equations. The $N_{in,2}^{+}$ describes production of $N_{in,2}$. The $N_{in,2}$ equation captures release of the $N_{in,2}$ variable. The $N_{in,2}$ variable increase the Ca^2+^ levels in cPRC cells in two ways, one through a direct mechanism, the other by increasing the baseline level $B(t)$.
+The $S_{GC1}(t)$ equation describes the NO signalling dependent on NIT-GC1. This signal activates two pathways. The first modulates phototransduction via the $N_{in,1}$ variable. The second pathway captures the delayed time-limited increase in the Ca^2+^ in cPRC cells. The delay occurs because the signal $S_{GC1}(t)$ is transmitted via the $S_1(t)$ and $S_2(t)$ equations. To achieve time-bounded response to the NO signal, we introduce the $N_{in,2}^{+}$ and $N_{in,2}$ equations. The $N_{in,2}^{+}$ equation describes production of $N_{in,2}$. The $N_{in,2}$ equation captures the release of the $N_{in,2}$ variable. The $N_{in,2}$ variable increases the Ca^2+^ levels in the cPRC cells in two ways, one through a direct mechanism, the other by increasing the baseline level $B(t)$.
 
-Finally, the UV stimulation is described by a square pulse with amplitude $a$ and duration $t_{UV end} - t_{UV \: start}$. The overall model structure \ref{eq:wild-type-model} is informed by the data collected in experiments with 20 seconds as well as with longer UV stimulation. Model parameters were fitted using exclusively experiments with 20 seconds UV stimulation. Experiments with longer UV stimulation were used to validate estimated parameter values.
+Finally, the UV stimulation is described by a square pulse with amplitude $a$ and duration $t_{UV end} - t_{UV \: start}$. The overall model structure is informed by the data collected in experiments with 20 seconds as well as with longer UV stimulation. Model parameters were fitted using exclusively experiments with 20 seconds UV stimulation. Experiments with longer UV stimulation were used to validate the estimated parameter values.
 
-We do not model the dynamics of Ca^2+^ in the INRGW cells, which depends on the other equations in a feed-forward manner. Phenomenologically, we observe increase in Ca^2+^ levels in the INRGW cells that is correlated  with increases of the Ca^2+^ levels in the cPRC cells; term $A(C_P,t)$ in Fig ... . We also see an inhibitory effect correlated with the Ca^2+^ levels in the INNOS cells; term $I(C_P,t)$ in Fig ... .  However, for the following three reasons, we choose not model the INRGW cells. First, the INRGW cells were not a subject of direct experimental modifications. Second, the quality of the recordings from the INRGW cells is lower than that of the other cells, for example, the wild-type recordings do not appear to be at a steady state before the UV stimulation. Additionally, recordings in the NIT-GC2 morphants are the only dataset that shows a large difference between mean and median time-series, which we take as a measure of robustness of response. Finally, data collected in the experiments do not provide enough information to specify how the duration of the UV stimulation affects the dynamics of Ca^2+^ in the INRGW cells.
+We do not model the dynamics of Ca^2+^ in the INRGWa cells, which depends on the other equations in a feed-forward manner. Phenomenologically, we observe increase in Ca^2+^ levels in the INRGWa cells that is correlated  with increases of the Ca^2+^ levels in the cPRC cells; term $A(C_P,t)$ in Fig ... <!-- check fig --> . We also see an inhibitory effect correlated with the Ca^2+^ levels in the INNOS cells; term $I(C_P,t)$ in Fig ... .  However, for the following three reasons, we choose not model the INRGW cells. First, the INRGW cells were not a subject of direct experimental modifications. Second, the quality of the recordings from the INRGW cells is lower than that of the other cells, for example, the wild-type recordings do not appear to be at a steady state before the UV stimulation. Additionally, recordings in the NIT-GC2 morphants are the only dataset that shows a large difference between mean and median time-series, which we take as a measure of robustness of response. Finally, the data collected in the experiments do not provide enough information to specify how the duration of the UV stimulation affects the dynamics of Ca^2+^ in the INRGW cells.
 
 ### NOS-knockout model
 
@@ -662,14 +660,14 @@ UV(t) &=
 \end{aligned}
 \end{equation}
 
-We use the same system of equations to describe the NIT-GC2 morphants. To this end, we lower the value of $\kappa_{GC2}$ to 0.15; this value indicates that an average effectiveness of NIT-GC2 morpholino is 85\%. Furthermore, in the NIT-GC2 morpholino condition, we do not fit the INNOS data since we assumed that the feedforward coupling between the cPRC cells and INNOS cell depends on NIT-GC2 activity (that is, we assume that the Ca^2+^ levels in INNOS cells are on constant in this condition); this is on average consistent with the collected data.
+We use the same system of equations to describe the NIT-GC2 morphants. To this end, we lower the value of $\kappa_{GC2}$ to 0.15; this value captures an average effectiveness of NIT-GC2-morpholino knockdown of 85\%. Furthermore, in the NIT-GC2 morpholino condition, we do not fit the INNOS data since we assumed that the feedforward coupling between the cPRC cells and INNOS cell depends on NIT-GC2 activity (that is, we assume that the Ca^2+^ levels in INNOS cells are on constant in this condition); this is on average consistent with the collected data.
 
 ### Parameter fitting (genetic algorithm)
 
 To find sets of model parameters that reproduce recordings from the Ca^2+^ imaging experiments, we define an optimisation problem to minimise the discrepancy between the modelled Ca^2+^ traces and the experimental data. To obtain the modelled Ca^2+^ traces, we analytically calculate the steady state in the absence of UV stimulation (in which many terms in the model equations vanish), and then use the explicit integration algorithm \texttt{ode45} in Matlab to simulate the model with the computed steady state as the initial condition with UV stimulation reinstated.
 
 We quantify the difference between the model output and the data using a vector-valued objective function. The first component of this function measures this difference during the UV stimulation, whilst the second component measures the difference from the end of the stimulation until the end of the recording. We thus define a vector-valued objective
-function, $\mathbf{D} \in \mathbb{R}^2_{\geq 0} $, as:
+function, $\mathbf{D} \in \mathbb{R}^2_{\geq 0}$, as:
 \begin{equation}
  \mathbf{D}\left({C}_X^{data},{C}_X^{model}\right)=\left(D_{k_{UV\: start}}^{k_{UV\: end}}\left({C}_X^{data},{C}_X^{model}\right),D_{k_{UV\: end }+1}^{k_{end}}\left({C}_X^{data},{C}_X^{model}\right) \right),
  \label{eq:cost_fun}
@@ -691,16 +689,16 @@ time of the start of UV stimulation, $t_{UV\: end}$ is the time of the
 end of UV stimulation, and $t_{end}$ is the last time sample.)
 Simulations are sampled with the same sampling rate as the data. 
 
-To fit the NOS-knockout model to cPRC Ca^2+^ traces, we modify the second objective $D_{k_{UV\: end }+1}^{k_{end}}$. Instead of minimising the difference on the whole interval $t_{k_{UV\: end }+1}$ to $t_{k_{end}}$, we minimise it on the last 10 seconds of this interval, i.e., $t_{k_{end-10[s]}}$ to $t_{k_{end}}$. We change the interval in this particular case because, based on the averaged data, we assume that the only dynamics after the end of UV stimulation in the NOS-knockout is linear decay to a steady state. Using the original, non-modified cost function \eqref{eq:cost_fun} for the recordings exhibiting more complicated dynamics than linear decay would bias the fitting process.
+To fit the NOS-knockout model to cPRC Ca^2+^ traces, we modify the second objective $D_{k_{UV\: end }+1}^{k_{end}}$. Instead of minimising the difference on the whole interval $t_{k_{UV\: end }+1}$ to $t_{k_{end}}$, we minimise it on the last 10 seconds of this interval, i.e., $t_{k_{end-10[s]}}$ to $t_{k_{end}}$. We change the interval in this particular case because, based on the averaged data, we assume that the only dynamics after the end of UV stimulation in the NOS-knockout is linear decay to a steady state. Using the original, non-modified cost function for the recordings exhibiting more complicated dynamics than linear decay would bias the fitting process.
 
 To solve the optimisation problem with the above objective function, we employ a global optimisation method known as a genetic algorithm (GA). GAs are a class of iterative, gradient-free algorithms inspired by processes of natural selection including breeding and mutation \cite{GAbook}. With reference to natural selection, sets of candidate
-solutions in GAs are referred to as `populations'. As our algorithm of choice, we use the Matlab implementation of a genetic algorithm for multiobjective optimisation \texttt{gamultiobj}. The \texttt{gamultiobj} algorithm uses a controlled, elitist genetic algorithm (a variant of NSGA-II \cite{GAbook}). We use the default settings for most hyperparameters of the algorithm.
+solutions in GAs are referred to as `populations'. As our algorithm of choice, we use the Matlab implementation of a genetic algorithm for multiobjective optimisation ```gamultiobj```. The ```gamultiobj``` algorithm uses a controlled, elitist genetic algorithm (a variant of NSGA-II \cite{GAbook}). We use the default settings for most hyperparameters of the algorithm.
 
-Here we outline the main steps of the \texttt{gamultiobj} implementation
+Here we outline the main steps of the ```gamultiobj``` implementation
 of the GA. The first step is to generate a set of random model parameter
 sets, known as the initial population. Next, we score the fitness of
 each parameter set in the population according to the objective
-function $ \bf D$. Using these scores, the \texttt{gamultiobj} algorithm employs
+function $ \bf D$. Using these scores, the ```gamultiobj``` algorithm employs
 a binary tournament selection function\cite{Miller1995GeneticAT} to
 select `parents' for the next population. A population of children
 (i.e., new parameter sets) is generated by `breeding' randomly chosen
@@ -712,7 +710,7 @@ that allows exploring the objective function (fitting) landscape. The
 stochastic nature of GAs helps them to avoid local minima that can
 plague gradient-descent-based optimisation methods.
 
-In the next step, the \texttt{gamultiobj} algorithm scores the parameter
+In the next step, the ```gamultiobj``` algorithm scores the parameter
 sets in the children population using the values of the objective
 function. Scores from the parent and child populations are combined. A
 subset of the size of the initial population is then selected as a new
@@ -723,7 +721,7 @@ function (used to ensure diversity of the parent
 population)\cite{crowding_distance,GAbook}. This iterative process is
 repeated until the convergence criteria are met, indicating that the GA has found a set of model parameters that best reproduce the data under consideration.
 
-The \texttt{gamultiobj} algorithm returns a set of model parameter
+The ```gamultiobj``` algorithm returns a set of model parameter
 values on a Pareto front \cite{censor1977pareto,GAbook}. The coordinates of points on the front are the values of the components of the objective function $\mathbf{D}$. Points on the Pareto front are nondominated, meaning that improvements to one of the components cannot be achieved without worsening the other.
 To identify a single optimal solution, we select the parameter set along the Pareto front whose objective function value is the smallest with respect to the Euclidean norm.
 
@@ -747,7 +745,7 @@ Below we present a summary of the steps of our optimisation pipeline for fitting
 \item
   Evaluate the objective function on the initial population.
 \item
-  Run the \texttt{gamultiobj} algorithm.
+  Run the ```gamultiobj``` algorithm.
 \item
   Use the Euclidean norm to find the set of model parameters that best
   fits the data.
