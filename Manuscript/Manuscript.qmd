@@ -235,24 +235,22 @@ To investigate how NO and NIT-GC signalling influence the dynamics of the cPRC c
 To unambiguously identify the neurons from which we recorded Ca^2+^ signals, we developed an on-slide immunostaining method (Figure 5---figure supplement 1A).
 We used the cell-specific antibody markers against RYamide (INNOS) (Figure 5---figure supplement 1B-D), RGWamide (INRGWa) and serotonin (Ser-h1) [@Conzelmann2011] to immunostain agar-embedded larvae following Ca^2+^ imaging.
 Based on the position of the nuclei, we could correlate live and fixed samples at a single-cell precision (Figure 5A, B).
-Due to the stereotypy of the larvae, we could also identify neurons based on their position and Ca^2+^ activity in activity-correlation maps (Figure 5C <!--make Ser-h1 part of the figure supplementary with the correlation map -->).
+Due to the stereotypy of the larvae, we could also identify neurons based on their position and Ca^2+^ activity in activity-correlation maps (Figure 5 -- figure supplement 2A).
 
 We first quantified the responses of the INNOS and INRGWa interneurons during 405 nm stimulation of the cPRCs.
-In both wild type and *NOS*-mutant larvae, INNOS cells showed an increase in Ca^2+^ during stimulation (Figure 5D).
-In contrast, the INNOS response was flat or slightly negative in *NIT-GC2*-morphant larvae (Figure 5E) revealing an essential role for NIT-GC2-mediated cPRC suppression in INNOS activation.
+In both wild type and *NOS*-mutant larvae, INNOS cells showed an increase in Ca^2+^ during stimulation (Figure 5C).
+In contrast, the INNOS response was flat or slightly negative in *NIT-GC2*-morphant larvae (Figure 5D) revealing an essential role for NIT-GC2-mediated cPRC suppression in INNOS activation.
 The INRGWa cells were initially inhibited during cPRC stimulation, followed by a delayed activation paralleling the second activation phase of the cPRCs.
-This late INRGWa response was lacking in *NOS*-mutants (Figure 5F).
-In *NIT-GC2*-morphants, INRGWa cells showed a transient increase in Ca^2+^ that decayed after light off and a delayed activation was not present (Figure 5G).
+This late INRGWa response was lacking in *NOS*-mutants (Figure 5E).
+In *NIT-GC2*-morphants, INRGWa cells showed a transient increase in Ca^2+^ that decayed after light off and a delayed activation was not present (Figure 5F).
 
 Next, we imaged Ca^2+^ signals from Ser-h1 neurons in wild type and *NOS* mutant larvae.
-Ser-h1 cells showed an activation profile that correlated with cPRC activity, including a reduction in Ca^2+^ during stimulation followed by a rebound, a response that was defective in *NOS* mutants (Figure 5I).
-These data suggest that during 405 nm stimulation the Ser-h1 cells are <!-- check this --> activated, and this regulation is NO-dependent.
-This pattern is expected to increase ciliary activity in the prototroch but not in the other ciliary bands (with no Ser-h1 synapses), triggering faster swimming under UV light.
+Ser-h1 cells showed mixed responses. In some larvae the activation correlated with cPRC activity, including a reduction in Ca^2+^ during stimulation followed by a rebound. In other larvae, Ser-h1 did not show the post-stimulus rebound. In *NOS* mutants Ser-h1 in most larvae showed no post-stimulus rebound (Figure 5 -- figure supplement 2B).
+These data suggest that during 405 nm stimulation the Ser-h1 cells can be activated, and this regulation is NO-dependent.
+This pattern is expected to increase ciliary activity in the prototroch but not in the other ciliary bands (with no Ser-h1 synapses), triggering faster swimming under UV light. The variability may be due to the endogenous rhythmic activity and inhibition of Ser-h1 neurons that are part of a larger ciliomotor circuit [@veraszto2017].
 
-```{r echo=FALSE,fig.cap="**Figure 5. NOS- and NIT-GC2-dependent dynamics of the cPRC circuit.** (**A, B**) GCaMP6s imaging from cPRCs and INNOS cells (left panels) followed by on-slide immunostaining for (A) RYamide to label INNOS and (B) RGWamide+serotonin to label INRGWa and Ser-h1 (red). Nuclei are stained with DAPI (cyan). Asterisks indicate cPRC nuclei. Numbers mark the same cells in the GCaMP and immunostaining images matched by position. (**C**) Correlation map of neuronal activity of the cPRCs, INNOS, INRGWa, and Ser-h1 neurons. (**D**) GCaMP6s fluorescence in INNOS cells in wild type (WT) and *NOSΔ11/Δ11* mutant larvae during 405 nm stimulation of the cPRC cilia. (**E**) GCaMP6s fluorescence in INNOS cells in *NIT-GC2*-morphant larvae during 405 nm stimulation. (**F**) GCaMP6s fluorescence in INRGWa cells in wild type and *NOSΔ23/Δ23* mutant larvae during 405 nm stimulation. (**G**) GCaMP6s fluorescence in INRGWa cells in *NIT-GC2*-morphant larvae during 405 nm stimulation. (**H, I**) GCaMP6s fluorescence in (H) Ser-h1 cells <!-- remove  and (I) the MC cell --> in wild type and *NOSΔ11/Δ11* mutant larvae during 405 nm stimulation. <br> Figure 5 -- source data 1-6. Source data for panels D-I."}
-
+```{r echo=FALSE,fig.cap="**Figure 5. NOS- and NIT-GC2-dependent dynamics of the cPRC circuit.** (**A, B**) GCaMP6s imaging from cPRCs and INNOS cells (left panels) followed by on-slide immunostaining for (A) RYamide to label INNOS and (B) RGWamide+serotonin to label INRGWa and Ser-h1 (red). Nuclei are stained with DAPI (cyan). Asterisks indicate cPRC nuclei. Numbers mark the same cells in the GCaMP and immunostaining images matched by position. (**C**) GCaMP6s fluorescence in INNOS cells in wild type (WT) and *NOSΔ11/Δ11* mutant larvae during 405 nm stimulation of the cPRC cilia. (**D**) GCaMP6s fluorescence in INNOS cells in *NIT-GC2*-morphant larvae during 405 nm stimulation. (**E**) GCaMP6s fluorescence in INRGWa cells in wild type and *NOSΔ23/Δ23* mutant larvae during 405 nm stimulation. (**F**) GCaMP6s fluorescence in INRGWa cells in *NIT-GC2*-morphant larvae during 405 nm stimulation. <br> Figure 5 -- source data 1-4. Calcium traces for INNOS and INRGWa neurons."}
 knitr::include_graphics(path = "figures/Fig5.png")
-
 ```
 
 ### Mathematical modelling of cPRC-circuit dynamics
@@ -262,11 +260,18 @@ We used our Ca^2+^ imagining data of cPRC, INNOS and INRGWa cells collected in w
 
 We modelled a c-opsin1-dependent Ca^2+^-response to UV in the cPRCs (Figure 6A). This response depends on UV-dependent phototransduction, inhibition from NIT-GC2 activity, and NO-dependent activation. Biochemically, the pathways could include --- besides c-opsin1 and NIT-GC2 --- Gβγ-biased signalling to a GIRK channel [@Tsukamoto_2023A], cGMP, a cGMP-gated CNGAα channel, and other unknown components.
  
+
+```{r echo=FALSE,fig.cap="**Figure 6. Mathematical modelling and signalling mechanisms of the cPRC circuit.** (**A**) Diagram of the mathematical model with the componenets, interactions, parameters and equations used to model Ca^2+^ dynamics. (**B**) Dot plot of genes (columns) expressed in three types of cells (rows) in the cPRC circuit using single cell RNA-Seq. The size of the dots is expressed in proportion to the percentage of cells expressing that gene relative to all cells. The colours represent the normal logarithm of the number of transcripts in the cells expressing the gene. (**C**) Schematic diagram of the signalling pathway of the cPRC circuit, focusing on the NO feedback. <br> Figure 6 -- source data 1. TPM values for each gene and the percentage of expressed genes."}
+
+knitr::include_graphics(path = "figures/Fig6.png")
+```
+
+
 The NIT-GC2-dependent branch of the phototransduction signal is one input to Ca^2+^ levels in the cPRC and leads to the activation (Ca^2+^ increase) of the postsynaptic INNOS cells (via synaptic transmission) (Figure 6A). In the INNOS cells, we assumed that excitatory synaptic input from cPRC (or rebound from tonic inhibition) leads to a rise in Ca^2+^ leading to NO production via NOS. We do not explicitly incorporate diffusion of NO into the model.
 
-The effect of NO in cPRC cells is captured by additional terms that describe a NIT-GC1 and NO-dependent increase in  Ca^2+^. This step is also dependent on the previously mentioned second branch phototransduction pathway. The effect on calcium may be mediated by cGMP, not modelled here.
+The effect of NO in cPRC cells is captured by additional terms that describe a NIT-GC1 and NO-dependent increase in Ca^2+^. This step is also dependent on the previously mentioned second branch phototransduction pathway. The effect on calcium may be mediated by cGMP, not modelled here.
 
-Based on the synaptic connectome, we inferred a feedforward coupling between the INNOS and INRGWa cells. We modelled this as an inhibitory connection, given the decrease in Ca^2+^ in the INRGWa cells at the onset of simulation. This inhibition is also dependent on NIT-GC2 (Figure 5G).
+Based on the synaptic connectome, we inferred a feedforward coupling between the INNOS and INRGWa cells. We modelled this as an inhibitory connection, given the decrease in Ca^2+^ in the INRGWa cells at the onset of simulation. This inhibition is also dependent on NIT-GC2 (Figure 5E).
 We further assumed the existence of direct excitatory coupling between the NIT-GC1-dependent NO response in cPRC and INRGWa Ca^2+^ to account for the late effects of cPRC on INRGWa (Figure 6A).
 
 Finally, in all variables, we assumed a linear decay and constant production to set a steady state (Figure 6A).
@@ -275,35 +280,40 @@ Since the aim of the model is to capture the normalised fluorescence data, the m
 UV stimulation is modelled as a square pulse.
 To find model parameters producing an output fitting the experimental data we employed a global optimisation method known as a genetic algorithm (GA).
 
-Through this optimisation procedure, we found parameters that gave a fit to our experimental data under all conditions (Figure 6B; Figure 6--figure supplement 1-5).
-We could fit to mean Ca^2+^ profiles but also individual Ca^2+^ transients.
-Our model only includes a minimal set of parameters and assumptions of interactions that are required to describe the dynamics of cPRC, INNOS and INRGWa in wild type and loss-of-function conditions (Figure 6A, B).
+Through this optimisation procedure, we found parameters that gave a fit to our experimental data under all conditions (Figure 6--figure supplement 1-5).
+We could fit to mean Ca^2+^ profiles but also individual Ca^2+^ transients (Figure 7; Figure 6 -- figure supplement 2). In addition, we could fit our model to the experimentally characterised NO signals in the neuropil (Figure 2D; Figure 6 -- figure supplement 1).
+
+```{r echo=FALSE,fig.cap="**Figure 7**. Simulated Ca^2+^ traces for parameter sets fitted independently to each Ca^2+^-recording collected in wild type, *NOS* knockout, and *NIT-GC2* morphant larvae. (**A**, **B**) Simulated Ca^2+^ traces in cPRC (A) and INNOS (B) cells in the wild-type condition. (**C**, **D**) Simulated Ca^2+^ traces in cPRC (C) and INNOS (D) cells in the *NOS* knockout condition. (**E-F**) Simulated Ca^2+^ traces in cPRC (E) and INNOS (H) cells in the *NIT-GC2*-morphant condition. Thin coloured curves indicate individual recordings (cPRC - purple and INNOS - blue), thin grey curves indicate simulated Ca^2+^ traces based on model parameters fitted to the individual recording, thick coloured curves indicate averages of the recordings, and thick black curves represent the average of the fits. <br> Figure 6 -- figure supplement 1 -- source data 1. Best fitted parameters {best/_pars.mat}. <br> Figure 6 -- figure supplement 1 -- source data 2. Recorded traces (as used in earlier figures) {wt/_ko/_mo/_data.mat}. <br> Figure 6 -- figure supplement 1 -- source data 3. script to generate the figure {fig/_all/_fits.m}./label{fig:all-fits} " }
+knitr::include_graphics(path = "figures/Fig7.png")
+
+```
+
+Our model only includes a minimal set of parameters and assumptions of interactions that are required to describe the dynamics of cPRC, INNOS and INRGWa in wild type and loss-of-function conditions (Figure 6A).
 The model highlights that cPRC phototransduction employs distinct pathways that operate on different time scales and differentially influence cPRC Ca^2+^ levels.
 The coupling between cPRCs and interneurons also requires different signalling mechanisms, either through distinct neurotransmitters or receptors expressed in the different cells.
 
 To identify possible molecular pathways, we analysed single-cell transcriptome data for cPRC, INNOS and INRGWa identified by spatial mapping [@Achim2015] and unique marker genes [@williams2017].
-In cPRCs, we found transporters and synthetic enzymes indicating cholinergic, glutaminergic, glycinergic, GABAergic and adrenergic neurotransmission (Figure 6C).
-For each neurotransmitter, we also found receptor-encoding genes expressed in INNOS and INRGWa (Figure 6C).
-The two types of interneurons often expressed different subunits or types of these receptors, indicating differential signalling (Figure 6C).
+In cPRCs, we found transporters and synthetic enzymes indicating cholinergic, glutaminergic, glycinergic, GABAergic and adrenergic neurotransmission (Figure 6B).
+For each neurotransmitter, we also found receptor-encoding genes expressed in INNOS and INRGWa (Figure 6B).
+The two types of interneurons often expressed different subunits or types of these receptors, indicating differential signalling (Figure 6B).
 
 Based on these data, our experimental results and the mathematical model, we assembled a minimal phototransduction and circuit diagram.
 The components for which experimental data are available are shown in bold.
-Other potential molecular players are also indicated (Figure 6D).
+Other potential molecular players are also indicated (Figure 6C).
 
-```{r echo=FALSE,fig.cap="**Figure 6. Mathematical modelling and signalling mechanisms of the cPRC circuit.** (**A**) Diagram of the mathematical model with the componenets, interactions, parameters and equations used to model Ca^2+^ dynamics. (**B**) Average Ca^2+^ traces (upper) and traces from model simulations (lower) fitted to the data. (**C**) Dot plot of genes (columns) expressed in three types of cells (rows) in the cPRC circuit using single cell RNA-Seq. The size of the dots is expressed in proportion to the percentage of cells expressing that gene relative to all cells. The colours represent the normal logarithm of the number of transcripts in the cells expressing the gene. (**D**) Schematic diagram of the signalling pathway of the cPRC circuit, focusing on the NO feedback. <br> Figure 6 -- source data 1. TPM values for each gene and the percentage of expressed genes."}
+To further explore the model, we carried out a global sensitivity analysis (more details in the Methods section). This analysis measures how the output of the model depends on parameter values (Tables 1-5).
 
-knitr::include_graphics(path = "figures/Fig6.png")
-```
+analysis of structural identifiability and observability 
+
+
+- sensitivity analysis
+
+global sensitivity analysis are presented in Tables 2–6 
 
 To generate new insights from the model, we asked how the duration and intensity of UV stimulation influences signalling output, measured as the magnitude (quantified as area under peak, AUP) of the NO-dependent Ca^2+^ signal in the cPRCs.
 The model allowed us to systematically vary stimulus conditions that would not have been feasible in single-larva experiments.
-We found that delayed activation occurs only for UV stimulation of sufficient amplitude and duration (Figure 7).
+We found that delayed activation occurs only for UV stimulation of sufficient amplitude and duration (Figure 6 -- figure supplement 7).
 This suggests an integratory function of NO signalling to tune circuit output to the strength of UV exposure.
-
-```{r echo=FALSE,fig.cap="**Figure 7. Comparison of the magnitude of cPRC activation as a function of stimulus duration and intensity.** (**A**) Change in magnitude calculated from mathematical models. Median values of the $AUP$ are presented as a heatmap with dark blue indicating flat $C_P(t)$ traces with median $AUP$ close to 0 and red indicating that the $C_P(t)$ traces have a clearly defined delayed activation peak. (**B**) Change in magnitude calculated from experiments data. The amount of change in cPRC fluorescence intensity (ΔF/F0) when the laser power (%) and time duration (seconds) of the stimulus are varied using calcium imaging. The intensity change is indicated by the size of the circle and the colour gradient from blue to red. Laser power is shown as relative values. <br> Figure 7 -- source data 1. Bubble chart readings. "}
-
-knitr::include_graphics(path = "figures/Fig7.png")
-```
 
 ## Discussion
 
@@ -399,21 +409,18 @@ Non-directional UV/violet light induces downward swimming head down in *Platyner
 Since stimulus direction is not relevant, swimming direction must be determined by gravity.
 
 Connectome reconstruction and whole-body cell annotation in the 3-day-old *Platynereis* larva has not revealed any balancer organ to sense orientation in the gravity field [@bezares-calderon2019; @veraszto2020].
-It follows that body orientation must be determined by physical parameters including the buoyancy, centre of mass and shape of the larva as well as differential ciliary activity.
+Body orientation may be thus determined by physical parameters including the buoyancy, centre of mass and shape of the larva as well as differential ciliary activity.
 Except for ciliary activity, all these parameters are likely invariant during the UV response.
-Our data suggest the UV-dependent inhibition of prototroch ciliary beating via Ser-h1 inhibition and MC activation [@veraszto2017].
-
-We hypothesize that the differential beating of prototroch versus trunk cilia causes a head-up or head-down orientation due to physics alone.
-During the UV response, prototroch cilia beat slower than trunk cilia, resulting in a head-down stable state ('rear-wheel drive').
-In contrast, during the pressure response prototroch cilia beat faster than trunk cilia [@bezares-calderon2023], leading to a head-up orientation ('front-wheel drive').
-Testing this hypothesis will require biophysical experiments and mathematical modelling.
-
+Our data show a UV-dependent activation of ciliary beating in the prototroch, likely via the activation of Ser-h1.
 
 ### Future directions
 
-- add NO donor to larvae and measure cPRC calcium
-- knock-down further components
-- use Green cGull to directly measure cGMP and build it into the model
+The mathematical model could be further developed by more explicitely modelling cPRC photottransduction and synaptic transmission. For example, cGMP levels could also be directly measured in cPRCs by Green-cGull and built into the model. The contributions of the individual neurotransmitters in the circuit could also be analysed further by knockdown/knockout experiments.
+The addition of an NO donor to larvae combined with calcium imaging could more directly test the relationsip between NO levels and cPRC responses.
+
+Beyond these details of cellular signalling, the biggest question remains the mechanism of graviorientation in the larvae. We do not understand what leads to differential behavioural output during the pressure on-response (upward swimming) [@bezares-calderon2023] and the UV response (downward swimming). Under both conditions, the prototroch cilia increase their beating. The only difference we detected so far is in the dynamics of cPRC Ca^2+^ responses. 
+
+Identifying the neuronal and biophysical underpinnings of these opposite behavioural outcomes will require further genetic and biophysical experiments combined with mathematical modelling.
 
 **UV-avoidance circuits of extraocular photoreceptors**
 
@@ -638,7 +645,7 @@ The $S_{GC1}(t)$ equation describes the NO signalling dependent on NIT-GC1. This
 
 Finally, the UV stimulation is described by a square pulse with amplitude $a$ and duration $t_{UV end} - t_{UV \: start}$. The overall model structure is informed by the data collected in experiments with 20 seconds as well as with longer UV stimulation. Model parameters were fitted using exclusively experiments with 20 seconds UV stimulation. Experiments with longer UV stimulation were used to validate the estimated parameter values.
 
-We do not model the dynamics of Ca^2+^ in the INRGWa cells, which depends on the other equations in a feed-forward manner. Phenomenologically, we observe increase in Ca^2+^ levels in the INRGWa cells that is correlated  with increases of the Ca^2+^ levels in the cPRC cells; term $A(C_P,t)$ in Fig ... <!-- check fig --> . We also see an inhibitory effect correlated with the Ca^2+^ levels in the INNOS cells; term $I(C_P,t)$ in Fig ... .  However, for the following three reasons, we choose not model the INRGW cells. First, the INRGW cells were not a subject of direct experimental modifications. Second, the quality of the recordings from the INRGW cells is lower than that of the other cells, for example, the wild-type recordings do not appear to be at a steady state before the UV stimulation. Additionally, recordings in the *NIT-GC2*-morphants are the only dataset that shows a large difference between mean and median time-series, which we take as a measure of robustness of response. Finally, the data collected in the experiments do not provide enough information to specify how the duration of the UV stimulation affects the dynamics of Ca^2+^ in the INRGW cells.
+We do not model the dynamics of Ca^2+^ in the INRGWa cells, which depends on the other equations in a feed-forward manner. Phenomenologically, we observe increase in Ca^2+^ levels in the INRGWa cells that is correlated  with increases of the Ca^2+^ levels in the cPRC cells; term $A(C_P,t)$ in Fig ... <!-- check fig --> . We also see an inhibitory effect correlated with the Ca^2+^ levels in the INNOS cells; term $I(C_P,t)$ in Fig ... .  However, for the following three reasons, we choose not model the INRGWa cells. First, the INRGWa cells were not a subject of direct experimental modifications. Second, the quality of the recordings from the INRGWa cells is lower than that of the other cells, for example, the wild-type recordings do not appear to be at a steady state before the UV stimulation. Additionally, recordings in the *NIT-GC2*-morphants are the only dataset that shows a large difference between mean and median time-series, which we take as a measure of robustness of response. Finally, the data collected in the experiments do not provide enough information to specify how the duration of the UV stimulation affects the dynamics of Ca^2+^ in the INRGWa cells.
 
 ### *NOS*-knockout model
 
@@ -760,9 +767,9 @@ Figure 8 <!-- check --> shows how the results of simulations of the WT model dep
 
 ### Assessment of model sensitivity
 
-To analyse model sensitivity, we use Sobol's indices using the Global Sensitivity Analysis Matlab Toolbox [@Cannavo_2012Sensitivity]. Global sensitivity indices facilitate measuring the extent to which changes in model output depend on the changes in parameter values. The Sobol approach is based on the ANOVA (ANalysis Of VAriance) decomposition and computation of the variance of the terms in the decomposition. Here, we combine information from two kinds of indices. The first order indices $S_i$ represent the expected percentage reduction in output variance when parameter $i$ has no uncertainty [@Cannavo_2012Sensitivity]. By contrast, the total variance indices $S^{Tot}_i$ represent the expected percentage output variance that remains if all parameters except $i$ are known [@Cannavo_2012Sensitivity]. The summary of the significance of global sensitivity indexes is presented in Table 1 <!--check-->. For our analysis we defined the output as the sum of the two components of the objective functions. To compute the indices the toolbox explores how the output changes as the model parameters are varied. 
+To analyse model sensitivity, we use Sobol's indices using the Global Sensitivity Analysis Matlab Toolbox [@Cannavo_2012Sensitivity]. Global sensitivity indices facilitate measuring the extent to which changes in model output depend on the changes in parameter values. The Sobol approach is based on the ANOVA (ANalysis Of VAriance) decomposition and computation of the variance of the terms in the decomposition. Here, we combine information from two kinds of indices. The first order indices $S_i$ represent the expected percentage reduction in output variance when parameter $i$ has no uncertainty [@Cannavo_2012Sensitivity]. By contrast, the total variance indices $S^{Tot}_i$ represent the expected percentage output variance that remains if all parameters except $i$ are known [@Cannavo_2012Sensitivity]. The summary of the significance of global sensitivity indexes is presented in Table 1. For our analysis we defined the output as the sum of the two components of the objective functions. To compute the indices the toolbox explores how the output changes as the model parameters are varied. 
 
-The results of the global sensitivity analysis are presented in Tables 2--6 <!--check-->. The analysis identifies theparameter $B_0$ as the most important parameter in the *NOS*-knockout model and $\delta_{C_P}$ as the least important parameter. Fits to the Ca^2+^ recordings in the INNOS cells are found to depend strongly on $\delta_S$ and $K_{C_N}$, while the most important parameter for fitting the NO recordings in the INNOS cells is $\delta_N$. In case of the wild-type cPRC recordings, the most important parameters are the ones that can be related to the NIT-GC1 dependent NO signals. For the quick NO response  $N_{in,1}(t)$, the important parameters are $\kappa_{S_{GC1}}$ and $\delta_{S_{GC1}}$, while, $\kappa_{S_{GC1}}$ and $\delta_{S_{GC1}}$ control the dynamics of the $N_{in,1}(t)$ variable. For the late NO response $N_{in,2}(t)$, the important parameters include $\kappa_{GC1,2}$, $K_{S_1}$ and $K_{S_2}$. The parameter $\kappa_{GC1,2}$ modulates Ca^2+^ levels in the cPRC cells. Finally, $K_{S_1}$ and $K_{S_2}$ are important for regulating the signalling cascade that leads to the late NO response.
+The results of the global sensitivity analysis are presented in Tables 2--5. The analysis identifies the parameter $B_0$ as the most important parameter in the *NOS*-knockout model and $\delta_{C_P}$ as the least important parameter. Fits to the Ca^2+^ recordings in the INNOS cells are found to depend strongly on $\delta_S$ and $K_{C_N}$, while the most important parameter for fitting the NO recordings in the INNOS cells is $\delta_N$. In case of the wild-type cPRC recordings, the most important parameters are the ones that can be related to the NIT-GC1 dependent NO signals. For the quick NO response  $N_{in,1}(t)$, the important parameters are $\kappa_{S_{GC1}}$ and $\delta_{S_{GC1}}$, while, $\kappa_{S_{GC1}}$ and $\delta_{S_{GC1}}$ control the dynamics of the $N_{in,1}(t)$ variable. For the late NO response $N_{in,2}(t)$, the important parameters include $\kappa_{GC1,2}$, $K_{S_1}$ and $K_{S_2}$. The parameter $\kappa_{GC1,2}$ modulates Ca^2+^ levels in the cPRC cells. Finally, $K_{S_1}$ and $K_{S_2}$ are important for regulating the signalling cascade that leads to the late NO response.
 
 |                                |                                                                    |
 |--------------------------------|--------------------------------------------------------------------|
@@ -778,7 +785,7 @@ Table 1: Summary of the significance of global sensitivity indexes
 |-------------------------|----------------|---------------|------------|--------------|--------|------------|
 |                         | $\delta_{C_P}$ | $\kappa_{UV}$ | $\kappa_S$ | $\delta_{B}$ | $B_0$  | $\delta_S$ |
 | $S_i$                   | 0.0007         | 0.0648        | 0.08       | 0.0127       | 0.3172 | 0.0106     |
-| $\pm$ CI of $S_i$       | $<$0.0001      | 0.0003        | 0.0004     | 0.0003       | 0.0001 | 0.0016     |
+| $\pm$ CI of $S_i$       | <0.0001      | 0.0003        | 0.0004     | 0.0003       | 0.0001 | 0.0016     |
 | $S_i^{Tot}$             | 0.0277         | 0.2692        | 0.2418     | 0.2295       | 0.6734 | 0.1721     |
 | $\pm$ CI of $S_i^{Tot}$ | 0.0057         | 0.0042        | 0.0044     | 0.0044       | 0.0019 | 0.0048     |
 
@@ -788,7 +795,7 @@ Table 2: Results of the global sensitivity analysis of the model consisting of $
 |-------------------------|------------|----------------|----------------|
 |                         | $\delta_S$ | $\kappa_{C_N}$ | $\delta_{C_N}$ |
 | $S_i$                   | 0.1743     | 0.1901         | 0.0060         |
-| $\pm$ CI of $S_i$       | 0.0008     | 0.0008         | $<$0.0001      |
+| $\pm$ CI of $S_i$       | 0.0008     | 0.0008         | <0.0001      |
 | $S_i^{Tot}$             | 0.7974     | 0.8183         | 0.0247         |
 | $\pm$ CI of $S_i^{Tot}$ | 0.0008     | 0.0008         | 0.006          |
 
@@ -798,7 +805,7 @@ Table 3: Results of the global sensitivity analysis of the model consisting of $
 |-------------------------|------------|----------------|----------------|----------------|----------------|--------------|
 |                         | $\delta_S$ | $\kappa_{C_N}$ | $\delta_{C_N}$ | $\kappa_{N,1}$ | $\kappa_{N,2}$ | $\delta_{N}$ |
 | $S_i$                   | 0.0012     | 0.0056         | 0.0025         | 0.0712         | 0.0059         | 0.5146       |
-| $\pm$ CI of $S_i$       | $<$0.0001  | $<$0.0001      | $<$0.0001      | 0.0004         | $<$0.0001      | 0.0037       |
+| $\pm$ CI of $S_i$       | <0.0001  | <0.0001      | <0.0001      | 0.0004         | <0.0001      | 0.0037       |
 | $S_i^{Tot}$             | 0.0097     | 0.0506         | 0.0192         | 0.4083         | 0.0401         | 0.8950       |
 | $\pm$ CI of $S_i^{Tot}$ | 0.0081     | 0.0077         | 0.0080         | 0.0043         | 0.0078         | 0.0006       |
 
@@ -808,7 +815,7 @@ Table 4: Results of the global sensitivity analysis of the model consisting of $
 |-------------------------|------------------|------------------|------------|--------------------|--------------------|---------------------|---------------------|
 |                         | $\kappa_{GC1,1}$ | $\kappa_{GC1,2}$ | $\kappa_B$ | $\kappa_{S_{GC1}}$ | $\delta_{S_{GC1}}$ | $\kappa_{N_{in,1}}$ | $\delta_{N_{in,1}}$ |
 | $S_i$                   | 0.0016           | 0.1581           | 0.0026     | 0.0392             | 0.144              | 0.001               | 0.0034              |
-| $\pm$ CI of $S_i$       | $<$0.0001        | 0.0006           | $<$0.0001  | 0.0001             | 0.0006             | $<$0.0001           | $<$0.0001           |
+| $\pm$ CI of $S_i$       | <0.0001        | 0.0006           | <0.0001  | 0.0001             | 0.0006             | <0.0001           | <0.0001           |
 | $S_i^{Tot}$             | 0.0124           | 0.4961           | 0.0        | 0.2409             | 0.4330             | 0.0158              | 0.0216              |
 | $\pm$ CI of $S_i^{Tot}$ | 0.0640           | 0.0283           | 0.0647     | 0.0406             | 0.0259             | 0.0637              | 0.0646              |
 
@@ -855,7 +862,7 @@ knitr::include_graphics(path = "figures/Fig1_sup2.png")
 
 ```
 
-```{r echo=FALSE,fig.cap="**Figure 1 -- figure supplement 3. Synapse distribution in cPRCs and possynaptic interneurons** (**A**) Axo-dendritic splitting of the INNOS neurons. (**B**) Volume rendering of the four INRGW neurons with incoming and outgoing synapses. (**C**) Volume rendering of the four cPRC neurons with incoming and outgoing synapses. All images are anterior views. Asterisk marks the same position across images for reference. Grey speheres indicate the position of cell nuclei. NS plexus; neurosecretory plexus. The radius of INNOS nuclei is set to 2 µm for scale."}
+```{r echo=FALSE,fig.cap="**Figure 1 -- figure supplement 3. Synapse distribution in cPRCs and possynaptic interneurons** (**A**) Axo-dendritic splitting of the INNOS neurons. (**B**) Volume rendering of the four INRGWa neurons with incoming and outgoing synapses. (**C**) Volume rendering of the four cPRC neurons with incoming and outgoing synapses. All images are anterior views. Asterisk marks the same position across images for reference. Grey speheres indicate the position of cell nuclei. NS plexus; neurosecretory plexus. The radius of INNOS nuclei is set to 2 µm for scale."}
 knitr::include_graphics(path = "figures/Fig1_sup3.png")
 
 ```
@@ -882,7 +889,7 @@ knitr::include_graphics(path = "figures/Fig4_sup1.png")
 
 ```
 
-```{r echo=FALSE,fig.cap="**Figure 4 -- figure supplement 2. Maximum-likelihood phylogenetic tree of NIT-domain-containing guanylate cyclases** Membrane-bound and soluble guanylate cyclases (sGC) were included as outgroups. Guanylate cyclases with NIT domains are found in most animal phyla except Porifera, Ctenophora, Urochordata and Chordata. Branch support values indicate UFBoot and aLRT-SH-like values. The expression of *Platynereis* NIT-GC genes in cPRC, INNOS and INRGW cells is indicated on the right side of the tree. The values represent expression based on single-cell sequencing data. Dot size indicates specificity (percent of transcripts expressed in the indicated cell across all cells). Dot colour represents the logarithm of the number of transcripts in the expressing cells. <br> Figure 4 -- figure supplement 2 -- source data 1. GC sequences used for the phylogenetic reconstruction. <br> Figure 4 -- figure supplement 2 -- source data 2. Aligned and trimmed GC sequences used for the phylogenetic reconstruction. <br> Figure 4 -- figure supplement 3 -- source data 3. Tree file of the reconstructed GC phylogeny. "}
+```{r echo=FALSE,fig.cap="**Figure 4 -- figure supplement 2. Maximum-likelihood phylogenetic tree of NIT-domain-containing guanylate cyclases** Membrane-bound and soluble guanylate cyclases (sGC) were included as outgroups. Guanylate cyclases with NIT domains are found in most animal phyla except Porifera, Ctenophora, Urochordata and Chordata. Branch support values indicate UFBoot and aLRT-SH-like values. The expression of *Platynereis* NIT-GC genes in cPRC, INNOS and INRGWa cells is indicated on the right side of the tree. The values represent expression based on single-cell sequencing data. Dot size indicates specificity (percent of transcripts expressed in the indicated cell across all cells). Dot colour represents the logarithm of the number of transcripts in the expressing cells. <br> Figure 4 -- figure supplement 2 -- source data 1. GC sequences used for the phylogenetic reconstruction. <br> Figure 4 -- figure supplement 2 -- source data 2. Aligned and trimmed GC sequences used for the phylogenetic reconstruction. <br> Figure 4 -- figure supplement 3 -- source data 3. Tree file of the reconstructed GC phylogeny. "}
 knitr::include_graphics(path = "figures/Fig4_sup2.png")
 
 ```
@@ -898,50 +905,50 @@ knitr::include_graphics(path = "figures/Fig5_sup1.png")
 ```
 
 
-```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 1**. Simulated Ca^2+^ traces for parameter sets fitted independently to each Ca^2+^-recording collected in wild type, *NOS* knockout, and *NIT-GC2* morphant larvae. (**A**, **B**) Simulated Ca^2+^ traces in cPRC (A) and INNOS (B) cells in the wild-type condition. (**C**, **D**) Simulated Ca^2+^ traces in cPRC (C) and INNOS (D) cells in the *NOS* knockout condition. (**E-F**) Simulated Ca^2+^ traces in cPRC (E) and INNOS (H) cells in the *NIT-GC2*-morphant condition. Thin coloured curves indicate individual recordings (cPRC - purple and INNOS - blue), thin grey curves indicate simulated Ca^2+^ traces based on model parameters fitted to the individual recording, thick coloured curves indicate averages of the recordings, and thick black curves represent the average of the fits. <br> Figure 6 -- figure supplement 1 -- source data 1. Best fitted parameters {best/_pars.mat}. <br> Figure 6 -- figure supplement 1 -- source data 2. Recorded traces (as used in earlier figures) {wt/_ko/_mo/_data.mat}. <br> Figure 6 -- figure supplement 1 -- source data 3. script to generate the figure {fig/_all/_fits.m}./label{fig:all-fits} " }
-knitr::include_graphics(path = "figures/Fig6_sup1.png")
-
+```{r echo=FALSE,fig.cap="**Figure 5 -- figure supplement 1. NOS-dependent dynamics of the Ser-h1 neurons.** (**A**) Correlation map of neuronal activity of the cPRCs, INNOS, INRGWa, and Ser-h1 neurons. (**B**) GCaMP6s fluorescence in Ser-h1 cells in wild type and *NOSΔ11/Δ11* mutant larvae during 405 nm stimulation. <br> Figure 5 -- figure supplement 2 -- source data 1. Calcium imaging data from Ser-h1 neurons."}
+knitr::include_graphics(path = "figures/Fig5_sup2.png")
 ```
 
 
-```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 2**. Simulated NO traces for parameter sets fitted to individual NO-recordings collected in wild type larvae. Thin coloured curves indicate individual recordings, thin grey curves indicate simulated NO traces based on model parameters fitted independently to each recording, the thick coloured curve indicates the average of the recordings, the thick grey curve represents the average of the fits, and the thick black curve represents the fit of the model parameters to the averaged recordings. <br> Figure 6 -- figure supplement 2 -- source data 1. Best fitted parameters {best/_pars.mat}. Figure 6 -- figure supplement 2 -- source data 2. Recorded traces (same as in Figure 2 but with removed bleaching and steady state set to 0) (NO/_data.mat). <br> Figure 6 -- figure supplement 2 -- source data 3. Script to generate the figure fig/_fit/_NO.m"}
+
+```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 1**. Simulated NO traces for parameter sets fitted to individual NO-recordings collected in wild type larvae. Thin coloured curves indicate individual recordings, thin grey curves indicate simulated NO traces based on model parameters fitted independently to each recording, the thick coloured curve indicates the average of the recordings, the thick grey curve represents the average of the fits, and the thick black curve represents the fit of the model parameters to the averaged recordings. <br> Figure 6 -- figure supplement 2 -- source data 1. Best fitted parameters {best/_pars.mat}. Figure 6 -- figure supplement 2 -- source data 2. Recorded traces (same as in Figure 2 but with removed bleaching and steady state set to 0) (NO/_data.mat). <br> Figure 6 -- figure supplement 2 -- source data 3. Script to generate the figure fig/_fit/_NO.m"}
+knitr::include_graphics(path = "figures/Fig6_sup1.png")
+```
+
+
+```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 2**. Simulated Ca^2+^ traces for parameter sets fitted to the means of individual cPRC recordings collected in wild-type,*NOS* knockout, and *NIT-GC2* morphant larvae. The NIT-GC2 has the same parameter values as NOS-knockout except $kappa_{GC2}$ is decreased from 1 to 0.15. (**A**) Coloured curves indicate the mean of the recordings, thick black curves indicate simulated traces based on model parameters fitted to the mean of the recordings. (**B**, **C**) Thin grey curves (solid and dotted) represent simulated experimental conditions with different levels of efficacy of the NOS-knockout (**B**) and NIT-GC2 morpholino (**C**). To generate interpolated condition curves in (**B**), we multiplied  $kappa_{S_{GC1}}$ in the wild-type model by values from 0.1 to 0.9 with steps of 0.1. To generate interpolated condition curves in (**C**), we use a set of $kappa_{GC2}$ values from 0.1 to 0.9 with steps of 0.1. <br> Figure 6 -- figure supplement 1 -- source data 1. Recorded traces (as used in earlier figures) wt/_ko/_mo/_data.mat. <br> Figure 6 -- figure supplement 1 -- source data 2. Script to generate the figure fig/_WT/_to/_MO."}
 knitr::include_graphics(path = "figures/Fig6_sup2.png")
 ```
 
 
-```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 3**. Simulated Ca^2+^ traces for parameter sets fitted to the means of individual cPRC recordings collected in wild-type,*NOS* knockout, and *NIT-GC2* morphant larvae. The NIT-GC2 has the same parameter values as NOS-knockout except $kappa_{GC2}$ is decreased from 1 to 0.15. (**A**) Coloured curves indicate the mean of the recordings, thick black curves indicate simulated traces based on model parameters fitted to the mean of the recordings. (**B**, **C**) Thin grey curves (solid and dotted) represent simulated experimental conditions with different levels of efficacy of the NOS-knockout (**B**) and NIT-GC2 morpholino (**C**). To generate interpolated condition curves in (**B**), we multiplied  $kappa_{S_{GC1}}$ in the wild-type model by values from 0.1 to 0.9 with steps of 0.1. To generate interpolated condition curves in (**C**), we use a set of $kappa_{GC2}$ values from 0.1 to 0.9 with steps of 0.1. <br> Figure 6 -- figure supplement 1 -- source data 1. Recorded traces (as used in earlier figures) wt/_ko/_mo/_data.mat. <br> Figure 6 -- figure supplement 1 -- source data 2. Script to generate the figure fig/_WT/_to/_MO."}
+
+```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 3**. Distributions of the parameter values fitted to the individual recordings collected in different conditions. Violin plots (grey lines) are kernel density estimates of the underlying distributions computed using the Matlab function $ksdensity$ with default settings, i.e., using normal kernel function; plots are trimmed to the observed range of data. Coloured markers represent individual parameter values, white markers indicate medians, vertical grey bars indicate interquartiles (ranges Q25 to Q75), and the dashed line indicates the value of the parameter fitted to the average of the recordings. We show histograms instead of violin plots for $delta_S$ when fitted to *NOS*-knockout recordings and for $delta_S$ and $delta_{C_N}$ when fitted to NO recordings because these distributions are highly skewed and hence misrepresented by violin plots. Violin plots are presented in the order of our model-fitting procedure, i.e., first Ca^2+^ in *NOS*-knockout cPRC cells (yellow), then Ca^2+^ in wild type and *NOS*-knockout INNOS cells (blue), then NO in INNOS cells (green), and finally Ca^2+^ in wild type cPRC cells (magenta); (see Methods for details). <br> Figure 6 -- figure supplement 4 -- source data 1. Best fitted parameters best/_pars.mat. <br> Figure 6 -- figure supplement 4 -- source data 2. Script to generate the figure parameter/_dist.m"}
 knitr::include_graphics(path = "figures/Fig6_sup3.png")
 ```
 
 
 
-```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 4**. Distributions of the parameter values fitted to the individual recordings collected in different conditions. Violin plots (grey lines) are kernel density estimates of the underlying distributions computed using the Matlab function $ksdensity$ with default settings, i.e., using normal kernel function; plots are trimmed to the observed range of data. Coloured markers represent individual parameter values, white markers indicate medians, vertical grey bars indicate interquartiles (ranges Q25 to Q75), and the dashed line indicates the value of the parameter fitted to the average of the recordings. We show histograms instead of violin plots for $delta_S$ when fitted to *NOS*-knockout recordings and for $delta_S$ and $delta_{C_N}$ when fitted to NO recordings because these distributions are highly skewed and hence misrepresented by violin plots. Violin plots are presented in the order of our model-fitting procedure, i.e., first Ca^2+^ in *NOS*-knockout cPRC cells (yellow), then Ca^2+^ in wild type and *NOS*-knockout INNOS cells (blue), then NO in INNOS cells (green), and finally Ca^2+^ in wild type cPRC cells (magenta); (see Methods for details). <br> Figure 6 -- figure supplement 4 -- source data 1. Best fitted parameters best/_pars.mat. <br> Figure 6 -- figure supplement 4 -- source data 2. Script to generate the figure parameter/_dist.m"}
+```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 4**. Distributions of the parameter values fitted to individual cPRC recordings collected in wild type larvae. The figure is in the same format as Figure 6 -- figure supplement 4. <br> Figure 6 -- figure supplement 5 -- source data 1. Best fitted parameters best/_pars.mat. <br> Figure 6 -- figure supplement 5 -- source data 2. Script to generate the figure parameter/_dist.m. "}
 knitr::include_graphics(path = "figures/Fig6_sup4.png")
 ```
 
 
-
-```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 5**. Distributions of the parameter values fitted to individual cPRC recordings collected in wild type larvae. The figure is in the same format as Figure 6 -- figure supplement 4. <br> Figure 6 -- figure supplement 5 -- source data 1. Best fitted parameters best/_pars.mat. <br> Figure 6 -- figure supplement 5 -- source data 2. Script to generate the figure parameter/_dist.m. "}
+```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 5**.  Pairwise correlations between parameters of the *NOS*-knockout model (state variables $C_P(t)$, $B(t)$ and $S(t)$) fitted to *NOS*-knockout cPRC recordings; wild-type model (state variables $S(t)$ and $C_N(t)$) fitted to wild-type and *NOS*-knockout Ca^2+^ INNOS recordings. Wild type model (state variables $S(t)$, $C_N(t)$ and $N(t)$) fitted to wild type INNOS NO recordings. All visible correlation values are significant at the 5% level, $p < 0.05$, (trivial correlations along the diagonal are excluded). <br> Figure 6 -- figure supplement 7 -- source data 1. Best fitted parameters best/_pars.mat. <br> Figure 6 -- figure supplement 7 -- source data 2. Script to generate the figure correlations.m" }
 knitr::include_graphics(path = "figures/Fig6_sup5.png")
 ```
 
 
-```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 6**.  Pairwise correlations between parameters of the *NOS*-knockout model (state variables $C_P(t)$, $B(t)$ and $S(t)$) fitted to *NOS*-knockout cPRC recordings; wild-type model (state variables $S(t)$ and $C_N(t)$) fitted to wild-type and *NOS*-knockout Ca^2+^ INNOS recordings. Wild type model (state variables $S(t)$, $C_N(t)$ and $N(t)$) fitted to wild type INNOS NO recordings. All visible correlation values are significant at the 5% level, $p < 0.05$, (trivial correlations along the diagonal are excluded). <br> Figure 6 -- figure supplement 7 -- source data 1. Best fitted parameters best/_pars.mat. <br> Figure 6 -- figure supplement 7 -- source data 2. Script to generate the figure correlations.m" }
+
+```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 6**. Pairwise correlations between parameters of the wild type model fitted to wild type cPRC recordings. All visible correlation values are significant at the 5% level, $p < 0.05$, (trivial correlations along the diagonal are excluded). <br> Figure 6 -- figure supplement 8 -- source data 1. Best fitted parameters best/_pars.mat. <br> Figure 6 -- figure supplement 8 -- source data 2. Script to generate the figure correlations.m "}
 knitr::include_graphics(path = "figures/Fig6_sup6.png")
 ```
 
 
 
-```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 7**. Pairwise correlations between parameters of the wild type model fitted to wild type cPRC recordings. All visible correlation values are significant at the 5% level, $p < 0.05$, (trivial correlations along the diagonal are excluded). <br> Figure 6 -- figure supplement 8 -- source data 1. Best fitted parameters best/_pars.mat. <br> Figure 6 -- figure supplement 8 -- source data 2. Script to generate the figure correlations.m "}
+```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 7**. Validation of the wild-type model using cPRC recordings collected in wild-type larvae subject to UV stimulation with different intensity and duration. The top row displays recorded data; the bottom row shows model simulations. Different columns show different durations of UV stimulation. Simulated Ca^2+^ traces use parameter sets fitted to mean of Ca^2+^-recordings collected in wild-type larvae subject to 20s UV stimulation at 100% power. Stimulation duration is indicated by the shaded rectangle (violet) while stimulation intensity is indicated by the shade of grey of the line plot (darker shades indicate higher power). Simulations are compared with the mean of the 50%, 75% and 100% data and their 95% confidence interval (mean $pm 1.96 SE$, here is $SE=std/sqrt{n}$ and $std$ stands for standard deviation). We use the 50%, 75% and 100% recordings to compute the average because the data indicate the existence of a non-linear relation between response and the power of the stimulation and the 25% recordings would bias the average down. <br> Figure 7 -- source data 1. Recorded traces longer_experiments_data.mat. <br> Figure 7 -- source data 2. Script to generate the figure fig_longer_experiments.m "}
 knitr::include_graphics(path = "figures/Fig6_sup7.png")
 ```
 
-
-
-```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 8**. Validation of the wild-type model using cPRC recordings collected in wild-type larvae subject to UV stimulation with different intensity and duration. The top row displays recorded data; the bottom row shows model simulations. Different columns show different durations of UV stimulation. Simulated Ca^2+^ traces use parameter sets fitted to mean of Ca^2+^-recordings collected in wild-type larvae subject to 20s UV stimulation at 100% power. Stimulation duration is indicated by the shaded rectangle (violet) while stimulation intensity is indicated by the shade of grey of the line plot (darker shades indicate higher power). Simulations are compared with the mean of the 50%, 75% and 100% data and their 95% confidence interval (mean $pm 1.96 SE$, here is $SE=std/sqrt{n}$ and $std$ stands for standard deviation). We use the 50%, 75% and 100% recordings to compute the average because the data indicate the existence of a non-linear relation between response and the power of the stimulation and the 25% recordings would bias the average down. <br> Figure 7 -- source data 1. Recorded traces longer_experiments_data.mat. <br> Figure 7 -- source data 2. Script to generate the figure fig_longer_experiments.m "}
+```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 8**. Simulated Ca^2+^ traces under stimulation with two UV pulses. The top row shows simulations with a 10s interval between pulses; the bottom row shows simulations with a 30s interval between pulses. Different columns show different durations of UV stimulation. The duration of UV stimulation is indicated by the shaded rectangle (violet). Coloured curves indicate simulated outcome of two pulse UV stimulation; thick black curves indicate simulated reference traces with a single UV pulse. Simulations of the Ca^2+^ traces use parameter sets fitted to the mean of individual Ca^2+^-recordings collected in wild-type larvae subject to 20s UV stimulation. <br> Figure 8 -- source data 1. Script to generate the figure fig_two_pulse.m "}
 knitr::include_graphics(path = "figures/Fig6_sup8.png")
-```
-
-```{r echo=FALSE,fig.cap="**Figure 6 -- figure supplement 9**. Simulated Ca^2+^ traces under stimulation with two UV pulses. The top row shows simulations with a 10s interval between pulses; the bottom row shows simulations with a 30s interval between pulses. Different columns show different durations of UV stimulation. The duration of UV stimulation is indicated by the shaded rectangle (violet). Coloured curves indicate simulated outcome of two pulse UV stimulation; thick black curves indicate simulated reference traces with a single UV pulse. Simulations of the Ca^2+^ traces use parameter sets fitted to the mean of individual Ca^2+^-recordings collected in wild-type larvae subject to 20s UV stimulation. <br> Figure 8 -- source data 1. Script to generate the figure fig_two_pulse.m "}
-knitr::include_graphics(path = "figures/Fig6_sup9.png")
 ```

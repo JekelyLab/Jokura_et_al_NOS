@@ -1,6 +1,6 @@
 rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
 gc() #free up memrory and report the memory usage.
-Sys.setenv('R_MAX_VSIZE'=800000000)
+Sys.setenv('R_MAX_VSIZE' = 800000000)
 
 
 # load nat and all associated packages, incl catmaid
@@ -21,7 +21,7 @@ Sys.setenv('R_MAX_VSIZE'=800000000)
   library(scales)
   library(esquisse)
   library(multcomp)
-  library(PMCMRplus)
+  # library(PMCMRplus)
   library(ggpubr)
   library(gridExtra)
   library(ggbeeswarm)
@@ -35,14 +35,21 @@ writeLines(capture.output(rstudioapi::versionInfo()), "code/versionInfo.txt")
 
 
 #From Color Universal Design (CUD): https://jfly.uni-koeln.de/color/
-Okabe_Ito <- c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", 
-               "#CC79A7", "#000000")
+Okabe_Ito <- c(
+  "#E69F00",
+  "#56B4E9",
+  "#009E73",
+  "#F0E442",
+  "#0072B2",
+  "#D55E00",
+  "#CC79A7",
+  "#000000"
+)
 ########################## SHOW as multiple PIE Charts ###################
-pie(rep(1,8), col=Okabe_Ito, Okabe_Ito, main='Okabe Ito')
+pie(rep(1, 8), col = Okabe_Ito, Okabe_Ito, main = 'Okabe Ito')
 blues <- brewer.pal(9, 'Blues')
 bluepurple <- brewer.pal(9, 'BuPu')
 yelloworangered <- brewer.pal(9, 'YlOrRd')
 set2 <- brewer.pal(8, 'Set2')
 paired <- brewer.pal(12, 'Paired')
 dark2 <- brewer.pal(8, 'Dark2')
-

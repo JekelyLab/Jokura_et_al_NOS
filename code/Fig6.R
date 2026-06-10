@@ -27,7 +27,7 @@ Fig6 <- panel_block_diagram +
        panel_model +
        patchwork::plot_layout(
               design = layout,
-              heights = c(1, 0.05, 1),
+              heights = c(0.7, 0.05, 1),
               widths = c(1, 0.05, 1)
        ) + #we can change the heights of the rows in our layout (widths also can be defined)
        patchwork::plot_annotation(tag_levels = 'A') & #we can change this to 'a' for small caps or 'i' or '1'
@@ -39,7 +39,7 @@ ggsave(
        units = c("px"),
        Fig6,
        width = 1800,
-       height = 2200,
+       height = 2000,
        bg = 'white'
 )
 
@@ -49,5 +49,5 @@ ggsave(
        units = c("px"),
        Fig6,
        width = 1800,
-       height = 2200
+       height = 2000
 )
