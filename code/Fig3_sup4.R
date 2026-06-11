@@ -20,7 +20,7 @@ Okabe_Ito <- c(
 NOS_stats <- tibble::as_tibble(rio::import(
   "data/NOS_mutant_and_WT_mature_animals.csv"
 ))
-
+NOS_stats
 # tidy the data -----------------
 
 NOS_stats_tidy <- NOS_stats |>
@@ -33,10 +33,18 @@ NOS_stats_tidy <- NOS_stats |>
   rename(date = DATE) |>
   mutate(sex = case_when(sex == 'F' ~ 'female',
                         sex == 'M' ~ 'male')
+         ) |>
+  mutate(genotype = case_when(genotype == 'NOS11' ~ 'NOSΔ11',
+                        genotype == 'NOS23' ~ 'NOSΔ23',
+                        genotype == 'WT' ~ 'wild type')
          )
 
 
 NOS_stats_tidy
+
+#export source data
+rio::export(NOS_stats_tidy, "source_data/Figure3_supplement4_source_data1.csv")
+
 #plotting ----------------
 
 NOS_stats_plot <- NOS_stats_tidy |>
