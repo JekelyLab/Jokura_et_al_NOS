@@ -1,7 +1,7 @@
 ---
 title: "Reviews"
-author: "Kei Jokura"
-date: "2023-09-19"
+author: "Kei Jokura, Gáspár Jékely"
+date: "2026-06-10"
 output: html_document
 ---
 
@@ -19,10 +19,9 @@ This study reports the discovery of a new circuit mechanism for light-avoidance 
 
 *Weaknesses: Statistics are missing in both figure legends and methods. The perturbations of genes and molecules were not cell-type-specific and therefore the observed behavioral defect could be attributed to the malfunction of the circuit elsewhere not examined in this study. I suggest adding more explanation about the functions of other NOS-expressing cells and conducting a control experiment to test behavioral response to a non-visual stimulus.*
 
-Response: Thank you for this assessment of our work. We have now added the results of statistical tests to the figures and included explanatory text in the figure legends.
-Regarding the cell-type-specific effects, in the larval stage NOS is only expressed in the INNOS cells and the pigmented eyes. We could previously show that UV avoidance is only mediated by the cPRC circuit (including INNOS) whereas phototaxis is exclusively mediated by the pigmented eyes (Jekely et al 2008, Randel et al 2014 and Veraszto el al. 2018). Due to this behavioural specificity, we are therefore confident that the effects of the NOS mutation on UV avoidance are due to the lack of NOS from the INNOS cells and not the pigmented eyes. Besides UV avoidance, we have characterised the speed of ciliary swimming without a light stimulus, as well as phototaxis (Randel et al 2014). Likewise, the effects of NIT-GC-knockdown can only be due to cell-type-specific effects in the cPRCs, since the two NIT-GC genes are only expressed in the four cPRCs, as we demonstrated by HCR, immunostainings and the analysis of single-cell RNAseq data. Given that we used two morpholinos per gene, it is also unlikely that the observed changes in Ca-dynamics are due to off-target effects.
-
-We have now updated the discussion to better address these points.
+Response: Thank you for this assessment of our work. We have now added additional panels with statistical tests to the figures and included explanatory text in the figure legends.
+Regarding the cell-type-specific effects, we would like to offer a more nuanced view of this. Some of the genes we studied (*NIT-GC1* and *NIT-GC2*) are only expressed in 4 cells in an organism of 10,000 cells (as we demonstrated by HCR, immunostainings and the analysis of single-cell RNAseq data) and we knocked-down these genes (validated by antibody staining) with two independent morpholinos (to be able to rule out off-target effects). This is as cell-type-specific as it gets. *NOS* is also expressed in a very limited number of cells. In the larval stages, we detected *NOS* expression only in the four INNOS cells and the pigmented eyes. We could previously show that UV avoidance is only mediated by the cPRC circuit (including INNOS) whereas phototaxis is exclusively mediated by the pigmented eyes (Jekely et al 2008, Randel et al 2014 and Veraszto el al. 2018). Due to this behavioural specificity, we are therefore confident that the effects of the *NOS* mutations on UV avoidance are due to the lack of NOS from the INNOS cells and not the pigmented eyes. Besides UV avoidance, we have characterised the speed of ciliary swimming without a light stimulus, as well as phototaxis (Randel et al 2014).
+In addition, we also tested phototaxis and detected a reduced phototactic reaction in NOS mutants, but not after chemically inhibition of NO production (Figure 3B and 3F). The additional effects of NO are thus well documented in the paper and independent of the function of NO in the UV reaction. In addition, we have now did further quantifications and added new data (Figure 3 -- figure supplement 4) to show that *NOS* mutants show normal lunar periodicity of sexual maturation, similar to wild-type animals. *NOS* mutants are viable and fertile, are feeding, building tubes and are mating as wild-type animals (these behaviours were not quantified here, we only show the data for lunar periodicity).
 
 
 **Reviewer #2 (Public Review):**
@@ -35,40 +34,22 @@ We have now updated the discussion to better address these points.
 
 
 Response:
-We have now carried out a variance-based sensitivity analysis that is included as Figure...
 
-In the model, most parameters are identifiable. If we fix only to of the parameters (C  and ..) all other parameters can be identified.
+We thank the reviewer for these comments. We have now thoroughly revised the model based on new experiments and carried out a sensitivity analysis. We are also more positive about the usefulness of the model though, for the following reasons.
 
-The model is unitless, since already our input data from calcium imaging represent normalised data and the model was fit to these data. We would need a lot more information to build up a proper ground-up biophysical model (e.g. including capacitance, ionic concentrations etc.).
-
-We have created a pipeline to carry out- local and global sensitivity analysis
-
-all but two of our parameters were identifiable.
-
-In terms of the constrains, since we don't have dimensioned quantitites, our constraints are bounds on the parameters. However, the structural identifibiality analysis tells us where we can identify parameters
-guard against sloppiness and overfitting
-
-Lots of models: 
-we only fitted the model on a subset of the data and can reproduce dynamics on a larger set of data
-
-A family of models that can capture the same mechanism that we are postulating 
-for important mechanistic interactions (the signs and some interactions that are not possible) are constraint. And the model shows that we don't need them or the signs are constrained.
-
-In the future, we can use this model to generate prediction e.g. about what the response to repeated stimulations can be.
-
-To map out the components 
-we can rule out things - e.g. we could rule out a very simple model of progression from step to step
-
-The modelling also completely changed the way we were thinking about the system. We needed to include a time-limited step in the cPRC transduction cascade leading to NOS activation to capture the time-invariance of the peak. 
-
-Many of the couplings in our model are constrained (e.g. UV leads to INNOS activation) and e.g. reversing the sign of some of these couplings would not arrive at this same result. Several earlier variants of the model could not be fit to the data, therefore we disagree that the model is poorly constrained and cannot be tested with behavioural experiments.
-
+- General usefulness of the model: With the model we can now reproduce all the qualitative dynamics of the circuit. The modelling also completely changed the way we were thinking about the system. For example, we needed to include a time-limited step in the cPRC transduction cascade leading to NOS activation to capture the time-invariance of the peak. In the future, we can also use this model to generate prediction e.g. about what the response to repeated stimulations can be.
 In the revised version, we included a new series of measurements of calcium dynamics in the cPRCs under varying duration and intensity of UV light. These important new results gave us further insights and necessitated a revision of the model.
 
-We can reproduce all the qualitative dynamics
+- Unitless model: The model is indeed unitless, since already our input data from calcium imaging represent normalised data and the model was fit to these data. We would need a lot more information to build up a proper ground-up biophysical model (e.g. including capacitance, ionic concentrations etc.). This does not mean that the model is not useful.
 
+- Sensitivity analysis: We have created a pipeline to carry out local and global sensitivity analysis and carried out a variance-based sensitivity and identifiability analysis. These data and code are included in the revised version. In the model, most parameters are identifiable. If we fix only two of the parameters all other parameters can be identified.
 
-- two timescale process
+- Constrains and lots of possible models: In terms of the constrains, since we don't have dimensioned quantitites, our constraints are bounds on the parameters. However, the structural identifibiality analysis tells us where we can identify parameters and can guard against sloppiness and overfitting.
+We only fitted the model on a subset of the data and can reproduce dynamics on a larger set of data.
+For important cellular interactions, the signs of the interactions are constrained. The model thus also allows us to rule out a large number of models - e.g. we could rule out a very simple model of progression from step to step as it was not possible to fit the data to such a model.
+
+We have updated the text to reflect these changes, e.g.: "Many of the couplings in our model are constrained (e.g. UV leads to INNOS activation) and e.g. reversing the sign of some of these couplings would not arrive at the same result. Several earlier variants of the model could not be fit to the data, The model is thus well constrained by our physiological experiments and the circuit map."
+
 
 **Reviewer #3 (Public Review):**
 
@@ -93,7 +74,7 @@ The response of cPRC cilia to changes in hydrostatic pressure has been extensive
 
 *Page 18: "strips. One strip contained UV (395 nm) LEDs (SMB1W-395, Roithner Lasertechnik) and the other infrared (810 nm) LEDs (SMB1W-810NR-I, Roithner Lasertechnik)." Authors should test larval swimming behaviour at different wavelengths. Even though they are performed in previous work, the experiment with different wavelengths is necessary to be conducted in NOS mutant larvae in parallel with a control. This will confirm that NOS is principally associated with UV. Further, to demonstrate that this mechanism is associated with ciliary movement, authors need to provide this evidence.*
 
-In this study we have conducted behavioural experiments at different wavelengths (Figure 3D and Figure 3---figure supplement 1F). However, as an explanation was lacking, a more detailed explanation has been added in the text.
+The diving reaction by non-directional light can only be induced by UV/cyan light, as we have shown previously, and it is mediated by a single UV-opsin photopigment (c-opsin1). The avoidance experiments can thus only be done with UV/cyan light. We also measured swimming behaviour with 480 nm directional light to test phototaxis (Figure 3D and Figure 3---figure supplement 1F). 
 
 ------------------------------------------------------------------------
 
@@ -103,7 +84,8 @@ Recommendations for the authors: please note that you control which revisions to
 
 1)  *The current introduction focuses on the nitric oxide signaling. It would be helpful for readers to have an introductory section about Platynereis larvae (a total number of neurons, etc) and rationales to use its nervous system as a model to study mechanisms of NO signaling and gating of visual response.*
 
-    The 3dpf larvae reveals 90 non-neuronal cell types and 180 neuronal cell types, mapping the complete neuronal connectome. This can shed light on the question of how synaptic and non-synaptic networks regulate their various patterns of behaviour.
+    The 3dpf larvae reveals 90 non-neuronal cell types and 180 neuronal cell types, mapping the complete neuronal connectome. This can shed light on the question of how synaptic and non-synaptic networks regulate their various patterns of behaviour. 
+    <!-- update -->
 
 2)  *The readers would want to know why these larvae swim downward in response to UV and upward to 480nm light. Is that for maintaining the certain depth from the surface of the water?*
 
@@ -148,6 +130,8 @@ Recommendations for the authors: please note that you control which revisions to
 Our unit notation has been corrected. Additionally we have added statistical tests.
 
 *Really, that's the only, relatively minor issue I could find. This was a pleasure to read, and I learned a lot. Congratulations on an excellent study.*
+
+Thanks a lot for these comments.
 
 **Reviewer #3 (Recommendations For The Authors):**
 
