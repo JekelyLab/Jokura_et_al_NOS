@@ -1,2377 +1,2377 @@
-date,genotype,sex,mature_worms
-2025-05-01,NOSΔ11,female,2
-2025-05-01,NOSΔ11,male,1
-2025-05-01,NOSΔ23,female,1
-2025-05-01,NOSΔ23,male,5
-2025-05-01,wild type,female,6
-2025-05-01,wild type,male,16
-2025-05-02,NOSΔ11,female,3
-2025-05-02,NOSΔ11,male,1
-2025-05-02,NOSΔ23,female,6
-2025-05-02,NOSΔ23,male,2
-2025-05-02,wild type,female,12
-2025-05-02,wild type,male,19
-2025-05-03,NOSΔ11,female,1
-2025-05-03,NOSΔ11,male,0
-2025-05-03,NOSΔ23,female,0
-2025-05-03,NOSΔ23,male,2
-2025-05-03,wild type,female,5
-2025-05-03,wild type,male,6
-2025-05-04,NOSΔ11,female,1
-2025-05-04,NOSΔ11,male,0
-2025-05-04,NOSΔ23,female,1
-2025-05-04,NOSΔ23,male,2
-2025-05-04,wild type,female,5
-2025-05-04,wild type,male,8
-2025-05-05,NOSΔ11,female,4
-2025-05-05,NOSΔ11,male,5
-2025-05-05,NOSΔ23,female,4
-2025-05-05,NOSΔ23,male,2
-2025-05-05,wild type,female,26
-2025-05-05,wild type,male,15
-2025-05-06,NOSΔ11,female,6
-2025-05-06,NOSΔ11,male,6
-2025-05-06,NOSΔ23,female,4
-2025-05-06,NOSΔ23,male,3
-2025-05-06,wild type,female,14
-2025-05-06,wild type,male,19
-2025-05-07,NOSΔ11,female,0
-2025-05-07,NOSΔ11,male,4
-2025-05-07,NOSΔ23,female,0
-2025-05-07,NOSΔ23,male,0
-2025-05-07,wild type,female,13
-2025-05-07,wild type,male,8
-2025-05-08,NOSΔ11,female,1
-2025-05-08,NOSΔ11,male,2
-2025-05-08,NOSΔ23,female,1
-2025-05-08,NOSΔ23,male,0
-2025-05-08,wild type,female,6
-2025-05-08,wild type,male,5
-2025-05-09,NOSΔ11,female,1
-2025-05-09,NOSΔ11,male,2
-2025-05-09,NOSΔ23,female,2
-2025-05-09,NOSΔ23,male,0
-2025-05-09,wild type,female,5
-2025-05-09,wild type,male,1
-2025-05-10,NOSΔ11,female,0
-2025-05-10,NOSΔ11,male,0
-2025-05-10,NOSΔ23,female,0
-2025-05-10,NOSΔ23,male,0
-2025-05-10,wild type,female,0
-2025-05-10,wild type,male,0
-2025-05-11,NOSΔ11,female,0
-2025-05-11,NOSΔ11,male,0
-2025-05-11,NOSΔ23,female,0
-2025-05-11,NOSΔ23,male,0
-2025-05-11,wild type,female,0
-2025-05-11,wild type,male,3
-2025-05-12,NOSΔ11,female,0
-2025-05-12,NOSΔ11,male,0
-2025-05-12,NOSΔ23,female,0
-2025-05-12,NOSΔ23,male,0
-2025-05-12,wild type,female,0
-2025-05-12,wild type,male,0
-2025-05-13,NOSΔ11,female,0
-2025-05-13,NOSΔ11,male,0
-2025-05-13,NOSΔ23,female,0
-2025-05-13,NOSΔ23,male,0
-2025-05-13,wild type,female,0
-2025-05-13,wild type,male,0
-2025-05-14,NOSΔ11,female,0
-2025-05-14,NOSΔ11,male,0
-2025-05-14,NOSΔ23,female,1
-2025-05-14,NOSΔ23,male,0
-2025-05-14,wild type,female,0
-2025-05-14,wild type,male,0
-2025-05-15,NOSΔ11,female,0
-2025-05-15,NOSΔ11,male,0
-2025-05-15,NOSΔ23,female,0
-2025-05-15,NOSΔ23,male,0
-2025-05-15,wild type,female,0
-2025-05-15,wild type,male,0
-2025-05-16,NOSΔ11,female,0
-2025-05-16,NOSΔ11,male,1
-2025-05-16,NOSΔ23,female,0
-2025-05-16,NOSΔ23,male,0
-2025-05-16,wild type,female,2
-2025-05-16,wild type,male,0
-2025-05-17,NOSΔ11,female,3
-2025-05-17,NOSΔ11,male,1
-2025-05-17,NOSΔ23,female,0
-2025-05-17,NOSΔ23,male,0
-2025-05-17,wild type,female,1
-2025-05-17,wild type,male,1
-2025-05-18,NOSΔ11,female,1
-2025-05-18,NOSΔ11,male,0
-2025-05-18,NOSΔ23,female,0
-2025-05-18,NOSΔ23,male,0
-2025-05-18,wild type,female,3
-2025-05-18,wild type,male,2
-2025-05-19,NOSΔ11,female,2
-2025-05-19,NOSΔ11,male,0
-2025-05-19,NOSΔ23,female,1
-2025-05-19,NOSΔ23,male,0
-2025-05-19,wild type,female,12
-2025-05-19,wild type,male,7
-2025-05-20,NOSΔ11,female,0
-2025-05-20,NOSΔ11,male,5
-2025-05-20,NOSΔ23,female,0
-2025-05-20,NOSΔ23,male,2
-2025-05-20,wild type,female,14
-2025-05-20,wild type,male,9
-2025-05-21,NOSΔ11,female,9
-2025-05-21,NOSΔ11,male,3
-2025-05-21,NOSΔ23,female,2
-2025-05-21,NOSΔ23,male,4
-2025-05-21,wild type,female,21
-2025-05-21,wild type,male,15
-2025-05-22,NOSΔ11,female,3
-2025-05-22,NOSΔ11,male,3
-2025-05-22,NOSΔ23,female,3
-2025-05-22,NOSΔ23,male,0
-2025-05-22,wild type,female,22
-2025-05-22,wild type,male,24
-2025-05-23,NOSΔ11,female,3
-2025-05-23,NOSΔ11,male,4
-2025-05-23,NOSΔ23,female,3
-2025-05-23,NOSΔ23,male,3
-2025-05-23,wild type,female,12
-2025-05-23,wild type,male,12
-2025-05-24,NOSΔ11,female,4
-2025-05-24,NOSΔ11,male,3
-2025-05-24,NOSΔ23,female,3
-2025-05-24,NOSΔ23,male,0
-2025-05-24,wild type,female,5
-2025-05-24,wild type,male,6
-2025-05-25,NOSΔ11,female,3
-2025-05-25,NOSΔ11,male,3
-2025-05-25,NOSΔ23,female,0
-2025-05-25,NOSΔ23,male,0
-2025-05-25,wild type,female,7
-2025-05-25,wild type,male,9
-2025-05-26,NOSΔ11,female,4
-2025-05-26,NOSΔ11,male,7
-2025-05-26,NOSΔ23,female,2
-2025-05-26,NOSΔ23,male,0
-2025-05-26,wild type,female,6
-2025-05-26,wild type,male,13
-2025-05-27,NOSΔ11,female,5
-2025-05-27,NOSΔ11,male,4
-2025-05-27,NOSΔ23,female,2
-2025-05-27,NOSΔ23,male,1
-2025-05-27,wild type,female,12
-2025-05-27,wild type,male,10
-2025-05-28,NOSΔ11,female,6
-2025-05-28,NOSΔ11,male,4
-2025-05-28,NOSΔ23,female,4
-2025-05-28,NOSΔ23,male,4
-2025-05-28,wild type,female,9
-2025-05-28,wild type,male,16
-2025-05-29,NOSΔ11,female,1
-2025-05-29,NOSΔ11,male,5
-2025-05-29,NOSΔ23,female,1
-2025-05-29,NOSΔ23,male,3
-2025-05-29,wild type,female,4
-2025-05-29,wild type,male,13
-2025-05-30,NOSΔ11,female,2
-2025-05-30,NOSΔ11,male,3
-2025-05-30,NOSΔ23,female,2
-2025-05-30,NOSΔ23,male,2
-2025-05-30,wild type,female,14
-2025-05-30,wild type,male,10
-2025-05-31,NOSΔ11,female,1
-2025-05-31,NOSΔ11,male,1
-2025-05-31,NOSΔ23,female,1
-2025-05-31,NOSΔ23,male,1
-2025-05-31,wild type,female,12
-2025-05-31,wild type,male,16
-2025-06-01,NOSΔ11,female,1
-2025-06-01,NOSΔ11,male,3
-2025-06-01,NOSΔ23,female,1
-2025-06-01,NOSΔ23,male,0
-2025-06-01,wild type,female,3
-2025-06-01,wild type,male,8
-2025-06-02,NOSΔ11,female,4
-2025-06-02,NOSΔ11,male,4
-2025-06-02,NOSΔ23,female,6
-2025-06-02,NOSΔ23,male,3
-2025-06-02,wild type,female,23
-2025-06-02,wild type,male,22
-2025-06-03,NOSΔ11,female,4
-2025-06-03,NOSΔ11,male,11
-2025-06-03,NOSΔ23,female,2
-2025-06-03,NOSΔ23,male,4
-2025-06-03,wild type,female,14
-2025-06-03,wild type,male,12
-2025-06-04,NOSΔ11,female,1
-2025-06-04,NOSΔ11,male,2
-2025-06-04,NOSΔ23,female,3
-2025-06-04,NOSΔ23,male,2
-2025-06-04,wild type,female,14
-2025-06-04,wild type,male,19
-2025-06-05,NOSΔ11,female,4
-2025-06-05,NOSΔ11,male,5
-2025-06-05,NOSΔ23,female,3
-2025-06-05,NOSΔ23,male,0
-2025-06-05,wild type,female,9
-2025-06-05,wild type,male,12
-2025-06-06,NOSΔ11,female,3
-2025-06-06,NOSΔ11,male,2
-2025-06-06,NOSΔ23,female,4
-2025-06-06,NOSΔ23,male,1
-2025-06-06,wild type,female,4
-2025-06-06,wild type,male,4
-2025-06-07,NOSΔ11,female,1
-2025-06-07,NOSΔ11,male,0
-2025-06-07,NOSΔ23,female,1
-2025-06-07,NOSΔ23,male,0
-2025-06-07,wild type,female,1
-2025-06-07,wild type,male,1
-2025-06-08,NOSΔ11,female,3
-2025-06-08,NOSΔ11,male,2
-2025-06-08,NOSΔ23,female,2
-2025-06-08,NOSΔ23,male,0
-2025-06-08,wild type,female,3
-2025-06-08,wild type,male,3
-2025-06-09,NOSΔ11,female,2
-2025-06-09,NOSΔ11,male,1
-2025-06-09,NOSΔ23,female,0
-2025-06-09,NOSΔ23,male,0
-2025-06-09,wild type,female,1
-2025-06-09,wild type,male,0
-2025-06-10,NOSΔ11,female,0
-2025-06-10,NOSΔ11,male,1
-2025-06-10,NOSΔ23,female,2
-2025-06-10,NOSΔ23,male,0
-2025-06-10,wild type,female,0
-2025-06-10,wild type,male,0
-2025-06-11,NOSΔ11,female,1
-2025-06-11,NOSΔ11,male,0
-2025-06-11,NOSΔ23,female,1
-2025-06-11,NOSΔ23,male,2
-2025-06-11,wild type,female,0
-2025-06-11,wild type,male,0
-2025-06-12,NOSΔ11,female,0
-2025-06-12,NOSΔ11,male,1
-2025-06-12,NOSΔ23,female,0
-2025-06-12,NOSΔ23,male,0
-2025-06-12,wild type,female,0
-2025-06-12,wild type,male,0
-2025-06-13,NOSΔ11,female,1
-2025-06-13,NOSΔ11,male,1
-2025-06-13,NOSΔ23,female,0
-2025-06-13,NOSΔ23,male,0
-2025-06-13,wild type,female,0
-2025-06-13,wild type,male,0
-2025-06-14,NOSΔ11,female,1
-2025-06-14,NOSΔ11,male,0
-2025-06-14,NOSΔ23,female,1
-2025-06-14,NOSΔ23,male,0
-2025-06-14,wild type,female,0
-2025-06-14,wild type,male,0
-2025-06-15,NOSΔ11,female,1
-2025-06-15,NOSΔ11,male,0
-2025-06-15,NOSΔ23,female,0
-2025-06-15,NOSΔ23,male,0
-2025-06-15,wild type,female,3
-2025-06-15,wild type,male,0
-2025-06-16,NOSΔ11,female,3
-2025-06-16,NOSΔ11,male,1
-2025-06-16,NOSΔ23,female,0
-2025-06-16,NOSΔ23,male,0
-2025-06-16,wild type,female,2
-2025-06-16,wild type,male,2
-2025-06-17,NOSΔ11,female,3
-2025-06-17,NOSΔ11,male,0
-2025-06-17,NOSΔ23,female,1
-2025-06-17,NOSΔ23,male,0
-2025-06-17,wild type,female,5
-2025-06-17,wild type,male,3
-2025-06-18,NOSΔ11,female,7
-2025-06-18,NOSΔ11,male,4
-2025-06-18,NOSΔ23,female,3
-2025-06-18,NOSΔ23,male,0
-2025-06-18,wild type,female,16
-2025-06-18,wild type,male,15
-2025-06-19,NOSΔ11,female,9
-2025-06-19,NOSΔ11,male,4
-2025-06-19,NOSΔ23,female,3
-2025-06-19,NOSΔ23,male,0
-2025-06-19,wild type,female,20
-2025-06-19,wild type,male,17
-2025-06-20,NOSΔ11,female,8
-2025-06-20,NOSΔ11,male,6
-2025-06-20,NOSΔ23,female,3
-2025-06-20,NOSΔ23,male,1
-2025-06-20,wild type,female,22
-2025-06-20,wild type,male,24
-2025-06-21,NOSΔ11,female,6
-2025-06-21,NOSΔ11,male,6
-2025-06-21,NOSΔ23,female,2
-2025-06-21,NOSΔ23,male,5
-2025-06-21,wild type,female,20
-2025-06-21,wild type,male,16
-2025-06-22,NOSΔ11,female,5
-2025-06-22,NOSΔ11,male,6
-2025-06-22,NOSΔ23,female,1
-2025-06-22,NOSΔ23,male,0
-2025-06-22,wild type,female,21
-2025-06-22,wild type,male,8
-2025-06-23,NOSΔ11,female,6
-2025-06-23,NOSΔ11,male,7
-2025-06-23,NOSΔ23,female,6
-2025-06-23,NOSΔ23,male,7
-2025-06-23,wild type,female,19
-2025-06-23,wild type,male,19
-2025-06-24,NOSΔ11,female,7
-2025-06-24,NOSΔ11,male,8
-2025-06-24,NOSΔ23,female,5
-2025-06-24,NOSΔ23,male,4
-2025-06-24,wild type,female,22
-2025-06-24,wild type,male,14
-2025-06-25,NOSΔ11,female,3
-2025-06-25,NOSΔ11,male,10
-2025-06-25,NOSΔ23,female,0
-2025-06-25,NOSΔ23,male,2
-2025-06-25,wild type,female,8
-2025-06-25,wild type,male,14
-2025-06-26,NOSΔ11,female,7
-2025-06-26,NOSΔ11,male,17
-2025-06-26,NOSΔ23,female,7
-2025-06-26,NOSΔ23,male,1
-2025-06-26,wild type,female,17
-2025-06-26,wild type,male,21
-2025-06-27,NOSΔ11,female,3
-2025-06-27,NOSΔ11,male,12
-2025-06-27,NOSΔ23,female,0
-2025-06-27,NOSΔ23,male,3
-2025-06-27,wild type,female,8
-2025-06-27,wild type,male,13
-2025-06-28,NOSΔ11,female,1
-2025-06-28,NOSΔ11,male,7
-2025-06-28,NOSΔ23,female,1
-2025-06-28,NOSΔ23,male,6
-2025-06-28,wild type,female,12
-2025-06-28,wild type,male,21
-2025-06-29,NOSΔ11,female,5
-2025-06-29,NOSΔ11,male,6
-2025-06-29,NOSΔ23,female,6
-2025-06-29,NOSΔ23,male,2
-2025-06-29,wild type,female,10
-2025-06-29,wild type,male,9
-2025-06-30,NOSΔ11,female,13
-2025-06-30,NOSΔ11,male,7
-2025-06-30,NOSΔ23,female,5
-2025-06-30,NOSΔ23,male,5
-2025-06-30,wild type,female,20
-2025-06-30,wild type,male,32
-2025-07-01,NOSΔ11,female,14
-2025-07-01,NOSΔ11,male,12
-2025-07-01,NOSΔ23,female,3
-2025-07-01,NOSΔ23,male,4
-2025-07-01,wild type,female,31
-2025-07-01,wild type,male,25
-2025-07-02,NOSΔ11,female,12
-2025-07-02,NOSΔ11,male,12
-2025-07-02,NOSΔ23,female,3
-2025-07-02,NOSΔ23,male,8
-2025-07-02,wild type,female,18
-2025-07-02,wild type,male,35
-2025-07-03,NOSΔ11,female,5
-2025-07-03,NOSΔ11,male,11
-2025-07-03,NOSΔ23,female,6
-2025-07-03,NOSΔ23,male,6
-2025-07-03,wild type,female,22
-2025-07-03,wild type,male,23
-2025-07-04,NOSΔ11,female,7
-2025-07-04,NOSΔ11,male,6
-2025-07-04,NOSΔ23,female,1
-2025-07-04,NOSΔ23,male,3
-2025-07-04,wild type,female,7
-2025-07-04,wild type,male,8
-2025-07-05,NOSΔ11,female,4
-2025-07-05,NOSΔ11,male,2
-2025-07-05,NOSΔ23,female,3
-2025-07-05,NOSΔ23,male,0
-2025-07-05,wild type,female,2
-2025-07-05,wild type,male,10
-2025-07-06,NOSΔ11,female,0
-2025-07-06,NOSΔ11,male,4
-2025-07-06,NOSΔ23,female,1
-2025-07-06,NOSΔ23,male,2
-2025-07-06,wild type,female,5
-2025-07-06,wild type,male,6
-2025-07-07,NOSΔ11,female,4
-2025-07-07,NOSΔ11,male,5
-2025-07-07,NOSΔ23,female,0
-2025-07-07,NOSΔ23,male,0
-2025-07-07,wild type,female,1
-2025-07-07,wild type,male,5
-2025-07-08,NOSΔ11,female,3
-2025-07-08,NOSΔ11,male,2
-2025-07-08,NOSΔ23,female,0
-2025-07-08,NOSΔ23,male,1
-2025-07-08,wild type,female,0
-2025-07-08,wild type,male,1
-2025-07-09,NOSΔ11,female,1
-2025-07-09,NOSΔ11,male,1
-2025-07-09,NOSΔ23,female,0
-2025-07-09,NOSΔ23,male,0
-2025-07-09,wild type,female,1
-2025-07-09,wild type,male,1
-2025-07-10,NOSΔ11,female,0
-2025-07-10,NOSΔ11,male,0
-2025-07-10,NOSΔ23,female,1
-2025-07-10,NOSΔ23,male,0
-2025-07-10,wild type,female,0
-2025-07-10,wild type,male,0
-2025-07-11,NOSΔ11,female,0
-2025-07-11,NOSΔ11,male,0
-2025-07-11,NOSΔ23,female,0
-2025-07-11,NOSΔ23,male,0
-2025-07-11,wild type,female,0
-2025-07-11,wild type,male,0
-2025-07-12,NOSΔ11,female,2
-2025-07-12,NOSΔ11,male,0
-2025-07-12,NOSΔ23,female,0
-2025-07-12,NOSΔ23,male,0
-2025-07-12,wild type,female,0
-2025-07-12,wild type,male,0
-2025-07-13,NOSΔ11,female,0
-2025-07-13,NOSΔ11,male,0
-2025-07-13,NOSΔ23,female,0
-2025-07-13,NOSΔ23,male,0
-2025-07-13,wild type,female,0
-2025-07-13,wild type,male,0
-2025-07-14,NOSΔ11,female,0
-2025-07-14,NOSΔ11,male,0
-2025-07-14,NOSΔ23,female,0
-2025-07-14,NOSΔ23,male,0
-2025-07-14,wild type,female,0
-2025-07-14,wild type,male,1
-2025-07-15,NOSΔ11,female,2
-2025-07-15,NOSΔ11,male,1
-2025-07-15,NOSΔ23,female,0
-2025-07-15,NOSΔ23,male,0
-2025-07-15,wild type,female,3
-2025-07-15,wild type,male,1
-2025-07-16,NOSΔ11,female,6
-2025-07-16,NOSΔ11,male,3
-2025-07-16,NOSΔ23,female,1
-2025-07-16,NOSΔ23,male,0
-2025-07-16,wild type,female,3
-2025-07-16,wild type,male,1
-2025-07-17,NOSΔ11,female,6
-2025-07-17,NOSΔ11,male,4
-2025-07-17,NOSΔ23,female,1
-2025-07-17,NOSΔ23,male,1
-2025-07-17,wild type,female,6
-2025-07-17,wild type,male,4
-2025-07-18,NOSΔ11,female,5
-2025-07-18,NOSΔ11,male,7
-2025-07-18,NOSΔ23,female,1
-2025-07-18,NOSΔ23,male,0
-2025-07-18,wild type,female,18
-2025-07-18,wild type,male,14
-2025-07-19,NOSΔ11,female,3
-2025-07-19,NOSΔ11,male,10
-2025-07-19,NOSΔ23,female,1
-2025-07-19,NOSΔ23,male,3
-2025-07-19,wild type,female,16
-2025-07-19,wild type,male,12
-2025-07-20,NOSΔ11,female,4
-2025-07-20,NOSΔ11,male,4
-2025-07-20,NOSΔ23,female,7
-2025-07-20,NOSΔ23,male,2
-2025-07-20,wild type,female,14
-2025-07-20,wild type,male,12
-2025-07-21,NOSΔ11,female,16
-2025-07-21,NOSΔ11,male,6
-2025-07-21,NOSΔ23,female,7
-2025-07-21,NOSΔ23,male,14
-2025-07-21,wild type,female,23
-2025-07-21,wild type,male,30
-2025-07-22,NOSΔ11,female,4
-2025-07-22,NOSΔ11,male,6
-2025-07-22,NOSΔ23,female,12
-2025-07-22,NOSΔ23,male,8
-2025-07-22,wild type,female,16
-2025-07-22,wild type,male,17
-2025-07-23,NOSΔ11,female,8
-2025-07-23,NOSΔ11,male,6
-2025-07-23,NOSΔ23,female,6
-2025-07-23,NOSΔ23,male,5
-2025-07-23,wild type,female,9
-2025-07-23,wild type,male,11
-2025-07-24,NOSΔ11,female,6
-2025-07-24,NOSΔ11,male,6
-2025-07-24,NOSΔ23,female,12
-2025-07-24,NOSΔ23,male,20
-2025-07-24,wild type,female,18
-2025-07-24,wild type,male,17
-2025-07-25,NOSΔ11,female,3
-2025-07-25,NOSΔ11,male,7
-2025-07-25,NOSΔ23,female,2
-2025-07-25,NOSΔ23,male,10
-2025-07-25,wild type,female,3
-2025-07-25,wild type,male,6
-2025-07-26,NOSΔ11,female,5
-2025-07-26,NOSΔ11,male,2
-2025-07-26,NOSΔ23,female,5
-2025-07-26,NOSΔ23,male,5
-2025-07-26,wild type,female,8
-2025-07-26,wild type,male,7
-2025-07-27,NOSΔ11,female,4
-2025-07-27,NOSΔ11,male,9
-2025-07-27,NOSΔ23,female,1
-2025-07-27,NOSΔ23,male,3
-2025-07-27,wild type,female,7
-2025-07-27,wild type,male,9
-2025-07-28,NOSΔ11,female,6
-2025-07-28,NOSΔ11,male,9
-2025-07-28,NOSΔ23,female,10
-2025-07-28,NOSΔ23,male,9
-2025-07-28,wild type,female,9
-2025-07-28,wild type,male,11
-2025-07-29,NOSΔ11,female,6
-2025-07-29,NOSΔ11,male,6
-2025-07-29,NOSΔ23,female,2
-2025-07-29,NOSΔ23,male,4
-2025-07-29,wild type,female,15
-2025-07-29,wild type,male,15
-2025-07-30,NOSΔ11,female,6
-2025-07-30,NOSΔ11,male,11
-2025-07-30,NOSΔ23,female,10
-2025-07-30,NOSΔ23,male,8
-2025-07-30,wild type,female,19
-2025-07-30,wild type,male,25
-2025-07-31,NOSΔ11,female,9
-2025-07-31,NOSΔ11,male,15
-2025-07-31,NOSΔ23,female,15
-2025-07-31,NOSΔ23,male,14
-2025-07-31,wild type,female,37
-2025-07-31,wild type,male,17
-2025-08-01,NOSΔ11,female,7
-2025-08-01,NOSΔ11,male,10
-2025-08-01,NOSΔ23,female,3
-2025-08-01,NOSΔ23,male,9
-2025-08-01,wild type,female,30
-2025-08-01,wild type,male,18
-2025-08-02,NOSΔ11,female,4
-2025-08-02,NOSΔ11,male,2
-2025-08-02,NOSΔ23,female,3
-2025-08-02,NOSΔ23,male,0
-2025-08-02,wild type,female,11
-2025-08-02,wild type,male,11
-2025-08-03,NOSΔ11,female,4
-2025-08-03,NOSΔ11,male,2
-2025-08-03,NOSΔ23,female,2
-2025-08-03,NOSΔ23,male,4
-2025-08-03,wild type,female,8
-2025-08-03,wild type,male,9
-2025-08-04,NOSΔ11,female,8
-2025-08-04,NOSΔ11,male,5
-2025-08-04,NOSΔ23,female,8
-2025-08-04,NOSΔ23,male,9
-2025-08-04,wild type,female,11
-2025-08-04,wild type,male,7
-2025-08-05,NOSΔ11,female,3
-2025-08-05,NOSΔ11,male,3
-2025-08-05,NOSΔ23,female,0
-2025-08-05,NOSΔ23,male,1
-2025-08-05,wild type,female,8
-2025-08-05,wild type,male,2
-2025-08-06,NOSΔ11,female,2
-2025-08-06,NOSΔ11,male,4
-2025-08-06,NOSΔ23,female,1
-2025-08-06,NOSΔ23,male,4
-2025-08-06,wild type,female,0
-2025-08-06,wild type,male,2
-2025-08-07,NOSΔ11,female,0
-2025-08-07,NOSΔ11,male,0
-2025-08-07,NOSΔ23,female,0
-2025-08-07,NOSΔ23,male,0
-2025-08-07,wild type,female,0
-2025-08-07,wild type,male,0
-2025-08-08,NOSΔ11,female,0
-2025-08-08,NOSΔ11,male,0
-2025-08-08,NOSΔ23,female,0
-2025-08-08,NOSΔ23,male,0
-2025-08-08,wild type,female,0
-2025-08-08,wild type,male,0
-2025-08-09,NOSΔ11,female,0
-2025-08-09,NOSΔ11,male,0
-2025-08-09,NOSΔ23,female,0
-2025-08-09,NOSΔ23,male,0
-2025-08-09,wild type,female,1
-2025-08-09,wild type,male,0
-2025-08-10,NOSΔ11,female,0
-2025-08-10,NOSΔ11,male,0
-2025-08-10,NOSΔ23,female,0
-2025-08-10,NOSΔ23,male,0
-2025-08-10,wild type,female,0
-2025-08-10,wild type,male,0
-2025-08-11,NOSΔ11,female,0
-2025-08-11,NOSΔ11,male,1
-2025-08-11,NOSΔ23,female,0
-2025-08-11,NOSΔ23,male,0
-2025-08-11,wild type,female,0
-2025-08-11,wild type,male,0
-2025-08-12,NOSΔ11,female,0
-2025-08-12,NOSΔ11,male,0
-2025-08-12,NOSΔ23,female,0
-2025-08-12,NOSΔ23,male,0
-2025-08-12,wild type,female,0
-2025-08-12,wild type,male,0
-2025-08-13,NOSΔ11,female,1
-2025-08-13,NOSΔ11,male,0
-2025-08-13,NOSΔ23,female,0
-2025-08-13,NOSΔ23,male,0
-2025-08-13,wild type,female,0
-2025-08-13,wild type,male,1
-2025-08-14,NOSΔ11,female,1
-2025-08-14,NOSΔ11,male,0
-2025-08-14,NOSΔ23,female,0
-2025-08-14,NOSΔ23,male,0
-2025-08-14,wild type,female,0
-2025-08-14,wild type,male,0
-2025-08-15,NOSΔ11,female,1
-2025-08-15,NOSΔ11,male,0
-2025-08-15,NOSΔ23,female,0
-2025-08-15,NOSΔ23,male,0
-2025-08-15,wild type,female,0
-2025-08-15,wild type,male,0
-2025-08-16,NOSΔ11,female,1
-2025-08-16,NOSΔ11,male,2
-2025-08-16,NOSΔ23,female,0
-2025-08-16,NOSΔ23,male,1
-2025-08-16,wild type,female,5
-2025-08-16,wild type,male,5
-2025-08-17,NOSΔ11,female,2
-2025-08-17,NOSΔ11,male,4
-2025-08-17,NOSΔ23,female,0
-2025-08-17,NOSΔ23,male,0
-2025-08-17,wild type,female,6
-2025-08-17,wild type,male,5
-2025-08-18,NOSΔ11,female,6
-2025-08-18,NOSΔ11,male,1
-2025-08-18,NOSΔ23,female,3
-2025-08-18,NOSΔ23,male,1
-2025-08-18,wild type,female,12
-2025-08-18,wild type,male,3
-2025-08-19,NOSΔ11,female,3
-2025-08-19,NOSΔ11,male,4
-2025-08-19,NOSΔ23,female,6
-2025-08-19,NOSΔ23,male,4
-2025-08-19,wild type,female,15
-2025-08-19,wild type,male,16
-2025-08-20,NOSΔ11,female,3
-2025-08-20,NOSΔ11,male,2
-2025-08-20,NOSΔ23,female,6
-2025-08-20,NOSΔ23,male,4
-2025-08-20,wild type,female,15
-2025-08-20,wild type,male,10
-2025-08-21,NOSΔ11,female,10
-2025-08-21,NOSΔ11,male,3
-2025-08-21,NOSΔ23,female,11
-2025-08-21,NOSΔ23,male,6
-2025-08-21,wild type,female,11
-2025-08-21,wild type,male,14
-2025-08-22,NOSΔ11,female,3
-2025-08-22,NOSΔ11,male,5
-2025-08-22,NOSΔ23,female,7
-2025-08-22,NOSΔ23,male,10
-2025-08-22,wild type,female,7
-2025-08-22,wild type,male,5
-2025-08-23,NOSΔ11,female,5
-2025-08-23,NOSΔ11,male,5
-2025-08-23,NOSΔ23,female,5
-2025-08-23,NOSΔ23,male,4
-2025-08-23,wild type,female,5
-2025-08-23,wild type,male,4
-2025-08-24,NOSΔ11,female,3
-2025-08-24,NOSΔ11,male,1
-2025-08-24,NOSΔ23,female,4
-2025-08-24,NOSΔ23,male,3
-2025-08-24,wild type,female,2
-2025-08-24,wild type,male,4
-2025-08-25,NOSΔ11,female,13
-2025-08-25,NOSΔ11,male,11
-2025-08-25,NOSΔ23,female,18
-2025-08-25,NOSΔ23,male,12
-2025-08-25,wild type,female,21
-2025-08-25,wild type,male,14
-2025-08-26,NOSΔ11,female,2
-2025-08-26,NOSΔ11,male,7
-2025-08-26,NOSΔ23,female,8
-2025-08-26,NOSΔ23,male,6
-2025-08-26,wild type,female,9
-2025-08-26,wild type,male,13
-2025-08-27,NOSΔ11,female,16
-2025-08-27,NOSΔ11,male,13
-2025-08-27,NOSΔ23,female,15
-2025-08-27,NOSΔ23,male,9
-2025-08-27,wild type,female,17
-2025-08-27,wild type,male,26
-2025-08-28,NOSΔ11,female,11
-2025-08-28,NOSΔ11,male,12
-2025-08-28,NOSΔ23,female,16
-2025-08-28,NOSΔ23,male,11
-2025-08-28,wild type,female,19
-2025-08-28,wild type,male,17
-2025-08-29,NOSΔ11,female,6
-2025-08-29,NOSΔ11,male,10
-2025-08-29,NOSΔ23,female,13
-2025-08-29,NOSΔ23,male,13
-2025-08-29,wild type,female,17
-2025-08-29,wild type,male,19
-2025-08-30,NOSΔ11,female,4
-2025-08-30,NOSΔ11,male,3
-2025-08-30,NOSΔ23,female,8
-2025-08-30,NOSΔ23,male,10
-2025-08-30,wild type,female,10
-2025-08-30,wild type,male,7
-2025-08-31,NOSΔ11,female,2
-2025-08-31,NOSΔ11,male,1
-2025-08-31,NOSΔ23,female,4
-2025-08-31,NOSΔ23,male,2
-2025-08-31,wild type,female,10
-2025-08-31,wild type,male,10
-2025-09-01,NOSΔ11,female,8
-2025-09-01,NOSΔ11,male,13
-2025-09-01,NOSΔ23,female,10
-2025-09-01,NOSΔ23,male,8
-2025-09-01,wild type,female,12
-2025-09-01,wild type,male,17
-2025-09-02,NOSΔ11,female,9
-2025-09-02,NOSΔ11,male,5
-2025-09-02,NOSΔ23,female,7
-2025-09-02,NOSΔ23,male,5
-2025-09-02,wild type,female,5
-2025-09-02,wild type,male,9
-2025-09-03,NOSΔ11,female,6
-2025-09-03,NOSΔ11,male,0
-2025-09-03,NOSΔ23,female,5
-2025-09-03,NOSΔ23,male,4
-2025-09-03,wild type,female,5
-2025-09-03,wild type,male,6
-2025-09-04,NOSΔ11,female,3
-2025-09-04,NOSΔ11,male,4
-2025-09-04,NOSΔ23,female,2
-2025-09-04,NOSΔ23,male,3
-2025-09-04,wild type,female,2
-2025-09-04,wild type,male,2
-2025-09-05,NOSΔ11,female,0
-2025-09-05,NOSΔ11,male,2
-2025-09-05,NOSΔ23,female,0
-2025-09-05,NOSΔ23,male,0
-2025-09-05,wild type,female,0
-2025-09-05,wild type,male,1
-2025-09-06,NOSΔ11,female,0
-2025-09-06,NOSΔ11,male,0
-2025-09-06,NOSΔ23,female,0
-2025-09-06,NOSΔ23,male,3
-2025-09-06,wild type,female,0
-2025-09-06,wild type,male,0
-2025-09-07,NOSΔ11,female,0
-2025-09-07,NOSΔ11,male,0
-2025-09-07,NOSΔ23,female,0
-2025-09-07,NOSΔ23,male,0
-2025-09-07,wild type,female,0
-2025-09-07,wild type,male,0
-2025-09-08,NOSΔ11,female,1
-2025-09-08,NOSΔ11,male,0
-2025-09-08,NOSΔ23,female,0
-2025-09-08,NOSΔ23,male,1
-2025-09-08,wild type,female,0
-2025-09-08,wild type,male,0
-2025-09-09,NOSΔ11,female,0
-2025-09-09,NOSΔ11,male,0
-2025-09-09,NOSΔ23,female,0
-2025-09-09,NOSΔ23,male,0
-2025-09-09,wild type,female,0
-2025-09-09,wild type,male,0
-2025-09-10,NOSΔ11,female,0
-2025-09-10,NOSΔ11,male,0
-2025-09-10,NOSΔ23,female,0
-2025-09-10,NOSΔ23,male,0
-2025-09-10,wild type,female,0
-2025-09-10,wild type,male,0
-2025-09-11,NOSΔ11,female,2
-2025-09-11,NOSΔ11,male,0
-2025-09-11,NOSΔ23,female,0
-2025-09-11,NOSΔ23,male,1
-2025-09-11,wild type,female,0
-2025-09-11,wild type,male,2
-2025-09-12,NOSΔ11,female,1
-2025-09-12,NOSΔ11,male,1
-2025-09-12,NOSΔ23,female,0
-2025-09-12,NOSΔ23,male,0
-2025-09-12,wild type,female,1
-2025-09-12,wild type,male,0
-2025-09-13,NOSΔ11,female,3
-2025-09-13,NOSΔ11,male,0
-2025-09-13,NOSΔ23,female,2
-2025-09-13,NOSΔ23,male,0
-2025-09-13,wild type,female,1
-2025-09-13,wild type,male,1
-2025-09-14,NOSΔ11,female,1
-2025-09-14,NOSΔ11,male,1
-2025-09-14,NOSΔ23,female,1
-2025-09-14,NOSΔ23,male,2
-2025-09-14,wild type,female,5
-2025-09-14,wild type,male,4
-2025-09-15,NOSΔ11,female,6
-2025-09-15,NOSΔ11,male,10
-2025-09-15,NOSΔ23,female,3
-2025-09-15,NOSΔ23,male,0
-2025-09-15,wild type,female,13
-2025-09-15,wild type,male,5
-2025-09-16,NOSΔ11,female,5
-2025-09-16,NOSΔ11,male,6
-2025-09-16,NOSΔ23,female,5
-2025-09-16,NOSΔ23,male,3
-2025-09-16,wild type,female,9
-2025-09-16,wild type,male,9
-2025-09-17,NOSΔ11,female,7
-2025-09-17,NOSΔ11,male,8
-2025-09-17,NOSΔ23,female,10
-2025-09-17,NOSΔ23,male,5
-2025-09-17,wild type,female,21
-2025-09-17,wild type,male,10
-2025-09-18,NOSΔ11,female,9
-2025-09-18,NOSΔ11,male,13
-2025-09-18,NOSΔ23,female,8
-2025-09-18,NOSΔ23,male,6
-2025-09-18,wild type,female,11
-2025-09-18,wild type,male,13
-2025-09-19,NOSΔ11,female,13
-2025-09-19,NOSΔ11,male,15
-2025-09-19,NOSΔ23,female,6
-2025-09-19,NOSΔ23,male,8
-2025-09-19,wild type,female,11
-2025-09-19,wild type,male,9
-2025-09-20,NOSΔ11,female,3
-2025-09-20,NOSΔ11,male,2
-2025-09-20,NOSΔ23,female,4
-2025-09-20,NOSΔ23,male,5
-2025-09-20,wild type,female,3
-2025-09-20,wild type,male,4
-2025-09-21,NOSΔ11,female,4
-2025-09-21,NOSΔ11,male,4
-2025-09-21,NOSΔ23,female,4
-2025-09-21,NOSΔ23,male,1
-2025-09-21,wild type,female,5
-2025-09-21,wild type,male,9
-2025-09-22,NOSΔ11,female,14
-2025-09-22,NOSΔ11,male,15
-2025-09-22,NOSΔ23,female,5
-2025-09-22,NOSΔ23,male,5
-2025-09-22,wild type,female,13
-2025-09-22,wild type,male,8
-2025-09-23,NOSΔ11,female,11
-2025-09-23,NOSΔ11,male,12
-2025-09-23,NOSΔ23,female,7
-2025-09-23,NOSΔ23,male,6
-2025-09-23,wild type,female,4
-2025-09-23,wild type,male,18
-2025-09-24,NOSΔ11,female,9
-2025-09-24,NOSΔ11,male,11
-2025-09-24,NOSΔ23,female,6
-2025-09-24,NOSΔ23,male,3
-2025-09-24,wild type,female,4
-2025-09-24,wild type,male,17
-2025-09-25,NOSΔ11,female,16
-2025-09-25,NOSΔ11,male,14
-2025-09-25,NOSΔ23,female,1
-2025-09-25,NOSΔ23,male,5
-2025-09-25,wild type,female,17
-2025-09-25,wild type,male,16
-2025-09-26,NOSΔ11,female,6
-2025-09-26,NOSΔ11,male,5
-2025-09-26,NOSΔ23,female,5
-2025-09-26,NOSΔ23,male,3
-2025-09-26,wild type,female,11
-2025-09-26,wild type,male,12
-2025-09-27,NOSΔ11,female,5
-2025-09-27,NOSΔ11,male,4
-2025-09-27,NOSΔ23,female,1
-2025-09-27,NOSΔ23,male,2
-2025-09-27,wild type,female,5
-2025-09-27,wild type,male,7
-2025-09-28,NOSΔ11,female,4
-2025-09-28,NOSΔ11,male,12
-2025-09-28,NOSΔ23,female,5
-2025-09-28,NOSΔ23,male,3
-2025-09-28,wild type,female,5
-2025-09-28,wild type,male,10
-2025-09-29,NOSΔ11,female,5
-2025-09-29,NOSΔ11,male,12
-2025-09-29,NOSΔ23,female,17
-2025-09-29,NOSΔ23,male,7
-2025-09-29,wild type,female,17
-2025-09-29,wild type,male,24
-2025-09-30,NOSΔ11,female,5
-2025-09-30,NOSΔ11,male,6
-2025-09-30,NOSΔ23,female,3
-2025-09-30,NOSΔ23,male,3
-2025-09-30,wild type,female,7
-2025-09-30,wild type,male,6
-2025-10-01,NOSΔ11,female,4
-2025-10-01,NOSΔ11,male,8
-2025-10-01,NOSΔ23,female,3
-2025-10-01,NOSΔ23,male,1
-2025-10-01,wild type,female,6
-2025-10-01,wild type,male,8
-2025-10-02,NOSΔ11,female,1
-2025-10-02,NOSΔ11,male,6
-2025-10-02,NOSΔ23,female,1
-2025-10-02,NOSΔ23,male,5
-2025-10-02,wild type,female,3
-2025-10-02,wild type,male,4
-2025-10-03,NOSΔ11,female,2
-2025-10-03,NOSΔ11,male,2
-2025-10-03,NOSΔ23,female,0
-2025-10-03,NOSΔ23,male,1
-2025-10-03,wild type,female,0
-2025-10-03,wild type,male,0
-2025-10-04,NOSΔ11,female,2
-2025-10-04,NOSΔ11,male,1
-2025-10-04,NOSΔ23,female,1
-2025-10-04,NOSΔ23,male,2
-2025-10-04,wild type,female,0
-2025-10-04,wild type,male,1
-2025-10-05,NOSΔ11,female,0
-2025-10-05,NOSΔ11,male,0
-2025-10-05,NOSΔ23,female,0
-2025-10-05,NOSΔ23,male,0
-2025-10-05,wild type,female,0
-2025-10-05,wild type,male,0
-2025-10-06,NOSΔ11,female,0
-2025-10-06,NOSΔ11,male,1
-2025-10-06,NOSΔ23,female,1
-2025-10-06,NOSΔ23,male,0
-2025-10-06,wild type,female,0
-2025-10-06,wild type,male,0
-2025-10-07,NOSΔ11,female,1
-2025-10-07,NOSΔ11,male,0
-2025-10-07,NOSΔ23,female,0
-2025-10-07,NOSΔ23,male,0
-2025-10-07,wild type,female,0
-2025-10-07,wild type,male,0
-2025-10-08,NOSΔ11,female,0
-2025-10-08,NOSΔ11,male,0
-2025-10-08,NOSΔ23,female,0
-2025-10-08,NOSΔ23,male,0
-2025-10-08,wild type,female,0
-2025-10-08,wild type,male,0
-2025-10-09,NOSΔ11,female,1
-2025-10-09,NOSΔ11,male,0
-2025-10-09,NOSΔ23,female,0
-2025-10-09,NOSΔ23,male,1
-2025-10-09,wild type,female,1
-2025-10-09,wild type,male,0
-2025-10-10,NOSΔ11,female,1
-2025-10-10,NOSΔ11,male,0
-2025-10-10,NOSΔ23,female,0
-2025-10-10,NOSΔ23,male,0
-2025-10-10,wild type,female,0
-2025-10-10,wild type,male,0
-2025-10-11,NOSΔ11,female,0
-2025-10-11,NOSΔ11,male,3
-2025-10-11,NOSΔ23,female,0
-2025-10-11,NOSΔ23,male,0
-2025-10-11,wild type,female,0
-2025-10-11,wild type,male,0
-2025-10-12,NOSΔ11,female,0
-2025-10-12,NOSΔ11,male,2
-2025-10-12,NOSΔ23,female,0
-2025-10-12,NOSΔ23,male,0
-2025-10-12,wild type,female,0
-2025-10-12,wild type,male,0
-2025-10-13,NOSΔ11,female,1
-2025-10-13,NOSΔ11,male,2
-2025-10-13,NOSΔ23,female,0
-2025-10-13,NOSΔ23,male,0
-2025-10-13,wild type,female,1
-2025-10-13,wild type,male,0
-2025-10-14,NOSΔ11,female,4
-2025-10-14,NOSΔ11,male,4
-2025-10-14,NOSΔ23,female,0
-2025-10-14,NOSΔ23,male,0
-2025-10-14,wild type,female,4
-2025-10-14,wild type,male,7
-2025-10-15,NOSΔ11,female,7
-2025-10-15,NOSΔ11,male,9
-2025-10-15,NOSΔ23,female,1
-2025-10-15,NOSΔ23,male,1
-2025-10-15,wild type,female,6
-2025-10-15,wild type,male,10
-2025-10-16,NOSΔ11,female,6
-2025-10-16,NOSΔ11,male,8
-2025-10-16,NOSΔ23,female,7
-2025-10-16,NOSΔ23,male,4
-2025-10-16,wild type,female,8
-2025-10-16,wild type,male,16
-2025-10-17,NOSΔ11,female,10
-2025-10-17,NOSΔ11,male,12
-2025-10-17,NOSΔ23,female,7
-2025-10-17,NOSΔ23,male,10
-2025-10-17,wild type,female,10
-2025-10-17,wild type,male,7
-2025-10-18,NOSΔ11,female,9
-2025-10-18,NOSΔ11,male,9
-2025-10-18,NOSΔ23,female,3
-2025-10-18,NOSΔ23,male,3
-2025-10-18,wild type,female,6
-2025-10-18,wild type,male,7
-2025-10-19,NOSΔ11,female,7
-2025-10-19,NOSΔ11,male,7
-2025-10-19,NOSΔ23,female,3
-2025-10-19,NOSΔ23,male,2
-2025-10-19,wild type,female,4
-2025-10-19,wild type,male,18
-2025-10-20,NOSΔ11,female,12
-2025-10-20,NOSΔ11,male,4
-2025-10-20,NOSΔ23,female,8
-2025-10-20,NOSΔ23,male,5
-2025-10-20,wild type,female,10
-2025-10-20,wild type,male,22
-2025-10-21,NOSΔ11,female,17
-2025-10-21,NOSΔ11,male,14
-2025-10-21,NOSΔ23,female,5
-2025-10-21,NOSΔ23,male,3
-2025-10-21,wild type,female,7
-2025-10-21,wild type,male,12
-2025-10-22,NOSΔ11,female,6
-2025-10-22,NOSΔ11,male,13
-2025-10-22,NOSΔ23,female,1
-2025-10-22,NOSΔ23,male,3
-2025-10-22,wild type,female,9
-2025-10-22,wild type,male,16
-2025-10-23,NOSΔ11,female,3
-2025-10-23,NOSΔ11,male,9
-2025-10-23,NOSΔ23,female,3
-2025-10-23,NOSΔ23,male,5
-2025-10-23,wild type,female,21
-2025-10-23,wild type,male,22
-2025-10-24,NOSΔ11,female,6
-2025-10-24,NOSΔ11,male,7
-2025-10-24,NOSΔ23,female,2
-2025-10-24,NOSΔ23,male,1
-2025-10-24,wild type,female,11
-2025-10-24,wild type,male,14
-2025-10-25,NOSΔ11,female,6
-2025-10-25,NOSΔ11,male,6
-2025-10-25,NOSΔ23,female,0
-2025-10-25,NOSΔ23,male,3
-2025-10-25,wild type,female,9
-2025-10-25,wild type,male,8
-2025-10-26,NOSΔ11,female,4
-2025-10-26,NOSΔ11,male,5
-2025-10-26,NOSΔ23,female,2
-2025-10-26,NOSΔ23,male,4
-2025-10-26,wild type,female,11
-2025-10-26,wild type,male,5
-2025-10-27,NOSΔ11,female,8
-2025-10-27,NOSΔ11,male,15
-2025-10-27,NOSΔ23,female,2
-2025-10-27,NOSΔ23,male,10
-2025-10-27,wild type,female,15
-2025-10-27,wild type,male,30
-2025-10-28,NOSΔ11,female,18
-2025-10-28,NOSΔ11,male,13
-2025-10-28,NOSΔ23,female,6
-2025-10-28,NOSΔ23,male,2
-2025-10-28,wild type,female,14
-2025-10-28,wild type,male,34
-2025-10-29,NOSΔ11,female,9
-2025-10-29,NOSΔ11,male,9
-2025-10-29,NOSΔ23,female,5
-2025-10-29,NOSΔ23,male,6
-2025-10-29,wild type,female,21
-2025-10-29,wild type,male,25
-2025-10-30,NOSΔ11,female,9
-2025-10-30,NOSΔ11,male,6
-2025-10-30,NOSΔ23,female,2
-2025-10-30,NOSΔ23,male,6
-2025-10-30,wild type,female,19
-2025-10-30,wild type,male,10
-2025-10-31,NOSΔ11,female,9
-2025-10-31,NOSΔ11,male,6
-2025-10-31,NOSΔ23,female,1
-2025-10-31,NOSΔ23,male,1
-2025-10-31,wild type,female,8
-2025-10-31,wild type,male,15
-2025-11-01,NOSΔ11,female,3
-2025-11-01,NOSΔ11,male,2
-2025-11-01,NOSΔ23,female,3
-2025-11-01,NOSΔ23,male,2
-2025-11-01,wild type,female,7
-2025-11-01,wild type,male,13
-2025-11-02,NOSΔ11,female,2
-2025-11-02,NOSΔ11,male,1
-2025-11-02,NOSΔ23,female,0
-2025-11-02,NOSΔ23,male,0
-2025-11-02,wild type,female,2
-2025-11-02,wild type,male,3
-2025-11-03,NOSΔ11,female,2
-2025-11-03,NOSΔ11,male,0
-2025-11-03,NOSΔ23,female,0
-2025-11-03,NOSΔ23,male,2
-2025-11-03,wild type,female,0
-2025-11-03,wild type,male,4
-2025-11-04,NOSΔ11,female,1
-2025-11-04,NOSΔ11,male,0
-2025-11-04,NOSΔ23,female,0
-2025-11-04,NOSΔ23,male,0
-2025-11-04,wild type,female,0
-2025-11-04,wild type,male,0
-2025-11-05,NOSΔ11,female,0
-2025-11-05,NOSΔ11,male,1
-2025-11-05,NOSΔ23,female,0
-2025-11-05,NOSΔ23,male,0
-2025-11-05,wild type,female,0
-2025-11-05,wild type,male,0
-2025-11-06,NOSΔ11,female,0
-2025-11-06,NOSΔ11,male,0
-2025-11-06,NOSΔ23,female,0
-2025-11-06,NOSΔ23,male,0
-2025-11-06,wild type,female,0
-2025-11-06,wild type,male,0
-2025-11-07,NOSΔ11,female,0
-2025-11-07,NOSΔ11,male,0
-2025-11-07,NOSΔ23,female,0
-2025-11-07,NOSΔ23,male,0
-2025-11-07,wild type,female,0
-2025-11-07,wild type,male,0
-2025-11-08,NOSΔ11,female,0
-2025-11-08,NOSΔ11,male,0
-2025-11-08,NOSΔ23,female,0
-2025-11-08,NOSΔ23,male,0
-2025-11-08,wild type,female,0
-2025-11-08,wild type,male,0
-2025-11-09,NOSΔ11,female,0
-2025-11-09,NOSΔ11,male,0
-2025-11-09,NOSΔ23,female,0
-2025-11-09,NOSΔ23,male,0
-2025-11-09,wild type,female,0
-2025-11-09,wild type,male,0
-2025-11-10,NOSΔ11,female,6
-2025-11-10,NOSΔ11,male,3
-2025-11-10,NOSΔ23,female,0
-2025-11-10,NOSΔ23,male,0
-2025-11-10,wild type,female,1
-2025-11-10,wild type,male,0
-2025-11-11,NOSΔ11,female,0
-2025-11-11,NOSΔ11,male,1
-2025-11-11,NOSΔ23,female,0
-2025-11-11,NOSΔ23,male,0
-2025-11-11,wild type,female,3
-2025-11-11,wild type,male,4
-2025-11-12,NOSΔ11,female,8
-2025-11-12,NOSΔ11,male,4
-2025-11-12,NOSΔ23,female,1
-2025-11-12,NOSΔ23,male,1
-2025-11-12,wild type,female,11
-2025-11-12,wild type,male,3
-2025-11-13,NOSΔ11,female,5
-2025-11-13,NOSΔ11,male,2
-2025-11-13,NOSΔ23,female,2
-2025-11-13,NOSΔ23,male,2
-2025-11-13,wild type,female,11
-2025-11-13,wild type,male,11
-2025-11-14,NOSΔ11,female,4
-2025-11-14,NOSΔ11,male,7
-2025-11-14,NOSΔ23,female,3
-2025-11-14,NOSΔ23,male,3
-2025-11-14,wild type,female,5
-2025-11-14,wild type,male,4
-2025-11-15,NOSΔ11,female,5
-2025-11-15,NOSΔ11,male,1
-2025-11-15,NOSΔ23,female,3
-2025-11-15,NOSΔ23,male,3
-2025-11-15,wild type,female,14
-2025-11-15,wild type,male,13
-2025-11-16,NOSΔ11,female,6
-2025-11-16,NOSΔ11,male,13
-2025-11-16,NOSΔ23,female,3
-2025-11-16,NOSΔ23,male,3
-2025-11-16,wild type,female,11
-2025-11-16,wild type,male,8
-2025-11-17,NOSΔ11,female,13
-2025-11-17,NOSΔ11,male,11
-2025-11-17,NOSΔ23,female,4
-2025-11-17,NOSΔ23,male,4
-2025-11-17,wild type,female,13
-2025-11-17,wild type,male,15
-2025-11-18,NOSΔ11,female,6
-2025-11-18,NOSΔ11,male,9
-2025-11-18,NOSΔ23,female,2
-2025-11-18,NOSΔ23,male,2
-2025-11-18,wild type,female,10
-2025-11-18,wild type,male,26
-2025-11-19,NOSΔ11,female,6
-2025-11-19,NOSΔ11,male,4
-2025-11-19,NOSΔ23,female,3
-2025-11-19,NOSΔ23,male,3
-2025-11-19,wild type,female,13
-2025-11-19,wild type,male,18
-2025-11-20,NOSΔ11,female,5
-2025-11-20,NOSΔ11,male,10
-2025-11-20,NOSΔ23,female,1
-2025-11-20,NOSΔ23,male,1
-2025-11-20,wild type,female,9
-2025-11-20,wild type,male,18
-2025-11-21,NOSΔ11,female,11
-2025-11-21,NOSΔ11,male,6
-2025-11-21,NOSΔ23,female,2
-2025-11-21,NOSΔ23,male,2
-2025-11-21,wild type,female,24
-2025-11-21,wild type,male,30
-2025-11-22,NOSΔ11,female,2
-2025-11-22,NOSΔ11,male,15
-2025-11-22,NOSΔ23,female,4
-2025-11-22,NOSΔ23,male,4
-2025-11-22,wild type,female,10
-2025-11-22,wild type,male,25
-2025-11-23,NOSΔ11,female,8
-2025-11-23,NOSΔ11,male,10
-2025-11-23,NOSΔ23,female,4
-2025-11-23,NOSΔ23,male,4
-2025-11-23,wild type,female,11
-2025-11-23,wild type,male,30
-2025-11-24,NOSΔ11,female,10
-2025-11-24,NOSΔ11,male,7
-2025-11-24,NOSΔ23,female,7
-2025-11-24,NOSΔ23,male,7
-2025-11-24,wild type,female,28
-2025-11-24,wild type,male,31
-2025-11-25,NOSΔ11,female,5
-2025-11-25,NOSΔ11,male,9
-2025-11-25,NOSΔ23,female,1
-2025-11-25,NOSΔ23,male,1
-2025-11-25,wild type,female,21
-2025-11-25,wild type,male,27
-2025-11-26,NOSΔ11,female,13
-2025-11-26,NOSΔ11,male,14
-2025-11-26,NOSΔ23,female,1
-2025-11-26,NOSΔ23,male,1
-2025-11-26,wild type,female,29
-2025-11-26,wild type,male,40
-2025-11-27,NOSΔ11,female,3
-2025-11-27,NOSΔ11,male,3
-2025-11-27,NOSΔ23,female,1
-2025-11-27,NOSΔ23,male,1
-2025-11-27,wild type,female,18
-2025-11-27,wild type,male,12
-2025-11-28,NOSΔ11,female,8
-2025-11-28,NOSΔ11,male,8
-2025-11-28,NOSΔ23,female,1
-2025-11-28,NOSΔ23,male,1
-2025-11-28,wild type,female,13
-2025-11-28,wild type,male,17
-2025-11-29,NOSΔ11,female,0
-2025-11-29,NOSΔ11,male,1
-2025-11-29,NOSΔ23,female,0
-2025-11-29,NOSΔ23,male,0
-2025-11-29,wild type,female,3
-2025-11-29,wild type,male,8
-2025-11-30,NOSΔ11,female,3
-2025-11-30,NOSΔ11,male,1
-2025-11-30,NOSΔ23,female,3
-2025-11-30,NOSΔ23,male,3
-2025-11-30,wild type,female,3
-2025-11-30,wild type,male,9
-2025-12-01,NOSΔ11,female,2
-2025-12-01,NOSΔ11,male,2
-2025-12-01,NOSΔ23,female,0
-2025-12-01,NOSΔ23,male,1
-2025-12-01,wild type,female,2
-2025-12-01,wild type,male,2
-2025-12-02,NOSΔ11,female,1
-2025-12-02,NOSΔ11,male,1
-2025-12-02,NOSΔ23,female,1
-2025-12-02,NOSΔ23,male,0
-2025-12-02,wild type,female,1
-2025-12-02,wild type,male,0
-2025-12-03,NOSΔ11,female,0
-2025-12-03,NOSΔ11,male,0
-2025-12-03,NOSΔ23,female,0
-2025-12-03,NOSΔ23,male,0
-2025-12-03,wild type,female,0
-2025-12-03,wild type,male,1
-2025-12-04,NOSΔ11,female,0
-2025-12-04,NOSΔ11,male,0
-2025-12-04,NOSΔ23,female,0
-2025-12-04,NOSΔ23,male,0
-2025-12-04,wild type,female,0
-2025-12-04,wild type,male,1
-2025-12-05,NOSΔ11,female,0
-2025-12-05,NOSΔ11,male,0
-2025-12-05,NOSΔ23,female,0
-2025-12-05,NOSΔ23,male,0
-2025-12-05,wild type,female,0
-2025-12-05,wild type,male,0
-2025-12-06,NOSΔ11,female,0
-2025-12-06,NOSΔ11,male,0
-2025-12-06,NOSΔ23,female,0
-2025-12-06,NOSΔ23,male,0
-2025-12-06,wild type,female,0
-2025-12-06,wild type,male,0
-2025-12-07,NOSΔ11,female,0
-2025-12-07,NOSΔ11,male,0
-2025-12-07,NOSΔ23,female,0
-2025-12-07,NOSΔ23,male,0
-2025-12-07,wild type,female,0
-2025-12-07,wild type,male,0
-2025-12-08,NOSΔ11,female,3
-2025-12-08,NOSΔ11,male,0
-2025-12-08,NOSΔ23,female,0
-2025-12-08,NOSΔ23,male,0
-2025-12-08,wild type,female,0
-2025-12-08,wild type,male,0
-2025-12-09,NOSΔ11,female,7
-2025-12-09,NOSΔ11,male,1
-2025-12-09,NOSΔ23,female,0
-2025-12-09,NOSΔ23,male,0
-2025-12-09,wild type,female,1
-2025-12-09,wild type,male,0
-2025-12-10,NOSΔ11,female,2
-2025-12-10,NOSΔ11,male,0
-2025-12-10,NOSΔ23,female,0
-2025-12-10,NOSΔ23,male,0
-2025-12-10,wild type,female,0
-2025-12-10,wild type,male,1
-2025-12-11,NOSΔ11,female,14
-2025-12-11,NOSΔ11,male,5
-2025-12-11,NOSΔ23,female,1
-2025-12-11,NOSΔ23,male,0
-2025-12-11,wild type,female,7
-2025-12-11,wild type,male,8
-2025-12-12,NOSΔ11,female,7
-2025-12-12,NOSΔ11,male,6
-2025-12-12,NOSΔ23,female,1
-2025-12-12,NOSΔ23,male,0
-2025-12-12,wild type,female,21
-2025-12-12,wild type,male,9
-2025-12-13,NOSΔ11,female,5
-2025-12-13,NOSΔ11,male,6
-2025-12-13,NOSΔ23,female,2
-2025-12-13,NOSΔ23,male,1
-2025-12-13,wild type,female,25
-2025-12-13,wild type,male,9
-2025-12-14,NOSΔ11,female,5
-2025-12-14,NOSΔ11,male,8
-2025-12-14,NOSΔ23,female,0
-2025-12-14,NOSΔ23,male,2
-2025-12-14,wild type,female,22
-2025-12-14,wild type,male,16
-2025-12-15,NOSΔ11,female,8
-2025-12-15,NOSΔ11,male,7
-2025-12-15,NOSΔ23,female,3
-2025-12-15,NOSΔ23,male,0
-2025-12-15,wild type,female,40
-2025-12-15,wild type,male,30
-2025-12-16,NOSΔ11,female,6
-2025-12-16,NOSΔ11,male,7
-2025-12-16,NOSΔ23,female,3
-2025-12-16,NOSΔ23,male,2
-2025-12-16,wild type,female,21
-2025-12-16,wild type,male,27
-2025-12-17,NOSΔ11,female,7
-2025-12-17,NOSΔ11,male,9
-2025-12-17,NOSΔ23,female,7
-2025-12-17,NOSΔ23,male,7
-2025-12-17,wild type,female,35
-2025-12-17,wild type,male,25
-2025-12-18,NOSΔ11,female,4
-2025-12-18,NOSΔ11,male,6
-2025-12-18,NOSΔ23,female,4
-2025-12-18,NOSΔ23,male,5
-2025-12-18,wild type,female,11
-2025-12-18,wild type,male,13
-2025-12-19,NOSΔ11,female,8
-2025-12-19,NOSΔ11,male,7
-2025-12-19,NOSΔ23,female,2
-2025-12-19,NOSΔ23,male,8
-2025-12-19,wild type,female,25
-2025-12-19,wild type,male,18
-2025-12-20,NOSΔ11,female,1
-2025-12-20,NOSΔ11,male,3
-2025-12-20,NOSΔ23,female,5
-2025-12-20,NOSΔ23,male,3
-2025-12-20,wild type,female,13
-2025-12-20,wild type,male,21
-2025-12-21,NOSΔ11,female,6
-2025-12-21,NOSΔ11,male,3
-2025-12-21,NOSΔ23,female,3
-2025-12-21,NOSΔ23,male,2
-2025-12-21,wild type,female,13
-2025-12-21,wild type,male,15
-2025-12-22,NOSΔ11,female,6
-2025-12-22,NOSΔ11,male,11
-2025-12-22,NOSΔ23,female,6
-2025-12-22,NOSΔ23,male,7
-2025-12-22,wild type,female,22
-2025-12-22,wild type,male,20
-2025-12-23,NOSΔ11,female,2
-2025-12-23,NOSΔ11,male,6
-2025-12-23,NOSΔ23,female,4
-2025-12-23,NOSΔ23,male,5
-2025-12-23,wild type,female,25
-2025-12-23,wild type,male,32
-2025-12-24,NOSΔ11,female,1
-2025-12-24,NOSΔ11,male,1
-2025-12-24,NOSΔ23,female,2
-2025-12-24,NOSΔ23,male,3
-2025-12-24,wild type,female,13
-2025-12-24,wild type,male,15
-2025-12-25,NOSΔ11,female,11
-2025-12-25,NOSΔ11,male,4
-2025-12-25,NOSΔ23,female,5
-2025-12-25,NOSΔ23,male,1
-2025-12-25,wild type,female,24
-2025-12-25,wild type,male,22
-2025-12-26,NOSΔ11,female,6
-2025-12-26,NOSΔ11,male,7
-2025-12-26,NOSΔ23,female,6
-2025-12-26,NOSΔ23,male,2
-2025-12-26,wild type,female,25
-2025-12-26,wild type,male,23
-2025-12-27,NOSΔ11,female,0
-2025-12-27,NOSΔ11,male,4
-2025-12-27,NOSΔ23,female,2
-2025-12-27,NOSΔ23,male,4
-2025-12-27,wild type,female,3
-2025-12-27,wild type,male,5
-2025-12-28,NOSΔ11,female,0
-2025-12-28,NOSΔ11,male,1
-2025-12-28,NOSΔ23,female,2
-2025-12-28,NOSΔ23,male,1
-2025-12-28,wild type,female,7
-2025-12-28,wild type,male,6
-2025-12-29,NOSΔ11,female,6
-2025-12-29,NOSΔ11,male,4
-2025-12-29,NOSΔ23,female,2
-2025-12-29,NOSΔ23,male,3
-2025-12-29,wild type,female,4
-2025-12-29,wild type,male,16
-2025-12-30,NOSΔ11,female,5
-2025-12-30,NOSΔ11,male,5
-2025-12-30,NOSΔ23,female,0
-2025-12-30,NOSΔ23,male,1
-2025-12-30,wild type,female,7
-2025-12-30,wild type,male,15
-2025-12-31,NOSΔ11,female,0
-2025-12-31,NOSΔ11,male,0
-2025-12-31,NOSΔ23,female,1
-2025-12-31,NOSΔ23,male,1
-2025-12-31,wild type,female,1
-2025-12-31,wild type,male,1
-2026-01-01,NOSΔ11,female,2
-2026-01-01,NOSΔ11,male,2
-2026-01-01,NOSΔ23,female,0
-2026-01-01,NOSΔ23,male,2
-2026-01-01,wild type,female,1
-2026-01-01,wild type,male,1
-2026-01-02,NOSΔ11,female,0
-2026-01-02,NOSΔ11,male,1
-2026-01-02,NOSΔ23,female,0
-2026-01-02,NOSΔ23,male,0
-2026-01-02,wild type,female,0
-2026-01-02,wild type,male,2
-2026-01-03,NOSΔ11,female,1
-2026-01-03,NOSΔ11,male,0
-2026-01-03,NOSΔ23,female,0
-2026-01-03,NOSΔ23,male,0
-2026-01-03,wild type,female,0
-2026-01-03,wild type,male,0
-2026-01-04,NOSΔ11,female,0
-2026-01-04,NOSΔ11,male,0
-2026-01-04,NOSΔ23,female,0
-2026-01-04,NOSΔ23,male,0
-2026-01-04,wild type,female,0
-2026-01-04,wild type,male,0
-2026-01-05,NOSΔ11,female,1
-2026-01-05,NOSΔ11,male,0
-2026-01-05,NOSΔ23,female,0
-2026-01-05,NOSΔ23,male,0
-2026-01-05,wild type,female,0
-2026-01-05,wild type,male,0
-2026-01-06,NOSΔ11,female,0
-2026-01-06,NOSΔ11,male,0
-2026-01-06,NOSΔ23,female,0
-2026-01-06,NOSΔ23,male,0
-2026-01-06,wild type,female,0
-2026-01-06,wild type,male,0
-2026-01-07,NOSΔ11,female,1
-2026-01-07,NOSΔ11,male,0
-2026-01-07,NOSΔ23,female,0
-2026-01-07,NOSΔ23,male,0
-2026-01-07,wild type,female,0
-2026-01-07,wild type,male,1
-2026-01-08,NOSΔ11,female,1
-2026-01-08,NOSΔ11,male,0
-2026-01-08,NOSΔ23,female,0
-2026-01-08,NOSΔ23,male,0
-2026-01-08,wild type,female,0
-2026-01-08,wild type,male,0
-2026-01-09,NOSΔ11,female,2
-2026-01-09,NOSΔ11,male,2
-2026-01-09,NOSΔ23,female,0
-2026-01-09,NOSΔ23,male,0
-2026-01-09,wild type,female,5
-2026-01-09,wild type,male,3
-2026-01-10,NOSΔ11,female,1
-2026-01-10,NOSΔ11,male,1
-2026-01-10,NOSΔ23,female,0
-2026-01-10,NOSΔ23,male,0
-2026-01-10,wild type,female,6
-2026-01-10,wild type,male,4
-2026-01-11,NOSΔ11,female,5
-2026-01-11,NOSΔ11,male,2
-2026-01-11,NOSΔ23,female,4
-2026-01-11,NOSΔ23,male,1
-2026-01-11,wild type,female,13
-2026-01-11,wild type,male,6
-2026-01-12,NOSΔ11,female,9
-2026-01-12,NOSΔ11,male,1
-2026-01-12,NOSΔ23,female,3
-2026-01-12,NOSΔ23,male,3
-2026-01-12,wild type,female,20
-2026-01-12,wild type,male,23
-2026-01-13,NOSΔ11,female,5
-2026-01-13,NOSΔ11,male,5
-2026-01-13,NOSΔ23,female,1
-2026-01-13,NOSΔ23,male,2
-2026-01-13,wild type,female,24
-2026-01-13,wild type,male,23
-2026-01-14,NOSΔ11,female,9
-2026-01-14,NOSΔ11,male,7
-2026-01-14,NOSΔ23,female,5
-2026-01-14,NOSΔ23,male,4
-2026-01-14,wild type,female,25
-2026-01-14,wild type,male,35
-2026-01-15,NOSΔ11,female,6
-2026-01-15,NOSΔ11,male,5
-2026-01-15,NOSΔ23,female,6
-2026-01-15,NOSΔ23,male,2
-2026-01-15,wild type,female,26
-2026-01-15,wild type,male,25
-2026-01-16,NOSΔ11,female,3
-2026-01-16,NOSΔ11,male,7
-2026-01-16,NOSΔ23,female,3
-2026-01-16,NOSΔ23,male,4
-2026-01-16,wild type,female,13
-2026-01-16,wild type,male,19
-2026-01-17,NOSΔ11,female,1
-2026-01-17,NOSΔ11,male,1
-2026-01-17,NOSΔ23,female,3
-2026-01-17,NOSΔ23,male,3
-2026-01-17,wild type,female,15
-2026-01-17,wild type,male,6
-2026-01-18,NOSΔ11,female,4
-2026-01-18,NOSΔ11,male,5
-2026-01-18,NOSΔ23,female,2
-2026-01-18,NOSΔ23,male,0
-2026-01-18,wild type,female,6
-2026-01-18,wild type,male,5
-2026-01-19,NOSΔ11,female,4
-2026-01-19,NOSΔ11,male,8
-2026-01-19,NOSΔ23,female,3
-2026-01-19,NOSΔ23,male,3
-2026-01-19,wild type,female,13
-2026-01-19,wild type,male,14
-2026-01-20,NOSΔ11,female,6
-2026-01-20,NOSΔ11,male,7
-2026-01-20,NOSΔ23,female,3
-2026-01-20,NOSΔ23,male,3
-2026-01-20,wild type,female,15
-2026-01-20,wild type,male,8
-2026-01-21,NOSΔ11,female,2
-2026-01-21,NOSΔ11,male,9
-2026-01-21,NOSΔ23,female,1
-2026-01-21,NOSΔ23,male,2
-2026-01-21,wild type,female,18
-2026-01-21,wild type,male,19
-2026-01-22,NOSΔ11,female,3
-2026-01-22,NOSΔ11,male,2
-2026-01-22,NOSΔ23,female,3
-2026-01-22,NOSΔ23,male,2
-2026-01-22,wild type,female,17
-2026-01-22,wild type,male,8
-2026-01-23,NOSΔ11,female,2
-2026-01-23,NOSΔ11,male,2
-2026-01-23,NOSΔ23,female,5
-2026-01-23,NOSΔ23,male,1
-2026-01-23,wild type,female,17
-2026-01-23,wild type,male,13
-2026-01-24,NOSΔ11,female,4
-2026-01-24,NOSΔ11,male,3
-2026-01-24,NOSΔ23,female,4
-2026-01-24,NOSΔ23,male,1
-2026-01-24,wild type,female,10
-2026-01-24,wild type,male,9
-2026-01-25,NOSΔ11,female,1
-2026-01-25,NOSΔ11,male,1
-2026-01-25,NOSΔ23,female,2
-2026-01-25,NOSΔ23,male,2
-2026-01-25,wild type,female,10
-2026-01-25,wild type,male,8
-2026-01-26,NOSΔ11,female,3
-2026-01-26,NOSΔ11,male,5
-2026-01-26,NOSΔ23,female,5
-2026-01-26,NOSΔ23,male,3
-2026-01-26,wild type,female,19
-2026-01-26,wild type,male,15
-2026-01-27,NOSΔ11,female,3
-2026-01-27,NOSΔ11,male,2
-2026-01-27,NOSΔ23,female,4
-2026-01-27,NOSΔ23,male,7
-2026-01-27,wild type,female,11
-2026-01-27,wild type,male,11
-2026-01-28,NOSΔ11,female,7
-2026-01-28,NOSΔ11,male,1
-2026-01-28,NOSΔ23,female,3
-2026-01-28,NOSΔ23,male,1
-2026-01-28,wild type,female,6
-2026-01-28,wild type,male,2
-2026-01-29,NOSΔ11,female,1
-2026-01-29,NOSΔ11,male,2
-2026-01-29,NOSΔ23,female,2
-2026-01-29,NOSΔ23,male,0
-2026-01-29,wild type,female,2
-2026-01-29,wild type,male,4
-2026-01-30,NOSΔ11,female,1
-2026-01-30,NOSΔ11,male,0
-2026-01-30,NOSΔ23,female,0
-2026-01-30,NOSΔ23,male,0
-2026-01-30,wild type,female,0
-2026-01-30,wild type,male,1
-2026-01-31,NOSΔ11,female,1
-2026-01-31,NOSΔ11,male,2
-2026-01-31,NOSΔ23,female,0
-2026-01-31,NOSΔ23,male,0
-2026-01-31,wild type,female,0
-2026-01-31,wild type,male,1
-2026-02-01,NOSΔ11,female,0
-2026-02-01,NOSΔ11,male,1
-2026-02-01,NOSΔ23,female,0
-2026-02-01,NOSΔ23,male,1
-2026-02-01,wild type,female,0
-2026-02-01,wild type,male,0
-2026-02-02,NOSΔ11,female,1
-2026-02-02,NOSΔ11,male,0
-2026-02-02,NOSΔ23,female,0
-2026-02-02,NOSΔ23,male,0
-2026-02-02,wild type,female,1
-2026-02-02,wild type,male,0
-2026-02-03,NOSΔ11,female,0
-2026-02-03,NOSΔ11,male,0
-2026-02-03,NOSΔ23,female,0
-2026-02-03,NOSΔ23,male,0
-2026-02-03,wild type,female,0
-2026-02-03,wild type,male,0
-2026-02-04,NOSΔ11,female,0
-2026-02-04,NOSΔ11,male,0
-2026-02-04,NOSΔ23,female,0
-2026-02-04,NOSΔ23,male,0
-2026-02-04,wild type,female,0
-2026-02-04,wild type,male,0
-2026-02-05,NOSΔ11,female,0
-2026-02-05,NOSΔ11,male,0
-2026-02-05,NOSΔ23,female,0
-2026-02-05,NOSΔ23,male,0
-2026-02-05,wild type,female,0
-2026-02-05,wild type,male,0
-2026-02-06,NOSΔ11,female,0
-2026-02-06,NOSΔ11,male,0
-2026-02-06,NOSΔ23,female,0
-2026-02-06,NOSΔ23,male,0
-2026-02-06,wild type,female,0
-2026-02-06,wild type,male,1
-2026-02-07,NOSΔ11,female,1
-2026-02-07,NOSΔ11,male,0
-2026-02-07,NOSΔ23,female,0
-2026-02-07,NOSΔ23,male,0
-2026-02-07,wild type,female,1
-2026-02-07,wild type,male,2
-2026-02-08,NOSΔ11,female,0
-2026-02-08,NOSΔ11,male,0
-2026-02-08,NOSΔ23,female,0
-2026-02-08,NOSΔ23,male,0
-2026-02-08,wild type,female,0
-2026-02-08,wild type,male,0
-2026-02-09,NOSΔ11,female,3
-2026-02-09,NOSΔ11,male,3
-2026-02-09,NOSΔ23,female,0
-2026-02-09,NOSΔ23,male,0
-2026-02-09,wild type,female,2
-2026-02-09,wild type,male,1
-2026-02-10,NOSΔ11,female,2
-2026-02-10,NOSΔ11,male,1
-2026-02-10,NOSΔ23,female,3
-2026-02-10,NOSΔ23,male,0
-2026-02-10,wild type,female,4
-2026-02-10,wild type,male,6
-2026-02-11,NOSΔ11,female,2
-2026-02-11,NOSΔ11,male,3
-2026-02-11,NOSΔ23,female,0
-2026-02-11,NOSΔ23,male,0
-2026-02-11,wild type,female,6
-2026-02-11,wild type,male,5
-2026-02-12,NOSΔ11,female,3
-2026-02-12,NOSΔ11,male,2
-2026-02-12,NOSΔ23,female,2
-2026-02-12,NOSΔ23,male,3
-2026-02-12,wild type,female,8
-2026-02-12,wild type,male,11
-2026-02-13,NOSΔ11,female,3
-2026-02-13,NOSΔ11,male,1
-2026-02-13,NOSΔ23,female,2
-2026-02-13,NOSΔ23,male,1
-2026-02-13,wild type,female,13
-2026-02-13,wild type,male,13
-2026-02-14,NOSΔ11,female,0
-2026-02-14,NOSΔ11,male,1
-2026-02-14,NOSΔ23,female,0
-2026-02-14,NOSΔ23,male,0
-2026-02-14,wild type,female,3
-2026-02-14,wild type,male,8
-2026-02-15,NOSΔ11,female,0
-2026-02-15,NOSΔ11,male,0
-2026-02-15,NOSΔ23,female,2
-2026-02-15,NOSΔ23,male,1
-2026-02-15,wild type,female,2
-2026-02-15,wild type,male,13
-2026-02-16,NOSΔ11,female,6
-2026-02-16,NOSΔ11,male,7
-2026-02-16,NOSΔ23,female,4
-2026-02-16,NOSΔ23,male,7
-2026-02-16,wild type,female,6
-2026-02-16,wild type,male,14
-2026-02-17,NOSΔ11,female,1
-2026-02-17,NOSΔ11,male,2
-2026-02-17,NOSΔ23,female,6
-2026-02-17,NOSΔ23,male,3
-2026-02-17,wild type,female,6
-2026-02-17,wild type,male,10
-2026-02-18,NOSΔ11,female,1
-2026-02-18,NOSΔ11,male,0
-2026-02-18,NOSΔ23,female,2
-2026-02-18,NOSΔ23,male,1
-2026-02-18,wild type,female,4
-2026-02-18,wild type,male,11
-2026-02-19,NOSΔ11,female,4
-2026-02-19,NOSΔ11,male,9
-2026-02-19,NOSΔ23,female,15
-2026-02-19,NOSΔ23,male,11
-2026-02-19,wild type,female,22
-2026-02-19,wild type,male,12
-2026-02-20,NOSΔ11,female,6
-2026-02-20,NOSΔ11,male,4
-2026-02-20,NOSΔ23,female,2
-2026-02-20,NOSΔ23,male,3
-2026-02-20,wild type,female,12
-2026-02-20,wild type,male,19
-2026-02-21,NOSΔ11,female,2
-2026-02-21,NOSΔ11,male,5
-2026-02-21,NOSΔ23,female,2
-2026-02-21,NOSΔ23,male,1
-2026-02-21,wild type,female,10
-2026-02-21,wild type,male,11
-2026-02-22,NOSΔ11,female,1
-2026-02-22,NOSΔ11,male,2
-2026-02-22,NOSΔ23,female,8
-2026-02-22,NOSΔ23,male,3
-2026-02-22,wild type,female,14
-2026-02-22,wild type,male,19
-2026-02-23,NOSΔ11,female,6
-2026-02-23,NOSΔ11,male,5
-2026-02-23,NOSΔ23,female,12
-2026-02-23,NOSΔ23,male,5
-2026-02-23,wild type,female,31
-2026-02-23,wild type,male,25
-2026-02-24,NOSΔ11,female,2
-2026-02-24,NOSΔ11,male,4
-2026-02-24,NOSΔ23,female,6
-2026-02-24,NOSΔ23,male,6
-2026-02-24,wild type,female,9
-2026-02-24,wild type,male,13
-2026-02-25,NOSΔ11,female,5
-2026-02-25,NOSΔ11,male,4
-2026-02-25,NOSΔ23,female,9
-2026-02-25,NOSΔ23,male,7
-2026-02-25,wild type,female,19
-2026-02-25,wild type,male,14
-2026-02-26,NOSΔ11,female,1
-2026-02-26,NOSΔ11,male,2
-2026-02-26,NOSΔ23,female,10
-2026-02-26,NOSΔ23,male,4
-2026-02-26,wild type,female,9
-2026-02-26,wild type,male,8
-2026-02-27,NOSΔ11,female,0
-2026-02-27,NOSΔ11,male,0
-2026-02-27,NOSΔ23,female,0
-2026-02-27,NOSΔ23,male,0
-2026-02-27,wild type,female,0
-2026-02-27,wild type,male,4
-2026-02-28,NOSΔ11,female,1
-2026-02-28,NOSΔ11,male,1
-2026-02-28,NOSΔ23,female,1
-2026-02-28,NOSΔ23,male,2
-2026-02-28,wild type,female,2
-2026-02-28,wild type,male,1
-2026-03-01,NOSΔ11,female,0
-2026-03-01,NOSΔ11,male,0
-2026-03-01,NOSΔ23,female,0
-2026-03-01,NOSΔ23,male,1
-2026-03-01,wild type,female,0
-2026-03-01,wild type,male,0
-2026-03-02,NOSΔ11,female,0
-2026-03-02,NOSΔ11,male,0
-2026-03-02,NOSΔ23,female,1
-2026-03-02,NOSΔ23,male,1
-2026-03-02,wild type,female,0
-2026-03-02,wild type,male,0
-2026-03-03,NOSΔ11,female,0
-2026-03-03,NOSΔ11,male,1
-2026-03-03,NOSΔ23,female,1
-2026-03-03,NOSΔ23,male,0
-2026-03-03,wild type,female,0
-2026-03-03,wild type,male,0
-2026-03-04,NOSΔ11,female,0
-2026-03-04,NOSΔ11,male,0
-2026-03-04,NOSΔ23,female,0
-2026-03-04,NOSΔ23,male,0
-2026-03-04,wild type,female,0
-2026-03-04,wild type,male,0
-2026-03-05,NOSΔ11,female,1
-2026-03-05,NOSΔ11,male,0
-2026-03-05,NOSΔ23,female,0
-2026-03-05,NOSΔ23,male,0
-2026-03-05,wild type,female,0
-2026-03-05,wild type,male,0
-2026-03-06,NOSΔ11,female,0
-2026-03-06,NOSΔ11,male,0
-2026-03-06,NOSΔ23,female,0
-2026-03-06,NOSΔ23,male,0
-2026-03-06,wild type,female,0
-2026-03-06,wild type,male,1
-2026-03-07,NOSΔ11,female,0
-2026-03-07,NOSΔ11,male,0
-2026-03-07,NOSΔ23,female,0
-2026-03-07,NOSΔ23,male,0
-2026-03-07,wild type,female,0
-2026-03-07,wild type,male,0
-2026-03-08,NOSΔ11,female,0
-2026-03-08,NOSΔ11,male,0
-2026-03-08,NOSΔ23,female,0
-2026-03-08,NOSΔ23,male,0
-2026-03-08,wild type,female,0
-2026-03-08,wild type,male,0
-2026-03-09,NOSΔ11,female,7
-2026-03-09,NOSΔ11,male,3
-2026-03-09,NOSΔ23,female,0
-2026-03-09,NOSΔ23,male,0
-2026-03-09,wild type,female,1
-2026-03-09,wild type,male,3
-2026-03-10,NOSΔ11,female,9
-2026-03-10,NOSΔ11,male,7
-2026-03-10,NOSΔ23,female,2
-2026-03-10,NOSΔ23,male,5
-2026-03-10,wild type,female,5
-2026-03-10,wild type,male,3
-2026-03-11,NOSΔ11,female,1
-2026-03-11,NOSΔ11,male,2
-2026-03-11,NOSΔ23,female,5
-2026-03-11,NOSΔ23,male,1
-2026-03-11,wild type,female,6
-2026-03-11,wild type,male,15
-2026-03-12,NOSΔ11,female,10
-2026-03-12,NOSΔ11,male,7
-2026-03-12,NOSΔ23,female,12
-2026-03-12,NOSΔ23,male,2
-2026-03-12,wild type,female,25
-2026-03-12,wild type,male,32
-2026-03-13,NOSΔ11,female,1
-2026-03-13,NOSΔ11,male,2
-2026-03-13,NOSΔ23,female,4
-2026-03-13,NOSΔ23,male,12
-2026-03-13,wild type,female,21
-2026-03-13,wild type,male,24
-2026-03-14,NOSΔ11,female,5
-2026-03-14,NOSΔ11,male,1
-2026-03-14,NOSΔ23,female,3
-2026-03-14,NOSΔ23,male,3
-2026-03-14,wild type,female,10
-2026-03-14,wild type,male,16
-2026-03-15,NOSΔ11,female,1
-2026-03-15,NOSΔ11,male,2
-2026-03-15,NOSΔ23,female,7
-2026-03-15,NOSΔ23,male,4
-2026-03-15,wild type,female,5
-2026-03-15,wild type,male,14
-2026-03-16,NOSΔ11,female,6
-2026-03-16,NOSΔ11,male,8
-2026-03-16,NOSΔ23,female,10
-2026-03-16,NOSΔ23,male,6
-2026-03-16,wild type,female,15
-2026-03-16,wild type,male,15
-2026-03-17,NOSΔ11,female,1
-2026-03-17,NOSΔ11,male,1
-2026-03-17,NOSΔ23,female,5
-2026-03-17,NOSΔ23,male,6
-2026-03-17,wild type,female,8
-2026-03-17,wild type,male,21
-2026-03-18,NOSΔ11,female,9
-2026-03-18,NOSΔ11,male,3
-2026-03-18,NOSΔ23,female,6
-2026-03-18,NOSΔ23,male,7
-2026-03-18,wild type,female,25
-2026-03-18,wild type,male,18
-2026-03-19,NOSΔ11,female,3
-2026-03-19,NOSΔ11,male,8
-2026-03-19,NOSΔ23,female,7
-2026-03-19,NOSΔ23,male,10
-2026-03-19,wild type,female,20
-2026-03-19,wild type,male,16
-2026-03-20,NOSΔ11,female,0
-2026-03-20,NOSΔ11,male,5
-2026-03-20,NOSΔ23,female,5
-2026-03-20,NOSΔ23,male,7
-2026-03-20,wild type,female,11
-2026-03-20,wild type,male,10
-2026-03-21,NOSΔ11,female,1
-2026-03-21,NOSΔ11,male,3
-2026-03-21,NOSΔ23,female,6
-2026-03-21,NOSΔ23,male,2
-2026-03-21,wild type,female,8
-2026-03-21,wild type,male,9
-2026-03-22,NOSΔ11,female,3
-2026-03-22,NOSΔ11,male,6
-2026-03-22,NOSΔ23,female,4
-2026-03-22,NOSΔ23,male,3
-2026-03-22,wild type,female,8
-2026-03-22,wild type,male,17
-2026-03-23,NOSΔ11,female,4
-2026-03-23,NOSΔ11,male,3
-2026-03-23,NOSΔ23,female,3
-2026-03-23,NOSΔ23,male,3
-2026-03-23,wild type,female,22
-2026-03-23,wild type,male,18
-2026-03-24,NOSΔ11,female,3
-2026-03-24,NOSΔ11,male,8
-2026-03-24,NOSΔ23,female,10
-2026-03-24,NOSΔ23,male,15
-2026-03-24,wild type,female,21
-2026-03-24,wild type,male,18
-2026-03-25,NOSΔ11,female,2
-2026-03-25,NOSΔ11,male,1
-2026-03-25,NOSΔ23,female,5
-2026-03-25,NOSΔ23,male,4
-2026-03-25,wild type,female,21
-2026-03-25,wild type,male,22
-2026-03-26,NOSΔ11,female,2
-2026-03-26,NOSΔ11,male,2
-2026-03-26,NOSΔ23,female,10
-2026-03-26,NOSΔ23,male,5
-2026-03-26,wild type,female,13
-2026-03-26,wild type,male,10
-2026-03-27,NOSΔ11,female,1
-2026-03-27,NOSΔ11,male,1
-2026-03-27,NOSΔ23,female,7
-2026-03-27,NOSΔ23,male,8
-2026-03-27,wild type,female,12
-2026-03-27,wild type,male,4
-2026-03-28,NOSΔ11,female,1
-2026-03-28,NOSΔ11,male,2
-2026-03-28,NOSΔ23,female,10
-2026-03-28,NOSΔ23,male,3
-2026-03-28,wild type,female,5
-2026-03-28,wild type,male,6
-2026-03-29,NOSΔ11,female,2
-2026-03-29,NOSΔ11,male,1
-2026-03-29,NOSΔ23,female,2
-2026-03-29,NOSΔ23,male,3
-2026-03-29,wild type,female,1
-2026-03-29,wild type,male,8
-2026-03-30,NOSΔ11,female,1
-2026-03-30,NOSΔ11,male,1
-2026-03-30,NOSΔ23,female,3
-2026-03-30,NOSΔ23,male,4
-2026-03-30,wild type,female,2
-2026-03-30,wild type,male,0
-2026-03-31,NOSΔ11,female,0
-2026-03-31,NOSΔ11,male,2
-2026-03-31,NOSΔ23,female,0
-2026-03-31,NOSΔ23,male,0
-2026-03-31,wild type,female,0
-2026-03-31,wild type,male,0
-2026-04-01,NOSΔ11,female,0
-2026-04-01,NOSΔ11,male,0
-2026-04-01,NOSΔ23,female,0
-2026-04-01,NOSΔ23,male,0
-2026-04-01,wild type,female,1
-2026-04-01,wild type,male,0
-2026-04-02,NOSΔ11,female,0
-2026-04-02,NOSΔ11,male,0
-2026-04-02,NOSΔ23,female,1
-2026-04-02,NOSΔ23,male,1
-2026-04-02,wild type,female,0
-2026-04-02,wild type,male,0
-2026-04-03,NOSΔ11,female,0
-2026-04-03,NOSΔ11,male,0
-2026-04-03,NOSΔ23,female,0
-2026-04-03,NOSΔ23,male,0
-2026-04-03,wild type,female,0
-2026-04-03,wild type,male,0
-2026-04-04,NOSΔ11,female,0
-2026-04-04,NOSΔ11,male,0
-2026-04-04,NOSΔ23,female,0
-2026-04-04,NOSΔ23,male,0
-2026-04-04,wild type,female,0
-2026-04-04,wild type,male,0
-2026-04-05,NOSΔ11,female,0
-2026-04-05,NOSΔ11,male,0
-2026-04-05,NOSΔ23,female,0
-2026-04-05,NOSΔ23,male,0
-2026-04-05,wild type,female,0
-2026-04-05,wild type,male,0
-2026-04-06,NOSΔ11,female,0
-2026-04-06,NOSΔ11,male,0
-2026-04-06,NOSΔ23,female,0
-2026-04-06,NOSΔ23,male,0
-2026-04-06,wild type,female,1
-2026-04-06,wild type,male,0
-2026-04-07,NOSΔ11,female,0
-2026-04-07,NOSΔ11,male,0
-2026-04-07,NOSΔ23,female,1
-2026-04-07,NOSΔ23,male,0
-2026-04-07,wild type,female,2
-2026-04-07,wild type,male,2
-2026-04-08,NOSΔ11,female,4
-2026-04-08,NOSΔ11,male,0
-2026-04-08,NOSΔ23,female,0
-2026-04-08,NOSΔ23,male,0
-2026-04-08,wild type,female,5
-2026-04-08,wild type,male,8
-2026-04-09,NOSΔ11,female,1
-2026-04-09,NOSΔ11,male,1
-2026-04-09,NOSΔ23,female,3
-2026-04-09,NOSΔ23,male,1
-2026-04-09,wild type,female,9
-2026-04-09,wild type,male,5
-2026-04-10,NOSΔ11,female,1
-2026-04-10,NOSΔ11,male,1
-2026-04-10,NOSΔ23,female,5
-2026-04-10,NOSΔ23,male,4
-2026-04-10,wild type,female,14
-2026-04-10,wild type,male,11
-2026-04-11,NOSΔ11,female,2
-2026-04-11,NOSΔ11,male,4
-2026-04-11,NOSΔ23,female,5
-2026-04-11,NOSΔ23,male,9
-2026-04-11,wild type,female,7
-2026-04-11,wild type,male,8
-2026-04-12,NOSΔ11,female,3
-2026-04-12,NOSΔ11,male,0
-2026-04-12,NOSΔ23,female,7
-2026-04-12,NOSΔ23,male,2
-2026-04-12,wild type,female,5
-2026-04-12,wild type,male,11
-2026-04-13,NOSΔ11,female,5
-2026-04-13,NOSΔ11,male,1
-2026-04-13,NOSΔ23,female,11
-2026-04-13,NOSΔ23,male,4
-2026-04-13,wild type,female,18
-2026-04-13,wild type,male,7
-2026-04-14,NOSΔ11,female,0
-2026-04-14,NOSΔ11,male,0
-2026-04-14,NOSΔ23,female,5
-2026-04-14,NOSΔ23,male,10
-2026-04-14,wild type,female,13
-2026-04-14,wild type,male,14
-2026-04-15,NOSΔ11,female,1
-2026-04-15,NOSΔ11,male,2
-2026-04-15,NOSΔ23,female,7
-2026-04-15,NOSΔ23,male,6
-2026-04-15,wild type,female,13
-2026-04-15,wild type,male,25
-2026-04-16,NOSΔ11,female,2
-2026-04-16,NOSΔ11,male,4
-2026-04-16,NOSΔ23,female,8
-2026-04-16,NOSΔ23,male,9
-2026-04-16,wild type,female,17
-2026-04-16,wild type,male,13
-2026-04-17,NOSΔ11,female,3
-2026-04-17,NOSΔ11,male,4
-2026-04-17,NOSΔ23,female,7
-2026-04-17,NOSΔ23,male,8
-2026-04-17,wild type,female,13
-2026-04-17,wild type,male,7
-2026-04-18,NOSΔ11,female,1
-2026-04-18,NOSΔ11,male,2
-2026-04-18,NOSΔ23,female,3
-2026-04-18,NOSΔ23,male,0
-2026-04-18,wild type,female,9
-2026-04-18,wild type,male,6
-2026-04-19,NOSΔ11,female,1
-2026-04-19,NOSΔ11,male,3
-2026-04-19,NOSΔ23,female,3
-2026-04-19,NOSΔ23,male,3
-2026-04-19,wild type,female,9
-2026-04-19,wild type,male,4
-2026-04-20,NOSΔ11,female,3
-2026-04-20,NOSΔ11,male,5
-2026-04-20,NOSΔ23,female,17
-2026-04-20,NOSΔ23,male,9
-2026-04-20,wild type,female,17
-2026-04-20,wild type,male,7
-2026-04-21,NOSΔ11,female,2
-2026-04-21,NOSΔ11,male,2
-2026-04-21,NOSΔ23,female,3
-2026-04-21,NOSΔ23,male,4
-2026-04-21,wild type,female,7
-2026-04-21,wild type,male,14
-2026-04-22,NOSΔ11,female,3
-2026-04-22,NOSΔ11,male,6
-2026-04-22,NOSΔ23,female,7
-2026-04-22,NOSΔ23,male,5
-2026-04-22,wild type,female,12
-2026-04-22,wild type,male,16
-2026-04-23,NOSΔ11,female,4
-2026-04-23,NOSΔ11,male,6
-2026-04-23,NOSΔ23,female,7
-2026-04-23,NOSΔ23,male,13
-2026-04-23,wild type,female,14
-2026-04-23,wild type,male,10
-2026-04-24,NOSΔ11,female,2
-2026-04-24,NOSΔ11,male,2
-2026-04-24,NOSΔ23,female,7
-2026-04-24,NOSΔ23,male,2
-2026-04-24,wild type,female,10
-2026-04-24,wild type,male,9
-2026-04-25,NOSΔ11,female,1
-2026-04-25,NOSΔ11,male,0
-2026-04-25,NOSΔ23,female,2
-2026-04-25,NOSΔ23,male,4
-2026-04-25,wild type,female,5
-2026-04-25,wild type,male,3
-2026-04-26,NOSΔ11,female,1
-2026-04-26,NOSΔ11,male,0
-2026-04-26,NOSΔ23,female,3
-2026-04-26,NOSΔ23,male,1
-2026-04-26,wild type,female,3
-2026-04-26,wild type,male,4
-2026-04-27,NOSΔ11,female,3
-2026-04-27,NOSΔ11,male,3
-2026-04-27,NOSΔ23,female,6
-2026-04-27,NOSΔ23,male,10
-2026-04-27,wild type,female,3
-2026-04-27,wild type,male,3
-2026-04-28,NOSΔ11,female,0
-2026-04-28,NOSΔ11,male,2
-2026-04-28,NOSΔ23,female,2
-2026-04-28,NOSΔ23,male,1
-2026-04-28,wild type,female,0
-2026-04-28,wild type,male,1
-2026-04-29,NOSΔ11,female,0
-2026-04-29,NOSΔ11,male,1
-2026-04-29,NOSΔ23,female,1
-2026-04-29,NOSΔ23,male,1
-2026-04-29,wild type,female,0
-2026-04-29,wild type,male,0
-2026-04-30,NOSΔ11,female,0
-2026-04-30,NOSΔ11,male,0
-2026-04-30,NOSΔ23,female,0
-2026-04-30,NOSΔ23,male,2
-2026-04-30,wild type,female,3
-2026-04-30,wild type,male,2
-2026-05-01,NOSΔ11,female,0
-2026-05-01,NOSΔ11,male,0
-2026-05-01,NOSΔ23,female,2
-2026-05-01,NOSΔ23,male,2
-2026-05-01,wild type,female,0
-2026-05-01,wild type,male,0
-2026-05-02,NOSΔ11,female,0
-2026-05-02,NOSΔ11,male,0
-2026-05-02,NOSΔ23,female,0
-2026-05-02,NOSΔ23,male,0
-2026-05-02,wild type,female,0
-2026-05-02,wild type,male,0
-2026-05-03,NOSΔ11,female,0
-2026-05-03,NOSΔ11,male,0
-2026-05-03,NOSΔ23,female,0
-2026-05-03,NOSΔ23,male,0
-2026-05-03,wild type,female,0
-2026-05-03,wild type,male,0
-2026-05-04,NOSΔ11,female,0
-2026-05-04,NOSΔ11,male,0
-2026-05-04,NOSΔ23,female,0
-2026-05-04,NOSΔ23,male,0
-2026-05-04,wild type,female,0
-2026-05-04,wild type,male,0
-2026-05-05,NOSΔ11,female,0
-2026-05-05,NOSΔ11,male,1
-2026-05-05,NOSΔ23,female,0
-2026-05-05,NOSΔ23,male,0
-2026-05-05,wild type,female,0
-2026-05-05,wild type,male,0
-2026-05-06,NOSΔ11,female,0
-2026-05-06,NOSΔ11,male,2
-2026-05-06,NOSΔ23,female,1
-2026-05-06,NOSΔ23,male,0
-2026-05-06,wild type,female,1
-2026-05-06,wild type,male,0
-2026-05-07,NOSΔ11,female,3
-2026-05-07,NOSΔ11,male,0
-2026-05-07,NOSΔ23,female,1
-2026-05-07,NOSΔ23,male,0
-2026-05-07,wild type,female,2
-2026-05-07,wild type,male,1
-2026-05-08,NOSΔ11,female,3
-2026-05-08,NOSΔ11,male,4
-2026-05-08,NOSΔ23,female,0
-2026-05-08,NOSΔ23,male,0
-2026-05-08,wild type,female,4
-2026-05-08,wild type,male,2
-2026-05-09,NOSΔ11,female,3
-2026-05-09,NOSΔ11,male,2
-2026-05-09,NOSΔ23,female,0
-2026-05-09,NOSΔ23,male,0
-2026-05-09,wild type,female,8
-2026-05-09,wild type,male,2
-2026-05-10,NOSΔ11,female,1
-2026-05-10,NOSΔ11,male,1
-2026-05-10,NOSΔ23,female,10
-2026-05-10,NOSΔ23,male,3
-2026-05-10,wild type,female,4
-2026-05-10,wild type,male,3
-2026-05-11,NOSΔ11,female,3
-2026-05-11,NOSΔ11,male,5
-2026-05-11,NOSΔ23,female,7
-2026-05-11,NOSΔ23,male,4
-2026-05-11,wild type,female,14
-2026-05-11,wild type,male,10
-2026-05-12,NOSΔ11,female,5
-2026-05-12,NOSΔ11,male,7
-2026-05-12,NOSΔ23,female,9
-2026-05-12,NOSΔ23,male,9
-2026-05-12,wild type,female,9
-2026-05-12,wild type,male,15
-2026-05-13,NOSΔ11,female,4
-2026-05-13,NOSΔ11,male,10
-2026-05-13,NOSΔ23,female,11
-2026-05-13,NOSΔ23,male,8
-2026-05-13,wild type,female,11
-2026-05-13,wild type,male,14
-2026-05-14,NOSΔ11,female,3
-2026-05-14,NOSΔ11,male,1
-2026-05-14,NOSΔ23,female,9
-2026-05-14,NOSΔ23,male,6
-2026-05-14,wild type,female,6
-2026-05-14,wild type,male,7
-2026-05-15,NOSΔ11,female,3
-2026-05-15,NOSΔ11,male,7
-2026-05-15,NOSΔ23,female,11
-2026-05-15,NOSΔ23,male,9
-2026-05-15,wild type,female,8
-2026-05-15,wild type,male,13
-2026-05-16,NOSΔ11,female,2
-2026-05-16,NOSΔ11,male,4
-2026-05-16,NOSΔ23,female,5
-2026-05-16,NOSΔ23,male,4
-2026-05-16,wild type,female,7
-2026-05-16,wild type,male,4
-2026-05-17,NOSΔ11,female,1
-2026-05-17,NOSΔ11,male,1
-2026-05-17,NOSΔ23,female,6
-2026-05-17,NOSΔ23,male,1
-2026-05-17,wild type,female,5
-2026-05-17,wild type,male,4
-2026-05-18,NOSΔ11,female,4
-2026-05-18,NOSΔ11,male,5
-2026-05-18,NOSΔ23,female,13
-2026-05-18,NOSΔ23,male,11
-2026-05-18,wild type,female,6
-2026-05-18,wild type,male,5
-2026-05-19,NOSΔ11,female,1
-2026-05-19,NOSΔ11,male,5
-2026-05-19,NOSΔ23,female,9
-2026-05-19,NOSΔ23,male,3
-2026-05-19,wild type,female,12
-2026-05-19,wild type,male,10
-2026-05-20,NOSΔ11,female,11
-2026-05-20,NOSΔ11,male,9
-2026-05-20,NOSΔ23,female,5
-2026-05-20,NOSΔ23,male,6
-2026-05-20,wild type,female,11
-2026-05-20,wild type,male,16
-2026-05-21,NOSΔ11,female,11
-2026-05-21,NOSΔ11,male,10
-2026-05-21,NOSΔ23,female,7
-2026-05-21,NOSΔ23,male,11
-2026-05-21,wild type,female,16
-2026-05-21,wild type,male,11
-2026-05-22,NOSΔ11,female,3
-2026-05-22,NOSΔ11,male,5
-2026-05-22,NOSΔ23,female,8
-2026-05-22,NOSΔ23,male,14
-2026-05-22,wild type,female,13
-2026-05-22,wild type,male,19
-2026-05-23,NOSΔ11,female,3
-2026-05-23,NOSΔ11,male,4
-2026-05-23,NOSΔ23,female,5
-2026-05-23,NOSΔ23,male,5
-2026-05-23,wild type,female,15
-2026-05-23,wild type,male,9
-2026-05-24,NOSΔ11,female,2
-2026-05-24,NOSΔ11,male,3
-2026-05-24,NOSΔ23,female,4
-2026-05-24,NOSΔ23,male,11
-2026-05-24,wild type,female,8
-2026-05-24,wild type,male,7
-2026-05-25,NOSΔ11,female,6
-2026-05-25,NOSΔ11,male,6
-2026-05-25,NOSΔ23,female,4
-2026-05-25,NOSΔ23,male,8
-2026-05-25,wild type,female,10
-2026-05-25,wild type,male,5
-2026-05-26,NOSΔ11,female,5
-2026-05-26,NOSΔ11,male,5
-2026-05-26,NOSΔ23,female,5
-2026-05-26,NOSΔ23,male,12
-2026-05-26,wild type,female,6
-2026-05-26,wild type,male,3
-2026-05-27,NOSΔ11,female,1
-2026-05-27,NOSΔ11,male,5
-2026-05-27,NOSΔ23,female,2
-2026-05-27,NOSΔ23,male,5
-2026-05-27,wild type,female,6
-2026-05-27,wild type,male,1
-2026-05-28,NOSΔ11,female,1
-2026-05-28,NOSΔ11,male,1
-2026-05-28,NOSΔ23,female,1
-2026-05-28,NOSΔ23,male,1
-2026-05-28,wild type,female,1
-2026-05-28,wild type,male,1
-2026-05-29,NOSΔ11,female,1
-2026-05-29,NOSΔ11,male,0
-2026-05-29,NOSΔ23,female,0
-2026-05-29,NOSΔ23,male,2
-2026-05-29,wild type,female,0
-2026-05-29,wild type,male,0
-2026-05-30,NOSΔ11,female,0
-2026-05-30,NOSΔ11,male,1
-2026-05-30,NOSΔ23,female,0
-2026-05-30,NOSΔ23,male,0
-2026-05-30,wild type,female,1
-2026-05-30,wild type,male,0
-2026-05-31,NOSΔ11,female,0
-2026-05-31,NOSΔ11,male,0
-2026-05-31,NOSΔ23,female,0
-2026-05-31,NOSΔ23,male,0
-2026-05-31,wild type,female,1
-2026-05-31,wild type,male,0
+date,moon,genotype,sex,mature_worms
+2025-05-01,0,NOSΔ11,female,2
+2025-05-01,0,NOSΔ11,male,1
+2025-05-01,0,NOSΔ23,female,1
+2025-05-01,0,NOSΔ23,male,5
+2025-05-01,0,wild type,female,6
+2025-05-01,0,wild type,male,16
+2025-05-02,0,NOSΔ11,female,3
+2025-05-02,0,NOSΔ11,male,1
+2025-05-02,0,NOSΔ23,female,6
+2025-05-02,0,NOSΔ23,male,2
+2025-05-02,0,wild type,female,12
+2025-05-02,0,wild type,male,19
+2025-05-03,0,NOSΔ11,female,1
+2025-05-03,0,NOSΔ11,male,0
+2025-05-03,0,NOSΔ23,female,0
+2025-05-03,0,NOSΔ23,male,2
+2025-05-03,0,wild type,female,5
+2025-05-03,0,wild type,male,6
+2025-05-04,0,NOSΔ11,female,1
+2025-05-04,0,NOSΔ11,male,0
+2025-05-04,0,NOSΔ23,female,1
+2025-05-04,0,NOSΔ23,male,2
+2025-05-04,0,wild type,female,5
+2025-05-04,0,wild type,male,8
+2025-05-05,0,NOSΔ11,female,4
+2025-05-05,0,NOSΔ11,male,5
+2025-05-05,0,NOSΔ23,female,4
+2025-05-05,0,NOSΔ23,male,2
+2025-05-05,0,wild type,female,26
+2025-05-05,0,wild type,male,15
+2025-05-06,0,NOSΔ11,female,6
+2025-05-06,0,NOSΔ11,male,6
+2025-05-06,0,NOSΔ23,female,4
+2025-05-06,0,NOSΔ23,male,3
+2025-05-06,0,wild type,female,14
+2025-05-06,0,wild type,male,19
+2025-05-07,0,NOSΔ11,female,0
+2025-05-07,0,NOSΔ11,male,4
+2025-05-07,0,NOSΔ23,female,0
+2025-05-07,0,NOSΔ23,male,0
+2025-05-07,0,wild type,female,13
+2025-05-07,0,wild type,male,8
+2025-05-08,0,NOSΔ11,female,1
+2025-05-08,0,NOSΔ11,male,2
+2025-05-08,0,NOSΔ23,female,1
+2025-05-08,0,NOSΔ23,male,0
+2025-05-08,0,wild type,female,6
+2025-05-08,0,wild type,male,5
+2025-05-09,1,NOSΔ11,female,1
+2025-05-09,1,NOSΔ11,male,2
+2025-05-09,1,NOSΔ23,female,2
+2025-05-09,1,NOSΔ23,male,0
+2025-05-09,1,wild type,female,5
+2025-05-09,1,wild type,male,1
+2025-05-10,1,NOSΔ11,female,0
+2025-05-10,1,NOSΔ11,male,0
+2025-05-10,1,NOSΔ23,female,0
+2025-05-10,1,NOSΔ23,male,0
+2025-05-10,1,wild type,female,0
+2025-05-10,1,wild type,male,0
+2025-05-11,1,NOSΔ11,female,0
+2025-05-11,1,NOSΔ11,male,0
+2025-05-11,1,NOSΔ23,female,0
+2025-05-11,1,NOSΔ23,male,0
+2025-05-11,1,wild type,female,0
+2025-05-11,1,wild type,male,3
+2025-05-12,1,NOSΔ11,female,0
+2025-05-12,1,NOSΔ11,male,0
+2025-05-12,1,NOSΔ23,female,0
+2025-05-12,1,NOSΔ23,male,0
+2025-05-12,1,wild type,female,0
+2025-05-12,1,wild type,male,0
+2025-05-13,1,NOSΔ11,female,0
+2025-05-13,1,NOSΔ11,male,0
+2025-05-13,1,NOSΔ23,female,0
+2025-05-13,1,NOSΔ23,male,0
+2025-05-13,1,wild type,female,0
+2025-05-13,1,wild type,male,0
+2025-05-14,1,NOSΔ11,female,0
+2025-05-14,1,NOSΔ11,male,0
+2025-05-14,1,NOSΔ23,female,1
+2025-05-14,1,NOSΔ23,male,0
+2025-05-14,1,wild type,female,0
+2025-05-14,1,wild type,male,0
+2025-05-15,1,NOSΔ11,female,0
+2025-05-15,1,NOSΔ11,male,0
+2025-05-15,1,NOSΔ23,female,0
+2025-05-15,1,NOSΔ23,male,0
+2025-05-15,1,wild type,female,0
+2025-05-15,1,wild type,male,0
+2025-05-16,0,NOSΔ11,female,0
+2025-05-16,0,NOSΔ11,male,1
+2025-05-16,0,NOSΔ23,female,0
+2025-05-16,0,NOSΔ23,male,0
+2025-05-16,0,wild type,female,2
+2025-05-16,0,wild type,male,0
+2025-05-17,0,NOSΔ11,female,3
+2025-05-17,0,NOSΔ11,male,1
+2025-05-17,0,NOSΔ23,female,0
+2025-05-17,0,NOSΔ23,male,0
+2025-05-17,0,wild type,female,1
+2025-05-17,0,wild type,male,1
+2025-05-18,0,NOSΔ11,female,1
+2025-05-18,0,NOSΔ11,male,0
+2025-05-18,0,NOSΔ23,female,0
+2025-05-18,0,NOSΔ23,male,0
+2025-05-18,0,wild type,female,3
+2025-05-18,0,wild type,male,2
+2025-05-19,0,NOSΔ11,female,2
+2025-05-19,0,NOSΔ11,male,0
+2025-05-19,0,NOSΔ23,female,1
+2025-05-19,0,NOSΔ23,male,0
+2025-05-19,0,wild type,female,12
+2025-05-19,0,wild type,male,7
+2025-05-20,0,NOSΔ11,female,0
+2025-05-20,0,NOSΔ11,male,5
+2025-05-20,0,NOSΔ23,female,0
+2025-05-20,0,NOSΔ23,male,2
+2025-05-20,0,wild type,female,14
+2025-05-20,0,wild type,male,9
+2025-05-21,0,NOSΔ11,female,9
+2025-05-21,0,NOSΔ11,male,3
+2025-05-21,0,NOSΔ23,female,2
+2025-05-21,0,NOSΔ23,male,4
+2025-05-21,0,wild type,female,21
+2025-05-21,0,wild type,male,15
+2025-05-22,0,NOSΔ11,female,3
+2025-05-22,0,NOSΔ11,male,3
+2025-05-22,0,NOSΔ23,female,3
+2025-05-22,0,NOSΔ23,male,0
+2025-05-22,0,wild type,female,22
+2025-05-22,0,wild type,male,24
+2025-05-23,0,NOSΔ11,female,3
+2025-05-23,0,NOSΔ11,male,4
+2025-05-23,0,NOSΔ23,female,3
+2025-05-23,0,NOSΔ23,male,3
+2025-05-23,0,wild type,female,12
+2025-05-23,0,wild type,male,12
+2025-05-24,0,NOSΔ11,female,4
+2025-05-24,0,NOSΔ11,male,3
+2025-05-24,0,NOSΔ23,female,3
+2025-05-24,0,NOSΔ23,male,0
+2025-05-24,0,wild type,female,5
+2025-05-24,0,wild type,male,6
+2025-05-25,0,NOSΔ11,female,3
+2025-05-25,0,NOSΔ11,male,3
+2025-05-25,0,NOSΔ23,female,0
+2025-05-25,0,NOSΔ23,male,0
+2025-05-25,0,wild type,female,7
+2025-05-25,0,wild type,male,9
+2025-05-26,0,NOSΔ11,female,4
+2025-05-26,0,NOSΔ11,male,7
+2025-05-26,0,NOSΔ23,female,2
+2025-05-26,0,NOSΔ23,male,0
+2025-05-26,0,wild type,female,6
+2025-05-26,0,wild type,male,13
+2025-05-27,0,NOSΔ11,female,5
+2025-05-27,0,NOSΔ11,male,4
+2025-05-27,0,NOSΔ23,female,2
+2025-05-27,0,NOSΔ23,male,1
+2025-05-27,0,wild type,female,12
+2025-05-27,0,wild type,male,10
+2025-05-28,0,NOSΔ11,female,6
+2025-05-28,0,NOSΔ11,male,4
+2025-05-28,0,NOSΔ23,female,4
+2025-05-28,0,NOSΔ23,male,4
+2025-05-28,0,wild type,female,9
+2025-05-28,0,wild type,male,16
+2025-05-29,0,NOSΔ11,female,1
+2025-05-29,0,NOSΔ11,male,5
+2025-05-29,0,NOSΔ23,female,1
+2025-05-29,0,NOSΔ23,male,3
+2025-05-29,0,wild type,female,4
+2025-05-29,0,wild type,male,13
+2025-05-30,0,NOSΔ11,female,2
+2025-05-30,0,NOSΔ11,male,3
+2025-05-30,0,NOSΔ23,female,2
+2025-05-30,0,NOSΔ23,male,2
+2025-05-30,0,wild type,female,14
+2025-05-30,0,wild type,male,10
+2025-05-31,0,NOSΔ11,female,1
+2025-05-31,0,NOSΔ11,male,1
+2025-05-31,0,NOSΔ23,female,1
+2025-05-31,0,NOSΔ23,male,1
+2025-05-31,0,wild type,female,12
+2025-05-31,0,wild type,male,16
+2025-06-01,0,NOSΔ11,female,1
+2025-06-01,0,NOSΔ11,male,3
+2025-06-01,0,NOSΔ23,female,1
+2025-06-01,0,NOSΔ23,male,0
+2025-06-01,0,wild type,female,3
+2025-06-01,0,wild type,male,8
+2025-06-02,0,NOSΔ11,female,4
+2025-06-02,0,NOSΔ11,male,4
+2025-06-02,0,NOSΔ23,female,6
+2025-06-02,0,NOSΔ23,male,3
+2025-06-02,0,wild type,female,23
+2025-06-02,0,wild type,male,22
+2025-06-03,0,NOSΔ11,female,4
+2025-06-03,0,NOSΔ11,male,11
+2025-06-03,0,NOSΔ23,female,2
+2025-06-03,0,NOSΔ23,male,4
+2025-06-03,0,wild type,female,14
+2025-06-03,0,wild type,male,12
+2025-06-04,0,NOSΔ11,female,1
+2025-06-04,0,NOSΔ11,male,2
+2025-06-04,0,NOSΔ23,female,3
+2025-06-04,0,NOSΔ23,male,2
+2025-06-04,0,wild type,female,14
+2025-06-04,0,wild type,male,19
+2025-06-05,0,NOSΔ11,female,4
+2025-06-05,0,NOSΔ11,male,5
+2025-06-05,0,NOSΔ23,female,3
+2025-06-05,0,NOSΔ23,male,0
+2025-06-05,0,wild type,female,9
+2025-06-05,0,wild type,male,12
+2025-06-06,0,NOSΔ11,female,3
+2025-06-06,0,NOSΔ11,male,2
+2025-06-06,0,NOSΔ23,female,4
+2025-06-06,0,NOSΔ23,male,1
+2025-06-06,0,wild type,female,4
+2025-06-06,0,wild type,male,4
+2025-06-07,0,NOSΔ11,female,1
+2025-06-07,0,NOSΔ11,male,0
+2025-06-07,0,NOSΔ23,female,1
+2025-06-07,0,NOSΔ23,male,0
+2025-06-07,0,wild type,female,1
+2025-06-07,0,wild type,male,1
+2025-06-08,1,NOSΔ11,female,3
+2025-06-08,1,NOSΔ11,male,2
+2025-06-08,1,NOSΔ23,female,2
+2025-06-08,1,NOSΔ23,male,0
+2025-06-08,1,wild type,female,3
+2025-06-08,1,wild type,male,3
+2025-06-09,1,NOSΔ11,female,2
+2025-06-09,1,NOSΔ11,male,1
+2025-06-09,1,NOSΔ23,female,0
+2025-06-09,1,NOSΔ23,male,0
+2025-06-09,1,wild type,female,1
+2025-06-09,1,wild type,male,0
+2025-06-10,1,NOSΔ11,female,0
+2025-06-10,1,NOSΔ11,male,1
+2025-06-10,1,NOSΔ23,female,2
+2025-06-10,1,NOSΔ23,male,0
+2025-06-10,1,wild type,female,0
+2025-06-10,1,wild type,male,0
+2025-06-11,1,NOSΔ11,female,1
+2025-06-11,1,NOSΔ11,male,0
+2025-06-11,1,NOSΔ23,female,1
+2025-06-11,1,NOSΔ23,male,2
+2025-06-11,1,wild type,female,0
+2025-06-11,1,wild type,male,0
+2025-06-12,1,NOSΔ11,female,0
+2025-06-12,1,NOSΔ11,male,1
+2025-06-12,1,NOSΔ23,female,0
+2025-06-12,1,NOSΔ23,male,0
+2025-06-12,1,wild type,female,0
+2025-06-12,1,wild type,male,0
+2025-06-13,1,NOSΔ11,female,1
+2025-06-13,1,NOSΔ11,male,1
+2025-06-13,1,NOSΔ23,female,0
+2025-06-13,1,NOSΔ23,male,0
+2025-06-13,1,wild type,female,0
+2025-06-13,1,wild type,male,0
+2025-06-14,1,NOSΔ11,female,1
+2025-06-14,1,NOSΔ11,male,0
+2025-06-14,1,NOSΔ23,female,1
+2025-06-14,1,NOSΔ23,male,0
+2025-06-14,1,wild type,female,0
+2025-06-14,1,wild type,male,0
+2025-06-15,0,NOSΔ11,female,1
+2025-06-15,0,NOSΔ11,male,0
+2025-06-15,0,NOSΔ23,female,0
+2025-06-15,0,NOSΔ23,male,0
+2025-06-15,0,wild type,female,3
+2025-06-15,0,wild type,male,0
+2025-06-16,0,NOSΔ11,female,3
+2025-06-16,0,NOSΔ11,male,1
+2025-06-16,0,NOSΔ23,female,0
+2025-06-16,0,NOSΔ23,male,0
+2025-06-16,0,wild type,female,2
+2025-06-16,0,wild type,male,2
+2025-06-17,0,NOSΔ11,female,3
+2025-06-17,0,NOSΔ11,male,0
+2025-06-17,0,NOSΔ23,female,1
+2025-06-17,0,NOSΔ23,male,0
+2025-06-17,0,wild type,female,5
+2025-06-17,0,wild type,male,3
+2025-06-18,0,NOSΔ11,female,7
+2025-06-18,0,NOSΔ11,male,4
+2025-06-18,0,NOSΔ23,female,3
+2025-06-18,0,NOSΔ23,male,0
+2025-06-18,0,wild type,female,16
+2025-06-18,0,wild type,male,15
+2025-06-19,0,NOSΔ11,female,9
+2025-06-19,0,NOSΔ11,male,4
+2025-06-19,0,NOSΔ23,female,3
+2025-06-19,0,NOSΔ23,male,0
+2025-06-19,0,wild type,female,20
+2025-06-19,0,wild type,male,17
+2025-06-20,0,NOSΔ11,female,8
+2025-06-20,0,NOSΔ11,male,6
+2025-06-20,0,NOSΔ23,female,3
+2025-06-20,0,NOSΔ23,male,1
+2025-06-20,0,wild type,female,22
+2025-06-20,0,wild type,male,24
+2025-06-21,0,NOSΔ11,female,6
+2025-06-21,0,NOSΔ11,male,6
+2025-06-21,0,NOSΔ23,female,2
+2025-06-21,0,NOSΔ23,male,5
+2025-06-21,0,wild type,female,20
+2025-06-21,0,wild type,male,16
+2025-06-22,0,NOSΔ11,female,5
+2025-06-22,0,NOSΔ11,male,6
+2025-06-22,0,NOSΔ23,female,1
+2025-06-22,0,NOSΔ23,male,0
+2025-06-22,0,wild type,female,21
+2025-06-22,0,wild type,male,8
+2025-06-23,0,NOSΔ11,female,6
+2025-06-23,0,NOSΔ11,male,7
+2025-06-23,0,NOSΔ23,female,6
+2025-06-23,0,NOSΔ23,male,7
+2025-06-23,0,wild type,female,19
+2025-06-23,0,wild type,male,19
+2025-06-24,0,NOSΔ11,female,7
+2025-06-24,0,NOSΔ11,male,8
+2025-06-24,0,NOSΔ23,female,5
+2025-06-24,0,NOSΔ23,male,4
+2025-06-24,0,wild type,female,22
+2025-06-24,0,wild type,male,14
+2025-06-25,0,NOSΔ11,female,3
+2025-06-25,0,NOSΔ11,male,10
+2025-06-25,0,NOSΔ23,female,0
+2025-06-25,0,NOSΔ23,male,2
+2025-06-25,0,wild type,female,8
+2025-06-25,0,wild type,male,14
+2025-06-26,0,NOSΔ11,female,7
+2025-06-26,0,NOSΔ11,male,17
+2025-06-26,0,NOSΔ23,female,7
+2025-06-26,0,NOSΔ23,male,1
+2025-06-26,0,wild type,female,17
+2025-06-26,0,wild type,male,21
+2025-06-27,0,NOSΔ11,female,3
+2025-06-27,0,NOSΔ11,male,12
+2025-06-27,0,NOSΔ23,female,0
+2025-06-27,0,NOSΔ23,male,3
+2025-06-27,0,wild type,female,8
+2025-06-27,0,wild type,male,13
+2025-06-28,0,NOSΔ11,female,1
+2025-06-28,0,NOSΔ11,male,7
+2025-06-28,0,NOSΔ23,female,1
+2025-06-28,0,NOSΔ23,male,6
+2025-06-28,0,wild type,female,12
+2025-06-28,0,wild type,male,21
+2025-06-29,0,NOSΔ11,female,5
+2025-06-29,0,NOSΔ11,male,6
+2025-06-29,0,NOSΔ23,female,6
+2025-06-29,0,NOSΔ23,male,2
+2025-06-29,0,wild type,female,10
+2025-06-29,0,wild type,male,9
+2025-06-30,0,NOSΔ11,female,13
+2025-06-30,0,NOSΔ11,male,7
+2025-06-30,0,NOSΔ23,female,5
+2025-06-30,0,NOSΔ23,male,5
+2025-06-30,0,wild type,female,20
+2025-06-30,0,wild type,male,32
+2025-07-01,0,NOSΔ11,female,14
+2025-07-01,0,NOSΔ11,male,12
+2025-07-01,0,NOSΔ23,female,3
+2025-07-01,0,NOSΔ23,male,4
+2025-07-01,0,wild type,female,31
+2025-07-01,0,wild type,male,25
+2025-07-02,0,NOSΔ11,female,12
+2025-07-02,0,NOSΔ11,male,12
+2025-07-02,0,NOSΔ23,female,3
+2025-07-02,0,NOSΔ23,male,8
+2025-07-02,0,wild type,female,18
+2025-07-02,0,wild type,male,35
+2025-07-03,0,NOSΔ11,female,5
+2025-07-03,0,NOSΔ11,male,11
+2025-07-03,0,NOSΔ23,female,6
+2025-07-03,0,NOSΔ23,male,6
+2025-07-03,0,wild type,female,22
+2025-07-03,0,wild type,male,23
+2025-07-04,0,NOSΔ11,female,7
+2025-07-04,0,NOSΔ11,male,6
+2025-07-04,0,NOSΔ23,female,1
+2025-07-04,0,NOSΔ23,male,3
+2025-07-04,0,wild type,female,7
+2025-07-04,0,wild type,male,8
+2025-07-05,0,NOSΔ11,female,4
+2025-07-05,0,NOSΔ11,male,2
+2025-07-05,0,NOSΔ23,female,3
+2025-07-05,0,NOSΔ23,male,0
+2025-07-05,0,wild type,female,2
+2025-07-05,0,wild type,male,10
+2025-07-06,0,NOSΔ11,female,0
+2025-07-06,0,NOSΔ11,male,4
+2025-07-06,0,NOSΔ23,female,1
+2025-07-06,0,NOSΔ23,male,2
+2025-07-06,0,wild type,female,5
+2025-07-06,0,wild type,male,6
+2025-07-07,1,NOSΔ11,female,4
+2025-07-07,1,NOSΔ11,male,5
+2025-07-07,1,NOSΔ23,female,0
+2025-07-07,1,NOSΔ23,male,0
+2025-07-07,1,wild type,female,1
+2025-07-07,1,wild type,male,5
+2025-07-08,1,NOSΔ11,female,3
+2025-07-08,1,NOSΔ11,male,2
+2025-07-08,1,NOSΔ23,female,0
+2025-07-08,1,NOSΔ23,male,1
+2025-07-08,1,wild type,female,0
+2025-07-08,1,wild type,male,1
+2025-07-09,1,NOSΔ11,female,1
+2025-07-09,1,NOSΔ11,male,1
+2025-07-09,1,NOSΔ23,female,0
+2025-07-09,1,NOSΔ23,male,0
+2025-07-09,1,wild type,female,1
+2025-07-09,1,wild type,male,1
+2025-07-10,1,NOSΔ11,female,0
+2025-07-10,1,NOSΔ11,male,0
+2025-07-10,1,NOSΔ23,female,1
+2025-07-10,1,NOSΔ23,male,0
+2025-07-10,1,wild type,female,0
+2025-07-10,1,wild type,male,0
+2025-07-11,1,NOSΔ11,female,0
+2025-07-11,1,NOSΔ11,male,0
+2025-07-11,1,NOSΔ23,female,0
+2025-07-11,1,NOSΔ23,male,0
+2025-07-11,1,wild type,female,0
+2025-07-11,1,wild type,male,0
+2025-07-12,1,NOSΔ11,female,2
+2025-07-12,1,NOSΔ11,male,0
+2025-07-12,1,NOSΔ23,female,0
+2025-07-12,1,NOSΔ23,male,0
+2025-07-12,1,wild type,female,0
+2025-07-12,1,wild type,male,0
+2025-07-13,1,NOSΔ11,female,0
+2025-07-13,1,NOSΔ11,male,0
+2025-07-13,1,NOSΔ23,female,0
+2025-07-13,1,NOSΔ23,male,0
+2025-07-13,1,wild type,female,0
+2025-07-13,1,wild type,male,0
+2025-07-14,0,NOSΔ11,female,0
+2025-07-14,0,NOSΔ11,male,0
+2025-07-14,0,NOSΔ23,female,0
+2025-07-14,0,NOSΔ23,male,0
+2025-07-14,0,wild type,female,0
+2025-07-14,0,wild type,male,1
+2025-07-15,0,NOSΔ11,female,2
+2025-07-15,0,NOSΔ11,male,1
+2025-07-15,0,NOSΔ23,female,0
+2025-07-15,0,NOSΔ23,male,0
+2025-07-15,0,wild type,female,3
+2025-07-15,0,wild type,male,1
+2025-07-16,0,NOSΔ11,female,6
+2025-07-16,0,NOSΔ11,male,3
+2025-07-16,0,NOSΔ23,female,1
+2025-07-16,0,NOSΔ23,male,0
+2025-07-16,0,wild type,female,3
+2025-07-16,0,wild type,male,1
+2025-07-17,0,NOSΔ11,female,6
+2025-07-17,0,NOSΔ11,male,4
+2025-07-17,0,NOSΔ23,female,1
+2025-07-17,0,NOSΔ23,male,1
+2025-07-17,0,wild type,female,6
+2025-07-17,0,wild type,male,4
+2025-07-18,0,NOSΔ11,female,5
+2025-07-18,0,NOSΔ11,male,7
+2025-07-18,0,NOSΔ23,female,1
+2025-07-18,0,NOSΔ23,male,0
+2025-07-18,0,wild type,female,18
+2025-07-18,0,wild type,male,14
+2025-07-19,0,NOSΔ11,female,3
+2025-07-19,0,NOSΔ11,male,10
+2025-07-19,0,NOSΔ23,female,1
+2025-07-19,0,NOSΔ23,male,3
+2025-07-19,0,wild type,female,16
+2025-07-19,0,wild type,male,12
+2025-07-20,0,NOSΔ11,female,4
+2025-07-20,0,NOSΔ11,male,4
+2025-07-20,0,NOSΔ23,female,7
+2025-07-20,0,NOSΔ23,male,2
+2025-07-20,0,wild type,female,14
+2025-07-20,0,wild type,male,12
+2025-07-21,0,NOSΔ11,female,16
+2025-07-21,0,NOSΔ11,male,6
+2025-07-21,0,NOSΔ23,female,7
+2025-07-21,0,NOSΔ23,male,14
+2025-07-21,0,wild type,female,23
+2025-07-21,0,wild type,male,30
+2025-07-22,0,NOSΔ11,female,4
+2025-07-22,0,NOSΔ11,male,6
+2025-07-22,0,NOSΔ23,female,12
+2025-07-22,0,NOSΔ23,male,8
+2025-07-22,0,wild type,female,16
+2025-07-22,0,wild type,male,17
+2025-07-23,0,NOSΔ11,female,8
+2025-07-23,0,NOSΔ11,male,6
+2025-07-23,0,NOSΔ23,female,6
+2025-07-23,0,NOSΔ23,male,5
+2025-07-23,0,wild type,female,9
+2025-07-23,0,wild type,male,11
+2025-07-24,0,NOSΔ11,female,6
+2025-07-24,0,NOSΔ11,male,6
+2025-07-24,0,NOSΔ23,female,12
+2025-07-24,0,NOSΔ23,male,20
+2025-07-24,0,wild type,female,18
+2025-07-24,0,wild type,male,17
+2025-07-25,0,NOSΔ11,female,3
+2025-07-25,0,NOSΔ11,male,7
+2025-07-25,0,NOSΔ23,female,2
+2025-07-25,0,NOSΔ23,male,10
+2025-07-25,0,wild type,female,3
+2025-07-25,0,wild type,male,6
+2025-07-26,0,NOSΔ11,female,5
+2025-07-26,0,NOSΔ11,male,2
+2025-07-26,0,NOSΔ23,female,5
+2025-07-26,0,NOSΔ23,male,5
+2025-07-26,0,wild type,female,8
+2025-07-26,0,wild type,male,7
+2025-07-27,0,NOSΔ11,female,4
+2025-07-27,0,NOSΔ11,male,9
+2025-07-27,0,NOSΔ23,female,1
+2025-07-27,0,NOSΔ23,male,3
+2025-07-27,0,wild type,female,7
+2025-07-27,0,wild type,male,9
+2025-07-28,0,NOSΔ11,female,6
+2025-07-28,0,NOSΔ11,male,9
+2025-07-28,0,NOSΔ23,female,10
+2025-07-28,0,NOSΔ23,male,9
+2025-07-28,0,wild type,female,9
+2025-07-28,0,wild type,male,11
+2025-07-29,0,NOSΔ11,female,6
+2025-07-29,0,NOSΔ11,male,6
+2025-07-29,0,NOSΔ23,female,2
+2025-07-29,0,NOSΔ23,male,4
+2025-07-29,0,wild type,female,15
+2025-07-29,0,wild type,male,15
+2025-07-30,0,NOSΔ11,female,6
+2025-07-30,0,NOSΔ11,male,11
+2025-07-30,0,NOSΔ23,female,10
+2025-07-30,0,NOSΔ23,male,8
+2025-07-30,0,wild type,female,19
+2025-07-30,0,wild type,male,25
+2025-07-31,0,NOSΔ11,female,9
+2025-07-31,0,NOSΔ11,male,15
+2025-07-31,0,NOSΔ23,female,15
+2025-07-31,0,NOSΔ23,male,14
+2025-07-31,0,wild type,female,37
+2025-07-31,0,wild type,male,17
+2025-08-01,0,NOSΔ11,female,7
+2025-08-01,0,NOSΔ11,male,10
+2025-08-01,0,NOSΔ23,female,3
+2025-08-01,0,NOSΔ23,male,9
+2025-08-01,0,wild type,female,30
+2025-08-01,0,wild type,male,18
+2025-08-02,0,NOSΔ11,female,4
+2025-08-02,0,NOSΔ11,male,2
+2025-08-02,0,NOSΔ23,female,3
+2025-08-02,0,NOSΔ23,male,0
+2025-08-02,0,wild type,female,11
+2025-08-02,0,wild type,male,11
+2025-08-03,0,NOSΔ11,female,4
+2025-08-03,0,NOSΔ11,male,2
+2025-08-03,0,NOSΔ23,female,2
+2025-08-03,0,NOSΔ23,male,4
+2025-08-03,0,wild type,female,8
+2025-08-03,0,wild type,male,9
+2025-08-04,0,NOSΔ11,female,8
+2025-08-04,0,NOSΔ11,male,5
+2025-08-04,0,NOSΔ23,female,8
+2025-08-04,0,NOSΔ23,male,9
+2025-08-04,0,wild type,female,11
+2025-08-04,0,wild type,male,7
+2025-08-05,0,NOSΔ11,female,3
+2025-08-05,0,NOSΔ11,male,3
+2025-08-05,0,NOSΔ23,female,0
+2025-08-05,0,NOSΔ23,male,1
+2025-08-05,0,wild type,female,8
+2025-08-05,0,wild type,male,2
+2025-08-06,1,NOSΔ11,female,2
+2025-08-06,1,NOSΔ11,male,4
+2025-08-06,1,NOSΔ23,female,1
+2025-08-06,1,NOSΔ23,male,4
+2025-08-06,1,wild type,female,0
+2025-08-06,1,wild type,male,2
+2025-08-07,1,NOSΔ11,female,0
+2025-08-07,1,NOSΔ11,male,0
+2025-08-07,1,NOSΔ23,female,0
+2025-08-07,1,NOSΔ23,male,0
+2025-08-07,1,wild type,female,0
+2025-08-07,1,wild type,male,0
+2025-08-08,1,NOSΔ11,female,0
+2025-08-08,1,NOSΔ11,male,0
+2025-08-08,1,NOSΔ23,female,0
+2025-08-08,1,NOSΔ23,male,0
+2025-08-08,1,wild type,female,0
+2025-08-08,1,wild type,male,0
+2025-08-09,1,NOSΔ11,female,0
+2025-08-09,1,NOSΔ11,male,0
+2025-08-09,1,NOSΔ23,female,0
+2025-08-09,1,NOSΔ23,male,0
+2025-08-09,1,wild type,female,1
+2025-08-09,1,wild type,male,0
+2025-08-10,1,NOSΔ11,female,0
+2025-08-10,1,NOSΔ11,male,0
+2025-08-10,1,NOSΔ23,female,0
+2025-08-10,1,NOSΔ23,male,0
+2025-08-10,1,wild type,female,0
+2025-08-10,1,wild type,male,0
+2025-08-11,1,NOSΔ11,female,0
+2025-08-11,1,NOSΔ11,male,1
+2025-08-11,1,NOSΔ23,female,0
+2025-08-11,1,NOSΔ23,male,0
+2025-08-11,1,wild type,female,0
+2025-08-11,1,wild type,male,0
+2025-08-12,1,NOSΔ11,female,0
+2025-08-12,1,NOSΔ11,male,0
+2025-08-12,1,NOSΔ23,female,0
+2025-08-12,1,NOSΔ23,male,0
+2025-08-12,1,wild type,female,0
+2025-08-12,1,wild type,male,0
+2025-08-13,0,NOSΔ11,female,1
+2025-08-13,0,NOSΔ11,male,0
+2025-08-13,0,NOSΔ23,female,0
+2025-08-13,0,NOSΔ23,male,0
+2025-08-13,0,wild type,female,0
+2025-08-13,0,wild type,male,1
+2025-08-14,0,NOSΔ11,female,1
+2025-08-14,0,NOSΔ11,male,0
+2025-08-14,0,NOSΔ23,female,0
+2025-08-14,0,NOSΔ23,male,0
+2025-08-14,0,wild type,female,0
+2025-08-14,0,wild type,male,0
+2025-08-15,0,NOSΔ11,female,1
+2025-08-15,0,NOSΔ11,male,0
+2025-08-15,0,NOSΔ23,female,0
+2025-08-15,0,NOSΔ23,male,0
+2025-08-15,0,wild type,female,0
+2025-08-15,0,wild type,male,0
+2025-08-16,0,NOSΔ11,female,1
+2025-08-16,0,NOSΔ11,male,2
+2025-08-16,0,NOSΔ23,female,0
+2025-08-16,0,NOSΔ23,male,1
+2025-08-16,0,wild type,female,5
+2025-08-16,0,wild type,male,5
+2025-08-17,0,NOSΔ11,female,2
+2025-08-17,0,NOSΔ11,male,4
+2025-08-17,0,NOSΔ23,female,0
+2025-08-17,0,NOSΔ23,male,0
+2025-08-17,0,wild type,female,6
+2025-08-17,0,wild type,male,5
+2025-08-18,0,NOSΔ11,female,6
+2025-08-18,0,NOSΔ11,male,1
+2025-08-18,0,NOSΔ23,female,3
+2025-08-18,0,NOSΔ23,male,1
+2025-08-18,0,wild type,female,12
+2025-08-18,0,wild type,male,3
+2025-08-19,0,NOSΔ11,female,3
+2025-08-19,0,NOSΔ11,male,4
+2025-08-19,0,NOSΔ23,female,6
+2025-08-19,0,NOSΔ23,male,4
+2025-08-19,0,wild type,female,15
+2025-08-19,0,wild type,male,16
+2025-08-20,0,NOSΔ11,female,3
+2025-08-20,0,NOSΔ11,male,2
+2025-08-20,0,NOSΔ23,female,6
+2025-08-20,0,NOSΔ23,male,4
+2025-08-20,0,wild type,female,15
+2025-08-20,0,wild type,male,10
+2025-08-21,0,NOSΔ11,female,10
+2025-08-21,0,NOSΔ11,male,3
+2025-08-21,0,NOSΔ23,female,11
+2025-08-21,0,NOSΔ23,male,6
+2025-08-21,0,wild type,female,11
+2025-08-21,0,wild type,male,14
+2025-08-22,0,NOSΔ11,female,3
+2025-08-22,0,NOSΔ11,male,5
+2025-08-22,0,NOSΔ23,female,7
+2025-08-22,0,NOSΔ23,male,10
+2025-08-22,0,wild type,female,7
+2025-08-22,0,wild type,male,5
+2025-08-23,0,NOSΔ11,female,5
+2025-08-23,0,NOSΔ11,male,5
+2025-08-23,0,NOSΔ23,female,5
+2025-08-23,0,NOSΔ23,male,4
+2025-08-23,0,wild type,female,5
+2025-08-23,0,wild type,male,4
+2025-08-24,0,NOSΔ11,female,3
+2025-08-24,0,NOSΔ11,male,1
+2025-08-24,0,NOSΔ23,female,4
+2025-08-24,0,NOSΔ23,male,3
+2025-08-24,0,wild type,female,2
+2025-08-24,0,wild type,male,4
+2025-08-25,0,NOSΔ11,female,13
+2025-08-25,0,NOSΔ11,male,11
+2025-08-25,0,NOSΔ23,female,18
+2025-08-25,0,NOSΔ23,male,12
+2025-08-25,0,wild type,female,21
+2025-08-25,0,wild type,male,14
+2025-08-26,0,NOSΔ11,female,2
+2025-08-26,0,NOSΔ11,male,7
+2025-08-26,0,NOSΔ23,female,8
+2025-08-26,0,NOSΔ23,male,6
+2025-08-26,0,wild type,female,9
+2025-08-26,0,wild type,male,13
+2025-08-27,0,NOSΔ11,female,16
+2025-08-27,0,NOSΔ11,male,13
+2025-08-27,0,NOSΔ23,female,15
+2025-08-27,0,NOSΔ23,male,9
+2025-08-27,0,wild type,female,17
+2025-08-27,0,wild type,male,26
+2025-08-28,0,NOSΔ11,female,11
+2025-08-28,0,NOSΔ11,male,12
+2025-08-28,0,NOSΔ23,female,16
+2025-08-28,0,NOSΔ23,male,11
+2025-08-28,0,wild type,female,19
+2025-08-28,0,wild type,male,17
+2025-08-29,0,NOSΔ11,female,6
+2025-08-29,0,NOSΔ11,male,10
+2025-08-29,0,NOSΔ23,female,13
+2025-08-29,0,NOSΔ23,male,13
+2025-08-29,0,wild type,female,17
+2025-08-29,0,wild type,male,19
+2025-08-30,0,NOSΔ11,female,4
+2025-08-30,0,NOSΔ11,male,3
+2025-08-30,0,NOSΔ23,female,8
+2025-08-30,0,NOSΔ23,male,10
+2025-08-30,0,wild type,female,10
+2025-08-30,0,wild type,male,7
+2025-08-31,0,NOSΔ11,female,2
+2025-08-31,0,NOSΔ11,male,1
+2025-08-31,0,NOSΔ23,female,4
+2025-08-31,0,NOSΔ23,male,2
+2025-08-31,0,wild type,female,10
+2025-08-31,0,wild type,male,10
+2025-09-01,0,NOSΔ11,female,8
+2025-09-01,0,NOSΔ11,male,13
+2025-09-01,0,NOSΔ23,female,10
+2025-09-01,0,NOSΔ23,male,8
+2025-09-01,0,wild type,female,12
+2025-09-01,0,wild type,male,17
+2025-09-02,0,NOSΔ11,female,9
+2025-09-02,0,NOSΔ11,male,5
+2025-09-02,0,NOSΔ23,female,7
+2025-09-02,0,NOSΔ23,male,5
+2025-09-02,0,wild type,female,5
+2025-09-02,0,wild type,male,9
+2025-09-03,0,NOSΔ11,female,6
+2025-09-03,0,NOSΔ11,male,0
+2025-09-03,0,NOSΔ23,female,5
+2025-09-03,0,NOSΔ23,male,4
+2025-09-03,0,wild type,female,5
+2025-09-03,0,wild type,male,6
+2025-09-04,1,NOSΔ11,female,3
+2025-09-04,1,NOSΔ11,male,4
+2025-09-04,1,NOSΔ23,female,2
+2025-09-04,1,NOSΔ23,male,3
+2025-09-04,1,wild type,female,2
+2025-09-04,1,wild type,male,2
+2025-09-05,1,NOSΔ11,female,0
+2025-09-05,1,NOSΔ11,male,2
+2025-09-05,1,NOSΔ23,female,0
+2025-09-05,1,NOSΔ23,male,0
+2025-09-05,1,wild type,female,0
+2025-09-05,1,wild type,male,1
+2025-09-06,1,NOSΔ11,female,0
+2025-09-06,1,NOSΔ11,male,0
+2025-09-06,1,NOSΔ23,female,0
+2025-09-06,1,NOSΔ23,male,3
+2025-09-06,1,wild type,female,0
+2025-09-06,1,wild type,male,0
+2025-09-07,1,NOSΔ11,female,0
+2025-09-07,1,NOSΔ11,male,0
+2025-09-07,1,NOSΔ23,female,0
+2025-09-07,1,NOSΔ23,male,0
+2025-09-07,1,wild type,female,0
+2025-09-07,1,wild type,male,0
+2025-09-08,1,NOSΔ11,female,1
+2025-09-08,1,NOSΔ11,male,0
+2025-09-08,1,NOSΔ23,female,0
+2025-09-08,1,NOSΔ23,male,1
+2025-09-08,1,wild type,female,0
+2025-09-08,1,wild type,male,0
+2025-09-09,1,NOSΔ11,female,0
+2025-09-09,1,NOSΔ11,male,0
+2025-09-09,1,NOSΔ23,female,0
+2025-09-09,1,NOSΔ23,male,0
+2025-09-09,1,wild type,female,0
+2025-09-09,1,wild type,male,0
+2025-09-10,1,NOSΔ11,female,0
+2025-09-10,1,NOSΔ11,male,0
+2025-09-10,1,NOSΔ23,female,0
+2025-09-10,1,NOSΔ23,male,0
+2025-09-10,1,wild type,female,0
+2025-09-10,1,wild type,male,0
+2025-09-11,0,NOSΔ11,female,2
+2025-09-11,0,NOSΔ11,male,0
+2025-09-11,0,NOSΔ23,female,0
+2025-09-11,0,NOSΔ23,male,1
+2025-09-11,0,wild type,female,0
+2025-09-11,0,wild type,male,2
+2025-09-12,0,NOSΔ11,female,1
+2025-09-12,0,NOSΔ11,male,1
+2025-09-12,0,NOSΔ23,female,0
+2025-09-12,0,NOSΔ23,male,0
+2025-09-12,0,wild type,female,1
+2025-09-12,0,wild type,male,0
+2025-09-13,0,NOSΔ11,female,3
+2025-09-13,0,NOSΔ11,male,0
+2025-09-13,0,NOSΔ23,female,2
+2025-09-13,0,NOSΔ23,male,0
+2025-09-13,0,wild type,female,1
+2025-09-13,0,wild type,male,1
+2025-09-14,0,NOSΔ11,female,1
+2025-09-14,0,NOSΔ11,male,1
+2025-09-14,0,NOSΔ23,female,1
+2025-09-14,0,NOSΔ23,male,2
+2025-09-14,0,wild type,female,5
+2025-09-14,0,wild type,male,4
+2025-09-15,0,NOSΔ11,female,6
+2025-09-15,0,NOSΔ11,male,10
+2025-09-15,0,NOSΔ23,female,3
+2025-09-15,0,NOSΔ23,male,0
+2025-09-15,0,wild type,female,13
+2025-09-15,0,wild type,male,5
+2025-09-16,0,NOSΔ11,female,5
+2025-09-16,0,NOSΔ11,male,6
+2025-09-16,0,NOSΔ23,female,5
+2025-09-16,0,NOSΔ23,male,3
+2025-09-16,0,wild type,female,9
+2025-09-16,0,wild type,male,9
+2025-09-17,0,NOSΔ11,female,7
+2025-09-17,0,NOSΔ11,male,8
+2025-09-17,0,NOSΔ23,female,10
+2025-09-17,0,NOSΔ23,male,5
+2025-09-17,0,wild type,female,21
+2025-09-17,0,wild type,male,10
+2025-09-18,0,NOSΔ11,female,9
+2025-09-18,0,NOSΔ11,male,13
+2025-09-18,0,NOSΔ23,female,8
+2025-09-18,0,NOSΔ23,male,6
+2025-09-18,0,wild type,female,11
+2025-09-18,0,wild type,male,13
+2025-09-19,0,NOSΔ11,female,13
+2025-09-19,0,NOSΔ11,male,15
+2025-09-19,0,NOSΔ23,female,6
+2025-09-19,0,NOSΔ23,male,8
+2025-09-19,0,wild type,female,11
+2025-09-19,0,wild type,male,9
+2025-09-20,0,NOSΔ11,female,3
+2025-09-20,0,NOSΔ11,male,2
+2025-09-20,0,NOSΔ23,female,4
+2025-09-20,0,NOSΔ23,male,5
+2025-09-20,0,wild type,female,3
+2025-09-20,0,wild type,male,4
+2025-09-21,0,NOSΔ11,female,4
+2025-09-21,0,NOSΔ11,male,4
+2025-09-21,0,NOSΔ23,female,4
+2025-09-21,0,NOSΔ23,male,1
+2025-09-21,0,wild type,female,5
+2025-09-21,0,wild type,male,9
+2025-09-22,0,NOSΔ11,female,14
+2025-09-22,0,NOSΔ11,male,15
+2025-09-22,0,NOSΔ23,female,5
+2025-09-22,0,NOSΔ23,male,5
+2025-09-22,0,wild type,female,13
+2025-09-22,0,wild type,male,8
+2025-09-23,0,NOSΔ11,female,11
+2025-09-23,0,NOSΔ11,male,12
+2025-09-23,0,NOSΔ23,female,7
+2025-09-23,0,NOSΔ23,male,6
+2025-09-23,0,wild type,female,4
+2025-09-23,0,wild type,male,18
+2025-09-24,0,NOSΔ11,female,9
+2025-09-24,0,NOSΔ11,male,11
+2025-09-24,0,NOSΔ23,female,6
+2025-09-24,0,NOSΔ23,male,3
+2025-09-24,0,wild type,female,4
+2025-09-24,0,wild type,male,17
+2025-09-25,0,NOSΔ11,female,16
+2025-09-25,0,NOSΔ11,male,14
+2025-09-25,0,NOSΔ23,female,1
+2025-09-25,0,NOSΔ23,male,5
+2025-09-25,0,wild type,female,17
+2025-09-25,0,wild type,male,16
+2025-09-26,0,NOSΔ11,female,6
+2025-09-26,0,NOSΔ11,male,5
+2025-09-26,0,NOSΔ23,female,5
+2025-09-26,0,NOSΔ23,male,3
+2025-09-26,0,wild type,female,11
+2025-09-26,0,wild type,male,12
+2025-09-27,0,NOSΔ11,female,5
+2025-09-27,0,NOSΔ11,male,4
+2025-09-27,0,NOSΔ23,female,1
+2025-09-27,0,NOSΔ23,male,2
+2025-09-27,0,wild type,female,5
+2025-09-27,0,wild type,male,7
+2025-09-28,0,NOSΔ11,female,4
+2025-09-28,0,NOSΔ11,male,12
+2025-09-28,0,NOSΔ23,female,5
+2025-09-28,0,NOSΔ23,male,3
+2025-09-28,0,wild type,female,5
+2025-09-28,0,wild type,male,10
+2025-09-29,0,NOSΔ11,female,5
+2025-09-29,0,NOSΔ11,male,12
+2025-09-29,0,NOSΔ23,female,17
+2025-09-29,0,NOSΔ23,male,7
+2025-09-29,0,wild type,female,17
+2025-09-29,0,wild type,male,24
+2025-09-30,0,NOSΔ11,female,5
+2025-09-30,0,NOSΔ11,male,6
+2025-09-30,0,NOSΔ23,female,3
+2025-09-30,0,NOSΔ23,male,3
+2025-09-30,0,wild type,female,7
+2025-09-30,0,wild type,male,6
+2025-10-01,0,NOSΔ11,female,4
+2025-10-01,0,NOSΔ11,male,8
+2025-10-01,0,NOSΔ23,female,3
+2025-10-01,0,NOSΔ23,male,1
+2025-10-01,0,wild type,female,6
+2025-10-01,0,wild type,male,8
+2025-10-02,0,NOSΔ11,female,1
+2025-10-02,0,NOSΔ11,male,6
+2025-10-02,0,NOSΔ23,female,1
+2025-10-02,0,NOSΔ23,male,5
+2025-10-02,0,wild type,female,3
+2025-10-02,0,wild type,male,4
+2025-10-03,0,NOSΔ11,female,2
+2025-10-03,0,NOSΔ11,male,2
+2025-10-03,0,NOSΔ23,female,0
+2025-10-03,0,NOSΔ23,male,1
+2025-10-03,0,wild type,female,0
+2025-10-03,0,wild type,male,0
+2025-10-04,1,NOSΔ11,female,2
+2025-10-04,1,NOSΔ11,male,1
+2025-10-04,1,NOSΔ23,female,1
+2025-10-04,1,NOSΔ23,male,2
+2025-10-04,1,wild type,female,0
+2025-10-04,1,wild type,male,1
+2025-10-05,1,NOSΔ11,female,0
+2025-10-05,1,NOSΔ11,male,0
+2025-10-05,1,NOSΔ23,female,0
+2025-10-05,1,NOSΔ23,male,0
+2025-10-05,1,wild type,female,0
+2025-10-05,1,wild type,male,0
+2025-10-06,1,NOSΔ11,female,0
+2025-10-06,1,NOSΔ11,male,1
+2025-10-06,1,NOSΔ23,female,1
+2025-10-06,1,NOSΔ23,male,0
+2025-10-06,1,wild type,female,0
+2025-10-06,1,wild type,male,0
+2025-10-07,1,NOSΔ11,female,1
+2025-10-07,1,NOSΔ11,male,0
+2025-10-07,1,NOSΔ23,female,0
+2025-10-07,1,NOSΔ23,male,0
+2025-10-07,1,wild type,female,0
+2025-10-07,1,wild type,male,0
+2025-10-08,1,NOSΔ11,female,0
+2025-10-08,1,NOSΔ11,male,0
+2025-10-08,1,NOSΔ23,female,0
+2025-10-08,1,NOSΔ23,male,0
+2025-10-08,1,wild type,female,0
+2025-10-08,1,wild type,male,0
+2025-10-09,1,NOSΔ11,female,1
+2025-10-09,1,NOSΔ11,male,0
+2025-10-09,1,NOSΔ23,female,0
+2025-10-09,1,NOSΔ23,male,1
+2025-10-09,1,wild type,female,1
+2025-10-09,1,wild type,male,0
+2025-10-10,1,NOSΔ11,female,1
+2025-10-10,1,NOSΔ11,male,0
+2025-10-10,1,NOSΔ23,female,0
+2025-10-10,1,NOSΔ23,male,0
+2025-10-10,1,wild type,female,0
+2025-10-10,1,wild type,male,0
+2025-10-11,0,NOSΔ11,female,0
+2025-10-11,0,NOSΔ11,male,3
+2025-10-11,0,NOSΔ23,female,0
+2025-10-11,0,NOSΔ23,male,0
+2025-10-11,0,wild type,female,0
+2025-10-11,0,wild type,male,0
+2025-10-12,0,NOSΔ11,female,0
+2025-10-12,0,NOSΔ11,male,2
+2025-10-12,0,NOSΔ23,female,0
+2025-10-12,0,NOSΔ23,male,0
+2025-10-12,0,wild type,female,0
+2025-10-12,0,wild type,male,0
+2025-10-13,0,NOSΔ11,female,1
+2025-10-13,0,NOSΔ11,male,2
+2025-10-13,0,NOSΔ23,female,0
+2025-10-13,0,NOSΔ23,male,0
+2025-10-13,0,wild type,female,1
+2025-10-13,0,wild type,male,0
+2025-10-14,0,NOSΔ11,female,4
+2025-10-14,0,NOSΔ11,male,4
+2025-10-14,0,NOSΔ23,female,0
+2025-10-14,0,NOSΔ23,male,0
+2025-10-14,0,wild type,female,4
+2025-10-14,0,wild type,male,7
+2025-10-15,0,NOSΔ11,female,7
+2025-10-15,0,NOSΔ11,male,9
+2025-10-15,0,NOSΔ23,female,1
+2025-10-15,0,NOSΔ23,male,1
+2025-10-15,0,wild type,female,6
+2025-10-15,0,wild type,male,10
+2025-10-16,0,NOSΔ11,female,6
+2025-10-16,0,NOSΔ11,male,8
+2025-10-16,0,NOSΔ23,female,7
+2025-10-16,0,NOSΔ23,male,4
+2025-10-16,0,wild type,female,8
+2025-10-16,0,wild type,male,16
+2025-10-17,0,NOSΔ11,female,10
+2025-10-17,0,NOSΔ11,male,12
+2025-10-17,0,NOSΔ23,female,7
+2025-10-17,0,NOSΔ23,male,10
+2025-10-17,0,wild type,female,10
+2025-10-17,0,wild type,male,7
+2025-10-18,0,NOSΔ11,female,9
+2025-10-18,0,NOSΔ11,male,9
+2025-10-18,0,NOSΔ23,female,3
+2025-10-18,0,NOSΔ23,male,3
+2025-10-18,0,wild type,female,6
+2025-10-18,0,wild type,male,7
+2025-10-19,0,NOSΔ11,female,7
+2025-10-19,0,NOSΔ11,male,7
+2025-10-19,0,NOSΔ23,female,3
+2025-10-19,0,NOSΔ23,male,2
+2025-10-19,0,wild type,female,4
+2025-10-19,0,wild type,male,18
+2025-10-20,0,NOSΔ11,female,12
+2025-10-20,0,NOSΔ11,male,4
+2025-10-20,0,NOSΔ23,female,8
+2025-10-20,0,NOSΔ23,male,5
+2025-10-20,0,wild type,female,10
+2025-10-20,0,wild type,male,22
+2025-10-21,0,NOSΔ11,female,17
+2025-10-21,0,NOSΔ11,male,14
+2025-10-21,0,NOSΔ23,female,5
+2025-10-21,0,NOSΔ23,male,3
+2025-10-21,0,wild type,female,7
+2025-10-21,0,wild type,male,12
+2025-10-22,0,NOSΔ11,female,6
+2025-10-22,0,NOSΔ11,male,13
+2025-10-22,0,NOSΔ23,female,1
+2025-10-22,0,NOSΔ23,male,3
+2025-10-22,0,wild type,female,9
+2025-10-22,0,wild type,male,16
+2025-10-23,0,NOSΔ11,female,3
+2025-10-23,0,NOSΔ11,male,9
+2025-10-23,0,NOSΔ23,female,3
+2025-10-23,0,NOSΔ23,male,5
+2025-10-23,0,wild type,female,21
+2025-10-23,0,wild type,male,22
+2025-10-24,0,NOSΔ11,female,6
+2025-10-24,0,NOSΔ11,male,7
+2025-10-24,0,NOSΔ23,female,2
+2025-10-24,0,NOSΔ23,male,1
+2025-10-24,0,wild type,female,11
+2025-10-24,0,wild type,male,14
+2025-10-25,0,NOSΔ11,female,6
+2025-10-25,0,NOSΔ11,male,6
+2025-10-25,0,NOSΔ23,female,0
+2025-10-25,0,NOSΔ23,male,3
+2025-10-25,0,wild type,female,9
+2025-10-25,0,wild type,male,8
+2025-10-26,0,NOSΔ11,female,4
+2025-10-26,0,NOSΔ11,male,5
+2025-10-26,0,NOSΔ23,female,2
+2025-10-26,0,NOSΔ23,male,4
+2025-10-26,0,wild type,female,11
+2025-10-26,0,wild type,male,5
+2025-10-27,0,NOSΔ11,female,8
+2025-10-27,0,NOSΔ11,male,15
+2025-10-27,0,NOSΔ23,female,2
+2025-10-27,0,NOSΔ23,male,10
+2025-10-27,0,wild type,female,15
+2025-10-27,0,wild type,male,30
+2025-10-28,0,NOSΔ11,female,18
+2025-10-28,0,NOSΔ11,male,13
+2025-10-28,0,NOSΔ23,female,6
+2025-10-28,0,NOSΔ23,male,2
+2025-10-28,0,wild type,female,14
+2025-10-28,0,wild type,male,34
+2025-10-29,0,NOSΔ11,female,9
+2025-10-29,0,NOSΔ11,male,9
+2025-10-29,0,NOSΔ23,female,5
+2025-10-29,0,NOSΔ23,male,6
+2025-10-29,0,wild type,female,21
+2025-10-29,0,wild type,male,25
+2025-10-30,0,NOSΔ11,female,9
+2025-10-30,0,NOSΔ11,male,6
+2025-10-30,0,NOSΔ23,female,2
+2025-10-30,0,NOSΔ23,male,6
+2025-10-30,0,wild type,female,19
+2025-10-30,0,wild type,male,10
+2025-10-31,0,NOSΔ11,female,9
+2025-10-31,0,NOSΔ11,male,6
+2025-10-31,0,NOSΔ23,female,1
+2025-10-31,0,NOSΔ23,male,1
+2025-10-31,0,wild type,female,8
+2025-10-31,0,wild type,male,15
+2025-11-01,0,NOSΔ11,female,3
+2025-11-01,0,NOSΔ11,male,2
+2025-11-01,0,NOSΔ23,female,3
+2025-11-01,0,NOSΔ23,male,2
+2025-11-01,0,wild type,female,7
+2025-11-01,0,wild type,male,13
+2025-11-02,1,NOSΔ11,female,2
+2025-11-02,1,NOSΔ11,male,1
+2025-11-02,1,NOSΔ23,female,0
+2025-11-02,1,NOSΔ23,male,0
+2025-11-02,1,wild type,female,2
+2025-11-02,1,wild type,male,3
+2025-11-03,1,NOSΔ11,female,2
+2025-11-03,1,NOSΔ11,male,0
+2025-11-03,1,NOSΔ23,female,0
+2025-11-03,1,NOSΔ23,male,2
+2025-11-03,1,wild type,female,0
+2025-11-03,1,wild type,male,4
+2025-11-04,1,NOSΔ11,female,1
+2025-11-04,1,NOSΔ11,male,0
+2025-11-04,1,NOSΔ23,female,0
+2025-11-04,1,NOSΔ23,male,0
+2025-11-04,1,wild type,female,0
+2025-11-04,1,wild type,male,0
+2025-11-05,1,NOSΔ11,female,0
+2025-11-05,1,NOSΔ11,male,1
+2025-11-05,1,NOSΔ23,female,0
+2025-11-05,1,NOSΔ23,male,0
+2025-11-05,1,wild type,female,0
+2025-11-05,1,wild type,male,0
+2025-11-06,1,NOSΔ11,female,0
+2025-11-06,1,NOSΔ11,male,0
+2025-11-06,1,NOSΔ23,female,0
+2025-11-06,1,NOSΔ23,male,0
+2025-11-06,1,wild type,female,0
+2025-11-06,1,wild type,male,0
+2025-11-07,1,NOSΔ11,female,0
+2025-11-07,1,NOSΔ11,male,0
+2025-11-07,1,NOSΔ23,female,0
+2025-11-07,1,NOSΔ23,male,0
+2025-11-07,1,wild type,female,0
+2025-11-07,1,wild type,male,0
+2025-11-08,1,NOSΔ11,female,0
+2025-11-08,1,NOSΔ11,male,0
+2025-11-08,1,NOSΔ23,female,0
+2025-11-08,1,NOSΔ23,male,0
+2025-11-08,1,wild type,female,0
+2025-11-08,1,wild type,male,0
+2025-11-09,0,NOSΔ11,female,0
+2025-11-09,0,NOSΔ11,male,0
+2025-11-09,0,NOSΔ23,female,0
+2025-11-09,0,NOSΔ23,male,0
+2025-11-09,0,wild type,female,0
+2025-11-09,0,wild type,male,0
+2025-11-10,0,NOSΔ11,female,6
+2025-11-10,0,NOSΔ11,male,3
+2025-11-10,0,NOSΔ23,female,0
+2025-11-10,0,NOSΔ23,male,0
+2025-11-10,0,wild type,female,1
+2025-11-10,0,wild type,male,0
+2025-11-11,0,NOSΔ11,female,0
+2025-11-11,0,NOSΔ11,male,1
+2025-11-11,0,NOSΔ23,female,0
+2025-11-11,0,NOSΔ23,male,0
+2025-11-11,0,wild type,female,3
+2025-11-11,0,wild type,male,4
+2025-11-12,0,NOSΔ11,female,8
+2025-11-12,0,NOSΔ11,male,4
+2025-11-12,0,NOSΔ23,female,1
+2025-11-12,0,NOSΔ23,male,1
+2025-11-12,0,wild type,female,11
+2025-11-12,0,wild type,male,3
+2025-11-13,0,NOSΔ11,female,5
+2025-11-13,0,NOSΔ11,male,2
+2025-11-13,0,NOSΔ23,female,2
+2025-11-13,0,NOSΔ23,male,2
+2025-11-13,0,wild type,female,11
+2025-11-13,0,wild type,male,11
+2025-11-14,0,NOSΔ11,female,4
+2025-11-14,0,NOSΔ11,male,7
+2025-11-14,0,NOSΔ23,female,3
+2025-11-14,0,NOSΔ23,male,3
+2025-11-14,0,wild type,female,5
+2025-11-14,0,wild type,male,4
+2025-11-15,0,NOSΔ11,female,5
+2025-11-15,0,NOSΔ11,male,1
+2025-11-15,0,NOSΔ23,female,3
+2025-11-15,0,NOSΔ23,male,3
+2025-11-15,0,wild type,female,14
+2025-11-15,0,wild type,male,13
+2025-11-16,0,NOSΔ11,female,6
+2025-11-16,0,NOSΔ11,male,13
+2025-11-16,0,NOSΔ23,female,3
+2025-11-16,0,NOSΔ23,male,3
+2025-11-16,0,wild type,female,11
+2025-11-16,0,wild type,male,8
+2025-11-17,0,NOSΔ11,female,13
+2025-11-17,0,NOSΔ11,male,11
+2025-11-17,0,NOSΔ23,female,4
+2025-11-17,0,NOSΔ23,male,4
+2025-11-17,0,wild type,female,13
+2025-11-17,0,wild type,male,15
+2025-11-18,0,NOSΔ11,female,6
+2025-11-18,0,NOSΔ11,male,9
+2025-11-18,0,NOSΔ23,female,2
+2025-11-18,0,NOSΔ23,male,2
+2025-11-18,0,wild type,female,10
+2025-11-18,0,wild type,male,26
+2025-11-19,0,NOSΔ11,female,6
+2025-11-19,0,NOSΔ11,male,4
+2025-11-19,0,NOSΔ23,female,3
+2025-11-19,0,NOSΔ23,male,3
+2025-11-19,0,wild type,female,13
+2025-11-19,0,wild type,male,18
+2025-11-20,0,NOSΔ11,female,5
+2025-11-20,0,NOSΔ11,male,10
+2025-11-20,0,NOSΔ23,female,1
+2025-11-20,0,NOSΔ23,male,1
+2025-11-20,0,wild type,female,9
+2025-11-20,0,wild type,male,18
+2025-11-21,0,NOSΔ11,female,11
+2025-11-21,0,NOSΔ11,male,6
+2025-11-21,0,NOSΔ23,female,2
+2025-11-21,0,NOSΔ23,male,2
+2025-11-21,0,wild type,female,24
+2025-11-21,0,wild type,male,30
+2025-11-22,0,NOSΔ11,female,2
+2025-11-22,0,NOSΔ11,male,15
+2025-11-22,0,NOSΔ23,female,4
+2025-11-22,0,NOSΔ23,male,4
+2025-11-22,0,wild type,female,10
+2025-11-22,0,wild type,male,25
+2025-11-23,0,NOSΔ11,female,8
+2025-11-23,0,NOSΔ11,male,10
+2025-11-23,0,NOSΔ23,female,4
+2025-11-23,0,NOSΔ23,male,4
+2025-11-23,0,wild type,female,11
+2025-11-23,0,wild type,male,30
+2025-11-24,0,NOSΔ11,female,10
+2025-11-24,0,NOSΔ11,male,7
+2025-11-24,0,NOSΔ23,female,7
+2025-11-24,0,NOSΔ23,male,7
+2025-11-24,0,wild type,female,28
+2025-11-24,0,wild type,male,31
+2025-11-25,0,NOSΔ11,female,5
+2025-11-25,0,NOSΔ11,male,9
+2025-11-25,0,NOSΔ23,female,1
+2025-11-25,0,NOSΔ23,male,1
+2025-11-25,0,wild type,female,21
+2025-11-25,0,wild type,male,27
+2025-11-26,0,NOSΔ11,female,13
+2025-11-26,0,NOSΔ11,male,14
+2025-11-26,0,NOSΔ23,female,1
+2025-11-26,0,NOSΔ23,male,1
+2025-11-26,0,wild type,female,29
+2025-11-26,0,wild type,male,40
+2025-11-27,0,NOSΔ11,female,3
+2025-11-27,0,NOSΔ11,male,3
+2025-11-27,0,NOSΔ23,female,1
+2025-11-27,0,NOSΔ23,male,1
+2025-11-27,0,wild type,female,18
+2025-11-27,0,wild type,male,12
+2025-11-28,0,NOSΔ11,female,8
+2025-11-28,0,NOSΔ11,male,8
+2025-11-28,0,NOSΔ23,female,1
+2025-11-28,0,NOSΔ23,male,1
+2025-11-28,0,wild type,female,13
+2025-11-28,0,wild type,male,17
+2025-11-29,0,NOSΔ11,female,0
+2025-11-29,0,NOSΔ11,male,1
+2025-11-29,0,NOSΔ23,female,0
+2025-11-29,0,NOSΔ23,male,0
+2025-11-29,0,wild type,female,3
+2025-11-29,0,wild type,male,8
+2025-11-30,0,NOSΔ11,female,3
+2025-11-30,0,NOSΔ11,male,1
+2025-11-30,0,NOSΔ23,female,3
+2025-11-30,0,NOSΔ23,male,3
+2025-11-30,0,wild type,female,3
+2025-11-30,0,wild type,male,9
+2025-12-01,0,NOSΔ11,female,2
+2025-12-01,0,NOSΔ11,male,2
+2025-12-01,0,NOSΔ23,female,0
+2025-12-01,0,NOSΔ23,male,1
+2025-12-01,0,wild type,female,2
+2025-12-01,0,wild type,male,2
+2025-12-02,1,NOSΔ11,female,1
+2025-12-02,1,NOSΔ11,male,1
+2025-12-02,1,NOSΔ23,female,1
+2025-12-02,1,NOSΔ23,male,0
+2025-12-02,1,wild type,female,1
+2025-12-02,1,wild type,male,0
+2025-12-03,1,NOSΔ11,female,0
+2025-12-03,1,NOSΔ11,male,0
+2025-12-03,1,NOSΔ23,female,0
+2025-12-03,1,NOSΔ23,male,0
+2025-12-03,1,wild type,female,0
+2025-12-03,1,wild type,male,1
+2025-12-04,1,NOSΔ11,female,0
+2025-12-04,1,NOSΔ11,male,0
+2025-12-04,1,NOSΔ23,female,0
+2025-12-04,1,NOSΔ23,male,0
+2025-12-04,1,wild type,female,0
+2025-12-04,1,wild type,male,1
+2025-12-05,1,NOSΔ11,female,0
+2025-12-05,1,NOSΔ11,male,0
+2025-12-05,1,NOSΔ23,female,0
+2025-12-05,1,NOSΔ23,male,0
+2025-12-05,1,wild type,female,0
+2025-12-05,1,wild type,male,0
+2025-12-06,1,NOSΔ11,female,0
+2025-12-06,1,NOSΔ11,male,0
+2025-12-06,1,NOSΔ23,female,0
+2025-12-06,1,NOSΔ23,male,0
+2025-12-06,1,wild type,female,0
+2025-12-06,1,wild type,male,0
+2025-12-07,1,NOSΔ11,female,0
+2025-12-07,1,NOSΔ11,male,0
+2025-12-07,1,NOSΔ23,female,0
+2025-12-07,1,NOSΔ23,male,0
+2025-12-07,1,wild type,female,0
+2025-12-07,1,wild type,male,0
+2025-12-08,1,NOSΔ11,female,3
+2025-12-08,1,NOSΔ11,male,0
+2025-12-08,1,NOSΔ23,female,0
+2025-12-08,1,NOSΔ23,male,0
+2025-12-08,1,wild type,female,0
+2025-12-08,1,wild type,male,0
+2025-12-09,0,NOSΔ11,female,7
+2025-12-09,0,NOSΔ11,male,1
+2025-12-09,0,NOSΔ23,female,0
+2025-12-09,0,NOSΔ23,male,0
+2025-12-09,0,wild type,female,1
+2025-12-09,0,wild type,male,0
+2025-12-10,0,NOSΔ11,female,2
+2025-12-10,0,NOSΔ11,male,0
+2025-12-10,0,NOSΔ23,female,0
+2025-12-10,0,NOSΔ23,male,0
+2025-12-10,0,wild type,female,0
+2025-12-10,0,wild type,male,1
+2025-12-11,0,NOSΔ11,female,14
+2025-12-11,0,NOSΔ11,male,5
+2025-12-11,0,NOSΔ23,female,1
+2025-12-11,0,NOSΔ23,male,0
+2025-12-11,0,wild type,female,7
+2025-12-11,0,wild type,male,8
+2025-12-12,0,NOSΔ11,female,7
+2025-12-12,0,NOSΔ11,male,6
+2025-12-12,0,NOSΔ23,female,1
+2025-12-12,0,NOSΔ23,male,0
+2025-12-12,0,wild type,female,21
+2025-12-12,0,wild type,male,9
+2025-12-13,0,NOSΔ11,female,5
+2025-12-13,0,NOSΔ11,male,6
+2025-12-13,0,NOSΔ23,female,2
+2025-12-13,0,NOSΔ23,male,1
+2025-12-13,0,wild type,female,25
+2025-12-13,0,wild type,male,9
+2025-12-14,0,NOSΔ11,female,5
+2025-12-14,0,NOSΔ11,male,8
+2025-12-14,0,NOSΔ23,female,0
+2025-12-14,0,NOSΔ23,male,2
+2025-12-14,0,wild type,female,22
+2025-12-14,0,wild type,male,16
+2025-12-15,0,NOSΔ11,female,8
+2025-12-15,0,NOSΔ11,male,7
+2025-12-15,0,NOSΔ23,female,3
+2025-12-15,0,NOSΔ23,male,0
+2025-12-15,0,wild type,female,40
+2025-12-15,0,wild type,male,30
+2025-12-16,0,NOSΔ11,female,6
+2025-12-16,0,NOSΔ11,male,7
+2025-12-16,0,NOSΔ23,female,3
+2025-12-16,0,NOSΔ23,male,2
+2025-12-16,0,wild type,female,21
+2025-12-16,0,wild type,male,27
+2025-12-17,0,NOSΔ11,female,7
+2025-12-17,0,NOSΔ11,male,9
+2025-12-17,0,NOSΔ23,female,7
+2025-12-17,0,NOSΔ23,male,7
+2025-12-17,0,wild type,female,35
+2025-12-17,0,wild type,male,25
+2025-12-18,0,NOSΔ11,female,4
+2025-12-18,0,NOSΔ11,male,6
+2025-12-18,0,NOSΔ23,female,4
+2025-12-18,0,NOSΔ23,male,5
+2025-12-18,0,wild type,female,11
+2025-12-18,0,wild type,male,13
+2025-12-19,0,NOSΔ11,female,8
+2025-12-19,0,NOSΔ11,male,7
+2025-12-19,0,NOSΔ23,female,2
+2025-12-19,0,NOSΔ23,male,8
+2025-12-19,0,wild type,female,25
+2025-12-19,0,wild type,male,18
+2025-12-20,0,NOSΔ11,female,1
+2025-12-20,0,NOSΔ11,male,3
+2025-12-20,0,NOSΔ23,female,5
+2025-12-20,0,NOSΔ23,male,3
+2025-12-20,0,wild type,female,13
+2025-12-20,0,wild type,male,21
+2025-12-21,0,NOSΔ11,female,6
+2025-12-21,0,NOSΔ11,male,3
+2025-12-21,0,NOSΔ23,female,3
+2025-12-21,0,NOSΔ23,male,2
+2025-12-21,0,wild type,female,13
+2025-12-21,0,wild type,male,15
+2025-12-22,0,NOSΔ11,female,6
+2025-12-22,0,NOSΔ11,male,11
+2025-12-22,0,NOSΔ23,female,6
+2025-12-22,0,NOSΔ23,male,7
+2025-12-22,0,wild type,female,22
+2025-12-22,0,wild type,male,20
+2025-12-23,0,NOSΔ11,female,2
+2025-12-23,0,NOSΔ11,male,6
+2025-12-23,0,NOSΔ23,female,4
+2025-12-23,0,NOSΔ23,male,5
+2025-12-23,0,wild type,female,25
+2025-12-23,0,wild type,male,32
+2025-12-24,0,NOSΔ11,female,1
+2025-12-24,0,NOSΔ11,male,1
+2025-12-24,0,NOSΔ23,female,2
+2025-12-24,0,NOSΔ23,male,3
+2025-12-24,0,wild type,female,13
+2025-12-24,0,wild type,male,15
+2025-12-25,0,NOSΔ11,female,11
+2025-12-25,0,NOSΔ11,male,4
+2025-12-25,0,NOSΔ23,female,5
+2025-12-25,0,NOSΔ23,male,1
+2025-12-25,0,wild type,female,24
+2025-12-25,0,wild type,male,22
+2025-12-26,0,NOSΔ11,female,6
+2025-12-26,0,NOSΔ11,male,7
+2025-12-26,0,NOSΔ23,female,6
+2025-12-26,0,NOSΔ23,male,2
+2025-12-26,0,wild type,female,25
+2025-12-26,0,wild type,male,23
+2025-12-27,0,NOSΔ11,female,0
+2025-12-27,0,NOSΔ11,male,4
+2025-12-27,0,NOSΔ23,female,2
+2025-12-27,0,NOSΔ23,male,4
+2025-12-27,0,wild type,female,3
+2025-12-27,0,wild type,male,5
+2025-12-28,0,NOSΔ11,female,0
+2025-12-28,0,NOSΔ11,male,1
+2025-12-28,0,NOSΔ23,female,2
+2025-12-28,0,NOSΔ23,male,1
+2025-12-28,0,wild type,female,7
+2025-12-28,0,wild type,male,6
+2025-12-29,0,NOSΔ11,female,6
+2025-12-29,0,NOSΔ11,male,4
+2025-12-29,0,NOSΔ23,female,2
+2025-12-29,0,NOSΔ23,male,3
+2025-12-29,0,wild type,female,4
+2025-12-29,0,wild type,male,16
+2025-12-30,0,NOSΔ11,female,5
+2025-12-30,0,NOSΔ11,male,5
+2025-12-30,0,NOSΔ23,female,0
+2025-12-30,0,NOSΔ23,male,1
+2025-12-30,0,wild type,female,7
+2025-12-30,0,wild type,male,15
+2025-12-31,1,NOSΔ11,female,0
+2025-12-31,1,NOSΔ11,male,0
+2025-12-31,1,NOSΔ23,female,1
+2025-12-31,1,NOSΔ23,male,1
+2025-12-31,1,wild type,female,1
+2025-12-31,1,wild type,male,1
+2026-01-01,1,NOSΔ11,female,2
+2026-01-01,1,NOSΔ11,male,2
+2026-01-01,1,NOSΔ23,female,0
+2026-01-01,1,NOSΔ23,male,2
+2026-01-01,1,wild type,female,1
+2026-01-01,1,wild type,male,1
+2026-01-02,1,NOSΔ11,female,0
+2026-01-02,1,NOSΔ11,male,1
+2026-01-02,1,NOSΔ23,female,0
+2026-01-02,1,NOSΔ23,male,0
+2026-01-02,1,wild type,female,0
+2026-01-02,1,wild type,male,2
+2026-01-03,1,NOSΔ11,female,1
+2026-01-03,1,NOSΔ11,male,0
+2026-01-03,1,NOSΔ23,female,0
+2026-01-03,1,NOSΔ23,male,0
+2026-01-03,1,wild type,female,0
+2026-01-03,1,wild type,male,0
+2026-01-04,1,NOSΔ11,female,0
+2026-01-04,1,NOSΔ11,male,0
+2026-01-04,1,NOSΔ23,female,0
+2026-01-04,1,NOSΔ23,male,0
+2026-01-04,1,wild type,female,0
+2026-01-04,1,wild type,male,0
+2026-01-05,1,NOSΔ11,female,1
+2026-01-05,1,NOSΔ11,male,0
+2026-01-05,1,NOSΔ23,female,0
+2026-01-05,1,NOSΔ23,male,0
+2026-01-05,1,wild type,female,0
+2026-01-05,1,wild type,male,0
+2026-01-06,1,NOSΔ11,female,0
+2026-01-06,1,NOSΔ11,male,0
+2026-01-06,1,NOSΔ23,female,0
+2026-01-06,1,NOSΔ23,male,0
+2026-01-06,1,wild type,female,0
+2026-01-06,1,wild type,male,0
+2026-01-07,0,NOSΔ11,female,1
+2026-01-07,0,NOSΔ11,male,0
+2026-01-07,0,NOSΔ23,female,0
+2026-01-07,0,NOSΔ23,male,0
+2026-01-07,0,wild type,female,0
+2026-01-07,0,wild type,male,1
+2026-01-08,0,NOSΔ11,female,1
+2026-01-08,0,NOSΔ11,male,0
+2026-01-08,0,NOSΔ23,female,0
+2026-01-08,0,NOSΔ23,male,0
+2026-01-08,0,wild type,female,0
+2026-01-08,0,wild type,male,0
+2026-01-09,0,NOSΔ11,female,2
+2026-01-09,0,NOSΔ11,male,2
+2026-01-09,0,NOSΔ23,female,0
+2026-01-09,0,NOSΔ23,male,0
+2026-01-09,0,wild type,female,5
+2026-01-09,0,wild type,male,3
+2026-01-10,0,NOSΔ11,female,1
+2026-01-10,0,NOSΔ11,male,1
+2026-01-10,0,NOSΔ23,female,0
+2026-01-10,0,NOSΔ23,male,0
+2026-01-10,0,wild type,female,6
+2026-01-10,0,wild type,male,4
+2026-01-11,0,NOSΔ11,female,5
+2026-01-11,0,NOSΔ11,male,2
+2026-01-11,0,NOSΔ23,female,4
+2026-01-11,0,NOSΔ23,male,1
+2026-01-11,0,wild type,female,13
+2026-01-11,0,wild type,male,6
+2026-01-12,0,NOSΔ11,female,9
+2026-01-12,0,NOSΔ11,male,1
+2026-01-12,0,NOSΔ23,female,3
+2026-01-12,0,NOSΔ23,male,3
+2026-01-12,0,wild type,female,20
+2026-01-12,0,wild type,male,23
+2026-01-13,0,NOSΔ11,female,5
+2026-01-13,0,NOSΔ11,male,5
+2026-01-13,0,NOSΔ23,female,1
+2026-01-13,0,NOSΔ23,male,2
+2026-01-13,0,wild type,female,24
+2026-01-13,0,wild type,male,23
+2026-01-14,0,NOSΔ11,female,9
+2026-01-14,0,NOSΔ11,male,7
+2026-01-14,0,NOSΔ23,female,5
+2026-01-14,0,NOSΔ23,male,4
+2026-01-14,0,wild type,female,25
+2026-01-14,0,wild type,male,35
+2026-01-15,0,NOSΔ11,female,6
+2026-01-15,0,NOSΔ11,male,5
+2026-01-15,0,NOSΔ23,female,6
+2026-01-15,0,NOSΔ23,male,2
+2026-01-15,0,wild type,female,26
+2026-01-15,0,wild type,male,25
+2026-01-16,0,NOSΔ11,female,3
+2026-01-16,0,NOSΔ11,male,7
+2026-01-16,0,NOSΔ23,female,3
+2026-01-16,0,NOSΔ23,male,4
+2026-01-16,0,wild type,female,13
+2026-01-16,0,wild type,male,19
+2026-01-17,0,NOSΔ11,female,1
+2026-01-17,0,NOSΔ11,male,1
+2026-01-17,0,NOSΔ23,female,3
+2026-01-17,0,NOSΔ23,male,3
+2026-01-17,0,wild type,female,15
+2026-01-17,0,wild type,male,6
+2026-01-18,0,NOSΔ11,female,4
+2026-01-18,0,NOSΔ11,male,5
+2026-01-18,0,NOSΔ23,female,2
+2026-01-18,0,NOSΔ23,male,0
+2026-01-18,0,wild type,female,6
+2026-01-18,0,wild type,male,5
+2026-01-19,0,NOSΔ11,female,4
+2026-01-19,0,NOSΔ11,male,8
+2026-01-19,0,NOSΔ23,female,3
+2026-01-19,0,NOSΔ23,male,3
+2026-01-19,0,wild type,female,13
+2026-01-19,0,wild type,male,14
+2026-01-20,0,NOSΔ11,female,6
+2026-01-20,0,NOSΔ11,male,7
+2026-01-20,0,NOSΔ23,female,3
+2026-01-20,0,NOSΔ23,male,3
+2026-01-20,0,wild type,female,15
+2026-01-20,0,wild type,male,8
+2026-01-21,0,NOSΔ11,female,2
+2026-01-21,0,NOSΔ11,male,9
+2026-01-21,0,NOSΔ23,female,1
+2026-01-21,0,NOSΔ23,male,2
+2026-01-21,0,wild type,female,18
+2026-01-21,0,wild type,male,19
+2026-01-22,0,NOSΔ11,female,3
+2026-01-22,0,NOSΔ11,male,2
+2026-01-22,0,NOSΔ23,female,3
+2026-01-22,0,NOSΔ23,male,2
+2026-01-22,0,wild type,female,17
+2026-01-22,0,wild type,male,8
+2026-01-23,0,NOSΔ11,female,2
+2026-01-23,0,NOSΔ11,male,2
+2026-01-23,0,NOSΔ23,female,5
+2026-01-23,0,NOSΔ23,male,1
+2026-01-23,0,wild type,female,17
+2026-01-23,0,wild type,male,13
+2026-01-24,0,NOSΔ11,female,4
+2026-01-24,0,NOSΔ11,male,3
+2026-01-24,0,NOSΔ23,female,4
+2026-01-24,0,NOSΔ23,male,1
+2026-01-24,0,wild type,female,10
+2026-01-24,0,wild type,male,9
+2026-01-25,0,NOSΔ11,female,1
+2026-01-25,0,NOSΔ11,male,1
+2026-01-25,0,NOSΔ23,female,2
+2026-01-25,0,NOSΔ23,male,2
+2026-01-25,0,wild type,female,10
+2026-01-25,0,wild type,male,8
+2026-01-26,0,NOSΔ11,female,3
+2026-01-26,0,NOSΔ11,male,5
+2026-01-26,0,NOSΔ23,female,5
+2026-01-26,0,NOSΔ23,male,3
+2026-01-26,0,wild type,female,19
+2026-01-26,0,wild type,male,15
+2026-01-27,0,NOSΔ11,female,3
+2026-01-27,0,NOSΔ11,male,2
+2026-01-27,0,NOSΔ23,female,4
+2026-01-27,0,NOSΔ23,male,7
+2026-01-27,0,wild type,female,11
+2026-01-27,0,wild type,male,11
+2026-01-28,0,NOSΔ11,female,7
+2026-01-28,0,NOSΔ11,male,1
+2026-01-28,0,NOSΔ23,female,3
+2026-01-28,0,NOSΔ23,male,1
+2026-01-28,0,wild type,female,6
+2026-01-28,0,wild type,male,2
+2026-01-29,1,NOSΔ11,female,1
+2026-01-29,1,NOSΔ11,male,2
+2026-01-29,1,NOSΔ23,female,2
+2026-01-29,1,NOSΔ23,male,0
+2026-01-29,1,wild type,female,2
+2026-01-29,1,wild type,male,4
+2026-01-30,1,NOSΔ11,female,1
+2026-01-30,1,NOSΔ11,male,0
+2026-01-30,1,NOSΔ23,female,0
+2026-01-30,1,NOSΔ23,male,0
+2026-01-30,1,wild type,female,0
+2026-01-30,1,wild type,male,1
+2026-01-31,1,NOSΔ11,female,1
+2026-01-31,1,NOSΔ11,male,2
+2026-01-31,1,NOSΔ23,female,0
+2026-01-31,1,NOSΔ23,male,0
+2026-01-31,1,wild type,female,0
+2026-01-31,1,wild type,male,1
+2026-02-01,1,NOSΔ11,female,0
+2026-02-01,1,NOSΔ11,male,1
+2026-02-01,1,NOSΔ23,female,0
+2026-02-01,1,NOSΔ23,male,1
+2026-02-01,1,wild type,female,0
+2026-02-01,1,wild type,male,0
+2026-02-02,1,NOSΔ11,female,1
+2026-02-02,1,NOSΔ11,male,0
+2026-02-02,1,NOSΔ23,female,0
+2026-02-02,1,NOSΔ23,male,0
+2026-02-02,1,wild type,female,1
+2026-02-02,1,wild type,male,0
+2026-02-03,1,NOSΔ11,female,0
+2026-02-03,1,NOSΔ11,male,0
+2026-02-03,1,NOSΔ23,female,0
+2026-02-03,1,NOSΔ23,male,0
+2026-02-03,1,wild type,female,0
+2026-02-03,1,wild type,male,0
+2026-02-04,1,NOSΔ11,female,0
+2026-02-04,1,NOSΔ11,male,0
+2026-02-04,1,NOSΔ23,female,0
+2026-02-04,1,NOSΔ23,male,0
+2026-02-04,1,wild type,female,0
+2026-02-04,1,wild type,male,0
+2026-02-05,0,NOSΔ11,female,0
+2026-02-05,0,NOSΔ11,male,0
+2026-02-05,0,NOSΔ23,female,0
+2026-02-05,0,NOSΔ23,male,0
+2026-02-05,0,wild type,female,0
+2026-02-05,0,wild type,male,0
+2026-02-06,0,NOSΔ11,female,0
+2026-02-06,0,NOSΔ11,male,0
+2026-02-06,0,NOSΔ23,female,0
+2026-02-06,0,NOSΔ23,male,0
+2026-02-06,0,wild type,female,0
+2026-02-06,0,wild type,male,1
+2026-02-07,0,NOSΔ11,female,1
+2026-02-07,0,NOSΔ11,male,0
+2026-02-07,0,NOSΔ23,female,0
+2026-02-07,0,NOSΔ23,male,0
+2026-02-07,0,wild type,female,1
+2026-02-07,0,wild type,male,2
+2026-02-08,0,NOSΔ11,female,0
+2026-02-08,0,NOSΔ11,male,0
+2026-02-08,0,NOSΔ23,female,0
+2026-02-08,0,NOSΔ23,male,0
+2026-02-08,0,wild type,female,0
+2026-02-08,0,wild type,male,0
+2026-02-09,0,NOSΔ11,female,3
+2026-02-09,0,NOSΔ11,male,3
+2026-02-09,0,NOSΔ23,female,0
+2026-02-09,0,NOSΔ23,male,0
+2026-02-09,0,wild type,female,2
+2026-02-09,0,wild type,male,1
+2026-02-10,0,NOSΔ11,female,2
+2026-02-10,0,NOSΔ11,male,1
+2026-02-10,0,NOSΔ23,female,3
+2026-02-10,0,NOSΔ23,male,0
+2026-02-10,0,wild type,female,4
+2026-02-10,0,wild type,male,6
+2026-02-11,0,NOSΔ11,female,2
+2026-02-11,0,NOSΔ11,male,3
+2026-02-11,0,NOSΔ23,female,0
+2026-02-11,0,NOSΔ23,male,0
+2026-02-11,0,wild type,female,6
+2026-02-11,0,wild type,male,5
+2026-02-12,0,NOSΔ11,female,3
+2026-02-12,0,NOSΔ11,male,2
+2026-02-12,0,NOSΔ23,female,2
+2026-02-12,0,NOSΔ23,male,3
+2026-02-12,0,wild type,female,8
+2026-02-12,0,wild type,male,11
+2026-02-13,0,NOSΔ11,female,3
+2026-02-13,0,NOSΔ11,male,1
+2026-02-13,0,NOSΔ23,female,2
+2026-02-13,0,NOSΔ23,male,1
+2026-02-13,0,wild type,female,13
+2026-02-13,0,wild type,male,13
+2026-02-14,0,NOSΔ11,female,0
+2026-02-14,0,NOSΔ11,male,1
+2026-02-14,0,NOSΔ23,female,0
+2026-02-14,0,NOSΔ23,male,0
+2026-02-14,0,wild type,female,3
+2026-02-14,0,wild type,male,8
+2026-02-15,0,NOSΔ11,female,0
+2026-02-15,0,NOSΔ11,male,0
+2026-02-15,0,NOSΔ23,female,2
+2026-02-15,0,NOSΔ23,male,1
+2026-02-15,0,wild type,female,2
+2026-02-15,0,wild type,male,13
+2026-02-16,0,NOSΔ11,female,6
+2026-02-16,0,NOSΔ11,male,7
+2026-02-16,0,NOSΔ23,female,4
+2026-02-16,0,NOSΔ23,male,7
+2026-02-16,0,wild type,female,6
+2026-02-16,0,wild type,male,14
+2026-02-17,0,NOSΔ11,female,1
+2026-02-17,0,NOSΔ11,male,2
+2026-02-17,0,NOSΔ23,female,6
+2026-02-17,0,NOSΔ23,male,3
+2026-02-17,0,wild type,female,6
+2026-02-17,0,wild type,male,10
+2026-02-18,0,NOSΔ11,female,1
+2026-02-18,0,NOSΔ11,male,0
+2026-02-18,0,NOSΔ23,female,2
+2026-02-18,0,NOSΔ23,male,1
+2026-02-18,0,wild type,female,4
+2026-02-18,0,wild type,male,11
+2026-02-19,0,NOSΔ11,female,4
+2026-02-19,0,NOSΔ11,male,9
+2026-02-19,0,NOSΔ23,female,15
+2026-02-19,0,NOSΔ23,male,11
+2026-02-19,0,wild type,female,22
+2026-02-19,0,wild type,male,12
+2026-02-20,0,NOSΔ11,female,6
+2026-02-20,0,NOSΔ11,male,4
+2026-02-20,0,NOSΔ23,female,2
+2026-02-20,0,NOSΔ23,male,3
+2026-02-20,0,wild type,female,12
+2026-02-20,0,wild type,male,19
+2026-02-21,0,NOSΔ11,female,2
+2026-02-21,0,NOSΔ11,male,5
+2026-02-21,0,NOSΔ23,female,2
+2026-02-21,0,NOSΔ23,male,1
+2026-02-21,0,wild type,female,10
+2026-02-21,0,wild type,male,11
+2026-02-22,0,NOSΔ11,female,1
+2026-02-22,0,NOSΔ11,male,2
+2026-02-22,0,NOSΔ23,female,8
+2026-02-22,0,NOSΔ23,male,3
+2026-02-22,0,wild type,female,14
+2026-02-22,0,wild type,male,19
+2026-02-23,0,NOSΔ11,female,6
+2026-02-23,0,NOSΔ11,male,5
+2026-02-23,0,NOSΔ23,female,12
+2026-02-23,0,NOSΔ23,male,5
+2026-02-23,0,wild type,female,31
+2026-02-23,0,wild type,male,25
+2026-02-24,0,NOSΔ11,female,2
+2026-02-24,0,NOSΔ11,male,4
+2026-02-24,0,NOSΔ23,female,6
+2026-02-24,0,NOSΔ23,male,6
+2026-02-24,0,wild type,female,9
+2026-02-24,0,wild type,male,13
+2026-02-25,0,NOSΔ11,female,5
+2026-02-25,0,NOSΔ11,male,4
+2026-02-25,0,NOSΔ23,female,9
+2026-02-25,0,NOSΔ23,male,7
+2026-02-25,0,wild type,female,19
+2026-02-25,0,wild type,male,14
+2026-02-26,0,NOSΔ11,female,1
+2026-02-26,0,NOSΔ11,male,2
+2026-02-26,0,NOSΔ23,female,10
+2026-02-26,0,NOSΔ23,male,4
+2026-02-26,0,wild type,female,9
+2026-02-26,0,wild type,male,8
+2026-02-27,0,NOSΔ11,female,0
+2026-02-27,0,NOSΔ11,male,0
+2026-02-27,0,NOSΔ23,female,0
+2026-02-27,0,NOSΔ23,male,0
+2026-02-27,0,wild type,female,0
+2026-02-27,0,wild type,male,4
+2026-02-28,1,NOSΔ11,female,1
+2026-02-28,1,NOSΔ11,male,1
+2026-02-28,1,NOSΔ23,female,1
+2026-02-28,1,NOSΔ23,male,2
+2026-02-28,1,wild type,female,2
+2026-02-28,1,wild type,male,1
+2026-03-01,1,NOSΔ11,female,0
+2026-03-01,1,NOSΔ11,male,0
+2026-03-01,1,NOSΔ23,female,0
+2026-03-01,1,NOSΔ23,male,1
+2026-03-01,1,wild type,female,0
+2026-03-01,1,wild type,male,0
+2026-03-02,1,NOSΔ11,female,0
+2026-03-02,1,NOSΔ11,male,0
+2026-03-02,1,NOSΔ23,female,1
+2026-03-02,1,NOSΔ23,male,1
+2026-03-02,1,wild type,female,0
+2026-03-02,1,wild type,male,0
+2026-03-03,1,NOSΔ11,female,0
+2026-03-03,1,NOSΔ11,male,1
+2026-03-03,1,NOSΔ23,female,1
+2026-03-03,1,NOSΔ23,male,0
+2026-03-03,1,wild type,female,0
+2026-03-03,1,wild type,male,0
+2026-03-04,1,NOSΔ11,female,0
+2026-03-04,1,NOSΔ11,male,0
+2026-03-04,1,NOSΔ23,female,0
+2026-03-04,1,NOSΔ23,male,0
+2026-03-04,1,wild type,female,0
+2026-03-04,1,wild type,male,0
+2026-03-05,1,NOSΔ11,female,1
+2026-03-05,1,NOSΔ11,male,0
+2026-03-05,1,NOSΔ23,female,0
+2026-03-05,1,NOSΔ23,male,0
+2026-03-05,1,wild type,female,0
+2026-03-05,1,wild type,male,0
+2026-03-06,1,NOSΔ11,female,0
+2026-03-06,1,NOSΔ11,male,0
+2026-03-06,1,NOSΔ23,female,0
+2026-03-06,1,NOSΔ23,male,0
+2026-03-06,1,wild type,female,0
+2026-03-06,1,wild type,male,1
+2026-03-07,0,NOSΔ11,female,0
+2026-03-07,0,NOSΔ11,male,0
+2026-03-07,0,NOSΔ23,female,0
+2026-03-07,0,NOSΔ23,male,0
+2026-03-07,0,wild type,female,0
+2026-03-07,0,wild type,male,0
+2026-03-08,0,NOSΔ11,female,0
+2026-03-08,0,NOSΔ11,male,0
+2026-03-08,0,NOSΔ23,female,0
+2026-03-08,0,NOSΔ23,male,0
+2026-03-08,0,wild type,female,0
+2026-03-08,0,wild type,male,0
+2026-03-09,0,NOSΔ11,female,7
+2026-03-09,0,NOSΔ11,male,3
+2026-03-09,0,NOSΔ23,female,0
+2026-03-09,0,NOSΔ23,male,0
+2026-03-09,0,wild type,female,1
+2026-03-09,0,wild type,male,3
+2026-03-10,0,NOSΔ11,female,9
+2026-03-10,0,NOSΔ11,male,7
+2026-03-10,0,NOSΔ23,female,2
+2026-03-10,0,NOSΔ23,male,5
+2026-03-10,0,wild type,female,5
+2026-03-10,0,wild type,male,3
+2026-03-11,0,NOSΔ11,female,1
+2026-03-11,0,NOSΔ11,male,2
+2026-03-11,0,NOSΔ23,female,5
+2026-03-11,0,NOSΔ23,male,1
+2026-03-11,0,wild type,female,6
+2026-03-11,0,wild type,male,15
+2026-03-12,0,NOSΔ11,female,10
+2026-03-12,0,NOSΔ11,male,7
+2026-03-12,0,NOSΔ23,female,12
+2026-03-12,0,NOSΔ23,male,2
+2026-03-12,0,wild type,female,25
+2026-03-12,0,wild type,male,32
+2026-03-13,0,NOSΔ11,female,1
+2026-03-13,0,NOSΔ11,male,2
+2026-03-13,0,NOSΔ23,female,4
+2026-03-13,0,NOSΔ23,male,12
+2026-03-13,0,wild type,female,21
+2026-03-13,0,wild type,male,24
+2026-03-14,0,NOSΔ11,female,5
+2026-03-14,0,NOSΔ11,male,1
+2026-03-14,0,NOSΔ23,female,3
+2026-03-14,0,NOSΔ23,male,3
+2026-03-14,0,wild type,female,10
+2026-03-14,0,wild type,male,16
+2026-03-15,0,NOSΔ11,female,1
+2026-03-15,0,NOSΔ11,male,2
+2026-03-15,0,NOSΔ23,female,7
+2026-03-15,0,NOSΔ23,male,4
+2026-03-15,0,wild type,female,5
+2026-03-15,0,wild type,male,14
+2026-03-16,0,NOSΔ11,female,6
+2026-03-16,0,NOSΔ11,male,8
+2026-03-16,0,NOSΔ23,female,10
+2026-03-16,0,NOSΔ23,male,6
+2026-03-16,0,wild type,female,15
+2026-03-16,0,wild type,male,15
+2026-03-17,0,NOSΔ11,female,1
+2026-03-17,0,NOSΔ11,male,1
+2026-03-17,0,NOSΔ23,female,5
+2026-03-17,0,NOSΔ23,male,6
+2026-03-17,0,wild type,female,8
+2026-03-17,0,wild type,male,21
+2026-03-18,0,NOSΔ11,female,9
+2026-03-18,0,NOSΔ11,male,3
+2026-03-18,0,NOSΔ23,female,6
+2026-03-18,0,NOSΔ23,male,7
+2026-03-18,0,wild type,female,25
+2026-03-18,0,wild type,male,18
+2026-03-19,0,NOSΔ11,female,3
+2026-03-19,0,NOSΔ11,male,8
+2026-03-19,0,NOSΔ23,female,7
+2026-03-19,0,NOSΔ23,male,10
+2026-03-19,0,wild type,female,20
+2026-03-19,0,wild type,male,16
+2026-03-20,0,NOSΔ11,female,0
+2026-03-20,0,NOSΔ11,male,5
+2026-03-20,0,NOSΔ23,female,5
+2026-03-20,0,NOSΔ23,male,7
+2026-03-20,0,wild type,female,11
+2026-03-20,0,wild type,male,10
+2026-03-21,0,NOSΔ11,female,1
+2026-03-21,0,NOSΔ11,male,3
+2026-03-21,0,NOSΔ23,female,6
+2026-03-21,0,NOSΔ23,male,2
+2026-03-21,0,wild type,female,8
+2026-03-21,0,wild type,male,9
+2026-03-22,0,NOSΔ11,female,3
+2026-03-22,0,NOSΔ11,male,6
+2026-03-22,0,NOSΔ23,female,4
+2026-03-22,0,NOSΔ23,male,3
+2026-03-22,0,wild type,female,8
+2026-03-22,0,wild type,male,17
+2026-03-23,0,NOSΔ11,female,4
+2026-03-23,0,NOSΔ11,male,3
+2026-03-23,0,NOSΔ23,female,3
+2026-03-23,0,NOSΔ23,male,3
+2026-03-23,0,wild type,female,22
+2026-03-23,0,wild type,male,18
+2026-03-24,0,NOSΔ11,female,3
+2026-03-24,0,NOSΔ11,male,8
+2026-03-24,0,NOSΔ23,female,10
+2026-03-24,0,NOSΔ23,male,15
+2026-03-24,0,wild type,female,21
+2026-03-24,0,wild type,male,18
+2026-03-25,0,NOSΔ11,female,2
+2026-03-25,0,NOSΔ11,male,1
+2026-03-25,0,NOSΔ23,female,5
+2026-03-25,0,NOSΔ23,male,4
+2026-03-25,0,wild type,female,21
+2026-03-25,0,wild type,male,22
+2026-03-26,0,NOSΔ11,female,2
+2026-03-26,0,NOSΔ11,male,2
+2026-03-26,0,NOSΔ23,female,10
+2026-03-26,0,NOSΔ23,male,5
+2026-03-26,0,wild type,female,13
+2026-03-26,0,wild type,male,10
+2026-03-27,0,NOSΔ11,female,1
+2026-03-27,0,NOSΔ11,male,1
+2026-03-27,0,NOSΔ23,female,7
+2026-03-27,0,NOSΔ23,male,8
+2026-03-27,0,wild type,female,12
+2026-03-27,0,wild type,male,4
+2026-03-28,0,NOSΔ11,female,1
+2026-03-28,0,NOSΔ11,male,2
+2026-03-28,0,NOSΔ23,female,10
+2026-03-28,0,NOSΔ23,male,3
+2026-03-28,0,wild type,female,5
+2026-03-28,0,wild type,male,6
+2026-03-29,0,NOSΔ11,female,2
+2026-03-29,0,NOSΔ11,male,1
+2026-03-29,0,NOSΔ23,female,2
+2026-03-29,0,NOSΔ23,male,3
+2026-03-29,0,wild type,female,1
+2026-03-29,0,wild type,male,8
+2026-03-30,1,NOSΔ11,female,1
+2026-03-30,1,NOSΔ11,male,1
+2026-03-30,1,NOSΔ23,female,3
+2026-03-30,1,NOSΔ23,male,4
+2026-03-30,1,wild type,female,2
+2026-03-30,1,wild type,male,0
+2026-03-31,1,NOSΔ11,female,0
+2026-03-31,1,NOSΔ11,male,2
+2026-03-31,1,NOSΔ23,female,0
+2026-03-31,1,NOSΔ23,male,0
+2026-03-31,1,wild type,female,0
+2026-03-31,1,wild type,male,0
+2026-04-01,1,NOSΔ11,female,0
+2026-04-01,1,NOSΔ11,male,0
+2026-04-01,1,NOSΔ23,female,0
+2026-04-01,1,NOSΔ23,male,0
+2026-04-01,1,wild type,female,1
+2026-04-01,1,wild type,male,0
+2026-04-02,1,NOSΔ11,female,0
+2026-04-02,1,NOSΔ11,male,0
+2026-04-02,1,NOSΔ23,female,1
+2026-04-02,1,NOSΔ23,male,1
+2026-04-02,1,wild type,female,0
+2026-04-02,1,wild type,male,0
+2026-04-03,1,NOSΔ11,female,0
+2026-04-03,1,NOSΔ11,male,0
+2026-04-03,1,NOSΔ23,female,0
+2026-04-03,1,NOSΔ23,male,0
+2026-04-03,1,wild type,female,0
+2026-04-03,1,wild type,male,0
+2026-04-04,1,NOSΔ11,female,0
+2026-04-04,1,NOSΔ11,male,0
+2026-04-04,1,NOSΔ23,female,0
+2026-04-04,1,NOSΔ23,male,0
+2026-04-04,1,wild type,female,0
+2026-04-04,1,wild type,male,0
+2026-04-05,1,NOSΔ11,female,0
+2026-04-05,1,NOSΔ11,male,0
+2026-04-05,1,NOSΔ23,female,0
+2026-04-05,1,NOSΔ23,male,0
+2026-04-05,1,wild type,female,0
+2026-04-05,1,wild type,male,0
+2026-04-06,0,NOSΔ11,female,0
+2026-04-06,0,NOSΔ11,male,0
+2026-04-06,0,NOSΔ23,female,0
+2026-04-06,0,NOSΔ23,male,0
+2026-04-06,0,wild type,female,1
+2026-04-06,0,wild type,male,0
+2026-04-07,0,NOSΔ11,female,0
+2026-04-07,0,NOSΔ11,male,0
+2026-04-07,0,NOSΔ23,female,1
+2026-04-07,0,NOSΔ23,male,0
+2026-04-07,0,wild type,female,2
+2026-04-07,0,wild type,male,2
+2026-04-08,0,NOSΔ11,female,4
+2026-04-08,0,NOSΔ11,male,0
+2026-04-08,0,NOSΔ23,female,0
+2026-04-08,0,NOSΔ23,male,0
+2026-04-08,0,wild type,female,5
+2026-04-08,0,wild type,male,8
+2026-04-09,0,NOSΔ11,female,1
+2026-04-09,0,NOSΔ11,male,1
+2026-04-09,0,NOSΔ23,female,3
+2026-04-09,0,NOSΔ23,male,1
+2026-04-09,0,wild type,female,9
+2026-04-09,0,wild type,male,5
+2026-04-10,0,NOSΔ11,female,1
+2026-04-10,0,NOSΔ11,male,1
+2026-04-10,0,NOSΔ23,female,5
+2026-04-10,0,NOSΔ23,male,4
+2026-04-10,0,wild type,female,14
+2026-04-10,0,wild type,male,11
+2026-04-11,0,NOSΔ11,female,2
+2026-04-11,0,NOSΔ11,male,4
+2026-04-11,0,NOSΔ23,female,5
+2026-04-11,0,NOSΔ23,male,9
+2026-04-11,0,wild type,female,7
+2026-04-11,0,wild type,male,8
+2026-04-12,0,NOSΔ11,female,3
+2026-04-12,0,NOSΔ11,male,0
+2026-04-12,0,NOSΔ23,female,7
+2026-04-12,0,NOSΔ23,male,2
+2026-04-12,0,wild type,female,5
+2026-04-12,0,wild type,male,11
+2026-04-13,0,NOSΔ11,female,5
+2026-04-13,0,NOSΔ11,male,1
+2026-04-13,0,NOSΔ23,female,11
+2026-04-13,0,NOSΔ23,male,4
+2026-04-13,0,wild type,female,18
+2026-04-13,0,wild type,male,7
+2026-04-14,0,NOSΔ11,female,0
+2026-04-14,0,NOSΔ11,male,0
+2026-04-14,0,NOSΔ23,female,5
+2026-04-14,0,NOSΔ23,male,10
+2026-04-14,0,wild type,female,13
+2026-04-14,0,wild type,male,14
+2026-04-15,0,NOSΔ11,female,1
+2026-04-15,0,NOSΔ11,male,2
+2026-04-15,0,NOSΔ23,female,7
+2026-04-15,0,NOSΔ23,male,6
+2026-04-15,0,wild type,female,13
+2026-04-15,0,wild type,male,25
+2026-04-16,0,NOSΔ11,female,2
+2026-04-16,0,NOSΔ11,male,4
+2026-04-16,0,NOSΔ23,female,8
+2026-04-16,0,NOSΔ23,male,9
+2026-04-16,0,wild type,female,17
+2026-04-16,0,wild type,male,13
+2026-04-17,0,NOSΔ11,female,3
+2026-04-17,0,NOSΔ11,male,4
+2026-04-17,0,NOSΔ23,female,7
+2026-04-17,0,NOSΔ23,male,8
+2026-04-17,0,wild type,female,13
+2026-04-17,0,wild type,male,7
+2026-04-18,0,NOSΔ11,female,1
+2026-04-18,0,NOSΔ11,male,2
+2026-04-18,0,NOSΔ23,female,3
+2026-04-18,0,NOSΔ23,male,0
+2026-04-18,0,wild type,female,9
+2026-04-18,0,wild type,male,6
+2026-04-19,0,NOSΔ11,female,1
+2026-04-19,0,NOSΔ11,male,3
+2026-04-19,0,NOSΔ23,female,3
+2026-04-19,0,NOSΔ23,male,3
+2026-04-19,0,wild type,female,9
+2026-04-19,0,wild type,male,4
+2026-04-20,0,NOSΔ11,female,3
+2026-04-20,0,NOSΔ11,male,5
+2026-04-20,0,NOSΔ23,female,17
+2026-04-20,0,NOSΔ23,male,9
+2026-04-20,0,wild type,female,17
+2026-04-20,0,wild type,male,7
+2026-04-21,0,NOSΔ11,female,2
+2026-04-21,0,NOSΔ11,male,2
+2026-04-21,0,NOSΔ23,female,3
+2026-04-21,0,NOSΔ23,male,4
+2026-04-21,0,wild type,female,7
+2026-04-21,0,wild type,male,14
+2026-04-22,0,NOSΔ11,female,3
+2026-04-22,0,NOSΔ11,male,6
+2026-04-22,0,NOSΔ23,female,7
+2026-04-22,0,NOSΔ23,male,5
+2026-04-22,0,wild type,female,12
+2026-04-22,0,wild type,male,16
+2026-04-23,0,NOSΔ11,female,4
+2026-04-23,0,NOSΔ11,male,6
+2026-04-23,0,NOSΔ23,female,7
+2026-04-23,0,NOSΔ23,male,13
+2026-04-23,0,wild type,female,14
+2026-04-23,0,wild type,male,10
+2026-04-24,0,NOSΔ11,female,2
+2026-04-24,0,NOSΔ11,male,2
+2026-04-24,0,NOSΔ23,female,7
+2026-04-24,0,NOSΔ23,male,2
+2026-04-24,0,wild type,female,10
+2026-04-24,0,wild type,male,9
+2026-04-25,0,NOSΔ11,female,1
+2026-04-25,0,NOSΔ11,male,0
+2026-04-25,0,NOSΔ23,female,2
+2026-04-25,0,NOSΔ23,male,4
+2026-04-25,0,wild type,female,5
+2026-04-25,0,wild type,male,3
+2026-04-26,0,NOSΔ11,female,1
+2026-04-26,0,NOSΔ11,male,0
+2026-04-26,0,NOSΔ23,female,3
+2026-04-26,0,NOSΔ23,male,1
+2026-04-26,0,wild type,female,3
+2026-04-26,0,wild type,male,4
+2026-04-27,0,NOSΔ11,female,3
+2026-04-27,0,NOSΔ11,male,3
+2026-04-27,0,NOSΔ23,female,6
+2026-04-27,0,NOSΔ23,male,10
+2026-04-27,0,wild type,female,3
+2026-04-27,0,wild type,male,3
+2026-04-28,1,NOSΔ11,female,0
+2026-04-28,1,NOSΔ11,male,2
+2026-04-28,1,NOSΔ23,female,2
+2026-04-28,1,NOSΔ23,male,1
+2026-04-28,1,wild type,female,0
+2026-04-28,1,wild type,male,1
+2026-04-29,1,NOSΔ11,female,0
+2026-04-29,1,NOSΔ11,male,1
+2026-04-29,1,NOSΔ23,female,1
+2026-04-29,1,NOSΔ23,male,1
+2026-04-29,1,wild type,female,0
+2026-04-29,1,wild type,male,0
+2026-04-30,1,NOSΔ11,female,0
+2026-04-30,1,NOSΔ11,male,0
+2026-04-30,1,NOSΔ23,female,0
+2026-04-30,1,NOSΔ23,male,2
+2026-04-30,1,wild type,female,3
+2026-04-30,1,wild type,male,2
+2026-05-01,1,NOSΔ11,female,0
+2026-05-01,1,NOSΔ11,male,0
+2026-05-01,1,NOSΔ23,female,2
+2026-05-01,1,NOSΔ23,male,2
+2026-05-01,1,wild type,female,0
+2026-05-01,1,wild type,male,0
+2026-05-02,1,NOSΔ11,female,0
+2026-05-02,1,NOSΔ11,male,0
+2026-05-02,1,NOSΔ23,female,0
+2026-05-02,1,NOSΔ23,male,0
+2026-05-02,1,wild type,female,0
+2026-05-02,1,wild type,male,0
+2026-05-03,1,NOSΔ11,female,0
+2026-05-03,1,NOSΔ11,male,0
+2026-05-03,1,NOSΔ23,female,0
+2026-05-03,1,NOSΔ23,male,0
+2026-05-03,1,wild type,female,0
+2026-05-03,1,wild type,male,0
+2026-05-04,1,NOSΔ11,female,0
+2026-05-04,1,NOSΔ11,male,0
+2026-05-04,1,NOSΔ23,female,0
+2026-05-04,1,NOSΔ23,male,0
+2026-05-04,1,wild type,female,0
+2026-05-04,1,wild type,male,0
+2026-05-05,0,NOSΔ11,female,0
+2026-05-05,0,NOSΔ11,male,1
+2026-05-05,0,NOSΔ23,female,0
+2026-05-05,0,NOSΔ23,male,0
+2026-05-05,0,wild type,female,0
+2026-05-05,0,wild type,male,0
+2026-05-06,0,NOSΔ11,female,0
+2026-05-06,0,NOSΔ11,male,2
+2026-05-06,0,NOSΔ23,female,1
+2026-05-06,0,NOSΔ23,male,0
+2026-05-06,0,wild type,female,1
+2026-05-06,0,wild type,male,0
+2026-05-07,0,NOSΔ11,female,3
+2026-05-07,0,NOSΔ11,male,0
+2026-05-07,0,NOSΔ23,female,1
+2026-05-07,0,NOSΔ23,male,0
+2026-05-07,0,wild type,female,2
+2026-05-07,0,wild type,male,1
+2026-05-08,0,NOSΔ11,female,3
+2026-05-08,0,NOSΔ11,male,4
+2026-05-08,0,NOSΔ23,female,0
+2026-05-08,0,NOSΔ23,male,0
+2026-05-08,0,wild type,female,4
+2026-05-08,0,wild type,male,2
+2026-05-09,0,NOSΔ11,female,3
+2026-05-09,0,NOSΔ11,male,2
+2026-05-09,0,NOSΔ23,female,0
+2026-05-09,0,NOSΔ23,male,0
+2026-05-09,0,wild type,female,8
+2026-05-09,0,wild type,male,2
+2026-05-10,0,NOSΔ11,female,1
+2026-05-10,0,NOSΔ11,male,1
+2026-05-10,0,NOSΔ23,female,10
+2026-05-10,0,NOSΔ23,male,3
+2026-05-10,0,wild type,female,4
+2026-05-10,0,wild type,male,3
+2026-05-11,0,NOSΔ11,female,3
+2026-05-11,0,NOSΔ11,male,5
+2026-05-11,0,NOSΔ23,female,7
+2026-05-11,0,NOSΔ23,male,4
+2026-05-11,0,wild type,female,14
+2026-05-11,0,wild type,male,10
+2026-05-12,0,NOSΔ11,female,5
+2026-05-12,0,NOSΔ11,male,7
+2026-05-12,0,NOSΔ23,female,9
+2026-05-12,0,NOSΔ23,male,9
+2026-05-12,0,wild type,female,9
+2026-05-12,0,wild type,male,15
+2026-05-13,0,NOSΔ11,female,4
+2026-05-13,0,NOSΔ11,male,10
+2026-05-13,0,NOSΔ23,female,11
+2026-05-13,0,NOSΔ23,male,8
+2026-05-13,0,wild type,female,11
+2026-05-13,0,wild type,male,14
+2026-05-14,0,NOSΔ11,female,3
+2026-05-14,0,NOSΔ11,male,1
+2026-05-14,0,NOSΔ23,female,9
+2026-05-14,0,NOSΔ23,male,6
+2026-05-14,0,wild type,female,6
+2026-05-14,0,wild type,male,7
+2026-05-15,0,NOSΔ11,female,3
+2026-05-15,0,NOSΔ11,male,7
+2026-05-15,0,NOSΔ23,female,11
+2026-05-15,0,NOSΔ23,male,9
+2026-05-15,0,wild type,female,8
+2026-05-15,0,wild type,male,13
+2026-05-16,0,NOSΔ11,female,2
+2026-05-16,0,NOSΔ11,male,4
+2026-05-16,0,NOSΔ23,female,5
+2026-05-16,0,NOSΔ23,male,4
+2026-05-16,0,wild type,female,7
+2026-05-16,0,wild type,male,4
+2026-05-17,0,NOSΔ11,female,1
+2026-05-17,0,NOSΔ11,male,1
+2026-05-17,0,NOSΔ23,female,6
+2026-05-17,0,NOSΔ23,male,1
+2026-05-17,0,wild type,female,5
+2026-05-17,0,wild type,male,4
+2026-05-18,0,NOSΔ11,female,4
+2026-05-18,0,NOSΔ11,male,5
+2026-05-18,0,NOSΔ23,female,13
+2026-05-18,0,NOSΔ23,male,11
+2026-05-18,0,wild type,female,6
+2026-05-18,0,wild type,male,5
+2026-05-19,0,NOSΔ11,female,1
+2026-05-19,0,NOSΔ11,male,5
+2026-05-19,0,NOSΔ23,female,9
+2026-05-19,0,NOSΔ23,male,3
+2026-05-19,0,wild type,female,12
+2026-05-19,0,wild type,male,10
+2026-05-20,0,NOSΔ11,female,11
+2026-05-20,0,NOSΔ11,male,9
+2026-05-20,0,NOSΔ23,female,5
+2026-05-20,0,NOSΔ23,male,6
+2026-05-20,0,wild type,female,11
+2026-05-20,0,wild type,male,16
+2026-05-21,0,NOSΔ11,female,11
+2026-05-21,0,NOSΔ11,male,10
+2026-05-21,0,NOSΔ23,female,7
+2026-05-21,0,NOSΔ23,male,11
+2026-05-21,0,wild type,female,16
+2026-05-21,0,wild type,male,11
+2026-05-22,0,NOSΔ11,female,3
+2026-05-22,0,NOSΔ11,male,5
+2026-05-22,0,NOSΔ23,female,8
+2026-05-22,0,NOSΔ23,male,14
+2026-05-22,0,wild type,female,13
+2026-05-22,0,wild type,male,19
+2026-05-23,0,NOSΔ11,female,3
+2026-05-23,0,NOSΔ11,male,4
+2026-05-23,0,NOSΔ23,female,5
+2026-05-23,0,NOSΔ23,male,5
+2026-05-23,0,wild type,female,15
+2026-05-23,0,wild type,male,9
+2026-05-24,0,NOSΔ11,female,2
+2026-05-24,0,NOSΔ11,male,3
+2026-05-24,0,NOSΔ23,female,4
+2026-05-24,0,NOSΔ23,male,11
+2026-05-24,0,wild type,female,8
+2026-05-24,0,wild type,male,7
+2026-05-25,0,NOSΔ11,female,6
+2026-05-25,0,NOSΔ11,male,6
+2026-05-25,0,NOSΔ23,female,4
+2026-05-25,0,NOSΔ23,male,8
+2026-05-25,0,wild type,female,10
+2026-05-25,0,wild type,male,5
+2026-05-26,0,NOSΔ11,female,5
+2026-05-26,0,NOSΔ11,male,5
+2026-05-26,0,NOSΔ23,female,5
+2026-05-26,0,NOSΔ23,male,12
+2026-05-26,0,wild type,female,6
+2026-05-26,0,wild type,male,3
+2026-05-27,0,NOSΔ11,female,1
+2026-05-27,0,NOSΔ11,male,5
+2026-05-27,0,NOSΔ23,female,2
+2026-05-27,0,NOSΔ23,male,5
+2026-05-27,0,wild type,female,6
+2026-05-27,0,wild type,male,1
+2026-05-28,1,NOSΔ11,female,1
+2026-05-28,1,NOSΔ11,male,1
+2026-05-28,1,NOSΔ23,female,1
+2026-05-28,1,NOSΔ23,male,1
+2026-05-28,1,wild type,female,1
+2026-05-28,1,wild type,male,1
+2026-05-29,1,NOSΔ11,female,1
+2026-05-29,1,NOSΔ11,male,0
+2026-05-29,1,NOSΔ23,female,0
+2026-05-29,1,NOSΔ23,male,2
+2026-05-29,1,wild type,female,0
+2026-05-29,1,wild type,male,0
+2026-05-30,1,NOSΔ11,female,0
+2026-05-30,1,NOSΔ11,male,1
+2026-05-30,1,NOSΔ23,female,0
+2026-05-30,1,NOSΔ23,male,0
+2026-05-30,1,wild type,female,1
+2026-05-30,1,wild type,male,0
+2026-05-31,1,NOSΔ11,female,0
+2026-05-31,1,NOSΔ11,male,0
+2026-05-31,1,NOSΔ23,female,0
+2026-05-31,1,NOSΔ23,male,0
+2026-05-31,1,wild type,female,1
+2026-05-31,1,wild type,male,0

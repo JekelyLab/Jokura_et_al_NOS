@@ -25,39 +25,45 @@ NOS_stats
 
 NOS_stats_tidy <- NOS_stats |>
   mutate(DATE = lubridate::as_date((DATE))) |>
-  pivot_longer(cols = contains("_"),
+  pivot_longer(
+    cols = contains("_"),
     names_to = c("genotype", "sex"),
     names_sep = "_",
     values_to = "mature_worms"
-    ) |>
+  ) |>
   rename(date = DATE) |>
-  mutate(sex = case_when(sex == 'F' ~ 'female',
-                        sex == 'M' ~ 'male')
-         ) |>
-  mutate(genotype = case_when(genotype == 'NOS11' ~ 'NOSΔ11',
-                        genotype == 'NOS23' ~ 'NOSΔ23',
-                        genotype == 'WT' ~ 'wild type')
-         )
+  mutate(sex = case_when(sex == 'F' ~ 'female', sex == 'M' ~ 'male')) |>
+  mutate(
+    genotype = case_when(
+      genotype == 'NOS11' ~ 'NOSΔ11',
+      genotype == 'NOS23' ~ 'NOSΔ23',
+      genotype == 'WT' ~ 'wild type'
+    )
+  )
 
-
-NOS_stats_tidy
 
 #export source data
 rio::export(NOS_stats_tidy, "source_data/Figure3_supplement4_source_data1.csv")
 
+NOS_stats_tidy |>
+  mutate(moon = ifelse(moon == 0, NA, 1))
 #plotting ----------------
 
 NOS_stats_plot <- NOS_stats_tidy |>
+  mutate(moon = ifelse(moon == 0, NA, 1)) |>
   group_by(genotype, sex) |>
   ggplot() +
-  geom_line(aes(date, mature_worms), size = 0.3) +
+  geom_col(aes(date, mature_worms), width = 0, linewidth = 0.2, color = "#56B4E9") +
+  geom_point(aes(date, moon*-1), size = 0.3, color = "#0072B2") +
   geom_smooth(
-    aes(date, mature_worms), 
-    span = 0.01, size = 0.3, 
-    na.rm = TRUE
-    ) +
-  facet_grid(~genotype ~sex) +
-  scale_y_continuous(limits = c(0, 40)) +
+    aes(date, mature_worms),
+    span = 0.006,
+    linewidth = 0.4,
+    na.rm = TRUE,
+    se = FALSE, color = "#E69F00"
+  ) +
+  facet_grid(~genotype ~ sex) +
+  scale_y_continuous(limits = c(-1, 40)) +
   labs(y = "mature worms") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 90))
