@@ -1,12 +1,13 @@
 ---
 title: Nitric oxide feedback to ciliary photoreceptor cells gates a UV avoidance circuit
 subtitle: |
-  | [Kei Jokura^1,`*`^, Nobuo Ueda^2^, Martin Gühmann^3^, Luis Alfonso Yañez-Guerra^1,4^, Emily Savage^5^, Piotr Słowiński^1^, Kyle C. A. Wedgwood^1^ and Gáspár Jékely^1,5,`*`^ ]{style="font-size:11pt"}
-  | [^1^Living Systems Institute and Biosciences, Faculty of Health and Life Sciences, University of Exeter, Exeter EX4 4QD, United Kingdom  ]{style="font-size:10pt"}
-  | [^2^Okinawa Institute of Science and Technology, Okinawa, Japan]{style="font-size:10pt"}
-  | [^3^School of Biological Sciences, University of Bristol, Bristol, United Kingdom]{style="font-size:10pt"}
-  | [^4^School of Biological Sciences, University of Southampton, Southampton, United Kingdom]{style="font-size:10pt"}
-  | [^5^Centre for Organismal Studies (COS), Heidelberg University, 69120 Heidelberg, Germany ]{style="font-size:10pt"}
+  | [Kei Jokura^1,`*`^, Nobuo Ueda^3^, Martin Gühmann^4^, Luis Alfonso Yañez-Guerra^1,5^, Emily Savage^6^, Piotr Słowiński^1^, Kyle C. A. Wedgwood^1^ and Gáspár Jékely^1,2,6,`*`^ ]{style="font-size:11pt"}
+  | [^1^Living Systems Institute, University of Exeter, Exeter EX4 4QD, United Kingdom  ]{style="font-size:10pt"}
+  | [^2^Biosciences, Faculty of Health and Life Sciences, University of Exeter, Exeter EX4 4QD, United Kingdom ]{style="font-size:10pt"}
+  | [^3^Okinawa Institute of Science and Technology, Okinawa, Japan]{style="font-size:10pt"}
+  | [^4^School of Biological Sciences, University of Bristol, Bristol, United Kingdom]{style="font-size:10pt"}
+  | [^5^School of Biological Sciences, University of Southampton, Southampton, United Kingdom]{style="font-size:10pt"}
+  | [^6^Centre for Organismal Studies (COS), Heidelberg University, 69120 Heidelberg, Germany ]{style="font-size:10pt"}
   | [^*^Correspondence`:` k.jokura @ exeter.ac.uk, gaspar.jekely @ cos.uni-heidelberg.de]{style="font-size:10pt"}
 format:
   typst:
@@ -14,6 +15,8 @@ format:
     include-in-header:
       text: |
         #show figure: set figure(numbering: none)
+        #show figure.caption: it => {
+          it.body}
         #show figure.caption: set text(size: 10pt)
         #show figure.caption: set align(left)
         #show figure.caption: set par(justify: false)
@@ -92,9 +95,11 @@ Overall, we still know little about how NO production relates to stimulus condit
 
 To investigate NO function in neural circuit dynamics and behaviour, here we study larvae of the marine annelid model *Platynereis dumerilii* [@ozpolat2021].
 *Platynereis* has emerged as a model for systems neuroscience with a toolkit that enables the combination of behavioural analysis and neuronal activity imaging with genetic manipulations.
-A whole-body synaptic connectome and gene expression atlases are also available and can be integrated with functional approaches in live animals thanks to the cellular-level stereotypy of larvae of the same developmental stage [@Vergara2021; @veraszto2017; @veraszto2020; @ozpolat2021].
+A whole-body synaptic connectome and gene expression atlases are also available and can be integrated with functional approaches in live animals thanks to the cellular-level stereotypy of larvae of the same developmental stage [@Vergara2021; @veraszto2017; @Veraszto_2025Whole; @ozpolat2021].
 
-We uncovered an essential function for NO signalling in larval UV/violet-light avoidance behaviour.
+The 3-day-old larva has over 9,000 cells classified into 202 neuronal and 92 non-neuronal cell types [@Veraszto_2025Whole]. The synapticly connected subset of the cells in the body form a connectome of over 2,000 cells. Besides synapses, neurons in the larva also signal by volume transmission mediated by a rich repertoire of neuropeptides [@williams2017] and other modulators [@Bauknecht_2017Ancient]. The transparent and experimentally accessible *Platynereis* larvae could therefore inform how synaptic and volume signalling interact to mediate behaviour [@Jekely_2024Nonsynaptic]. 
+
+Here we uncovered an essential function for NO signalling in larval UV/violet-light avoidance behaviour.
 In *Platynereis* larvae, UV/violet avoidance is mediated by brain ciliary photoreceptor cells (cPRCs) and is characterised by downward swimming [@Veraszto2018].
 The cPRCs express a ciliary-type opsin, c-opsin1 [@Arendt2004] that forms a UV-absorbing bistable photopigment with an absorption maximum around 384 nm [@tsukamoto2017; @Veraszto2018; @Veedin2021].
 Upon UV/violet exposure, the cPRCs show a characteristic biphasic Ca^2+^ response that is c-opsin1 dependent.
@@ -110,21 +115,21 @@ This delayed neuroendocrine feedback integrates UV/violet exposure to induce a s
 We identified a single *nitric oxide synthase* (*NOS*) gene in the *Platynereis dumerilii* genome and transcriptome data.
 Phylogenetic analysis of NOS proteins indicate that *Platynereis* NOS belongs to an orthology group of bilaterian NOS sequences (Figure 1---figure supplement 1).
 To characterise the expression pattern of *NOS*, we used in situ hybridization chain reaction (HCR) and transient transgenesis.
-In two- and 3-day-old larvae, we detected *NOS* expression in four cells (two of them weakly expressing) in the apical organ region (Figure 1E and Figure 1---figure supplement 2A, B).
+In 2- and 3-day-old larvae, we detected *NOS* expression in four cells (two of them weakly expressing) in the apical organ region (Figure 1E and Figure 1---figure supplement 2A, B).
 *NOS* was also expressed in the region of the visual eyes (adult eyes) and the pigmented eyespots (Figure 1---figure supplement 2A, B).
-The four apical organ cells, but not the eyes, were also labelled with an upstream promoter sequence of the *NOS* gene construct driving membrane-targeted palmitoylated tdTomato reporter (Figure 1F).
+The four apical organ cells, but not the eyes, were also labelled with a transiently expressed *NOS*-reporter transgene. This transgene contains the upstream promoter sequence of the *NOS* gene that drives a membrane-targeted palmitoylated tdTomato reporter (Figure 1F).
 This reporter also revealed the axonal projections of these central NOS-expressing neurons.
 The position and morphology of the four *NOS+* cells allowed us to identify the same four cells as four interneurons (INNOS) in our 3-day-old whole-body *Platynereis* volume EM data [@williams2017; @Veraszto2018; @Veraszto_2025Whole] (Figure 1C, D).
-In the synaptic connectome, the INNOS cells are postsynaptic to the UV-sensory cPRCs and presynaptic to the INRGWa interneurons (cholinergic neurons that express an RGW neuropeptide), which are also cPRC targets (Figure 1C, H).
+In the synaptic connectome, the INNOS cells are postsynaptic to the UV-sensory cPRCs and presynaptic to the INRGWa neurons (cholinergic interneurons that express an RGW neuropeptide), which are also cPRC targets (Figure 1C, H).
 The projections of INNOS cells are segregated into input (dendritic) and output (axonal) compartments, with cPRC inputs occurring on the dendritic part in the dense neurosecretory plexus (Figure 1D and Figure 1---figure supplement 3A).
-Immunostaining with an affinity-purified antibody specific to *Platynereis* NOS revealed that the protein is restricted to the dendritic compartment of INNOS neurons (Figure 1G and Figure 1---figure supplement 2C).
+Immunostaining with an affinity-purified antibody specific to *Platynereis* NOS revealed that the protein is restricted to the dendritic compartment of INNOS neurons (Figure 1G).
 INNOS output-synapses form in the more ventral projection region (Figure 1D and Figure 1---figure supplement 3).
 The second type of interneurons of the cPRC circuit, the INRGWa neurons, synapse on the head serotonergic ciliomotor neurons (Ser-h1). These in turn synapse on the cholinergic MC ciliomotor neuron and the multiciliated cells of the prototroch ciliary band (Figure 1C, H) [@veraszto2017].
 
 
-```{r Figure_1}
+```{r figure1}
 #| echo: FALSE
-#| fig-cap: "**Figure 1. Identification of *NOS*-expressing interneurons (INNOS) within the cPRC circuit.** (**A**) Scanning electron microscopy image of a 3-day-old *Platynereis* larva. (**B, C**) Volume rendering of the neuron types (cPRC, INNOS, INRGWa, Ser-h1 and MC) in the cPRC circuit reconstructed from a whole-body transmission electron microscopy volume of a 3-day-old larva. Neurite skeletons are shown with cell-body positions represented by spheres. Projections of all neurons in the body are shown in grey to highlight the neuropils. The outline of the yolk is also indicated in grey. In B, nuclei positions of the prototroch head ciliary band are shown as grey spheres. (**D**) Volume rendering of the four INNOS neurons with incoming and outgoing synapses. (**E**) Expression of the *NOS* gene detected by in situ HCR (magenta) in a 2-day-old larva (anterior view). Antibody staining for acetylated α-tubulin (acTub: green) highlights cPRC cilia and the neuropil. (**F**) Expression of a *NOS* reporter (NOSp::palmi-3xHA; magenta) labelled with an anti-HA antibody in a 2-day-old larva (anterior view). Antibody staining for acetylated α-tubulin (acTub; green) highlights cPRC cilia and the neuropil. (**G**) Immunostaining for NOS (magenta), co-stained for acetylated α-tubulin (acTub; green). (**H**) Synaptic wiring diagram of the cPRC circuit. Hexagons represent cell groups, with the number of cells per group shown in square brackets. Arrows represent the summed number of synaptic contacts between cell groups. Arrow thickness is proportional to the number of synapses."
+#| fig-cap: "**Figure 1. Identification of *NOS*-expressing interneurons (INNOS) within the cPRC circuit.** (**A**) Scanning electron microscopy image of a 3-day-old *Platynereis* larva. (**B, C**) Volume rendering of the neuron types (cPRC, INNOS, INRGWa, Ser-h1 and MC) in the cPRC circuit reconstructed from a whole-body transmission electron microscopy volume of a 3-day-old larva. Neurite skeletons are shown with cell-body positions represented by spheres. Projections of all neurons in the body are shown in grey to highlight the neuropils. The outline of the yolk is also indicated in grey. In B, nuclei positions of the prototroch head ciliary band are shown as grey spheres. (**D**) Volume rendering of the four INNOS neurons with incoming and outgoing synapses. (**E**) Expression of the *NOS* gene detected by in situ HCR (magenta) in a 2-day-old larva (anterior view). Antibody staining for acetylated α-tubulin (acTub: green) highlights cPRC cilia and the neuropil. (**F**) Expression of a membrane-targeted reporter driven by the *NOS* regulatory region (NOSp::palmi-3xHA-Tomato; magenta) labelled with an anti-HA antibody in a 2-day-old larva (anterior view). Antibody staining for acetylated α-tubulin (acTub; green) highlights cPRC cilia and the neuropil. (**G**) Immunostaining for NOS (magenta), co-stained for acetylated α-tubulin (acTub; green). (**H**) Synaptic wiring diagram of the cPRC circuit. Hexagons represent cell groups, with the number of cells per group shown in square brackets. Arrows represent the summed number of synaptic contacts between cell groups. Arrow thickness is proportional to the number of synapses."
 #| out.width: "90%"
 
 knitr::include_graphics(path = "figures/Fig1.png")
@@ -141,7 +146,7 @@ Following light stimulation in the region of the ramified cilia of the cPRCs, we
 This increase did not occur in larvae in which we illuminated a control area (Figure 2D).
 
 
-```{r Figure_2}
+```{r figure2}
 #| echo: FALSE
 #| fig-cap: "**Figure 2. NO produced by UV/violet stimulation to cPRCs.** (**A**) Left: The larvae were embedded in 2% agarose seawater with the anterior side down. Right: Changes in DAF-FM fluorescence intensities were examined when the ciliary region of the cPRC was stimulated with a 405 nm laser.(**B**) DAF-FM fluorescence in the region of the neurosecretory neuropil. The white line indicates the outline of the larva. The dashed line corresponds to the area where fluorescence was quantified. The circles indicate the location of cPRC and control stimulation. The cPRCs are marked by thin lines. (**C**) DAF-FM fluorescence before and during 405 nm light stimulation. (**D**) Changes in DAF-FM fluorescence over time during 405 nm stimulation of the cPRCs or a control area (ctr stim.). The purple box indicates the duration of 405 nm stimulation. Individual normalized traces (ΔF/F0) are shown as thin lines. Thick lines show the mean value with 0.95 confidence intervals. N = 9 larvae for control and 11 for cPRC stimulation. <br> Figure 2 -- source data 1. DAF-FM fluorescence reads."
 #| out.width: "90%"
@@ -163,14 +168,15 @@ In contrast, both 2- and 3-day-old homozygous *NOS*-mutant larvae showed a signi
 This phenotype is similar to the defective UV-avoidance of *c-opsin1* mutant larvae [@Veraszto2018] and reveals a requirement for NOS in UV-avoidance behaviour.
 Wild type but not mutant larvae also showed an increase in ciliary beat frequency and swimming speed under UV light (Figure 3---figure supplement 3).
 We also tested directional phototaxis, by exposing larvae to 480 nm directional collimated light from the top of the column (Figure 3---figure supplement 2A).
-3-day-old but not 2-day-old *NOS*-mutant larvae also showed reduced phototactic behaviour, suggesting a function for *NOS* in the visual eyes that mediate 3-day-old phototaxis [@Randel2014a] (Figure 3D and Figure 3---figure supplement 1E).
+3-day-old but not 2-day-old *NOS*-mutant larvae also showed reduced phototactic behaviour. Given that phototaxis in 1 and 2-day-old trochophore larvae is mediated by their non-visual eyespots [@jekely2008] and in 3-day-old nectochaete larvae by the visual eyes [@Randel2014a], these data suggest a function for *NOS* in the visual eyes (Figure 3D and Figure 3---figure supplement 1E).
 
 To distinguish between an acute and developmental function of NOS in light responses, we also tested larvae exposed to the NOS inhibitor L-NAME (Figure 3F).
-Larvae incubated for 5 min in 0.1 mM or 1 mM L-NAME showed a dose-dependent inhibition of UV avoidance (Figure 3G, H).
+Larvae incubated for 5 min in 0.1 mM or 1 mM L-NAME showed a dose-dependent inhibition of UV avoidance (Figure3G, H).
 In contrast, phototaxis was not affected (Figure 3F).
+Finally, as a non-visual behaviour, we also quantified the emergence of sexually mature (epitok) swimming worms from their tubes. The rhythmicity of this behaviour and sexual maturation is controlled by an artificial lunar cycle in the lab. *NOS* mutant worms showed periodic emergence, similar to wild-type worms (Figure 3---figure supplement 4). 
 Overall, our results indicate an acute requirement for NOS signalling in UV-avoidance and a possible indirect, developmental role in the visual system, reminiscent of the function of NO signalling in *Drosophila* eye development [@Gibbs1998a].
 
-```{r Figure_3}
+```{r figure3}
 #| echo: FALSE
 #| fig-cap: "**Figure 3. NOS is required for UV avoidance in *Platynereis* larvae.** (**A**) Schematic diagram of the set-up of the behavioural experiment. (**B**) Vertical displacement in 30 sec bins of wild type (10 batches) and mutant (*NOSΔ11/Δ11*, 5 batches and *NOSΔ23/Δ23*, 7 batches) 3-day-old larvae stimulated with 395 nm light from the side, 488 nm light from the top and 395 nm light from the top. One-way ANOVA with Dunnett’s multiple-comparison test are shown. ^*^P < 0.05, ^**^P < 0.01. (**C**) Swimming trajectories of wild type (WT, n=32) and *NOS* mutant (*NOSΔ11/Δ11*, n=26 and *NOSΔ23/Δ23*, n=47) 3-day-old larvae. All trajectories start at 0 x and y position and time 0 corresponding to 10 sec before the onset of 395 nm stimulation from the side. (**D**) Vertical position of batches of wild type and mutant 3-day-old larvae over time under 395 nm UV stimulation. The starting position of each larval trajectory was set to 0. (**E**) Comparison of vertical position of wild type and mutant 3-day-old larvae after 30 seconds of UV stimulation. One-way ANOVA with Dunnett’s multiple-comparison test are shown. The wild type (WT, n=32) and *NOS* mutant (*NOSΔ11/Δ11*, n=26 and *NOSΔ23/Δ23*, n=47) larvae. (**F**) Vertical displacement in 30 sec bins of control (15 batches) and L-NAME-treated (0.1 and 1 mM, 15 batches each) 3-day-old larvae stimulated with 395 nm light from the side, 488 nm light from the top and 395 nm light from the top. One-way ANOVA with Dunnett’s multiple-comparison test are shown. ^*^P < 0.05. (**G**) Vertical position of batches of control and L-NAME-treated (0.1 and 1 mM) 3-day-old larvae over time under 395 nm UV stimulation. The starting position of each larval trajectory was set to 0. (**H**) Comparison of vertical position of control (n=6) and L-NAME-treated (0.1 and 1 mM, n=6 each) 3-day-old larvae after 30 seconds of UV stimulation. One-way ANOVA with Dunnett’s multiple-comparison test are shown.  <br> Figure 3 -- source data 1-7. Source data for panels A-G. "
 #| out.width: "90%"
@@ -196,7 +202,8 @@ We thus identified a requirement for NO signalling in the late-phase activation 
 Next we aimed to identify the NO receptor in the cPRCs.
 NO generally acts via soluble guanylate cyclases (sGC), belonging to the guanylate cyclase family with a CYC domain (PFAM domain: PF00211).
 NO binding to the heme group of sGC leads to increased cyclic guanosine monophosphate (cGMP) production.
-Analysis of sGCs in *Platynereis* showed that these genes were not expressed in cPRC and INNOS in the cells of the cPRC circuit, but only in INRGWa [@veraszto2017].
+Analysis of sGCs in *Platynereis* showed that these genes were not expressed in cPRC or INNOS cells, we only detected expression of an sGCβ subunit in the INRGWa cells (Figure 6B).
+
 Recently, Moroz and coworkers reported an atypical but widely conserved family of guanylate cyclases with a NIT (nitrite/nitrate sensing) domain (PF08376) (NIT-GC) as potential mediators of NO signalling [@Moroz2020].
 To identify NIT-GCs in *Platynereis*, we searched transcriptome resources and retrieved 15 potential NIT-GC homologs (Figure 4---figure supplement 1 and 2).
 To analyse the relationship of these sequences to metazoan NIT-GCs, we retrieved protein sequences with a CYC domain from the transcriptome and genome databases of 45 metazoan and 2 choanoflagellate species.
@@ -204,7 +211,7 @@ We carried out cluster analysis and phylogenetic reconstruction on a group of me
 In agreement with Moroz et al. [@Moroz2020], we found a group of GCs with NIT domains with representatives in placozoans, cnidarians, some ecdysozoans, echinoderms, and lophotrochozoans. 
 The 15 *Platynereis* sequences belonged to several deeply diverged clades in the phylogenetic tree (Figure 4---figure supplement 1 and 2).
 
-To characterise the expression of NIT-GCs, we used previously published spatially-mapped single-cell transcriptome data [@Achim2015; @williams2017].
+To characterise the expression of NIT-GCs, we used previously published spatially-mapped single-cell transcriptome data [@Achim2015].
 Among the 15 NIT-GCs, two showed high and specific expression in the cPRCs and one was expressed in the INNOS cells (Figure 4---figure supplement 2).
 In the single-cell data, we could identify the cPRCs by the specific expression of the markers *c-opsin1* and the *pedal-peptide2 neuropeptide precursor* (*MLD proneuropeptide*) [@Arendt2004; @williams2017] (Figure 4---figure supplement 3A).
 The INNOS cells were identified by NOS expression and spatial mapping in the brain [@Achim2015].
@@ -244,7 +251,7 @@ These data support an essential role for ciliary-localised NIT-GC2 in suppressin
 Overall, these knockdown experiments revealed different signalling mechanisms for the two NIT-GCs that may be due to their different subcellular localisations.
 
 
-```{r Figure_4}
+```{r figure4}
 #| echo: FALSE
 #| fig-cap: "**Figure 4. NOS and two NIT-GCs shape Ca^2+^ signals during cPRC UV/violet response.** (**A**, **B**) GCaMP6s signals in cPRCs in wild type and *NOS* mutant (A, *NOSΔ11/Δ11*, B, *NOSΔ23/Δ23*) larvae during 405 nm light stimulation. (**C**, **D**) In situ HCR for (C) *NIT-GC1* and (D) *NIT-GC2* (magenta) in 3-day-old *Platynereis* larvae. Larvae were co-stained with an antibody against acetylated α-tubulin to label cPRC cilia and the neuropil (green). (**E**, **F**) Immunostaining for (E) NIT-GC1 and (F) NIT-GC2 (magenta), co-stained for acetylated α-tubulin (green). (**G**) The domain structure of *Platynereis* NIT-GC1 and the truncated NIT-GC1ΔNIT protein lacking the NIT domain. A predicted transmembrane region (TM) is shown in grey. (**H**) Schematic of the cell-based assay to detect cGMP production following the addition of an NO donor SNAP or DMSO as control. (**I**-**L**) Green cGull fluorescence over time for the four conditions tested. Individual responses and their mean with 0.95 confidence interval are shown (n > 6 cells). Intensities are normalized (ΔF/F0). The indicated chemicals were added at 2 min after the start of imaging (grey bars). (**M**, **N**) GCaMP6s signals in cPRCs in (M) NIT-GC1 and (N) *NIT-GC2*-morphant larvae during 405 nm light stimulation. Individual responses and their mean with 0.95 confidence interval are shown. <br> Figure 4 -- source data 1-8. Source data for panels A, B and I-N."
 #| out.width: "90%"
@@ -271,10 +278,10 @@ In *NIT-GC2*-morphants, INRGWa cells showed a transient increase in Ca^2+^ that 
 Next, we imaged Ca^2+^ signals from Ser-h1 neurons in wild type and *NOS* mutant larvae.
 Ser-h1 cells showed mixed responses. In some larvae the activation correlated with cPRC activity, including a reduction in Ca^2+^ during stimulation followed by a rebound. In other larvae, Ser-h1 did not show the post-stimulus rebound. In *NOS* mutants Ser-h1 in most larvae showed no post-stimulus rebound (Figure 5 -- figure supplement 2B).
 These data suggest that during 405 nm stimulation the Ser-h1 cells can be activated, and this regulation is NO-dependent.
-This pattern is expected to increase ciliary activity in the prototroch but not in the other ciliary bands (with no Ser-h1 synapses), triggering faster swimming under UV light. The variability may be due to the endogenous rhythmic activity and inhibition of Ser-h1 neurons that are part of a larger ciliomotor circuit [@veraszto2017].
+This pattern is expected to increase ciliary activity in the prototroch but not in the other ciliary bands (with no Ser-h1 synapses), triggering faster swimming under UV light. The variability may be due to the endogenous rhythmic activity and regular inhibition of Ser-h1 neurons that are part of a larger ciliomotor circuit [@veraszto2017].
 
 
-```{r Figure_5}
+```{r figure5}
 #| echo: FALSE
 #| fig-cap: "**Figure 5. NOS- and NIT-GC2-dependent dynamics of the cPRC circuit.** (**A, B**) GCaMP6s imaging from cPRCs and INNOS cells (left panels) followed by on-slide immunostaining for (A) RYamide to label INNOS and (B) RGWamide+serotonin to label INRGWa and Ser-h1 (red). Nuclei are stained with DAPI (cyan). Asterisks indicate cPRC nuclei. Numbers mark the same cells in the GCaMP and immunostaining images matched by position. (**C**) GCaMP6s fluorescence in INNOS cells in wild type (WT) and *NOSΔ11/Δ11* mutant larvae during 405 nm stimulation of the cPRC cilia. (**D**) GCaMP6s fluorescence in INNOS cells in *NIT-GC2*-morphant larvae during 405 nm stimulation. (**E**) GCaMP6s fluorescence in INRGWa cells in wild type and *NOSΔ23/Δ23* mutant larvae during 405 nm stimulation. (**F**) GCaMP6s fluorescence in INRGWa cells in *NIT-GC2*-morphant larvae during 405 nm stimulation. <br> Figure 5 -- source data 1-4. Calcium traces for INNOS and INRGWa neurons."
 #| out.width: "90%"
@@ -292,7 +299,7 @@ We modelled a c-opsin1-dependent Ca^2+^-response to UV in the cPRCs (Figure 6A).
  
 
 
-```{r Figure_6}
+```{r figure6}
 #| echo: FALSE
 #| fig-cap: "**Figure 6. Mathematical modelling and signalling mechanisms of the cPRC circuit.** (**A**) Diagram of the mathematical model with the componenets, interactions, parameters and equations used to model Ca^2+^ dynamics. (**B**) Dot plot of genes (columns) expressed in three types of cells (rows) in the cPRC circuit using single cell RNA-Seq. The size of the dots is expressed in proportion to the percentage of cells expressing that gene relative to all cells. The colours represent the normal logarithm of the number of transcripts in the cells expressing the gene. (**C**) Schematic diagram of the signalling pathway of the cPRC circuit, focusing on the NO feedback. <br> Figure 6 -- source data 1. TPM values for each gene and the percentage of expressed genes."
 #| out.width: "90%"
@@ -316,7 +323,7 @@ To find model parameters producing an output fitting the experimental data we em
 Through this optimisation procedure, we found parameters that gave a fit to our experimental data under all conditions (Figure 6--figure supplement 1-5).
 We could fit to mean Ca^2+^ profiles but also individual Ca^2+^ transients (Figure 7; Figure 6 -- figure supplement 1). In addition, we could fit our model to the experimentally characterised NO signals in the neuropil (Figure 2D; Figure 6 -- figure supplement 2).
 
-```{r Figure_7}
+```{r figure7}
 #| echo: FALSE
 #| fig-cap: "**Figure 7**. Simulated Ca^2+^ traces for parameter sets fitted independently to each Ca^2+^-recording collected in wild type, *NOS* knockout, and *NIT-GC2* morphant larvae. (**A**, **B**) Simulated Ca^2+^ traces in cPRC (A) and INNOS (B) cells in the wild-type condition. (**C**, **D**) Simulated Ca^2+^ traces in cPRC (C) and INNOS (D) cells in the *NOS* knockout condition. (**E-F**) Simulated Ca^2+^ traces in cPRC (E) and INNOS (H) cells in the *NIT-GC2*-morphant condition. Thin coloured curves indicate individual recordings (cPRC - purple and INNOS - blue), thin grey curves indicate simulated Ca^2+^ traces based on model parameters fitted to the individual recording, thick coloured curves indicate averages of the recordings, and thick black curves represent the average of the fits. <br> Figure 7 -- source data 1. Best fitted parameters {best/_pars.mat}. <br> Figure 7 -- source data 2. Recorded traces (as used in earlier figures) {wt/_ko/_mo/_data.mat}. <br> Figure 7 -- source data 3. script to generate the figure {fig/_all/_fits.m}./label{fig:all-fits} "
 #| out.width: "90%"
@@ -417,7 +424,7 @@ The complex activation dynamics and transmitter phenotype of cPRCs could underli
 ### Nitric oxide confers short-term memory to circuit activity
 
 Retrograde signalling by NO from INNOS to cPRC leads to the sustained activation of cPRCs and postsynaptic neurons even after the end of stimulation.
-This late-phase activation occures at a fixed time after stimulus, indepent of stimulus duration. The high-Ca^2+^-state is then maintained for several tens of second.
+This late-phase activation occures at a fixed time after stimulus, indepent of stimulus duration. The high-Ca^2+^-state is then maintained for several tens of second (Figure 4A, B).
 NO signalling thus induces a transient and time-invariant peak or short-term memory trace in the *Platynereis* larval brain.
 Because of the short life time of NO, this molecule may be well suited to encode transient memory traces [@Kuntz2017].
 
@@ -472,7 +479,6 @@ The richly modulated multi-transmitter cPRC circuit will serve as a fertile grou
 
 ## Key resources table
 
-::: {.small-table}
 ```{r echo=FALSE, warning=FALSE}
 library(readxl)
 key_resource_table <- read_excel("key_resource_table/key_resource_table.xls")
@@ -481,7 +487,6 @@ df_key_resource_table <- replace(df_key_resource_table, is.na(df_key_resource_ta
 knitr::kable(df_key_resource_table, format = "html", booktabs = TRUE, format.args = list(cex = 1))
 
 ```
-:::
 
 ## Materials and Methods
 
@@ -889,7 +894,7 @@ We thank Dr. Francesca Carlisle for the mycoplasma testing of COS-7 cells.
 ## Figure supplements
 
 
-```{r Figure1_suppl1}
+```{r figure1-suppl1}
 #| echo: FALSE
 #| fig-cap: "**Figure 1 -- figure supplement 1. Maximum-likelihood phylogenetic tree of NOS protein sequences.** Individual branches are coloured by taxonomy. Branch support values indicate UFBoot and aLRT-SH-like values. <br> Figure 1 -- figure supplement 1 -- source data 1. NOS sequences used for the phylogenetic reconstruction. <br> Figure 1 -- figure supplement 1 -- source data 2. Aligned and trimmed NOS sequences used for the phylogenetic reconstruction. <br> Figure 1 -- figure supplement 1 -- source data 3. Tree file of the reconstructed NOS phylogeny."
 #| out.width: "90%"
@@ -897,7 +902,7 @@ knitr::include_graphics(path = "figures/Fig1_sup1.png")
 ```
 
 
-```{r Figure1_suppl2}
+```{r figure1-suppl2}
 #| echo: FALSE
 #| fig-cap: "**Figure 1 -- figure supplement 2. Expression of *NOS* in 3-day-old *Platynereis* larva.** (**A**) HCR in situ for *NOS* (magenta), dorsal view. (**B**) HCR in situ for *NOS* (magenta), ventral view. Inset in (B) shows close-up of two *NOS*-positive cells (INNOS_dl and INNOS_vl) on the left side. Samples were also stained for DAPI (cyan) to label nuclei.(**C**) Expression of the *NOS* gene detected by in situ HCR (magenta) in a 3-day-old larva (anterior view). Antibody staining for acetylated α-tubulin (acTub: green) highlights cPRC cilia and the neuropil."
 #| out.width: "90%"
@@ -905,7 +910,7 @@ knitr::include_graphics(path = "figures/Fig1_sup1.png")
 knitr::include_graphics(path = "figures/Fig1_sup2.png")
 ```
 
-```{r Figure1_suppl3}
+```{r figure1-suppl3}
 #| echo: FALSE
 #| fig-cap: "**Figure 1 -- figure supplement 3. Synapse distribution in cPRCs and possynaptic interneurons** (**A**) Axo-dendritic splitting of the INNOS neurons. (**B**) Volume rendering of the four INRGWa neurons with incoming and outgoing synapses. (**C**) Volume rendering of the four cPRC neurons with incoming and outgoing synapses. All images are anterior views. Asterisk marks the same position across images for reference. Grey speheres indicate the position of cell nuclei. NS plexus; neurosecretory plexus. The radius of INNOS nuclei is set to 2 µm for scale."
 #| out.width: "90%"
@@ -913,7 +918,7 @@ knitr::include_graphics(path = "figures/Fig1_sup2.png")
 knitr::include_graphics(path = "figures/Fig1_sup3.png")
 ```
 
-```{r Figure3_suppl1}
+```{r figure3-suppl1}
 #| echo: FALSE
 #| fig-cap: "**Figure 3 -- figure supplement 1. Generation and behavioural characterisation of *NOS* CRISPR knockouts.** (**A**) Top: The domain organisation of *Platynereis* NOS protein and exon/intron structure of the *NOS* gene. Bottom: The genomic locus of *NOS* with the CRISPR target site, wild-type and knockout (NOSΔ11, NOSΔ23) sequences and predicted protein sequences. The PAM sequence is shown in grey, stop codons in red. **(B, C)** Immunostaining for NOS antibody in NOS mutant (B, NOSΔ11/Δ11; C, NOSΔ23/Δ23) larvae. Acetylated α-tubulin staining (green) highlights the neuropil and cPRC cilia. Anterior view of a 3-day-old larva."
 #| out.width: "90%"
@@ -921,7 +926,7 @@ knitr::include_graphics(path = "figures/Fig1_sup3.png")
 knitr::include_graphics(path = "figures/Fig3_sup1.png")
 ```
 
-```{r Figure3_suppl2}
+```{r figure3-suppl2}
 #| echo: FALSE
 #| fig-cap: "**Figure 3 -- figure supplement 2. Generation and behavioural characterisation of *NOS* CRISPR knockouts.** (**B**) Swimming trajectories of wild type (WT, n=37) and *NOS* mutant (NOSΔ11/Δ11, n=18 and NOSΔ23/Δ23, n=8) 2-day-old larvae. All trajectories start at 0 x and y position and time 0 corresponding to 10 sec before the onset of 395 nm stimulation from the side. (**C**)  Vertical displacement in 30 sec bins of wild type (WT, n=37) and mutant (NOSΔ11/Δ11, n=18 and NOSΔ23/Δ23, n=8) 2-day-old larvae stimulated with 395 nm light from the side, 488 nm light from the top and 395 nm light from the top. (**D**) Comparison of vertical position of wild type and mutant 2-day-old larvae after 30 seconds of UV stimulation. One-way ANOVA with Dunnett’s multiple-comparison test are shown. The wild type (WT, n=52) and *NOS* mutant (*NOSΔ11/Δ11*, n=30 and *NOSΔ23/Δ23*, n=16) larvae. (**E**) Vertical position of batches of wild type (12 batches) and mutant (NOSΔ11/Δ11, 8 batches and NOSΔ23/Δ23, 3 batches) 2-day-old larvae over time under 395 nm UV stimulation. The starting position of each larval trajectory was set to 0. One-way ANOVA with Dunnett’s multiple-comparison test are shown. ^*^P < 0.05. <br> Figure 3 -- figure suppmenet 2 -- source data 1-4. Source data for panels B-E."
 #| out.width: "90%"
@@ -929,7 +934,7 @@ knitr::include_graphics(path = "figures/Fig3_sup1.png")
 knitr::include_graphics(path = "figures/Fig3_sup2.png")
 ```
 
-```{r Figure3_suppl3}
+```{r figure3-suppl3}
 #| echo: FALSE
 #| fig-cap: "**Figure 3 -- figure supplement 3. Generation and behavioural characterisation of *NOS* CRISPR knockouts.** (**A,B**) Swimming speed of batches of wild type and *NOS* mutant 2-day-old (WT, n=37, NOSΔ11/Δ11, n=18 and NOSΔ23/Δ23, n=8) (A) and 3-day-old (WT, n=32, *NOSΔ11/Δ11*, n=26 and *NOSΔ23/Δ23*, n=47) (B) larvae under 395 nm UV stimulation. (**C,D**) Mean swimming speed of wild type and *NOS* mutant 2-day-old (WT, n=37, NOSΔ11/Δ11, n=18 and NOSΔ23/Δ23, n=8) (C) and 3-day-old (WT, n=32, *NOSΔ11/Δ11*, n=26 and *NOSΔ23/Δ23*, n=47) (D) larvae during 10 seconds before (dark) and 10 seconds after the start of 395 nm UV stimulation (sideUV). Data points for the same larva are joined by lines. One-tailed paired t-test; p-values (^***^ <0.001) are shown. (**E,F**) Average ciliary beat frequency of wild type and mutant 2-day-old (E) and 3-day-old (F) single larvae during 10 seconds before (gray) and 10 seconds after the start of 395 nm UV stimulation (purple). N=6 larvae each. Data points for the same larva are joined by lines. One-tailed paired t-test; p-values (^**^ <0.01 or ^*^ <0.05) are shown. <br> Figure 3 -- figure suppmenet 3 -- source data 1-6. Source data for panels A-F."
 #| out.width: "90%"
@@ -937,7 +942,7 @@ knitr::include_graphics(path = "figures/Fig3_sup2.png")
 knitr::include_graphics(path = "figures/Fig3_sup3.png")
 ```
 
-```{r Figure3_suppl4}
+```{r figure3-suppl4}
 #| echo: FALSE
 #| fig-cap: "**Figure 3 -- figure supplement 4. Lunar cycle of maturation in wild-type and *NOS* CRISPR knockout *Platynereis* worms.** Data represent the number of swimming epitoks per day over a one-year period in the Heidelberg culture. Males and females are plotted separately. Data are shown for wild type, *NOSΔ11/Δ11* and *NOSΔ23/Δ23* worms as line plots and smoothed plots (with a 0.95 confidence band). <br> Figure 3 -- figure suppmenet 4 -- source data 1. Maturation data for wild type and *NOS* knockout worms."
 #| out.width: "90%"
@@ -945,7 +950,7 @@ knitr::include_graphics(path = "figures/Fig3_sup3.png")
 knitr::include_graphics(path = "figures/Fig3_sup4.png")
 ```
 
-```{r Figure4_suppl1}
+```{r figure4-suppl1}
 #| echo: FALSE
 #| fig-cap: "**Figure 4 -- figure supplement 1. Cluster analysis of guanylate and adenylate cyclase sequences.** Each node represents one sequence, colour-coded by taxonomy. Connections represent BLAST P-values of <1e-16. NIT-GCs, NIT domain containing guanylate cyclases; membrane-bound GCs, membrane-bound guanylate cyclases; sGCs, soluble guanylate cyclases; ACs, adenylate cyclases."
 #| out.width: "90%"
@@ -953,7 +958,7 @@ knitr::include_graphics(path = "figures/Fig3_sup4.png")
 knitr::include_graphics(path = "figures/Fig4_sup1.png")
 ```
 
-```{r Figure4_suppl2}
+```{r figure4-suppl2}
 #| echo: FALSE
 #| fig-cap: "**Figure 4 -- figure supplement 2. Maximum-likelihood phylogenetic tree of NIT-domain-containing guanylate cyclases** Membrane-bound and soluble guanylate cyclases (sGC) were included as outgroups. Guanylate cyclases with NIT domains are found in most animal phyla except Porifera, Ctenophora, Urochordata and Chordata. Branch support values indicate UFBoot and aLRT-SH-like values. The expression of *Platynereis* NIT-GC genes in cPRC, INNOS and INRGWa cells is indicated on the right side of the tree. The values represent expression based on single-cell sequencing data. Dot size indicates specificity (percent of transcripts expressed in the indicated cell across all cells). Dot colour represents the logarithm of the number of transcripts in the expressing cells. <br> Figure 4 -- figure supplement 2 -- source data 1. GC sequences used for the phylogenetic reconstruction. <br> Figure 4 -- figure supplement 2 -- source data 2. Aligned and trimmed GC sequences used for the phylogenetic reconstruction. <br> Figure 4 -- figure supplement 3 -- source data 3. Tree file of the reconstructed GC phylogeny. "
 #| out.width: "90%"
@@ -961,7 +966,7 @@ knitr::include_graphics(path = "figures/Fig4_sup1.png")
 knitr::include_graphics(path = "figures/Fig4_sup2.png")
 ```
 
-```{r Figure4_suppl3}
+```{r figure4-suppl3}
 #| echo: FALSE
 #| fig-cap: "**Figure 4 -- figure supplement 3. Expression of NIT-GC1 and NIT-GC2 in the cPRCs** (**A**) HCR co-expression analysis of *NIT-GC1* (magenta) and *MLD/pedal-peptide-2 proneuropeptide* (green). Anterior view of a 2-day-old larva. Nuclei were stained with DAPI (cyan). **(B, C)** Expression of *NIT-GC2* (magenta) detected by in situ HCR. Anterior (B) and ventral (C) views of a 3-day-old larva. Nuclei were stained with DAPI (cyan). **(D, E)** Immunostaining for NIT-GC1 (D) and NIT-GC2 (E) antibodies in larvae injected with NIT-GC1 (D) or NIT-GC2 (E) morpholinos. Acetylated α-tubulin staining (green) highlights the neuropil and cPRC cilia. Anterior view of a 2-day-old larva. (**F**) The fluorescence intensities of the NIT-GC1 or NIT-GC2 in the control and morphant (MO1 and MO2) larvae (n=6 each) were normalized to the acetylated α-tubulin signals and plotted as a relative fluorescence. One-way ANOVA with Dunnett’s multiple-comparison test; p-values (‘***’ <0.001) are shown. <br> Figure 4 -- figure suppmenet 3 -- source data 1. Comparison NIT-GCs signals readings."
 #| out.width: "90%"
@@ -969,15 +974,15 @@ knitr::include_graphics(path = "figures/Fig4_sup2.png")
 knitr::include_graphics(path = "figures/Fig4_sup3.png")
 ```
 
-```{r Figure5_suppl1}
+```{r figure5-suppl1}
 #| echo: FALSE
-#| fig-cap: "**Figure 5 -- figure supplement 1. On-slide immunostaining and coexpression analysis of *NOS* and *RYamide proneuropeptide* ** (**A**) Schematic diagram of the on-slide immunostaining procedure after Ca^2+^ imaging.(**B-D**) Co-expression analysis by HCR in situ of *NOS* (magenta) and *RYamide proneuropeptide* (green). Anterior view of a 2-day-old larva. Nuceli were stained by DAPI (cyan)."
+#| fig-cap: "**Figure 5 -- figure supplement 1. On-slide immunostaining and coexpression analysis of *NOS* and *RYamide proneuropeptide* ** (**A**) Schematic diagram of the on-slide immunostaining procedure after Ca^2+^ imaging.(**B-D**) Co-expression analysis by HCR in situ of *NOS* (magenta) and *RYamide proneuropeptide* (green). Anterior view of a 2-day-old larva. Nuclei were stained by DAPI (cyan)."
 #| out.width: "90%"
 
 knitr::include_graphics(path = "figures/Fig5_sup1.png")
 ```
 
-```{r Figure5_suppl2}
+```{r figure5-suppl2}
 #| echo: FALSE
 #| fig-cap: "**Figure 5 -- figure supplement 1. NOS-dependent dynamics of the Ser-h1 neurons.** (**A**) Correlation map of neuronal activity of the cPRCs, INNOS, INRGWa, and Ser-h1 neurons. (**B**) GCaMP6s fluorescence in Ser-h1 cells in wild type and *NOSΔ11/Δ11* mutant larvae during 405 nm stimulation. <br> Figure 5 -- figure supplement 2 -- source data 1. Calcium imaging data from Ser-h1 neurons."
 #| out.width: "90%"
@@ -985,7 +990,7 @@ knitr::include_graphics(path = "figures/Fig5_sup1.png")
 knitr::include_graphics(path = "figures/Fig5_sup2.png")
 ```
 
-```{r Figure6_suppl1}
+```{r figure6-suppl1}
 #| echo: FALSE
 #| fig-cap: "**Figure 6 -- figure supplement 1**. Simulated Ca^2+^ traces for parameter sets fitted to the means of individual cPRC recordings collected in wild-type,*NOS* knockout, and *NIT-GC2* morphant larvae. The NIT-GC2 has the same parameter values as NOS-knockout except $kappa_{GC2}$ is decreased from 1 to 0.15. (**A**) Coloured curves indicate the mean of the recordings, thick black curves indicate simulated traces based on model parameters fitted to the mean of the recordings. (**B**, **C**) Thin grey curves (solid and dotted) represent simulated experimental conditions with different levels of efficacy of the NOS-knockout (**B**) and NIT-GC2 morpholino (**C**). To generate interpolated condition curves in (**B**), we multiplied  $kappa_{S_{GC1}}$ in the wild-type model by values from 0.1 to 0.9 with steps of 0.1. To generate interpolated condition curves in (**C**), we use a set of $kappa_{GC2}$ values from 0.1 to 0.9 with steps of 0.1. <br> Figure 6 -- figure supplement 1 -- source data 1. Recorded traces (as used in earlier figures) wt/_ko/_mo/_data.mat. <br> Figure 6 -- figure supplement 1 -- source data 2. Script to generate the figure fig/_WT/_to/_MO."
 #| out.width: "90%"
@@ -993,7 +998,7 @@ knitr::include_graphics(path = "figures/Fig5_sup2.png")
 knitr::include_graphics(path = "figures/Fig6_sup1.png")
 ```
 
-```{r Figure6_suppl2}
+```{r figure6-suppl2}
 #| echo: FALSE
 #| fig-cap: "**Figure 6 -- figure supplement 2**. Simulated NO traces for parameter sets fitted to individual NO-recordings collected in wild type larvae. Thin coloured curves indicate individual recordings, thin grey curves indicate simulated NO traces based on model parameters fitted independently to each recording, the thick coloured curve indicates the average of the recordings, the thick grey curve represents the average of the fits, and the thick black curve represents the fit of the model parameters to the averaged recordings. <br> Figure 6 -- figure supplement 2 -- source data 1. Best fitted parameters {best/_pars.mat}. Figure 6 -- figure supplement 2 -- source data 2. Recorded traces (same as in Figure 2 but with removed bleaching and steady state set to 0) (NO/_data.mat). <br> Figure 6 -- figure supplement 2 -- source data 3. Script to generate the figure fig/_fit/_NO.m"
 #| out.width: "90%"
@@ -1001,7 +1006,7 @@ knitr::include_graphics(path = "figures/Fig6_sup1.png")
 knitr::include_graphics(path = "figures/Fig6_sup2.png")
 ```
 
-```{r Figure6_suppl3}
+```{r figure6-suppl3}
 #| echo: FALSE
 #| fig-cap: "**Figure 6 -- figure supplement 3**. Distributions of the parameter values fitted to the individual recordings collected in different conditions. Violin plots (grey lines) are kernel density estimates of the underlying distributions computed using the Matlab function $ksdensity$ with default settings, i.e., using normal kernel function; plots are trimmed to the observed range of data. Coloured markers represent individual parameter values, white markers indicate medians, vertical grey bars indicate interquartiles (ranges Q25 to Q75), and the dashed line indicates the value of the parameter fitted to the average of the recordings. We show histograms instead of violin plots for $delta_S$ when fitted to *NOS*-knockout recordings and for $delta_S$ and $delta_{C_N}$ when fitted to NO recordings because these distributions are highly skewed and hence misrepresented by violin plots. Violin plots are presented in the order of our model-fitting procedure, i.e., first Ca^2+^ in *NOS*-knockout cPRC cells (yellow), then Ca^2+^ in wild type and *NOS*-knockout INNOS cells (blue), then NO in INNOS cells (green), and finally Ca^2+^ in wild type cPRC cells (magenta); (see Methods for details). <br> Figure 6 -- figure supplement 3 -- source data 1. Best fitted parameters best/_pars.mat. <br> Figure 6 -- figure supplement 3 -- source data 2. Script to generate the figure parameter/_dist.m"
 #| out.width: "90%"
@@ -1009,7 +1014,7 @@ knitr::include_graphics(path = "figures/Fig6_sup2.png")
 knitr::include_graphics(path = "figures/Fig6_sup3.png")
 ```
 
-```{r Figure6_suppl4}
+```{r figure6-suppl4}
 #| echo: FALSE
 #| fig-cap: "**Figure 6 -- figure supplement 4**. Distributions of the parameter values fitted to individual cPRC recordings collected in wild type larvae. The figure is in the same format as Figure 6 -- figure supplement 4. <br> Figure 6 -- figure supplement 4 -- source data 1. Best fitted parameters best/_pars.mat. <br> Figure 6 -- figure supplement 4 -- source data 2. Script to generate the figure parameter/_dist.m."
 #| out.width: "90%"
@@ -1017,7 +1022,7 @@ knitr::include_graphics(path = "figures/Fig6_sup3.png")
 knitr::include_graphics(path = "figures/Fig6_sup4.png")
 ```
 
-```{r Figure6_suppl5}
+```{r figure6-suppl5}
 #| echo: FALSE
 #| fig-cap: "**Figure 6 -- figure supplement 5**.  Pairwise correlations between parameters of the *NOS*-knockout model (state variables $C_P(t)$, $B(t)$ and $S(t)$) fitted to *NOS*-knockout cPRC recordings; wild-type model (state variables $S(t)$ and $C_N(t)$) fitted to wild-type and *NOS*-knockout Ca^2+^ INNOS recordings. Wild type model (state variables $S(t)$, $C_N(t)$ and $N(t)$) fitted to wild type INNOS NO recordings. All visible correlation values are significant at the 5% level, $p < 0.05$, (trivial correlations along the diagonal are excluded). <br> Figure 6 -- figure supplement 5 -- source data 1. Best fitted parameters best/_pars.mat. <br> Figure 6 -- figure supplement 5 -- source data 2. Script to generate the figure correlations.m"
 #| out.width: "90%"
@@ -1025,7 +1030,7 @@ knitr::include_graphics(path = "figures/Fig6_sup4.png")
 knitr::include_graphics(path = "figures/Fig6_sup5.png")
 ```
 
-```{r Figure6_suppl6}
+```{r figure6-suppl6}
 #| echo: FALSE
 #| fig-cap: "**Figure 6 -- figure supplement 6**. Pairwise correlations between parameters of the wild type model fitted to wild type cPRC recordings. All visible correlation values are significant at the 5% level, $p < 0.05$, (trivial correlations along the diagonal are excluded). <br> Figure 6 -- figure supplement 6 -- source data 1. Best fitted parameters best/_pars.mat. <br> Figure 6 -- figure supplement 6 -- source data 2. Script to generate the figure correlations.m "
 #| out.width: "90%"
@@ -1033,7 +1038,7 @@ knitr::include_graphics(path = "figures/Fig6_sup5.png")
 knitr::include_graphics(path = "figures/Fig6_sup6.png")
 ```
 
-```{r Figure6_suppl7}
+```{r figure6-suppl7}
 #| echo: FALSE
 #| fig-cap: "**Figure 6 -- figure supplement 7**. Validation of the wild-type model using cPRC recordings collected in wild-type larvae subject to UV stimulation with different intensity and duration. The top row displays recorded data; the bottom row shows model simulations. Different columns show different durations of UV stimulation. Simulated Ca^2+^ traces use parameter sets fitted to mean of Ca^2+^-recordings collected in wild-type larvae subject to 20s UV stimulation at 100% power. Stimulation duration is indicated by the shaded rectangle (violet) while stimulation intensity is indicated by the shade of grey of the line plot (darker shades indicate higher power). Simulations are compared with the mean of the 50%, 75% and 100% data and their 95% confidence interval (mean $pm 1.96 SE$, here is $SE=std/sqrt{n}$ and $std$ stands for standard deviation). We use the 50%, 75% and 100% recordings to compute the average because the data indicate the existence of a non-linear relation between response and the power of the stimulation and the 25% recordings would bias the average down. <br> Figure 7 -- source data 1. Recorded traces longer_experiments_data.mat. <br> Figure 6 -- figure supplement 7 -- source data 1. Script to generate the figure fig_longer_experiments.m"
 #| out.width: "90%"
@@ -1041,10 +1046,19 @@ knitr::include_graphics(path = "figures/Fig6_sup6.png")
 knitr::include_graphics(path = "figures/Fig6_sup7.png")
 ```
 
-```{r Figure6_suppl8}
+```{r figure6-suppl8}
 #| echo: FALSE
 #| fig-cap: "**Figure 6 -- figure supplement 8**. Simulated Ca^2+^ traces under stimulation with two UV pulses. The top row shows simulations with a 10s interval between pulses; the bottom row shows simulations with a 30s interval between pulses. Different columns show different durations of UV stimulation. The duration of UV stimulation is indicated by the shaded rectangle (violet). Coloured curves indicate simulated outcome of two pulse UV stimulation; thick black curves indicate simulated reference traces with a single UV pulse. Simulations of the Ca^2+^ traces use parameter sets fitted to the mean of individual Ca^2+^-recordings collected in wild-type larvae subject to 20s UV stimulation. <br> Figure 6 -- figure supplement 8 -- source data 1. Script to generate the figure fig_two_pulse.m"
 #| out.width: "90%"
 
 knitr::include_graphics(path = "figures/Fig6_sup8.png")
 ```
+
+
+
+<!--
+## See https://github.com/hypothesis/client
+## Add commenting functionality with this script
+## For sharing, we upload the self-contained html (embed-resources: true) to pCloud.com and share the link with collaborators. They need an account on hypothes.is and then can comment on the html version of the paper
+-->
+<script src="hypothes.is/embed.js" async></script>

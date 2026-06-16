@@ -84,8 +84,8 @@ Recommendations for the authors: please note that you control which revisions to
 
 1)  *The current introduction focuses on the nitric oxide signaling. It would be helpful for readers to have an introductory section about Platynereis larvae (a total number of neurons, etc) and rationales to use its nervous system as a model to study mechanisms of NO signaling and gating of visual response.*
 
-    The 3dpf larvae reveals 90 non-neuronal cell types and 180 neuronal cell types, mapping the complete neuronal connectome. This can shed light on the question of how synaptic and non-synaptic networks regulate their various patterns of behaviour. 
-    <!-- update -->
+We added an extra paragraph to give more detail on the number of cells in the larva and why *Platynereis* larvae are interesting to study to understand how synaptic and volume signalling interact.
+"The 3-day-old larva has over 9,000 cells classified into 202 neuronal and 92 non-neuronal cell types [@Veraszto_2025Whole]. The synapticly connected subset of the cells in the body form a connectome of over 2,000 cells. Besides synapses, neurons in the larva also signal by volume transmission mediated by a rich repertoire of neuropeptides [@williams2017] and other modulators [@Bauknecht_2017Ancient]. The transparent and experimentally accessible *Platynereis* larvae could therefore inform how synaptic and volume signalling interact to mediate behaviour [@Jekely_2024Nonsynaptic]."
 
 2)  *The readers would want to know why these larvae swim downward in response to UV and upward to 480nm light. Is that for maintaining the certain depth from the surface of the water?*
 
@@ -93,41 +93,41 @@ Recommendations for the authors: please note that you control which revisions to
 
 3)  *Are there splicing isoforms of NOS in the Platynereis dumerilii? If so, do antibodies and probes for in situ distinguish them? In Drosophila, truncated isoforms can inhibit the function of full length isoform, and therefore it was important to use methods to distinguish spicing isoforms.*
 
-    It is not known whether the splicing isoform of NOS is present in Platynereis. It is also not clear how to find out...
+We did not identify any alternatively spliced forms of *Platynereis* NOS in our published transcriptome resources. 
 
 4)  *"INRGWs" acronym appears without explanation in the first paragraph of the results.*
 
-    We have corrected it.
+Corrected: "the INRGWa neurons (cholinergic interneurons that express an RGW neuropeptide)"
 
 5)  *In Figure 1C, it is difficult to see the projection patterns of individual cell types. Figure supplement 3 can be combined with the current Figure 1.*
 
-    We have moved one figure from Figure 1---supplement 3 to the main figure1D.
+We have moved one panel from Figure supplement 3 to the main Figure 1 (panel D) to show the INNOS projections more clearly.
 
 6)  *Add more explanation about NOSp::palmi-3xHA reporter. Is it membrane-targeted reporter with the upstream promotor sequence of NOS? Or is it endogenous NOS that was tagged with palmi-3xHA?*
 
-    It is a membrane-targeted reporter with an upstream promoter sequence of the NOS gene. We have added a description in the text.
+It is a membrane-targeted reporter driven by the upstream promoter sequence of the NOS gene. The construct is delivered by plasmid injection. We have clarified the description in the text and the figure legend ("The four apical organ cells, but not the eyes, were also labelled with a transiently expressed *NOS*-reporter transgene. This transgene contains the upstream promoter sequence of the *NOS* gene that drives a membrane-targeted palmitoylated tdTomato reporter (Figure 1F)." and "Expression of a membrane-targeted reporter driven by the *NOS* regulatory region (NOSp::palmi-3xHA-Tomato; magenta"). More details are in the Methods section under Transient transgenesis.
 
 7)  *Show lack of anti-NOS immunostaining in NOS mutant to warrant specificity of the antibody. The subcellular localization of NOS in the dendritic arbors of INNOS is essential for the proposed model. The immunostaining image in Figure 4 -figure supplement 3D can be in the main figure. Is NOS also in the axons of INNOS?*
 
-    We redid the immunostaining with NOS antibodies in WT and NOS mutant and added the staining data to the main Figure 1G and Figure 3---supplement 1. NOS was observed to be more strongly localised on the dendrite side of INNOS. We have also added these explanations to the text.
+We further optimised the immunostaining with the NOS antibodies in WT and NOS mutant and added the staining data to the main Figure 1G and Figure 3---supplement 1. NOS was observed to be clearly localised in a region in the neuropil corresponding to the dendritic site of the INNOS cells. The staining was completely absent in larvae of both NOS knockout alleles. We have also added these explanations to the text.
 
 8)  *"that was defective in NOS mutant (Figure 5I)" should be corrected as "Figure 5H".*
 
-    We have corrected it.
+We have restructured this part of the text and figure, the data from the Ser-h1 cells are now in Figure 5 - figure supplement 2.
 
 9)  *Related to Figure 7, how do the larvae respond to a sequence of UV light (e.g. ten times 0.5s ON and 0.5 OFF) or ramping up/down UV light? Can the model make any predictions?*
 
-    We performed new experiments, both in the mathematical model and in real calcium imaging, changing the amplitude and duration of UV stimulation. The results are shown in Figure 7A and B.
+We carried out new experiments and generated new model predictions. In Figure 6 -- figure supplement 7 we show how changing the amplitude and duration of a single UV stimulation influences the response and the model output. In Figure 6 -- figure supplement 8 we show how the model behaves when we provide repeated stimulations.
 
 10) *What are the knock down efficiency of NOS and NIT-GC morpholnio?*
 
-    We compared the fluorescence intensity in immunostaining of each morphant larvae and added a graph to Figure 4---supplement 3F.
+We have now quantified the fluorescence intensity by immunostaining in wild-type and morphant larvae. We show the data for NIT-GC1 and NIT-GC2 in Figure 4---supplement 3F. The knock downs are very efficient. For *NOS*, we did not do morpholino experiments since we have two null alleles (Figure 3 -- figure supplement 1).
 
 **Reviewer #2 (Recommendations For The Authors):**
 
 *Why is the behavior of the control animals so different in panels B and C of Figure 3? One group reaches only 15 mm vertical position and the other reaches \~60 mm. Is this just batch variation? Am I missing an experimental variable here? If this is indeed batch variation, then some additional text and statistical analyses might help the reader interpret the behavioral data.*
 
-Our unit notation has been corrected. Additionally we have added statistical tests.
+Thank you for pointing this out. This was a mistake in the original Figure 3C of the unit on the Y axis. We have now corrected this. Additionally we have added statistical tests.
 
 *Really, that's the only, relatively minor issue I could find. This was a pleasure to read, and I learned a lot. Congratulations on an excellent study.*
 
@@ -137,48 +137,52 @@ Thanks a lot for these comments.
 
 *Page 3, Figure 1 A: The authors reconstructed the cPRC circuit in 3-day-old larvae and detected NOS gene expression in 2-day-old larvae in Figure 1D&E. Can the authors provide a cPRC circuit reconstruction for 2-day-old larvae?*
 
-We have added further data on NOS gene expression in three-day-old larvae to Figure 1---supplement 2C, although it is difficult for us to show data on the connectome of two-day-old larvae.
+We do not have a full connectome of the 2-day-old larva. We also show *NOS* gene expression in three-day-old larvae (Figure 1 -- figure supplement 2).
 
 *Page 4, Figure 2: NO produced by UV/violet stimulation to cPRCs: Including a diagram of the larvae would enhance reader understanding.*
 
-We have added a schematic diagram to Figure 2---supplement 1.
+We have added a schematic diagram to Figure 2.
 
 *Page 4: Two Platynereis NOS knockout lines (NOSΔ11/Δ11 and Δ23/Δ23) using the CRISPR/Cas9: Could you direct me to the knockout conformation results for NOS knockout lines NOSΔ11/Δ11 and Δ23/Δ23?*
 
-We have shown in Figure 3---supplement 1A.
+This is shown in Figure 3 -- figure supplement 1 (genetic deletion and loss of antibody signal).
 
 *Page 4: "Three day-old but not two-day-old NOS-mutant larvae also showed reduced phototactic behaviour, suggesting a function for NOS in the visual eyes that mediate three-day-old phototaxis" This sentence is unclear. Why is it only three days old but not two days old?*
 
-The visual eyes (adult eyes) co-express r-opsin1 and Go-opsin1, which are known to be involved in phototaxis, and it is thought that differences in phototaxis behaviour may arise because the visual eyes themselves are still underdeveloped in two-day-old larvae.
+2-day-old and 3-day-old larvae have very different type of phototaxis. 2-day-old larvae use their eyspots and show non-visual helical phototaxis. 3-day-old larvae use their visual ('adult') eyes for visual phototaxis. We have clarified this sentence:
+"Given that phototaxis in 1 and 2-day-old trochophore larvae is mediated by their non-visual eyespots [@jekely2008] and in 3-day-old nectochaete larvae by the visual eyes [@Randel2014a], these data suggest a function for *NOS* in the visual eyes (Figure 3D and Figure 3---figure supplement 1E)."
 
 *Page 5: "Figure 3. NOS is required for UV avoidance in Platynereis larvae." Detailed experiment setup, if possible, schematic or real setup images would help to replicate the experiments.*
 
-We have added a schematic diagram to Figure 3---supplement 1B.
+We have added a schematic diagram to Figure 3.
 
 *Page 5: "All trajectories start at 0 x and y position and time 0 corresponding to 10 sec after the onset of 395 nm stimulation from the side." How did the authors determine the 10-second duration? Are there any potential reasons for this choice?*
 
-Due to constraints imposed by the experimental set-up and analysis, we found it difficult to track the same larvae for extended periods of time, so we restricted our analysis to a total of 40 s of tracking, starting 10 s before stimulus onset and continuing for 30 s after stimulus onset.
+In our experimental setup we had a limit of tracking individual larvae of approximately 40 seconds. We therefore restricted our analysis to a 10 sec pre and 30 sec post-stimulus interval.
 
 *"(A) Swimming trajectories of wild type (WT, n=32) and NOS mutant (NOSΔ11/Δ11, n=26 and NOSΔ23/Δ23, n=47) three-day-old larvae." Authors keep shifting between 2-day and 3-day-old larval data in Figures 1, 2, and 3, causing inconsistency.*
 
-Due to sample immobilisation constraints in live imaging, we found it difficult to perform DAF-FM and calcium imaging with three-day-old larvae. However, we have observed similar patterns of UV-avoidance behaviour and NOS gene expression in two-day-old larvae as in three-day-old larvae, and we believe that it is possible to make a correspondence.
+Due to their elongated shape and active muscular contractions it is difficult to carry out calcium imaging experiments with 3-day-old larvae. These experiments were therefore done with 2-day-old larvae. However, we did our behavioural experiments with both 2- and 3-day-old larvae. We observed similar patterns of UV-avoidance behaviour, *NOS* gene expression, ciliary activity, and mutant phenotype. We are therefore confident that the cPRC responses and circuit activity are similar across these two stages.
 
 *Page 5: "Figure 3. NOS is required for UV avoidance in Platynereis larvae." Why didn't the authors present any statistics on the plots? A statistical test is required to prove that the difference is significant.*
 
-We have added statistical tests to the data in Figure3.
+We have added statistical tests to the data in Figure 3.
 
 *Page 5: "Analysis of sGCs in Platynereis indicated that these genes are not expressed in any of the cells of the cPRC circuit (not shown and (Verasztó et al., 2017))." Hence the data is relevant; please provide this data in supplementary.*
 
-We re-analysed previous single-cell data (Achim et al., 2018) and found no sGC homologues detected in cPRC and INNOS. However, a few were detected in INRGW. Additions were made to the supplement data regarding these data and the text was also amended.
+We re-analysed previous single-cell data (Achim et al., 2018) and found no sGC homologues detected in cPRC and INNOS. However, we detected an sGCβ subunit in the INRGWa cells. We added these data to the source data and amended the figure and the text.
+"Analysis of sGCs in *Platynereis* showed that these genes were not expressed in cPRC or INNOS cells, we only detected expression of an sGCβ subunit in the INRGWa cells (Figure 6B)."
 
 *Page 10: "Diagram of the mathematical model with the components, interactions, parameters and equations used to model Ca dynamics." It would be helpful to include a legend explaining the meaning of each term (e.g. what is K, Co, Cp etc) and arrow color. Additionally, the main text should provide detailed descriptions to aid understanding.*
 
+We have added a new diagram of the model and its parameters to Figure 6. In addition, in the Methods section we have an extensive description of the model and all its parameters.
+
 *Page 12: "This activated state is maintained for several tens of second." Can authors point out the data?*
 
-In Figure4A and B, it can be seen that cPRC activity continues after UV stimulation.
+We point to the relevant figure now. "The high-Ca^2+^-state is then maintained for several tens of second (Figure 4A, B)."
 
 *Page 13: "In the Platynereis circuit, our mathematical model indicates that the magnitude of the NO-dependent signal depends on the intensity and duration of the UV/violet stimulus." Did the authors conduct experiments of various intensity and duration apart from modelling? If not, such experiments should be carried out to validate the mathematical model.*
 
-We have performed a new calcium imaging experiment: a plot of the change in calcium levels in the cPRC when changing the power and duration of the UV stimulus is added in Figure7B.
+We have carried out new calcium imaging experiment with varying duration and intensity of the stimulation. These experiments were key to the revision of the model because they clearly pointed to the time-invariance of the NO-dependent peak in the cPRCs. These data and their model fits are summarised in Figure 6 -- figure supplement 7.
 
 
