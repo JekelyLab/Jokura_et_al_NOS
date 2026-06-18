@@ -1,7 +1,7 @@
 ---
 title: Nitric oxide feedback to ciliary photoreceptor cells gates a UV avoidance circuit
 subtitle: |
-  | [Kei Jokura^1,`*`^, Nobuo Ueda^3^, Martin Gühmann^4^, Luis Alfonso Yañez-Guerra^1,5^, Emily Savage^6^, Piotr Słowiński^1^, Kyle C. A. Wedgwood^1^ and Gáspár Jékely^1,2,6,`*`^ ]{style="font-size:11pt"}
+  | [Kei Jokura^1,`*`^, Piotr Słowiński^1^, Nobuo Ueda^3^, Martin Gühmann^4^, Luis Alfonso Yañez-Guerra^1,5^, Emily Savage^6^, Kyle C. A. Wedgwood^1^ and Gáspár Jékely^1,2,6,`*`^ ]{style="font-size:11pt"}
   | [^1^Living Systems Institute, University of Exeter, Exeter EX4 4QD, United Kingdom  ]{style="font-size:10pt"}
   | [^2^Biosciences, Faculty of Health and Life Sciences, University of Exeter, Exeter EX4 4QD, United Kingdom ]{style="font-size:10pt"}
   | [^3^Okinawa Institute of Science and Technology, Okinawa, Japan]{style="font-size:10pt"}
