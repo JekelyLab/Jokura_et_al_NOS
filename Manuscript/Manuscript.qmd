@@ -404,7 +404,7 @@ The mechanisms may involve c-opsin1-dependent inhibition of tonic NIT-GC2 activi
 
 NIT-GC2-dependent signalling is required for the feedforward activation of the INNOS cells through an unknown transmitter.
 The activation of INNOS leads to NOS activation and NO release, potentially through a canonical Ca^2+^-calmodulin pathway.
-Our model predicts feedforward inhibition from INNOS to INRGWa, possibly mediated by glycin transmission.
+Our model predicts feedforward inhibition from INNOS to INRGWa, possibly mediated by glycine transmission.
 NO released by INNOS neurites activates NIT-GC1 in cPRC projections that could lead to cGMP production and the opening of CNGAα.
 This late-phase cPRC activation does not directly depend on the UV/violet signal and can happen post-stimulus.
 The late-phase cPRC activation leads to INRGWa activation via an unknown transmitter that is likely different from the one acting on INNOS.
@@ -424,7 +424,7 @@ The complex activation dynamics and transmitter phenotype of cPRCs could underli
 ### Nitric oxide confers short-term memory to circuit activity
 
 Retrograde signalling by NO from INNOS to cPRC leads to the sustained activation of cPRCs and postsynaptic neurons even after the end of stimulation.
-This late-phase activation occures at a fixed time after stimulus, indepent of stimulus duration. The high-Ca^2+^-state is then maintained for several tens of second (Figure 4A, B).
+This late-phase activation occurs at a fixed time after stimulus, independent of stimulus duration. The high-Ca^2+^-state is then maintained for several tens of second (Figure 4A, B).
 NO signalling thus induces a transient and time-invariant peak or short-term memory trace in the *Platynereis* larval brain.
 Because of the short life time of NO, this molecule may be well suited to encode transient memory traces [@Kuntz2017].
 
@@ -451,8 +451,8 @@ Here we only focused on the prototroch ciliary band and more work will be needed
 
 ### Future directions
 
-The mathematical model could be further developed by more explicitely modelling cPRC phototransduction and synaptic transmission. For example, cGMP levels could also be directly measured in cPRCs by Green-cGull and built into the model. The contributions of the individual neurotransmitters in the circuit could also be analysed by knockdown/knockout experiments.
-The addition of an NO donor to larvae combined with calcium imaging could more directly test the relationsip between NO levels and cPRC responses.
+The mathematical model could be further developed by more explicitly modelling cPRC phototransduction and synaptic transmission. For example, cGMP levels could also be directly measured in cPRCs by Green-cGull and built into the model. The contributions of the individual neurotransmitters in the circuit could also be analysed by knockdown/knockout experiments.
+The addition of an NO donor to larvae combined with calcium imaging could more directly test the relationship between NO levels and cPRC responses.
 
 Beyond these details of cellular signalling, the biggest question remains the mechanism of graviorientation in the larvae. We do not understand what leads to differential behavioural output during the pressure on-response (upward swimming) [@bezares-calderon2023] and the UV response (downward swimming). Under both conditions, the prototroch cilia increase their beating. The only difference we detected so far is in the dynamics of cPRC Ca^2+^ responses. 
 
@@ -463,7 +463,8 @@ Identifying the neuronal and biophysical underpinnings of these opposite behavio
 Animals evolved distinct photosensory systems coupled to non-overlapping circuits and guiding unique behavioural responses.
 These sensory systems can employ different opsin molecules and be tuned to different wavelengths of light.
 The avoidance of noxious UV/violet light is often mediated by extraocular photoreceptors and their circuits, distinct from the pigmented visual eyes.
-These two types of systems co-exist in *Platynereis* where the pigmented eyes and eyespots guide phototaxis with a maximum sensitivity to cyan light (\~500 nm) [@Randel2014a; @Gühmann2015; @Veraszto2018].
+These two types of systems co-exist in *Platynereis* where the pigmented eyes and eyespots guide phototaxis with a maximum sensitivity to cyan light (\~500 nm) [@Randel2014a; @Guehmann2015; @Veraszto2018]. In free-swimming larvae in a vertical column, cyan light induces phototactic upward-swimming while UV induces diving. The two behaviours compete and the outcome depends on the ratio of UV-to-cyan light [@Veraszto2018].
+
 Planarians also have pigmented visual eyes mediating phototaxis to cyan light and peripheral extraocular photoreceptors mediating UV avoidance behaviour [@Shettigar2021].
 *Drosophila* larvae have cerebral eyes called Bolwig's organs involved in phototaxis [@kane2013] and several types of extraocular UV-sensory cells that tile the body wall and mediate UV avoidance [@Imambocus2022].
 
