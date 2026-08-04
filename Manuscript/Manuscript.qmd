@@ -325,7 +325,7 @@ We could fit to mean Ca^2+^ profiles but also individual Ca^2+^ transients (Figu
 
 ```{r figure7}
 #| echo: FALSE
-#| fig-cap: "**Figure 7**. Simulated Ca^2+^ traces for parameter sets fitted independently to each Ca^2+^-recording collected in wild type, *NOS* knockout, and *NIT-GC2* morphant larvae. (**A**, **B**) Simulated Ca^2+^ traces in cPRC (A) and INNOS (B) cells in the wild-type condition. (**C**, **D**) Simulated Ca^2+^ traces in cPRC (C) and INNOS (D) cells in the *NOS* knockout condition. (**E-F**) Simulated Ca^2+^ traces in cPRC (E) and INNOS (H) cells in the *NIT-GC2*-morphant condition. Thin coloured curves indicate individual recordings (cPRC - purple and INNOS - blue), thin grey curves indicate simulated Ca^2+^ traces based on model parameters fitted to the individual recording, thick coloured curves indicate averages of the recordings, and thick black curves represent the average of the fits. <br> Figure 7 -- source data 1. Best fitted parameters {best/_pars.mat}. <br> Figure 7 -- source data 2. Recorded traces (as used in earlier figures) {wt/_ko/_mo/_data.mat}. <br> Figure 7 -- source data 3. script to generate the figure {fig/_all/_fits.m}./label{fig:all-fits} "
+#| fig-cap: "**Figure 7**. Simulated Ca^2+^ traces for parameter sets fitted independently to each Ca^2+^-recording collected in wild type, *NOS* knockout, and *NIT-GC2* morphant larvae. (**A**, **B**) Simulated Ca^2+^ traces in cPRC (A) and INNOS (B) cells in the wild-type condition. (**C**, **D**) Simulated Ca^2+^ traces in cPRC (C) and INNOS (D) cells in the *NOS* knockout condition. (**E-F**) Simulated Ca^2+^ traces in cPRC (E) and INNOS (H) cells in the *NIT-GC2*-morphant condition. Thin coloured curves indicate individual recordings (cPRC - purple and INNOS - blue), thin grey curves indicate simulated Ca^2+^ traces based on model parameters fitted to the individual recording, thick coloured curves indicate averages of the recordings, and thick black curves represent the average of the fits. <br> Figure 7 -- source data 1. Best fitted parameters `best_pars.mat`. <br> Figure 7 -- source data 2. Recorded traces (as used in earlier figures) `wt_ko_mo_data.mat`. <br> Figure 7 -- source data 3. script to generate the figure `fig_all_fits.m`"
 #| out.width: "90%"
 
 knitr::include_graphics(path = "figures/Fig7.png")
@@ -647,6 +647,7 @@ As NO donor, we used S-Nitroso-N-acetyl-D, L-penicillamine (SNAP, Sigma-Aldrich,
 
 The mathematical model for the wild type data comprises 11 dynamical equations:
 
+$$
 \begin{equation}\label{eq:wild-type-model}
 \begin{aligned}
 \frac{dC_P(t)}{dt} = & B(t) - \delta_{C_P} C_P(t) + \kappa_{GC1,2} N_{in,2}(t) + \\ & \frac{(\kappa_{UV} + \kappa_{GC1,1} N_{in,1}(t))UV(t)}{1+\kappa_S S(t)},\\
@@ -667,9 +668,9 @@ UV(t) =&
     \end{cases}.
 \end{aligned}
 \end{equation}
+$$
 
-
-The *C_P(t)* equation describes the dynamics of the
+The $C_{P}(t)$ equation describes the dynamics of the
 Ca^2+^ concentration in the cPRC cells,
 the *B(t)* variable captures changes in the baseline level of the
 Ca^2+^, while the $\kappa_{GC1,1} N_{in,2}(t)$ term captures the Ca^2+^
@@ -686,14 +687,16 @@ The $S_{GC1}(t)$ equation describes the NO signalling dependent on NIT-GC1. This
 
 Finally, the UV stimulation is described by a square pulse with amplitude $a$ and duration $t_{UV end} - t_{UV \: start}$. The overall model structure is informed by the data collected in experiments with 20 seconds as well as with longer UV stimulation. Model parameters were fitted using exclusively experiments with 20 seconds UV stimulation. Experiments with longer UV stimulation were used to validate the estimated parameter values.
 
-We do not model the dynamics of Ca^2+^ in the INRGWa cells, which depends on the other equations in a feed-forward manner. Phenomenologically, we observe increase in Ca^2+^ levels in the INRGWa cells that is correlated  with increases of the Ca^2+^ levels in the cPRC cells; term $A(C_P,t)$. We also see an inhibitory effect correlated with the Ca^2+^ levels in the INNOS cells; term $I(C_P,t)$ in Fig ... .  However, for the following three reasons, we choose not model the INRGWa cells. First, the INRGWa cells were not a subject of direct experimental modifications. Second, the quality of the recordings from the INRGWa cells is lower than that of the other cells, for example, the wild-type recordings do not appear to be at a steady state before the UV stimulation. Additionally, recordings in the *NIT-GC2*-morphants are the only dataset that shows a large difference between mean and median time-series, which we take as a measure of robustness of response. Finally, the data collected in the experiments do not provide enough information to specify how the duration of the UV stimulation affects the dynamics of Ca^2+^ in the INRGWa cells.
+We do not model the dynamics of Ca^2+^ in the INRGWa cells, which depends on the other equations in a feed-forward manner. Phenomenologically, we observe increase in Ca^2+^ levels in the INRGWa cells that is correlated  with increases of the Ca^2+^ levels in the cPRC cells; term $A(C_P,t)$ in Figure 6A. We also see an inhibitory effect correlated with the Ca^2+^ levels in the INNOS cells; term $I(C_P,t)$ in Figure 6A.  However, for the following three reasons, we choose not model the INRGWa cells. First, the INRGWa cells were not a subject of direct experimental modifications. Second, the quality of the recordings from the INRGWa cells is lower than that of the other cells, for example, the wild-type recordings do not appear to be at a steady state before the UV stimulation. Additionally, recordings in the *NIT-GC2*-morphants are the only dataset that shows a large difference between mean and median time-series, which we take as a measure of robustness of response. Finally, the data collected in the experiments do not provide enough information to specify how the duration of the UV stimulation affects the dynamics of Ca^2+^ in the INRGWa cells.
 
 ### *NOS*-knockout model
 
 The *NOS*-knockout model is derived from the WT model by eliminating the
 $N(t)$ variable, which represents the NO produced by the INNOS cells
 in a NOS-dependent manner, and terms that depend on it. This results in the
-system
+system:
+
+$$
 \begin{equation}\label{eq:*NOS*-knockout-model}
 \begin{aligned}
 \frac{dC_P(t)}{dt} &= B(t) - \delta_{C_P} C_P(t) + \frac{\kappa_{UV}UV(t)}{1+\kappa_S S(t)}, \\
@@ -707,8 +710,9 @@ UV(t) &=
     \end{cases}   .
 \end{aligned}
 \end{equation}
+$$
 
-We use the same system of equations to describe the *NIT-GC2*-morphants. To this end, we lower the value of $\kappa_{GC2}$ to 0.15; this value captures an average effectiveness of NIT-GC2-morpholino knockdown of 85\%. Furthermore, in the NIT-GC2 morpholino condition, we do not fit the INNOS data since we assumed that the feedforward coupling between the cPRC cells and INNOS cell depends on NIT-GC2 activity (that is, we assume that the Ca^2+^ levels in INNOS cells are on constant in this condition); this is on average consistent with the collected data.
+We use the same system of equations to describe the *NIT-GC2*-morphants. To this end, we lower the value of $\kappa_{GC2}$ to 0.15; this value captures an average effectiveness of NIT-GC2-morpholino knockdown of 85\%. Furthermore, in the NIT-GC2 morpholino condition, we do not fit the INNOS data since we assumed that the feedforward coupling between the cPRC cells and INNOS cell depends on NIT-GC2 activity (that is, we assume that the Ca^2+^ levels in INNOS cells are constant in this condition); this is on average consistent with the collected data.
 
 ### Parameter fitting (genetic algorithm)
 
@@ -716,14 +720,23 @@ To find sets of model parameters that reproduce recordings from the Ca^2+^ imagi
 
 We quantify the difference between the model output and the data using a vector-valued objective function. The first component of this function measures this difference during the UV stimulation, whilst the second component measures the difference from the end of the stimulation until the end of the recording. We thus define a vector-valued objective
 function, $\mathbf{D} \in \mathbb{R}^2_{\geq 0}$, as:
+
+$$
 \begin{equation}
  \mathbf{D}\left({C}_X^{data},{C}_X^{model}\right)=\left(D_{k_{UV\: start}}^{k_{UV\: end}}\left({C}_X^{data},{C}_X^{model}\right),D_{k_{UV\: end }+1}^{k_{end}}\left({C}_X^{data},{C}_X^{model}\right) \right),
  \label{eq:cost_fun}
-\end{equation} with 
+\end{equation} 
+$$
 
+with 
+
+$$
 \begin{equation*}
  D_{k_1}^{k_2}\left({C}_X^{data}(t),{C}_X^{model}(t)\right)=\sqrt{\sum_{i=k_1}^{k_2}\left({C}_{X}^{data}(t_i)-{C}_{X}^{model}(t_i)\right)^2} ,   
-\end{equation*} where the timepoints $t_i = i \Delta t$ are equispaced
+\end{equation*}
+$$
+
+where the timepoints $t_i = i \Delta t$ are equispaced
 with $\Delta = 0.5s$ and where
 $t_{k_{UV\: start}} = t_{UV \: start}$ (and similar for the other time
 points). Here ${C}_X^{data}$ denotes normalised experimental data and
@@ -739,14 +752,14 @@ Simulations are sampled with the same sampling rate as the data.
 
 To fit the *NOS*-knockout model to cPRC Ca^2+^ traces, we modify the second objective $D_{k_{UV\: end }+1}^{k_{end}}$. Instead of minimising the difference on the whole interval $t_{k_{UV\: end }+1}$ to $t_{k_{end}}$, we minimise it on the last 10 seconds of this interval, i.e., $t_{k_{end-10[s]}}$ to $t_{k_{end}}$. We change the interval in this particular case because, based on the averaged data, we assume that the only dynamics after the end of UV stimulation in the *NOS*-knockout is linear decay to a steady state. Using the original, non-modified cost function for the recordings exhibiting more complicated dynamics than linear decay would bias the fitting process.
 
-To solve the optimisation problem with the above objective function, we employ a global optimisation method known as a genetic algorithm (GA). GAs are a class of iterative, gradient-free algorithms inspired by processes of natural selection including breeding and mutation. With reference to natural selection, sets of candidate
-solutions in GAs are referred to as `populations'. As our algorithm of choice, we use the Matlab implementation of a genetic algorithm for multiobjective optimisation ```gamultiobj```. The ```gamultiobj``` algorithm uses a controlled, elitist genetic algorithm (a variant of NSGA-II). We use the default settings for most hyperparameters of the algorithm.
+To solve the optimisation problem with the above objective function, we employ a global optimisation method known as a genetic algorithm (GA). GAs are a class of iterative, gradient-free algorithms inspired by processes of natural selection including breeding and mutation [@GAbook]. With reference to natural selection, sets of candidate
+solutions in GAs are referred to as `populations'. As our algorithm of choice, we use the Matlab implementation of a genetic algorithm for multiobjective optimisation ```gamultiobj```. The ```gamultiobj``` algorithm uses a controlled, elitist genetic algorithm (a variant of NSGA-II [@GAbook]). We use the default settings for most hyperparameters of the algorithm.
 
 Here we outline the main steps of the ```gamultiobj``` implementation
 of the GA. The first step is to generate a set of random model parameter
 sets, known as the initial population. Next, we score the fitness of
 each parameter set in the population according to the objective
-function $ \bf D$. Using these scores, the ```gamultiobj``` algorithm employs
+function  $\mathbf{D}$. Using these scores, the ```gamultiobj``` algorithm employs
 a binary tournament selection function [@miller1995genetic] to
 select 'parents' for the next population. A population of children
 (i.e., new parameter sets) is generated by 'breeding' randomly chosen
@@ -766,11 +779,11 @@ parent population based on the scores and the
 *Crowding Distance*, distance to other parameter sets in terms of
 a sum of element-wise differences between values of the objective
 function (used to ensure diversity of the parent
-population). This iterative process is
+population) [@crowding_distance; @GAbook]. This iterative process is
 repeated until the convergence criteria are met, indicating that the GA has found a set of model parameters that best reproduce the data under consideration.
 
 The ```gamultiobj``` algorithm returns a set of model parameter
-values on a Pareto front [@censor1977pareto]. The coordinates of points on the front are the values of the components of the objective function $\mathbf{D}$. Points on the Pareto front are nondominated, meaning that improvements to one of the components cannot be achieved without worsening the other.
+values on a Pareto front [@censor1977pareto; @GAbook]. The coordinates of points on the front are the values of the components of the objective function $\mathbf{D}$. Points on the Pareto front are nondominated, meaning that improvements to one of the components cannot be achieved without worsening the other.
 To identify a single optimal solution, we select the parameter set along the Pareto front whose objective function value is the smallest with respect to the Euclidean norm.
 
 Below we present a summary of the steps of our optimisation pipeline for fitting the experimental recordings.
@@ -811,7 +824,7 @@ Figure 6 -- figure supplement 8 shows how the results of simulations of the WT m
 
 To analyse model sensitivity, we use Sobol's indices using the Global Sensitivity Analysis Matlab Toolbox [@Cannavo_2012Sensitivity]. Global sensitivity indices facilitate measuring the extent to which changes in model output depend on the changes in parameter values. The Sobol approach is based on the ANOVA (ANalysis Of VAriance) decomposition and computation of the variance of the terms in the decomposition. Here, we combine information from two kinds of indices. The first order indices $S_i$ represent the expected percentage reduction in output variance when parameter $i$ has no uncertainty [@Cannavo_2012Sensitivity]. By contrast, the total variance indices $S^{Tot}_i$ represent the expected percentage output variance that remains if all parameters except $i$ are known [@Cannavo_2012Sensitivity]. The summary of the significance of global sensitivity indexes is presented in Table 1. For our analysis we defined the output as the sum of the two components of the objective functions. To compute the indices the toolbox explores how the output changes as the model parameters are varied. 
 
-The results of the global sensitivity analysis are presented in Tables 2--5. The analysis identifies the parameter $B_0$ as the most important parameter in the *NOS*-knockout model and $\delta_{C_P}$ as the least important parameter. Fits to the Ca^2+^ recordings in the INNOS cells are found to depend on $\delta_S$ and $K_{C_N}$, while the most important parameter for fitting the NO recordings in the INNOS cells is $\delta_N$. In case of the wild-type cPRC recordings, the most important parameters are the ones that can be related to the NIT-GC1 dependent NO signals. For the quick NO response  $N_{in,1}(t)$, the important parameters are $\kappa_{S_{GC1}}$ and $\delta_{S_{GC1}}$, while, $\kappa_{S_{GC1}}$ and $\delta_{S_{GC1}}$ control the dynamics of the $N_{in,1}(t)$ variable. For the late NO response $N_{in,2}(t)$, the important parameters include $\kappa_{GC1,2}$, $K_{S_1}$ and $K_{S_2}$. The parameter $\kappa_{GC1,2}$ modulates Ca^2+^ levels in the cPRC cells. Finally, $K_{S_1}$ and $K_{S_2}$ are important for regulating the signalling cascade that leads to the late NO response.
+The results of the global sensitivity analysis are presented in Tables 2--6. The analysis identifies the parameter $B_0$ as the most important parameter in the *NOS*-knockout model and $\delta_{C_P}$ as the least important parameter. Fits to the Ca^2+^ recordings in the INNOS cells are found to depend on $\delta_S$ and $K_{C_N}$, while the most important parameter for fitting the NO recordings in the INNOS cells is $\delta_N$. In case of the wild-type cPRC recordings, the most important parameters are the ones that can be related to the NIT-GC1 dependent NO signals. For the quick NO response  $N_{in,1}(t)$, the important parameters are $\kappa_{S_{GC1}}$ and $\delta_{S_{GC1}}$, while, $\kappa_{S_{GC1}}$ and $\delta_{S_{GC1}}$ control the dynamics of the $N_{in,1}(t)$ variable. For the late NO response $N_{in,2}(t)$, the important parameters include $\kappa_{GC1,2}$, $K_{S_1}$ and $K_{S_2}$. The parameter $\kappa_{GC1,2}$ modulates Ca^2+^ levels in the cPRC cells. Finally, $K_{S_1}$ and $K_{S_2}$ are important for regulating the signalling cascade that leads to the late NO response.
 
 |                                |                                                                    |
 |--------------------------------|--------------------------------------------------------------------|
@@ -993,7 +1006,7 @@ knitr::include_graphics(path = "figures/Fig5_sup2.png")
 
 ```{r figure6-suppl1}
 #| echo: FALSE
-#| fig-cap: "**Figure 6 -- figure supplement 1**. Simulated Ca^2+^ traces for parameter sets fitted to the means of individual cPRC recordings collected in wild-type,*NOS* knockout, and *NIT-GC2* morphant larvae. The NIT-GC2 has the same parameter values as NOS-knockout except $kappa_{GC2}$ is decreased from 1 to 0.15. (**A**) Coloured curves indicate the mean of the recordings, thick black curves indicate simulated traces based on model parameters fitted to the mean of the recordings. (**B**, **C**) Thin grey curves (solid and dotted) represent simulated experimental conditions with different levels of efficacy of the NOS-knockout (**B**) and NIT-GC2 morpholino (**C**). To generate interpolated condition curves in (**B**), we multiplied  $kappa_{S_{GC1}}$ in the wild-type model by values from 0.1 to 0.9 with steps of 0.1. To generate interpolated condition curves in (**C**), we use a set of $kappa_{GC2}$ values from 0.1 to 0.9 with steps of 0.1. <br> Figure 6 -- figure supplement 1 -- source data 1. Recorded traces (as used in earlier figures) wt/_ko/_mo/_data.mat. <br> Figure 6 -- figure supplement 1 -- source data 2. Script to generate the figure fig/_WT/_to/_MO."
+#| fig-cap: "**Figure 6 -- figure supplement 1**. Simulated Ca^2+^ traces for parameter sets fitted to the means of individual cPRC recordings collected in wild-type,*NOS* knockout, and *NIT-GC2* morphant larvae. The NIT-GC2 has the same parameter values as NOS-knockout except $kappa_{GC2}$ is decreased from 1 to 0.15. (**A**) Coloured curves indicate the mean of the recordings, thick black curves indicate simulated traces based on model parameters fitted to the mean of the recordings. (**B**, **C**) Thin grey curves (solid and dotted) represent simulated experimental conditions with different levels of efficacy of the NOS-knockout (**B**) and NIT-GC2 morpholino (**C**). To generate interpolated condition curves in (**B**), we multiplied  $kappa_{S_{GC1}}$ in the wild-type model by values from 0.1 to 0.9 with steps of 0.1. To generate interpolated condition curves in (**C**), we use a set of $kappa_{GC2}$ values from 0.1 to 0.9 with steps of 0.1. <br> Figure 6 -- figure supplement 1 -- source data 1. Recorded traces (as used in earlier figures) `wt_ko_mo_data.mat`. <br> Figure 6 -- figure supplement 1 -- source data 2. Script to generate the figure `fig_WT_to_MO.m`"
 #| out.width: "90%"
 
 knitr::include_graphics(path = "figures/Fig6_sup1.png")
@@ -1001,7 +1014,7 @@ knitr::include_graphics(path = "figures/Fig6_sup1.png")
 
 ```{r figure6-suppl2}
 #| echo: FALSE
-#| fig-cap: "**Figure 6 -- figure supplement 2**. Simulated NO traces for parameter sets fitted to individual NO-recordings collected in wild type larvae. Thin coloured curves indicate individual recordings, thin grey curves indicate simulated NO traces based on model parameters fitted independently to each recording, the thick coloured curve indicates the average of the recordings, the thick grey curve represents the average of the fits, and the thick black curve represents the fit of the model parameters to the averaged recordings. <br> Figure 6 -- figure supplement 2 -- source data 1. Best fitted parameters {best/_pars.mat}. Figure 6 -- figure supplement 2 -- source data 2. Recorded traces (same as in Figure 2 but with removed bleaching and steady state set to 0) (NO/_data.mat). <br> Figure 6 -- figure supplement 2 -- source data 3. Script to generate the figure fig/_fit/_NO.m"
+#| fig-cap: "**Figure 6 -- figure supplement 2**. Simulated NO traces for parameter sets fitted to individual NO-recordings collected in wild type larvae. Thin coloured curves indicate individual recordings, thin grey curves indicate simulated NO traces based on model parameters fitted independently to each recording, the thick coloured curve indicates the average of the recordings, the thick grey curve represents the average of the fits, and the thick black curve represents the fit of the model parameters to the averaged recordings. <br> Figure 6 -- figure supplement 2 -- source data 1. Best fitted parameters `best_pars.mat`. Figure 6 -- figure supplement 2 -- source data 2. Recorded traces (same as in Figure 2 but with removed bleaching and steady state set to 0) (`NO_data.mat`). <br> Figure 6 -- figure supplement 2 -- source data 3. Script to generate the figure `fig_fit_NO.m`"
 #| out.width: "90%"
 
 knitr::include_graphics(path = "figures/Fig6_sup2.png")
@@ -1009,7 +1022,7 @@ knitr::include_graphics(path = "figures/Fig6_sup2.png")
 
 ```{r figure6-suppl3}
 #| echo: FALSE
-#| fig-cap: "**Figure 6 -- figure supplement 3**. Distributions of the parameter values fitted to the individual recordings collected in different conditions. Violin plots (grey lines) are kernel density estimates of the underlying distributions computed using the Matlab function $ksdensity$ with default settings, i.e., using normal kernel function; plots are trimmed to the observed range of data. Coloured markers represent individual parameter values, white markers indicate medians, vertical grey bars indicate interquartiles (ranges Q25 to Q75), and the dashed line indicates the value of the parameter fitted to the average of the recordings. We show histograms instead of violin plots for $delta_S$ when fitted to *NOS*-knockout recordings and for $delta_S$ and $delta_{C_N}$ when fitted to NO recordings because these distributions are highly skewed and hence misrepresented by violin plots. Violin plots are presented in the order of our model-fitting procedure, i.e., first Ca^2+^ in *NOS*-knockout cPRC cells (yellow), then Ca^2+^ in wild type and *NOS*-knockout INNOS cells (blue), then NO in INNOS cells (green), and finally Ca^2+^ in wild type cPRC cells (magenta); (see Methods for details). <br> Figure 6 -- figure supplement 3 -- source data 1. Best fitted parameters best/_pars.mat. <br> Figure 6 -- figure supplement 3 -- source data 2. Script to generate the figure parameter/_dist.m"
+#| fig-cap: "**Figure 6 -- figure supplement 3**. Distributions of the parameter values fitted to the individual recordings collected in different conditions. Violin plots (grey lines) are kernel density estimates of the underlying distributions computed using the Matlab function $ksdensity$ with default settings, i.e., using normal kernel function; plots are trimmed to the observed range of data. Coloured markers represent individual parameter values, white markers indicate medians, vertical grey bars indicate interquartiles (ranges Q25 to Q75), and the dashed line indicates the value of the parameter fitted to the average of the recordings. We show histograms instead of violin plots for $delta_S$ when fitted to *NOS*-knockout recordings and for $delta_S$ and $delta_{C_N}$ when fitted to NO recordings because these distributions are highly skewed and hence misrepresented by violin plots. Violin plots are presented in the order of our model-fitting procedure, i.e., first Ca^2+^ in *NOS*-knockout cPRC cells (yellow), then Ca^2+^ in wild type and *NOS*-knockout INNOS cells (blue), then NO in INNOS cells (green), and finally Ca^2+^ in wild type cPRC cells (magenta); (see Methods for details). <br> Figure 6 -- figure supplement 3 -- source data 1. Best fitted parameters `best_pars.mat`. <br> Figure 6 -- figure supplement 3 -- source data 2. Script to generate the figure `parameter_dist.m`"
 #| out.width: "90%"
 
 knitr::include_graphics(path = "figures/Fig6_sup3.png")
@@ -1017,7 +1030,7 @@ knitr::include_graphics(path = "figures/Fig6_sup3.png")
 
 ```{r figure6-suppl4}
 #| echo: FALSE
-#| fig-cap: "**Figure 6 -- figure supplement 4**. Distributions of the parameter values fitted to individual cPRC recordings collected in wild type larvae. The figure is in the same format as Figure 6 -- figure supplement 4. <br> Figure 6 -- figure supplement 4 -- source data 1. Best fitted parameters best/_pars.mat. <br> Figure 6 -- figure supplement 4 -- source data 2. Script to generate the figure parameter/_dist.m."
+#| fig-cap: "**Figure 6 -- figure supplement 4**. Distributions of the parameter values fitted to individual cPRC recordings collected in wild type larvae. The figure is in the same format as Figure 6 -- figure supplement 4. <br> Figure 6 -- figure supplement 4 -- source data 1. Best fitted parameters `best_pars.mat`. <br> Figure 6 -- figure supplement 4 -- source data 2. Script to generate the figure `parameter_dist.m`."
 #| out.width: "90%"
 
 knitr::include_graphics(path = "figures/Fig6_sup4.png")
@@ -1025,7 +1038,7 @@ knitr::include_graphics(path = "figures/Fig6_sup4.png")
 
 ```{r figure6-suppl5}
 #| echo: FALSE
-#| fig-cap: "**Figure 6 -- figure supplement 5**.  Pairwise correlations between parameters of the *NOS*-knockout model (state variables $C_P(t)$, $B(t)$ and $S(t)$) fitted to *NOS*-knockout cPRC recordings; wild-type model (state variables $S(t)$ and $C_N(t)$) fitted to wild-type and *NOS*-knockout Ca^2+^ INNOS recordings. Wild type model (state variables $S(t)$, $C_N(t)$ and $N(t)$) fitted to wild type INNOS NO recordings. All visible correlation values are significant at the 5% level, $p < 0.05$, (trivial correlations along the diagonal are excluded). <br> Figure 6 -- figure supplement 5 -- source data 1. Best fitted parameters best/_pars.mat. <br> Figure 6 -- figure supplement 5 -- source data 2. Script to generate the figure correlations.m"
+#| fig-cap: "**Figure 6 -- figure supplement 5**.  Pairwise correlations between parameters of the *NOS*-knockout model (state variables $C_P(t)$, $B(t)$ and $S(t)$) fitted to *NOS*-knockout cPRC recordings; wild-type model (state variables $S(t)$ and $C_N(t)$) fitted to wild-type and *NOS*-knockout Ca^2+^ INNOS recordings. Wild type model (state variables $S(t)$, $C_N(t)$ and $N(t)$) fitted to wild type INNOS NO recordings. All visible correlation values are significant at the 5% level, $p < 0.05$, (trivial correlations along the diagonal are excluded). <br> Figure 6 -- figure supplement 5 -- source data 1. Best fitted parameters `best_pars.mat`. <br> Figure 6 -- figure supplement 5 -- source data 2. Script to generate the figure `correlations.m`"
 #| out.width: "90%"
 
 knitr::include_graphics(path = "figures/Fig6_sup5.png")
@@ -1033,7 +1046,7 @@ knitr::include_graphics(path = "figures/Fig6_sup5.png")
 
 ```{r figure6-suppl6}
 #| echo: FALSE
-#| fig-cap: "**Figure 6 -- figure supplement 6**. Pairwise correlations between parameters of the wild type model fitted to wild type cPRC recordings. All visible correlation values are significant at the 5% level, $p < 0.05$, (trivial correlations along the diagonal are excluded). <br> Figure 6 -- figure supplement 6 -- source data 1. Best fitted parameters best/_pars.mat. <br> Figure 6 -- figure supplement 6 -- source data 2. Script to generate the figure correlations.m "
+#| fig-cap: "**Figure 6 -- figure supplement 6**. Pairwise correlations between parameters of the wild type model fitted to wild type cPRC recordings. All visible correlation values are significant at the 5% level, $p < 0.05$, (trivial correlations along the diagonal are excluded). <br> Figure 6 -- figure supplement 6 -- source data 1. Best fitted parameters `best_pars.mat`. <br> Figure 6 -- figure supplement 6 -- source data 2. Script to generate the figure `correlations.m` "
 #| out.width: "90%"
 
 knitr::include_graphics(path = "figures/Fig6_sup6.png")
@@ -1041,7 +1054,7 @@ knitr::include_graphics(path = "figures/Fig6_sup6.png")
 
 ```{r figure6-suppl7}
 #| echo: FALSE
-#| fig-cap: "**Figure 6 -- figure supplement 7**. Validation of the wild-type model using cPRC recordings collected in wild-type larvae subject to UV stimulation with different intensity and duration. The top row displays recorded data; the bottom row shows model simulations. Different columns show different durations of UV stimulation. Simulated Ca^2+^ traces use parameter sets fitted to mean of Ca^2+^-recordings collected in wild-type larvae subject to 20s UV stimulation at 100% power. Stimulation duration is indicated by the shaded rectangle (violet) while stimulation intensity is indicated by the shade of grey of the line plot (darker shades indicate higher power). Simulations are compared with the mean of the 50%, 75% and 100% data and their 95% confidence interval (mean $pm 1.96 SE$, here is $SE=std/sqrt{n}$ and $std$ stands for standard deviation). We use the 50%, 75% and 100% recordings to compute the average because the data indicate the existence of a non-linear relation between response and the power of the stimulation and the 25% recordings would bias the average down. <br> Figure 7 -- source data 1. Recorded traces longer_experiments_data.mat. <br> Figure 6 -- figure supplement 7 -- source data 1. Script to generate the figure fig_longer_experiments.m"
+#| fig-cap: "**Figure 6 -- figure supplement 7**. Validation of the wild-type model using cPRC recordings collected in wild-type larvae subject to UV stimulation with different intensity and duration. The top row displays recorded data; the bottom row shows model simulations. Different columns show different durations of UV stimulation. Simulated Ca^2+^ traces use parameter sets fitted to mean of Ca^2+^-recordings collected in wild-type larvae subject to 20s UV stimulation at 100% power. Stimulation duration is indicated by the shaded rectangle (violet) while stimulation intensity is indicated by the shade of grey of the line plot (darker shades indicate higher power). Simulations are compared with the mean of the 50%, 75% and 100% data and their 95% confidence interval (mean $pm 1.96 SE$, here is $SE=std/sqrt{n}$ and $std$ stands for standard deviation). We use the 50%, 75% and 100% recordings to compute the average because the data indicate the existence of a non-linear relation between response and the power of the stimulation and the 25% recordings would bias the average down. <br> Figure 7 -- source data 1. Recorded traces `longer_experiments_data.mat`. <br> Figure 6 -- figure supplement 7 -- source data 1. Script to generate the figure `fig_longer_experiments.m`"
 #| out.width: "90%"
 
 knitr::include_graphics(path = "figures/Fig6_sup7.png")
@@ -1049,7 +1062,7 @@ knitr::include_graphics(path = "figures/Fig6_sup7.png")
 
 ```{r figure6-suppl8}
 #| echo: FALSE
-#| fig-cap: "**Figure 6 -- figure supplement 8**. Simulated Ca^2+^ traces under stimulation with two UV pulses. The top row shows simulations with a 10s interval between pulses; the bottom row shows simulations with a 30s interval between pulses. Different columns show different durations of UV stimulation. The duration of UV stimulation is indicated by the shaded rectangle (violet). Coloured curves indicate simulated outcome of two pulse UV stimulation; thick black curves indicate simulated reference traces with a single UV pulse. Simulations of the Ca^2+^ traces use parameter sets fitted to the mean of individual Ca^2+^-recordings collected in wild-type larvae subject to 20s UV stimulation. <br> Figure 6 -- figure supplement 8 -- source data 1. Script to generate the figure fig_two_pulse.m"
+#| fig-cap: "**Figure 6 -- figure supplement 8**. Simulated Ca^2+^ traces under stimulation with two UV pulses. The top row shows simulations with a 10s interval between pulses; the bottom row shows simulations with a 30s interval between pulses. Different columns show different durations of UV stimulation. The duration of UV stimulation is indicated by the shaded rectangle (violet). Coloured curves indicate simulated outcome of two pulse UV stimulation; thick black curves indicate simulated reference traces with a single UV pulse. Simulations of the Ca^2+^ traces use parameter sets fitted to the mean of individual Ca^2+^-recordings collected in wild-type larvae subject to 20s UV stimulation. <br> Figure 6 -- figure supplement 8 -- source data 1. Script to generate the figure `fig_two_pulse.m`"
 #| out.width: "90%"
 
 knitr::include_graphics(path = "figures/Fig6_sup8.png")
