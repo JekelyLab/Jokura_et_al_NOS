@@ -346,7 +346,7 @@ Based on these data, our experimental results and the mathematical model, we ass
 The components for which experimental data are available are shown in bold.
 Other potential molecular players are also indicated (Figure 6C).
 
-To further explore the model, we carried out a global sensitivity analysis. This analysis measures how the output of the model depends on parameter values (Tables 1-5).
+To further explore the model, we carried out a global sensitivity analysis. This analysis measures how the output of the model depends on parameter values (Tables 1-6).
 We also analysed structural identifiability and observability in the model and found most parameters to be identifiable (more details in the Methods section).
 
 As additional validation of the wild-type model, we recorded Ca^2+^-dynamics from the cPRCs in wild-type larvae subject to UV stimulation with different duration. The model captures the time-invariant appearance of the delayed Ca^2+^ peak as observed in our experiments (Figure 6 -- figure supplement 7). 
@@ -876,6 +876,15 @@ Table 4: Results of the global sensitivity analysis of the model consisting of $
 
 Table 5: Results of the global sensitivity analysis of the full WT model (remaining parameters); fitting to WT recordings.
 
+
+|                             | $\kappa_{S_1}$ | $\delta_{S_1}$ | $\kappa_{S_2}$ | $\delta_{S_2}$ | $\kappa_{+,1}$ | $\kappa_{+,2}$ | $\delta_{N_{in,2}}$ |
+|-----------------------------|------------------|------------------|------------------|------------------|------------------|------------------|-----------------------|
+| $S_i$                     | 0.0267           | 0.0009           | 0.0299           | 0.0005           | 0.0051           | 0.0116           | 0.0016                |
+| $\pm$ CI of $S_i$       | 0.0001           | <0.0001      | 0.0001           | <0.0001      | <0.0001      | <0.0001      | <0.0001           |
+| $S_i^{Tot}$               | 0.1668           | 0.0197           | 0.1900           | 0.0163           | 0.0297           | 0.0508           | 0.0124                |
+| $\pm$ CI of $S_i^{Tot}$ | 0.0435           | 0.0631           | 0.0445           | 0.0591         | 0.0623           | 0.0617           | 0.0640                |
+
+Table 6: Results of the global sensitivity analysis of the full WT model (remaining parameters); fitting to WT recordings.
 
 ### Assessment of model identifiability and observability
 
