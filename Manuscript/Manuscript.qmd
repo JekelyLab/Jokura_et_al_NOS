@@ -874,7 +874,7 @@ Table 4: Results of the global sensitivity analysis of the model consisting of $
 | $S_i^{Tot}$             | 0.0124           | 0.4961           | 0.0        | 0.2409             | 0.4330             | 0.0158              | 0.0216              |
 | $\pm$ CI of $S_i^{Tot}$ | 0.0640           | 0.0283           | 0.0647     | 0.0406             | 0.0259             | 0.0637              | 0.0646              |
 
-Table 5: Results of the global sensitivity analysis of the full WT model (remaining parameters); fitting to WT recordings.
+Table 5: Results of the global sensitivity analysis of the full WT model (remaining parameters  -- part 1 of 2); fitting to WT recordings.
 
 
 |                             | $\kappa_{S_1}$ | $\delta_{S_1}$ | $\kappa_{S_2}$ | $\delta_{S_2}$ | $\kappa_{+,1}$ | $\kappa_{+,2}$ | $\delta_{N_{in,2}}$ |
@@ -884,7 +884,7 @@ Table 5: Results of the global sensitivity analysis of the full WT model (remain
 | $S_i^{Tot}$               | 0.1668           | 0.0197           | 0.1900           | 0.0163           | 0.0297           | 0.0508           | 0.0124                |
 | $\pm$ CI of $S_i^{Tot}$ | 0.0435           | 0.0631           | 0.0445           | 0.0591         | 0.0623           | 0.0617           | 0.0640                |
 
-Table 6: Results of the global sensitivity analysis of the full WT model (remaining parameters); fitting to WT recordings.
+Table 6: Results of the global sensitivity analysis of the full WT model (remaining parameters -- part 2 of 2); fitting to WT recordings.
 
 ### Assessment of model identifiability and observability
 
