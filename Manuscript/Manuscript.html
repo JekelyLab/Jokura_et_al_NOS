@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -53,13 +56,13 @@ div.csl-indent {
 <script src="Manuscript_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="Manuscript_files/libs/quarto-html/anchor.min.js"></script>
 <link href="Manuscript_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="Manuscript_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="Manuscript_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="Manuscript_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="Manuscript_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="Manuscript_files/libs/bootstrap/bootstrap-345dd056a1c8eb75516f4cb84a22002a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="Manuscript_files/libs/bootstrap/bootstrap-9ef9e62acc4c1b8a146d9460a2d0a78b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -94,20 +97,21 @@ window.Quarto = {
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Manuscript.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li></ul></div></div>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Manuscript.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="Manuscript.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li></ul></div></div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Nitric oxide feedback to ciliary photoreceptor cells gates a UV avoidance circuit</h1>
-<p class="subtitle lead"><span style="font-size:11pt">Kei Jokura<sup>1,<code>*</code></sup>, Piotr Słowiński<sup>1</sup>, Nobuo Ueda<sup>3</sup>, Martin Gühmann<sup>4</sup>, Luis Alfonso Yañez-Guerra<sup>1,5</sup>, Emily Savage<sup>6</sup>, Kyle C. A. Wedgwood<sup>1</sup> and Gáspár Jékely<sup>1,2,6,<code>*</code></sup></span><br>
+<p class="subtitle lead"><span style="font-size:11pt">Kei Jokura<sup>1,2,3<code>*</code></sup>, Piotr Słowiński<sup>1</sup>, Nobuo Ueda<sup>4</sup>, Martin Gühmann<sup>5</sup>, Luis Alfonso Yañez-Guerra<sup>1,6</sup>, Emily Savage<sup>7</sup>, Kyle C. A. Wedgwood<sup>1</sup> and Gáspár Jékely<sup>1,2,7,<code>*</code></sup></span><br>
 <span style="font-size:10pt"><sup>1</sup>Living Systems Institute, University of Exeter, Exeter EX4 4QD, United Kingdom</span><br>
 <span style="font-size:10pt"><sup>2</sup>Biosciences, Faculty of Health and Life Sciences, University of Exeter, Exeter EX4 4QD, United Kingdom</span><br>
-<span style="font-size:10pt"><sup>3</sup>Okinawa Institute of Science and Technology, Okinawa, Japan</span><br>
-<span style="font-size:10pt"><sup>4</sup>School of Biological Sciences, University of Bristol, Bristol, United Kingdom</span><br>
-<span style="font-size:10pt"><sup>5</sup>School of Biological Sciences, University of Southampton, Southampton, United Kingdom</span><br>
-<span style="font-size:10pt"><sup>6</sup>Centre for Organismal Studies (COS), Heidelberg University, 69120 Heidelberg, Germany</span><br>
-<span style="font-size:10pt"><sup>*</sup>Correspondence<code>:</code> k.jokura @ exeter.ac.uk, gaspar.jekely @ cos.uni-heidelberg.de</span></p>
+<span style="font-size:10pt"><sup>3</sup>National Institute for Basic Biology (NIBB), Okazaki, 444-8585, Japan</span><br>
+<span style="font-size:10pt"><sup>4</sup>Okinawa Institute of Science and Technology, Okinawa, Japan</span><br>
+<span style="font-size:10pt"><sup>5</sup>School of Biological Sciences, University of Bristol, Bristol, United Kingdom</span><br>
+<span style="font-size:10pt"><sup>6</sup>School of Biological Sciences, University of Southampton, Southampton, United Kingdom</span><br>
+<span style="font-size:10pt"><sup>7</sup>Centre for Organismal Studies (COS), Heidelberg University, 69120 Heidelberg, Germany</span><br>
+<span style="font-size:10pt"><sup>*</sup>Correspondence<code>:</code> jokura @ nibb.ac.jp, gaspar.jekely @ cos.uni-heidelberg.de</span></p>
 </div>
 
 
@@ -256,7 +260,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/Fig7.png" class="img-fluid figure-img" style="width:90.0%"></p>
-<figcaption><strong>Figure 7</strong>. Simulated Ca<sup>2+</sup> traces for parameter sets fitted independently to each Ca<sup>2+</sup>-recording collected in wild type, <em>NOS</em> knockout, and <em>NIT-GC2</em> morphant larvae. (<strong>A</strong>, <strong>B</strong>) Simulated Ca<sup>2+</sup> traces in cPRC (A) and INNOS (B) cells in the wild-type condition. (<strong>C</strong>, <strong>D</strong>) Simulated Ca<sup>2+</sup> traces in cPRC (C) and INNOS (D) cells in the <em>NOS</em> knockout condition. (<strong>E-F</strong>) Simulated Ca<sup>2+</sup> traces in cPRC (E) and INNOS (H) cells in the <em>NIT-GC2</em>-morphant condition. Thin coloured curves indicate individual recordings (cPRC - purple and INNOS - blue), thin grey curves indicate simulated Ca<sup>2+</sup> traces based on model parameters fitted to the individual recording, thick coloured curves indicate averages of the recordings, and thick black curves represent the average of the fits. <br> Figure 7 – source data 1. Best fitted parameters <code>best_pars.mat</code>. <br> Figure 7 – source data 2. Recorded traces (as used in earlier figures) <code>wt_ko_mo_data.mat</code>. <br> Figure 7 – source data 3. script to generate the figure <code>fig_all_fits.m</code></figcaption>
+<figcaption><strong>Figure 7</strong>. Simulated Ca<sup>2+</sup> traces for parameter sets fitted independently to each Ca<sup>2+</sup>-recording collected in wild type, <em>NOS</em> knockout, and <em>NIT-GC2</em> morphant larvae. (<strong>A</strong>, <strong>B</strong>) Simulated Ca<sup>2+</sup> traces in cPRC (A) and INNOS (B) cells in the wild-type condition. (<strong>C</strong>, <strong>D</strong>) Simulated Ca<sup>2+</sup> traces in cPRC (C) and INNOS (D) cells in the <em>NOS</em> knockout condition. (<strong>E-F</strong>) Simulated Ca<sup>2+</sup> traces in cPRC (E) and INNOS (H) cells in the <em>NIT-GC2</em>-morphant condition. Thin coloured curves indicate individual recordings (cPRC - purple and INNOS - blue), thin grey curves indicate simulated Ca<sup>2+</sup> traces based on model parameters fitted to the individual recording, thick coloured curves indicate averages of the recordings, and thick black curves represent the average of the fits. <br> Figure 7 – source data 1. Best fitted parameters <code>best_pars.mat</code>. <br> Figure 7 – source data 2. Recorded traces <code>wt_ko_mo_data.mat</code> and script to generate the figure <code>fig_all_fits.m</code></figcaption>
 </figure>
 </div>
 </div>
@@ -265,7 +269,7 @@ window.Quarto = {
 <p>Many of the couplings in our model are constrained (e.g.&nbsp;UV leads to INNOS activation) and e.g.&nbsp;reversing the sign of some of these couplings would not arrive at the same result. Several earlier variants of the model could not be fit to the data, The model is thus well constrained by our physiological experiments and the circuit map.</p>
 <p>To identify possible molecular pathways, we analysed single-cell transcriptome data for cPRC, INNOS and INRGWa identified by spatial mapping <span class="citation" data-cites="Achim2015">(<a href="#ref-Achim2015" role="doc-biblioref">Achim et al., 2015</a>)</span> and unique marker genes <span class="citation" data-cites="williams2017">(<a href="#ref-williams2017" role="doc-biblioref">Williams et al., 2017</a>)</span>. In cPRCs, we found transporters and synthetic enzymes indicating cholinergic, glutaminergic, glycinergic, GABAergic and adrenergic neurotransmission (Figure 6B). For each neurotransmitter, we also found receptor-encoding genes expressed in INNOS and INRGWa (Figure 6B). The two types of interneurons often expressed different subunits or types of these receptors, indicating differential signalling (Figure 6B).</p>
 <p>Based on these data, our experimental results and the mathematical model, we assembled a minimal phototransduction and circuit diagram. The components for which experimental data are available are shown in bold. Other potential molecular players are also indicated (Figure 6C).</p>
-<p>To further explore the model, we carried out a global sensitivity analysis. This analysis measures how the output of the model depends on parameter values (Tables 1-5). We also analysed structural identifiability and observability in the model and found most parameters to be identifiable (more details in the Methods section).</p>
+<p>To further explore the model, we carried out a global sensitivity analysis. This analysis measures how the output of the model depends on parameter values (Tables 1-6). We also analysed structural identifiability and observability in the model and found most parameters to be identifiable (more details in the Methods section).</p>
 <p>As additional validation of the wild-type model, we recorded Ca<sup>2+</sup>-dynamics from the cPRCs in wild-type larvae subject to UV stimulation with different duration. The model captures the time-invariant appearance of the delayed Ca<sup>2+</sup> peak as observed in our experiments (Figure 6 – figure supplement 7).</p>
 <p>The model also allowed us to systematically vary stimulus conditions that would not have been feasible in single-larva experiments. We simulated Ca<sup>2+</sup> traces under stimulation with two UV pulses (Figure 6 – figure supplement 8 and Materials and Methods) revealing a dependence on inter-stimulus interval. Overall, the model suggests an integratory function of NO signalling to tune circuit output to the strength of UV exposure.</p>
 </section>
@@ -1037,7 +1041,7 @@ window.Quarto = {
 </section>
 <section id="cgmp-production-assay" class="level3">
 <h3 class="anchored" data-anchor-id="cgmp-production-assay">cGMP-production assay</h3>
-<p>To measure cGMP production in a cell culture assay we used the Green cGull reporter <span class="citation" data-cites="Matsuda2017">(<a href="#ref-Matsuda2017" role="doc-biblioref">Matsuda et al., 2016</a>)</span>. Full-length <em>NIT-GC1</em> and <em>NIT-GC2</em> coding sequences were amplified by PCR from a <em>Platynereis dumerilii</em> cDNA library and cloned into the pcDNA3.1(+) vector with the T2A self-cleaving sequence. For the assay, COS-7 cells (Angio-proteomie, CAT no. cAP-0203) with a low endogenous level of soluble guanylate cyclase activity were used. Cells were not contaminated with mycoplasma. Cells were maintained at 37 °C in 35 mm dishes (Nunc™ Glass Bottom Dishes) containing 3 ml of DMEM, low-glucose medium (Thermo; Cat. No.&nbsp;11885084) supplemented with 10% fetal bovine serum (Thermo; Cat. No.&nbsp;10082147). Upon reaching approximately 85% confluency, cells were transfected with the pcDNA3.1(+)-Green-cGull-T2A-NITGC1 plasmid. Transfections were carried out with 150 ng of each plasmid and 0.3 μl of Lipofectamine 3000 Reagent (invitrogen; Cat. No.&nbsp;L3000001). Three hours post-transfection, the culture medium was substituted with fresh DMEM medium. For single-wavelength imaging experiments, cells in 35-mm dishes were washed twice and imaged in modified Ringer’s buffer (140 mM NaCl, 3.5 mM KCl, 0.5 mM NaH<sub>2</sub>PO<sub>4</sub> , 0.5 mM S-3 MgSO<sub>4</sub>, 1.5 mM CaCl<sub>2</sub> , 10 mM HEPES, 2 mM NaHCO<sub>3</sub> and 5 mM glucose). The dishes were mounted on a stage heated to 37 °C and imaged on an inverted confocal microscope (LSM880, Carl Zeiss GmbH, Jena) equipped with an oil-immersion objective lens (UApo/340, 40x, NA = 0.17). The exposure time of the EM-CCD camera was controlled by the ZEN software (Carl Zeiss GmbH, Jena). Images were acquired every 15 s for 10 min and stimulation was initiated 2 min after starting image acquisition. Imaging data were processed with ImageJ (National Institutes of Health, Bethesda, MD, USA). As NO donor, we used S-Nitroso-N-acetyl-D, L-penicillamine (SNAP, Sigma-Aldrich, St.</p>
+<p>To measure cGMP production in a cell culture assay we used the Green cGull reporter <span class="citation" data-cites="Matsuda2017">(<a href="#ref-Matsuda2017" role="doc-biblioref">Matsuda et al., 2016</a>)</span>. Full-length <em>NIT-GC1</em> and <em>NIT-GC2</em> coding sequences were amplified by PCR from a <em>Platynereis dumerilii</em> cDNA library and cloned into the pcDNA3.1(+) vector with the T2A self-cleaving sequence. For the assay, COS-7 cells (Angio-proteomie, CAT no. cAP-0203) with a low endogenous level of soluble guanylate cyclase activity were used. Cells were not contaminated with mycoplasma (tested on 4.6.2021). Cells were maintained at 37 °C in 35 mm dishes (Nunc™ Glass Bottom Dishes) containing 3 ml of DMEM, low-glucose medium (Thermo; Cat. No.&nbsp;11885084) supplemented with 10% fetal bovine serum (Thermo; Cat. No.&nbsp;10082147). Upon reaching approximately 85% confluency, cells were transfected with the pcDNA3.1(+)-Green-cGull-T2A-NITGC1 plasmid. Transfections were carried out with 150 ng of each plasmid and 0.3 μl of Lipofectamine 3000 Reagent (invitrogen; Cat. No.&nbsp;L3000001). Three hours post-transfection, the culture medium was substituted with fresh DMEM medium. For single-wavelength imaging experiments, cells in 35-mm dishes were washed twice and imaged in modified Ringer’s buffer (140 mM NaCl, 3.5 mM KCl, 0.5 mM NaH<sub>2</sub>PO<sub>4</sub> , 0.5 mM S-3 MgSO<sub>4</sub>, 1.5 mM CaCl<sub>2</sub> , 10 mM HEPES, 2 mM NaHCO<sub>3</sub> and 5 mM glucose). The dishes were mounted on a stage heated to 37 °C and imaged on an inverted confocal microscope (LSM880, Carl Zeiss GmbH, Jena) equipped with an oil-immersion objective lens (UApo/340, 40x, NA = 0.17). The exposure time of the EM-CCD camera was controlled by the ZEN software (Carl Zeiss GmbH, Jena). Images were acquired every 15 s for 10 min and stimulation was initiated 2 min after starting image acquisition. Imaging data were processed with ImageJ (National Institutes of Health, Bethesda, MD, USA). As NO donor, we used S-Nitroso-N-acetyl-D, L-penicillamine (SNAP, Sigma-Aldrich, St).</p>
 </section>
 </section>
 <section id="mathematical-modelling" class="level2">
@@ -1045,8 +1049,7 @@ window.Quarto = {
 <section id="wild-type-model" class="level3">
 <h3 class="anchored" data-anchor-id="wild-type-model">Wild type model</h3>
 <p>The mathematical model for the wild type data comprises 11 dynamical equations:</p>
-<p><span class="math display">\[
-\begin{equation}\label{eq:wild-type-model}
+<p><span class="math display">\[\begin{equation}\label{eq:wild-type-model}
 \begin{aligned}
 \frac{dC_P(t)}{dt} = &amp; B(t) - \delta_{C_P} C_P(t) + \kappa_{GC1,2} N_{in,2}(t) + \\ &amp; \frac{(\kappa_{UV} + \kappa_{GC1,1} N_{in,1}(t))UV(t)}{1+\kappa_S S(t)},\\
 \frac{dB(t)}{dt} =&amp; \kappa_{B} N_{in,2}(t)^2 (1-B(t)) - \delta_{B} S(t) (B(t)-B_0),\\
@@ -1065,8 +1068,7 @@ UV(t) =&amp;
         0, &amp; \text{otherwise}
     \end{cases}.
 \end{aligned}
-\end{equation}
-\]</span></p>
+\end{equation}\]</span></p>
 <p>The <span class="math inline">\(C_{P}(t)\)</span> equation describes the dynamics of the Ca<sup>2+</sup> concentration in the cPRC cells, the <em>B(t)</em> variable captures changes in the baseline level of the Ca<sup>2+</sup>, while the <span class="math inline">\(\kappa_{GC1,1} N_{in,2}(t)\)</span> term captures the Ca<sup>2+</sup> increase due to the late NO signalling. Finally, the term <span class="math inline">\((\kappa_{UV} + \kappa_{GC1,2} N_{in,1}(t))UV(t)/(1+\kappa_S S(t))\)</span> captures the UV-dependent dynamics. This dynamics has three components: direct UV-dependent phototransduction with rate <span class="math inline">\(\kappa_{UV}\)</span>; inhibition from NIT-GC2 and UV-dependent phototransduction, captured by <span class="math inline">\(1/(1+\kappa_S S(t))\)</span>; and NO signalling dependent activation, given by <span class="math inline">\(\kappa_{GC1,2} N_{in,1}(t)\)</span>.</p>
 <p>The <span class="math inline">\(B(t)\)</span> equation is added to capture the decrease of the Ca<sup>2+</sup> levels observed during the UV stimulation through the term <span class="math inline">\(- \delta_{B} S(t) (B(t)-B_0)\)</span>; the mechanism of this decrease is unknown. It also describes the observed increase of the baseline Ca<sup>2+</sup> levels due to late NO signalling through <span class="math inline">\(\kappa_{B} N_{in,2}(t)^2 (1-B(t))\)</span>; the mechanism of this increase is also unknown.</p>
 <p>The <span class="math inline">\(S(t)\)</span> equation describes effects of assumed NIT-GC2 and UV-dependent phototransduction on Ca<sup>2+</sup> levels. The <span class="math inline">\(S(t)\)</span> variable has two roles. It inhibits the UV dynamics and also represents synaptic coupling from the cPRC cells, which is assumed to act in an excitatory fashion on INNOS cells. Both of these processes are assumed to be suppressed in <em>NIT-GC2</em>-morphants. To this end, we introduce a parameter, <span class="math inline">\(\kappa_{GC2}\)</span>, which is kept fixed at <span class="math inline">\(\kappa_{GC2}=1\)</span> in the <em>NOS</em>-knockout and WT models.</p>
@@ -1078,8 +1080,7 @@ UV(t) =&amp;
 <section id="nos-knockout-model" class="level3">
 <h3 class="anchored" data-anchor-id="nos-knockout-model"><em>NOS</em>-knockout model</h3>
 <p>The <em>NOS</em>-knockout model is derived from the WT model by eliminating the <span class="math inline">\(N(t)\)</span> variable, which represents the NO produced by the INNOS cells in a NOS-dependent manner, and terms that depend on it. This results in the system:</p>
-<p><span class="math display">\[
-\begin{equation}\label{eq:*NOS*-knockout-model}
+<p><span class="math display">\[\begin{equation}\label{eq:*NOS*-knockout-model}
 \begin{aligned}
 \frac{dC_P(t)}{dt} &amp;= B(t) - \delta_{C_P} C_P(t) + \frac{\kappa_{UV}UV(t)}{1+\kappa_S S(t)}, \\
 \frac{dB(t)}{dt} &amp;=  -  \delta_{B} S(t) (B(t)-B_0),\\
@@ -1091,26 +1092,21 @@ UV(t) &amp;=
         0, &amp; \text{otherwise}
     \end{cases}   .
 \end{aligned}
-\end{equation}
-\]</span></p>
+\end{equation}\]</span></p>
 <p>We use the same system of equations to describe the <em>NIT-GC2</em>-morphants. To this end, we lower the value of <span class="math inline">\(\kappa_{GC2}\)</span> to 0.15; this value captures an average effectiveness of NIT-GC2-morpholino knockdown of 85%. Furthermore, in the NIT-GC2 morpholino condition, we do not fit the INNOS data since we assumed that the feedforward coupling between the cPRC cells and INNOS cell depends on NIT-GC2 activity (that is, we assume that the Ca<sup>2+</sup> levels in INNOS cells are constant in this condition); this is on average consistent with the collected data.</p>
 </section>
 <section id="parameter-fitting-genetic-algorithm" class="level3">
 <h3 class="anchored" data-anchor-id="parameter-fitting-genetic-algorithm">Parameter fitting (genetic algorithm)</h3>
 <p>To find sets of model parameters that reproduce recordings from the Ca<sup>2+</sup> imaging experiments, we define an optimisation problem to minimise the discrepancy between the modelled Ca<sup>2+</sup> traces and the experimental data. To obtain the modelled Ca<sup>2+</sup> traces, we analytically calculate the steady state in the absence of UV stimulation (in which many terms in the model equations vanish), and then use the explicit integration algorithm ode45 in Matlab to simulate the model with the computed steady state as the initial condition with UV stimulation reinstated.</p>
 <p>We quantify the difference between the model output and the data using a vector-valued objective function. The first component of this function measures this difference during the UV stimulation, whilst the second component measures the difference from the end of the stimulation until the end of the recording. We thus define a vector-valued objective function, <span class="math inline">\(\mathbf{D} \in \mathbb{R}^2_{\geq 0}\)</span>, as:</p>
-<p><span class="math display">\[
-\begin{equation}
+<p><span class="math display">\[\begin{equation}
 \mathbf{D}\left({C}_X^{data},{C}_X^{model}\right)=\left(D_{k_{UV\: start}}^{k_{UV\: end}}\left({C}_X^{data},{C}_X^{model}\right),D_{k_{UV\: end }+1}^{k_{end}}\left({C}_X^{data},{C}_X^{model}\right) \right),
 \label{eq:cost_fun}
-\end{equation}
-\]</span></p>
+\end{equation} \]</span></p>
 <p>with</p>
-<p><span class="math display">\[
-\begin{equation*}
+<p><span class="math display">\[\begin{equation*}
 D_{k_1}^{k_2}\left({C}_X^{data}(t),{C}_X^{model}(t)\right)=\sqrt{\sum_{i=k_1}^{k_2}\left({C}_{X}^{data}(t_i)-{C}_{X}^{model}(t_i)\right)^2} ,   
-\end{equation*}
-\]</span></p>
+\end{equation*}\]</span></p>
 <p>where the timepoints <span class="math inline">\(t_i = i \Delta t\)</span> are equispaced with <span class="math inline">\(\Delta = 0.5s\)</span> and where <span class="math inline">\(t_{k_{UV\: start}} = t_{UV \: start}\)</span> (and similar for the other time points). Here <span class="math inline">\({C}_X^{data}\)</span> denotes normalised experimental data and <span class="math inline">\({C}_X^{model}\)</span> denotes normalised simulated Ca<sup>2+</sup> data with <span class="math inline">\(X \in \{ P, N, R\}\)</span> indicating cell type. Simulated Ca<sup>2+</sup> data are normalised in the same way as the experimental data, i.e., we divide all values in the data uniformly by the value at <span class="math inline">\(t_{k_{UV\: start}-1}\)</span>; a time point immediately prior to the start of the UV stimulation. (Recall that <span class="math inline">\(t_{UV\: start}\)</span> is the time of the start of UV stimulation, <span class="math inline">\(t_{UV\: end}\)</span> is the time of the end of UV stimulation, and <span class="math inline">\(t_{end}\)</span> is the last time sample.) Simulations are sampled with the same sampling rate as the data.</p>
 <p>To fit the <em>NOS</em>-knockout model to cPRC Ca<sup>2+</sup> traces, we modify the second objective <span class="math inline">\(D_{k_{UV\: end }+1}^{k_{end}}\)</span>. Instead of minimising the difference on the whole interval <span class="math inline">\(t_{k_{UV\: end }+1}\)</span> to <span class="math inline">\(t_{k_{end}}\)</span>, we minimise it on the last 10 seconds of this interval, i.e., <span class="math inline">\(t_{k_{end-10[s]}}\)</span> to <span class="math inline">\(t_{k_{end}}\)</span>. We change the interval in this particular case because, based on the averaged data, we assume that the only dynamics after the end of UV stimulation in the <em>NOS</em>-knockout is linear decay to a steady state. Using the original, non-modified cost function for the recordings exhibiting more complicated dynamics than linear decay would bias the fitting process.</p>
 <p>To solve the optimisation problem with the above objective function, we employ a global optimisation method known as a genetic algorithm (GA). GAs are a class of iterative, gradient-free algorithms inspired by processes of natural selection including breeding and mutation <span class="citation" data-cites="GAbook">(<a href="#ref-GAbook" role="doc-biblioref">Deb, 2001</a>)</span>. With reference to natural selection, sets of candidate solutions in GAs are referred to as `populations’. As our algorithm of choice, we use the Matlab implementation of a genetic algorithm for multiobjective optimisation <code>gamultiobj</code>. The <code>gamultiobj</code> algorithm uses a controlled, elitist genetic algorithm (a variant of NSGA-II <span class="citation" data-cites="GAbook">(<a href="#ref-GAbook" role="doc-biblioref">Deb, 2001</a>)</span>). We use the default settings for most hyperparameters of the algorithm.</p>
@@ -1145,7 +1141,7 @@ D_{k_1}^{k_2}\left({C}_X^{data}(t),{C}_X^{model}(t)\right)=\sqrt{\sum_{i=k_1}^{k
 <li>after the end of the UV stimulation there is an exponential decay to the steady state;</li>
 <li>A nonlinear effect of UV stimulation intensity. Stimulation with 25% intensity induces lower delay response. Stimulations with 50-100% intensities induce delay responses with comparable amplitudes.</li>
 </ul>
-<p>Model simulations with longer stimulation durations and varying stimulation intensity use the wild-type model and parameters fitted to the mean of wild type cPRC recordings under 100% intensity UV stimulation for 20 sec.&nbsp;The simulations capture all the main features of the data described above. The validation is limited by the available data (there is a single recording for each condition and these recordings are taken from different larvae). The data with variable stimulus duration were not used to fit the model parameters.</p>
+<p>Model simulations with longer stimulation durations and varying stimulation intensity use the wild-type model and parameters fitted to the mean of wild type cPRC recordings under 100% intensity UV stimulation for 20 sec. The simulations capture all the main features of the data described above. The validation is limited by the available data (there is a single recording for each condition and these recordings are taken from different larvae). The data with variable stimulus duration were not used to fit the model parameters.</p>
 <p>The model allows us to systematically vary stimulus conditions. To generate new insights from the model, we perform a series of simulations in which we simulate responses to a two-pulse UV stimulation protocol in which we systematically vary the pulse duration <span class="math inline">\(\in \{2,20,40\}\)</span> and inter-pulse interval <span class="math inline">\(\in \{10, 30\}\)</span> of the <span class="math inline">\(UV(t)\)</span> variable in the WT model.</p>
 <p>Figure 6 – figure supplement 8 shows how the results of simulations of the WT model depend on these two stimulation parameters. We observe that a single 2 sec pulse leads to a small delayed response. Depending on the inter-pulse interval, the second pulse can increase the amplitude of the delayed response and increase the final steady state value (10 sec interval) or behave almost like an independent stimulation (30 sec interval). In case of 20 sec pulses, the timing of the second pulse coincides with the delayed response and increases its amplitude. This increase is limited by the overlap between the second pulse and the delayed response. Increasing the inter-pulse interval from 10 to 30 sec results in a decrease of the final steady state. For the 60 sec pulse, we observe that the second pulse arrives after the delayed response and that it does not induce a second delayed response. We further observe that, as in the case of 20 sec pulse, the second pulse decreases the final steady state value. Overall, the simulations demonstrate sensitivity of the delayed NO-induced response to the timing and duration of the second pulse. They also illustrate relative independence of UV-phototransduction and delayed NO-induced response and that the presented model does not include a term that would replenish <span class="math inline">\(N_{in,2}^{+}(t)\)</span> state variable; consistent with the data presented in Figure 6 – figure supplement 7.</p>
 </section>
@@ -1155,8 +1151,8 @@ D_{k_1}^{k_2}\left({C}_X^{data}(t),{C}_X^{model}(t)\right)=\sqrt{\sum_{i=k_1}^{k
 <p>The results of the global sensitivity analysis are presented in Tables 2–6. The analysis identifies the parameter <span class="math inline">\(B_0\)</span> as the most important parameter in the <em>NOS</em>-knockout model and <span class="math inline">\(\delta_{C_P}\)</span> as the least important parameter. Fits to the Ca<sup>2+</sup> recordings in the INNOS cells are found to depend on <span class="math inline">\(\delta_S\)</span> and <span class="math inline">\(K_{C_N}\)</span>, while the most important parameter for fitting the NO recordings in the INNOS cells is <span class="math inline">\(\delta_N\)</span>. In case of the wild-type cPRC recordings, the most important parameters are the ones that can be related to the NIT-GC1 dependent NO signals. For the quick NO response <span class="math inline">\(N_{in,1}(t)\)</span>, the important parameters are <span class="math inline">\(\kappa_{S_{GC1}}\)</span> and <span class="math inline">\(\delta_{S_{GC1}}\)</span>, while, <span class="math inline">\(\kappa_{S_{GC1}}\)</span> and <span class="math inline">\(\delta_{S_{GC1}}\)</span> control the dynamics of the <span class="math inline">\(N_{in,1}(t)\)</span> variable. For the late NO response <span class="math inline">\(N_{in,2}(t)\)</span>, the important parameters include <span class="math inline">\(\kappa_{GC1,2}\)</span>, <span class="math inline">\(K_{S_1}\)</span> and <span class="math inline">\(K_{S_2}\)</span>. The parameter <span class="math inline">\(\kappa_{GC1,2}\)</span> modulates Ca<sup>2+</sup> levels in the cPRC cells. Finally, <span class="math inline">\(K_{S_1}\)</span> and <span class="math inline">\(K_{S_2}\)</span> are important for regulating the signalling cascade that leads to the late NO response.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 32%">
-<col style="width: 68%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -1184,13 +1180,13 @@ D_{k_1}^{k_2}\left({C}_X^{data}(t),{C}_X^{model}(t)\right)=\sqrt{\sum_{i=k_1}^{k
 <p>Table 1: Summary of the significance of global sensitivity indexes</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 24%">
-<col style="width: 15%">
 <col style="width: 14%">
-<col style="width: 11%">
-<col style="width: 13%">
-<col style="width: 7%">
-<col style="width: 11%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -1284,13 +1280,13 @@ D_{k_1}^{k_2}\left({C}_X^{data}(t),{C}_X^{model}(t)\right)=\sqrt{\sum_{i=k_1}^{k
 <p>Table 3: Results of the global sensitivity analysis of the model consisting of <span class="math inline">\(S(t)\)</span> and <span class="math inline">\(C_N(t)\)</span> variables; fitting to WT and <em>NOS</em>-knockout INNOS Ca<sup>2+</sup> recordings.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 21%">
-<col style="width: 10%">
-<col style="width: 13%">
-<col style="width: 13%">
-<col style="width: 13%">
-<col style="width: 13%">
-<col style="width: 12%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -1343,14 +1339,14 @@ D_{k_1}^{k_2}\left({C}_X^{data}(t),{C}_X^{model}(t)\right)=\sqrt{\sum_{i=k_1}^{k
 <p>Table 4: Results of the global sensitivity analysis of the model consisting of <span class="math inline">\(S(t)\)</span>, <span class="math inline">\(C_N(t)\)</span> and <span class="math inline">\(N(t)\)</span> variables; fitting to WT NO recordings.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 7%">
 <col style="width: 12%">
 <col style="width: 12%">
-<col style="width: 13%">
-<col style="width: 13%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -1405,7 +1401,74 @@ D_{k_1}^{k_2}\left({C}_X^{data}(t),{C}_X^{model}(t)\right)=\sqrt{\sum_{i=k_1}^{k
 </tr>
 </tbody>
 </table>
-<p>Table 5: Results of the global sensitivity analysis of the full WT model (remaining parameters); fitting to WT recordings.</p>
+<p>Table 5: Results of the global sensitivity analysis of the full WT model (remaining parameters – part 1 of 2); fitting to WT recordings.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><span class="math inline">\(\kappa_{S_1}\)</span></th>
+<th><span class="math inline">\(\delta_{S_1}\)</span></th>
+<th><span class="math inline">\(\kappa_{S_2}\)</span></th>
+<th><span class="math inline">\(\delta_{S_2}\)</span></th>
+<th><span class="math inline">\(\kappa_{+,1}\)</span></th>
+<th><span class="math inline">\(\kappa_{+,2}\)</span></th>
+<th><span class="math inline">\(\delta_{N_{in,2}}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(S_i\)</span></td>
+<td>0.0267</td>
+<td>0.0009</td>
+<td>0.0299</td>
+<td>0.0005</td>
+<td>0.0051</td>
+<td>0.0116</td>
+<td>0.0016</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\pm\)</span> CI of <span class="math inline">\(S_i\)</span></td>
+<td>0.0001</td>
+<td>&lt;0.0001</td>
+<td>0.0001</td>
+<td>&lt;0.0001</td>
+<td>&lt;0.0001</td>
+<td>&lt;0.0001</td>
+<td>&lt;0.0001</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(S_i^{Tot}\)</span></td>
+<td>0.1668</td>
+<td>0.0197</td>
+<td>0.1900</td>
+<td>0.0163</td>
+<td>0.0297</td>
+<td>0.0508</td>
+<td>0.0124</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\pm\)</span> CI of <span class="math inline">\(S_i^{Tot}\)</span></td>
+<td>0.0435</td>
+<td>0.0631</td>
+<td>0.0445</td>
+<td>0.0591</td>
+<td>0.0623</td>
+<td>0.0617</td>
+<td>0.0640</td>
+</tr>
+</tbody>
+</table>
+<p>Table 6: Results of the global sensitivity analysis of the full WT model (remaining parameters – part 2 of 2); fitting to WT recordings.</p>
 </section>
 <section id="assessment-of-model-identifiability-and-observability" class="level3">
 <h3 class="anchored" data-anchor-id="assessment-of-model-identifiability-and-observability">Assessment of model identifiability and observability</h3>
@@ -1788,7 +1851,7 @@ Zhang Y, He L-S, Zhang G, Xu Y, Lee O-O, Matsumura K, Qian P-Y. 2012. The regula
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/Fig6_sup1.png" class="img-fluid figure-img" style="width:90.0%"></p>
-<figcaption><strong>Figure 6 – figure supplement 1</strong>. Simulated Ca<sup>2+</sup> traces for parameter sets fitted to the means of individual cPRC recordings collected in wild-type,<em>NOS</em> knockout, and <em>NIT-GC2</em> morphant larvae. The NIT-GC2 has the same parameter values as NOS-knockout except <span class="math inline">\(kappa_{GC2}\)</span> is decreased from 1 to 0.15. (<strong>A</strong>) Coloured curves indicate the mean of the recordings, thick black curves indicate simulated traces based on model parameters fitted to the mean of the recordings. (<strong>B</strong>, <strong>C</strong>) Thin grey curves (solid and dotted) represent simulated experimental conditions with different levels of efficacy of the NOS-knockout (<strong>B</strong>) and NIT-GC2 morpholino (<strong>C</strong>). To generate interpolated condition curves in (<strong>B</strong>), we multiplied <span class="math inline">\(kappa_{S_{GC1}}\)</span> in the wild-type model by values from 0.1 to 0.9 with steps of 0.1. To generate interpolated condition curves in (<strong>C</strong>), we use a set of <span class="math inline">\(kappa_{GC2}\)</span> values from 0.1 to 0.9 with steps of 0.1. <br> Figure 6 – figure supplement 1 – source data 1. Recorded traces (as used in earlier figures) <code>wt_ko_mo_data.mat</code>. <br> Figure 6 – figure supplement 1 – source data 2. Script to generate the figure <code>fig_WT_to_MO.m</code></figcaption>
+<figcaption><strong>Figure 6 – figure supplement 1</strong>. Simulated Ca<sup>2+</sup> traces for parameter sets fitted to the means of individual cPRC recordings collected in wild-type,<em>NOS</em> knockout, and <em>NIT-GC2</em> morphant larvae. The NIT-GC2 has the same parameter values as NOS-knockout except <span class="math inline">\(kappa_{GC2}\)</span> is decreased from 1 to 0.15. (<strong>A</strong>) Coloured curves indicate the mean of the recordings, thick black curves indicate simulated traces based on model parameters fitted to the mean of the recordings. (<strong>B</strong>, <strong>C</strong>) Thin grey curves (solid and dotted) represent simulated experimental conditions with different levels of efficacy of the NOS-knockout (<strong>B</strong>) and NIT-GC2 morpholino (<strong>C</strong>). To generate interpolated condition curves in (<strong>B</strong>), we multiplied <span class="math inline">\(kappa_{S_{GC1}}\)</span> in the wild-type model by values from 0.1 to 0.9 with steps of 0.1. To generate interpolated condition curves in (<strong>C</strong>), we use a set of <span class="math inline">\(kappa_{GC2}\)</span> values from 0.1 to 0.9 with steps of 0.1. <br> Source data in Figure 7 – source data 2.</figcaption>
 </figure>
 </div>
 </div>
@@ -1798,7 +1861,7 @@ Zhang Y, He L-S, Zhang G, Xu Y, Lee O-O, Matsumura K, Qian P-Y. 2012. The regula
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/Fig6_sup2.png" class="img-fluid figure-img" style="width:90.0%"></p>
-<figcaption><strong>Figure 6 – figure supplement 2</strong>. Simulated NO traces for parameter sets fitted to individual NO-recordings collected in wild type larvae. Thin coloured curves indicate individual recordings, thin grey curves indicate simulated NO traces based on model parameters fitted independently to each recording, the thick coloured curve indicates the average of the recordings, the thick grey curve represents the average of the fits, and the thick black curve represents the fit of the model parameters to the averaged recordings. <br> Figure 6 – figure supplement 2 – source data 1. Best fitted parameters <code>best_pars.mat</code>. Figure 6 – figure supplement 2 – source data 2. Recorded traces (same as in Figure 2 but with removed bleaching and steady state set to 0) (<code>NO_data.mat</code>). <br> Figure 6 – figure supplement 2 – source data 3. Script to generate the figure <code>fig_fit_NO.m</code></figcaption>
+<figcaption><strong>Figure 6 – figure supplement 2</strong>. Simulated NO traces for parameter sets fitted to individual NO-recordings collected in wild type larvae. Thin coloured curves indicate individual recordings, thin grey curves indicate simulated NO traces based on model parameters fitted independently to each recording, the thick coloured curve indicates the average of the recordings, the thick grey curve represents the average of the fits, and the thick black curve represents the fit of the model parameters to the averaged recordings. <br> Figure 6 – figure supplement 2 – source data 1. Best fitted parameters <code>best_pars.mat</code>, recorded traces (same as in Figure 2 but with removed bleaching and steady state set to 0) (<code>NO_data.mat</code>) and script to generate the figure <code>fig_fit_NO.m</code></figcaption>
 </figure>
 </div>
 </div>
@@ -1808,7 +1871,7 @@ Zhang Y, He L-S, Zhang G, Xu Y, Lee O-O, Matsumura K, Qian P-Y. 2012. The regula
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/Fig6_sup3.png" class="img-fluid figure-img" style="width:90.0%"></p>
-<figcaption><strong>Figure 6 – figure supplement 3</strong>. Distributions of the parameter values fitted to the individual recordings collected in different conditions. Violin plots (grey lines) are kernel density estimates of the underlying distributions computed using the Matlab function <span class="math inline">\(ksdensity\)</span> with default settings, i.e., using normal kernel function; plots are trimmed to the observed range of data. Coloured markers represent individual parameter values, white markers indicate medians, vertical grey bars indicate interquartiles (ranges Q25 to Q75), and the dashed line indicates the value of the parameter fitted to the average of the recordings. We show histograms instead of violin plots for <span class="math inline">\(delta_S\)</span> when fitted to <em>NOS</em>-knockout recordings and for <span class="math inline">\(delta_S\)</span> and <span class="math inline">\(delta_{C_N}\)</span> when fitted to NO recordings because these distributions are highly skewed and hence misrepresented by violin plots. Violin plots are presented in the order of our model-fitting procedure, i.e., first Ca<sup>2+</sup> in <em>NOS</em>-knockout cPRC cells (yellow), then Ca<sup>2+</sup> in wild type and <em>NOS</em>-knockout INNOS cells (blue), then NO in INNOS cells (green), and finally Ca<sup>2+</sup> in wild type cPRC cells (magenta); (see Methods for details). <br> Figure 6 – figure supplement 3 – source data 1. Best fitted parameters <code>best_pars.mat</code>. <br> Figure 6 – figure supplement 3 – source data 2. Script to generate the figure <code>parameter_dist.m</code></figcaption>
+<figcaption><strong>Figure 6 – figure supplement 3</strong>. Distributions of the parameter values fitted to the individual recordings collected in different conditions. Violin plots (grey lines) are kernel density estimates of the underlying distributions computed using the Matlab function <span class="math inline">\(ksdensity\)</span> with default settings, i.e., using normal kernel function; plots are trimmed to the observed range of data. Coloured markers represent individual parameter values, white markers indicate medians, vertical grey bars indicate interquartiles (ranges Q25 to Q75), and the dashed line indicates the value of the parameter fitted to the average of the recordings. We show histograms instead of violin plots for <span class="math inline">\(delta_S\)</span> when fitted to <em>NOS</em>-knockout recordings and for <span class="math inline">\(delta_S\)</span> and <span class="math inline">\(delta_{C_N}\)</span> when fitted to NO recordings because these distributions are highly skewed and hence misrepresented by violin plots. Violin plots are presented in the order of our model-fitting procedure, i.e., first Ca<sup>2+</sup> in <em>NOS</em>-knockout cPRC cells (yellow), then Ca<sup>2+</sup> in wild type and <em>NOS</em>-knockout INNOS cells (blue), then NO in INNOS cells (green), and finally Ca<sup>2+</sup> in wild type cPRC cells (magenta); (see Methods for details). <br> Source data in Figure 6 – figure supplement 2 – source data 1 including best fitted parameters <code>best_pars.mat</code> and script to generate the figure <code>parameter_dist.m</code></figcaption>
 </figure>
 </div>
 </div>
@@ -1818,7 +1881,7 @@ Zhang Y, He L-S, Zhang G, Xu Y, Lee O-O, Matsumura K, Qian P-Y. 2012. The regula
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/Fig6_sup4.png" class="img-fluid figure-img" style="width:90.0%"></p>
-<figcaption><strong>Figure 6 – figure supplement 4</strong>. Distributions of the parameter values fitted to individual cPRC recordings collected in wild type larvae. The figure is in the same format as Figure 6 – figure supplement 4. <br> Figure 6 – figure supplement 4 – source data 1. Best fitted parameters <code>best_pars.mat</code>. <br> Figure 6 – figure supplement 4 – source data 2. Script to generate the figure <code>parameter_dist.m</code>.</figcaption>
+<figcaption><strong>Figure 6 – figure supplement 4</strong>. Distributions of the parameter values fitted to individual cPRC recordings collected in wild type larvae. The figure is in the same format as Figure 6 – figure supplement 4. <br> Source data in Figure 6 – figure supplement 2 – source data 1 including fitted parameters <code>best_pars.mat</code> and script to generate the figure <code>parameter_dist.m</code>.</figcaption>
 </figure>
 </div>
 </div>
@@ -1828,7 +1891,7 @@ Zhang Y, He L-S, Zhang G, Xu Y, Lee O-O, Matsumura K, Qian P-Y. 2012. The regula
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/Fig6_sup5.png" class="img-fluid figure-img" style="width:90.0%"></p>
-<figcaption><strong>Figure 6 – figure supplement 5</strong>. Pairwise correlations between parameters of the <em>NOS</em>-knockout model (state variables <span class="math inline">\(C_P(t)\)</span>, <span class="math inline">\(B(t)\)</span> and <span class="math inline">\(S(t)\)</span>) fitted to <em>NOS</em>-knockout cPRC recordings; wild-type model (state variables <span class="math inline">\(S(t)\)</span> and <span class="math inline">\(C_N(t)\)</span>) fitted to wild-type and <em>NOS</em>-knockout Ca<sup>2+</sup> INNOS recordings. Wild type model (state variables <span class="math inline">\(S(t)\)</span>, <span class="math inline">\(C_N(t)\)</span> and <span class="math inline">\(N(t)\)</span>) fitted to wild type INNOS NO recordings. All visible correlation values are significant at the 5% level, <span class="math inline">\(p &lt; 0.05\)</span>, (trivial correlations along the diagonal are excluded). <br> Figure 6 – figure supplement 5 – source data 1. Best fitted parameters <code>best_pars.mat</code>. <br> Figure 6 – figure supplement 5 – source data 2. Script to generate the figure <code>correlations.m</code></figcaption>
+<figcaption><strong>Figure 6 – figure supplement 5</strong>. Pairwise correlations between parameters of the <em>NOS</em>-knockout model (state variables <span class="math inline">\(C_P(t)\)</span>, <span class="math inline">\(B(t)\)</span> and <span class="math inline">\(S(t)\)</span>) fitted to <em>NOS</em>-knockout cPRC recordings; wild-type model (state variables <span class="math inline">\(S(t)\)</span> and <span class="math inline">\(C_N(t)\)</span>) fitted to wild-type and <em>NOS</em>-knockout Ca<sup>2+</sup> INNOS recordings. Wild type model (state variables <span class="math inline">\(S(t)\)</span>, <span class="math inline">\(C_N(t)\)</span> and <span class="math inline">\(N(t)\)</span>) fitted to wild type INNOS NO recordings. All visible correlation values are significant at the 5% level, <span class="math inline">\(p &lt; 0.05\)</span>, (trivial correlations along the diagonal are excluded). <br> Source data in Figure 6 – figure supplement 2 – source data 1 including best fitted parameters <code>best_pars.mat</code> and script to generate the figure <code>correlations.m</code></figcaption>
 </figure>
 </div>
 </div>
@@ -1838,7 +1901,7 @@ Zhang Y, He L-S, Zhang G, Xu Y, Lee O-O, Matsumura K, Qian P-Y. 2012. The regula
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/Fig6_sup6.png" class="img-fluid figure-img" style="width:90.0%"></p>
-<figcaption><strong>Figure 6 – figure supplement 6</strong>. Pairwise correlations between parameters of the wild type model fitted to wild type cPRC recordings. All visible correlation values are significant at the 5% level, <span class="math inline">\(p &lt; 0.05\)</span>, (trivial correlations along the diagonal are excluded). <br> Figure 6 – figure supplement 6 – source data 1. Best fitted parameters <code>best_pars.mat</code>. <br> Figure 6 – figure supplement 6 – source data 2. Script to generate the figure <code>correlations.m</code></figcaption>
+<figcaption><strong>Figure 6 – figure supplement 6</strong>. Pairwise correlations between parameters of the wild type model fitted to wild type cPRC recordings. All visible correlation values are significant at the 5% level, <span class="math inline">\(p &lt; 0.05\)</span>, (trivial correlations along the diagonal are excluded). <br> Source data in Figure 6 – figure supplement 2 – source data 1 including best fitted parameters <code>best_pars.mat</code> and script to generate the figure <code>correlations.m</code></figcaption>
 </figure>
 </div>
 </div>
@@ -1848,7 +1911,7 @@ Zhang Y, He L-S, Zhang G, Xu Y, Lee O-O, Matsumura K, Qian P-Y. 2012. The regula
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/Fig6_sup7.png" class="img-fluid figure-img" style="width:90.0%"></p>
-<figcaption><strong>Figure 6 – figure supplement 7</strong>. Validation of the wild-type model using cPRC recordings collected in wild-type larvae subject to UV stimulation with different intensity and duration. The top row displays recorded data; the bottom row shows model simulations. Different columns show different durations of UV stimulation. Simulated Ca<sup>2+</sup> traces use parameter sets fitted to mean of Ca<sup>2+</sup>-recordings collected in wild-type larvae subject to 20s UV stimulation at 100% power. Stimulation duration is indicated by the shaded rectangle (violet) while stimulation intensity is indicated by the shade of grey of the line plot (darker shades indicate higher power). Simulations are compared with the mean of the 50%, 75% and 100% data and their 95% confidence interval (mean <span class="math inline">\(pm 1.96 SE\)</span>, here is <span class="math inline">\(SE=std/sqrt{n}\)</span> and <span class="math inline">\(std\)</span> stands for standard deviation). We use the 50%, 75% and 100% recordings to compute the average because the data indicate the existence of a non-linear relation between response and the power of the stimulation and the 25% recordings would bias the average down. <br> Figure 7 – source data 1. Recorded traces <code>longer_experiments_data.mat</code>. <br> Figure 6 – figure supplement 7 – source data 1. Script to generate the figure <code>fig_longer_experiments.m</code></figcaption>
+<figcaption><strong>Figure 6 – figure supplement 7</strong>. Validation of the wild-type model using cPRC recordings collected in wild-type larvae subject to UV stimulation with different intensity and duration. The top row displays recorded data; the bottom row shows model simulations. Different columns show different durations of UV stimulation. Simulated Ca<sup>2+</sup> traces use parameter sets fitted to mean of Ca<sup>2+</sup>-recordings collected in wild-type larvae subject to 20s UV stimulation at 100% power. Stimulation duration is indicated by the shaded rectangle (violet) while stimulation intensity is indicated by the shade of grey of the line plot (darker shades indicate higher power). Simulations are compared with the mean of the 50%, 75% and 100% data and their 95% confidence interval (mean <span class="math inline">\(pm 1.96 SE\)</span>, here is <span class="math inline">\(SE=std/sqrt{n}\)</span> and <span class="math inline">\(std\)</span> stands for standard deviation). We use the 50%, 75% and 100% recordings to compute the average because the data indicate the existence of a non-linear relation between response and the power of the stimulation and the 25% recordings would bias the average down. <br> Source data in Figure 6 – figure supplement 2 – source data 1 including recorded traces <code>longer_experiments_data.mat</code> and script to generate the figure <code>fig_longer_experiments.m</code></figcaption>
 </figure>
 </div>
 </div>
@@ -1858,7 +1921,7 @@ Zhang Y, He L-S, Zhang G, Xu Y, Lee O-O, Matsumura K, Qian P-Y. 2012. The regula
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/Fig6_sup8.png" class="img-fluid figure-img" style="width:90.0%"></p>
-<figcaption><strong>Figure 6 – figure supplement 8</strong>. Simulated Ca<sup>2+</sup> traces under stimulation with two UV pulses. The top row shows simulations with a 10s interval between pulses; the bottom row shows simulations with a 30s interval between pulses. Different columns show different durations of UV stimulation. The duration of UV stimulation is indicated by the shaded rectangle (violet). Coloured curves indicate simulated outcome of two pulse UV stimulation; thick black curves indicate simulated reference traces with a single UV pulse. Simulations of the Ca<sup>2+</sup> traces use parameter sets fitted to the mean of individual Ca<sup>2+</sup>-recordings collected in wild-type larvae subject to 20s UV stimulation. <br> Figure 6 – figure supplement 8 – source data 1. Script to generate the figure <code>fig_two_pulse.m</code></figcaption>
+<figcaption><strong>Figure 6 – figure supplement 8</strong>. Simulated Ca<sup>2+</sup> traces under stimulation with two UV pulses. The top row shows simulations with a 10s interval between pulses; the bottom row shows simulations with a 30s interval between pulses. Different columns show different durations of UV stimulation. The duration of UV stimulation is indicated by the shaded rectangle (violet). Coloured curves indicate simulated outcome of two pulse UV stimulation; thick black curves indicate simulated reference traces with a single UV pulse. Simulations of the Ca<sup>2+</sup> traces use parameter sets fitted to the mean of individual Ca<sup>2+</sup>-recordings collected in wild-type larvae subject to 20s UV stimulation. <br> Source data in Figure 6 – figure supplement 2 – source data 1 including script to generate the figure <code>fig_two_pulse.m</code></figcaption>
 </figure>
 </div>
 </div>

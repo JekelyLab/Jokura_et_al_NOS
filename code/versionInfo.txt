@@ -1,8 +1,9 @@
 $citation
 To cite Positron in publications use:
 
-  Posit team (2026). Positron: A next generation data science IDE.
-  Posit Software, PBC, Boston, MA. URL https://www.posit.co/.
+  Posit team (2026). Positron: A next generation data science
+  IDE. Posit Software, PBC, Boston, MA. URL
+  https://www.posit.co/.
 
 A BibTeX entry for LaTeX users is
 
