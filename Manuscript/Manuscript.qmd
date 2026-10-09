@@ -23,6 +23,10 @@ format:
     include-in-header:
       text: |
         \usepackage{lineno}
+        \usepackage{lipsum} % Required to insert dummy text
+        \usepackage[version=4]{mhchem}
+        \usepackage{siunitx}
+        \DeclareSIUnit\Molar{M}
     include-before-body:
       text: |
         \linenumbers
@@ -479,7 +483,7 @@ If neuropeptide signalling is defective, animals can still respond to UV light, 
 Non-directional UV/violet light induces downward swimming head down in *Platynereis* larvae [@Veraszto2018].
 Since stimulus direction is not relevant, swimming direction must be determined by gravity.
 
-Connectome reconstruction and whole-body cell annotation in the 3-day-old *Platynereis* larva has not revealed any balancer organ to sense orientation in the gravity field [@bezares-calderon2019; @veraszto2020].
+Connectome reconstruction and whole-body cell annotation in the 3-day-old *Platynereis* larva has not revealed any balancer organ to sense orientation in the gravity field [@bezares-calderon2019; @Veraszto_2025Whole].
 Body orientation may thus be determined by physical parameters including the buoyancy, centre of mass and shape of the larva as well as differential ciliary activity.
 Here we only focused on the prototroch ciliary band and more work will be needed to unravel the process of graviorientation.
 For example, quantifying ciliary activity simultaneously in the prototorch and the telotroch (and also the paratrochs in nectochaete-stage larvae) during UV and pressure stimulation may reveal differential responses across ciliary bands.
@@ -532,6 +536,10 @@ knitr::kable(df_key_resource_table, format = "html", booktabs = TRUE, format.arg
 ```
 
 ## Materials and Methods
+
+### Materials Availability Statement
+
+The mutant *Platynereis dumerilii* lines are available upon request. All code and source data has been archived on Zenodo and also available at https://github.com/JekelyLab/Jokura_et_al_NOS
 
 ### Animal culture
 
@@ -673,7 +681,7 @@ Kymographs of the cilia obtained with Fiji were used to measure the ciliary beat
 
 To measure cGMP production in a cell culture assay we used the Green cGull reporter [@Matsuda2017].
 Full-length *NIT-GC1* and *NIT-GC2* coding sequences were amplified by PCR from a *Platynereis dumerilii* cDNA library and cloned into the pcDNA3.1(+) vector with the T2A self-cleaving sequence.
-For the assay, COS-7 cells (Angio-proteomie, CAT no. cAP-0203) with a low endogenous level of soluble guanylate cyclase activity were used.
+For the assay, COS-7 cells (ECACC, 87021302) with a low endogenous level of soluble guanylate cyclase activity were used.
 Cells were not contaminated with mycoplasma (tested on 4.6.2021).
 Cells were maintained at 37 °C in 35 mm dishes (Nunc™ Glass Bottom Dishes) containing 3 ml of DMEM, low-glucose medium (Thermo; Cat. No. 11885084) supplemented with 10% fetal bovine serum (Thermo; Cat. No. 10082147).
 Upon reaching approximately 85% confluency, cells were transfected with the pcDNA3.1(+)-Green-cGull-T2A-NITGC1 plasmid.
