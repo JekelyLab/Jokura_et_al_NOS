@@ -524,16 +524,6 @@ We identified an unconventional GC as the NO receptor and measured circuit activ
 Finally, we could link circuit activity to light-avoidance behaviour.
 The richly modulated multi-transmitter cPRC circuit will serve as a fertile ground for future studies on how neuromodulators shape activity and behaviour.
 
-## Key resources table
-
-```{r echo=FALSE, warning=FALSE}
-library(readxl)
-key_resource_table <- read_excel("key_resource_table/key_resource_table.xls")
-df_key_resource_table <- as.data.frame(key_resource_table)
-df_key_resource_table <- replace(df_key_resource_table, is.na(df_key_resource_table), "")
-knitr::kable(df_key_resource_table, format = "html", booktabs = TRUE, format.args = list(cex = 1))
-
-```
 
 ## Materials and Methods
 
@@ -1188,4 +1178,15 @@ knitr::include_graphics(path = "figures/Fig6_sup8.png")
 
 ```{=html}
 <script src="hypothes.is/embed.js" async></script>
+```
+
+## Key resources table
+
+```{r echo=FALSE, warning=FALSE}
+library(readxl)
+key_resource_table <- read_excel("key_resource_table/key_resource_table.xls")
+df_key_resource_table <- as.data.frame(key_resource_table)
+df_key_resource_table <- replace(df_key_resource_table, is.na(df_key_resource_table), "")
+knitr::kable(df_key_resource_table, format = "html", booktabs = TRUE, format.args = list(cex = 1))
+
 ```
