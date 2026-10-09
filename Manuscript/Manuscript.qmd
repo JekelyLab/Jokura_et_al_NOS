@@ -539,7 +539,7 @@ knitr::kable(df_key_resource_table, format = "html", booktabs = TRUE, format.arg
 
 ### Materials Availability Statement
 
-The mutant *Platynereis dumerilii* lines are available upon request. All code and source data has been archived on Zenodo and also available at https://github.com/JekelyLab/Jokura_et_al_NOS
+The mutant *Platynereis dumerilii* lines are available upon request. All code and source data has been archived on Zenodo [@jekely_lab_2026_23266322] and also available at https://github.com/JekelyLab/Jokura_et_al_NOS
 
 ### Animal culture
 
