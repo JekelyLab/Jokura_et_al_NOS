@@ -1168,25 +1168,3 @@ knitr::include_graphics(path = "figures/Fig6_sup7.png")
 knitr::include_graphics(path = "figures/Fig6_sup8.png")
 ```
 
-```{=html}
-<!--
-## See https://github.com/hypothesis/client
-## Add commenting functionality with this script
-## For sharing, we upload the self-contained html (embed-resources: true) to pCloud.com and share the link with collaborators. They need an account on hypothes.is and then can comment on the html version of the paper
--->
-```
-
-```{=html}
-<script src="hypothes.is/embed.js" async></script>
-```
-
-## Key resources table
-
-```{r echo=FALSE, warning=FALSE}
-library(readxl)
-key_resource_table <- read_excel("key_resource_table/key_resource_table.xls")
-df_key_resource_table <- as.data.frame(key_resource_table)
-df_key_resource_table <- replace(df_key_resource_table, is.na(df_key_resource_table), "")
-knitr::kable(df_key_resource_table, format = "html", booktabs = TRUE, format.args = list(cex = 1))
-
-```
